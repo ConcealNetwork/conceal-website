@@ -1324,49 +1324,6 @@ input, select, textarea {
 			border-radius: 4px;
 		}
 
-		#header nav2 ul {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			margin-bottom: 0;
-			margin-top: 0;
-			list-style: none;
-			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
-		}
-
-		#header nav2 ul li {
-			padding-left: 0;
-			margin-top: 0;
-			border-left: solid 1px #ffffff;
-		}
-
-			#header nav2 ul li:first-child {
-				border-left: 0;
-			}
-
-			#header nav2 ul li a {
-				display: block;
-				min-width: 7.5rem;
-				height: 2.75rem;
-				line-height: 2.75rem;
-				padding: 0 1.25rem 0 1.45rem;
-				text-transform: uppercase;
-				letter-spacing: 0.2rem;
-				font-size: 0.8rem;
-				border-bottom: 0;
-			}
-
-				#header nav2 ul li a:hover {
-					background-color: rgba(255, 255, 255, 0.075);
-				}
-
-				#header nav2 ul li a:active {
-					background-color: rgba(255, 255, 255, 0.175);
-				}
-
 			#header nav ul li {
 				padding-left: 0;
 				border-left: solid 1px #ffffff;
@@ -1403,7 +1360,7 @@ input, select, textarea {
 			top: 0;
 			left: calc(50% - 1px);
 			width: 1px;
-			height: 25%;
+			height: 100%;
 			background: #ffffff;
 		}
 
