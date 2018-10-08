@@ -93,13 +93,13 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-    color: #0087cc;
+    color: orange;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 a:hover, a:focus, a:active {
-    color: #39b54a;
+    color: orange;
 }
 
 a:hover, a:active {
@@ -114,7 +114,7 @@ a:hover, a:active {
  * ------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #ddd;
     font-style: normal;
     font-weight: normal;
@@ -370,7 +370,7 @@ ul.disc li::before {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #39b54a;
+    background: orange;
     position: absolute;
     left: -17px;
     top: 11px;
@@ -379,7 +379,7 @@ ul.disc li::before {
 
 dt {
     margin: 0;
-    color: #39b54a;
+    color: orange;
 }
 
 dd {
@@ -434,11 +434,11 @@ table {
 th, td {
     padding: 1.5rem 3rem;
     text-align: left;
-    border-bottom: 1px solid #E8E8E8;
+    border-bottom: 1px solid #111;
 }
 
 th {
-    color: #000000;
+    color: #ddd;
     font-family: Poppins, sans-serif;
 }
 
@@ -505,7 +505,7 @@ form,
 }
 
 .pace .pace-progress {
-    background: #39b54a;
+    background: orange;
     position: fixed;
     z-index: 900;
     top: 0;
@@ -548,7 +548,7 @@ form,
 }
 
 .line-scale-pulse-out > div {
-    background-color: #39b54a;
+    background-color: orange;
     width: 4px;
     height: 35px;
     border-radius: 2px;
@@ -625,7 +625,7 @@ select {
     border: 0;
     outline: none;
     color: #333333;
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     line-height: 3rem;
     max-width: 100%;
@@ -775,7 +775,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #39b54a;
+    -webkit-text-fill-color: orange;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -791,7 +791,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -835,8 +835,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-    background: #39b54a;
-    border-color: #39b54a;
+    background: orange;
+    border-color: orange;
     color: #FFFFFF;
 }
 
@@ -874,14 +874,16 @@ input[type="button"].btn--primary:focus {
 }
 
 .btn--stroke, button.btn--stroke {
-    background: transparent !important;
-    border: 0.2rem solid #39b54a;
-    color: #39b54a;
+    background: #333;
+    border: none;
+    color: white;
+    border-top: 2px solid orange;
 }
 
 .btn--stroke:hover, button.btn--stroke:hover {
-    border: 0.2rem solid #000000;
-    color: #000000;
+    border: 0.2rem solid white;
+    background-color: orange;
+    color: white;
 }
 
 .btn--pill, button.btn--pill {
@@ -1104,7 +1106,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-    color: #39b54a;
+    color: orange;
 }
 
 .stats-tabs li a em {
@@ -1216,8 +1218,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ## display headings
  * ------------------------------------------------------------------- */
 .display-1 {
-    font-family: "montserrat-medium", sans-serif;
-    font-size: 7.8rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 4.8rem;
     line-height: 1.25;
     color: #000000;
     margin-top: 0;
@@ -1228,7 +1230,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .display-2 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 5.2rem;
     line-height: 1.255;
     color: #aaa;
@@ -1423,7 +1425,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li:hover button {
-    background: #39b54a;
+    background: orange;
 }
 
 
@@ -1464,7 +1466,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     outline: 0;
     border: none;
-    width: 80px;
+    width: 160px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1476,7 +1478,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .header-nav {
     background: #0C0C0C;
     color: rgba(255, 255, 255, 0.25);
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.3rem;
     line-height: 1.846;
     padding: 3.6rem 3rem 3.6rem 3.6rem;
@@ -1509,14 +1511,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-nav h3 {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 11px;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: .25rem;
     margin-bottom: 4.8rem;
     margin-top: .9rem;
-    color: #39b54a;
+    color: orange;
 }
 
 .header-nav p {
@@ -1650,11 +1652,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 42px;
     width: 42px;
     line-height: 42px;
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
-    color: #39b54a;
+    color: orange;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -1759,9 +1761,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 100%;
     height: 100%;
     opacity: .4;
-    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
@@ -1794,7 +1796,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content h3 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
@@ -1806,8 +1808,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content h1 {
-    font-family: "montserrat-medium", sans-serif;
-    font-size: 6.3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 5.3rem;
     line-height: 1.333;
     margin-top: 0;
     color: #FFFFFF;
@@ -1825,8 +1827,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-content__buttons .btn {
     width: 215px;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
     margin: 1.5rem 1.5rem 0 0;
     letter-spacing: .25rem;
     -webkit-transition: all 0.5s ease-in-out;
@@ -1850,7 +1850,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -1862,8 +1862,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a::before {
-    border-bottom: 2px solid #39b54a;
-    border-right: 2px solid #39b54a;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
     content: '';
     display: block;
     height: 8px;
@@ -1887,7 +1887,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: block;
     width: 2px;
     height: 10.2rem;
-    background-color: #39b54a;
+    background-color: orange;
     position: absolute;
     right: 7.2rem;
     bottom: 0;
@@ -1910,7 +1910,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social a {
-    color: white;
+    color: orange;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
@@ -1942,12 +1942,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 33px;
     height: 33px;
     line-height: calc(33px - 4px);
-    border: 2px solid #FFFFFF;
+    border: 2px solid orange;
     border-radius: 50%;
 }
 
 .home-social span {
-    color: #39b54a;
+    color: orange;
     right: 4.5rem;
     font-size: 1.3rem;
     opacity: 0;
@@ -2213,7 +2213,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .about-desc {
-    font-size: 2.4rem;
+    font-size: 1.75rem;
     line-height: 1.75;
     text-align: center;
     max-width: 1024px;
@@ -2242,7 +2242,7 @@ html.no-csstransitions .home-content__main {
 
 .stats__count {
     font-family: Poppins, sans-serif;
-    font-size: 8.4rem;
+    font-size: 4.4rem;
     line-height: 1;
     color: #FFFFFF;
     position: relative;
@@ -2252,7 +2252,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats h5 {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-top: 1.8rem;
     color: orange;
     font-size: 1.8rem;
@@ -2408,8 +2408,8 @@ html.no-csstransitions .home-content__main {
 
 .services-list .service-icon {
     float: left;
-    color: #39b54a;
-    font-size: 4.8rem;
+    color: orange;
+    font-size: 3.8rem;
     margin-top: -.6rem;
 }
 
@@ -2602,7 +2602,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .item-folio__title {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     line-height: 1.286;
     color: #FFFFFF;
@@ -2613,7 +2613,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio__cat {
     color: rgba(255, 255, 255, 0.5);
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     line-height: 1.714;
     margin-bottom: 0;
@@ -2735,8 +2735,8 @@ html.no-csstransitions .home-content__main {
 .s-clients {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
-    background-color: #e6e6e6;
-    color: #757575;
+    background-color: #000;
+    color: #aaa;
     position: relative;
 }
 
@@ -2818,12 +2818,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .clients-testimonials .testimonials__name {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #000000;
 }
 
 .clients-testimonials .testimonials__pos {
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
 }
 
@@ -2966,7 +2966,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-contact .form-field label {
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     line-height: 2.4rem;
     position: absolute;
@@ -2977,7 +2977,7 @@ html.no-csstransitions .home-content__main {
     padding: 0 2rem;
     margin: 0;
     color: #FFFFFF;
-    background: #39b54a;
+    background: orange;
 }
 
 .s-contact .form-field label::after {
@@ -2988,14 +2988,14 @@ html.no-csstransitions .home-content__main {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid #39b54a;
+    border-right: 5px solid orange;
 }
 
 .contact__line {
     display: block;
     width: 2px;
     height: 20.4rem;
-    background-color: #39b54a;
+    background-color: orange;
     position: absolute;
     left: 50%;
     top: -10.2rem;
@@ -3004,11 +3004,11 @@ html.no-csstransitions .home-content__main {
 
 .contact-content {
     max-width: 1000px;
-    background-color: rgba(0, 0, 0, 0.2);
+    /*background-color: rgba(0, 0, 0, 0.2);*/
     color: rgba(255, 255, 255, 0.4);
     padding-top: 6rem;
     padding-bottom: 6rem;
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     line-height: 2;
     position: relative;
@@ -3022,7 +3022,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-content h5 {
     margin-top: 0;
-    color: #39b54a;
+    color: orange;
 }
 
 .contact-content input[type="email"],
@@ -3049,7 +3049,7 @@ html.no-csstransitions .home-content__main {
 .contact-content textarea:focus,
 .contact-content select:focus {
     color: #FFFFFF;
-    border-bottom: 1px solid #39b54a;
+    border-bottom: 1px solid orange;
 }
 
 .contact-content button,
@@ -3140,7 +3140,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-social li a:hover, 
 .contact-social li a:focus {
-    color: #39b54a;
+    color: orange;
 }
 
 .contact-social li:last-child {
@@ -3163,7 +3163,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .message-success {
-    color: #39b54a;
+    color: orange;
 }
 
 .message-warning i, .message-success i {
@@ -3335,7 +3335,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 footer {
     padding: 9rem 0 6rem;
-    font-family: "montserrat-light", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
     line-height: 2;
     text-align: center;
@@ -3355,7 +3355,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus, footer a:active {
-    color: #39b54a;
+    color: orange;
 }
 
 footer .row {
@@ -3447,8 +3447,8 @@ footer .row {
     top: 0;
     right: 0;
     color: #FFFFFF;
-    background: #39b54a;
-    border-color: #39b54a;
+    background: orange;
+    border-color: orange;
     padding: 0 20px;
 }
 
