@@ -1,302 +1,635 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Conceal</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img src="images/logo3.png" width="50%" style="position: relative;
-							top: 50%;
-							transform: translateY(-50%);">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>CONCEAL</h1>
-								<p>Privacy Protected Digital Cash</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#features">Features</a></li>
-								<li><a href="#exchanges">Exchanges</a></li>
-								<li><a href="#wallets">Wallets</a></li>
-								<li><a href="#mining">Mining</a></li>					
-								<li><a href="https://explorer.conceal.network/" target="_blank">Explorer</a></li>
-							</ul>
-						</nav>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>The Conceal Network</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-					</header>
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-				<!-- Main -->
-					<div id="main">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
 
-							<article id="about">
-								<h2 class="major">ABOUT CONCEAL</h2>
-								<p><h3>{ What is Conceal? }</h3>
-								Conceal is a privacy protected digital cash system. It is completely decentralized, without the need for a central server or trusted parties. Users hold the crypto keys to their own money and transact directly with each other over a secure peer-to-peer network. Conceal is an open source scalability-focused, untraceable, secure, and fungible cryptocurrency using CryptoNote (Masari's CN Fast variant). The decentralised network supports encrypted messages and deposits with interest.</p>
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
-								<h3>{ DEPOSITS }</h3>
-									<p>Most cryptocurrency sit in wallets or cold storage, failing to generate any additional income beyond currency appreciation.
-										With the Conceal Deposit facility, you can earn as much as an additional 4% per annum. All you need is the Conceal GUI Wallet to get started.<br /><br />
-										Min deposit: 1 coin<br />
-										Max term: 262,800 blocks, 12 months = 1 year<br />									
-										Min term: 21,900 blocks, 1 month<br />
-										Interest rate: 4% per year (max term)<br />									
-										Min interest rate: 0.333333333% per month (min term)<br /><br />
-									</p>
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-									<h3>{ SECURE MESSAGING }</h3>
-									<p>Secure your confidentiality with messaging over an encrypted P2P network, secure communications and encrypted self destructive messages. 
-									Send anonymous encrypted messages over the decentralized blockchain and avoid censorship and tracking.<br />
-									
-									<h4>FEES</h4>	
-									Send Permanent Message: 0.000010 CCX + (0.000010 per char)<br />	
-									Self Destructive Message: 0.000010 CCX + (0.000010 per char)<br />	
-									Receiving Encrypted Messages: 0 CCX<br />	<br />	
-									
-									Miners get 100% of the fees.<br /><br />										
+</head>
 
-								<a href="#funding" class="button primary">FUNDING</a>				
-								<a href="#whitepapers" class="button primary">PAPERS</a>
-								<a href="https://github.com/TheCircleFoundation/conceal-core" class="button primary icon fa-download">Code</a>								
-								<br /><br />
+<body id="top">
 
-								<h3>{ Links }</h3>
-								<ul>
-										<li><b>Website:</b> <a href="https://conceal.network">https://conceal.network/</a></li>
-										<li><b>Block Explorer:</b> <a href="https://explorer.conceal.network">https://explorer.conceal.network/</a></li>
-										<li><b>Github:</b> <a href="http://github.conceal.network">http://github.conceal.network</a></li>
-										<li><b>Discord:</b> <a href="http://discord.conceal.network">http://discord.conceal.network</a></li>
-										<li><b>Twitter:</b> <a href="https://twitter.com/ConcealNetwork">https://twitter.com/ConcealNetwork</a></li>
-										<li><b>Medium:</b> <a href="https://medium.com/@ConcealNetwork">https://medium.com/@ConcealNetwork</a></li>
-										<li><b>Reddit:</b> <a href="https://www.reddit.com/r/ConcealNetwork/">https://www.reddit.com/r/ConcealNetwork/</a></li>
-										<li><b>Bitcointalk:</b> <a href="https://bitcointalk.org/index.php?topic=4515873">https://bitcointalk.org/index.php?topic=4515873</a></li>
-										<li><b>Medium:</b> <a href="https://medium.com/@concealx">https://medium.com/@concealx</a></li>
-								</ul>								
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
 
-								
-								<br />
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.png" alt="Homepage">
+            </a>
+        </div>
 
-							</article>
+        <nav class="header-nav">
 
-							<article id="funding">
-								<h2 class="major">FUNDING BREAKDOWN</h2>
-								<p>
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
 
-										Total Funds  - 12M (6% of Max Supply)<br /><br />
-
-										Foundation Reserve - 9M (Operations & Disaster Management, Partnerships and Exchanges)<br /><br />
-										
-										Community Funds - 3M (Research & Development, Team & Collaborators and Bounties & Activities)<br /><br />
-																					
-								</p>
-							</article>
-
-							<article id="exchanges">
-								<h2 class="major">EXCHANGES</h2>
-								Kompler : <a href="https://kompler.exchange/" >https://kompler.exchange/</a><br /><br />
-								MapleChange : <a href="https://maplechange.com" >https://maplechange.com</a><br /><br />
-								LetsDoCoinz : <a href="https://letsdocoinz.com/" >https://letsdocoinz.com/</a><br /><br />																
-								FirstCryptoBank : <a href="https://fcryptobank.com/" >https://fcryptobank.com/</a><br /><br />																								
-							</article>
-
-							<article id="features">
-								<h2 class="major">FEATURES</h2>
-								<p>
-									<h3>{ Private }</h3>
-Conceal uses ring signatures and one-time addresses for truly anonymous payments.<br /><br />
-
-<h3>{ Untraceable }</h3>
-Conceal's transactions can't be linked between the sender and the recipient.<br /><br />
-
-<h3>{ Decentralised }</h3>
-Conceal follows Satoshi Nakamoto's original vision of decentralised, trustless cryptocurrency, i.e. a secure digital cash operated by a network of users. Transactions are confirmed by distributed consensus, and then recorded on the blockchain immutably. Third-parties do not need to be trusted to keep your money safe<br /><br />
-
-<h3>{ Fungible }</h3>
-Conceal is truly fungible, thanks to built-in privacy features. Just like cash, all coins are equal, changeable. It is extremely unlikely that a coin will ever be blacklisted by any party due to its association in previous transactions<br /><br />
-
-<h3>{ Scalable }</h3>
-Future scalability initiatives with Uncle Mining and Blocktree protocols<br /><br />
-
-<h3>{ Community Developed }</h3>
-Developed and funded by community volunteers<br /><br />
-
-<h3>{ Simple }</h3>
-Cross-platform supported and easy to use<br /><br />
-
-<h3>{ Protected Proof Of Work }</h3>
-PoW hash function is designed for egalitarian CPU & GPU mining and ASIC Resistance<br /><br />
-
-<h3>{ Adaptive Limits }</h3>
-Conceal intelligently adjusts its parameters based on the historical data<br /><br />
-
-<h3>{ Encrypted Messages }</h3>
-Secure your confidentiality with an encrypted P2P network, secure communications and encrypted self destructive messages<br /><br />
-
-<h3>{ Blockchain Banking }</h3>
-Deposits get 4% interest rate per year<br /><br />
-
-<h3>{ Algorithm }</h3>
-Cryptonight Fast (by Masari) with DDA, and Zawy's LWMA.<br /><br />
-
-<h3>{ Total Supply }</h3>
-200,000,000 CCX<br /><br />
-
-<h3>{ Block Reward }</h3>
-Block rewards start at 5 CCX and increase at a rate of 0.25 CCX/month for a period of five years until 20 CCX.<br /><br />
-
-<h3>{ Block Time }</h3>
-120 seconds<br /><br />
-
-<h3>{ Fees }</h3>								
-Send CCX: 0.000010 (any amount)<br />
-Send CCX with comments: 0.000010 (+ 0.000010 per char)<br />
-Receiving Money: 0 CCX<br /><br />
-
-								</p>
-							</article>
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About Conceal</a></li>
+                    <li><a class="smoothscroll"  href="#features" title="features">Features</a></li>
+                    <li><a class="smoothscroll"  href="#roadmap" title="exchanges">Roadmap</a></li>
+                    <li><a class="smoothscroll"  href="#wallets" title="wallets">Wallets</a></li>
+                    <li><a class="smoothscroll"  href="#exchanges" title="exchanges">Exchanges</a></li>
+                    <li><a class="smoothscroll"  href="#mining" title="mining">Mining</a></li>
+                    <li><a class="smoothscroll"  href="https://explorer.conceal.network" title="explorer">Block Explorer</a></li>                    
+                    <li><a class="smoothscroll"  href="https://paperwallet.conceal.network" title="paperwallet">Paper Wallet</a></li>                       
+                </ul>
+    
 
 
-							<article id="deposits">
-									<h2 class="major">DEPOSITS</h2>
-									<p>Most cryptocurrency sit in wallets or cold storage, failing to generate any additional income beyond currency appreciation.
-										With the Conceal Deposit facility, you can earn as much as an additional 4% per annum. All you need is the Conceal GUI Wallet to get started.<br /><br />
-										Min deposit: 1 coin<br />
-										Max term: 262,800 blocks, 12 months = 1 year<br />									
-										Min term: 21,900 blocks, 1 month<br />
-										Interest rate: 4% per year (max term)<br />									
-										Min interest rate: 0.333333333% per month (min term)<br /><br />
-									</p>
-							</article>
+            </div> <!-- end header-nav__content -->
 
-							<article id="messages">
-									<h2 class="major">SECURE MESSAGING</h2>
-									<p>Secure your confidentiality with messaging over an encrypted P2P network, secure communications and encrypted self destructive messages. 
-									Send anonymous encrypted messages over the decentralized blockchain and avoid censorship and tracking.<br />
-									
-									<h3>{ FEES }</h3>	
-									Send Permanent Message: 0.000010 CCX + (0.000010 per char)<br />	
-									Self Destructive Message: 0.000010 CCX + (0.000010 per char)<br />	
-									Receiving Encrypted Messages: 0 CCX<br />	<br />	
-									
-									Miners get 100% of the fees.<br /><br />	
-									</p>
-									
-							</article>							
+        </nav>  <!-- end header-nav -->
 
-							<article id="whitepapers">
-								<h2 class="major">Whitepapers</h2>
-								<div class="field half first">
-									<label for="name">CryptoNote Original White Paper</label>
-									<a href="https://cryptonote.org/whitepaper.pdf" class="button primary icon fa-download">Download</a>
-								</p>									
-								</div>
-								<div class="field half">
-									<label for="name">Annotated Whitepaper by MRL</label>
-									<a href="https://downloads.getmonero.org/whitepaper_annotated.pdf" class="button primary icon fa-download">Download</a>
-									</p>
-								</div>
-								<div class="field half">
-									<label for="name">Surae Noether white Paper Review</label>
-									<a href="https://downloads.getmonero.org/whitepaper_review.pdf" class="button primary icon fa-download">Download</a>
-									</p>
-								</div>
-								<div class="field half">
-									<label for="name">Obfuscation in the CryptoNote Protocol</label>
-									<a href="https://lab.getmonero.org/pubs/MRL-0004.pdf" class="button primary icon fa-download">Download</a>
-									</p>
-								</div>
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
 
-							</article>
-
-							<article id="wallets">
-								<h2 class="major">WALLETS</h2>
-								<div class="field half first">
-									<label for="name"><h3>{ OFFICIAL CONCEAL WALLET }</h3></label>
-									<p>The offical wallet is available for Windows, Ubuntu, Mac, and Arch Linux. The wallet allows you to hold, mine, and transfer CCX. In addtion, you can send peer-to-peer encrypted messages and deposit funds for interest.
-									<br /><br /><a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" class="button primary icon fa-download">Download</a>
-								</p>									
-								</div>
-								<div class="field half">
-									<label for="name"><h3>{ ADVANCED USERS }</h3></label>
-									<p>Advanced users can download the latest builds of our CLI wallet for Windows, Ubuntu, Mac, and Arch Linux here. Alternatively, you can build it from source.
-										<br /><br /><a href="https://github.com/TheCircleFoundation/conceal-core/releases" class="button primary icon fa-download">Download</a>
-									</p>
-								</div>
-
-							</article>
-
-							<article id="mining">
-								<h2 class="major">Mining</h2>
-
-								<p><h3>{ Block Rewards }</h3>
-
-									Conceal's block reward model uses an innovate approach. The block reward starts small and get bigger with time as the blockchain network grows, so does the cost of mining. At the beginning every network have a small number of transactions per day and the blockchain is still a small file but with time the size will go up and the effort to keep it running will be bigger. More miners will be needed to keep it running sound and safe. To reward properly this mining effort we will start with 5 CCX per block and raise it by 0.25 CCX every month until we reach 20 CCX per block (capped - max reward in 5 years).</p>
-
-									<h3>{ Mining Pools }</h3>
-									<ul>
-										<li><b>Official Pool:</b> <a href="https://pool.conceal.network/">https://pool.conceal.network/</a></li>
-										<li><b>SCECF</b> <a href="https://ccx.scecf.org/">https://ccx.scecf.org/</a></li>										
-										<li><b>Blue Rock Pools</b> <a href="https://ccx.bluerockpools.net/">https://ccx.bluerockpools.net/</a></li>
-										<li><b>go mine it!:</b> <a href="https://ccx.go-mine.it/">https://ccx.go-mine.it/</a></li>
-										<li><b>herominers:</b> <a href="https://conceal.herominers.com/">https://conceal.herominers.com/</a></li>
-								</ul>
-							</article>
-							
-							<article id="links">
-
-							</article>
-
-							<article id="legal">
-								<h2 class="major">Legal Disclaimer</h2>
-<p>
-	Conceal is an open source community experimental project, which means that there is no company behind it. This project is supported by the community, meaning there is no stable, full-time team and no physical headquarters from which the projects runs its operations. The advantage here is that anyone can propose changes or improvements to the blockchain, and, if the suggestion is voted by a majority of people, the changes are then implemented. This project is intended to be a community project not a commercial product and relies on volunteers availibility.<br /><br />
-	
-	Conceal is distributed in the hope that it will be useful to humanity, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANT ABILITY or FITNESS FOR A PARTICULAR PURPOSE.  There is no warranty that the coins generated/accrued will worth anything.<br /><br />
-	
-	The views provided in this community are from own authors. Our posts do not offer investment advice and nothing in them should be construed as investment advice. You must be satisfied that this crypto offering is suitable for you in light of your financial circumstances and attitude towards risk before starting. The price or value of cryptocurrencies can rapidly increase or decrease at any time (and may even fall to zero). The risk of loss in holding cryptocurrencies can be substantial. Funds received by us in relation to cryptocurrency transactions will not be safeguarded (under the UK Electronic Money Regulations 2011) or covered by the Financial Services Compensation Scheme. We do not make any representation regarding the advisability of transacting in cryptocurrency. We cannot guarantee the timeliness, accurateness, or completeness of any data or information used in connection with you holding any exposure to cryptocurrencies.<br /><br />
-	
-</p>
-
-							</article>
+    </header> <!-- end s-header -->
 
 
-					</div>
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-				<!-- Footer -->
-					<footer id="footer">
-							<ul class="icons">
-									<li><a href="https://twitter.com/ConcealNetwork" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="http://discord.conceal.network" class="icon fa-comments"><span class="label">Discord</span></a></li>									
-									<li><a href="http://github.conceal.network" class="icon fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.reddit.com/r/ConcealNetwork/" class="icon fa-reddit"><span class="label">Reddit</span></a></li>
-									<li><a href="https://medium.com/@ConcealNetwork" class="icon fa-medium"><span class="label">Medium</span></a></li>
-								</ul>
-						<p class="copyright">&copy; Conceal.Network</p><a href="#legal" style="font-size: small;">Terms of service</a> 
-					</footer>
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
 
-			</div>
+        <div class="home-content">
 
-		<!-- BG -->
-			<div id="bg"></div>
+            <div class="row home-content__main">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                 <h1>
+                    Decentralized Banking<br />
+                </h1>
+                <h3>Private. Secure. Untraceable.</h3>
 
-	</body>
+                <div class="home-content__buttons">
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        About Us
+                    </a>
+                    <a href="#wallets" class="smoothscroll btn btn--stroke">
+                        Wallets
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="https://discord.conceal.network" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i><span>Discord</span></a>
+            </li>
+            <li>
+                    <a href="https://t.co/55klBHKGUR" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i><span>BitcoinTalk</span></a>
+                </li>  
+            <li>
+                <a href="https://twitter.com/ConcealNetwork" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+            <li>
+                <a href="https://www.reddit.com/r/ConcealNetwork/" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i><span>Reddit</span></a>
+            </li>
+         
+            <li>
+                <a href="https://bitcointalk.org/index.php?topic=4515873" target="_blank"><i class="fa fa-bitcoin" aria-hidden="true"></i><span>BitcoinTalk</span></a>
+            </li>
+            
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">ABOUT</h3>
+                <h1 class="display-1 display-1--light">Conceal</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>Conceal Network is a decentralized banking platform with privacy protected cryptocurrency and encrypted messenger.
+                    </p>
+                <p>
+                    Conceal is a cryptocurrency that uses the cryptonote protocol to form a decentralized banking and finance platform on a stable network, accessible by anyone in the world regardless of geographic location or status.
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                    Conceal is 100% open-source software and community driven project and not a private company funded through an ICO. The development and marketing effort is supported by a 6% foundation trust. 
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+        <div class="home-content__line"></div>
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <div class="stats__count">120</div>
+                <h5>Block Time (s)</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">200</div>
+                <h5>Max Supply (mn)</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">5.75</div>
+                <h5>Block Reward</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">6</div>
+                <h5>Decimal Places</h5> 
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+
+
+    <!-- services
+    ================================================== -->
+    <section id='features' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">OUR</h3>
+                <h1 class="display-1 display-1--light">Features</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Deposits & Investments</h3>
+                    <p>Deposits form the backbone of the Conceal ecosystem, providing users with an egalitarian form of staking that earns interests on locked deposits. Conceal Investments provide higher interest returns for longer term holders. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-chat"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Encrypted Messaging</h3>
+                    <p>A true decentralized, anonymous, untraceable, and end-to-end encrypted messaging service that operates on the blockchain while allowing messages that self-destruct. Future releases will include web and mobile messaging applications.
+                    </p>
+                </div>
+            </div>
+
+ <!-- end section-header -->
+ <div class="row section-header has-bottom-sep" data-aos="fade-up">
+    <div class="col-full">
+        <h3 class="subhead subhead--dark">TECHNOLOGY</h3>
+    </div>
+</div> <!-- end section-header -->
+
+
+        <div class="row services-list block-1-2 block-tab-full">
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Private</h3>
+                    <p>The transactions in the Conceal network use a minimum level of ring signatures to obfuscate the origins and destinations of all transactions, ensuring they are untraceable and unlinkable. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Decentralized</h3>
+                    <p>The Conceal Blockchain uses the proof-of-work for its distributed peer-to-peer consensus network to maintain the integrity of the blockchain and ensure its immutability.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Fungible</h3>
+                    <p>Conceal is private at a protocol level and unlike some other cryptocurrencies and transparency is not optional. Funds on the blockchain cannot be discriminated against under any circumstance. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Low Fees</h3>
+                    <p>The Conceal blockchain platform removes intermediaries and operates on low transaction fees to minimize transaction costs. Transaction costs are kept low with a static fee per transaction, not by block size.
+                    </p>
+                </div>
+            </div>        
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Fast</h3>
+                    <p>The decentralized platform allows for fast transactions, high transaction throughput, and quick transaction confirmation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+
+                </div>
+                <div class="service-text">
+                    <h3 class="h2">Block Rewards</h3>
+                    <p>TConceal's block reward model uses an innovate approach. The block reward increases as the blockchain network grows compensating for additional network participation.
+                    </p>
+                </div>
+            </div>   
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+    
+ <!-- about
+    ================================================== -->
+    <section id='roadmap' class="s-about">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">               
+                <h1 class="display-1 display-1--light">Our Roadmap</h1>
+            </div>
+        </div> <!-- end section-header -->
+ <!-- end section-header -->
+ <div class="row section-header has-bottom-sep" data-aos="fade-up">
+    <div class="col-full">
+        <h3 class="subhead subhead--dark">COMPLETED</h3>
+    </div>
+</div> <!-- end section-header -->
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                    <h3>Deposits 1.0</h3>
+                    <p>                      
+                            A deposit system that generates interest when locking CCX down for a specific term. Interest is released at the end of the deposit term.                    
+                    </p>
+                <h3>ASIC Resistance</h3>
+                <p>                      
+                        Switch to the Cryptonight-Fast protocol developed by Masari to secure against malicious network attacks, while maintaining the balance between the CPU and GPU miners.                        
+                </p>
+                <h3>Encrypted Messenger 1.0</h3>
+                <p>                      
+                        Send and recieve encrypted messages using the blockchain from the GUI Wallet with support for self-destructing and large messages.                      
+                </p>                
+                <h3>LWMA</h3>
+                <p>                      
+                        Implemented the algorithm that is one of the best to combat hasrate based attacks on the network, providing speed of response and network stability.                       
+                </p>
+                <h3> GUI Redesign</h3>
+                <p>                      
+                        A new improved GUI wallet redesigned from scratch and offering better privacy protection, deposits, encrypted messages, market information, price charts, and pool earnings.               
+                </p>
+
+                    
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">IN PROGRESS</h3>
+                </div>
+            </div> <!-- end section-header -->
+            <div class="row about-desc" data-aos="fade-up">
+                    <div class="col-full">
+                            <h3>Fortress Update                                </h3>
+                        <p>                      
+                            The fortress update is an ongoing initiative to improve the privacy of the network while maintaining network speed and performance.                         
+                        </p>
+                        <h3>LWMA2</h3>
+                        <p>                      
+                            In an effort to keep the network secure, migrate to the latest version of the LWMA difficulty adjustment algorithm from zawy.            
+                        </p>
+                        <h3>Investments 1.0</h3>
+                        <p>                      
+                            With the addition of the Investments module, Conceal users will be able to earn additional interest when they stake more funds for longer.         
+                        </p>
+                        <h3>Deposits 2.0</h3>
+                        <p>                      
+                            An upgraded deposits module will allow additional granularity and a new interest rate scheme will replace the existing flat rate.    
+                        </p>                     
+                        <h3>One-Click Miner</h3>
+                        <p>                      
+                            A simple one-click miner that supports GPU and CPU mining. All the user will need to do is enter an address, select a pool and click Start.    
+                        </p>   
+                        <h3>Web Wallet</h3>
+                        <p>                      
+                            The first step to mass adoption and the backend nessecary for the development of the mobile wallets, is the introduction of client-side and server-side web wallets..    
+                        </p>                                
+                    </div>
+                </div> <!-- end about-desc -->
+
+
+                <div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
+                    <div class="col-full">
+                        <h3 class="subhead subhead--dark">PLANNED</h3>
+                    </div>
+                </div> <!-- end section-header -->
+                <div class="row about-desc" data-aos="fade-up">
+                        <div class="col-full">
+                                <h3>P2P Loans</h3>
+                            <p>                      
+                                    A sidechain to provide a p2p credit for a one-time fee and using credited party’s cryptocurrency as security for the term of the loan.                    
+                            </p>
+                            <h3>Atomic Swaps</h3>
+                            <p>                      
+                                    Decentralized Atomic Swap to enable cross-chain exchange avoiding third party risks from the Conceal Wallet.            
+                            </p>
+                            <h3>Block Bonuses/Penalties</h3>
+                            <p>                      
+                                    Another layer of protection against attacks on the network by introducing a penalty and bonus system in response to sudden increases and then drops in network hashrate. 
+                            </p>
+                            <h3>OpenAlias</h3>
+                            <p>                      
+                                    Conceal will implement the aliasing protocol to simplify aliasing for users unfamiliar with cryptocurrency while keeping  it private, decentralized, and secure.
+                            </p>                      
+                            <h3>Dynamic Interest</h3>
+                            <p>                      
+                                    The protocol will adjust interest rate dynamically based on several network factors such as deposits and investment penetratation, and current supply to reduce inflationary risks.
+                            </p>                                
+                        </div>
+                    </div> <!-- end about-desc -->
+
+    </section> <!-- end s-about -->
+
+    <!-- clients
+    ================================================== -->
+    <section id="exchanges" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">BUY AND SELL</h3>
+                <h1 class="display-2">Exchanges</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="clients">
+                    
+                    <a href="https://kompler.exchange" title="" class="clients__slide"><img src="images/kompler.png" /></a>
+                    <a href="https://maplechange.com/markets/ccxbtc" title="" class="clients__slide"><img src="images/mc.png" /></a>
+                    <a href="https://letsdocoinz.com/" title="" class="clients__slide"><img src="images/ldc.png" /></a>
+                     
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="wallets" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">WALLETS</h3>
+                <h1 class="display-2 display-2--light">The Conceal Wallet</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+            <p>The Conceal GUI Wallet is the central point of interaction of all the features of the currency. With the wallet, you can send and receive CCX, send and recieve encrypted secure messages, manage your deposits and investments. The wallet is available for all major platforms: Windows x64, Ubuntu, macOS and Arch Linux.</p>
+       <img src="https://conceal.network/cms/wp-content/uploads/2018/09/Capture-1.jpg" />
+       <center><a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank" class="smoothscroll btn btn--stroke">GUI WALLET</a> <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank" class="smoothscroll btn btn--stroke">CLI WALLET</a></center>
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="mining" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">Mining</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+
+
+        <div class="row add-bottom">
+                
+            <div class="col-twelve">
+
+                <p>The easiest way to mine Conceal is with the built-in miner in the GUI Wallet. For mining with GPU's use one of the many miners that support Cryptonight-Fast or use our upcoming Conceal Miner.</p>
+
+                <h3 style="color: orange;">MINING POOLS</h3>
+                <div class="table-responsive">
+
+                    <table>
+                            <thead>
+                            <tr>
+                                <th>POOL</th>
+                                <th>URL</th>
+                                <th>FEE</th>                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Official Pool</td>
+                                <td><a href="https://pool.conceal.network">pool.conceal.network</a></td>
+                                <td>1%</td>                                
+                            </tr>
+                            <tr>
+                                <td>SCECF</td>
+                                <td><a href="http://ccx.scecf.org">ccx.scecf.org</a></td>
+                                <td>0.4%</td>                                
+                            </tr>
+                            <tr>
+                                <td>Herominers</td>
+                                <td><a href="http://conceal.herominers.com">conceal.herominers.com</a></td>
+                                <td>0%</td>                                
+                            </tr>
+                            <tr>
+                                <td>BlueRockPools</td>
+                                <td><a href="http://ccx.bluerockpools.net">ccx.bluerockpools.net</a></td>
+                                <td>0.1%</td>                                
+                            </tr>  
+                            <tr>
+                                <td>GoMine-it!</td>
+                                <td><a href="http://ccx.go-mine.it/">ccx.go-mine.it</a></td>
+                                <td>0.5%</td>                                
+                            </tr>                                                        
+                            </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+            
+        </div> <!-- end row -->
+
+
+
+    </section> <!-- end s-clients -->    
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>©2018 Conceal.Network. All rights reserved. <a href="tos.html">Terms of Service.</a></span> 
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/test.js"></script>
+
+</body>
+
 </html>
