@@ -132,6 +132,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     }
 }
 
+
 h5, .h5, h6, .h6 {
     margin-top: 4.2rem;
     margin-bottom: 1.5rem;
@@ -3386,7 +3387,7 @@ footer .row {
     border: none;
     width: 85px;
     height: 28px;
-    background: url("../images/logo-footer.png") no-repeat center;
+    background: url("../images/logo.png") no-repeat center;
     background-size: 85px 28px;
     font: 0/0 a;
     text-shadow: none;

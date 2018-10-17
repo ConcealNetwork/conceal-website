@@ -34,6 +34,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- bitcoin donation button
+    ================================================== -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
+
+
 </head>
 
 <body id="top">
@@ -49,12 +54,9 @@
         </div>
 
         <nav class="header-nav">
-
             <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
-
             <div class="header-nav__content">
-                <h3>Navigation</h3>
-                
+                <h3>Navigation</h3>                
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
@@ -65,12 +67,8 @@
                     <li><a class="smoothscroll"  href="#mining" title="mining">Mining</a></li>
                     <li><a href="https://explorer.conceal.network" target="_blank" title="explorer">Block Explorer</a></li>                    
                     <li><a href="https://paperwallet.conceal.network" target="_blank" title="paperwallet">Paper Wallet</a></li>                       
-                </ul>
-    
-
-
+                </ul>    
             </div> <!-- end header-nav__content -->
-
         </nav>  <!-- end header-nav -->
 
         <a class="header-menu-toggle" href="#0">
@@ -115,16 +113,14 @@
             </div>
 
             <div class="home-content__line"></div>
-
         </div> <!-- end home-content -->
-
 
         <ul class="home-social">
             <li>
                 <a href="https://discord.conceal.network" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i><span>Discord</span></a>
             </li>
             <li>
-                <a href="https://t.co/55klBHKGUR" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i><span>BitcoinTalk</span></a>
+                <a href="https://t.co/55klBHKGUR" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i><span>Telegram</span></a>
             </li>  
             <li>
                 <a href="https://twitter.com/ConcealNetwork" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
@@ -134,16 +130,12 @@
             </li>
             <li>
                 <a href="https://github.com/TheCircleFoundation" target="_blank"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a>
-            </li>
-            
-            
+            </li>                        
             <li>
                 <a href="https://bitcointalk.org/index.php?topic=4515873" target="_blank"><i class="fa fa-bitcoin" aria-hidden="true"></i><span>BitcoinTalk</span></a>
-            </li>
-            
-        </ul> 
-        <!-- end home-social -->
-
+            </li>            
+        </ul> <!-- end home-social -->
+        
     </section> <!-- end s-home -->
 
 
@@ -359,7 +351,7 @@
 
 			<div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
                 <div class="col-full">
-                    <h3 class="subhead subhead--dark">ON GOING</h3>
+                    <h3 class="subhead subhead--dark">ONGOING</h3>
                 </div>
 			</div> <!-- end section-header -->
 				<div class="row about-desc" data-aos="fade-up">
@@ -544,8 +536,79 @@
     ================================================== -->
     <footer>
 
+
         <div class="row footer-main">
 
+
+            
+            <div class="col-six tab-full left footer-desc">
+
+                <div class="contact-info">
+                    <div class="cinfo">
+                        <h3 class="subhead subhead--dark">WHERE TO FIND US</h3>
+                        <p>The best place to find out more is to visit our <a href="http://discord.conceal.network">Discord</a> channel. You will find our source code, and other releases on <a href="http://github.conceal.network">Github</a>, and our latest activities on <a href="https://twitter.com/ConcealNetwork">Twitter</a>.
+                        Here are all the other ways you can find us online:</p>
+
+                    </div>
+                    
+
+                    <ul class="contact-social">
+                        <li>
+                            <a href="http://discord.conceal.network"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://t.co/55klBHKGUR"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                        </li>                        
+                        <li>
+                            <a href="http://github.conceal.network"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>                        
+                        <li>
+                            <a href="https://twitter.com/ConcealNetwork"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/r/ConcealNetwork/"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@concealx"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=4515873"><i class="fa fa-bitcoin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul> <!-- end contact-social -->
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h3 class="subhead subhead--dark">DONATE</h3>
+                <p>You can contribute to our fund for exchange listings and marketing activities by clicking on the button below.</p>
+
+                <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn"
+                data-address="15BsM4z2KZPWYdqmD8qV9dAGovL4efZurh"
+                data-shared="false">
+               <div class="blockchain stage-begin">
+                   <img src="https://blockchain.info/Resources/buttons/donate_64.png"/>
+               </div>
+               <div class="blockchain stage-loading" style="text-align:center">
+                   <img src="https://blockchain.info/Resources/loading-large.gif"/>
+               </div>
+               <div class="blockchain stage-ready">
+                    <p align="center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
+                    <p align="center" class="qr-code"></p>
+               </div>
+               <div class="blockchain stage-paid">
+                    Donation of <b>[[value]] BTC</b> Received. Thank You.
+               </div>
+               <div class="blockchain stage-error">
+                   <font color="red">[[error]]</font>
+               </div>
+           </div>
+
+            </div>
 
         </div> <!-- end footer-main -->
 
