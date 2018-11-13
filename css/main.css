@@ -2252,6 +2252,17 @@ html.no-csstransitions .home-content__main {
     white-space: nowrap;
 }
 
+.stats__static {
+    font-family: Poppins, sans-serif;
+    font-size: 4.4rem;
+    line-height: 1;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .stats h5 {
     font-family: "Poppins", sans-serif;
     margin-top: 1.8rem;
