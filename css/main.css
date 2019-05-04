@@ -625,13 +625,13 @@ select {
     padding: 1.5rem 0;
     border: 0;
     outline: none;
-    color: #333333;
+    color: #aaa;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     line-height: 3rem;
     max-width: 100%;
     background: transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(170, 170, 170, 0.3);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -705,8 +705,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    color: #000000;
-    border-bottom: 2px solid black;
+    color: #aaa;
+    border-bottom: 2px solid #aaa;
 }
 
 label, legend {
@@ -878,6 +878,7 @@ input[type="button"].btn--primary:focus {
     background: #333;
     border: none;
     color: white;
+	border: 1px solid #555;
     border-top: 2px solid orange;
 }
 
@@ -2947,14 +2948,11 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background-color: #151515;
-    background-image: url("../images/contact-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center, center;
-    padding-top: 15rem;
-    padding-bottom: 12rem;
-    color: rgba(255, 255, 255, 0.5);
-    position: relative;
+	padding-top: 16.2rem;
+	padding-bottom: 9rem;
+	background-color: #222;
+	color: #999;
+	position: relative;
 }
 
 .s-contact .overlay {
@@ -3215,6 +3213,51 @@ html.no-csstransitions .home-content__main {
     display: block;
 }
 
+
+.contact {
+	max-width: 800px;
+	margin: auto;
+}
+
+.contact_field {
+	width: 100%;
+}
+
+.contat_label {
+	color: #ddd;
+}
+
+#contact_message {
+	min-height: 15rem;
+}
+
+#contact_captcha {
+	float: right;
+}
+
+#contact_submit {
+    background-color: transparent;
+    border-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+#dlgContactFinished {
+	color: white;
+	background: #212529;
+	border: 2px solid #343a40;
+}
+
+#btnContactFinished {
+	color: #fff;
+    border: 2px solid orange;
+    background: transparent;
+}
+
+#btnContactFinished:hover,
+#btnContactFinished:focus {
+  background: transparent;
+}
 
 /* --------------------------------------------------------------- 
  * ## loader animation 
@@ -3616,3 +3659,9 @@ footer .row {
 
 
 /*# sourceMappingURL=main.css.map */
+
+.checkmark{
+	margin-left: 10px;
+	margin-right: 10px;
+	color: orange;
+}

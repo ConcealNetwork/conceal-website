@@ -1,0 +1,129 @@
+.timeline {
+	position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:4px;
+    background-color:#fff;
+}
+
+.timeline .entries {
+    width:calc(100% - 80px);
+    max-width:800px;
+    margin:auto;
+    position: relative;
+    left:-5px;
+}
+
+.timeline .entry {
+    width:calc(50% - 80px);
+    float:left; 
+    padding-top:20px;
+    padding-bottom:20px;
+    clear:both;
+    text-align:right;
+}
+
+.timeline .entry .title-wrapper div { 
+	display: inline-block;
+}
+
+.timeline .entries .entry:nth-child(2n) {
+    text-align: left;
+    float: right;
+}
+
+.timeline .title {
+	font-size:32px;
+	margin-bottom:12px;
+	position: relative;
+	color:#fff;
+}
+
+.timeline .title:before {
+	content: '';
+	position: absolute;
+	width:16px;
+	height:16px;
+	border:4px solid #ffffff;
+	background-color:#1D1D1D;
+	border-radius:100%;
+	top:50%;
+	transform:translateY(-50%);
+	right:-73px;
+    z-index:1000;
+}
+ .timeline .big:before {
+	width:24px;
+	height:24px;
+	transform:translate(8px,-50%);
+}
+ 
+.timeline .body {
+	color:#aaa;
+}
+
+.timeline p {
+    line-height:1.4em;
+}
+
+.timeline .entries .entry:nth-child(2n) {
+    text-align: left;
+}	
+
+.timeline .entries .entry:nth-child(1n) .title::before {
+    right: -93px;
+}
+
+.timeline .entries .entry:nth-child(1n) .title.big::before {
+    right: -89px;
+}
+
+.timeline .entries .entry:nth-child(2n) .title::before {
+    left: -83px !important;
+}
+
+.timeline .entries .entry:nth-child(2n) .title.big::before {
+    left: -95px !important;
+}
+	
+.timeline .entries .entry .title.big::before {
+    width: 24px;
+    height: 24px;
+    -webkit-transform: translate(8px, -50%);
+    transform: translate(8px, -50%);
+}
+
+.left-pie {
+	transform: translate(-10px, 8px);
+}
+
+.right-pie {
+	transform: translate(10px, 8px);	
+}
+
+@media only screen and (max-width: 900px) {
+	.timeline:before,
+	.timeline .title::before	{
+		display: none;
+	}
+	
+	.timeline .entry {
+		width:calc(100%);
+		text-align: left;
+	}	 		
+	
+	.timeline .title {
+		font-size: 20px;
+	}
+}
+
+.progress-pie {
+	display: none !important;
+}

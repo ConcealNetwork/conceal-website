@@ -23,21 +23,23 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/roadmap.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/loading-indicator.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="js/modernizr.js"></script>	
     <script src="js/pace.min.js"></script>
-
+	
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- bitcoin donation button
-    ================================================== -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script><script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
-
 
 </head>
 
@@ -61,14 +63,16 @@
                     <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll"  href="#features" title="features">Features</a></li>
                     <li><a class="smoothscroll"  href="#roadmap" title="exchanges">Roadmap</a></li>
-                    <li><a class="smoothscroll"  href="#wallets" title="wallets">Wallets</a></li>
+                    <li><a class="smoothscroll"  href="#theteam" title="exchanges">The Team</a></li>					
+                    <li><a class="smoothscroll"  href="#wallets" title="downloads">Downloads</a></li>
+                    <li><a href="https://conceal.cloud" title="cloud wallet">Cloud</a></li>
                     <li><a class="smoothscroll"  href="#exchanges" title="exchanges">Exchanges</a></li>
                     <li><a class="smoothscroll"  href="#mining" title="mining">Mining</a></li>
                     <li><a href="https://explorer.conceal.network" target="_blank" title="explorer">Explorer</a></li>                    
-                    <li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" title="paperwallet">Wiki</a></li>       
-                    <li><a href="https://www.coingecko.com/en/coins/conceal" target="_blank" title="paperwallet">Market Cap</a></li>       
-                    
-                
+                    <li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" title="wiki">Wiki</a></li>       
+                    <li><a href="https://www.coingecko.com/en/coins/conceal" target="_blank" title="coingecko">CoinGecko</a></li>       
+                    <li><a href="https://coinmarketcap.com/currencies/conceal/" target="_blank" title="cmc">CoinMarketCap</a></li>       
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>                                    
                 </ul>    
             </div> <!-- end header-nav__content -->
         </nav>  <!-- end header-nav -->
@@ -95,15 +99,18 @@
                  <h1>
                    Conceal Network<br />
                 </h1>
-                <h3>Decentralized Banking, Private Transactions & Secure Messaging</h3>
+                <h3>Decentralized Banking, Private Transactions & Encrypted Messaging</h3>
 
                 <div class="home-content__buttons">
                     <a href="#about" class="btn btn--stroke">
                         About
                     </a>
                     <a href="#wallets" class="btn btn--stroke">
-                        Wallet
+                        Downloads
                     </a>
+                    <a href="https://conceal.cloud" class="btn btn--stroke">
+                        Cloud
+                    </a>                    
                 </div>
 
             </div>
@@ -241,7 +248,7 @@
             <div class="col-block service-item" data-aos="fade-up">
                     <div class="service-text">
                         <h3 class="h4">Simple</h3>
-                        <p>Easy to use GUI and CLI clients.</p>
+                        <p>Easy to use Desktop and CLI clients.</p>
                     </div>
             </div>        
             <div class="col-block service-item" data-aos="fade-up">
@@ -271,7 +278,14 @@
             <div class="col-block service-item" data-aos="fade-up">
                     <div class="service-text">
                         <h3 class="h4">Decentralized Banking</h3>
-                        <p>Deposits get up to 4% interest rate per year and Investments up to 12% p.a.</p>
+                        <p>Deposits get up to 4.2% interest rate per year and Investments up to 7.2% p.a.</p>
+                        <p>Examples:
+							<ul>
+								<li>2M CCX Deposited for 1 year -> 83.200 CCX interests, up to 4.16% p.a</li>
+								<li>2M CCX Invested for 1 year -> 120.689 CCX interests, up to 6.04% p.a</li>
+								<li>2M CCX Ivested for 5 years -> 732,462 CCX interests, up to 7.2% p.a</li>
+							</ul>
+						</p>
                     </div>
             </div>                       
         </div> <!-- end services-list -->                
@@ -308,7 +322,7 @@
                         <div class="col-block service-item" data-aos="fade-up">
                                 <div class="service-text">
                                     <h3 class="h4">Algorithm</h3>
-                                    <p>PoW, Cryptonight Fast</p>
+                                    <p>PoW, Cryptonight Conceal</p>
                                 </div>
                         </div>
             
@@ -381,7 +395,7 @@
                             <div class="col-block service-item" data-aos="fade-up">
                                     <div class="service-text">
                                         <h3 class="h4">Block reward</h3>
-                                        <p>Starting on 5 CCX and going up to 20 CCX (+0.25CCX/month). Currently 6.75 CCX.</p>
+                                        <p>Starting on 5 CCX and going up to 20 CCX (+0.25CCX/month). Currently 7.5 CCX.</p>
                                     </div>
                             </div>     
                 
@@ -452,102 +466,254 @@
                 <h1 class="display-1 display-1--light">Roadmap</h1>
             </div>
 	    </div> <!-- end section-header -->		
-		<div class="row section-header has-bottom-sep" data-aos="fade-up">
+
+		<div class="row about-desc" data-aos="fade-up">
+			<div class="col-full">
+				<div class="accordion">
+					<div class="accordion-item">
+						<a><h3 class="subhead subhead--dark">COMPLETED MILESTONES</h3></a>
+						<div class="timeline content">
+							<div class="entries">
+							  <div class="entry">
+								<div class="title"><span class="checkmark">&#10003;</span>Deposits 1.0</div>
+								<div class="body">
+								  <p>A deposit system that generates interest when locking CCX down for a specific term. Interest is released at the end of the deposit term.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title">ASIC Resistance<span class="checkmark">&#10003;</span></div>
+								<div class="body">
+								  <p>Switch to the Cryptonight-Fast protocol developed by Masari to secure against malicious network attacks, while maintaining the balance between the CPU and GPU miners.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title big"><span class="checkmark">&#10003;</span>Encrypted Messenger</div>
+								<div class="body">
+								  <p>Send and recieve encrypted messages using the blockchain from the Desktop Wallet with support for self-destructing and large messages.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title">LWMA<span class="checkmark">&#10003;</span></div>
+								<div class="body">
+								  <p>Implemented the algorithm that is one of the best to combat hashrate based attacks on the network, providing speed of response and network stability.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title"><span class="checkmark">&#10003;</span>Desktop Wallet Redesign</div>
+								<div class="body">
+								  <p>A new improved Desktop wallet redesigned from scratch and offering better privacy protection, deposits, encrypted messages, market information, price charts, and pool earnings.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title big">Investments 1.0<span class="checkmark">&#10003;</span></div>
+								<div class="body">
+								  <p>With the addition of the Investments module, Conceal users will be able to earn additional interest when they stake more funds for longer.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title"><span class="checkmark">&#10003;</span>Deposits 2.0</div>
+								<div class="body">
+								  <p>An upgraded deposits module will allow additional granularity and a new interest rate scheme will replace the existing flat rate.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title big">Cloud Wallet<span class="checkmark">&#10003;</span></div>
+								<div class="body">
+								  <p>The first step to mass adoption and the backend nessecary for the development of the mobile wallets, is the introduction of a server-side cloud wallet.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title"><span class="checkmark">&#10003;</span>Cryptonight Conceal</div>
+								<div class="body">
+								  <p>The Cryptonight Conceal variant has tweaks that involve minor floating point math. This is not enough to prevent FPGA implementation entirely, as that involve significantly slowing down CPU mining, but it will discourage it. It also includes an accumulating constant to make sure that each transformation is done in order. The transformation is applied right before AES encryption.</p>
+								</div>
+							  </div>
+							</div>
+						</div>										
+					</div>
+				</div>
+			</div>
+		</div> <!-- end about-desc -->
+
+		<div class="row about-desc" data-aos="fade-up">
+			<div class="col-full">
+				<div class="accordion">
+					<div class="accordion-item">
+						<a class="active"><h3 class="subhead subhead--dark">ONGOING</h3></a>
+						<div class="timeline content active">
+							<div class="entries">
+							  <div class="entry">
+								<div class="title-wrapper">
+									<div class="title">Fortress Update</div>
+								</div>
+								<div class="body">
+								  <p>The fortress update is an ongoing initiative to improve the privacy of the network while maintaining network speed and performance.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title-wrapper">
+									<div class="title">Conceal Mobile</div>
+								</div>
+								<div class="body">
+								  <p>We will start with the Android wallet with future plans for iOS development.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title-wrapper">
+									<div class="title big">Conceal ID</div>
+								</div>
+								<div class="body">
+								  <p>Alias Protocol implementation to simplify aliasing for users unfamiliar with cryptocurrency while keeping it private, decentralized, and secure.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title-wrapper">
+									<div class="title">Conceal Smart Nodes</div>
+								</div>
+								<div class="body">
+								  <p>Remote nodes are an important part of the network expansion and we are implementing a fee model to reward whoever runs them.</p>
+								</div>
+							  </div>
+							  <div class="entry">
+								<div class="title-wrapper">
+									<div class="title">Conceal Rewards</div>
+								</div>
+								<div class="body">
+								  <p>Get CCX rewards for shopping online.</p>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end about-desc -->
+			
+		<div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
 				<div class="col-full">
-					<h3 class="subhead subhead--dark">COMPLETED MILESTONES</h3>
+					<h3 class="subhead subhead--dark">PLANNED</h3>
 				</div>
 		</div> <!-- end section-header -->
 			<div class="row about-desc" data-aos="fade-up">
 				<div class="col-full">
-					<h3>Deposits 1.0</h3>
-					<p>                      
-                        A deposit system that generates interest when locking CCX down for a specific term. Interest is released at the end of the deposit term.                    
-					</p>
-					<h3>ASIC Resistance</h3>
-					<p>                      
-                        Switch to the Cryptonight-Fast protocol developed by Masari to secure against malicious network attacks, while maintaining the balance between the CPU and GPU miners.                        
-					</p>
-					<h3>Encrypted Messenger 1.0</h3>
-					<p>                      
-                        Send and recieve encrypted messages using the blockchain from the GUI Wallet with support for self-destructing and large messages.                      
-					</p>                
-					<h3>LWMA</h3>
-					<p>                      
-                        Implemented the algorithm that is one of the best to combat hasrate based attacks on the network, providing speed of response and network stability.                       
-					</p>
-					<h3> GUI Redesign</h3>
-					<p>                      
-                        A new improved GUI wallet redesigned from scratch and offering better privacy protection, deposits, encrypted messages, market information, price charts, and pool earnings.               
-                    </p>
-                    <h3>Investments 1.0</h3>
-                    <p>                      
-                        With the addition of the Investments module, Conceal users will be able to earn additional interest when they stake more funds for longer.         
-                    </p>
-                    <h3>Deposits 2.0</h3>
-                    <p>                      
-                        An upgraded deposits module will allow additional granularity and a new interest rate scheme will replace the existing flat rate.    
-                    </p>                     
-                    <h3>One-Click Miner</h3>
-                    <p>                      
-                        A simple one-click miner that supports GPU and CPU mining. All the user will need to do is enter an address, select a pool and click Start.    
-                    </p>  
+						<h3>DIRA - Dynamic Interest Rate Adjustment</h3>
+						<p>                      
+								The protocol will adjust interest rate dynamically based on several network factors such as deposits and investment penetratation, and current supply to reduce inflationary risks.
+						</p>                                
 				</div>
 			</div> <!-- end about-desc -->
-
-			<div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
-                <div class="col-full">
-                    <h3 class="subhead subhead--dark">ONGOING</h3>
-                </div>
-			</div> <!-- end section-header -->
-				<div class="row about-desc" data-aos="fade-up">
-                    <div class="col-full">
-                        <h3>Fortress Update</h3>
-                        <p>                      
-                            The fortress update is an ongoing initiative to improve the privacy of the network while maintaining network speed and performance.                         
-                        </p> 
-                        <h3>Web Wallet</h3>
-                        <p>                      
-                            The first step to mass adoption and the backend nessecary for the development of the mobile wallets, is the introduction of client-side and server-side web wallets..    
-                        </p>                                
-                    </div>
-				</div> <!-- end about-desc -->
-
-
-			<div class="row section-header has-bottom-sep" data-aos="fade-up"><br /><br />
-                    <div class="col-full">
-                        <h3 class="subhead subhead--dark">PLANNED</h3>
-                    </div>
-			</div> <!-- end section-header -->
-                <div class="row about-desc" data-aos="fade-up">
-                    <div class="col-full">
-                            <h3>P2P Lending Platform</h3>
-                            <p>                      
-                                    A sidechain to provide a p2p decentralized loans for a one-time fee and using credited party’s cryptocurrency as security for the term of the loan.                    
-                            </p>
-                            <h3>Atomic Swaps</h3>
-                            <p>                      
-                                    Decentralized Atomic Swaps to enable cross-chain exchange avoiding third party risks from the Conceal Wallet.            
-                            </p>
-                            <h3>Block Bonuses/Penalties</h3>
-                            <p>                      
-                                    Another layer of protection against attacks on the network by introducing a penalty and bonus system in response to sudden increases and then drops in network hashrate. 
-                            </p>
-                            <h3>OpenAlias</h3>
-                            <p>                      
-                                    Conceal will implement the aliasing protocol to simplify aliasing for users unfamiliar with cryptocurrency while keeping  it private, decentralized, and secure.
-                            </p>                      
-                            <h3>DIRA - Dynamic Interest Rate Adjustment</h3>
-                            <p>                      
-                                    The protocol will adjust interest rate dynamically based on several network factors such as deposits and investment penetratation, and current supply to reduce inflationary risks.
-                            </p>                                
-                    </div>
-				</div> <!-- end about-desc -->
+		</div>
 
     </section> <!-- end s-about -->
 
+    <section id="theteam" class="s-clients">
+		<div class="row section-header has-bottom-sep" data-aos="fade-up">
+			<div class="col-full">
+				<div class="team-container">
+					<div class="row section-header" data-aos="fade-up">
+						<div class="col-full"> 
+							<h1 class="display-1 display-1--light">The Conceal Team</h1>
+						</div>
+					</div> <!-- end section-header -->		
+
+					<div class="team-member-container">
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/krypt0x.jpg" alt="krypt0x" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">krypt0x (aka 0x)</h5>
+								<span>Founder & Ops Management</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/katz.jpg" alt="katz" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">katz</h5>
+								<span>Lead Developer</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/zemanel.jpg" alt="zemanel" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">ZeMaNel</h5>
+								<span>Cloud Engineer</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/madmax.jpg" alt="madmax" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">MaDMAx</h5>
+								<span>Macroeconomics Design</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/okanist.png" alt="okanist" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">okanist (aka Okan)</h5>
+								<span>PR & Marketing Management</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/reina.jpg" alt="reina" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">スピンドル玲奈《漢》</h5>
+								<span>Japanese Ambassador</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/bombon.jpg" alt="bombon" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">bomb-on</h5>
+								<span>Developer</span>
+							</div>
+						</div>
+						<div class="team-member-wrapper">
+							<div class="team-member">
+								<div class="team-img">
+									<img src="images/team/taegus.png" alt="taegus" class="img-responsive">
+								</div>
+							</div>
+							<div class="team-title">
+								<h5 class="team-name">Taegus</h5>
+								<span>Developer</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section> <!-- end s-contact -->
+
     <!-- exchanges
     ================================================== -->
-    <section id="exchanges" class="s-clients">
+    <section id="exchanges" class="s-about">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -560,27 +726,42 @@
             <div class="col-full">
 
                 <div class="clients">
-                            <a href="https://tradeogre.com/exchange/BTC-CCX" title="" class="clients__slide" height="50px"><img src="images/to.png" /></a>                             
-                            <a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX" title="" class="clients__slide" height="50px"><img src="images/stex.png" /></a>
-                            <a href="https://sistemkoin.com/#/market" title="" class="clients__slide" height="50px"><img src="images/sistemkoin.png" /></a>                                                         
+
+                    <a href="https://tradeogre.com/exchange/BTC-CCX" title="" class="clients__slide"><img src="images/to.png" /></a>
+                    <a href="https://sistemkoin.com/#/market" title="" class="clients__slide" height="50px"><img src="images/sistemkoin.png" /></a>
+                    <a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX" title="" class="clients__slide" height="50px"><img src="images/stex.png" /></a>
+                             
                 </div> <!-- end clients -->
 
                 <div class="clients">
-                    <a href="https://graviex.net/markets/ccxbtc" title="" class="clients__slide"><img src="images/graviex2.png" /></a>                    
+                    
                     <a href="https://kompler.exchange/#/markets/BTC/CCX" title="" class="clients__slide"><img src="images/kompler2.png" /></a>
-                    <a href="https://www.azex.io/home" title="" class="clients__slide" height="50px"><img src="images/azex.png" /></a>                    
+                    <a href="https://www.azex.io/home" title="" class="clients__slide" height="50px"><img src="images/azex.png" /></a>
+                    <a href="https://fcryptobank.com/" title="" class="clients__slide"><img src="images/fcryptobank2.png" /></a>  
+                     
                 </div> <!-- end clients -->
 
                 <div class="clients">
-                    <a href="https://fcryptobank.com/" title="" class="clients__slide"><img src="images/fcryptobank2.png" /></a>                      
+
+                    <a href="https://graviex.net/markets/ccxbtc" title="" class="clients__slide"><img src="images/graviex2.png" /></a>
                     <a href="https://www.finexbox.com/market/pair/CCX-BTC.html" title="" class="clients__slide" height="50px"><img src="images/finexbox2.png" /></a>
                     <a href="https://letsdocoinz.com/CCX-BTC" title="" class="clients__slide"><img src="images/ldc2.png" /></a>
+
                 </div> <!-- end clients -->
 
                 <div class="clients">
+
+                    <a href="https://bitibu.com/markets/ccxbtc" title="" class="clients__slide"><img src="images/bitibu.png" /></a>
                     <a href="https://www.probitex.com/trade/index/market/ccx_btc" title="" class="clients__slide"><img src="images/probitex.png" /></a>
+                    <a href="https://trocandocoins.com/" title="" class="clients__slide"><img src="images/trocandocoins.png" /></a>
+                    
                 </div> <!-- end clients -->
 
+                <div class="clients">
+
+                    <a href="https://www.altilly.com/market/CCX_BTC" title="" class="clients__slide"><img src="images/altilly.png" /></a>
+                        
+                </div> <!-- end clients -->
             </div> <!-- end col-full -->
         </div> <!-- end clients-outer -->
 
@@ -603,9 +784,13 @@
         </div>
 
         <div class="row contact-content" data-aos="fade-up">
-            <p>The Conceal GUI Wallet is the central point of interaction of all the features of the currency. With the wallet, you can send and receive CCX, send and recieve encrypted secure messages, manage your deposits and investments. The wallet is available for all major platforms: Windows x64, Ubuntu, macOS and Arch Linux.</p>
-       <img src="https://conceal.network/images/gui.png" />
-       <center><a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank" class="btn btn--stroke">GUI WALLET</a> <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank" class="btn btn--stroke">CLI WALLET</a></center>
+            <p>The Conceal Desktop Wallet is the central point of interaction of all the features of the currency. With the wallet, you can send and receive CCX, send and recieve encrypted secure messages, manage your deposits and investments. The wallet is available for all major platforms: Windows x64, Ubuntu, macOS and Arch Linux.</p>
+        <img src="https://conceal.network/images/gui.png" />
+        <center>
+            <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank" class="btn btn--stroke">DESKTOP</a> 
+            <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank" class="btn btn--stroke">CLI</a>
+            <a href="https://conceal.cloud" target="_blank" class="btn btn--stroke">CLOUD</a> 
+        </center>
 
         </div> <!-- end contact-content -->
 
@@ -682,11 +867,36 @@
                                 <td><a href="https://ccx.thorshammer.cc">ccx.thorshammer.cc</a></td>
                                 <td>0.25%</td>                                
                             </tr>   
-		            <tr>
+		                    <tr>
                                 <td>Codpool</td>
                                 <td><a href="https://ccx.codpool.com/#">ccx.codpool.com</a></td>
                                 <td>0.4%</td>                                
                             </tr>      
+		                    <tr>
+                                <td>RoMining</td>
+                                <td><a href="https://ccx.romining.farm">ccx.romining.farm</a></td>
+                                <td>1%</td>                                
+                            </tr>    
+		                    <tr>
+                                <td>MiningPros</td>
+                                <td><a href="http://conceal.miningpros.online">conceal.miningpros.online</a></td>
+                                <td>1%</td>                                
+                            </tr>
+		                    <tr>
+                                <td>SemiPool</td>
+                                <td><a href="https://webccx.semipool.com/#/dashboard">webccx.semipool.com</a></td>
+                                <td>0%</td>                                
+                            </tr>
+		                    <tr>
+                                <td>My-Mining-Pool</td>
+                                <td><a href="https://conceal.my-mining-pool.de/">conceal.my-mining-pool.de</a></td>
+                                <td>0%</td>                                
+                            </tr>
+		                    <tr>
+                                <td>BlockFoundry</td>
+                                <td><a href="https://conceal.blockfoundry.org/">conceal.blockfoundry.org</a></td>
+                                <td>0.5%</td>                                
+                            </tr>						                            
                             </tbody>
                     </table>
 
@@ -700,6 +910,46 @@
 
     </section> <!-- end s-clients -->    
 
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">Contact us</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+		<div class="container contact">
+			<form action="contact.php" method="post" id="contact_form">
+				<input type="hidden" name="form_tools_form_id" value="2" />
+				<label class="contat_label" for="contact_name">Your Name</label>
+				<input class="contact_field" type="text" id="contact_name" name="contact_name" placeholder="Write your name" required>
+
+				<label class="contat_label" for="contact_email">Your Email</label>
+				<input class="contact_field" type="email" id="contact_email" name="contact_email" placeholder="Write your email" required>
+
+				<label class="contat_label" for="contact_subject">Subject</label>
+				<input class="contact_field" type="text" id="contact_subject" name="contact_subject" placeholder="Write the subject" required>
+
+				<label class="contat_label" for="contact_message">Message</label>
+				<textarea class="contact_field" id="contact_message" name="contact_message" placeholder="Write your message..." style="height:150px" required></textarea>
+				<input type="hidden" name="contact_submit" value="SubmitField">
+				<div class="g-recaptcha" data-theme="dark" data-sitekey="6LcKY5kUAAAAAG7YDLdd_n8PTiur9ag8uHkXKIBr" id="contact_captcha"></div>
+				<input type="submit" name="contact_submit" id="contact_submit" value="SEND">
+			</form>
+		</div> 
+	</section> <!-- end contact -->
+	
+	<div data-remodal-id="contact_finished" id="dlgContactFinished">
+	  <button data-remodal-action="close" class="remodal-close"></button>
+	  <h1><span id="contactResultTitle"></span></h1>
+	  <p>
+		<span id="contactResultMessage"></span>
+	  </p>
+	  <br>
+	  <button data-remodal-action="confirm" class="remodal-confirm" id="btnContactFinished">OK</button>
+	</div>	
 
     <!-- footer
     ================================================== -->
@@ -715,7 +965,7 @@
                 <div class="contact-info">
                     <div class="cinfo">
                         <h3 class="subhead subhead--dark">WHERE TO FIND US</h3>
-                        <p>The best place to find out more is to visit our <a href="https://discord.conceal.network">Discord</a> channel. You will find our source code, and other releases on <a href="https://github.com/ConcealNetwork">Github</a>, and our latest activities on <a href="https://twitter.com/ConcealNetwork">Twitter</a>.
+                        <p>The best place to find out more is to visit our <a href="https://discord.conceal.network">Discord</a> channel. You will find our source code, and other releases on <a href="https://github.com/ConcealNetwork">Github</a>, and our latest activities on <a href="https://twitter.com/ConcealNetwork">Twitter</a>.						
                         </p>
                     </div>
                     
@@ -833,9 +1083,69 @@
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.form.min.js"></script>	
+    <script src="js/loading-indicator.min.js"></script>
+    <script src="js/remodal.min.js"></script>
+    <script src="js/accordion.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/test.js"></script>
 
+	<script>
+		$(document).ready(function() { 
+			var loadingIndicator = $("#contact").loadingIndicator({
+			  useImage: false,
+			  showOnInit: false
+			}).data("loadingIndicator");
+
+			var isSuccess = false;
+			
+			$(document).on('closed', '.remodal', function (e) {
+				if (isSuccess) {
+					location.href = "/";
+				}
+			});
+
+			function showError(responseText, statusText, xhr, $form) {
+				loadingIndicator.hide();
+				$("#contactResultTitle").html("Error");
+				$("#contactResultMessage").html("Internal server error!");
+				var inst = $('[data-remodal-id=contact_finished]').remodal();
+				inst.open();
+			}
+
+			function showSuccess(responseText, statusText, xhr, $form) {
+				loadingIndicator.hide();
+				
+				if (xhr.status == 200) {
+					resultJSON = jQuery.parseJSON(responseText);
+					
+					if (resultJSON.exitCode == 0) {
+						$("#contactResultTitle").html("Success");
+						isSuccess = true;
+					} else {
+						$("#contactResultTitle").html("Error");
+						isSuccess = false;
+					}
+					
+					$("#contactResultMessage").html(resultJSON.exitDesc);
+					var inst = $('[data-remodal-id=contact_finished]').remodal();
+					inst.open();
+				}
+			} 
+ 		    
+			$('#contact_form').submit(function() { 
+				isSuccess = false;
+				loadingIndicator.show();				
+
+				$(this).ajaxSubmit(
+				{
+					success: showSuccess,
+					error: showError
+				}); 
+		 		return false; 
+			}); 							
+		});
+	</script>
 </body>
 
 </html>
