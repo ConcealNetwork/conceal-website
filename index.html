@@ -32,7 +32,7 @@
 
     <!-- script
     ================================================== -->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/modernizr.js"></script>	
     <script src="js/pace.min.js"></script>
 	
@@ -842,91 +842,22 @@
                 
             <div class="col-twelve">
 
-                <p>The easiest way to mine Conceal with CPU's or GPU's is to use one of the many miners that support Cryptonight-Fast or use our Conceal Miner.</p>
+                <p>The easiest way to mine Conceal with CPU's or GPU's is to use one of the many miners that support Cryptonight-Conceal or use our Conceal Miner.</p>
 
                 <h3 style="color: orange;">MINING POOLS</h3>
                 <div class="table-responsive">
 
-                    <table>
-                            <thead>
-                            <tr>
-                                <th>POOL</th>
-                                <th>URL</th>
-                                <th>FEE</th>                                
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Official Pool</td>
-                                <td><a href="https://pool.conceal.network">pool.conceal.network</a></td>
-                                <td>0%</td>                                
-                            </tr>
-                            <tr>
-                                <td>Herominers</td>
-                                <td><a href="http://conceal.herominers.com">conceal.herominers.com</a></td>
-                                <td>0.9%</td>                                
-                            </tr>
-                            <tr>
-                                <td>BlueRockPools</td>
-                                <td><a href="http://ccx.bluerockpools.net">ccx.bluerockpools.net</a></td>
-                                <td>0.5%</td>                                
-                            </tr>  
-							<tr>
-                                <td>SCECF</td>
-                                <td><a href="http://ccx.scecf.org">ccx.scecf.org</a></td>
-                                <td>0.4%</td>                                
-                            </tr>
-                            <tr>
-                                <td>GoMine-it!</td>
-                                <td><a href="http://ccx.go-mine.it/">ccx.go-mine.it</a></td>
-                                <td>0.5%</td>                                
-                            </tr>   
-                            <tr>
-                                <td>Modpool</td>
-                                <td><a href="https://conceal.modpool.org">conceal.modpool.org</a></td>
-                                <td>1%</td>                                
-                            </tr>
-                            <tr>
-                                <td>Aiwakuang</td>
-                                <td><a href="http://ccx.aiwakuang.cn/">ccx.aiwakuang.cn</a></td>
-                                <td>1%</td>                                
-                            </tr>                         
-                            <tr>
-                                <td>Thors Hammer</td>
-                                <td><a href="https://ccx.thorshammer.cc">ccx.thorshammer.cc</a></td>
-                                <td>0.25%</td>                                
-                            </tr>   
-		                    <tr>
-                                <td>Codpool</td>
-                                <td><a href="https://ccx.codpool.com/#">ccx.codpool.com</a></td>
-                                <td>0.4%</td>                                
-                            </tr>      
-		                    <tr>
-                                <td>RoMining</td>
-                                <td><a href="https://ccx.romining.farm">ccx.romining.farm</a></td>
-                                <td>1%</td>                                
-                            </tr>    
-		                    <tr>
-                                <td>MiningPros</td>
-                                <td><a href="http://conceal.miningpros.online">conceal.miningpros.online</a></td>
-                                <td>1%</td>                                
-                            </tr>
-		                    <tr>
-                                <td>SemiPool</td>
-                                <td><a href="https://webccx.semipool.com/#/dashboard">webccx.semipool.com</a></td>
-                                <td>0%</td>                                
-                            </tr>
-		                    <tr>
-                                <td>My-Mining-Pool</td>
-                                <td><a href="https://conceal.my-mining-pool.de/">conceal.my-mining-pool.de</a></td>
-                                <td>0%</td>                                
-                            </tr>
-		                    <tr>
-                                <td>BlockFoundry</td>
-                                <td><a href="https://conceal.blockfoundry.org/">conceal.blockfoundry.org</a></td>
-                                <td>0.5%</td>                                
-                            </tr>						                            
-                            </tbody>
+                    <table id="tableMiningPools">
+                      <thead>
+                        <tr>
+                          <th><span id="symbol"></span> Pools</th>
+                          <th class="sorttable_numeric"><i class="fa fa-bars"></i><span tkey="poolsHeight">Height</span></th>
+                          <th class="sorttable_numeric"><i class="fa fa-tachometer"></i><span tkey="poolsHashrate">Hashrate</span></th>
+                          <th class="sorttable_numeric"><i class="fa fa-group"></i><span tkey="poolsMiners">Miners</span></th>
+                        </tr>
+                      </thead>
+                      <tbody id="pools_rows">
+                      </tbody>
                     </table>
 
                 </div>
@@ -1117,6 +1048,7 @@
     <script src="js/remodal.min.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/pools.js"></script>    
     <script src="js/test.js"></script>
 
 	<script>
