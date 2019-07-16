@@ -53,7 +53,7 @@
 	height: 200px;
 	flex-grow: 1;
 	margin: 10px;
-	margin-bottom: 5em;
+	margin-bottom: 6em;
 }
 
 .team-member-container {
@@ -151,4 +151,9 @@
 
 .team-name {
 	text-transform: none !important;
+}
+
+.teamLink {
+	font-size: 1.5em;
+	color: #CCCCCC;
 }
