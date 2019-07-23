@@ -56,6 +56,7 @@ $.getJSON('https://explorer.conceal.network/services/pools/data', function (data
 setInterval(function () {
   $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
     data.forEach(function (element) {
+      var poolName = getPoolName(element);
       updateText('height-' + poolName, localizeNumber(element.network.height));
       updateText('hashrate-' + poolName, getReadableHashRateString(element.pool.hashrate));
       updateText('miners-' + poolName, localizeNumber(element.pool.miners));
