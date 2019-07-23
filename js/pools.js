@@ -52,14 +52,3 @@ $.getJSON('https://explorer.conceal.network/services/pools/data', function (data
     $('#pools_rows').append(renderPoolRow(element.info.name, element.info.host, getPoolName(element), element));
   });
 });
-
-setInterval(function () {
-  $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
-    data.forEach(function (element) {
-      var poolName = getPoolName(element);
-      updateText('height-' + poolName, localizeNumber(element.network.height));
-      updateText('hashrate-' + poolName, getReadableHashRateString(element.pool.hashrate));
-      updateText('miners-' + poolName, localizeNumber(element.pool.miners));
-    });
-  });
-}, 120000);
