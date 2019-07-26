@@ -3662,3 +3662,25 @@ footer .row {
 	margin-right: 10px;
 	color: orange;
 }
+
+.downloadWrapper {
+  display: flex;
+  max-width: 800px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.downloadCattegory {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.downloadCattegory i {
+  color: white;
+}
+
+.btnSecondary {
+  margin-top: 0px !important;
+}
