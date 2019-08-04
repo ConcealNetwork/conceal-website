@@ -1473,6 +1473,19 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transition: all 0.3s ease-in-out;
 }
 
+.header-language {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    top: 50%;
+    left: 100px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 501;
+}
 
 /* ------------------------------------------------------------------- 
  * ## main navigation 
@@ -3681,6 +3694,19 @@ footer .row {
   color: white;
 }
 
-.btnSecondary {
+.btnSecondary {  
   margin-top: 0px !important;
+}
+
+.backToTop {
+  color: orange !important;
+}
+
+.labelInline {
+  display: inline;
+  line-height: 2;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  color:rgba(255, 255, 255, 0.3);
 }
