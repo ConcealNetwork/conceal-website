@@ -3710,3 +3710,7 @@ footer .row {
   font-family: "Poppins", sans-serif;
   color:rgba(255, 255, 255, 0.3);
 }
+
+#tableMiningPools i {
+  margin-right: 5px;
+}

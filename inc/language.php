@@ -7,7 +7,7 @@
       $lang = $_COOKIE["CCX_Language"];
     }
     
-    $acceptLang = ['ru', 'en','sl']; 
+    $acceptLang = ['ru','en']; 
     $lang = in_array($lang, $acceptLang) ? $lang : 'en';
     echo json_encode($lang);
 ?>
