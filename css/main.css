@@ -1479,7 +1479,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin: 0;
     padding: 0;
     padding-top: 10px;
-    top: 40px;
+    top: 45px;
     right: 180px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1490,7 +1490,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 @media only screen and (max-width: 600px) {
   .header-language {
     top: 50%;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
@@ -1671,7 +1672,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .header-menu-toggle {
     position: fixed;
     right: 38px;
-    top: 24px;
+    top: 28px;
     height: 42px;
     width: 42px;
     line-height: 42px;
