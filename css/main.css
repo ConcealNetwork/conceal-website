@@ -1479,13 +1479,21 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin: 0;
     padding: 0;
     padding-top: 10px;
-    top: 50%;
-    left: 100px;
+    top: 40px;
+    right: 180px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 501;
 }
+
+@media only screen and (max-width: 600px) {
+  .header-language {
+    top: 50%;
+    left: 10px;
+  }
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## main navigation 
