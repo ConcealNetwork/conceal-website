@@ -16,7 +16,7 @@
   "sideNavWallets": "бумажники",
   "sideNavCloud": "облако",
   "sideNavExchanges": "Обмены",
-  "sideNavMining": "Добыча полезных ископаемых",
+  "sideNavMining": "Майнинг",
   "sideNavExplorer": "Проводник",
   "sideNavDocs": "Документы",
   "sideNavCoinGecko": "CoinGecko",
@@ -131,7 +131,7 @@
   "wallets_subtitle": "Скрытые кошельки",
   "wallets_description": "Desktop кошелек Conceal является центральной точкой взаимодействия всех функций валюты. С помощью кошелька вы можете отправлять и получать CCX, отправлять и получать зашифрованные защищенные сообщения, управлять своими депозитами и инвестициями. Кошелек доступен для всех основных платформ: Windows x64, Ubuntu, macOS и Arch Linux.",
 
-  "mining_title": "Добыча полезных ископаемых",
+  "mining_title": "Майнинг",
   "mining_pools_title": "Пулы для майнинга",
   "mining_description": "Самый простой способ майнинга Conceal с помощью CPU или GPU - это использовать один из многих майнеров, которые поддерживают Cryptonight-Conceal, или использовать наш Conceal Miner.",
   "mining_pools_list": "Пул",
