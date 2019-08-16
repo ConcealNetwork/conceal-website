@@ -31,8 +31,8 @@
  * # imports 
  *
  * ------------------------------------------------------------------- */
- @import url("micons/micons.css");
- @import url("fonts.css");
+ @import url("../css/micons/micons.css");
+ @import url("../css/fonts.css");
 
 
 /* ===================================================================
