@@ -4,6 +4,7 @@ js/jquery-3.2.1.min.js
 js/jquery.form.min.js
 js/loading-indicator.min.js
 js/jquery.cookie.js
+js/lazyload.min.js
 js/remodal.min.js
 js/accordion.js
 js/language.js
