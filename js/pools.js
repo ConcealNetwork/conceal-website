@@ -62,10 +62,17 @@ $(window).scroll(function () {
     if (!arePoolsLoaded) {
       arePoolsLoaded = true;
 
+      var nodeLoadingIndicator = $('#wrapperMiningPools').loadingIndicator({
+        useImage: false,
+        showOnInit: true
+      }).data("loadingIndicator");
+
       $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
         data.forEach(function (element) {
           $('#pools_rows').append(renderPoolRow(element.info.name, element.info.host, getPoolName(element), element));
         });
+
+        nodeLoadingIndicator.hide();
       });
     }
   }

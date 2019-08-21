@@ -3989,6 +3989,10 @@ footer .row {
     color: rgba(255, 255, 255, 0.3);
 }
 
+#wrapperMiningPools {
+    min-height: 300px;
+}
+
 #tableMiningPools i {
     margin-right: 5px;
 }
