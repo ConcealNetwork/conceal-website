@@ -48,16 +48,18 @@ cacheHeaders(lastModificationTime());
 header("Content-type: " . $_GET['mime'] . "; charset: UTF-8");
 
 ob_start ("ob_gzhandler");
-$cached_file = joinPaths(dirname(__FILE__), '../cache/', $_GET['build']);
+$cached_file = dirname(__DIR__) . '/cache/' . $_GET['build'];
 
 if (file_exists("$cached_file") === false) {
-    $cached_file_handle = fopen("$cached_file", 'a+');
+    $cached_file_handle = fopen($cached_file, 'a+');
+
     if ($cached_file_handle) {
         // read the content of the file into the lines array
         $lines = file($_GET['load'], FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
         foreach ($lines as $line_num => $value) {
-            $real_path = joinPaths(dirname(__FILE__), '../', $value);
+            $real_path = realpath(dirname(__DIR__) . '/' . $value);
+            
             if (is_file("$real_path")) {
                 lastModificationTime(filemtime("$real_path"));
                 $content_file = file_get_contents("$real_path");
