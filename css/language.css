@@ -34,7 +34,7 @@
   position: absolute;
   background-color: #0C0C0C;
   border: 1px solid #333333;
-  min-width: 160px;
+  min-width: 200px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
