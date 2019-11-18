@@ -3996,3 +3996,7 @@ footer .row {
 #tableMiningPools i {
     margin-right: 5px;
 }
+
+.exchImage img {
+  margin: auto;
+}
