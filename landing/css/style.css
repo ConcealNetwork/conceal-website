@@ -837,7 +837,7 @@ img.rounded {
   margin-bottom: 6em !important;
 }
 
-div.downArrow {
+.downArrow {
   cursor: pointer;
   width: 4vmin;
   height: 4vmin;
@@ -846,9 +846,10 @@ div.downArrow {
   left: 50%;
   bottom: 5%;
   transform: rotate(-225deg);
+  display:block;
 }
   
-div.downArrow:before {
+.downArrow:before {
   content: '';
   width: 100%;
   height: 100%;
@@ -860,7 +861,7 @@ div.downArrow:before {
   transform-origin: 100% 0;
 }
 
-div.downArrow:after {
+.downArrow:after {
   content: '';
   float: left;
   position: relative;
@@ -874,11 +875,11 @@ div.downArrow:after {
   transition:.2s ease;
 }
   
-div.downArrow:hover:after {
+.downArrow:hover:after {
   border-color: orange;
 }
 
-div.downArrow:hover:before {
+.downArrow:hover:before {
   border-color: orange;
 }
 

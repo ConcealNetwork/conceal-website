@@ -67,9 +67,4 @@ jQuery(document).ready(function($) {
 		});
 	}; 
 	siteMenuClone();
-	$("#downArrowBtn").click(function() {
-		$([document.documentElement, document.body]).animate({
-			scrollTop: $("#mainSection").offset().top
-		}, 500);
-	});
 });
