@@ -827,7 +827,9 @@ img.rounded {
   display: flex;
   align-items: center;
 }
-
+.site-menu-toggle {
+  position: absolute; right: 40px; top: 40px;
+}
 #siteHeader {
   background-color: #111;
   border-bottom: 1px solid #333;
