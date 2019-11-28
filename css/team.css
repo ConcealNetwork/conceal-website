@@ -53,7 +53,7 @@
 	height: 200px;
 	flex-grow: 1;
 	margin: 10px;
-	margin-bottom: 6em;
+	margin-bottom:8em;
 }
 
 .team-member-container {
@@ -156,4 +156,7 @@
 .teamLink {
 	font-size: 1.5em;
 	color: #CCCCCC;
+}
+.teamSocialWrapper {
+    margin:6px 0 0;
 }

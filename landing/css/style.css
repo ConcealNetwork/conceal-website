@@ -662,7 +662,7 @@ h1, h2, h3, h4, h5,
   border-radius: 50%; }
 
 .speaker {
-  margin-bottom: 50px; }
+  margin-bottom: 80px; }
   .speaker .name {
     left: -80px;
     position: relative; }
@@ -912,4 +912,26 @@ img.rounded {
 }
 .text-primary {
   color: orange!important;
+}
+.landingLabsSS {
+  width:auto;
+  max-width:340px;
+  height:322px;
+  background:url('../images/landingLabsScreenshots.png');
+  margin:0 auto;
+}
+.landingLabsSS2 {
+  background-position-y:-322px;
+  height:340px;
+}
+.landingLabsSS3 {
+  background-position-y:-662px;
+  height:340px;
+}
+.landingLabsSS4 {
+  background-position-y:-1002px;
+  height:265px;
+}
+#labsHeading {
+  padding:4rem 0 0;
 }
