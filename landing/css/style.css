@@ -935,3 +935,22 @@ img.rounded {
 #labsHeading {
   padding:4rem 0 0;
 }
+.landingIdImg {
+  width:auto;
+  max-width:340px;
+  height:340px;
+  background:url('../images/landingIDImages.png');
+  margin:0 auto;
+}
+.landingIdImg2 {
+  background-position-y:-340px;
+}
+.landingIdImg3 {
+  background-position-y:-680px;
+}
+.landingIdImg4 {
+  background-position-y:-1020px;
+}
+.landingIdImg5 {
+  background-position-y:-1360px;
+}
