@@ -4077,6 +4077,15 @@ footer .row {
     margin-right: 5px;
 }
 
+.exchImage {
+  flex-grow: 0;
+  flex-basis: 33%;
+}
+
 .exchImage img {
   margin: auto;
+}
+
+.exchangesRow {
+  display: flex;
 }
