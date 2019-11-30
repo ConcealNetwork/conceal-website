@@ -160,3 +160,14 @@
 .teamSocialWrapper {
     margin:6px 0 0;
 }
+.teamSocialWrapper i:hover {
+    color:#FFF;
+}
+.team-hiring {
+    background:#DDD;
+    padding:84px 0;
+    line-height:32px;
+}
+a.team-apply {
+    font-weight:bold;
+}

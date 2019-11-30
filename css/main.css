@@ -2052,6 +2052,15 @@ input::-moz-focus-inner {
     color: #FFFFFF;
 }
 
+.home-content h1 strong {
+    font-family: "Poppins", sans-serif;
+    font-size: 5.3rem;
+    line-height: 1.333;
+    margin-top: 0;
+    color: #FFFFFF;
+    font-weight:bold;  
+}
+
 .home-content__main {
     padding-top: 24rem;
     position: relative;
