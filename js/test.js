@@ -25,8 +25,10 @@
     var clPreloader = function() {
         
         $("html").addClass('cl-preload');
+        console.log("init");
 
         $WIN.on('load', function() {
+            console.log("finish");
 
             //force page scroll position to top at page refresh
             // $('html, body').animate({ scrollTop: 0 }, 'normal');
@@ -98,60 +100,6 @@
     };
 
 
-   /* photoswipe
-    * ----------------------------------------------------- */
-    var clPhotoswipe = function() {
-        var items = [],
-            $pswp = $('.pswp')[0],
-            $folioItems = $('.item-folio');
-
-            // get items
-            $folioItems.each( function(i) {
-
-                var $folio = $(this),
-                    $thumbLink =  $folio.find('.thumb-link'),
-                    $title = $folio.find('.item-folio__title'),
-                    $caption = $folio.find('.item-folio__caption'),
-                    $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                    $captionText = $.trim($caption.html()),
-                    $href = $thumbLink.attr('href'),
-                    $size = $thumbLink.data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
-         
-                var item = {
-                    src  : $href,
-                    w    : $width,
-                    h    : $height
-                }
-
-                if ($caption.length > 0) {
-                    item.title = $.trim($titleText + $captionText);
-                }
-
-                items.push(item);
-            });
-
-            // bind click event
-            $folioItems.each(function(i) {
-
-                $(this).on('click', function(e) {
-                    e.preventDefault();
-                    var options = {
-                        index: i,
-                        showHideOpacity: true
-                    }
-
-                    // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                    lightBox.init();
-                });
-
-            });
-
-    };
-    
-
    /* Stat Counter
     * ------------------------------------------------------ */
     var clStatCount = function() {
@@ -187,95 +135,6 @@
             offset: "90%"
 
         });
-    };
-
-
-   /* Masonry
-    * ---------------------------------------------------- */ 
-    var clMasonryFolio = function () {
-        
-        var containerBricks = $('.masonry');
-
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                resize: true
-            });
-        });
-    };
-
-
-   /* slick slider
-    * ------------------------------------------------------ */
-    var clSlickSlider = function() {
-
-        $('.clients').slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 0,
-            //autoplay: true,
-            pauseOnFocus: false,
-            autoplaySpeed: 1000,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 5
-                    }
-                },
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-
-            ]
-        });
-
-        $('.testimonials').slick({
-            arrows: true,
-            dots: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true,
-            pauseOnFocus: false,
-            autoplaySpeed: 1500,
-            responsive: [
-                {
-                    breakpoint: 900,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        arrows: false,
-                        dots: true
-                    }
-                }
-            ]
-        });
-    
     };
 
    /* Smooth Scrolling
@@ -392,40 +251,6 @@
 
     };
 
-
-   /* AjaxChimp
-    * ------------------------------------------------------ */
-    var clAjaxChimp = function() {
-        
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
-        });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
-            2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
-        } 
-
-    };
-
-
    /* Back to Top
     * ------------------------------------------------------ */
     var clBackToTop = function() {
@@ -450,22 +275,16 @@
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-        
         clPreloader();
         clMenuOnScrolldown();
         clOffCanvas();
-        clPhotoswipe();
         clStatCount();
-        clMasonryFolio();
-        clSlickSlider();
         clSmoothScroll();
         clPlaceholder();
         clAlertBoxes();
         clContactForm();
         clAOS();
-        clAjaxChimp();
         clBackToTop();
-
     })();
         
         
