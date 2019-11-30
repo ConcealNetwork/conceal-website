@@ -4,3 +4,4 @@
 *.json
 *.sqlite
 .vs/conceal-website/v15/.suo
+cache
