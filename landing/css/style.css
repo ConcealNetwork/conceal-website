@@ -980,7 +980,19 @@ img.rounded {
   background-position-y:-340px;
   height:339px;
 }
-.landingMessagingImg3 {
-  background-position-y:-634px;
-  height:294px;
+.landingBankingImg {
+  width:auto;
+  max-width:340px;
+  height:340px;
+  background:url('../images/landingBankingImgs.png');
+  margin:0 auto;
+}
+.landingBankingImg2 {
+  background-position-y:-340px;
+}
+.landingBankingImg3 {
+  background-position-y:-680px;
+}
+.landingBankingImg4 {
+  background-position-y:-1020px;
 }
