@@ -969,3 +969,18 @@ img.rounded {
   background-position-y:-634px;
   height:294px;
 }
+.landingPayImg {
+  width:auto;
+  max-width:340px;
+  height:340px;
+  background:url('../images/landingPayImgs.png');
+  margin:0 auto;
+}
+.landingPayImg2 {
+  background-position-y:-340px;
+  height:339px;
+}
+.landingMessagingImg3 {
+  background-position-y:-634px;
+  height:294px;
+}
