@@ -954,3 +954,18 @@ img.rounded {
 .landingIdImg5 {
   background-position-y:-1360px;
 }
+.landingMessagingImg {
+  width:auto;
+  max-width:340px;
+  height:284px;
+  background:url('../images/landingMessagingImgs.png');
+  margin:0 auto;
+}
+.landingMessagingImg2 {
+  background-position-y:-284px;
+  height:350px;
+}
+.landingMessagingImg3 {
+  background-position-y:-634px;
+  height:294px;
+}
