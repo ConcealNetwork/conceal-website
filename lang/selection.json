@@ -3,15 +3,15 @@
     "name": "English"
   },
   "ru": {
-    "name": "Russian (русский)"
+    "name": "русский"
   },
   "ar": {
-    "name": "Arabic (عربى)"
+    "name": "عربى"
   },
   "zh": {
-    "name": "Chinese (中文)"
+    "name": "中文"
   },
   "de": {
-    "name": "German (Deutsch)"
+    "name": "Deutsch"
   }
 }
