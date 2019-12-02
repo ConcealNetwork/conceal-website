@@ -1695,7 +1695,7 @@ input::-moz-focus-inner {
     background:#111;
     border-radius:0 0 12px 12px;
     padding:0 12px 4px;
-    box-shadow:0 3px 3px #000;
+    box-shadow:0 2px 3px #000;
     margin-left:-12px;
     border:1px solid #222;
     border-width:0 1px 1px;
