@@ -1632,7 +1632,7 @@ input::-moz-focus-inner {
     z-index: 503;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 720px) {
     .header-language {
         top: 96px;
         right: 36px;
@@ -1660,11 +1660,19 @@ input::-moz-focus-inner {
     width:100px;
 }
 @media only screen and (max-width:800px) {
+    #horizontalNav li:last-child {
+        display:none;
+    }
     #horizontalNav {
         margin:0 200px 0 0;
     }
 }
 @media only screen and (max-width:640px) {
+    #horizontalNav li:last-child {
+        display:none;
+    }
+}
+@media only screen and (max-width:540px) {
     #horizontalNav li {
         display:none;
     }
