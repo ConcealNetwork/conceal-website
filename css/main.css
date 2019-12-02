@@ -1668,6 +1668,9 @@ input::-moz-focus-inner {
     }
 }
 @media only screen and (max-width:640px) {
+    #horizontalNav {
+        left:112px;
+    }
     #horizontalNav li:last-child {
         display:none;
     }
