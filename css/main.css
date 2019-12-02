@@ -1694,7 +1694,7 @@ input::-moz-focus-inner {
     float:left;
     background:#111;
     border-radius:0 0 12px 12px;
-    padding:0 12px 4px;
+    padding:0 0 4px;
     box-shadow:0 2px 3px #000;
     margin-left:-12px;
     border:1px solid #222;
@@ -1703,12 +1703,16 @@ input::-moz-focus-inner {
 #horizontalNav ul li {
     margin:0;
     width:100% !important;
+    padding:0 12px;
 }
 #horizontalNav li li a {
     text-transform:none;
 }
 #horizontalNav ul li a:hover {
     color:#FFF;
+}
+#horizontalNav ul li:hover {
+    background:#0A0A0A;
 }
 
 /* ------------------------------------------------------------------- 
