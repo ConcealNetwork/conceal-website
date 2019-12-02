@@ -1692,6 +1692,11 @@ input::-moz-focus-inner {
     padding:0;
     margin:0;
     float:left;
+    background:#121314;
+    border-radius:0 0 8px 8px;
+    padding:0 4px;
+    box-shadow:0 3px 3px #111;
+    margin-left:-4px;
 }
 #horizontalNav ul li {
     margin:0;
