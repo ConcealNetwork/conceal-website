@@ -1632,7 +1632,7 @@ input::-moz-focus-inner {
     z-index: 503;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 880px) {
     .header-language {
         top: 50%;
         left: 50%;
@@ -1650,7 +1650,7 @@ input::-moz-focus-inner {
     z-index:502;
     margin:0 400px 0 0;
 }
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:880px) {
     #horizontalNav {
         display:none;
     }
