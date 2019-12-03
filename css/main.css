@@ -1993,10 +1993,6 @@ input::-moz-focus-inner {
         height: 90px;
     }
 
-    .header-logo {
-        left: 30px;
-    }
-
     .header-menu-toggle {
         right: 25px;
     }
