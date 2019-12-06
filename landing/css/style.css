@@ -996,3 +996,27 @@ img.rounded {
 .landingBankingImg4 {
   background-position-y:-1020px;
 }
+.inTheMedia {
+  padding:24px 0 8px;
+}
+.inTheMediaQuote {
+  margin:32px 0 0;
+}
+.inTheMedia:first-of-type {
+  border-width:1px 0;
+}
+.inTheMediaQuote p {
+  padding:0 0 0 48px;
+}
+.inTheMediaQuote em {
+  font-family:'Poppins';
+  font-size:2em;
+  display:block;
+  line-height:1em;
+}
+.inTheMediaQuote em:first-of-type {
+  line-height:.2em;
+}
+.inTheMediaQuote em:last-of-type {
+  text-align:right;
+}
