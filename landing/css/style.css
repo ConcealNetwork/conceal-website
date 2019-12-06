@@ -999,6 +999,10 @@ img.rounded {
 .inTheMedia {
   padding:24px 0 8px;
 }
+.inTheMedia h2 {
+  text-align:center;
+  padding:0 0 24px;
+}
 .inTheMediaQuote {
   margin:32px 0 0;
 }
@@ -1006,17 +1010,19 @@ img.rounded {
   border-width:1px 0;
 }
 .inTheMediaQuote p {
-  padding:0 0 0 48px;
+  padding:0 32px 0 72px;
 }
 .inTheMediaQuote em {
-  font-family:'Poppins';
-  font-size:2em;
+  font-family:'Courier New', Courier, monospace;
+  font-size:3em;
   display:block;
-  line-height:1em;
+  line-height:.5em;
+  padding:0 0 0 16px;
 }
 .inTheMediaQuote em:first-of-type {
   line-height:.2em;
 }
 .inTheMediaQuote em:last-of-type {
   text-align:right;
+  padding:0 8px 0 0;
 }
