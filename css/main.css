@@ -1728,6 +1728,7 @@ input::-moz-focus-inner {
 }
 #horizontalNav li li a {
     text-transform:none;
+    white-space:nowrap;
 }
 #horizontalNav ul li a:hover {
     color:#FFF;
