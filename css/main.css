@@ -1660,9 +1660,6 @@ input::-moz-focus-inner {
     width:100px;
 }
 @media only screen and (max-width:800px) {
-    #horizontalNav li:last-child {
-        display:none;
-    }
     #horizontalNav {
         margin:0 200px 0 0;
     }
@@ -1670,9 +1667,6 @@ input::-moz-focus-inner {
 @media only screen and (max-width:640px) {
     #horizontalNav {
         left:112px;
-    }
-    #horizontalNav li:last-child {
-        display:none;
     }
 }
 @media only screen and (max-width:540px) {
