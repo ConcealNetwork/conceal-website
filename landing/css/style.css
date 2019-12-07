@@ -1026,3 +1026,11 @@ img.rounded {
   text-align:right;
   padding:0 8px 0 0;
 }
+.communityLinks {
+  text-align: center;
+}
+.communityLinks ul {
+  padding:0;
+  margin:0 0 3em;
+  list-style:none;
+}
