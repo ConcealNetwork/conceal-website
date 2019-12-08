@@ -4063,6 +4063,8 @@ footer .row {
     flex-flow: row wrap;
     justify-content: space-around;
     margin-bottom: 50px;
+    margin:0 auto 3em;
+    text-align:center;
 }
 
 .downloadCattegory {
@@ -4073,6 +4075,10 @@ footer .row {
 
 .downloadCattegory i {
     color: white;
+}
+
+p[tkey='wallets_description'] {
+    text-align:center;
 }
 
 .btnSecondary {
