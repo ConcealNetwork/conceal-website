@@ -1698,7 +1698,7 @@ input::-moz-focus-inner {
     }
     #horizontalNav li:first-child {
         display:inline-block;
-        width:40px;
+        width:48px;
     }
     #horizontalNav li li {
         display:inline-block;
@@ -3957,12 +3957,14 @@ footer .row {
     width: 60px;
     line-height: 60px;
     text-align: center;
-    background: black;
-    color: rgba(255, 255, 255, 0.5);
+    background:orange;
+    color:#000;
     text-align: center;
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    border-radius:40px;
+    box-shadow:0 3px 3px #000;
 }
 
 .go-top a i,
@@ -3973,7 +3975,7 @@ footer .row {
 
 .go-top a:hover,
 .go-top a:focus {
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 
@@ -4097,10 +4099,6 @@ p[tkey='wallets_description'] {
 
 .btnSecondary {
     margin-top: 0px !important;
-}
-
-.backToTop {
-    color: orange !important;
 }
 
 .labelInline {
