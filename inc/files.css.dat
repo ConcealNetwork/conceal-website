@@ -1,5 +1,5 @@
-css/base.css
-css/vendor.css
+css/base.min.css
+css/vendor.min.css
 css/main.css
 css/team.css
 css/roadmap.css
@@ -7,6 +7,6 @@ css/remodal.css
 css/language.css
 css/accordion.css
 css/loading-indicator.css
-css/remodal-default-theme.css
-css/micons/micons.css
+css/remodal-default-theme.min.css
+css/micons/micons.min.css
 css/fontawesome/css/all.min.css
