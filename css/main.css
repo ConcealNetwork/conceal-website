@@ -3955,16 +3955,17 @@ footer .row {
     display: block;
     height: 60px;
     width: 60px;
-    line-height: 60px;
+    line-height: 56px;
     text-align: center;
     background:orange;
-    color:#000;
     text-align: center;
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border-radius:40px;
-    box-shadow:0 3px 3px #000;
+    color: rgba(0,0,0,0.5);
+    border: 2px solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 7px #efe;
 }
 
 .go-top a i,
@@ -3975,7 +3976,9 @@ footer .row {
 
 .go-top a:hover,
 .go-top a:focus {
-    color: #FFF;
+    color: rgba(0,0,0,1);
+    border: 2px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 7px #ddd;
 }
 
 
