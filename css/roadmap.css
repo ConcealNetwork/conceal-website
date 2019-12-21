@@ -41,7 +41,7 @@
     float:left;
     margin:5px 0 0 0;
     border-radius:6px;
-    box-shadow:0 0 5px #AAA;
+    box-shadow:0 0 24px #000;
 }
 .main-timeline .date{
     display:block;
@@ -85,7 +85,8 @@
     letter-spacing:-1px;
     border-radius:6px 6px 0 0;
     position:relative;
-    border:1px solid #FFF;
+    border:2px solid #DDD;
+    box-shadow:0 5px 5px #222;
 }
 .main-timeline .title:after{
     content:"";
@@ -99,10 +100,13 @@
 .main-timeline .description{
     padding:15px;
     margin:0;
-    font-size:14px;
-    color:#656565;
-    background:#fff;
+    font-size:1.2rem;
+    color:#eee;
+    background:#333;
     border-radius:0 0 6px 6px;
+    border:1px solid #888;
+    border-width:0 1px 1px;
+    letter-spacing:.1rem;
 }
 .main-timeline .timeline:nth-child(2n+2) .timeline-content{
     float:right;
