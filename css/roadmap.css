@@ -142,11 +142,15 @@
     }
     .main-timeline .timeline-content{
         width:75%;
+        margin:0 0 8px;
     }
     .main-timeline .date{
         width:60px;
         height:60px;
         margin-left:-30px;
+    }
+    .main-timeline .tba {
+        line-height:47px;
     }
     .main-timeline .month{
         font-size:14px;

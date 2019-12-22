@@ -9,7 +9,7 @@
   <!--- basic page needs
     ================================================== -->
   <meta charset="utf-8">
-  <title>Conceal Network - Anonymous DeFi</title>
+  <title>Conceal Network - Anonymous DeFi & Private Communication</title>
 
   <!-- mobile specific metas
     ================================================== -->
@@ -19,7 +19,7 @@
     ================================================== -->
 
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="inc/bundle.php?build=20191221T1224.css&load=files.css.dat&mime=text/css">
+  <link rel="stylesheet" href="inc/bundle.php?build=20191222T1458.css&load=files.css.dat&mime=text/css">
 
   <!-- script
     ================================================== -->
@@ -56,6 +56,7 @@
         <li>
           <a href="#" tkey="horizontalNavAbout">About</a>
           <ul>
+              <li><a href="about/">Conceal</a></li>
               <li><a class="smoothscroll" href="#contact" tkey="sideNavContact">Contact</a></li>
               <li><a class="smoothscroll" href="#features" tkey="sideNavFeatures">Features</a>
               <li><a href="in-the-media/">In The Media</a></li>
@@ -136,20 +137,20 @@
           <strong>Banking</strong> on the Blockchain<br />
         </h1>
         <h3 tkey="headerDescription">
-          Decentralized Banking, Private Transactions &amp; Encrypted Messaging
+          Decentralized Finance, Private Transactions &amp; Encrypted Messaging
         </h3>
         <div class="home-content__buttons">
-            <a href="https://conceal.cloud" class="btn btn--stroke" tkey="sideNavCloud">Cloud</a>
-            <a href="mobile/" class="btn btn--stroke">Mobile</a>
-            <a href="#wallets" class="btn btn--stroke">Desktop</a>
-            <a href="#roadmap" class="btn btn--stroke" tkey="sideNavRoadmap">Roadmap</a>
+            <a href="https://conceal.cloud" class="btn btn--stroke" tkey="sideNavCloud"><span class="fa fa-cloud"></span> Cloud</a>
+            <a href="mobile/" class="btn btn--stroke"><span class="fa fa-mobile"></span> Mobile</a>
+            <a href="#wallets" class="btn btn--stroke"><span class="fa fa-desktop"></span> Desktop</a>
+            <a href="#roadmap" class="btn btn--stroke" tkey="sideNavRoadmap"><span class="fa fa-map-signs"></span> Roadmap</a>
         </div>
         <p>
           Want to build something cool with Conceal? <em>We just might pay you...</em> <a href="labs/">Conceal Labs</a>
         </p>
       </div>
       <div class="home-content__scroll">
-        <a href="#about" class="scroll-link smoothscroll">
+        <a href="#features" class="scroll-link smoothscroll">
           <span tkey="mainNavScrollDown">Scroll Down</span>
         </a>
       </div>
@@ -197,297 +198,13 @@
 
   </section> <!-- end s-home -->
 
-
-  <!-- about
-    ================================================== -->
-  <section id='about' class="s-about">
-
-    <div class="row section-header has-bottom-sep" data-aos="fade-up">
-      <div class="col-full">
-        <!-- <h3 class="subhead subhead--dark">ABOUT</h3> -->
-        <h1 class="display-1 display-1--light" tkey="about_title">What's Conceal?</h1>
-      </div>
-    </div> <!-- end section-header -->
-
-    <div class="row about-desc" data-aos="fade-up">
-      <div class="col-full">
-        <p tkey="about_01">Conceal.Network is a decentralized blockchain bank, with deposits and investments
-          paying interest rates, without involvement of financial institutions, powered by 100% open source
-          code.</p>
-        <p tkey="about_02">Conceal.Network enables untraceable and anonymous messaging, and a secure way to
-          transfer funds. Using a distributed public ledger, the sender and receiver are kept anonymous, a key
-          concern in a post Snowden world. Hackers cannot trace money or messages when the messages are sent
-          across public networks.</p>
-        <p tkey="about_03">Conceal Cryptocurrency (₡CCX) is based on the Cryptonote protocol and runs on a
-          secure peer-to-peer network technology to operate with no central authority. You control the private
-          keys to your funds.</p>
-        <p tkey="about_04">Conceal is accessible by anyone in the world regardless of their geographic location
-          or status. Our blockchain is resistant to any kind of analysis. All your CCX transactions and
-          messages are anonymous.</p>
-        <p tkey="about_05">Conceal avoids many concerns, e.g. technological, environment impact, reputational
-          and security, of Bitcoin, and provides a glimpse of the future.</p>
-        <p tkey="about_06">Conceal is open-source, community driven and truly decentralized.</p>
-        <p tkey="about_07">No one owns Conceal, everyone can take part.</p>
-      </div>
-    </div> <!-- end about-desc -->
-
-    <div class="row about-desc" data-aos="fade-up">
-      <div class="col-full">
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-          <div class="col-full">
-            <h2 class="subhead subhead--dark" tkey="vision_title">OUR VISION</h2>
-          </div>
-        </div> <!-- end section-header -->
-        <p tkey="vision_01">At Conceal, we believe that access to knowledge is what truly allows great ideas to
-          flourish and diverse communities to grow.</p>
-        <p tkey="vision_02">We believe that Conceal is what the community decides it to be and that decisions on
-          how to grow the protocol should involve everyone.</p>
-      </div>
-    </div>
-  </section>
-  <section id='features' class="s-services">
-    <div class="contact__line"></div>
-    <div class="row section-header has-bottom-sep" data-aos="fade-up">
-      <div class="col-full">
-        <h3 class="subhead subhead--dark" tkey="features_title">FEATURES</h3>
-      </div>
-    </div> <!-- end section-header -->
-
-    <div class="row services-list block-1-2 block-tab-full">
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_01_title">Private</h3>
-          <p tkey="features_01_text">Conceal uses ring signatures and one-time addresses for truly anonymous
-            payments</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_02_title">Untraceable</h3>
-          <p tkey="features_02_text">Conceal's transactions can't be linked between the sender and the
-            recipient</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_03_title">Decentralized</h3>
-          <p tkey="features_03_text">Conceal follows Satoshi Nakamoto's original vision of decentralized,
-            trustless cryptocurrency, i.e. a secure digital cash operated by a network of users.
-            Transactions are confirmed by distributed consensus, and then recorded on the blockchain
-            immutably. Third parties do not need to be trusted to keep your money safe.</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_04_title">Fungible</h3>
-          <p tkey="features_04_text">Conceal is truly fungible, thanks to built-in privacy features. Just like
-            cash, all coins are equal, changeable. It is extremely unlikely that a coin will ever be
-            blacklisted by any party due to its association in previous transactions.</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_05_title">Scalable</h3>
-          <p tkey="features_05_text">Future scalability initiatives will include a modular sidechain.</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_06_title">Community Driven</h3>
-          <p tkey="features_06_text">No one owns Conceal. Everyone can take part. Developed, maintained and
-            funded by volunteers</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_07_title">Simple</h3>
-          <p tkey="features_07_text">Easy to use Desktop and CLI clients.</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_08_title">Cross platform</h3>
-          <p tkey="features_08_text">Available for PC, Mac, Ubuntu and Android</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_09_title">Protected Proof Of Work</h3>
-          <p tkey="features_09_text">PoW hash function is designed for egalitarian CPU & GPU mining and ASIC
-            Resistance</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_10_title">Adaptive Limits</h3>
-          <p tkey="features_10_text">Conceal intelligently adjusts its parameters based on the historical data
-          </p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_11_title">Encrypted Messages</h3>
-          <p tkey="features_11_text">Secure your confidentiality with an encrypted P2P network, secure
-            communications and encrypted self-destructive messages</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="features_12_title">Decentralized Banking</h3>
-          <p tkey="features_12_text">Deposits get up to 4.2% interest rate per year and Investments up to 7.2%
-            p.a.</p>
-          <p tkey="features_12_examples">Examples:
-            <ul>
-              <li tkey="features_12_examples_01">2M CCX Deposited for 1 year -> 83.200 CCX interests, up
-                to 4.16% p.a</li>
-              <li tkey="features_12_examples_02">2M CCX Invested for 1 year -> 120.689 CCX interests, up
-                to 6.04% p.a</li>
-              <li tkey="features_12_examples_03">2M CCX Invested for 5 years -> 732,462 CCX interests, up
-                to 7.32% p.a</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div> <!-- end services-list -->
-  </section>
-  <section id='about' class="s-about">
-    <div class="contact__line"></div>
-    <div class="row section-header" data-aos="fade-up">
-      <div class="col-full">
-        <h3 class="subhead subhead--dark" tkey="specs_title">TECHNICAL SPECIFICATIONS</h3>
-      </div>
-    </div> <!-- end section-header -->
-    <div class="row services-list block-1-2 block-tab-full">
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_01_title">Name</h3>
-          <p tkey="specs_01_text">Conceal</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_02_title">Ticker</h3>
-          <p tkey="specs_02_text">CCX</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_03_title">Symbol</h3>
-          <p tkey="specs_03_text">₡</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_04_title">Algorithm</h3>
-          <p tkey="specs_04_text">PoW, Cryptonight Conceal</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_05_title">Difficulty</h3>
-          <p tkey="specs_05_text">DDA & Zawy's LWMA 3</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_06_title">Privacy</h3>
-          <p tkey="specs_06_text">Ring Signatures & One-Time Addresses</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_07_title">Block Time</h3>
-          <p tkey="specs_07_text">120s</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_08_title">Decimal Places</h3>
-          <p tkey="specs_08_text">6</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_09_title">Transaction Fees</h3>
-          <p tkey="specs_09_text">0.0001 CCX</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_10_title">Max Supply</h3>
-          <p tkey="specs_10_text">200M CCX</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_11_title">Deposits</h3>
-          <p tkey="specs_11_text">Up to 4.16% interest rate per year</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_12_title">Investments</h3>
-          <p tkey="specs_12_text">Up to 7.32% interest rate per year</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_13_title">Messenger</h3>
-          <p tkey="specs_13_text">Encrypted Messages and Self-Destructive Messages</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_14_title">Premine</h3>
-          <p tkey="specs_14_text">6% of the max supply locked over a 5 years interval</p>
-        </div>
-      </div>
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_15_title">Block reward</h3>
-          <p tkey="specs_15_text">Starting on 5 CCX and going up to 20 CCX (+0.25CCX/month). Currently 8.5
-            CCX.</p>
-        </div>
-      </div>
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-text">
-          <h3 class="h4" tkey="specs_16_title">Addresses</h3>
-          <p tkey="specs_16_text">Wallet addresses are a string of 98 characters starting with "ccx7"</p>
-        </div>
-      </div>
-    </div> <!-- end services-list -->
-    </div>
-    </div> <!-- end about-desc -->
-  </section> <!-- end s-about -->
-
-
-
-
   <!-- features
     ================================================== -->
   <section id='features' class="s-services">
-    <div class="contact__line"></div>
     <div class="row section-header has-bottom-sep" data-aos="fade-up">
       <div class="col-full">
-        <!-- <h3 class="subhead">OUR</h3> -->
-        <h1 class="display-1 display-1--light" tkey="modules_title">Modules</h1>
+        <h3 class="subhead">What We're About</h3>
+        <h1 class="display-1 display-1--light" tkey="modules_title">Innovations</h1>
       </div>
     </div> <!-- end section-header -->
 
@@ -498,10 +215,9 @@
           <i class="icon-group"></i>
         </div>
         <div class="service-text">
-          <h3 class="h2" tkey="modules_01_title">Banking: Deposits & Investments</h3>
+          <h4 tkey="modules_01_title">Banking: Deposits</h4>
           <p tkey="modules_01_text">Deposits form the backbone of the Conceal ecosystem, providing users with
-            an egalitarian form of staking that earns interests on locked deposits. Conceal Investments
-            provide higher interest returns for longer term holders.</p>
+            a decentralized and egalitarian form of cold staking that earns interests on locked deposits.</p>
         </div>
       </div>
 
@@ -510,10 +226,9 @@
           <i class="icon-chat"></i>
         </div>
         <div class="service-text">
-          <h3 class="h2" tkey="modules_02_title">Encrypted Messages</h3>
-          <p tkey="modules_02_text">A true decentralized, anonymous, untraceable, and end-to-end encrypted
-            messaging service that operates on the blockchain while allowing messages that self-destruct.
-            Future releases will include web and mobile messaging applications.</p>
+          <h4 tkey="modules_02_title">Encrypted Messages</h4>
+          <p tkey="modules_02_text">A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted
+            messaging service that operates on the blockchain while allowing messages that self-destruct.</p>
         </div>
       </div>
 
@@ -521,6 +236,152 @@
 
 
   </section> <!-- end s-services -->
+
+  
+
+  <!-- wallets
+    ================================================== -->
+    <section id="wallets" class="s-contact">
+
+      <div class="overlay"></div>
+      <div class="contact__line"></div>
+  
+      <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+          <h3 class="subhead" tkey="wallets_title">Using Conceal</h3>
+          <h1 class="display-2 display-2--light" tkey="wallets_subtitle">Wallets</h1>
+        </div>
+      </div>
+  
+      <div class="row contact-content" data-aos="fade-up">
+          <div class="downloadWrapper">
+            <div class="downloadCattegory">
+              <i class="fab fa-windows fa-5x" aria-hidden="true"></i>
+              <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
+                class="btn btn--stroke">WINDOWS GUI</a>
+              <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
+                class="btn btn--stroke btnSecondary">WINDOWS CLI</a>
+            </div>
+            <div class="downloadCattegory">
+              <i class="fab fa-linux fa-5x" aria-hidden="true"></i>
+              <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
+                class="btn btn--stroke">LINUX GUI</a>
+              <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
+                class="btn btn--stroke btnSecondary">LINUX CLI</a>
+            </div>
+            <div class="downloadCattegory">
+              <i class="fab fa-apple fa-5x" aria-hidden="true"></i>
+              <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
+                class="btn btn--stroke">MAC GUI</a>
+              <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
+                class="btn btn--stroke btnSecondary">MAC CLI</a>
+            </div>
+          </div>
+  
+          <div class="downloadWrapper">
+            <div class="downloadCattegory">
+              <i class="fab fa-android fa-5x" aria-hidden="true"></i>
+              <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile" target="_blank"
+                class="btn btn--stroke">ANDROID</a>
+            </div>
+            <div class="downloadCattegory">
+              <i class="fas fa-cloud fa-5x" aria-hidden="true"></i>
+              <a href="https://conceal.cloud" target="_blank" class="btn btn--stroke">CLOUD</a>
+            </div>
+            <div class="downloadCattegory">
+              <i class="fas fa-paper-plane  fa-5x" aria-hidden="true"></i>
+              <a href="https://conceal.network/paperwallet" target="_blank" class="btn btn--stroke">PAPER</a>
+            </div>
+          </div>
+        <p tkey="wallets_description">The Conceal Desktop Wallet is the central point of interaction of all the
+          features of the currency. With the wallet, you can send and receive CCX, send and recieve encrypted
+          secure messages, manage your deposits and investments. The wallet is available for all major platforms:
+          Windows x64, Ubuntu, macOS and Arch Linux.</p>
+        <img data-src="https://conceal.network/images/gui.png" class="lazy" alt="Conceal GUI" />
+      </div> <!-- end contact-content -->
+  
+    </section> <!-- end s-contact -->
+  
+  
+    <!-- mining pools
+      ================================================== -->
+    <section id="mining" class="s-clients">
+      <div class="contact__line"></div>
+      <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+          <h3 class="subhead">Getting Conceal</h3>
+          <h1 class="display-2" tkey="mining_title">Mining</h1>
+        </div>
+      </div> <!-- end section-header -->
+  
+      <div class="row">
+        <div class="col-12">
+          <h4>Quick Start</h4>
+          <div class="col-6 minerquickstart first">
+          <h5>XMRStak & XMRig</h5>
+<pre>"pools": [
+  {
+    "pool_address": "us.pool.conceal.network:3333",
+    "wallet_address": "YOUR_ADDRESS",
+    "rig_id": "x",
+    "pool_password": "x",
+    "nicehash": false,
+    "use_tls" : false, /* Set to true if using an SSL port */
+    "tls_fingerprint": "",
+    "pool_weight": 1
+  }
+],
+"currency" : "cryptonight_conceal",</pre>
+</div>
+
+<div class="col-6 minerquickstart">
+  <h5>TeamRedMiner</h5>
+  <pre>teamredminer.exe -a cn_conceal -o stratum+tcp://us.pool.conceal.network:3333 -u YOUR_ADDRESS -p x</pre>
+</div>
+
+<div class="col-6 minerquickstart">
+  <h5>XMRigCC</h5>
+  <pre>xmrigDaemon.exe -o us.pool.conceal.network:3333 -u YOUR_ADDRESS -p x -a cryptonight --variant conceal -k</pre>
+</div>
+
+        </div>
+      </div>
+  
+      <div class="row add-bottom">
+  
+        <div class="col-twelve">
+  
+          <p tkey="mining_description">The easiest way to mine Conceal with CPU's or GPU's is to use one of the
+            many miners that support Cryptonight-Conceal or use our Conceal Miner.</p>
+  
+          <h4 tkey="mining_pools_title">Mining Pools</h4>
+          <div class="table-responsive" id="wrapperMiningPools">
+  
+            <table id="tableMiningPools">
+              <thead>
+                <tr>
+                  <th><span id="symbol"></span tkey="mining_pools_list">Pools</th>
+                  <th class="sorttable_numeric"><i class="fa fa-bars"></i><span tkey="mining_pools_height">Height</span>
+                  </th>
+                  <th class="sorttable_numeric"><i class="fa fa-tachometer"></i><span
+                      tkey="mining_pools_hashrate">Hashrate</span></th>
+                  <th class="sorttable_numeric"><i class="fa fa-group"></i><span tkey="mining_pools_miners">Miners</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="pools_rows">
+              </tbody>
+            </table>
+  
+          </div>
+  
+        </div>
+  
+      </div> <!-- end row -->
+  
+  
+  
+    </section> <!-- end s-clients -->
 
   <section id="roadmap">
     <div class="contact__line"></div>
@@ -730,6 +591,7 @@
         <div class="team-container">
           <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
+              <h3 class="subhead">Powered By</h3>
               <h1 class="display-1 display-1--light" tkey="team_title">The Conceal Team</h1>
             </div>
           </div> <!-- end section-header -->
@@ -910,126 +772,14 @@
   </section> <!-- end s-contact -->
 
 
-  <!-- wallets
-    ================================================== -->
-  <section id="wallets" class="s-contact">
-
-    <div class="overlay"></div>
-    <div class="contact__line"></div>
-
-    <div class="row section-header" data-aos="fade-up">
-      <div class="col-full">
-        <h3 class="subhead" tkey="wallets_title">Using Conceal</h3>
-        <h1 class="display-2 display-2--light" tkey="wallets_subtitle">Wallets</h1>
-      </div>
-    </div>
-
-    <div class="row contact-content" data-aos="fade-up">
-        <div class="downloadWrapper">
-          <div class="downloadCattegory">
-            <i class="fab fa-windows fa-5x" aria-hidden="true"></i>
-            <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
-              class="btn btn--stroke">WINDOWS GUI</a>
-            <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
-              class="btn btn--stroke btnSecondary">WINDOWS CLI</a>
-          </div>
-          <div class="downloadCattegory">
-            <i class="fab fa-linux fa-5x" aria-hidden="true"></i>
-            <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
-              class="btn btn--stroke">LINUX GUI</a>
-            <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
-              class="btn btn--stroke btnSecondary">LINUX CLI</a>
-          </div>
-          <div class="downloadCattegory">
-            <i class="fab fa-apple fa-5x" aria-hidden="true"></i>
-            <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases" target="_blank"
-              class="btn btn--stroke">MAC GUI</a>
-            <a href="https://github.com/TheCircleFoundation/conceal-core/releases" target="_blank"
-              class="btn btn--stroke btnSecondary">MAC CLI</a>
-          </div>
-        </div>
-
-        <div class="downloadWrapper">
-          <div class="downloadCattegory">
-            <i class="fab fa-android fa-5x" aria-hidden="true"></i>
-            <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile" target="_blank"
-              class="btn btn--stroke">ANDROID</a>
-          </div>
-          <div class="downloadCattegory">
-            <i class="fas fa-cloud fa-5x" aria-hidden="true"></i>
-            <a href="https://conceal.cloud" target="_blank" class="btn btn--stroke">CLOUD</a>
-          </div>
-          <div class="downloadCattegory">
-            <i class="fas fa-paper-plane  fa-5x" aria-hidden="true"></i>
-            <a href="https://conceal.network/paperwallet" target="_blank" class="btn btn--stroke">PAPER</a>
-          </div>
-        </div>
-      <p tkey="wallets_description">The Conceal Desktop Wallet is the central point of interaction of all the
-        features of the currency. With the wallet, you can send and receive CCX, send and recieve encrypted
-        secure messages, manage your deposits and investments. The wallet is available for all major platforms:
-        Windows x64, Ubuntu, macOS and Arch Linux.</p>
-      <img data-src="https://conceal.network/images/gui.png" class="lazy" alt="Conceal GUI" />
-    </div> <!-- end contact-content -->
-
-  </section> <!-- end s-contact -->
-
-
-  <!-- mining pools
-    ================================================== -->
-  <section id="mining" class="s-clients">
-    <div class="contact__line"></div>
-    <div class="row section-header" data-aos="fade-up">
-      <div class="col-full">
-        <h1 class="display-2" tkey="mining_title">Mining</h1>
-      </div>
-    </div> <!-- end section-header -->
-
-
-
-    <div class="row add-bottom">
-
-      <div class="col-twelve">
-
-        <p tkey="mining_description">The easiest way to mine Conceal with CPU's or GPU's is to use one of the
-          many miners that support Cryptonight-Conceal or use our Conceal Miner.</p>
-
-        <h3 style="color: orange;" tkey="mining_pools_title">MINING POOLS</h3>
-        <div class="table-responsive" id="wrapperMiningPools">
-
-          <table id="tableMiningPools">
-            <thead>
-              <tr>
-                <th><span id="symbol"></span tkey="mining_pools_list">Pools</th>
-                <th class="sorttable_numeric"><i class="fa fa-bars"></i><span tkey="mining_pools_height">Height</span>
-                </th>
-                <th class="sorttable_numeric"><i class="fa fa-tachometer"></i><span
-                    tkey="mining_pools_hashrate">Hashrate</span></th>
-                <th class="sorttable_numeric"><i class="fa fa-group"></i><span tkey="mining_pools_miners">Miners</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody id="pools_rows">
-            </tbody>
-          </table>
-
-        </div>
-
-      </div>
-
-    </div> <!-- end row -->
-
-
-
-  </section> <!-- end s-clients -->
-
-
   <!-- contact
     ================================================== -->
   <section id="contact" class="s-contact">
     <div class="contact__line"></div>
     <div class="row section-header" data-aos="fade-up">
       <div class="col-full">
-        <h1 class="display-2" tkey="contact_title">Contact us</h1>
+        <h3 class="subhead">We're Friendly</h3>
+        <h2 class="display-2" tkey="contact_title">Contact us</h1>
       </div>
     </div> <!-- end section-header -->
 

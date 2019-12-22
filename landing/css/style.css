@@ -1034,3 +1034,17 @@ img.rounded {
   margin:0 0 3em;
   list-style:none;
 }
+h3, h4, h5 {
+  color:#fff !important;
+}
+h3 {
+  font-size:2rem;
+  text-transform:uppercase;
+  letter-spacing:-.1rem;
+}
+h4 {
+  margin:2rem 0 0;
+}
+#about, #features, #techspecs {
+  margin:0 0 6rem;
+}

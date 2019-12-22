@@ -205,18 +205,22 @@ h3,
 .h3 {
     font-size: 2.4rem;
     line-height: 1.25;
+    color:orange;
+    text-transform:uppercase;
 }
 
 h4,
 .h4 {
     font-size: 2.1rem;
     line-height: 1.286;
+    color:orange;
 }
 
 h5,
 .h5 {
     font-size: 1.6rem;
     line-height: 1.313;
+    color:#FFF;
 }
 
 h6,
@@ -4037,8 +4041,7 @@ footer .row {
     }
 
     .go-top {
-        right: 0;
-        bottom: 0;
+        display:none !important;
     }
 }
 
@@ -4132,4 +4135,35 @@ p[tkey='wallets_description'] {
 
 .exchangesRow {
   display: flex;
+}
+#features h4 {
+    margin-top:1rem;
+}
+#mining pre {
+    font-family:Consolas, Serif;
+    font-size:1.3rem;
+    line-height:1.3rem;
+    background:#111;
+    border:1px solid #444;
+    border-radius:4px;
+    width:100%;
+    white-space:pre-wrap;
+}
+#mining .first {
+    padding:0 24px 0 0;
+}
+#mining h4, #mining h5 {
+    margin-top:0;
+}
+.minerquickstart {
+    max-width:50%;
+    padding:0;
+}
+@media only screen and (max-width: 800px) {
+    .minerquickstart {
+        max-width:100%;
+    }
+    #mining .first {
+        padding:0;
+    }
 }
