@@ -29,6 +29,7 @@ var renderPoolRow = function (label, host, name, data) {
   pools_row.push('<tr>');
   pools_row.push('<td id=host-' + name + '><a target=blank href=http://' + host + '>' + label + '</a></td>');
   pools_row.push('<td class="height" id=height-' + name + '>' + localizeNumber(data.network.height) + '</td>');
+  pools_row.push('<td id=fee-' + name + '>' + data.config.poolFee + '%' + '</td>');
   pools_row.push('<td id=hashrate-' + name + '>' + getReadableHashRateString(data.pool.hashrate) + '</td>');
   pools_row.push('<td id=miners-' + name + '>' + localizeNumber(data.pool.miners) + '</td>');
   pools_row.push('</tr>');
@@ -68,6 +69,16 @@ $(window).scroll(function () {
       }).data("loadingIndicator");
 
       $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
+
+
+        function compare(a, b) {
+          if (a.config.poolFee > b.config.poolFee) return 1;
+          if (b.config.poolFee > a.config.poolFee) return -1;
+          return 0;
+        }
+
+        data.sort(compare);
+
         data.forEach(function (element) {
           $('#pools_rows').append(renderPoolRow(element.info.name, element.info.host, getPoolName(element), element));
         });
