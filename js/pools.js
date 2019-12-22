@@ -50,6 +50,7 @@ function getPoolName(data) {
 }
 
 $(window).scroll(function () {
+
   // This is then function used to detect if the element is scrolled into view
   function elementScrolled(elem) {
     var docViewTop = $(window).scrollTop();
@@ -61,6 +62,7 @@ $(window).scroll(function () {
   // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
   if (elementScrolled('#mining')) {
     if (!arePoolsLoaded) {
+
       arePoolsLoaded = true;
 
       var nodeLoadingIndicator = $('#wrapperMiningPools').loadingIndicator({
@@ -69,22 +71,19 @@ $(window).scroll(function () {
       }).data("loadingIndicator");
 
       $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
-
-
         function compare(a, b) {
           if (a.config.poolFee > b.config.poolFee) return 1;
           if (b.config.poolFee > a.config.poolFee) return -1;
           return 0;
         }
-
         data.sort(compare);
-
         data.forEach(function (element) {
           $('#pools_rows').append(renderPoolRow(element.info.name, element.info.host, getPoolName(element), element));
         });
-
         nodeLoadingIndicator.hide();
       });
+
     }
   }
+
 });
