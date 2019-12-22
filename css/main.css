@@ -3391,6 +3391,10 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
+.contact-content img {
+    border-radius:16px;
+}
+
 .contact-content h3 {
     margin-top: 0;
     margin-bottom: 6.6rem;
