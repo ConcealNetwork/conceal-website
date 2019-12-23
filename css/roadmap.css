@@ -117,7 +117,7 @@
 }
 .main-timeline .timeline .title,
 .main-timeline .timeline .title:after{
-    background:orange;
+    background:#bbb;
 }
 @media only screen and (max-width:990px){
     .main-timeline{ width:100%; }
