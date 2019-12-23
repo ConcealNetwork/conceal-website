@@ -4171,3 +4171,10 @@ p[tkey='wallets_description'] {
         padding:0;
     }
 }
+.buyingccx {
+    text-align:center;
+}
+.buyingccx div {
+    margin:4rem 0 0;
+    clear:both;
+}
