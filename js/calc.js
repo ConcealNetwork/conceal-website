@@ -20,7 +20,7 @@ $(document).ready(function () {
         return nPrincipal * (1 + nEIR);
     }
 
-    $("#calc #calculate").click(function() {
+    function runCalc() {
         let nPrincipal;
         let nMonths;
         let nTEA;
@@ -34,7 +34,14 @@ $(document).ready(function () {
 
         $("#calc #nTEA").text(parseFloat(nTEA).toFixed(0));
         $("#calc #nProfit").text(parseFloat(nProfit).toFixed(0));
+    }
+
+    $("#calc #nPrincipal").change(function() {
+        runCalc();
+    });
+    $("#calc #nMonths").change(function() {
+        runCalc();
     });
 
-    $("#calc #calculate").trigger('click');
+    runCalc();
 });

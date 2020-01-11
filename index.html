@@ -238,9 +238,9 @@
       <div id="leaderLine"></div>
       <h3>Deposit Profit Calculator</h3>
       <form action="#" method="post">
-        <div><label for="nPrincipal">Deposit</label> <input type="number" id="nPrincipal" value="25000"> CCX</div>
+        <div><label for="nPrincipal">Deposit</label> <input type="number" id="nPrincipal" value="25000" min="1" max="9999999"> CCX</div>
         <div>for <input type="number" id="nMonths" min="1" max="12" value="12"> <label for="nMonths">Months</label></div><br />
-        <input type="button" class="btn btn--stroke" id="calculate" value="Calculate" />
+        <!--<input type="button" class="btn btn--stroke" id="calculate" value="Calculate" />-->
         <div id="calcResults">
           <div class="col"><label for="nTEA">Total:</label> <span id="nTEA"></span> CCX</div>
           <div class="col"><label for="nProfit">Profit:</label> <span id="nProfit"></span> CCX</div>
