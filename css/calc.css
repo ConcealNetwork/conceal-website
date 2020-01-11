@@ -1,0 +1,56 @@
+#calc input, #calc label, #calc form {
+    color:#FFF;
+    display:inline-block;
+    text-align:center;
+    margin:0 0 2rem;
+}
+#calc {
+    text-align:center;
+    padding:1rem;
+    background:#111;
+    width:80%;
+    margin:0 auto;
+    position:relative;
+}
+#calc #calculate {
+    color:#111;
+    margin-left:0.25rem;
+}
+#calc #nMonths {
+    width:36px;
+}
+#calc #nPrincipal {
+    width:80px;
+}
+#calc #nMonths, #calc #nPrincipal, #calc #nTEA, #calc #nProfit {
+    border:1px solid #222;
+    border-radius:4px;
+    background:#000;
+    height:1rem;
+    box-shadow:0 2px 3px #000;
+}
+#calc form div {
+    display:inline-block;
+}
+#calc form {
+    text-shadow:0 2px 2px #000;
+}
+#calc #calcResults {
+    display:block;
+}
+#calc #nTEA {
+    width:96px;
+    margin-right:8px;
+}
+#calc #nProfit {
+    width:80px;
+}
+#calc #leaderLine {
+    display: block;
+    width: 2px;
+    height: 5.2rem;
+    background-color: orange;
+    position: absolute;
+    left: 5.2rem;
+    top: 0;
+}
