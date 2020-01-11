@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     function getTEA(nPrincipal,nMonths) {
+
         let nBase;
         let nEAR;
         let nEIR;
@@ -17,10 +18,12 @@ $(document).ready(function () {
 
         nEIR=nEAR/12*nMonths;
 
-        return nPrincipal * (1 + nEIR);
+        return nPrincipal*(1+nEIR);
+
     }
 
     function runCalc() {
+
         let nPrincipal;
         let nMonths;
         let nTEA;
@@ -34,6 +37,7 @@ $(document).ready(function () {
 
         $("#calc #nTEA").text(parseFloat(nTEA).toFixed(0));
         $("#calc #nProfit").text(parseFloat(nProfit).toFixed(0));
+
     }
 
     $("#calc #nPrincipal")
