@@ -31,6 +31,16 @@ $(document).ready(function () {
 
         nPrincipal=$('#nPrincipal').val();
         nMonths=$('#nMonths').val();
+
+        if(nPrincipal>9999999) {
+            nPrincipal=9999999;
+            $('#nPrincipal').val(nPrincipal);
+        }
+
+        if(nMonths>12) {
+            nMonths=12;
+            $('#nMonths').val(nMonths);
+        }
     
         nTEA=getTEA(nPrincipal,nMonths);
         nProfit=nTEA-nPrincipal;
