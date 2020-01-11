@@ -35,7 +35,7 @@ $(document).ready(function () {
         if(nPrincipal>9999999) {
             nPrincipal=9999999;
             $('#nPrincipal').val(nPrincipal);
-        } else if(nPrincipal<1) {
+        } else if(nPrincipal<1&&nPrincipal!='') {
             nPrincipal=1;
             $('#nPrincipal').val(nPrincipal);
         }
@@ -43,7 +43,7 @@ $(document).ready(function () {
         if(nMonths>12) {
             nMonths=12;
             $('#nMonths').val(nMonths);
-        } else if(nMonths<1) {
+        } else if(nMonths<1&&nMonths!='') {
             nMonths=1;
             $('#nMonths').val(nMonths);
         }
