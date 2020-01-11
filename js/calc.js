@@ -38,6 +38,9 @@ $(document).ready(function () {
         } else if(nPrincipal<1&&nPrincipal!='') {
             nPrincipal=1;
             $('#nPrincipal').val(nPrincipal);
+        } else if(isNaN(nPrincipal)) {
+            nPrincipal=0;
+            $('#nPrincipal').val(nPrincipal);
         }
 
         if(nMonths>12) {
@@ -45,6 +48,9 @@ $(document).ready(function () {
             $('#nMonths').val(nMonths);
         } else if(nMonths<1&&nMonths!='') {
             nMonths=1;
+            $('#nMonths').val(nMonths);
+        } else if(isNaN(nPrincipal)) {
+            nMonths=0;
             $('#nMonths').val(nMonths);
         }
     
