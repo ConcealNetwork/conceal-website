@@ -38,7 +38,7 @@ $(document).ready(function () {
         } else if(nPrincipal<1&&nPrincipal!='') {
             nPrincipal=1;
             $('#nPrincipal').val(nPrincipal);
-        } else if(isNaN(nPrincipal)) {
+        } else if(isNaN(nPrincipal)||typeof nPrincipal=='undefined'||nPrincipal=='') {
             nPrincipal=0;
             $('#nPrincipal').val(nPrincipal);
         }
@@ -49,7 +49,7 @@ $(document).ready(function () {
         } else if(nMonths<1&&nMonths!='') {
             nMonths=1;
             $('#nMonths').val(nMonths);
-        } else if(isNaN(nPrincipal)) {
+        } else if(isNaN(nMonths)||typeof nMonths=='undefined') {
             nMonths=0;
             $('#nMonths').val(nMonths);
         }
