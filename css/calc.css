@@ -3,6 +3,7 @@
     display:inline-block;
     text-align:center;
     margin:0 0 2rem;
+    font-weight:normal;
 }
 #calc {
     text-align:center;
@@ -22,7 +23,7 @@
 #calc #nPrincipal {
     width:80px;
 }
-#calc #nMonths, #calc #nPrincipal, #calc #nTEA, #calc #nProfit {
+#calc #nMonths, #calc #nPrincipal {
     border:1px solid #222;
     border-radius:4px;
     background:#000;
@@ -34,16 +35,22 @@
 }
 #calc form {
     text-shadow:0 2px 2px #000;
+    font-size:1.4rem;
 }
 #calc #calcResults {
     display:block;
 }
+#calc #calcResults div {
+    display:inline-block;
+    padding:0 1rem;
+    font-size:1.6rem;
+}
 #calc #nTEA {
     width:96px;
-    margin-right:8px;
 }
 #calc #nProfit {
     width:80px;
+    color:orange;
 }
 #calc #leaderLine {
     display: block;

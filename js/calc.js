@@ -32,8 +32,8 @@ $(document).ready(function () {
         nTEA=getTEA(nPrincipal,nMonths);
         nProfit=nTEA-nPrincipal;
 
-        $("#calc #nTEA").val(nTEA);
-        $("#calc #nProfit").val(nProfit);
+        $("#calc #nTEA").text(parseFloat(nTEA).toFixed(0));
+        $("#calc #nProfit").text(parseFloat(nProfit).toFixed(0));
     });
 
     $("#calc #calculate").trigger('click');
