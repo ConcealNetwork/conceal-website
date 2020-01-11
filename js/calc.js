@@ -36,12 +36,18 @@ $(document).ready(function () {
         $("#calc #nProfit").text(parseFloat(nProfit).toFixed(0));
     }
 
-    $("#calc #nPrincipal").change(function() {
-        runCalc();
-    });
-    $("#calc #nMonths").change(function() {
-        runCalc();
-    });
+    $("#calc #nPrincipal")
+        .keyup(runCalc)
+        .keypress(runCalc)
+        .blur(runCalc)
+        .change(runCalc);
+
+    $("#calc #nMonths")
+        .keyup(runCalc)
+        .keypress(runCalc)
+        .blur(runCalc)
+        .change(runCalc);
 
     runCalc();
+
 });
