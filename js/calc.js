@@ -49,7 +49,7 @@ $(document).ready(function () {
         } else if(nMonths<1&&nMonths!='') {
             nMonths=1;
             $('#nMonths').val(nMonths);
-        } else if(isNaN(nMonths)||typeof nMonths=='undefined') {
+        } else if(isNaN(nMonths)||typeof nMonths=='undefined'||nMonths=='') {
             nMonths=0;
             $('#nMonths').val(nMonths);
         }
@@ -57,8 +57,8 @@ $(document).ready(function () {
         nTEA=getTEA(nPrincipal,nMonths);
         nProfit=nTEA-nPrincipal;
 
-        $("#calc #nTEA").text(parseFloat(nTEA).toFixed(0));
-        $("#calc #nProfit").text(parseFloat(nProfit).toFixed(0));
+        $("#calc #nTEA").text(parseFloat(nTEA).toFixed(2));
+        $("#calc #nProfit").text(parseFloat(nProfit).toFixed(2));
 
     }
 
