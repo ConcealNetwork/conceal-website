@@ -57,9 +57,15 @@ $(document).ready(function () {
         nTEA=getTEA(nPrincipal,nMonths);
         nProfit=nTEA-nPrincipal;
 
-        $("#calc #nTEA").text(parseFloat(nTEA).toFixed(2));
-        $("#calc #nProfit").text(parseFloat(nProfit).toFixed(2));
-
+        $("#calc #nTEA").text(nTEA.toLocaleString(window.navigator.language,{
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2
+        }));
+        $("#calc #nProfit").text(nProfit.toLocaleString(window.navigator.language,{
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2
+        }));
+        
     }
 
     $("#calc #nPrincipal")
