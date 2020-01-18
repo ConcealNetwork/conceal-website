@@ -1,10 +1,8 @@
 $(document).ready(function () {
 
-    function getTEA(nPrincipal,nMonths) {
-
+    function getEIR(nPrincipal,nMonths) {
         let nBase;
         let nEAR;
-        let nEIR;
 
         if(nPrincipal<10000) {
             nBase=0.029;
@@ -16,7 +14,14 @@ $(document).ready(function () {
 
         nEAR=nBase+(nMonths-1)*0.001;
 
-        nEIR=nEAR/12*nMonths;
+        return nEAR/12*nMonths;
+    }
+
+    function getTEA(nPrincipal,nMonths) {
+
+        let nEIR;
+
+        nEIR=getEIR(nPrincipal,nMonths);
 
         return nPrincipal*(1+nEIR);
 
@@ -73,5 +78,65 @@ $(document).ready(function () {
         .change(runCalc);
 
     runCalc();
+
+    function populateTable() {
+        let nCurrentMonth=1;
+
+        while(nCurrentMonth<13) {
+            let newRow=document.createElement('tr');
+            let newColumn=document.createElement('td');
+            newColumn.textContent=nCurrentMonth;
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=(getEIR('5000',nCurrentMonth)*100).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            })+'%';
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth-1)/30+')');
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=getTEA('5000',nCurrentMonth).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth-1)/30+')');
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=(getEIR('10000',nCurrentMonth)*100).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            })+'%';
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth)/25+')');
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=getTEA('10000',nCurrentMonth).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth)/25+')');
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=(getEIR('20000',nCurrentMonth)*100).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            })+'%';
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth+1)/20+')');
+            newRow.append(newColumn);
+            newColumn=document.createElement('td');
+            newColumn.textContent=getTEA('2000',nCurrentMonth).toLocaleString(window.navigator.language,{
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth+1)/20+')');
+            newRow.append(newColumn);
+            $("#calcTable tbody").append(newRow);
+            nCurrentMonth++;
+        }
+        
+    }
+
+    if($("#calcTable").length!==-1) {
+        populateTable();
+    }
 
 });

@@ -5,7 +5,7 @@
     margin:0 0 2rem;
     font-weight:normal;
 }
-#calc {
+#calc, #calcTable {
     text-align:center;
     padding:1rem;
     background:#111;
@@ -61,4 +61,60 @@
     position: absolute;
     left: 5.2rem;
     top: 0;
+}
+
+#calcTable table {
+    text-align:center;
+    border-collapse:collapse;
+    margin:0 auto 4rem;
+    width:80%;
+    position: relative;
+}
+
+#calcTable th,
+#calcTable td {
+    padding:0;
+    margin:0;
+    border:1px solid #777;
+    font-size:1.3rem;
+    text-align:center;
+    color:#FFF;
+    background:#111;
+}
+#calcTable thead tr th {
+    background:#333;
+}
+#calcTable thead tr:first-child th {
+    background:#222;
+}
+#calcTable thead tr:last-child th {
+    background:#444;
+}
+#calcTable thead tr:nth-of-type(4) th,
+#calcTable thead tr:nth-of-type(5) th {
+    color:orange;
+}
+@media only screen and (max-width: 1000px) {
+    #calcTable th,
+    #calcTable td {
+        font-size:1.2rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #calcTable th,
+    #calcTable td {
+        font-size:1.1rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #calcTable th,
+    #calcTable td {
+        font-size:1rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #calcTable th,
+    #calcTable td {
+        font-size:.9rem;
+    }
 }
