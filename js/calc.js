@@ -86,26 +86,26 @@ $(document).ready(function () {
         Deposit Compound Interest Table
     */
 
-    function populateCalcTableInterestCol(nCurrentMonth,nPrincipal) {
+    function populateCalcTableInterestCol(nCurrentMonth,nPrincipal,nMuliplier) {
 
         newColumn=document.createElement('td');
         newColumn.textContent=(getEIR(nPrincipal,nCurrentMonth)*100).toLocaleString(window.navigator.language,{
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         })+'%';
-        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth-1)/30+')');
+        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier)/87+')');
         return newColumn;
 
     }
 
-    function populateCalcTableTotalCol(nCurrentMonth,nPrincipal) {
+    function populateCalcTableTotalCol(nCurrentMonth,nPrincipal,nMuliplier) {
 
         newColumn=document.createElement('td');
         newColumn.textContent=getTEA(nPrincipal,nCurrentMonth).toLocaleString(window.navigator.language,{
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         });
-        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth-1)/30+')');
+        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier)/87+')');
         return newColumn;
 
     }
@@ -118,12 +118,23 @@ $(document).ready(function () {
 
             let newRow=document.createElement('tr');
             let newColumn=document.createElement('td');
-            let nTier1=5000;
+
+            let nTier1Mid=5000;
             let nTier2=10000;
             let nTier2Max=19999;
             let nTier3=20000;
+
+            let nTier1Base=2.9;
+            let nTier2Base=3.9;
+            let nTier3Base=4.9;
+
+            let nTier1MaxInterest=4;
+            let nTier2MaxInterest=5;
+            let nTier3MaxInterest=6;
+
             let sLocale=window.navigator.language;
             let sLocaleOptions={minimumFractionDigits:0,maximumFractionDigits:0};
+            let sLocaleOptions2={minimumFractionDigits:2,maximumFractionDigits:2};
 
             // Principal
             $("#calcTable thead tr:nth-of-type(2) th:nth-of-type(2)").text(
@@ -138,18 +149,18 @@ $(document).ready(function () {
 
             // Base/APR
             $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(2)").text(
-                $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(2)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
-            );
+                nTier1Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
+            )
             $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(3)").text(
-                $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(3)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
-            );
+                nTier2Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
+            )
             $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(4)").text(
-                $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(4)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
-            );
+                nTier3Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
+            )
 
             // Example
             $("#calcTable thead tr:nth-of-type(4) th:nth-of-type(2)").text(
-                nTier1.toLocaleString(sLocale,sLocaleOptions)+' CCX'
+                nTier1Mid.toLocaleString(sLocale,sLocaleOptions)+' CCX'
             );
             $("#calcTable thead tr:nth-of-type(4) th:nth-of-type(3)").text(
                 nTier2.toLocaleString(sLocale,sLocaleOptions)+' CCX'
@@ -160,26 +171,26 @@ $(document).ready(function () {
 
             // Max Interest
             $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(2)").text(
-                $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(2)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
+                nTier1MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
             );
             $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(3)").text(
-                $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(3)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
+                nTier2MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
             );
             $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(4)").text(
-                $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(4)").text().replace('%','').toLocaleString(sLocale,sLocaleOptions)+'%'
+                nTier3MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
             );
 
             newColumn.textContent=nCurrentMonth;
             newRow.append(newColumn);
 
-            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier1));
-            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier1));
+            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier1Mid,nTier1Base));
+            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier1Mid,nTier1Base));
 
-            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier2));
-            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier2));
+            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier2,nTier2Base));
+            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier2,nTier2Base));
 
-            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier3));
-            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier3));
+            newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier3,nTier3Base));
+            newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier3,nTier3Base));
 
             $("#calcTable tbody").append(newRow);
 
@@ -191,7 +202,6 @@ $(document).ready(function () {
     
     if($("#calcTable table").length!==-1) {
         populateTable();
-        $("#calcTable table").show();
     }
 
 });
