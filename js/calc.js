@@ -123,7 +123,7 @@ $(document).ready(function () {
             newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth+1)/20+')');
             newRow.append(newColumn);
             newColumn=document.createElement('td');
-            newColumn.textContent=getTEA('2000',nCurrentMonth).toLocaleString(window.navigator.language,{
+            newColumn.textContent=getTEA('20000',nCurrentMonth).toLocaleString(window.navigator.language,{
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2
             });
