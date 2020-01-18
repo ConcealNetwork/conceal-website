@@ -69,8 +69,8 @@
     margin:0 auto 4rem;
     width:80%;
     position: relative;
+    display:none;
 }
-
 #calcTable th,
 #calcTable td {
     padding:0;
