@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     function getEIR(nPrincipal,nMonths) {
+
         let nBase;
         let nEAR;
 
@@ -15,6 +16,7 @@ $(document).ready(function () {
         nEAR=nBase+(nMonths-1)*0.001;
 
         return nEAR/12*nMonths;
+        
     }
 
     function getTEA(nPrincipal,nMonths) {
