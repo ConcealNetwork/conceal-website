@@ -1026,17 +1026,30 @@ img.rounded {
   text-align:right;
   padding:0 8px 0 0;
 }
+.communityWrapper {
+  text-align:center;
+}
 .communityWrapper iframe {
   float:right;
   margin:0 2rem;
+}
+@media (max-width: 1200px) {
+  .communityWrapper iframe {
+    float:none;
+    margin:4rem auto;
+  }
 }
 .communityWrapper img {
   max-width:100%;
   height:auto;
   margin:4rem 2rem 0;
 }
+@media (max-width: 1200px) {
+  .communityWrapper img {
+    margin:0 auto 4rem;
+  }
+}
 .communityLinks {
-  text-align: center;
   clear:both;
   padding:5rem 0 0 !important;
 }
@@ -1048,16 +1061,20 @@ img.rounded {
 .communityWrapper .col {
   width:50%;
   float:left;
-  text-align:center;
   margin:0;
 }
 .communityWrapper .col:nth-child(even) {
   float:right;
 }
+@media (max-width: 400px) {
+  .communityWrapper .col {
+    float:none;
+    width:100%;
+  }
+}
 .communityWrapper .col ul,
 .communityWrapper .col h2 {
   width:100%;
-  text-align:center;
 }
 h3, h4, h5 {
   color:#fff !important;
