@@ -1036,7 +1036,7 @@ img.rounded {
 @media (max-width: 1200px) {
   .communityWrapper iframe {
     float:none;
-    margin:4rem auto;
+    margin:0 auto;
   }
 }
 .communityWrapper img {
