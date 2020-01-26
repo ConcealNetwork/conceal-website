@@ -1,9 +1,4 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide',
- 	once: true
- });
-jQuery(document).ready(function($) {
+document.ready(function($) {
 	"use strict";
 	var siteMenuClone = function() {
 		$('.js-clone-nav').each(function() {
@@ -67,4 +62,10 @@ jQuery(document).ready(function($) {
 		});
 	}; 
 	siteMenuClone();
+
+	AOS.init({
+		duration: 800,
+		easing: 'slide',
+		once: true
+	});
 });
