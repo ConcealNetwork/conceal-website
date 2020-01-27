@@ -3610,6 +3610,7 @@ html.no-csstransitions .home-content__main {
 
 #contact_captcha {
     float: right;
+    margin:0 0 16px;
 }
 
 #contact_submit {
