@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://conceal.network/landing/css/style.css');
+
+#listQuickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 50%;
+}
+#aboutDesc {
+  margin-top:0 !important;
+}
+.container {
+  position:relative;
+}
+#root {
+  padding-bottom:0 !important;
+}
