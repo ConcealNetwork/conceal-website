@@ -835,15 +835,14 @@ img.rounded {
   border-radius: 5px;
   background: transparent; 
 }
-
-#logo {
-  width: 50px !important; 
-  height: 79px !important;
-}
-
-.logoDiv {
+#logoDiv {
   display: flex;
   align-items: center;
+}
+#logoDiv a {
+  height:56px;
+  width:38px;
+  background:url('../../images/branding/logo.png');
 }
 .site-menu-toggle {
   position: absolute; right: 40px; top: 40px;

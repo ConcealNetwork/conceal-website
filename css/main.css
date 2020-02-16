@@ -1724,12 +1724,12 @@ input::-moz-focus-inner {
     padding:0;
     margin:0;
     float:left;
-    background:#111;
+    background:rgba(0, 0, 0, 0.9);
     border-radius:0 0 8px 8px;
     padding:0 0 6px;
-    box-shadow:0 2px 3px #000;
+    box-shadow:0 3px 5px rgba(0, 0, 0, 0.8);
     margin-left:-13px;
-    border:1px solid #222;
+    border:1px solid rgba(255, 255, 255, 0.1);
     border-width:0 1px 1px;
     opacity:0;
     transition:opacity .4s ease-in;
@@ -1756,7 +1756,7 @@ input::-moz-focus-inner {
     color:#FFF;
 }
 #horizontalNav ul li:hover {
-    background:#0A0A0A;
+    background:rgba(0, 0, 0, 0.4);
 }
 
 /* ------------------------------------------------------------------- 
@@ -2076,13 +2076,13 @@ input::-moz-focus-inner {
 .home-content h3 {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: .3rem;
     position: relative;
     margin-top: 0;
     margin-bottom: 1.2rem;
-    margin-left: 6px;
+    text-shadow:0 0 16px rgba(0,0,0,0.9);
 }
 
 .home-content h1 {
@@ -2090,7 +2090,8 @@ input::-moz-focus-inner {
     font-size: 5.3rem;
     line-height: 1.333;
     margin-top: 0;
-    color: #FFFFFF;
+    color: #FFF;
+    text-shadow:0 0 24px rgba(0,0,0,0.9);
 }
 
 .home-content h1 strong {
@@ -2118,6 +2119,7 @@ input::-moz-focus-inner {
     letter-spacing: .25rem;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    background:rgba(0, 0, 0, 0.4);
 }
 
 .home-content__buttons .btn:last-child {
@@ -2181,11 +2183,13 @@ input::-moz-focus-inner {
 }
 .home-content p {
     margin:24px 0 0;
+    color:rgba(255, 255, 255, 0.8);
+    text-shadow:0 0 8px #000;
 }
 .home-content p em {
     font-family:'Poppins',sans-serif;
     font-style:italic;
-    color:#999;
+    color:rgba(255, 255, 255, 0.7);
 }
 
 
@@ -2724,7 +2728,7 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
     background-color: #000;
-    color: #aaa;
+    color: #CCC;
     position: relative;
 }
 
@@ -3105,7 +3109,7 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
     background-color: #000;
-    color: #aaa;
+    color: #CCC;
     position: relative;
 }
 
@@ -3382,7 +3386,7 @@ html.no-csstransitions .home-content__main {
 .contact-content {
     max-width: 1000px;
     /*background-color: rgba(0, 0, 0, 0.2);*/
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.7);
     padding-top: 6rem;
     padding-bottom: 6rem;
     font-family: "Poppins", sans-serif;
@@ -4118,7 +4122,7 @@ p[tkey='wallets_description'] {
     font-size: 15px;
     font-weight: normal;
     font-family: "Poppins", sans-serif;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 #wrapperMiningPools {
@@ -4209,5 +4213,10 @@ p[tkey='mining_description'] {
     }
     #intro p:nth-of-type(3) {
         text-align:center;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .parallax-slider {
+        opacity:0.7;
     }
 }

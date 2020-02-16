@@ -52,13 +52,16 @@
 	width: 200px;
 	height: 200px;
 	flex-grow: 1;
-	margin: 10px;
-	margin-bottom:8em;
+	margin:10px auto 8em;
 }
 
 .team-member-container {
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin:0 0 4rem;
+}
+.team-member-container:last-child {
+    margin:0;
 }
 
 .team-hover {
@@ -145,7 +148,7 @@
 .team-title span {
     font-size: 12px;
     text-transform: uppercase;
-    color: #a5a5a5;
+    color: #ccc;
     letter-spacing: 1px;
 }
 
