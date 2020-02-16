@@ -46,14 +46,6 @@ section {
     height:700px;
     background:url('../images/branding/logo.svg') center center no-repeat;
 }
-.logo1600x1600 div {
-    height:1600px;
-    background:url('../images/branding/logo-1600x1600.png') center center no-repeat;
-}
-.logo512x512 div {
-    height:512px;
-    background:url('../images/branding/logo-512x512.png') center center no-repeat;
-}
 .logo256x256 div {
     height:256px;
     background:url('../images/branding/logo-256x256.png') center center no-repeat;
