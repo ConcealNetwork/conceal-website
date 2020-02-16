@@ -76,7 +76,7 @@ body {
 }
 
 body {
-    background: #111111;
+    background: #0A0A0A;
     font-family: Poppins, serif;
     font-size: 1.7rem;
     font-style: normal;
@@ -2727,7 +2727,7 @@ html.no-csstransitions .home-content__main {
 .s-services {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
-    background-color: #000;
+    background-color: #0A0A0A;
     color: #CCC;
     position: relative;
 }
@@ -3108,7 +3108,7 @@ html.no-csstransitions .home-content__main {
 .s-clients {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
-    background-color: #000;
+    background-color: #0A0A0A;
     color: #CCC;
     position: relative;
 }
@@ -3321,7 +3321,7 @@ html.no-csstransitions .home-content__main {
 .s-contact {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #222;
+    background-color: #151515;
     color: #999;
     position: relative;
 }
