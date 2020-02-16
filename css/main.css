@@ -4133,6 +4133,9 @@ p[tkey='wallets_description'] {
 #tableMiningPools i {
     margin-right: 5px;
 }
+#tableMiningPools th, #tableMiningPools td {
+    text-align:center;
+}
 
 .exchImage {
   flex-grow: 0;
