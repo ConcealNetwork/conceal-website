@@ -78,11 +78,11 @@ section {
     height:16px;
     background:url('../images/branding/logo-icon-16x16.png') center center no-repeat;
 }
-.users div {
+.community div {
     height:700px;
     background:url('../images/branding/community.svg') center center no-repeat;
 }
-.users256 div {
+.community-256x256 div {
     height:256px;
     background:url('../images/branding/community-256x256.png') center center no-repeat;
 }
@@ -109,6 +109,38 @@ section {
 .community-16x16 div {
     height:16px;
     background:url('../images/branding/community-16x16.png') center center no-repeat;
+}
+.team div {
+    height:700px;
+    background:url('../images/branding/team.svg') center center no-repeat;
+}
+.team-256x256 div {
+    height:256px;
+    background:url('../images/branding/team-256x256.png') center center no-repeat;
+}
+.team-128x128 div {
+    height:128px;
+    background:url('../images/branding/team-128x128.png') center center no-repeat;
+}
+.team-64x64 div {
+    height:64px;
+    background:url('../images/branding/team-64x64.png') center center no-repeat;
+}
+.team-48x48 div {
+    height:48px;
+    background:url('../images/branding/team-48x48.png') center center no-repeat;
+}
+.team-32x32 div {
+    height:32px;
+    background:url('../images/branding/team-32x32.png') center center no-repeat;
+}
+.team-24x24 div {
+    height:24px;
+    background:url('../images/branding/team-24x24.png') center center no-repeat;
+}
+.team-16x16 div {
+    height:16px;
+    background:url('../images/branding/team-16x16.png') center center no-repeat;
 }
 .flexWrapper div:first-child {
     background-color:#000;
