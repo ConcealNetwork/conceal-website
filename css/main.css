@@ -3610,6 +3610,7 @@ html.no-csstransitions .home-content__main {
 
 #contact_message {
     min-height: 15rem;
+    height:150px;
 }
 
 #contact_captcha {
