@@ -6,7 +6,7 @@
 #roadmapWrapper {
     padding:100px 0;
 }
-#roadmapWrapper .col-md-12 {
+.roadmapWrapper .col-md-12 {
     float:none !important;
 }
 .heading-title
