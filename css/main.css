@@ -87,6 +87,15 @@ body {
     padding: 0;
 }
 
+#herobg {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../images/hero-bg-new.jpg') center/cover no-repeat;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## links
@@ -4220,7 +4229,7 @@ p[tkey='mining_description'] {
     }
 }
 @media only screen and (max-width: 800px) {
-    .parallax-slider {
+    #herobg {
         opacity:0.7;
     }
 }
