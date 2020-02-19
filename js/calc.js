@@ -95,7 +95,7 @@ $(document).ready(function () {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         })+'%';
-        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier)/87+')');
+        newColumn.style.background='rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier/87)+')';
         return newColumn;
 
     }
@@ -107,7 +107,7 @@ $(document).ready(function () {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         });
-        newColumn.setAttribute('style','background:rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier)/87+')');
+        newColumn.style.background='rgba(0, 255, 0,'+(nCurrentMonth*nMuliplier/87)+')';
         return newColumn;
 
     }

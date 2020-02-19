@@ -75,9 +75,17 @@ body {
     height: 100%;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins.woff2') format('woff2'),
+         url('../fonts/poppins.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     background: #0A0A0A;
-    font-family: Poppins, serif;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     font-style: normal;
     font-weight: normal;
