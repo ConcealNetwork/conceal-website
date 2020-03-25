@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function(event) { 
 
     function getEIR(nPrincipal,nMonths) {
 
@@ -29,6 +29,9 @@ $(document).ready(function () {
 
     }
 
+    nPrincipalElement=document.getElementById('nPrincipal');
+    nMonthsElement=document.getElementById('nMonths');
+
     function runCalc() {
 
         let nPrincipal;
@@ -36,52 +39,50 @@ $(document).ready(function () {
         let nTEA;
         let nProfit;
 
-        nPrincipal=$('#nPrincipal').val();
-        nMonths=$('#nMonths').val();
+        nPrincipal=nPrincipalElement.value;
+        nMonths=nMonthsElement.value;
 
         if(nPrincipal>9999999) {
             nPrincipal=9999999;
-            $('#nPrincipal').val(nPrincipal);
+            nPrincipalElement.value = nPrincipal;
         } else if(nPrincipal<1||isNaN(nPrincipal)||typeof nPrincipal=='undefined'||nPrincipal=='') {
             nPrincipal='';
-            $('#nPrincipal').val(nPrincipal);
+            nPrincipalElement.value = nPrincipal;
         }
 
         if(nMonths>12) {
             nMonths=12;
-            $('#nMonths').val(nMonths);
+            nMonthsElement.value = nMonths;
         } else if(nMonths<1||isNaN(nMonths)||typeof nMonths=='undefined'||nMonths=='') {
             nMonths='';
-            $('#nMonths').val(nMonths);
+            nMonthsElement.value = nMonths;
         }
     
         nTEA=getTEA(nPrincipal,nMonths);
         nProfit=nTEA-nPrincipal;
 
-        $("#calc #nTEA").text(nTEA.toLocaleString(window.navigator.language,{
+        document.getElementById('nTEA').textContent = nTEA.toLocaleString(window.navigator.language,{
             minimumFractionDigits: 0,
             maximumFractionDigits: 2
-        }));
-        $("#calc #nProfit").text(nProfit.toLocaleString(window.navigator.language,{
+        });
+        document.getElementById('nProfit').textContent = nProfit.toLocaleString(window.navigator.language,{
             minimumFractionDigits: 0,
             maximumFractionDigits: 2
-        }));
+        });
         
     }
 
-    $("#calc #nPrincipal")
-        .keyup(runCalc)
-        .blur(runCalc)
-        .change(runCalc);
 
-    $("#calc #nMonths")
-        .keyup(runCalc)
-        .blur(runCalc)
-        .change(runCalc);
+    ['change','keyup','blur'].forEach( evt => 
+        nPrincipalElement.addEventListener(evt, runCalc)
+    );
 
-    if($("#calc").length!==-1) {
-        runCalc();
-    }
+    ['change','keyup','blur'].forEach( evt => 
+        nMonthsElement.addEventListener(evt, runCalc)
+    );
+
+    
+    runCalc();
 
 
     /*
@@ -133,49 +134,50 @@ $(document).ready(function () {
         let sLocaleOptions={minimumFractionDigits:0,maximumFractionDigits:0};
         let sLocaleOptions2={minimumFractionDigits:2,maximumFractionDigits:2};
 
-        // Principal
-        $("#calcTable thead tr:nth-of-type(2) th:nth-of-type(2)").text(
-            'Under '+nTier2.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
-        $("#calcTable thead tr:nth-of-type(2) th:nth-of-type(3)").text(
-            nTier2.toLocaleString(sLocale,sLocaleOptions)+' - '+nTier2Max.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
-        $("#calcTable thead tr:nth-of-type(2) th:nth-of-type(4)").text(
-            'Over '+nTier3.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
+        var calcElement = document.getElementById('calcTable');
+        if (typeof(calcElement) != 'undefined' && calcElement != null) {
 
-        // Base/APR
-        $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(2)").text(
-            nTier1Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        )
-        $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(3)").text(
-            nTier2Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        )
-        $("#calcTable thead tr:nth-of-type(3) th:nth-of-type(4)").text(
-            nTier3Base.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        )
+            // Principal
+            document.querySelector('#calcTable thead tr:nth-of-type(2) th:nth-of-type(2)').textContent
+                = 'Under '+nTier2.toLocaleString(sLocale,sLocaleOptions)+' CCX';
 
-        // Example
-        $("#calcTable thead tr:nth-of-type(4) th:nth-of-type(2)").text(
-            nTier1Mid.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
-        $("#calcTable thead tr:nth-of-type(4) th:nth-of-type(3)").text(
-            nTier2.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
-        $("#calcTable thead tr:nth-of-type(4) th:nth-of-type(4)").text(
-            nTier3.toLocaleString(sLocale,sLocaleOptions)+' CCX'
-        );
+            document.querySelector('#calcTable thead tr:nth-of-type(2) th:nth-of-type(3)').textContent
+                =   nTier2.toLocaleString(sLocale,sLocaleOptions)+
+                    ' - '+nTier2Max.toLocaleString(sLocale,sLocaleOptions)+' CCX';
+            
+            document.querySelector('#calcTable thead tr:nth-of-type(2) th:nth-of-type(4)').textContent
+                = 'Over '+nTier3.toLocaleString(sLocale,sLocaleOptions)+' CCX';
 
-        // Max Interest
-        $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(2)").text(
-            nTier1MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        );
-        $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(3)").text(
-            nTier2MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        );
-        $("#calcTable thead tr:nth-of-type(5) th:nth-of-type(4)").text(
-            nTier3MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%'
-        );
+            // Base/APR
+            document.querySelector('#calcTable thead tr:nth-of-type(3) th:nth-of-type(2)').textContent
+                = nTier1Base.toLocaleString(sLocale,sLocaleOptions2)+'%';
+            
+            document.querySelector('#calcTable thead tr:nth-of-type(3) th:nth-of-type(3)').textContent
+                = nTier2Base.toLocaleString(sLocale,sLocaleOptions2)+'%';
+
+            document.querySelector('#calcTable thead tr:nth-of-type(3) th:nth-of-type(4)').textContent
+                = nTier3Base.toLocaleString(sLocale,sLocaleOptions2)+'%';
+
+            // Example
+            document.querySelector('#calcTable thead tr:nth-of-type(4) th:nth-of-type(2)').textContent
+                = nTier1Mid.toLocaleString(sLocale,sLocaleOptions)+' CCX';
+
+            document.querySelector('#calcTable thead tr:nth-of-type(4) th:nth-of-type(3)').textContent
+                = nTier2.toLocaleString(sLocale,sLocaleOptions)+' CCX';
+
+            document.querySelector('#calcTable thead tr:nth-of-type(4) th:nth-of-type(4)').textContent
+                = nTier3.toLocaleString(sLocale,sLocaleOptions)+' CCX';
+
+            // Max Interest
+            document.querySelector('#calcTable thead tr:nth-of-type(5) th:nth-of-type(2)').textContent
+                = nTier1MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%';
+
+            document.querySelector('#calcTable thead tr:nth-of-type(5) th:nth-of-type(3)').textContent
+                = nTier2MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%';
+
+            document.querySelector('#calcTable thead tr:nth-of-type(5) th:nth-of-type(4)').textContent
+                = nTier3MaxInterest.toLocaleString(sLocale,sLocaleOptions2)+'%';
+        }
 
         while(nCurrentMonth<13) {
 
@@ -194,16 +196,18 @@ $(document).ready(function () {
             newRow.append(populateCalcTableInterestCol(nCurrentMonth,nTier3,nTier3Base));
             newRow.append(populateCalcTableTotalCol(nCurrentMonth,nTier3,nTier3Base));
 
-            $("#calcTable tbody").append(newRow);
+            if (typeof(calcElement) != 'undefined' && calcElement != null) {
+                document.querySelector("#calcTable tbody").append(newRow);
+            } else {
+                document.querySelector("#compoundInterestCalcTable tbody").append(newRow);
+            }
 
             nCurrentMonth++;
 
         }
         
     }
-    
-    if($("#calcTable table").length!==-1) {
-        populateTable();
-    }
+
+    populateTable();
 
 });
