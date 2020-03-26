@@ -398,7 +398,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
                     for more detailed information about mining CCX.
                 </p>
-                <div class="tableContain"><table>
+                <div class="tableContain" id="poolsTable" style="display:none"><table>
                     <caption>Mining Pools</caption>
                     <thead>
                         <tr>

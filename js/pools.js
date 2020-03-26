@@ -71,7 +71,6 @@ var renderPoolRow = function (label, host, name, data) {
 function getPoolName(data) {
   var host = data.info.host;
   var index = host.indexOf('/');
-  var poolName;
 
   if (index < 0) {
     return host;
@@ -80,43 +79,48 @@ function getPoolName(data) {
   }
 }
 
-document.getElementById('mining').onscroll = function() {
-  if (!arePoolsLoaded) {
-
-    arePoolsLoaded = true;
-
-    var request = new XMLHttpRequest();
-
-    request.open('GET', 'https://explorer.conceal.network/services/pools/data', true);
-    request.onload = function() {
-      if (this.status >= 200 && this.status < 400) {
-        // Success!
-        var data = JSON.parse(this.response);
-
-        function compare(a, b) {
-          if (a.config.poolFee > b.config.poolFee) return 1;
-          if (b.config.poolFee > a.config.poolFee) return -1;
-          return 0;
-        }
-        data.sort(compare);
-        data.forEach(function (element) {
-          document.getElementById('pools_rows').appendChild(
-            renderPoolRow(
-              element.info.name, 
-              element.info.host, 
-              getPoolName(element), 
-              element
-            )
-          );
-        });
-        nodeLoadingIndicator.setAttribute('style','display:none');
-      } else {
-        // We reached our target server, but it returned an error
-      }
-    };
-    request.onerror = function() {
-      // There was a connection error of some sort
-    };
-    request.send();
-  }
+function checkVisible(elm) {
+  var rect = elm.getBoundingClientRect();
+  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
+
+window.addEventListener('scroll', function() {
+  if(checkVisible(document.getElementById('mining'))) {
+    if (!arePoolsLoaded) {
+      arePoolsLoaded = true;
+      var request = new XMLHttpRequest();
+      request.open('GET', 'https://explorer.conceal.network/services/pools/data', true);
+      request.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+          // Success!
+          var data = JSON.parse(this.response);
+
+          function compare(a, b) {
+            if (a.config.poolFee > b.config.poolFee) return 1;
+            if (b.config.poolFee > a.config.poolFee) return -1;
+            return 0;
+          }
+          data.sort(compare);
+          data.forEach(function (element) {
+            document.getElementById('pools_rows').appendChild(
+              renderPoolRow(
+                element.info.name, 
+                element.info.host, 
+                getPoolName(element), 
+                element
+              )
+            );
+          });
+          document.getElementById('poolsTable').setAttribute('style','display:block;');
+        } else {
+          // We reached our target server, but it returned an error
+        }
+      };
+      request.onerror = function() {
+        // There was a connection error of some sort
+      };
+      request.send();
+    }
+  }
+});
