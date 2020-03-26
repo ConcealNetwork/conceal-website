@@ -26,6 +26,7 @@ function getReadableHashRateString(hashrate) {
 var renderPoolRow = function (label, host, name, data) {
 
   row = document.createElement('tr');
+
   td = document.createElement('td');
   td.id = 'host-' + name;
   a = document.createElement('a');
@@ -36,7 +37,6 @@ var renderPoolRow = function (label, host, name, data) {
   td.appendChild(a);
   row.appendChild(td);
 
-  row = document.createElement('tr');
   td = document.createElement('td');
   td.id = 'height-' + name;
   td.class = 'height';
@@ -44,21 +44,18 @@ var renderPoolRow = function (label, host, name, data) {
   td.appendChild(text);
   row.appendChild(td);
 
-  row = document.createElement('tr');
   td = document.createElement('td');
   td.id = 'fee-' + name;
   text = document.createTextNode(data.config.poolFee + '%');
   td.appendChild(text);
   row.appendChild(td);
 
-  row = document.createElement('tr');
   td = document.createElement('td');
   td.id = 'hashrate-' + name;
   text = document.createTextNode(getReadableHashRateString(data.pool.hashrate));
   td.appendChild(text);
   row.appendChild(td);
 
-  row = document.createElement('tr');
   td = document.createElement('td');
   td.id = 'miners-' + name;
   text = document.createTextNode(localizeNumber(data.pool.miners));
@@ -102,6 +99,7 @@ window.addEventListener('scroll', function() {
             return 0;
           }
           data.sort(compare);
+          console.log(data);
           data.forEach(function (element) {
             document.getElementById('pools_rows').appendChild(
               renderPoolRow(
@@ -112,7 +110,7 @@ window.addEventListener('scroll', function() {
               )
             );
           });
-          document.getElementById('poolsTable').setAttribute('style','display:block;');
+          //document.getElementById('poolsTable').setAttribute('style','display:block;');
         } else {
           // We reached our target server, but it returned an error
         }
