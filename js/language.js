@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
+
   var translate = function (data) {
     langData = data;
 
@@ -28,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
   }
 
-  var request = new XMLHttpRequest();
 
+  var request = new XMLHttpRequest();
 
   request.open('GET', 'inc/language.php', true);
   request.onload = function() {
@@ -124,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
   request.send();
 
+  
   document.onclick = function(event) {
     if (!event.target.closest('#langSelector')) {
       langDropDown = document.getElementById('langDropdown');

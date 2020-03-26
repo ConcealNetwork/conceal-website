@@ -7,8 +7,8 @@ function localizeNumber(number) {
 
 function updateText(elementId, text) {
   var el = document.getElementById(elementId);
-  if ($(el).html !== text) {
-    $(el).html(text);
+  if (el.textContent !== text) {
+    el.textContent = text;
   }
   return el;
 }
@@ -24,17 +24,48 @@ function getReadableHashRateString(hashrate) {
 }
 
 var renderPoolRow = function (label, host, name, data) {
-  var pools_row = [];
 
-  pools_row.push('<tr>');
-  pools_row.push('<td id=host-' + name + '><a target=blank href=http://' + host + '>' + label + '</a></td>');
-  pools_row.push('<td class="height" id=height-' + name + '>' + localizeNumber(data.network.height) + '</td>');
-  pools_row.push('<td id=fee-' + name + '>' + data.config.poolFee + '%' + '</td>');
-  pools_row.push('<td id=hashrate-' + name + '>' + getReadableHashRateString(data.pool.hashrate) + '</td>');
-  pools_row.push('<td id=miners-' + name + '>' + localizeNumber(data.pool.miners) + '</td>');
-  pools_row.push('</tr>');
+  row = document.createElement('tr');
+  td = document.createElement('td');
+  td.id = 'host-' + name;
+  a = document.createElement('a');
+  a.href = 'http://' + host;
+  a.target = 'blank';
+  text = document.createTextNode(label);
+  a.appendChild(text);
+  td.appendChild(a);
+  row.appendChild(td);
 
-  return pools_row.join('');
+  row = document.createElement('tr');
+  td = document.createElement('td');
+  td.id = 'height-' + name;
+  td.class = 'height';
+  text = document.createTextNode(localizeNumber(data.network.height));
+  td.appendChild(text);
+  row.appendChild(td);
+
+  row = document.createElement('tr');
+  td = document.createElement('td');
+  td.id = 'fee-' + name;
+  text = document.createTextNode(data.config.poolFee + '%');
+  td.appendChild(text);
+  row.appendChild(td);
+
+  row = document.createElement('tr');
+  td = document.createElement('td');
+  td.id = 'hashrate-' + name;
+  text = document.createTextNode(getReadableHashRateString(data.pool.hashrate));
+  td.appendChild(text);
+  row.appendChild(td);
+
+  row = document.createElement('tr');
+  td = document.createElement('td');
+  td.id = 'miners-' + name;
+  text = document.createTextNode(localizeNumber(data.pool.miners));
+  td.appendChild(text);
+  row.appendChild(td);
+
+  return row;
 };
 
 function getPoolName(data) {
@@ -49,28 +80,19 @@ function getPoolName(data) {
   }
 }
 
-$(window).scroll(function () {
+document.getElementById('mining').onscroll = function() {
+  if (!arePoolsLoaded) {
 
-  // This is then function used to detect if the element is scrolled into view
-  function elementScrolled(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemTop = $(elem).offset().top;
-    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-  }
+    arePoolsLoaded = true;
 
-  // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-  if (elementScrolled('#mining')) {
-    if (!arePoolsLoaded) {
+    var request = new XMLHttpRequest();
 
-      arePoolsLoaded = true;
+    request.open('GET', 'https://explorer.conceal.network/services/pools/data', true);
+    request.onload = function() {
+      if (this.status >= 200 && this.status < 400) {
+        // Success!
+        var data = JSON.parse(this.response);
 
-      var nodeLoadingIndicator = $('#wrapperMiningPools').loadingIndicator({
-        useImage: false,
-        showOnInit: true
-      }).data("loadingIndicator");
-
-      $.getJSON('https://explorer.conceal.network/services/pools/data', function (data, textStatus, jqXHR) {
         function compare(a, b) {
           if (a.config.poolFee > b.config.poolFee) return 1;
           if (b.config.poolFee > a.config.poolFee) return -1;
@@ -78,12 +100,23 @@ $(window).scroll(function () {
         }
         data.sort(compare);
         data.forEach(function (element) {
-          $('#pools_rows').append(renderPoolRow(element.info.name, element.info.host, getPoolName(element), element));
+          document.getElementById('pools_rows').appendChild(
+            renderPoolRow(
+              element.info.name, 
+              element.info.host, 
+              getPoolName(element), 
+              element
+            )
+          );
         });
-        nodeLoadingIndicator.hide();
-      });
-
-    }
+        nodeLoadingIndicator.setAttribute('style','display:none');
+      } else {
+        // We reached our target server, but it returned an error
+      }
+    };
+    request.onerror = function() {
+      // There was a connection error of some sort
+    };
+    request.send();
   }
-
-});
+}
