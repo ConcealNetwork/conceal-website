@@ -110,7 +110,7 @@
   "specs_15_text": "Starting on 5 CCX and going up to 20 CCX (+0.25CCX/month). Currently 8 CCX.",
   "specs_16_title": "Addresses",
   "specs_16_text": "Wallet addresses are a string of 98 characters starting with 'ccx7'",
-
+  
   "modules_title": "Innovations",
   "modules_01_title": "Banking: Deposits",
   "modules_01_text": "Deposits form the backbone of the Conceal ecosystem, providing users with

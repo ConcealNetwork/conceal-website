@@ -1,17 +1,17 @@
-.language-selector {
+#langSelector {
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;  
 }
 
-.language-selector:hover,
-.language-selector:focus,
-.language-selector:active {
+#langSelector:hover,
+#langSelector:focus,
+#langSelector:active {
   color: white;
 }
 
-.language-selector::after {
+#langSelector::after {
   display: inline-block;
   width: 0;
   height: 0;

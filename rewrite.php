@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -166,6 +165,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div><!-- #mainMenuModal --></div>
             <a href="#mainMenuModal" class="mainMenuOpen"></a>
             
+            <div class="header-language">
+                <a id="langSelector" href="#">
+                    <i class="fas fa-language fa-2x align-middle"></i>
+                    <label id="selectedLanguage">English</label>
+                </a>
+                <div id="langDropdown" class="dropdown-content">
+                </div>
+            </div>
         </header>
         
         <section>
@@ -697,6 +704,31 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             </li>
                         </ul>
                     </li><li>
+                    <picture>
+                        <source srcset="images/team/alexstanford.webp" type="image/webp">
+                        <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
+                    </picture>
+                    <b>Alex Stanford</b><br>
+                    <span>Senior Developer</span>
+                    <ul>
+                        <li>
+                            <a href="https://linkedin.com/in/alexstanford/">
+                                <i class="fab fa-linkedin teamLink"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li><li>
+                            <a href="https://github.com/alexstanford">
+                                <i class="fab fa-github teamLink"></i>
+                                <span>Github</span>
+                            </a>
+                        </li><li>
+                            <a href="https://twitter.com/alexstanford">
+                                <i class="fab fa-twitter teamLink"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><li>
                         <picture>
                             <source srcset="images/team/bombon.webp" type="image/webp">
                             <img src="images/team/bombon.jpg" alt="bombon"><br>
@@ -708,31 +740,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 <a href="https://github.com/bomb-on">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/alexstanford.webp" type="image/webp">
-                            <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
-                        </picture>
-                        <b>Alex Stanford</b><br>
-                        <span>Senior Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://linkedin.com/in/alexstanford/">
-                                    <i class="fab fa-linkedin teamLink"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                            </li><li>
-                                <a href="https://github.com/alexstanford">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/alexstanford">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
                                 </a>
                             </li>
                         </ul>
@@ -896,6 +903,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
     <script src="static/homepage.js?v=1"></script>
     <script src="js/calc.js?v=1"></script>
+    <script src="js/language.js?v=1"></script>
     
     </body></html>';
     
