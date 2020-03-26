@@ -2,25 +2,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var translate = function (data) {
     langData = data;
 
-    $("[tkey]").each(function (index) {
-      var strTr = data[$(this).attr('tkey')];
-      $(this).html(strTr);
+    tkeys = document.querySelectorAll('[tkey]');
+    Array.prototype.forEach.call(tkeys, function(element, index, array){
+      var strTr = data[element.getAttribute('tkey')];
+      element.textContent = strTr;
     });
 
-    $("[tplaceholder]").each(function (index) {
-      var strTr = data[$(this).attr('tplaceholder')];
-      $(this).attr('placeholder', strTr);
+    tplaceholders = document.querySelectorAll('[tplaceholder]');
+    Array.prototype.forEach.call(tplaceholders, function(element, index, array){
+      var strTr = data[element.getAttribute('tplaceholder')];
+      element.setAttribute('placeholder',strTr);
     });
 
-    $("[tvalue]").each(function (index) {
-      var strTr = data[$(this).attr('tvalue')];
-      $(this).attr('value', strTr);
+    tvalues = document.querySelectorAll('[tvalue]');
+    Array.prototype.forEach.call(tvalues, function(element, index, array){
+      var strTr = data[element.getAttribute('tvalue')];
+      element.setAttribute('value',strTr);
     });
 
-    $("[tdata-original-title]").each(function (index) {
-      var strTr = data[$(this).attr('tdata-original-title')];
-      $(this).attr('data-original-title', strTr);
+    torigtitles = document.querySelectorAll('[tdata-original-title]');
+    Array.prototype.forEach.call(torigtitles, function(element, index, array){
+      var strTr = data[element.getAttribute('tdata-original-title')];
+      element.setAttribute('data-original-title',strTr);
     });
+    
   }
 
 
@@ -50,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 newLangAnchor.onclick = function() {
 
                   var itemLangCode = this.getAttribute('data-lang');
-                  document.cookie = 'CCX_Language=' + itemLangCode + '; max-age=2629800';
+                  document.cookie = 'CCX_Language=' + itemLangCode + '; max-age=2629800; samesite=strict; secure';
 
                   request.open('GET', 'lang/' + itemLangCode + '.json', true);
                   request.onload = function() {
@@ -88,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 // Success!
                 var langData = JSON.parse(this.response);
 
-                $("#selectedLanguage").html(selection[language].name);
+                document.getElementById('selectedLanguage').textContent = selection[language].name;
                 translate(langData);
 
               } else {
@@ -147,6 +152,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (!event.target.closest('#langSelector')) {
       langDropDown = document.getElementById('langDropdown');
       langDDcurStyle = langDropDown.getAttribute('style');
+      if(langDDcurStyle==null) {
+        langDropDown.setAttribute('style','display:none;');
+        return;
+      }
       if(langDDcurStyle.indexOf('block')!==-1) {
         langDropDown.setAttribute('style','display:none;');
       }
