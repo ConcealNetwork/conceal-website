@@ -143,19 +143,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   }, false);
 
-  /*document.onclick = function() {
-    setTimeout(function() { 
+  document.onclick = function(event) {
+    if (!event.target.closest('#langSelector')) {
       langDropDown = document.getElementById('langDropdown');
       langDDcurStyle = langDropDown.getAttribute('style');
       if(langDDcurStyle.indexOf('block')!==-1) {
         langDropDown.setAttribute('style','display:none;');
       }
-    }, 250);
-  };*/
+    }
+  };
 
-  langSelector = document.getElementById('langSelector');
   document.getElementById('langSelector').onclick = function () {
-    event.stopPropagation();
     langDropDown = document.getElementById('langDropdown');
     langDDcurStyle = langDropDown.getAttribute('style');
     if(langDDcurStyle==null) {
