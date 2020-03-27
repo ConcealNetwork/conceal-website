@@ -84,6 +84,7 @@ function checkVisible(elm) {
 
 window.addEventListener('scroll', function() {
   if(checkVisible(document.getElementById('mining'))) {
+    console.log('1');
     if (!arePoolsLoaded) {
       arePoolsLoaded = true;
       var request = new XMLHttpRequest();
@@ -99,9 +100,8 @@ window.addEventListener('scroll', function() {
             return 0;
           }
           data.sort(compare);
-          console.log(data);
           data.forEach(function (element) {
-            document.getElementById('pools_rows').appendChild(
+            document.querySelector('#poolsTable tbody').appendChild(
               renderPoolRow(
                 element.info.name, 
                 element.info.host, 
@@ -110,7 +110,7 @@ window.addEventListener('scroll', function() {
               )
             );
           });
-          //document.getElementById('poolsTable').setAttribute('style','display:block;');
+          document.getElementById('poolsTable').setAttribute('style','display:block;');
         } else {
           // We reached our target server, but it returned an error
         }
