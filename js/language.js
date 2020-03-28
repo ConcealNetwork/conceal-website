@@ -29,39 +29,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
   }
 
-  var request = new XMLHttpRequest();
-console.log('before');
+  var getEnglish = new XMLHttpRequest();
   /* 
     Initialize the language keys 
   */
-  request.open('GET', 'lang/en.json', true);
-  request.onload = function() {
+ getEnglish.open('GET', 'lang/en.json', true);
+ getEnglish.onload = function() {
     if (this.status >= 200 && this.status < 400) {
       // Success!
-      console.log('here1');
       var enLangData = JSON.parse(this.response);
-      console.log('here');
-      /*var all = document.getElementsByTagName("*");
+      var all = document.body.getElementsByTagName("*");
       for (var key of Object.keys(enLangData)) {
         for (var i = 0; i < all.length; i++) {
-          if (all[i].textContent == searchText) {
+          if(i < 5) { console.log(all[i].textContent.trim()); }
+          if (all[i].textContent.trim() == enLangData[key]) {
             all[i].setAttribute('data-tkey',key);
-            console.log(all[i]);
             break;
           }
         }
-      }*/
+      }
     } else {
       // We reached our target server, but it returned an error
-      console.log('2');
     }
   };
-  request.onerror = function() {
+  getEnglish.onerror = function() {
     // There was a connection error of some sort
-    console.log('3');
   };
-  request.send();
+  getEnglish.send();
 console.log('after');
+
+  var request = new XMLHttpRequest();
   request.open('GET', 'inc/language.php', true);
   request.onload = function() {
     if (this.status >= 200 && this.status < 400) {

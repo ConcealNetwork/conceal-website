@@ -470,6 +470,9 @@
 		loaderDiv.parentNode.removeChild(loaderDiv);
 		w.addEventListener('resize', scrollTestAnimated, false);
 		w.addEventListener('scroll', scrollTestAnimated, false);
+		var langScript = document.createElement('script');
+    	langScript.src = 'js/language.js';
+    	document.body.appendChild(langScript);
 	} // loaderDone
 
 	function initAnims() {
