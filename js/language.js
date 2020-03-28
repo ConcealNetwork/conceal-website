@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   function translate(langData) {
-  tkeys = document.querySelectorAll('[data-tkey]');
-  Array.prototype.forEach.call(tkeys, function(element, index, array){
-    strKey = element.getAttribute('data-tkey');
-    if(langData.hasOwnProperty(strKey)) {
-      var strTr = langData[strKey];
-      element.textContent = strTr;
-    }
-  });
-} // translate()
+    tkeys = document.querySelectorAll('[data-tkey]');
+    Array.prototype.forEach.call(tkeys, function(element, index, array){
+      strKey = element.getAttribute('data-tkey');
+      if(langData.hasOwnProperty(strKey)) {
+        var strTr = langData[strKey];
+        element.textContent = strTr;
+      }
+    });
+  } // translate()
 
-/* 
-  Initialize the language keys
-*/
+
+  /* 
+    Initialize the language keys
+  */
   var getEnglishReq = new XMLHttpRequest();
   getEnglishReq.open('GET', 'lang/en.json?v4', true);
   getEnglishReq.onload = function() {
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // There was a connection error of some sort
   };
   getEnglishReq.send();
+
 
   /* 
     Handle language selections

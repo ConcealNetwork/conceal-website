@@ -1692,3 +1692,10 @@ body > footer .socialLinks a:hover {
 	margin-left:0.4em;
 	color:#FA0;
 }
+#langDropdown {
+	border-radius:8px;
+	box-shadow:0 0 4px 2px #000;
+}
+#top > header #langDropdown a {
+	display:block;
+}
