@@ -30,14 +30,62 @@ function isValidEmail($address) {
 		
 } // isValidEmail
 
+function postNotMailHeaderSafe($indexes) {
+	foreach ($indexes as $index)
+		if (array_key_exists($index, $_POST) && (
+			strpos($_POST[$index], "\n") || strpos($_POST[$index], "\r")
+		)) return true;
+	return false;
+} // postNotMailHeaderSafe
+
+function mailCleanPost($index) {
+	return str_replace(["\r", "\n", ';'], ' ', $_POST[$index]);
+} // mailCleanPost
+
+function formMail() {
+
+	$subject = mailCleanPost('contact_subject');
+		
+	$email = mailCleanPost('contact_email');
+	
+	$from = mailCleanPost('contact_name');
+		
+	$header =
+		'From: ' . $from . ' - ' .
+		mailCleanPost('name') . ' <' . $email . ">\r\n" .
+		'Reply-To: ' . $email . "\r\n" . 
+		'X-Mailer: PHP/' . phpversion() . "\r\n" .
+		'Content-Type: text/plain';
+		
+	$message = htmlspecialchars($_POST['contact_message']) . '
+		Logged IP: ' . $_SERVER['REMOTE_ADDR'] . '
+		UA String: ' . $_SERVER['HTTP_USER_AGENT'];
+
+	return mail(
+		'ccx@conceal.network',
+		$subject, 
+		$message,
+		$header
+	);
+
+} // formMail
+
 if (
 	!empty($_POST['contactHash']) &&
     hashExists($_POST['contactHash'])
 ) {
-	// do your mail send here. use a regex to make sure that anything you put into your $header string when using PHP's mail() does not contain \r, \n, or semi-colons.
+    if (postNotMailHeaderSafe([
+		'contact_name',
+		'contact_email',
+		'contact_subject'
+    ])) $contactState=false; else if (
+        !isValidEmail($_POST['contact_email'])
+    ) $contactState=false; else if (
+        formMail()
+    ) $contactState=true; else $contactState=false;
 }
 
-// either way invalidate the hash
+// Always invalidate the hash
 $_SESSION['contactHash'] = '';
 
 echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
@@ -786,7 +834,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <!-- #community --></section>
     
         <section id="contact">
-            <div>
+            <div>';
+            if(isset($contactState)) {
+                if($contactState) {
+                    echo '
+                <p>Thank you for contacting us, we will get back to you as soon as possible.</p>';
+                } else {
+                    echo '
+                <p>An error has occurred, please try again later.<p>';
+                }
+            } else {
+                echo '
                 <form action="contact.php" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
@@ -815,7 +873,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             value="', hashCreate('contactHash'), '"
                         >
                     <!-- .submitsAndHiddens --></div>
-                </form>
+                </form>';
+            }
+echo '
             </div>
         <!-- #contact --></section>
     </main>

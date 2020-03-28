@@ -1602,10 +1602,10 @@ body > footer .socialLinks a:hover {
     z-index: 503;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 700px) {
     .header-language {
-        top: 96px;
-        right: 36px;
+        top: 30px;
+        right: 72px;
     }
 }
 

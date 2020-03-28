@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function translate(langData) {
     tkeys = document.querySelectorAll('[data-tkey]');
-    Array.prototype.forEach.call(tkeys, function(element, index, array){
+    Array.prototype.forEach.call(tkeys, function(element){
       strKey = element.getAttribute('data-tkey');
       if(langData.hasOwnProperty(strKey)) {
         var strTr = langData[strKey];
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
     Initialize the language keys
   */
   var getEnglishReq = new XMLHttpRequest();
-  getEnglishReq.open('GET', 'lang/en.json?v4', true);
+  getEnglishReq.open('GET', 'lang/en.json', true);
   getEnglishReq.onload = function() {
     if (this.status >= 200 && this.status < 400) {
       // Success!
@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     langDropDown = document.getElementById('langDropdown');
                     langDropDown.setAttribute('style','display:none;');
                     translate(langData);
-
                   } else {
                     // We reached our target server, but it returned an error
                   }
@@ -96,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function(){
                   // There was a connection error of some sort
                 };
                 request.send(); // request.open('GET', 'lang/' + itemLangCode + '.json', true);
+
 
               };
 
@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
               document.getElementById('selectedLanguage').textContent = selection[language].name;
               translate(langData);
-
             } else {
               // We reached our target server, but it returned an error
             }
