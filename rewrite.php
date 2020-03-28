@@ -177,18 +177,18 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         
         <section>
             <div>
-                <h2><span>Banking</span> on the Blockchain</h2>
+                <h2><span>Banking</span> <span>on the Blockchain</span></h2>
                 <p>
                     Decentralized Finance, Private Transactions &amp; Encrypted Messaging
                 </p>
                 <ul class="majorLinks">
-                    <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> Cloud</a></li>
-                    <li><a href="mobile/"><i class="fa fa-mobile"></i> Mobile</a></li>
-                    <li><a href="#wallets"><i class="fa fa-desktop"></i> Desktop</a></li>
-                    <li><a href="#roadmap"><i class="fa fa-map-signs"></i> Roadmap</a></li>
+                    <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
+                    <li><a href="mobile/"><i class="fa fa-mobile"></i> <span>Mobile</span></a></li>
+                    <li><a href="#wallets"><i class="fa fa-desktop"></i> <span>Desktop</span></a></li>
+                    <li><a href="#roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>
-                    Want to build something cool with Conceal? <em>We just might fund you...</em>
+                    <span>Want to build something cool with Conceal?</span> <em>We just might fund you...</em>
                     <a href="labs/">Conceal Labs</a>
                 </p>
             </div>
@@ -208,7 +208,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2>
                     <span>What We\'re About</span>
-                    Innovation
+                    <span>Innovation</span>
                 </h2>
                 <picture>
                     <source srcset="images/ecosystem.webp" type="image/webp">
@@ -230,9 +230,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
-                        <h3>Banking: Deposits</h3>
-                        <p
-                            >Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
+                        <h3><span>Banking</span>: <span>Deposits</span></h3>
+                        <p>
+                            Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
                         </p>
                     </section><section>
                         <i class="fas fa-comments"></i>
@@ -252,19 +252,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </noscript>
                     <fieldset>
                         <label>
-                            Deposit
+                            <span>Deposit</span>
                             <input type="number" id="nPrincipal" value="20000" min="1" max="9999999">
-                            CCX
+                            <span>CCX</span>
                         </label>
                         <label>
-                            for
+                            <span>for</span>
                             <input type="number" id="nMonths" min="1" max="12" value="12">
-                            Months
+                            <span>Months</span>
                         </label>
                     </fieldset>
                     <div>
-                        <span>Total:<span id="nTEA">0</span> CCX</span>
-                        <span>Profit:<span id="nProfit">0</span> CCX</span>
+                        <span>Total</span>:<span id="nTEA">0</span> CCX
+                        <span>Profit</span>:<span id="nProfit">0</span> CCX
                     </div>
                     <div class="tableContain" id="compoundInterestCalcTable"><table>
                         <thead>
@@ -298,7 +298,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 <td colspan="2">5.00%</td>
                                 <td colspan="2">6.00%</td>
                             </tr><tr>
-                                <th scope="col">Duration: Months</th>
+                                <th scope="col"><span>Duration</span>: <span>Months</span></th>
                                 <th scope="col">Interest</th>
                                 <th scope="col">Total</th>
                                 <th scope="col">Interest</th>
@@ -317,7 +317,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="wallets">
             <div>
-                <h2><span>Using Conceal</span> Wallets</h2>
+                <h2><span>Using Conceal</span> <span>Wallets</span></h2>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -366,7 +366,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="mining">
             <div>
             
-                <h2><span>Getting CCX</span>Mining</h2>
+                <h2>
+                    <span>Getting CCX</span>
+                    <span>Mining</span>
+                </h2>
     
                 <h3>Quick Start</h3>
                 <div class="codeBlocks">
@@ -394,33 +397,33 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
-                    The easiest way to get CCX is to mine with CPU\'s or \'s using one of the many miners that support CCX, or use our Conceal Miner.  Check out our
+                    <span>The easiest way to get CCX is to mine with CPU\'s or \'s using one of the many miners that support CCX, or use our Conceal Miner.  Check out our</span>
                     <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
-                    for more detailed information about mining CCX.
+                    <span>for more detailed information about mining CCX.</span>
                 </p>
                 <div class="tableContain" id="poolsTable"><table>
-                    <caption>Mining Pools</caption>
+                    <caption><span>Mining</span> <span>Pools</span></caption>
                     <thead>
                         <tr>
                             <th scope="col">
                                 <i class="fa fa-server"></i>
-                                Pools
+                                <span>Pools</span>
                             </th>
                             <th scope="col">
                                 <i class="fa fa-th-large"></i>
-                                Height
+                                <span>Height</span>
                             </th>
                             <th scope="col">
                                 <i class="fas fa-coins"></i>
-                                Fee
+                                <span>Fee</span>
                             </th>
                             <th scope="col">
                                 <i class="fas fa-tachometer-alt"></i>
-                                Hashrate
+                                <span>Hashrate</span>
                             </th>
                             <th scope="col">
                                 <i class="fas fa-users-cog"></i>
-                                Miners
+                                <span>Miners</span>
                             </th>
                         </tr>
                     </thead>
@@ -431,7 +434,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="buyingCCX">
             <div>
-                <h2><span>Buying CCX</span>Exchanges</h2>
+                <h2>
+                    <span><span>Buying</span> CCX</span>
+                    <span>Exchanges</span>
+                </h2>
                 <ul class="majorLinks">
                     <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX">STEX</a></li>
@@ -443,14 +449,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
                     <i class="fa fa-plus"></i>
-                    More
+                    <span>More</span>
                 </a>
             </div>
         <!-- #buyingCCX --></section>
     
         <section id="roadmap">
             <div>
-                <h2><span>Milestones &amp;</span> Roadmap</h2>
+                <h2>
+                    <span>Milestones</span> &amp;</span> 
+                    <span>Roadmap</span>
+                </h2>
                 <div class="timeLine">
                     <div>
                         <time><span>Apr</span> 2018</time>
@@ -549,7 +558,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="theTeam">
             <div>
-                <h2><span>Powered By</span> The Conceal Team</h2>
+                <h2>
+                    <span>Powered By</span>
+                    <span>The Conceal Team</span>
+                </h2>
                 <ul class="miniProfiles">
                     <li>
                         <picture>
@@ -632,8 +644,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/okanist.png" alt="okanist"><br>
                         </picture>
                         <b>okanist (aka Okan)</b><br>
-                        <span>Head of Marketing &<br>
-                        Business Development</span>
+                        <span>Head of Marketing &</span><br>
+                        <span>Business Development</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/okansariirmak">
@@ -724,7 +736,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="community">
             <div>
-                <h2><span>And</span> The Community</h2>
+                <h2>
+                    <span>And</span>
+                    <span>The Community</span>
+                </h2>
                 <ul class="miniProfiles">
                     <li>
                         <picture>
@@ -774,19 +789,22 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="contact">
             <div>
                 <form action="contact.php" method="post">
-                    <h2><span>We\'re Friendly</span> Contact us</h2>
+                    <h2>
+                        <span>We\'re Friendly</span>
+                        <span>Contact us</span>
+                    </h2>
                     <fieldset>
                         <label>
-                            Your Name<br>
+                            <span>Your Name</span><br>
                             <input type="text" id="contact_name" name="name" required><br>
                         </label><label>
-                            Your E-Mail Address<br>
+                        <span>Your E-Mail Address</span><br>
                             <input type="email" id="contact_email" name="email" required><br>
                         </label><label>
-                            Subject<br>
+                        <span>Subject</span><br>
                             <input type="text" id="contact_subject" name="subject" required><br>
                         </label><label>
-                            Message<br>
+                        <span>Message</span><br>
                             <textarea name="contact_message" name="message" rows="6" required></textarea>
                         </label>
                     </fieldset>
@@ -807,19 +825,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <div>
             <h2>WHERE TO FIND US</h2>
             <p>
-                The best place to find out more is to visit our
+                <span>The best place to find out more is to visit our</span>
                 <a href="http://discord.conceal.network">Discord</a>
-                channel. You will find our source code, and other releases on
+                <span>channel. You will find our source code, and other releases on</span>
                 <a href="https://github.com/ConcealNetwork">Github</a>,
-                and our latest activities on
+                <span>and our latest activities on</span>
                 <a href="https://twitter.com/ConcealNetwork">Twitter</a>.
             </p>
         </div><div>
             <hr>
-            Official email address:
+            <span>Official E-Mail Address:</span>
             <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>.<br>
             <br>
-            Here are all the other ways you can find us online.
+            <span>Here are all the other ways you can find us online.</span>
             <ul class="socialLinks">
                 <li>
                     <a href="http://discord.conceal.network">
@@ -854,7 +872,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         </div><div>
             <hr>
             <a href="tc.html">T&amp;C</a><br>
-            &copy; 2018-2020 Conceal Network. All rights reserved.<br>
+            &copy; 2018-2020 <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
             <br>
             <a href="#top">Back to Top</a>
         </div>

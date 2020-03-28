@@ -1671,3 +1671,22 @@ body > footer .socialLinks a:hover {
 	margin-bottom: 0px;
 	margin-left: 10px;  
   }
+
+  #top h2 span:last-of-type {
+	font-weight:normal;
+  }
+
+  main > section h2 span:last-of-type {
+	display:inherit;
+	text-transform:inherit;
+	font-size:inherit;
+	line-height:inherit;
+	letter-spacing:inherit;
+	color:inherit;
+}
+
+#compoundInterestCalc > div > span:nth-of-type(2),
+#compoundInterestCalc > div > span:nth-last-of-type(2) {
+	margin-left:0.4em;
+	color:#FA0;
+}
