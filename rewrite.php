@@ -836,15 +836,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="contact">
             <div>';
 if(isset($contactState)) {
-    if($contactState) {
-        echo '
+    if($contactState) echo '
                 <p>Thank you for contacting us, we will get back to you as soon as possible.</p>';
-} else {
-    echo '
+    else echo '
                 <p>An error has occurred, please try again later.<p>';
-    }
-} else {
-    echo '
+} else echo '
                 <form action="contact.php" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
@@ -874,7 +870,6 @@ if(isset($contactState)) {
                         >
                     <!-- .submitsAndHiddens --></div>
                 </form>';
-            }
 echo '
             </div>
         <!-- #contact --></section>
