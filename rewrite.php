@@ -398,7 +398,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
                     for more detailed information about mining CCX.
                 </p>
-                <div class="tableContain" id="poolsTable" style="display:none"><table>
+                <div class="tableContain" id="poolsTable"><table>
                     <caption>Mining Pools</caption>
                     <thead>
                         <tr>
@@ -423,49 +423,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 Miners
                             </th>
                         </tr>
-                    </thead><tbody>
-                        <tr>
-                            <th scope="row">
-                                <a href="http://pool.conceal.network">
-                                    Official Pool
-                                </a>
-                            </th>
-                            <td>445,936</td>
-                            <td>0%</td>
-                            <td>297.38 kH</td>
-                            <td>34</td>
-                        </tr><tr>
-                            <th scope="row">
-                                <a href="http://miningpool.online/conceal">
-                                    Miningpool
-                                </a>
-                            </th>
-                            <td>445,936</td>
-                            <td>0%</td>
-                            <td>0 H</td>
-                            <td>0</td>
-                        </tr><tr>
-                            <th>
-                                <a href="http://fastpool.xyz/ccx">
-                                    Fastpool
-                                </a>
-                            </th>
-                            <td>445,936</td>
-                            <td>0.25%</td>
-                            <td>0 H</td>
-                            <td>0</td>
-                        </tr><tr>
-                            <th scope="row">
-                                <a href="http://ccx.scecf.org">
-                                    SCECF
-                                </a>
-                            </th>
-                            <td>445,936</td>
-                            <td>0.4%</td>
-                            <td>4.92 kH</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
+                    </thead>
+                    <tbody></tbody>
                 </table><!-- .tableContain --></div>
             </div>
         <!-- #mining --></section>

@@ -84,7 +84,6 @@ function checkVisible(elm) {
 
 window.addEventListener('scroll', function() {
   if(checkVisible(document.getElementById('mining'))) {
-    console.log('1');
     if (!arePoolsLoaded) {
       arePoolsLoaded = true;
       var request = new XMLHttpRequest();

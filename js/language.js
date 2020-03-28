@@ -29,9 +29,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
   }
 
-
   var request = new XMLHttpRequest();
-
+console.log('before');
+  /* 
+    Initialize the language keys 
+  */
+  request.open('GET', 'lang/en.json', true);
+  request.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+      // Success!
+      console.log('here1');
+      var enLangData = JSON.parse(this.response);
+      console.log('here');
+      /*var all = document.getElementsByTagName("*");
+      for (var key of Object.keys(enLangData)) {
+        for (var i = 0; i < all.length; i++) {
+          if (all[i].textContent == searchText) {
+            all[i].setAttribute('data-tkey',key);
+            console.log(all[i]);
+            break;
+          }
+        }
+      }*/
+    } else {
+      // We reached our target server, but it returned an error
+      console.log('2');
+    }
+  };
+  request.onerror = function() {
+    // There was a connection error of some sort
+    console.log('3');
+  };
+  request.send();
+console.log('after');
   request.open('GET', 'inc/language.php', true);
   request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
