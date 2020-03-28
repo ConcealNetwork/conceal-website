@@ -168,10 +168,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div class="header-language">
                 <a id="langSelector" href="#">
                     <i class="fas fa-language fa-2x align-middle"></i>
-                    <label id="selectedLanguage">English</label>
+                    <span id="selectedLanguage">English</span>
                 </a>
-                <div id="langDropdown" class="dropdown-content">
-                </div>
+                <div id="langDropdown" class="dropdown-content"></div>
             </div>
         </header>
         

@@ -1667,9 +1667,11 @@ body > footer .socialLinks a:hover {
   }
   
   #selectedLanguage {
-	color: white;
-	margin-bottom: 0px;
-	margin-left: 10px;  
+	color:#FFF;
+	margin:4px 0 0 10px;
+	line-height:2em;
+	vertical-align:top;
+	font-size:1.1em;
   }
 
   #top h2 span:last-of-type {
