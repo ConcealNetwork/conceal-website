@@ -861,6 +861,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     </footer>
     
     <script src="static/homepage.js?v=1"></script>
+    <script src="js/language.js?v=1"></script>
     <script src="js/calc.js?v=1"></script>
     <script src="js/pools.js?v=1"></script>
     
