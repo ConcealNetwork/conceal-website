@@ -7,84 +7,6 @@ function hashCreate($name) {
 	return $_SESSION[$name] = bin2hex(random_bytes(24));
 } // hashCreate
 
-function hashExists($name, $hash) {
-	return isset($_SESSION[$name]) && ($_SESSION[$name] == $hash);
-} // hashExists
-
-function isValidEmail($address) {
-
-	if (filter_var($address, FILTER_VALIDATE_EMAIL) == FALSE) return false;
-	
-	// explode out local and domain
-	list($local,$domain)=explode('@',$address);
-	
-	$localLength = strlen($local);
-	$domainLength = strlen($domain);
-	
-	return
-		// check for proper lengths
-		($localLength > 0 && $localLength < 65) &&
-		($domainLength > 3 && $domainLength < 256) &&
-		// and if it's a valid domain
-		( checkdnsrr($domain, 'MX') || checkdnsrr($domain, 'A') );
-		
-} // isValidEmail
-
-function postNotMailHeaderSafe($indexes) {
-	foreach ($indexes as $index)
-		if (array_key_exists($index, $_POST) && (
-			strpos($_POST[$index], "\n") || strpos($_POST[$index], "\r")
-		)) return true;
-	return false;
-} // postNotMailHeaderSafe
-
-function mailCleanPost($index) {
-	return str_replace(["\r", "\n", ';'], ' ', $_POST[$index]);
-} // mailCleanPost
-
-function formMail() {
-
-	$subject = mailCleanPost('contact_subject');
-		
-	$email = mailCleanPost('contact_email');
-	
-	$from = mailCleanPost('contact_name');
-		
-	$header =
-		'From: ' . $from . ' - ' .
-		mailCleanPost('name') . ' <' . $email . ">\r\n" .
-		'Reply-To: ' . $email . "\r\n" . 
-		'X-Mailer: PHP/' . phpversion() . "\r\n" .
-		'Content-Type: text/plain';
-		
-	$message = htmlspecialchars($_POST['contact_message']) . '
-		Logged IP: ' . $_SERVER['REMOTE_ADDR'] . '
-		UA String: ' . $_SERVER['HTTP_USER_AGENT'];
-
-	return mail(
-		'ccx@conceal.network',
-		$subject, 
-		$message,
-		$header
-	);
-
-} // formMail
-
-if (
-	!empty($_POST['contactHash']) &&
-    hashExists($_POST['contactHash'])
-) {
-    if (postNotMailHeaderSafe([
-		'contact_name',
-		'contact_email',
-		'contact_subject'
-    ])) $contactState=false; else if (
-        !isValidEmail($_POST['contact_email'])
-    ) $contactState=false; else if (
-        formMail()
-    ) $contactState=true; else $contactState=false;
-}
-
 // Always invalidate the hash
 $_SESSION['contactHash'] = '';
 
@@ -135,7 +57,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
                             <li><a href="messaging/">Messaging</a></li>
-                            <li><a href="mobile/">Mobile</a></li>
+                            <li><a href="mobile/">Mobile</a></li
+                            >
                             <li><a href="pay/">Pay</a></li>
                         </ul>
                     </li><li>
@@ -727,7 +650,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
                     </picture>
                     <b>Alex Stanford</b><br>
-                    <span>Senior Developer</span>
+                    <span>Head of R&D</span>
                     <ul>
                         <li>
                             <a href="https://linkedin.com/in/alexstanford/">
@@ -834,14 +757,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <!-- #community --></section>
     
         <section id="contact">
-            <div>';
-if(isset($contactState)) {
-    if($contactState) echo '
-                <p>Thank you for contacting us, we will get back to you as soon as possible.</p>';
-    else echo '
-                <p>An error has occurred, please try again later.<p>';
-} else echo '
-                <form action="contact.php" method="post">
+            <div>
+                <form action="rewrite.php#contact" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
                         <span>Contact us</span>
@@ -869,8 +786,7 @@ if(isset($contactState)) {
                             value="', hashCreate('contactHash'), '"
                         >
                     <!-- .submitsAndHiddens --></div>
-                </form>';
-echo '
+                </form>
             </div>
         <!-- #contact --></section>
     </main>
