@@ -758,7 +758,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="contact">
             <div>
-                <form action="rewrite.php#contact" method="post">
+                <form action="rewrite.php#contact" id="contact_form" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
                         <span>Contact us</span>
@@ -766,20 +766,20 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <fieldset>
                         <label>
                             <span>Your Name</span><br>
-                            <input type="text" id="contact_name" name="name" required><br>
+                            <input type="text" id="contact_name" name="name" class="contactFormField" required><br>
                         </label><label>
                         <span>Your E-Mail Address</span><br>
-                            <input type="email" id="contact_email" name="email" required><br>
+                            <input type="email" id="contact_email" name="email" class="contactFormField" required><br>
                         </label><label>
                         <span>Subject</span><br>
-                            <input type="text" id="contact_subject" name="subject" required><br>
+                            <input type="text" id="contact_subject" name="subject" class="contactFormField" required><br>
                         </label><label>
                         <span>Message</span><br>
-                            <textarea name="contact_message" name="message" rows="6" required></textarea>
+                            <textarea name="contact_message" name="message" rows="6" class="contactFormField" required></textarea>
                         </label>
                     </fieldset>
                     <div class="submitsAndHiddens">
-                        <button>Send</button>
+                        <button id="contactForm_submit">Send</button>
                         <input
                             type="hidden" 
                             name="contactHash"
@@ -849,9 +849,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     </footer>
     
     <script src="static/homepage.js?v=1"></script>
+    <script src="static/contact.js?v=1"></script>
     <script src="js/language.js?v=1"></script>
-    <script src="js/calc.js?v=1"></script>
     <script src="js/pools.js?v=1"></script>
+    <script src="js/calc.js?v=1"></script>
     
     </body></html>';
     

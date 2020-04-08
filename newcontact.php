@@ -74,25 +74,35 @@ if (
 		'email',
 		'subject'
     ]) || !isValidEmail($_POST['email'])) {
-        header('HTTP/1.0 403 Forbidden');
-		echo json_encode([
-			'title' => 'Error',
-			'content' => ''
-		]);
+      header('Content-Type: application/json');
+      header('HTTP/1.0 403 Forbidden');
+      echo json_encode([
+        'title' => 'Error',
+        'content' => ''
+      ]);
     } else if (formMail()) {
-        header('HTTP/1.0 200 Successful');
-		echo json_encode([
-			'title' => 'Message Sent Successfully',
-			'content' => ''
-		]);
+      header('Content-Type: application/json');
+      header('HTTP/1.0 200 Successful');
+      echo json_encode([
+        'title' => 'Message Sent Successfully',
+        'content' => ''
+      ]);
     } else {
-        ob_clean();
-		header('HTTP/1.0 500 Internal Server Error');
-		echo json_encode([
-			'title' => 'Error - Unable to Send Message',
-			'content' => ''
-		]);
+      ob_clean();
+      header('Content-Type: application/json');
+      header('HTTP/1.0 500 Internal Server Error');
+      echo json_encode([
+        'title' => 'Error - Unable to Send Message',
+        'content' => ''
+      ]);
     }
+} else {
+  header('Content-Type: application/json');
+  header('HTTP/1.0 403 Forbidden');
+  echo json_encode([
+    'title' => 'Error - Failed to verify legit sender',
+    'content' => ''
+  ]);
 }
 
 ?>
