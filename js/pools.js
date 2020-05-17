@@ -109,7 +109,7 @@ window.addEventListener('scroll', function() {
               )
             );
           });
-          document.getElementById('poolsTable').setAttribute('style','display:block;');
+          document.getElementById('poolsTable').style.display = 'block';
         } else {
           // We reached our target server, but it returned an error
         }

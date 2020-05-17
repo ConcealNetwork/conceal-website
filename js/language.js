@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     selectedLanguageEl = document.getElementById('selectedLanguage');
                     selectedLanguageEl.textContent = selection[itemLangCode].name;
                     langDropDown = document.getElementById('langDropdown');
-                    langDropDown.setAttribute('style','display:none;');
+                    langDropDown.style.display = 'none';
                     translate(langData);
                   } else {
                     // We reached our target server, but it returned an error
@@ -149,11 +149,11 @@ document.addEventListener("DOMContentLoaded", function(){
       langDropDown = document.getElementById('langDropdown');
       langDDcurStyle = langDropDown.getAttribute('style');
       if(langDDcurStyle==null) {
-        langDropDown.setAttribute('style','display:none;');
+        langDropDown.style.display = 'none';
         return;
       }
       if(langDDcurStyle.indexOf('block')!==-1) {
-        langDropDown.setAttribute('style','display:none;');
+        langDropDown.style.display = 'none';
       }
     }
   };
@@ -162,13 +162,13 @@ document.addEventListener("DOMContentLoaded", function(){
     langDropDown = document.getElementById('langDropdown');
     langDDcurStyle = langDropDown.getAttribute('style');
     if(langDDcurStyle==null) {
-      langDropDown.setAttribute('style','display:block;');
+      langDropDown.style.display = 'block';
       return;
     }
     if(langDDcurStyle.indexOf('none')!==-1) {
-      langDropDown.setAttribute('style','display:block;');
+      langDropDown.style.display = 'block';
     } else {
-      langDropDown.setAttribute('style','display:none;');
+      langDropDown.style.display = 'none';
     }
   };
 
