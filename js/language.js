@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
           if(!all[i].firstElementChild) {
             if (all[i].textContent.trim().toUpperCase() === enLangData[key].toUpperCase()) {
               all[i].setAttribute('data-tkey',key);
-              if(!key.includes('wordOnly')) {
+              if(!key.includes('r')) {
                 break;
               }
             }

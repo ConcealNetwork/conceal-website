@@ -498,7 +498,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
                         </p>
                     </div><div class="noContent">
-                        <time>TBA</time>
+                        <time><span>July</span> 2020</time>
                         <h3>Deposits on Cloud & Mobile</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
@@ -539,7 +539,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/krypt0x.jpg" alt="krypt0x"><br>
                         </picture>
                         <b>krypt0x (aka 0x)</b><br>
-                        <span>Founder & Head of Ops</span>
+                        <span>Founder</span> & <span>Head of</span> <span>Ops</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/krypt0x">
@@ -564,7 +564,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/katz.jpg" alt="katz"><br>
                         </picture>
                         <b>katz</b><br>
-                        <span>Head of Development</span>
+                        <span>Head of</span> <span>Development</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/cryptokatz">
@@ -584,7 +584,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/zemanel.jpg" alt="zemanel"><br>
                         </picture>
                         <b>ZeMaNel</b><br>
-                        <span>Head of Technology</span>
+                        <span>Head of</span> <span>Technology</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/cryptomanel">
@@ -599,7 +599,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/madmax.jpg" alt="madmax"><br>
                         </picture>
                         <b>MaDMAx</b><br>
-                        <span>Head of Economics</span>
+                        <span>Head of</span> <span>Economics</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/HyperMadMax">
@@ -614,8 +614,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/okanist.png" alt="okanist"><br>
                         </picture>
                         <b>okanist (aka Okan)</b><br>
-                        <span>Head of Marketing &</span><br>
-                        <span>Business Development</span>
+                        <span>Head of</span> <span>Marketing</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/okansariirmak">
@@ -630,7 +629,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/taegus.png" alt="taegus"><br>
                         </picture>
                         <b>Taegus</b><br>
-                        <span>Head of Community</span>
+                        <span>Head of</span> <span>Community</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/taeguscromis">
@@ -649,15 +648,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <source srcset="images/team/alexstanford.webp" type="image/webp">
                         <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
                     </picture>
-                    <b>Alex Stanford</b><br>
-                    <span>Head of R&D</span>
-                    <ul>
-                        <li>
-                            <a href="https://linkedin.com/in/alexstanford/">
-                                <i class="fab fa-linkedin teamLink"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </li><li>
+                    <b>HashOfZorro</b><br>
+                    <span>Head of</span> <span>Business Development</span>
+                    <ul><li>
                             <a href="https://github.com/alexstanford">
                                 <i class="fab fa-github teamLink"></i>
                                 <span>Github</span>
@@ -758,7 +751,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="contact">
             <div>
-                <form action="rewrite.php#contact" id="contact_form" method="post">
+                <form action="newcontact.php#contact" id="contact_form" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
                         <span>Contact us</span>
@@ -766,22 +759,23 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <fieldset>
                         <label>
                             <span>Your Name</span><br>
-                            <input type="text" id="contact_name" name="name" class="contactFormField" required><br>
+                            <input type="text" id="contact_name" name="name" required><br>
                         </label><label>
                         <span>Your E-Mail Address</span><br>
-                            <input type="email" id="contact_email" name="email" class="contactFormField" required><br>
+                            <input type="email" id="contact_email" name="email" required><br>
                         </label><label>
                         <span>Subject</span><br>
-                            <input type="text" id="contact_subject" name="subject" class="contactFormField" required><br>
+                            <input type="text" id="contact_subject" name="subject" required><br>
                         </label><label>
                         <span>Message</span><br>
-                            <textarea name="contact_message" name="message" rows="6" class="contactFormField" required></textarea>
+                            <textarea name="contact_message" name="message" rows="6" required></textarea>
                         </label>
                     </fieldset>
                     <div class="submitsAndHiddens">
-                        <button id="contactForm_submit">Send</button>
+                        <button>Send</button>
                         <input
                             type="hidden" 
+                            id="contact_hash"
                             name="contactHash"
                             value="', hashCreate('contactHash'), '"
                         >
