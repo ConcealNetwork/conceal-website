@@ -586,6 +586,7 @@ main > section p {
 
 #compoundInterestCalc {
 	text-align:center;
+	color:#EEE;
 }
 
 #compoundInterestCalc h3 {
@@ -617,6 +618,7 @@ main > section p {
 	padding:0.25em 1em;
 	text-align:center;
 	border:1px solid #666;
+	color:#EEE;
 }
 
 #compoundInterestCalc thead th,
@@ -691,7 +693,8 @@ main > section p {
 #wallets ul a:focus,
 #wallets ul a:hover {
 	border-color:#FFF;
-	background:#740;
+	background:#FA0;
+	color:#000;
 }
 
 #mining > div {
@@ -1039,6 +1042,12 @@ body > #contact h2 {
 		0 0 0.25em 0.125em #FA0;
 }
 
+#contact input.disabled,
+#contact textarea.disabled {
+	background:#222 !important;
+	color:#888 !important;
+}
+
 #contact button {
 	padding:0.25em 1em;
 	background:#000;
@@ -1050,7 +1059,19 @@ body > #contact h2 {
 
 #contact button:focus,
 #contact button:hover {
-	background:#543;
+	background:#FA0;
+	color:#000;
+	border-color:#FFF;
+}
+
+#contact .submitsAndHiddens {
+	margin-bottom:4em;
+}
+
+#contact .statusMessage {
+	margin:-7.2em 0 -0.8em 0;
+	padding:0 0 0 7em;
+	height:8em;
 }
 
 body > footer {
@@ -1688,7 +1709,7 @@ body > footer .socialLinks a:hover {
 }
 
 #compoundInterestCalc > div > span:nth-of-type(2),
-#compoundInterestCalc > div > span:nth-last-of-type(2) {
+#compoundInterestCalc > div > span:nth-last-of-type(1) {
 	margin-left:0.4em;
 	color:#FA0;
 }

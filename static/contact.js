@@ -1,5 +1,6 @@
 var
   contactForm = document.getElementById('contact_form'),
+  contactFormInputs = contactForm.elements,
   contactFormSubject = document.getElementById('contact_subject'),
   statusMessage = false,
   contactModal, contactInner, contactH2, contactSpinner, contactMessage,
@@ -24,7 +25,7 @@ function contactFormSubmit(e) {
     statusMessageContent.textContent = 'Subject: ' + contactFormSubject.value;
   } else {
     statusMessage = document.createElement('div');
-    statusMessage.class = 'statusMessage';
+    statusMessage.classList.add('statusMessage');
     statusH3 = document.createElement('h3');
     statusH3.textContent = 'Sending Message';
     statusMessage.appendChild(statusH3);
@@ -35,6 +36,11 @@ function contactFormSubmit(e) {
   }
 
   statusMessage.classList.add('loading');
+  
+  for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
+    contactFormInputs[i].disabled = true;
+    contactFormInputs[i].classList.add('disabled');
+  }
 
   // flush existing error messages
 
@@ -56,25 +62,29 @@ function contactFormSubmit(e) {
 function contactAjaxStateChange() {
   switch (contactAjax.readyState) {
     case 4:
-      var data = JSON.parse(contactAjax.response);
+      var data = contactAjax.response;
       statusH3.textContent = data.title;
       statusMessageContent.textContent = data.content;
-      /*if (data.newHash) contactHash.value = data.newHash;
+      if (data.newHash) contactHash.value = data.newHash;
       switch (contactAjax.status) {
         case 200:
         case 403:
+            for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
+                contactFormInputs[i].disabled = false;
+                contactFormInputs[i].classList.remove('disabled');
+            }
           contactForm.reset();
           break;
         case 406:
-          for (var i in data.errors) {
+          /*for (var i in data.errors) {
             var element = document.getElementById(i);
             if (element) make('p.error', {
               after: element,
               content: data.errors[i]
             });
-          }
+          }*/
           break;
-      }*/
+      }
       break;
   }
 } // contactAjaxStateChange

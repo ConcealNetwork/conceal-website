@@ -92,7 +92,7 @@ if (
         header('HTTP/1.0 200 Successful');
         echo json_encode([
             'title'     => 'Message Sent Successfully',
-            'content'   => 'Thank you for contacting us.  We will review and respond as soon as possible.',
+            'content'   => 'Thank you for contacting us.',
             'newHash'   => hashCreate('contactHash')
         ]);
     } else {
