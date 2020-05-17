@@ -405,7 +405,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="buyingCCX">
             <div>
                 <h2>
-                    <span><span>Buying</span> CCX</span>
+                    <span>Buying</span> <span>CCX</span>
                     <span>Exchanges</span>
                 </h2>
                 <ul class="majorLinks">
@@ -498,7 +498,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
                         </p>
                     </div><div class="noContent">
-                        <time><span>July</span> 2020</time>
+                        <time><span>Sep</span> 2020</time>
                         <h3>Deposits on Cloud & Mobile</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
@@ -751,7 +751,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     
         <section id="contact">
             <div>
-                <form action="newcontact.php#contact" id="contact_form" method="post">
+                <form action="newcontact.php" id="contact_form" method="post">
                     <h2>
                         <span>We\'re Friendly</span>
                         <span>Contact us</span>
