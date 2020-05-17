@@ -63,7 +63,7 @@ function formMail() {
 		UA String: ' . $_SERVER['HTTP_USER_AGENT'];
 
 	return mail(
-		'ahstanford@gmail.com',
+		'ccx@conceal.network',
 		$subject, 
 		$message,
 		$header
