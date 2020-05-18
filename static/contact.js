@@ -36,11 +36,6 @@ function contactFormSubmit(e) {
   }
 
   statusMessage.classList.add('loading');
-  
-  for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
-    contactFormInputs[i].disabled = true;
-    contactFormInputs[i].classList.add('disabled');
-  }
 
   // flush existing error messages
 
@@ -50,12 +45,18 @@ function contactFormSubmit(e) {
   var data = new FormData(contactForm);
 
   contactAjax = new XMLHttpRequest();
-  if (contactAjax.overrideMimeType) 
+  if (contactAjax.overrideMimeType)
     contactAjax.overrideMimeType('application/json');
   contactAjax.responseType = 'json';
   contactAjax.onreadystatechange = contactAjaxStateChange;
   contactAjax.open('POST', 'newcontact.php');
   contactAjax.send(data);
+
+  // only disable the fields after the form is posted
+  for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
+    contactFormInputs[i].disabled = true;
+    contactFormInputs[i].classList.add('disabled');
+  }
 
 } // contactFormSubmit
 
@@ -69,10 +70,10 @@ function contactAjaxStateChange() {
       switch (contactAjax.status) {
         case 200:
         case 403:
-            for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
-                contactFormInputs[i].disabled = false;
-                contactFormInputs[i].classList.remove('disabled');
-            }
+          for (var i = 0, len = contactFormInputs.length; i < len; ++i) {
+            contactFormInputs[i].disabled = false;
+            contactFormInputs[i].classList.remove('disabled');
+          }
           contactForm.reset();
           break;
         case 406:
