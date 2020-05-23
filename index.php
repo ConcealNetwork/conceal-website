@@ -517,7 +517,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h3>Conceal Card</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
-                        <h3>Sidechain</h3>
+                        <h3>Conceal Platform</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Collateralized Loans</h3>
