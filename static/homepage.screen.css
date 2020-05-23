@@ -1055,6 +1055,7 @@ body > #contact h2 {
 	border:2px solid #FA0;
 	border-radius:0.5em;
 	transition:all 0.5s;
+	cursor:pointer;
 }
 
 #contact button:focus,

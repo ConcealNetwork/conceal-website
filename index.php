@@ -768,7 +768,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <input type="text" id="contact_subject" name="subject" required><br>
                         </label><label>
                         <span>Message</span><br>
-                            <textarea name="contact_message" name="message" rows="6" required></textarea>
+                            <textarea id="contact_message" name="message" rows="6" required></textarea>
                         </label>
                     </fieldset>
                     <div class="submitsAndHiddens">

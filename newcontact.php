@@ -52,8 +52,7 @@ function formMail() {
 	$from = mailCleanPost('name');
 		
 	$header =
-		'From: ' . $from . ' - ' .
-		mailCleanPost('name') . ' <' . $email . ">\r\n" .
+		'From: ' . $from . ' - <' . $email . ">\r\n" .
 		'Reply-To: ' . $email . "\r\n" . 
 		'X-Mailer: PHP/' . phpversion() . "\r\n" .
 		'Content-Type: text/plain';
