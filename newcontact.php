@@ -3,9 +3,6 @@
 session_start();
 session_regenerate_id();
 
-// Always invalidate the hash
-$_SESSION['contactHash'] = '';
-
 function hashCreate($name) {
 	return $_SESSION[$name] = bin2hex(random_bytes(24));
 } // hashCreate
@@ -52,15 +49,15 @@ function formMail() {
 	$from = mailCleanPost('name');
 		
 	$header =
-		'From: ' . $from . ' - ' .
-		mailCleanPost('name') . ' <' . $email . ">\r\n" .
+		'From: ' . $from . ' <' . $email . ">\r\n" .
 		'Reply-To: ' . $email . "\r\n" . 
 		'X-Mailer: PHP/' . phpversion() . "\r\n" .
 		'Content-Type: text/plain';
 		
-	$message = htmlspecialchars($_POST['message']) . '
-		Logged IP: ' . $_SERVER['REMOTE_ADDR'] . '
-		UA String: ' . $_SERVER['HTTP_USER_AGENT'];
+    $message = htmlspecialchars($_POST['message']) . '
+    
+Logged IP: ' . $_SERVER['REMOTE_ADDR'] . '
+UA String: ' . $_SERVER['HTTP_USER_AGENT'];
 
 	return mail(
 		'ccx@conceal.network',
