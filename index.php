@@ -147,6 +147,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         
         <section>
             <div>
+                <div id="root"></div>
                 <h2><span>Banking</span> <span>on the Blockchain</span></h2>
                 <p>
                     Decentralized Finance, Private Transactions &amp; Encrypted Messaging
@@ -497,9 +498,18 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <p>
                             Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
                         </p>
-                    </div><div class="noContent">
+                    </div><div>
                         <time><span>Sep</span> 2020</time>
                         <h3>Deposits on Cloud & Mobile</h3>
+                        <p>
+                            We are bringing cold staking to clound and mobile. You will be able to earn interest from your phone!
+                        </p>
+                    </div><div>
+                        <time>TBA</time>
+                        <h3>Conceal Communications</h3>
+                        <p>
+                            Decentralized p2p and end to end ecrypted communications platform.
+                        </p>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Cloud & Mobile Self-destructing Messages</h3>
@@ -842,6 +852,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         </div>
     </footer>
     
+    <script src="https://livewidget.instaswap.io/instaswapWidget.js"></script>
     <script src="static/homepage.js?v=1"></script>
     <script src="static/contact.js?v=1"></script>
     <script src="js/language.js?v=1"></script>
