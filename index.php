@@ -505,6 +505,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             We are bringing cold staking to clound and mobile. You will be able to earn interest from your phone!
                         </p>
                     </div><div>
+                        <time><span>Q4</span> 2020</time>
+                        <h3>Cloud & Mobile Self-destructing Messages</h3>
+                        <p>
+                            Send messages to other users that self destruct after given time.
+                        </p>
+                    </div><div>
                         <time>TBA</time>
                         <h3>Conceal Communications</h3>
                         <p>
@@ -512,7 +518,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </p>
                     </div><div class="noContent">
                         <time>TBA</time>
-                        <h3>Cloud & Mobile Self-destructing Messages</h3>
+                        <h3>Conceal Vault</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Multi-signature Wallets</h3>
