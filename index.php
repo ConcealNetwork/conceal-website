@@ -511,10 +511,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Send messages to other users that self destruct after given time.
                         </p>
                     </div><div>
-                        <time>TBA</time>
-                        <h3>Conceal Communications</h3>
+                        <time><span>Q4</span> 2020</time>
+                        <h3>Conceal Live</h3>
                         <p>
-                            Decentralized p2p and end to end ecrypted communications platform.
+                            Decentralized p2p and end to end ecrypted platform for video / audio calls and messages.
                         </p>
                     </div><div class="noContent">
                         <time>TBA</time>
