@@ -502,7 +502,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Sep</span> 2020</time>
                         <h3>Deposits on Cloud & Mobile</h3>
                         <p>
-                            We are bringing cold staking to clound and mobile. You will be able to earn interest from your phone!
+                            We are bringing cold staking to cloud and mobile. You will be able to earn interest from your phone!
                         </p>
                     </div><div>
                         <time><span>Q3</span> 2020</time>
