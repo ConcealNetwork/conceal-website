@@ -86,6 +86,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://swap.conceal.network/index.html">Buy CCX</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -147,7 +148,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         
         <section>
             <div>
-                <div id="root"></div>
                 <h2><span>Banking</span> <span>on the Blockchain</span></h2>
                 <p>
                     Decentralized Finance, Private Transactions &amp; Encrypted Messaging
@@ -174,7 +174,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     </a>
     
     <main>
-    
+
         <section id="features">
             <div>
                 <h2>
@@ -858,7 +858,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         </div>
     </footer>
     
-    <script src="https://livewidget.instaswap.io/instaswapWidget.js"></script>
     <script src="static/homepage.js?v=1"></script>
     <script src="static/contact.js?v=1"></script>
     <script src="js/language.js?v=1"></script>
