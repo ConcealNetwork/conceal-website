@@ -71,7 +71,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="in-the-media/">In The Media</a></li>
                             <li><a href="labs/">Labs</a></li>
                             <li><a href="#roadmap">Roadmap</a></li>
-                            <li><a href="#theteam">Team</a></li>
+                            <li><a href="#theTeam">Team</a></li>
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
