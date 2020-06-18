@@ -930,6 +930,7 @@ main > section p {
 	margin:0 1em 3em;
 	text-align:center;
 	text-transform:uppercase;
+  width: 260px;
 }
 
 .miniProfiles ul {
@@ -957,6 +958,11 @@ main > section p {
 .miniProfiles img {
 	border-radius:50%;
 	box-shadow:0 0 0.5em 0.5em #000;
+}
+
+.miniProfiles img.unknown {
+	border-radius: 0%;
+	box-shadow: none !important;
 }
 
 .miniProfiles b {

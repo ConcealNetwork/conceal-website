@@ -86,7 +86,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://swap.conceal.network/index.html">Buy CCX</a></li>
+                    <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -611,21 +611,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/madmax.webp" type="image/webp">
-                            <img src="images/team/madmax.jpg" alt="madmax"><br>
-                        </picture>
-                        <b>MaDMAx</b><br>
-                        <span>Head of</span> <span>Economics</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/HyperMadMax">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
                             <source srcset="images/team/okanist.webp" type="image/webp">
                             <img src="images/team/okanist.png" alt="okanist"><br>
                         </picture>
@@ -678,7 +663,22 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             </a>
                         </li>
                     </ul>
-                </li><li>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/madmax.webp" type="image/webp">
+                            <img src="images/team/madmax.jpg" alt="madmax"><br>
+                        </picture>
+                        <b>MaDMAx</b><br>
+                        <span>Head of</span> <span>Economics</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/HyperMadMax">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
                         <picture>
                             <source srcset="images/team/bombon.webp" type="image/webp">
                             <img src="images/team/bombon.jpg" alt="bombon"><br>
@@ -722,41 +722,36 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="miniProfiles">
                     <li>
                         <picture>
-                            <source srcset="images/team/devopsralf.webp" type="image/webp">
-                            <img src="images/team/devopsralf.jpg" alt="devopsralf"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img class="unknown" src="images/team/unknown.jpg" alt="Lithy / リーチ"><br>
                         </picture>
-                        <b>devopsralf</b><br>
+                        <b>Lithy / リーチ</b><br>
                         <span>Developer</span>
                         <ul>
                             <li>
-                                <a href="https://github.com/devopsralf">
+                                <a href="https://github.com/Lithe-Project">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>GitHub</span>
+                                </a>
+                            </li><li>
+                                <a href="https://twitter.com/LithyRiolu">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
                                 </a>
                             </li>
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/brian-moore.webp" type="image/webp">
-                            <img src="images/team/brian-moore.jpg" alt="Brian Moore"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img class="unknown" src="images/team/unknown.jpg" alt="ThrownLemon"><br>
                         </picture>
-                        <b>Brian Moore</b><br>
+                        <b>ThrownLemon</b><br>
                         <span>Developer</span>
                         <ul>
                             <li>
-                                <a href="https://www.linkedin.com/in/bdmcoder/">
-                                    <i class="fab fa-linkedin teamLink"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                            </li><li>
-                                <a href="https://github.com/thebrianmoore">
+                                <a href="https://github.com/ThrownLemon">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/bdmcoder">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
                                 </a>
                             </li>
                         </ul>
