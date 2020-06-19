@@ -781,6 +781,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <span>Message</span><br>
                             <textarea id="contact_message" name="message" rows="6" required></textarea>
                         </label>
+                        <div id="termsWrapper">
+                          <label>
+                            <span>Do you agree to the terms and conditions of using our services?</span><br>
+                            <input type="checkbox" name="agreeTerms" value="yes">
+                          </label>
+                        </div>
                     </fieldset>
                     <div class="submitsAndHiddens">
                         <button>Send</button>

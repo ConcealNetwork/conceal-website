@@ -1727,3 +1727,9 @@ body > footer .socialLinks a:hover {
 #top > header #langDropdown a {
 	display:block;
 }
+
+#termsWrapper {
+  position: fixed;
+  left: -500px;
+  top: -500px;
+}

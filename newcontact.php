@@ -69,47 +69,47 @@ UA String: ' . $_SERVER['HTTP_USER_AGENT'];
 } // formMail
 
 if (
-	!empty($_POST['contactHash']) &&
-    hashExists('contactHash',$_POST['contactHash'])
-) {
-    if (postNotMailHeaderSafe([
-		'name',
-		'email',
-		'subject'
-    ]) || !isValidEmail($_POST['email'])) {
-        header('Content-Type: application/json');
-        header('HTTP/1.0 403 Forbidden');
-        echo json_encode([
-            'title'     => 'Error - Invalid Input',
-            'content'   => 'Oops!  You\'ve encountered an error.',
-            'newHash'   => hashCreate('contactHash')
-        ]);
+	!empty($_POST['contactHash']) && hashExists('contactHash',$_POST['contactHash'])) {
+    if (postNotMailHeaderSafe(['name', 'email', 'subject']) || !isValidEmail($_POST['email'])) {
+      header('Content-Type: application/json');
+      header('HTTP/1.0 403 Forbidden');
+      echo json_encode([
+          'title'     => 'Error - Invalid Input',
+          'content'   => 'Oops!  You\'ve encountered an error.',
+          'newHash'   => hashCreate('contactHash')
+      ]);
+    } else if (isset($_POST['agreeTerms'])) {
+      echo json_encode([
+        'title'     => 'Message Sent Successfully',
+        'content'   => 'Thank you for contacting us.',
+        'newHash'   => hashCreate('contactHash')
+      ]);
     } else if (formMail()) {
-        header('Content-Type: application/json');
-        header('HTTP/1.0 200 Successful');
-        echo json_encode([
-            'title'     => 'Message Sent Successfully',
-            'content'   => 'Thank you for contacting us.',
-            'newHash'   => hashCreate('contactHash')
-        ]);
+      header('Content-Type: application/json');
+      header('HTTP/1.0 200 Successful');
+      echo json_encode([
+        'title'     => 'Message Sent Successfully',
+        'content'   => 'Thank you for contacting us.',
+        'newHash'   => hashCreate('contactHash')
+      ]);
     } else {
-        ob_clean();
-        header('Content-Type: application/json');
-        header('HTTP/1.0 500 Internal Server Error');
-        echo json_encode([
-            'title'     => 'Error - Unable to Contact Us',
-            'content'   => 'Uh oh!  It looks like we are having a problem.  Please email us at <a href="mailto:ccx@conceal.network">ccx@conceal.network</a> and let us know!',
-            'newHash'   => hashCreate('contactHash')
-        ]);
+      ob_clean();
+      header('Content-Type: application/json');
+      header('HTTP/1.0 500 Internal Server Error');
+      echo json_encode([
+        'title'     => 'Error - Unable to Contact Us',
+        'content'   => 'Uh oh!  It looks like we are having a problem.  Please email us at <a href="mailto:ccx@conceal.network">ccx@conceal.network</a> and let us know!',
+        'newHash'   => hashCreate('contactHash')
+      ]);
     }
 } else {
-    header('Content-Type: application/json');
-    header('HTTP/1.0 403 Forbidden');
-    echo json_encode([
-        'title'     => 'Error - Invalid Request',
-        'content'   => 'Oops!  You\'ve encountered an error.',
-        'newHash'   => hashCreate('contactHash')
-    ]);
+  header('Content-Type: application/json');
+  header('HTTP/1.0 403 Forbidden');
+  echo json_encode([
+    'title'     => 'Error - Invalid Request',
+    'content'   => 'Oops!  You\'ve encountered an error.',
+    'newHash'   => hashCreate('contactHash')
+  ]);
 }
 
 ?>
