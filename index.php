@@ -3,6 +3,10 @@
 session_start();
 session_regenerate_id();
 
+// set on each page load
+$currTimeStamp = new DateTime();
+$_SESSION['started'] = $currTimeStamp->format('Y-m-d\TH:i:s');
+
 function hashCreate($name) {
 	return $_SESSION[$name] = bin2hex(random_bytes(24));
 } // hashCreate

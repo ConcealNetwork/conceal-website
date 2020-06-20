@@ -8,26 +8,42 @@ function hashCreate($name) {
 } // hashCreate
 
 function hashExists($name, $hash) {
-	return isset($_SESSION[$name]) && ($_SESSION[$name] == $hash);
+	return isset($_SESSION[$name]) && ($_SESSION[$name] == $hash) && isset($_SESSION['started']);
 } // hashExists
+
+function checkSessionAge() {
+  $datetime1 = new DateTime();
+  $datetime2 = new DateTime($_SESSION['started']);
+  return ($datetime1->getTimestamp() - $datetime2->getTimestamp());
+} // checkSessionAge
+
+function createSuccessResponse() {
+  header('Content-Type: application/json');
+  header('HTTP/1.0 200 Successful');
+  echo json_encode([
+    'title'     => 'Message Sent Successfully',
+    'content'   => 'Thank you for contacting us.',
+    'newHash'   => hashCreate('contactHash')
+  ]);
+}
 
 function isValidEmail($address) {
 
 	if (filter_var($address, FILTER_VALIDATE_EMAIL) == FALSE) return false;
-	
+
 	// explode out local and domain
 	list($local,$domain)=explode('@',$address);
-	
+
 	$localLength = strlen($local);
 	$domainLength = strlen($domain);
-	
+
 	return
 		// check for proper lengths
 		($localLength > 0 && $localLength < 65) &&
 		($domainLength > 3 && $domainLength < 256) &&
 		// and if it's a valid domain
 		( checkdnsrr($domain, 'MX') || checkdnsrr($domain, 'A') );
-		
+
 } // isValidEmail
 
 function postNotMailHeaderSafe($indexes) {
@@ -47,21 +63,21 @@ function formMail() {
 	$subject = mailCleanPost('subject');
 	$email = mailCleanPost('email');
 	$from = mailCleanPost('name');
-		
+
 	$header =
 		'From: ' . $from . ' <' . $email . ">\r\n" .
-		'Reply-To: ' . $email . "\r\n" . 
+		'Reply-To: ' . $email . "\r\n" .
 		'X-Mailer: PHP/' . phpversion() . "\r\n" .
 		'Content-Type: text/plain';
-		
+
     $message = htmlspecialchars($_POST['message']) . '
-    
+
 Logged IP: ' . $_SERVER['REMOTE_ADDR'] . '
 UA String: ' . $_SERVER['HTTP_USER_AGENT'];
 
 	return mail(
 		'ccx@conceal.network',
-		$subject, 
+		$subject,
 		$message,
 		$header
 	);
@@ -79,19 +95,11 @@ if (
           'newHash'   => hashCreate('contactHash')
       ]);
     } else if (isset($_POST['agreeTerms'])) {
-      echo json_encode([
-        'title'     => 'Message Sent Successfully',
-        'content'   => 'Thank you for contacting us.',
-        'newHash'   => hashCreate('contactHash')
-      ]);
+      createSuccessResponse();
+    } else if (checkSessionAge() < 10) {
+      createSuccessResponse();
     } else if (formMail()) {
-      header('Content-Type: application/json');
-      header('HTTP/1.0 200 Successful');
-      echo json_encode([
-        'title'     => 'Message Sent Successfully',
-        'content'   => 'Thank you for contacting us.',
-        'newHash'   => hashCreate('contactHash')
-      ]);
+      createSuccessResponse();
     } else {
       ob_clean();
       header('Content-Type: application/json');
