@@ -614,7 +614,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/okanist.png" alt="okanist"><br>
                         </picture>
                         <b>okanist (aka Okan)</b><br>
-                        <span>Head of</span> <span>Marketing</span>
+                        <span>Head of</span> <span>Marketing & BD</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/okansariirmak">
