@@ -559,7 +559,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/krypt0x.jpg" alt="krypt0x"><br>
                         </picture>
                         <b>krypt0x (aka 0x)</b><br>
-                        <span>Founder</span> & <span>Head of</span> <span>Ops</span>
+                        <span>Head of</span> <span>Operations</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/krypt0x">
@@ -570,11 +570,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 <a href="https://twitter.com/krypt0Chaos">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
-                                </a>
-                            </li><li>
-                                <a href="https://sourcerer.io/krypt0x">
-                                    <i class="fas fa-code teamLink"></i>
-                                    <span>Sourcerer</span>
                                 </a>
                             </li>
                         </ul>
@@ -649,40 +644,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             </li>
                         </ul>
                     </li><li>
-                    <picture>
-                        <source srcset="images/team/alexstanford.webp" type="image/webp">
-                        <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
-                    </picture>
-                    <b>HashOfZorro</b><br>
-                    <span>Head of</span> <span>Business Development</span>
-                    <ul><li>
-                            <a href="https://github.com/alexstanford">
-                                <i class="fab fa-github teamLink"></i>
-                                <span>Github</span>
-                            </a>
-                        </li><li>
-                            <a href="https://twitter.com/alexstanford">
-                                <i class="fab fa-twitter teamLink"></i>
-                                <span>Twitter</span>
-                            </a>
-                        </li>
-                    </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/madmax.webp" type="image/webp">
-                            <img src="images/team/madmax.jpg" alt="madmax"><br>
-                        </picture>
-                        <b>MaDMAx</b><br>
-                        <span>Head of</span> <span>Economics</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/HyperMadMax">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
                         <picture>
                             <source srcset="images/team/bombon.webp" type="image/webp">
                             <img src="images/team/bombon.jpg" alt="bombon"><br>
@@ -717,6 +678,51 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #theTeam --></section>
     
+        <section id="consultants">
+            <div>
+                <h2>
+                    <span>Consultants</span>
+                </h2>
+                <ul class="miniProfiles">
+                    <li>
+                      <picture>
+                          <source srcset="images/team/madmax.webp" type="image/webp">
+                          <img src="images/team/madmax.jpg" alt="madmax"><br>
+                      </picture>
+                      <b>MaDMAx</b><br>
+                      <span>Economics Consultant</span>
+                      <ul>
+                          <li>
+                              <a href="https://twitter.com/HyperMadMax">
+                                  <i class="fab fa-twitter teamLink"></i>
+                                  <span>Twitter</span>
+                              </a>
+                          </li>
+                      </ul>
+                      </li><li>
+                        <picture>
+                            <source srcset="images/team/alexstanford.webp" type="image/webp">
+                            <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
+                        </picture>
+                        <b>HashOfZorro</b><br>
+                        <span>Digital Security Consultant</span>
+                        <ul><li>
+                            <a href="https://github.com/alexstanford">
+                                <i class="fab fa-github teamLink"></i>
+                                <span>Github</span>
+                            </a>
+                            </li><li>
+                                <a href="https://twitter.com/alexstanford">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <!-- #community --></section>
+
         <section id="community">
             <div>
                 <h2>
@@ -746,14 +752,29 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img class="unknown" src="images/team/unknown.jpg" alt="ThrownLemon"><br>
+                            <source srcset="images/team/ThrownLemon.webp" type="image/webp">
+                            <img src="images/team/ThrownLemon.jpg" alt="ThrownLemon"><br>
                         </picture>
                         <b>ThrownLemon</b><br>
                         <span>Developer</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/ThrownLemon">
+                                    <i class="fab fa-github teamLink"></i>
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img class="unknown" src="images/team/unknown.jpg" alt="AxVultis"><br>
+                        </picture>
+                        <b>AxVultis</b><br>
+                        <span>Developer</span>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/AxVultis">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>Github</span>
                                 </a>

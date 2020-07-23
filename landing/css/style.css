@@ -1107,3 +1107,25 @@ h4 {
 #about, #features, #techspecs {
   margin:0 0 6rem;
 }
+.mediaSections {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.mediaSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+.mediaSection span {
+  align-self: center;
+  margin-top: auto
+}
+
+.exchangeDivider {
+  height: 20px;
+}
