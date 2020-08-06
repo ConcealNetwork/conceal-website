@@ -1,0 +1,162 @@
+/**********************************************/
+/******* Media section areas and thunbs *******/
+/**********************************************/
+
+.mediaSectionWrapper {
+  justify-content: center;
+}
+
+.thumbex {
+    margin: 10px 20px 30px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 435px;
+    height: 300px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    outline: 2px solid white;
+    outline-offset: -15px;
+    background-color: #333;
+    box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail {
+    overflow: hidden;
+    min-width: 250px;
+    height: 300px;
+    position: relative;
+    opacity: 0.88;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.thumbnail img {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    height: 115%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+}
+
+.thumbnail span {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 25px;
+    margin: 0 25px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease-out;
+}
+
+.thumbnail:hover {
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+    opacity: 1;
+}
+
+.thumbnail:hover span {
+    opacity: 0;
+}
+
+/**********************************************/
+/********** Media section navigation **********/
+/**********************************************/
+
+@media (max-width: 800px) {
+  .mediaSections {
+    display: none;
+  }
+}
+
+/* Appearance */
+.links {
+	background-color: #222;
+	background-image: linear-gradient(to bottom, #222, transparent);
+	border-bottom: 1px solid #222;
+	box-shadow: 0 0 32px #222;
+	font-size: 1.5em;
+	font-weight: 300;
+}
+.links > a {
+	color: #fff;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+}
+.links > a:hover {
+	background: #ffffff06;
+	color: orange;
+}
+.links > .line {
+	background: orange;
+	height: 1px;
+	pointer-events: none;
+}
+
+/* The Magic */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+.links > a:hover ~ .line {
+	opacity: 1;
+}
+
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
+.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
+.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
+.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
+.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
+.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
+.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
+.links > a:last-of-type:hover ~ .line { --index: var(--items); }
+
+.mediaSections {
+  margin-bottom: 50px;
+}
+
+ @media (max-width: 990px) {
+  .pageSlogan {
+    text-align: center;
+  }
+  
+  .btnSignMain {
+    font-size: 0.9rem;
+  }
+ }
+

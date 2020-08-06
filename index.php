@@ -518,7 +518,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Q4</span> 2020</time>
                         <h3>Conceal Live</h3>
                         <p>
-                            Decentralized p2p and end to end ecrypted platform for video / audio calls and messages.
+                            Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
                         </p>
                     </div><div class="noContent">
                         <time>TBA</time>
@@ -673,7 +673,36 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/ThrownLemon.webp" type="image/webp">
+                            <img src="images/team/ThrownLemon.jpg" alt="ThrownLemon"><br>
+                        </picture>
+                        <b>ThrownLemon</b><br>
+                        <span>Developer</span>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/ThrownLemon">
+                                    <i class="fab fa-github teamLink"></i>
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/axvultis.webp" type="image/webp">
+                            <img src="images/team/axvultis.jpg" alt="AxVultis"><br>
+                        </picture>
+                        <b>AxVultis</b><br>
+                        <span>Developer</span>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/AxVultis">
+                                    <i class="fab fa-github teamLink"></i>
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                        </ul>
                 </ul>
             </div>
         <!-- #theTeam --></section>
@@ -747,36 +776,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 <a href="https://twitter.com/LithyRiolu">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/ThrownLemon.webp" type="image/webp">
-                            <img src="images/team/ThrownLemon.jpg" alt="ThrownLemon"><br>
-                        </picture>
-                        <b>ThrownLemon</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/ThrownLemon">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img class="unknown" src="images/team/unknown.jpg" alt="AxVultis"><br>
-                        </picture>
-                        <b>AxVultis</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/AxVultis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
                                 </a>
                             </li>
                         </ul>
