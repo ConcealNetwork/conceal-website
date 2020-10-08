@@ -104,7 +104,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <span>Discord</span>
                         </a>
                     </li><li>
-                        <a href="https://t.co/55klBHKGUR">
+                        <a href="https://t.me/concealnetworkusers">
                             <i class="fab fa-telegram"></i>
                             <span>Telegram</span>
                         </a>
@@ -849,7 +849,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <i class="fab fa-discord"></i>
                     </a>
                 </li><li>
-                    <a href="https://t.co/55klBHKGUR">
+                    <a href="https://t.me/concealnetworkusers">
                         <i class="fab fa-telegram"></i>
                     </a>
                 </li><li>
