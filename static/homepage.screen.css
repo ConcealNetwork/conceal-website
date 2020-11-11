@@ -1581,6 +1581,9 @@ body > footer .socialLinks a:hover {
 	#mining .codeBlocks > div:first-child {
 		padding-right:0;
 	}
+  .navStandalone {
+    margin: 5px;
+  }
 }
 
 @media (max-width:40em) {

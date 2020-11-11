@@ -89,8 +89,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#mining">Mining</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
+                    <li class="navStandalone"><a href="#contact">Contact</a></li>
+                    <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
+                    <li class="navStandalone"><a href="https://conceal.network/crowdfunding/index.html">Buy wCCX</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -414,13 +415,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Exchanges</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX">STEX</a></li>
-                    <li><a href="https://qtrade.io/market/CCX_BTC">qTrade</a></li>
+                    <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
-                    <li><a href="https://www.finexbox.com/market/pair/CCX-BTC.html">FinexBox</a></li>
-                    <li><a href="https://www.citex.co.kr/#/home">CITEX</a></li>
-                    <li><a href="https://sistemkoin.com/trade/CCX_BTC">Sistemkoin</a></li>
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
                     <i class="fa fa-plus"></i>
@@ -503,16 +500,34 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
                         </p>
                     </div><div>
+                        <time><span>Aug</span> 2020</time>
+                        <h3>Wrapped CCX (wCCX)</h3>
+                        <p>
+                            Wrapped CCX is created on ethereum blockchain allowing CCX owners to access DEFI on ETH!
+                        </p>
+                    </div><div>
+                        <time><span>Aug</span> 2020</time>
+                        <h3>wCCX on Uniswap and in Trustwallet</h3>
+                        <p>
+                            wCCX is available on the hottest DEX at the time and added to Trustwallet.
+                        </p>
+                    </div><div>
                         <time><span>Sep</span> 2020</time>
                         <h3>Deposits on Cloud & Mobile</h3>
                         <p>
-                            We are bringing cold staking to cloud and mobile. You will be able to earn interest from your phone!
+                            Cold staking came to cloud and mobile. You are able to earn interest from your phone!
                         </p>
                     </div><div>
-                        <time><span>Q3</span> 2020</time>
+                        <time><span>Q4</span> 2020</time>
                         <h3>Cloud & Mobile Self-destructing Messages</h3>
                         <p>
                             Send messages to other users that self destruct after given time.
+                        </p>
+                    </div><div>
+                        <time><span>Q4</span> 2020</time>
+                        <h3>Conceal Swap</h3>
+                        <p>
+                            Swap your CCX to wCCX and back the other way with our swap tool.
                         </p>
                     </div><div>
                         <time><span>Q4</span> 2020</time>
@@ -579,7 +594,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/katz.jpg" alt="katz"><br>
                         </picture>
                         <b>katz</b><br>
-                        <span>Head of</span> <span>Development</span>
+                        <span>Head of</span> <span>Research</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/cryptokatz">
@@ -629,7 +644,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/taegus.png" alt="taegus"><br>
                         </picture>
                         <b>Taegus</b><br>
-                        <span>Head of</span> <span>Community</span>
+                        <span>Head of</span> <span>Development</span>
                         <ul>
                             <li>
                                 <a href="https://github.com/taeguscromis">
@@ -638,6 +653,21 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 </a>
                             </li><li>
                                 <a href="https://twitter.com/Taegus1">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/boot2thrill.webp" type="image/webp">
+                            <img src="images/team/boot2thrill.jpg" alt="boot2thrill"><br>
+                        </picture>
+                        <b>boot2thrill</b><br>
+                        <span>Head of</span> <span>Community</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/boot_2_thrill">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>
@@ -655,21 +685,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 <a href="https://github.com/bomb-on">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/boot2thrill.webp" type="image/webp">
-                            <img src="images/team/boot2thrill.jpg" alt="boot2thrill"><br>
-                        </picture>
-                        <b>boot2thrill</b><br>
-                        <span>Public Relations</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/boot_2_thrill">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
                                 </a>
                             </li>
                         </ul>
