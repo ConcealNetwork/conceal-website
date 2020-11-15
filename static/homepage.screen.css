@@ -488,7 +488,7 @@ footer a:hover {
 main > section,
 body > footer {
 	overflow:hidden;
-	position:relative;
+	position:relative;  
 	padding:6em 4em;
 	background:linear-gradient(
 		to bottom,
@@ -1844,10 +1844,6 @@ body > footer .socialLinks a:hover {
   z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
 }
 
-#content {
-  display: none;
-}
-
-.loaded #content {
-  display: block;
+body {
+  visibility: hidden;
 }

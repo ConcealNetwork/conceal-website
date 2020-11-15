@@ -185,13 +185,9 @@
 	d.body.removeChild(ch);
 
 	// create loading animation
-	var
-		loaderDivWrapper = make('div', {
-			id : 'loader-wrapper',
-			content : make('b'),
-			firstIn : d.body,
-		}),
-		animSheet = make('style', {
+  document.getElementsByTagName("BODY")[0].style.visibility = "visible";
+	var loaderDivWrapper = document.getElementById('loader-wrapper');
+ 	var	animSheet = make('style', {
 			content : '\
 				#loader-wrapper,\
 				#loader-wrapper * {\
@@ -245,8 +241,6 @@
 			',
 			lastIn : d.head
 		});
-		
-	var loaderDiv = make('div', { lastIn : loaderDivWrapper, id : 'loader' });
 
 	function loaderTransitionEnd(e) {
 		e.currentTarget.setAttribute('data-transitionActive', '0');
