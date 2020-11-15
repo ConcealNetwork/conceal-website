@@ -5,8 +5,6 @@
 	// Configuration options
 
 	var
-		loaderTileSize = 64, // scaled to 16 == 1em
-		loaderAnimPerFrame = 3, // scaled to 144 tiles
 		loaderMinTime = 2000, // ms
 		loaderAnimTime = 50, // ms between updates
 		scroll = {
@@ -185,40 +183,34 @@
 
 	// remove scale check and adjust any values
 	d.body.removeChild(ch);
-	loaderTileSize *= emScale;
 
 	// create loading animation
 	var
-		loaderDiv = make('div', {
-			id : 'jsLoader',
+		loaderDivWrapper = make('div', {
+			id : 'loader-wrapper',
 			content : make('b'),
 			firstIn : d.body,
 		}),
-		tileSizeHorz = loaderTileSize / w.innerWidth,
-		tileSizeVert = loaderTileSize / w.innerHeight,
-		tilesHorz = Math.floor(1 / tileSizeHorz),
-		tilesVert = Math.floor(1 / tileSizeVert),
-		tilesTotal = tilesHorz * tilesVert,
 		animSheet = make('style', {
 			content : '\
-				#jsLoader,\
-				#jsLoader * {\
+				#loader-wrapper,\
+				#loader-wrapper * {\
 					margin:0;\
 					padding:0;\
 					box-sizing:border-box;\
 				}\
-				#jsLoader,\
-				#jsLoader span,\
-				#jsLoader b,\
-				#jsLoader i,\
-				#jsLoader i:after {\
+				#loader-wrapper,\
+				#loader-wrapper span,\
+				#loader-wrapper b,\
+				#loader-wrapper i,\
+				#loader-wrapper i:after {\
 					position:absolute;\
 					top:0;\
 					left:0;\
 					width:100%;\
 					height:100%;\
 				}\
-				#jsLoader {\
+				#loader-wrapper {\
 					position:fixed;\
 					z-index:9999;\
 					display:flex;\
@@ -226,35 +218,16 @@
 					flex-wrap:wrap;\
 					background:#000;\
 				}\
-				#jsLoader span {\
-					z-index:999;\
-					display:flex;\
-					justify-content:center;\
-					align-items:center;\
-					font:bold 2em/1.2em arial,helvetica,sans-serif;\
-					color:#FFF;\
-					text-shadow:\
-						0 -0.125em 0.125em #000,\
-						0 0.125em 0.125em #000,\
-						-0.25em 0 0.5em #000,\
-						0.25em 0 0.5em #000;\
-				}\
-				#jsLoader div {\
-					position:relative;\
-					flex:1 0 auto;\
-					width:' + tileSizeHorz * 100 + 'vw;\
-					perspective:' + tileSizeHorz * 150 + 'vw;\
-				}\
-				#jsLoader i:after,\
-				#jsLoader b {\
+				#loader-wrapper i:after,\
+				#loader-wrapper b {\
 					background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAwIDIwMDAiPjxkZWZzPjxzdHlsZT5wb2x5Z29ue2ZpbGw6Izg4ODt9cG9seWdvbjpudGgtY2hpbGQoM24rMSl7ZmlsbDojNjY2O31wb2x5Z29uOm50aC1jaGlsZCgzbisyKXtmaWxsOiM5OTk7fXBvbHlnb246bGFzdC1jaGlsZHtmaWxsOiM3Nzc7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5DTiBHcmF5IFNvbGlkPC90aXRsZT48cG9seWdvbiBwb2ludHM9Ijk4NCAxNTU4LjQxIDk4NCAxNjc4LjYyIDY5Ny43MSAxNTY0LjExIDY2NS43MSAxNTUxLjMxIDU0NS40NSAxNTAzLjIgNTQ1LjQ1IDUzNS4yIDYwOC44OSA1NjguNzkgNjQwLjI2IDU4NS40IDY2NS43MSA1OTguODggNjY1LjcxIDE0MzEuMTYgNjc0LjcgMTQzNC43NiA2OTcuNzEgMTQ0My45NSA4MTguMTggMTQ5Mi4xMyA5ODQgMTU1OC40MSIvPjxwb2x5Z29uIHBvaW50cz0iMTQ1NC41NSAxMzgzLjA5IDE0NTQuNTUgMTUwMy4yIDEyNDYuMzMgMTU4Ni40OCAxMDE2IDE2NzguNjIgMTAxNiAxNTU4LjQxIDEyNDYuMzMgMTQ2Ni4zNCAxNDU0LjU1IDEzODMuMDkiLz48cG9seWdvbiBwb2ludHM9IjE0NTQuNTUgNTAzLjE5IDEzNTYuNyA1NTUuMDEgMTM0MS4zIDU2My4xNyAxMzI1LjMgNTcxLjY0IDEzMDkuMyA1NjUuMjUgMTAwMCA0NDEuNTggODE4LjE4IDUxNC4yNyA2OTcuNzEgNTYyLjQ1IDY3NC43IDU3MS42NCA2NjUuNzEgNTY2Ljg4IDY0My4zIDU1NS4wMSA1NDUuNDcgNTAzLjIgNTQ1LjQ1IDUwMy4xOSA2NjUuNzEgNDU1LjEgNjk3LjcxIDQ0Mi4zIDEwMDAgMzIxLjM4IDEzMDkuMyA0NDUuMSAxMzQxLjMgNDU3Ljg5IDE0NTQuNTUgNTAzLjE5Ii8+PHBvbHlnb24gcG9pbnRzPSI5ODQgNDgwLjMgOTg0IDYwMC41OCA4MzguODggNjU4LjYgODE4LjE4IDY2Ni44OCA4MTguMTggMTMyNi43NyA4MDQuNDUgMTMzNC4wNCA3MDYuNjIgMTM4NS44NiA2OTcuNzEgMTM5MC41NyA2OTcuNzEgNTk0Ljc1IDcwOS40NiA1OTAuMDUgODE4LjE4IDU0Ni41OSA5ODQgNDgwLjMiLz48cG9seWdvbiBwb2ludHM9IjE0NTQuNTUgNTM1LjIgMTQ1NC41NSA2NTUuNjMgMTM0MS4zIDcxNS42MSAxMzQxLjMgNTk1LjE3IDEzNTkuNzQgNTg1LjQgMTM5MS4xMSA1NjguNzkgMTQ1NC41NSA1MzUuMiIvPjxwb2x5Z29uIHBvaW50cz0iMTQxOS43OSAxMzY0LjY3IDEyNDYuMzMgMTQzNC4wMyAxMDAwIDE1MzIuNTEgODE4LjE4IDE0NTkuODIgNzA5LjQ2IDE0MTYuMzUgNzQxLjA0IDEzOTkuNjMgODE4LjE4IDEzNTguNzcgODM4Ljg4IDEzNDcuODEgMTAwMCAxNDEyLjI5IDEyNDYuMzMgMTMxMy43MiAxMjkwLjM1IDEyOTYuMTMgMTI5MC4zNiAxMjk2LjEzIDEzODguMTggMTM0Ny45MyAxNDE5Ljc5IDEzNjQuNjciLz48cG9seWdvbiBwb2ludHM9IjEzMDkuMyA1OTcuNTUgMTMwOS4zIDcxNy44NSAxMTk1LjU1IDY3Mi4zNyAxMTYxLjEyIDY1OC42IDEwMTYgNjAwLjU4IDEwMTYgNDgwLjMgMTI5MC41NCA1OTAuMDUgMTMwOS4zIDU5Ny41NSIvPjwvc3ZnPg==") center center no-repeat;\
 					background-size:auto 100%;\
 					opacity:0.15;\
 				}\
-				#jsLoader i:after {\
+				#loader-wrapper i:after {\
 					content:"";\
 				}\
-				#jsLoader i {\
+				#loader-wrapper i {\
 					background-color:rgba(255,175,0,0.6);\
 					backface-visibility:hidden;\
 					transition:transform 0s;\
@@ -263,75 +236,28 @@
 					border:1px solid #850;\
 					transform-style:preserve-3d;\
 				}\
-				#jsLoader .on *,\
-				#jsLoader .off * {\
-					transition:transform 1.5s;\
-				}\
-				#jsLoader div.on i {\
-					transform:rotateY(180deg);\
-				}\
-				#jsLoader div.off i {\
-					transform:rotateY(360deg);\
-				}\
-				#jsLoader.loaded {\
+				#loader-wrapper.loaded {\
 					transition:all 1s;\
 					transform:scale(2);\
 					opacity:0;\
 					background:transparent;\
 				}\
-				#jsLoader.loaded b {\
-					transition:all 1s;\
-					opacity:0;\
-				}\
 			',
 			lastIn : d.head
 		});
 		
-	make('span', { lastIn : loaderDiv, content:'loading' });
-
-	loaderAnimPerFrame = Math.ceil(loaderAnimPerFrame * tilesTotal / 144);
+	var loaderDiv = make('div', { lastIn : loaderDivWrapper, id : 'loader' });
 
 	function loaderTransitionEnd(e) {
 		e.currentTarget.setAttribute('data-transitionActive', '0');
 	} // loaderTransitionEnd
 
-	for (var j = 0; j < tilesTotal; j++) {
-		var i = make('i', {
-			'data-transitionActive' : '0',
-			lastIn : make('div', { lastIn : loaderDiv })
-		});
-		i.addEventListener('webkitTransitionEnd', loaderTransitionEnd, false);
-		i.addEventListener('transitionend', loaderTransitionEnd, false);
-	}
-
-	var loaderPanels = d.querySelectorAll('#jsLoader > div');
-	
-	function flipAnimationFrame(timeStamp) {
-		var 
-			panel = loaderPanels[Math.floor(Math.random() * tilesTotal)],
-			anim = panel.firstElementChild;
-		if (anim.getAttribute('data-transitionActive') == '0') {
-			if (panel.__classExists('on')) {
-				anim.setAttribute('data-transitionActive', '1');
-				panel.__class = '-on +off';
-			} else if (panel.__classExists('off')) {
-				anim.setAttribute('data-transitionActive', '0');
-				panel.__class = '-off';
-			} else {
-				anim.setAttribute('data-transitionActive', '1');
-				panel.__class = '+on';
-			}
-		};
-	} // flipAnimationFrame
-	
 	function loaderAnimationFrame() {
 		if (windowLoaded && (loaderStartTime > loaderMinTime)) {
-			for (var i = 0, panel; panel = loaderPanels[i]; i++) panel.__class = '+on -off';
 			setTimeout(loaderDone, 1100);
 			setTimeout(scrollTestAnimated, 500);
-			loaderDiv.__class = '+loaded';
+			document.getElementsByTagName('body')[0].__class = '+loaded';
 		} else {
-			for (var i = 0; i < loaderAnimPerFrame; i++) flipAnimationFrame();
 			setTimeout(loaderAnimationFrame, loaderAnimTime);
 		}
 		loaderStartTime += loaderAnimTime;
@@ -467,7 +393,7 @@
 	} // for anchors
 	
 	function loaderDone() {
-		loaderDiv.parentNode.removeChild(loaderDiv);
+		loaderDivWrapper.parentNode.removeChild(loaderDivWrapper);
 		w.addEventListener('resize', scrollTestAnimated, false);
 		w.addEventListener('scroll', scrollTestAnimated, false);
 		/*var langScript = document.createElement('script');
