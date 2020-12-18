@@ -352,30 +352,30 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <h3>Quick Start</h3>
                 <div class="codeBlocks">
                     <div>
-                        <h4>XMRStak & XMRig</h4>
-                        <pre><code>"pools": [
-                {
-                    "pool_address": "us.pool.conceal.network:3333",
-                    "wallet_address": "YOUR_ADDRESS",
-                    "rig_id": "x",
-                    "pool_password": "x",
-                    "nicehash": false,
-                    "use_tls" : false, /* Set to true if using an SSL port */
-                    "tls_fingerprint": "",
-                    "pool_weight": 1
-                }
-            ],
-            "currency" : "cryptonight_conceal",</code></pre>
+                        <h4>XMRStak</h4>
+                        <pre><code>"pool_list": [
+  {
+      "pool_address": "pool.conceal.community:3333",
+      "wallet_address": "YOUR_WALLET_ADDRESS",
+      "rig_id": "YOUR_WORKER_NAME",
+      "pool_password": "x",
+      "use_nicehash": false,
+      "use_tls": false,
+      "tls_fingerprint": "",
+      "pool_weight": 1
+  },
+],
+"currency": "cryptonight_gpu",</code></pre>
                     </div><div>
                         <h4>TeamRedMiner</h4>
-                        <pre><samp>teamredminer.exe -o stratum+tcp://us.pool.conceal.network:3333 -u YOUR_ADDRESS -p x -a cn_conceal</samp></pre>
+                        <pre>Pending support...</pre>
                     </div><div>
-                        <h4>XMRigCC</h4>
-                        <pre><samp>xmrigDaemon.exe -o us.pool.conceal.network:3333 -u YOUR_ADDRESS -p x -a cryptonight --variant conceal -k</samp></pre>
+                        <h4>SRBMiner</h4>
+                        <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.community:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
-                    <span>The easiest way to get CCX is to mine with CPU\'s or \'s using one of the many miners that support CCX, or use our Conceal Miner.  Check out our</span>
+                    <span>The easiest way to get CCX is to mine with CPU\'s or GPU\'s using one of the miners that support CCX. Check out our</span>
                     <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
                     <span>for more detailed information about mining CCX.</span>
                 </p>
@@ -461,9 +461,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </p>
                     </div><div>
                         <time><span>Feb</span> 2019</time>
-                        <h3>Custom Algorithm</h3>
+                        <h3>CN-GPU mining algorithm</h3>
                         <p>
-                            The Cryptonote Conceal Proof-of-Work algorithm is released to be FPGA, ASIC & Nicehash resistant.  Power to the little people!
+                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant.  Power to the little people!
                         </p>
                     </div><div>
                         <time><span>Mar</span> 2019</time>
