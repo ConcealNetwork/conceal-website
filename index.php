@@ -662,7 +662,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/boot2thrill.webp" type="image/webp">
+                            <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/boot2thrill.jpg" alt="boot2thrill"><br>
                         </picture>
                         <b>boot2thrill</b><br>
