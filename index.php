@@ -526,13 +526,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Send messages to other users that self destruct after given time.
                         </p>
                     </div><div>
-                        <time><span>Q4</span> 2020</time>
+                        <time><span>Q1</span> 2021</time>
                         <h3>Conceal Swap</h3>
                         <p>
                             Swap your CCX to wCCX and back the other way with our swap tool.
                         </p>
                     </div><div>
-                        <time><span>Q4</span> 2020</time>
+                        <time>TBA</time>
                         <h3>Conceal Live</h3>
                         <p>
                             Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
@@ -552,12 +552,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Conceal Card</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Conceal Platform</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Collateralized Loans</h3>
                     </div>
                 <!-- .timeLine --></div>
             </div>
