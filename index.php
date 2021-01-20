@@ -93,7 +93,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li>
                     <li class="navStandalone"><a href="#contact">Contact</a></li>
                     <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                    <li class="navStandalone"><a href="https://conceal.network/crowdfunding/index.html">Buy wCCX</a></li>
+                    <li class="navStandalone"><a href="https://app.uniswap.org/#/swap">Buy wCCX</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -321,6 +321,16 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
                             MAC CLI
                         </a>
+                    </li><li>
+                        <i class="fab fa-windows"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - WINDOWS</a>
+                    </li><li>
+                        <i class="fab fa-linux"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - LINUX</a>
+                    </li>
+                    </li><li>
+                        <i class="fab fa-apple"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - MAC</a>
                     </li><li>
                         <i class="fab fa-android"></i><br>
                         <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile">
@@ -606,8 +616,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/zemanel.webp" type="image/webp">
-                            <img src="images/team/zemanel.jpg" alt="zemanel"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>ZeMaNel</b><br>
                         <span>Head of</span> <span>Technology</span>
@@ -636,8 +646,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/taegus.webp" type="image/webp">
-                            <img src="images/team/taegus.png" alt="taegus"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>Taegus</b><br>
                         <span>Head of</span> <span>Development</span>
@@ -657,7 +667,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li><li>
                         <picture>
                             <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/boot2thrill.jpg" alt="boot2thrill"><br>
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>boot2thrill</b><br>
                         <span>Head of</span> <span>Community</span>
