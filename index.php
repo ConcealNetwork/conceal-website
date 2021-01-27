@@ -58,7 +58,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="banking/">Banking</a></li>
+                            <li><a href="banking/">DeFi</a></li>
                             <li><a href="https://conceal.cloud">Cloud</a></li>
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
@@ -155,7 +155,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         
         <section>
             <div>
-                <h2><span>Banking</span> <span>on the Blockchain</span></h2>
+                <h2><span>Privacy</span> <span>Protected DeFi</span></h2>
                 <p>
                     Decentralized Finance, Private Transactions &amp; Encrypted Messaging
                 </p>
@@ -208,7 +208,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
-                        <h3><span>Banking</span>: <span>Deposits</span></h3>
+                        <h3><span>DeFi</span>: <span>Deposits</span></h3>
                         <p>
                             Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
                         </p>
@@ -455,7 +455,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Jun</span> 2018</time>
                         <h3>Encrypted Messaging & Deposits</h3>
                         <p>
-                            Innovative banking features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched.  Wow!
+                            Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched.  Wow!
                         </p>
                     </div><div>
                         <time><span>Jul</span> 2018</time>
@@ -576,8 +576,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="miniProfiles">
                     <li>
                         <picture>
-                            <source srcset="images/team/krypt0x.webp" type="image/webp">
-                            <img src="images/team/krypt0x.jpg" alt="krypt0x"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>krypt0x (aka 0x)</b><br>
                         <span>Head of</span> <span>Operations</span>
@@ -596,8 +596,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/katz.webp" type="image/webp">
-                            <img src="images/team/katz.jpg" alt="katz"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>katz</b><br>
                         <span>Head of</span> <span>Research</span>
@@ -631,8 +631,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/okanist.webp" type="image/webp">
-                            <img src="images/team/okanist.png" alt="okanist"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>okanist (aka Okan)</b><br>
                         <span>Head of</span> <span>Marketing & BD</span>
@@ -681,8 +681,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/bombon.webp" type="image/webp">
-                            <img src="images/team/bombon.jpg" alt="bombon"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>bomb-on</b><br>
                         <span>Developer</span>
@@ -696,8 +696,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/ThrownLemon.webp" type="image/webp">
-                            <img src="images/team/ThrownLemon.jpg" alt="ThrownLemon"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>ThrownLemon</b><br>
                         <span>Developer</span>
@@ -711,8 +711,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <picture>
-                            <source srcset="images/team/axvultis.webp" type="image/webp">
-                            <img src="images/team/axvultis.jpg" alt="AxVultis"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>AxVultis</b><br>
                         <span>Developer</span>
@@ -736,8 +736,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="miniProfiles">
                     <li>
                       <picture>
-                          <source srcset="images/team/madmax.webp" type="image/webp">
-                          <img src="images/team/madmax.jpg" alt="madmax"><br>
+                          <source srcset="images/team/unknown.webp" type="image/webp">
+                          <img src="images/team/unknown.jpg" alt="unknown"><br>
                       </picture>
                       <b>MaDMAx</b><br>
                       <span>Economics Consultant</span>
@@ -751,8 +751,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       </ul>
                       </li><li>
                         <picture>
-                            <source srcset="images/team/alexstanford.webp" type="image/webp">
-                            <img src="images/team/alexstanford.jpg" alt="Alex Stanford"><br>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>HashOfZorro</b><br>
                         <span>Digital Security Consultant</span>
@@ -781,25 +781,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="miniProfiles">
                     <li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img class="unknown" src="images/team/unknown.jpg" alt="Lithy / リーチ"><br>
-                        </picture>
-                        <b>Lithy / リーチ</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/Lithe-Project">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>GitHub</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/LithyRiolu">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
