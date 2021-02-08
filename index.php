@@ -673,7 +673,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <span>Head of</span> <span>Community</span>
                         <ul>
                             <li>
-                                <a href="https://twitter.com/boot_2_thrill">
+                                <a href="https://twitter.com/boot2thrill">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>
