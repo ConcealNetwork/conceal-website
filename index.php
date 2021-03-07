@@ -444,6 +444,40 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #buyingCCX --></section>
     
+        <section id="buyingwCCXETH">
+            <div>
+                <h2>
+                    <span>Buying</span> <span>wCCX</span>
+                    <span>Ethereum</span>
+                </h2>
+                <ul class="majorLinks">
+                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
+                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                </ul>
+                <a href="https://conceal.network/community/#exchanges">
+                    <i class="fa fa-plus"></i>
+                    <span>More</span>
+                </a>
+            </div>
+        <!-- #buyingwCCXETH --></section>
+        <section id="buyingwCCXBNB">
+            <div>
+                <h2>
+                    <span>Buying</span> <span>wCCX</span>
+                    <span>Binance Smart Chain</span>
+                </h2>
+                <ul class="majorLinks">
+                    <li><a href="https://1inch.exchange/#/wCCX/BNB">1Inch</a></li>
+                    <li><a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841">Pancakeswap</a></li>
+                    <li><a href="https://www.bakeryswap.org/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841">Bakeryswap</a></li>
+                </ul>
+                <a href="https://conceal.network/community/#exchanges">
+                    <i class="fa fa-plus"></i>
+                    <span>More</span>
+                </a>
+            </div>
+        <!-- #buyingwCCXBNB --></section>
+
         <section id="roadmap">
             <div>
                 <h2>

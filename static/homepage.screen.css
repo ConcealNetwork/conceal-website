@@ -786,7 +786,7 @@ main > section p {
 	background:#302C28;
 }
 
-#buyingCCX {
+#buyingCCX, #buyingwCCXBNB, #buyingwCCXETH {
 	text-align:center;
 }
 
