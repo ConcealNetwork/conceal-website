@@ -1384,7 +1384,7 @@ body > footer .socialLinks a:hover {
 	}
 }
 
-@media (max-width:44em), (max-height:28.5em) {
+@media (max-width:60em), (max-height:28.5em) {
 	h1 {
 		width:3em;
 		height:2.5em;

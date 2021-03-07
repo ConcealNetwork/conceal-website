@@ -94,6 +94,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li class="navStandalone"><a href="#contact">Contact</a></li>
                     <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
                     <li class="navStandalone"><a href="https://app.uniswap.org/#/swap">Buy wCCX</a></li>
+                    <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -137,6 +138,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://bitcointalk.org/index.php?topic=5086106">
                             <i class="fab fa-bitcoin"></i>
                             <span>BitcoinTalk</span>
+                        </a>
+                        </li><li>
+                        <a href="https://bridge.conceal.network">
+                            <i class="fas fa-archway"></i>
+                            <span>Bridge</span>
                         </a>
                     </li>
                 <!-- #mainMenu --></ul>
