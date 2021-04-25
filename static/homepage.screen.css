@@ -1847,3 +1847,8 @@ body > footer .socialLinks a:hover {
 body {
   visibility: hidden;
 }
+
+#helpdeskButton {
+  max-width: 300px;
+  margin: auto;
+}

@@ -91,7 +91,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#mining">Mining</a></li>
                         </ul>
                     </li>
-                    <li class="navStandalone"><a href="#contact">Contact</a></li>
+                    </li><li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Contact</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+							<li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#helpdesk">Helpdesk</a>
+                        </ul>
+                    </li>
                     <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
                     <li class="navStandalone"><a href="https://app.uniswap.org/#/swap">Buy wCCX</a></li>
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
@@ -866,6 +874,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </form>
             </div>
         <!-- #contact --></section>
+        <section id="helpdesk">
+            <div>
+				<h2>
+					<span>Do you have a problem?</span>
+					<span>Use our helpdesk</span>
+				</h2>
+                <ul class="majorLinks">
+                    <li><a href="https://conceal.network/support/" id="helpdeskButton"><span>Send Ticket</span></a></li>
+                </ul>
+            </div>
+        <!-- #helpdesk --></section>
     </main>
     
     <footer>
