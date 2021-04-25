@@ -45,13 +45,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
     <div id="top">
         <header>
-    
+
             <h1>Conceal Network</h1>
-    
+
             <div id="mainMenuModal"><a href="#" class="modalClose"></a><div>
-                
+
                 <input type="radio" id="toggle_submenusOff" name="toggle_submenu" lass="toggle" hidden>
-                
+
                 <ul id="mainMenu">
                     <li>
                         <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
@@ -101,7 +101,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li>
                     <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                    <li class="navStandalone"><a href="https://app.uniswap.org/#/swap">Buy wCCX</a></li>
+                    <li class="navStandalone"><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Buy wCCX</a></li>
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
                 </ul>
                 <ul id="socialMenu">
@@ -154,10 +154,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </a>
                     </li>
                 <!-- #mainMenu --></ul>
-                
+
             </div><!-- #mainMenuModal --></div>
             <a href="#mainMenuModal" class="mainMenuOpen"></a>
-            
+
             <div class="header-language">
                 <a id="langSelector" href="#">
                     <i class="fas fa-language fa-2x align-middle"></i>
@@ -166,7 +166,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <div id="langDropdown" class="dropdown-content"></div>
             </div>
         </header>
-        
+
         <section>
             <div>
                 <h2><span>Privacy</span> <span>Protected DeFi</span></h2>
@@ -186,14 +186,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
             <a href="#features" class="moreLink"></a>
         </section>
-        
+
     <!-- #top --></div>
-    
+
     <a href="#top" id="socialMenuBackToTop">
         <i class="fas fa-arrow-up"></i>
         <span>Back to Top</span>
     </a>
-    
+
     <main>
 
         <section id="features">
@@ -218,7 +218,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </p><p>
                     Conceal Network is a community driven, truly decentralized blockchain bank accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate for free.
                 </p>
-    
+
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
@@ -234,7 +234,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </p>
                     </section>
                 <!-- .iconSubsections --></div>
-    
+
                 <form id="compoundInterestCalc">
                     <h3>Compound Interest Calculator</h3>
                     <noscript>
@@ -302,11 +302,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <tbody></tbody>
                     </table><!-- .tableContain --></div>
                 <!-- #compoundInterestCalc --></form>
-                
+
             </div>
-    
+
         <!-- #features --></section>
-    
+
         <section id="wallets">
             <div>
                 <h2><span>Using Conceal</span> <span>Wallets</span></h2>
@@ -364,15 +364,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
         <!-- #wallets --></section>
-    
+
         <section id="mining">
             <div>
-            
+
                 <h2>
                     <span>Getting CCX</span>
                     <span>Mining</span>
                 </h2>
-    
+
                 <h3>Quick Start</h3>
                 <div class="codeBlocks">
                     <div>
@@ -433,7 +433,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </table><!-- .tableContain --></div>
             </div>
         <!-- #mining --></section>
-    
+
         <section id="buyingCCX">
             <div>
                 <h2>
@@ -451,7 +451,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </a>
             </div>
         <!-- #buyingCCX --></section>
-    
+
         <section id="buyingwCCXETH">
             <div>
                 <h2>
@@ -489,7 +489,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="roadmap">
             <div>
                 <h2>
-                    <span>Milestones</span> &amp;</span> 
+                    <span>Milestones</span> &amp;</span>
                     <span>Roadmap</span>
                 </h2>
                 <div class="timeLine">
@@ -614,7 +614,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <!-- .timeLine --></div>
             </div>
         <!-- #roadmap --></section>
-    
+
         <section id="theTeam">
             <div>
                 <h2>
@@ -775,7 +775,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </ul>
             </div>
         <!-- #theTeam --></section>
-    
+
         <section id="consultants">
             <div>
                 <h2>
@@ -833,7 +833,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </ul>
             </div>
         <!-- #community --></section>
-    
+
         <section id="contact">
             <div>
                 <form action="newcontact.php" id="contact_form" method="post">
@@ -865,7 +865,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <div class="submitsAndHiddens">
                         <button>Send</button>
                         <input
-                            type="hidden" 
+                            type="hidden"
                             id="contact_hash"
                             name="contactHash"
                             value="', hashCreate('contactHash'), '"
@@ -886,7 +886,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #helpdesk --></section>
     </main>
-    
+
     <footer>
         <div>
             <h2>WHERE TO FIND US</h2>
@@ -943,13 +943,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <a href="#top">Back to Top</a>
         </div>
     </footer>
-    
+
     <script src="static/homepage.js?v=1"></script>
     <script src="static/contact.js?v=1"></script>
     <script src="js/language.js?v=1"></script>
     <script src="js/pools.js?v=1"></script>
     <script src="js/calc.js?v=1"></script>
-    
+
     </body></html>';
-    
+
 ?>
