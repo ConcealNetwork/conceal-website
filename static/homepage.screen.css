@@ -1852,3 +1852,14 @@ body {
   max-width: 300px;
   margin: auto;
 }
+
+.roadmapDivider {
+  margin-top: 100px;
+  margin-bottom: 0px !important;
+}
+
+.dividerFirst {
+  border: 1px dashed orange;
+  width: 100% !important;
+  left: 0 !important;
+}

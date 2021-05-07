@@ -589,8 +589,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <p>
                             Swap your CCX to wCCX and back the other way with our swap tool.
                         </p>
-                    </div><div>
-                        <time>TBA</time>
+                    </div>
+                    <div class="roadmapDivider dividerFirst"></div>
+                    <div class="roadmapDivider"></div>
+                    <div>
+                        <time><span>Q2</span> 2021</time>
                         <h3>Conceal Live</h3>
                         <p>
                             Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
