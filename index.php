@@ -598,6 +598,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <p>
                             Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
                         </p>
+                    </div><div>
+                        <time>TBA</time>
+                        <h3>Stable Deposits</h3>
+                        <p>
+                            Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
+                        </p>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Conceal Vault</h3>
