@@ -64,6 +64,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="id/">ID</a></li>
                             <li><a href="messaging/">Messaging</a></li>
                             <li><a href="mobile/">Mobile</a></li
+                            <li><a href="clive/">C-Live</a></li
                             >
                             <li><a href="pay/">Pay</a></li>
                         </ul>
@@ -175,8 +176,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </p>
                 <ul class="majorLinks">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
-                    <li><a href="mobile/"><i class="fa fa-mobile"></i> <span>Mobile</span></a></li>
-                    <li><a href="#wallets"><i class="fa fa-desktop"></i> <span>Desktop</span></a></li>
+                    <li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>
+                    <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
                     <li><a href="#roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>

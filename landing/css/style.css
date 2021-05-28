@@ -949,6 +949,33 @@ img.rounded {
   background-position-y:-1002px;
   height:265px;
 }
+.landingCLiveSS {
+  width:auto;
+  max-width:300px;
+  height: 650px;
+  margin:0 auto;
+  border-radius:32px;
+  border-bottom:2px solid #AAA;
+  box-shadow:0 3px #000;
+}
+.landingCLiveS1 {
+  background:url('../images/clive_01.jpg');	
+}
+.landingCLiveS2 {
+  background:url('../images/clive_02.jpg');	
+}
+.landingCLiveS3 {
+  background:url('../images/clive_03.jpg');	
+}
+.landingCLiveS4 {
+  background:url('../images/clive_04.jpg');	
+}
+.landingCLiveS5 {
+  background:url('../images/clive_05.jpg');	
+}
+.landingCLiveS6 {
+  background:url('../images/clive_06.jpg');	
+}
 #labsHeading {
   padding:4rem 0 0;
 }
