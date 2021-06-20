@@ -97,7 +97,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Contact</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-							<li><a href="#contact">Contact Us</a></li>
+							<li><a href="#helpdesk">Contact Us</a></li>
                             <li><a href="#helpdesk">Helpdesk</a>
                         </ul>
                     </li>
@@ -844,50 +844,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #community --></section>
 
-        <section id="contact">
-            <div>
-                <form action="newcontact.php" id="contact_form" method="post">
-                    <h2>
-                        <span>We\'re Friendly</span>
-                        <span>Contact us</span>
-                    </h2>
-                    <fieldset>
-                        <label>
-                            <span>Your Name</span><br>
-                            <input type="text" id="contact_name" name="name" required><br>
-                        </label><label>
-                        <span>Your E-Mail Address</span><br>
-                            <input type="email" id="contact_email" name="email" required><br>
-                        </label><label>
-                        <span>Subject</span><br>
-                            <input type="text" id="contact_subject" name="subject" required><br>
-                        </label><label>
-                        <span>Message</span><br>
-                            <textarea id="contact_message" name="message" rows="6" required></textarea>
-                        </label>
-                        <div id="termsWrapper">
-                          <label>
-                            <span>Do you agree to the terms and conditions of using our services?</span><br>
-                            <input type="checkbox" name="agreeTerms" value="yes">
-                          </label>
-                        </div>
-                    </fieldset>
-                    <div class="submitsAndHiddens">
-                        <button>Send</button>
-                        <input
-                            type="hidden"
-                            id="contact_hash"
-                            name="contactHash"
-                            value="', hashCreate('contactHash'), '"
-                        >
-                    <!-- .submitsAndHiddens --></div>
-                </form>
-            </div>
-        <!-- #contact --></section>
         <section id="helpdesk">
             <div>
 				<h2>
-					<span>Do you have a problem?</span>
+					<span>Do you have a problem or need to contact us?</span>
 					<span>Use our helpdesk</span>
 				</h2>
                 <ul class="majorLinks">
