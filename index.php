@@ -88,6 +88,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="community/">Community</a>
                             <li><a href="https://conceal.network/wiki/doku.php?id=start">Docs</a>
                             <li><a href="community/#exchanges">Exchanges</a></li>
+                            <li><a href="community/#Ethereum">wCCX LP pairs</a></li>
                             <li><a href="https://explorer.conceal.network">Explorer</a></li>
                             <li><a href="#mining">Mining</a></li>
                         </ul>
