@@ -782,6 +782,52 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 </a>
                             </li>
                         </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>Mannan</b><br>
+                        <span>Community Manager</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/???">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>LolitaLollipop</b><br>
+                        <span>Community Manager</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/???">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>Quinten</b><br>
+                        <span>Marketing</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/???">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         <!-- #theTeam --></section>
