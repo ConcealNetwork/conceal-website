@@ -443,6 +443,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Exchanges</span>
                 </h2>
                 <ul class="majorLinks">
+                    <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
                     <li><a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX">STEX</a></li>
                     <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
@@ -792,7 +793,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <span>Community Manager</span>
                         <ul>
                             <li>
-                                <a href="https://twitter.com/???">
+                                <a href="https://twitter.com/CryptolordTG">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>
