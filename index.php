@@ -834,51 +834,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #theTeam --></section>
 
-        <section id="consultants">
-            <div>
-                <h2>
-                    <span>Consultants</span>
-                </h2>
-                <ul class="miniProfiles">
-                    <li>
-                      <picture>
-                          <source srcset="images/team/unknown.webp" type="image/webp">
-                          <img src="images/team/unknown.jpg" alt="unknown"><br>
-                      </picture>
-                      <b>MaDMAx</b><br>
-                      <span>Economics Consultant</span>
-                      <ul>
-                          <li>
-                              <a href="https://twitter.com/HyperMadMax">
-                                  <i class="fab fa-twitter teamLink"></i>
-                                  <span>Twitter</span>
-                              </a>
-                          </li>
-                      </ul>
-                      </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>HashOfZorro</b><br>
-                        <span>Digital Security Consultant</span>
-                        <ul><li>
-                            <a href="https://github.com/alexstanford">
-                                <i class="fab fa-github teamLink"></i>
-                                <span>Github</span>
-                            </a>
-                            </li><li>
-                                <a href="https://twitter.com/alexstanford">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        <!-- #community --></section>
-
         <section id="community">
             <div>
                 <h2>
@@ -887,6 +842,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="miniProfiles">
                     <li>
+						<picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>This could be you...</b><br>
+                        <span>Become a part of the project</span>
                     </li>
                 </ul>
             </div>
@@ -956,7 +917,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         </div><div>
             <hr>
             <a href="tc.html">T&amp;C</a><br>
-            &copy; 2018-2020 <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
+            &copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
             <br>
             <a href="#top">Back to Top</a>
         </div>

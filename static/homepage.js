@@ -185,7 +185,7 @@
 	d.body.removeChild(ch);
 
 	// create loading animation
-  document.getElementsByTagName("BODY")[0].style.visibility = "visible";
+    document.getElementsByTagName("BODY")[0].style.visibility = "visible";
 	var loaderDivWrapper = document.getElementById('loader-wrapper');
  	var	animSheet = make('style', {
 			content : '\
@@ -387,6 +387,7 @@
 	} // for anchors
 	
 	function loaderDone() {
+		document.getElementById('crFullYear').innerHTML = new Date().getFullYear();
 		loaderDivWrapper.parentNode.removeChild(loaderDivWrapper);
 		w.addEventListener('resize', scrollTestAnimated, false);
 		w.addEventListener('scroll', scrollTestAnimated, false);
