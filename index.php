@@ -695,7 +695,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>okanist (aka Okan)</b><br>
-                        <span>Head of</span> <span>Marketing & BD</span>
+                        <span>Head of</span> <span>Business Development</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/okansariirmak">
@@ -719,21 +719,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                 </a>
                             </li><li>
                                 <a href="https://twitter.com/Taegus1">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>boot2thrill</b><br>
-                        <span>Head of</span> <span>Community</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/boot2thrill">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>
@@ -805,7 +790,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
                         <b>LolitaLollipop</b><br>
-                        <span>Community Manager</span>
+                        <span>Head of</span> <span>Community</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/???">
@@ -819,8 +804,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
-                        <b>Quinten</b><br>
-                        <span>Marketing</span>
+                        <b>Mr_Kwibs</b><br>
+                        <span>Head of</span> <span>Marketing</span>
                         <ul>
                             <li>
                                 <a href="https://twitter.com/???">
