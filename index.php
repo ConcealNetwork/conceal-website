@@ -103,7 +103,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li>
                     <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                    <li class="navStandalone"><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Buy wCCX</a></li>
+                    <li class="navStandalone"><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
                 </ul>
                 <ul id="socialMenu">
