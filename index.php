@@ -605,7 +605,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Q4</span> 2021</time>
                         <h3>Conceal HUB - Initial release</h3>
                         <p>
-                            Initial release of cross platform appliaction with Wallet module as first supported module
+                            Initial release of cross platform application with Wallet module as first supported module
                         </p>
 					</div><div>
                         <time><span>Q1</span> 2022</time>
@@ -618,12 +618,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h3>Conceal HUB - Version 3</h3>
                         <p>
                             Third release with Bridges module
-                        </p>
-                    </div><div>
-                        <time>TBA</time>
-                        <h3>Stable Deposits</h3>
-                        <p>
-                            Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
                         </p>
                     </div><div>
                         <time>TBA</time>
