@@ -1,0 +1,42 @@
+.articleContent {
+  font-size: 1em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.container {
+  max-width: 1000px !important;
+}
+
+.sallaryImage {
+  text-align: center;
+}
+
+a {
+  color: orange;
+}
+
+a:hover {
+  color: #FFDEAD;
+}
+
+.responsiveImage {
+  width: 100%;
+  height: auto;
+}
+
+.salaryinfo {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.emphasis {
+  color: #FFF;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.bold {
+  font-weight: 900;
+  color: #FFF;
+}

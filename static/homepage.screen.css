@@ -1863,3 +1863,15 @@ body {
   width: 100% !important;
   left: 0 !important;
 }
+
+.url_terms {
+  margin: 0.2em;
+  padding: 0.2em;
+  display: inline;
+}
+
+.vl {
+  border-left: 1px solid orange;
+  display: inline;
+  height: 1em;	
+}

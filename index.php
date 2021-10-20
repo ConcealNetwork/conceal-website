@@ -919,7 +919,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <!-- .socialLinks --></ul>
         </div><div>
             <hr>
-            <a href="tc.html">T&amp;C</a><br>
+			<div>
+			  <span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
+			  <div class="vl"></div>
+			  <span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
+			<div>
             &copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
             <br>
             <a href="#top">Back to Top</a>

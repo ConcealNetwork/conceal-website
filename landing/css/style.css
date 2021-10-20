@@ -1138,3 +1138,23 @@ h4 {
 .exchangeDivider {
   height: 20px;
 }
+
+.text-orange {
+  color: orange;
+}
+
+.url_terms {
+  margin: 0.2em;
+  padding: 0.2em;
+  display: inline;
+}
+
+.url_terms a {
+  color: orange !important;	
+}
+
+.vl {
+  border-left: 1px solid orange;
+  display: inline;
+  height: 1em;	
+}
