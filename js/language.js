@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   function translate(langData) {
     tkeys = document.querySelectorAll('[data-tkey]');
+		
     Array.prototype.forEach.call(tkeys, function(element){
       strKey = element.getAttribute('data-tkey');
       if(langData.hasOwnProperty(strKey)) {
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
     Initialize the language keys
   */
   var getEnglishReq = new XMLHttpRequest();
-  getEnglishReq.open('GET', 'lang/en.json', true);
+  getEnglishReq.open('GET', '/lang/en.json', true);
   getEnglishReq.onload = function() {
     if (this.status >= 200 && this.status < 400) {
       // Success!
@@ -50,20 +51,21 @@ document.addEventListener("DOMContentLoaded", function(){
   var request = new XMLHttpRequest();
 
 
-  request.open('GET', 'inc/language.php', true);
+  request.open('GET', '/inc/language.php', true);
   request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
       // Success!
       var language = JSON.parse(this.response);
 
 
-      request.open('GET', 'lang/selection.json', true);
+      request.open('GET', '/lang/selection.json', true);
       request.onload = function() {
         if (this.status >= 200 && this.status < 400) {
           // Success!
           var selection = JSON.parse(this.response);
 
           for (var key in selection) {
+			
             if (selection.hasOwnProperty(key)) {
 
               var newLangAnchor = document.createElement('a');
@@ -75,8 +77,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 var itemLangCode = this.getAttribute('data-lang');
                 document.cookie = 'CCX_Language=' + itemLangCode + '; max-age=2629800; samesite=strict; secure';
 
-
-                request.open('GET', 'lang/' + itemLangCode + '.json', true);
+                request.open('GET', '/lang/' + itemLangCode + '.json', true);
                 request.onload = function() {
                   if (this.status >= 200 && this.status < 400) {
                     // Success!
@@ -106,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(){
           }
 
 
-          request.open('GET', 'lang/' + language + '.json', true);
+          request.open('GET', '/lang/' + language + '.json', true);
           request.onload = function() {
             if (this.status >= 200 && this.status < 400) {
               // Success!

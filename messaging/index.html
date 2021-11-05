@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="../landing/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" media="screen">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../landing/css/style.css">
@@ -21,10 +22,10 @@
     <header class="site-navbar py-3" role="banner" id="siteHeader">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="col-12 col-md-2" id="logoDiv">
+          <div class="col-12 col-md-1" id="logoDiv">
             <a href="../"></a>
           </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
+          <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="../banking/">BANKING</a></li>
@@ -40,6 +41,13 @@
               </ul>
             </nav>
           </div>
+		  <div class="header-language">
+			<a id="langSelector" href="#">
+			  <i class="fas fa-language fa-2x align-middle"></i>
+			     <span id="selectedLanguage">English</span>
+  		    </a>
+			<div id="langDropdown" class="dropdown-content"></div>
+		  </div>		  
           <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3">
             <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
           </div>
@@ -188,6 +196,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../js/language.js?v=1"></script>
   <script src="../landing/js/main.js"></script>
   <script>
     AOS.init({
