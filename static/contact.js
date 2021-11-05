@@ -1,6 +1,6 @@
 var
   contactForm = document.getElementById('contact_form'),
-  contactFormInputs = contactForm.elements,
+  contactFormInputs = contactForm ? contactForm.elements : null,
   contactFormSubject = document.getElementById('contact_subject'),
   statusMessage = false,
   contactModal, contactInner, contactH2, contactSpinner, contactMessage,
