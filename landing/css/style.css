@@ -497,6 +497,10 @@ h1, h2, h3, h4, h5,
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
+  .site-mobile-menu {
+	background-color: #000;
+	border-left: 1px solid orange;
+  }
   .site-mobile-menu .site-mobile-menu-header {
     width: 100%;
     float: left;
@@ -516,7 +520,7 @@ h1, h2, h3, h4, h5,
         -o-transition: .3s all ease;
         transition: .3s all ease; }
         .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span:hover {
-          color: #25262a; }
+          color: orange; }
     .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo {
       float: left;
       margin-top: 10px;
@@ -528,9 +532,13 @@ h1, h2, h3, h4, h5,
           max-width: 70px; }
         .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a:hover {
           text-decoration: none; }
+	.site-mobile-menu-header {
+		background-color: #000;
+	}
   .site-mobile-menu .site-mobile-menu-body {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+	background-color: #000;
     position: relative;
     padding: 0 20px 20px 20px;
     height: calc(100vh - 52px);
@@ -544,7 +552,7 @@ h1, h2, h3, h4, h5,
       padding: 10px 20px;
       display: block;
       position: relative;
-      color: #212529; }
+      color: #FFF; }
       .site-mobile-menu .site-nav-wrap a:hover {
         color: orange; }
     .site-mobile-menu .site-nav-wrap li {

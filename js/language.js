@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
     if (this.status >= 200 && this.status < 400) {
       // Success!
       var language = JSON.parse(this.response);
+	  console.log(language);
 
 
       request.open('GET', '/lang/selection.json', true);
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 var itemLangCode = this.getAttribute('data-lang');
                 document.cookie = 'CCX_Language=' + itemLangCode + '; max-age=2629800; samesite=strict; secure';
+				console.log(itemLangCode);
 
                 request.open('GET', '/lang/' + itemLangCode + '.json', true);
                 request.onload = function() {
