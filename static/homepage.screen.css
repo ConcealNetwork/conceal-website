@@ -1737,6 +1737,8 @@ body > footer .socialLinks a:hover {
   top: -500px;
 }
 
+/* Loader  related rules */
+
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -1843,6 +1845,10 @@ body > footer .socialLinks a:hover {
 #loader {
   z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
 }
+
+/* End of loader  related rules */
+
+/* Body is not visible at start */
 
 body {
   visibility: hidden;

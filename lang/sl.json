@@ -320,5 +320,17 @@
   "mediaVideosTitle": "Videi",
   "mediaVideosText": "Conceal sparked a lot of videos about it. We tried to gather them in one place for you, so its easily to access information.",
   "mediaUpdatesTitle": "Dnevnik",
-  "mediaUpdatesText": "We are always working to improve our ecoystem. You can read all monthly updates, where we gather all the milestones and changes we made so far."
+  "mediaUpdatesText": "We are always working to improve our ecoystem. You can read all monthly updates, where we gather all the milestones and changes we made so far.",
+  
+  "communityTitle1": "Improving the World",
+  "communityTitle2": "Together",
+  "communityAboutTitle": "Community",
+  "communityAboutText": "Conceal has a huge thriving community of awesome people that are sharing ideas, working together and helping each other regardless of where they are in their Blockchain journey. What are you waiting for?",
+  "communityOfficialTitle": "OFFICIAL",
+  "communityGroupsTitle": "GROUPS",
+  "communityExchangesTitle": "EXCHANGES",
+  "communityETHTitle": "ETHEREUM",
+  "communityBSClTitle": "BINANCE SMART CHAIN",
+  "communityPolygonTitle": "POLYGON",
+  "communityMCAPTitle": "MARKET CAP"
 }
