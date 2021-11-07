@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(){
-
   function translate(langData) {
     tkeys = document.querySelectorAll('[data-tkey]');
 		
@@ -25,16 +24,19 @@ document.addEventListener("DOMContentLoaded", function(){
       var all = document.body.getElementsByTagName("*");
       for (var key of Object.keys(enLangData)) {
         for (var i = 0; i < all.length; i++) {
-          if(!all[i].firstElementChild) {
-            if (all[i].textContent.trim().toUpperCase() === enLangData[key].toUpperCase()) {
-              all[i].setAttribute('data-tkey',key);
-              if(!key.includes('r')) {
-                break;
-              }
+          if(!all[i].firstElementChild) {		
+            if (all[i].textContent.trim().toUpperCase() == enLangData[key].toUpperCase()) {
+			  if (!all[i].getAttribute('data-tkey')) {
+				all[i].setAttribute('data-tkey',key);
+				if(key.charAt(0) != 'r') {
+				  break;
+                }
+			  }
             }
           }
         }
       }
+	  console.log(usedKeys);
     } else {
       // We reached our target server, but it returned an error
     }
