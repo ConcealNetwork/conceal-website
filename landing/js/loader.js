@@ -110,7 +110,7 @@
 
 	function loaderAnimationFrame() {
 		if (windowLoaded && (loaderStartTime > loaderMinTime)) {
-			setTimeout(loaderDone, 1100);
+			setTimeout(loaderDone, 200);
 			document.getElementsByTagName('body')[0].__class = '+loaded';
 		} else {
 			setTimeout(loaderAnimationFrame, loaderAnimTime);
