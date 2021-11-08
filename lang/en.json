@@ -340,5 +340,16 @@
   "communityETHTitle": "ETHEREUM",
   "communityBSClTitle": "BINANCE SMART CHAIN",
   "communityPolygonTitle": "POLYGON",
-  "communityMCAPTitle": "MARKET CAP"
+  "communityMCAPTitle": "MARKET CAP",
+  
+  "landingFooterAbout": "About",
+  "landingFooterTitle": "Conceal.Network is a decentralized blockchain bank, with deposits and investments paying interest rates, without involvement of financial institutions, powered by 100% open source code.",
+  "landingFooterLinks": "Quick Links",
+  "landingFooterLinkWebsite": "Website",
+  "landingFooterLinkDocs": "Documentation",
+  "landingFooterLinkDiscord": "Discord",
+  "landingFooterLinkTelegram": "Telegram",
+  "landingFooterLinkReddit": "Reddit",
+  "landingFooterLinkBTCTalk": "Bitcointalk",
+  "landingFooterConnect": "Connect with Us"
 }  
