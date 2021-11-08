@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Conceal Mobile - Fast, Secure, Feature-Rich Conceal Wallet</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="../landing/fonts/icomoon/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" media="screen">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="../landing/css/style.css">
+  <?php include '../landing/include/topjs.html';?>
 </head><body>
   <div id="loader-wrapper">
     <b></b>
@@ -171,62 +164,7 @@
         </div>
      </div>
     </div>
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-4">
-            <h2 class="footer-heading text-uppercase mb-4">About</h2>
-            <p>Conceal.Network is a decentralized blockchain bank, with deposits and investments paying interest rates, without involvement of financial institutions, powered by 100% open source code.</p>
-          </div>
-          <div class="col-md-3 ml-auto">
-            <h2 class="footer-heading text-uppercase mb-4">Quick Links</h2>
-            <ul class="list-unstyled">
-              <a href="https://conceal.network/" class="p-2">Website</a>
-              <a href="https://conceal.network/wiki/doku.php" class="p-2">Documentation</a>
-              <a href="https://discord.gg/YbpHVSd" class="p-2">Discord</a>
-              <a href="https://t.me/concealnetworkusers" class="p-2">Telegram</a>
-              <a href="https://www.reddit.com/r/ConcealNetwork/" class="p-2">Reddit</a>
-              <a href="https://bitcointalk.org/index.php?topic=5086106" class="p-2">Bitcointalk</a>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h2 class="footer-heading text-uppercase mb-4">Connect with Us</h2>
-            <p>
-              <a href="https://www.facebook.com/concealnetwork" class="p-2 pl-0"><span class="icon-facebook"></span></a>
-              <a href="https://twitter.com/ConcealNetwork" class="p-2"><span class="icon-twitter"></span></a>
-              <a href="https://medium.com/@ConcealNetwork" class="p-2"><span class="icon-medium"></span></a>
-              <a href="https://github.com/ConcealNetwork" class="p-2"><span class="icon-github"></span></a>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="border-top pt-5">
-			  <span class="url_terms text-orange"><a href="tc/index.html">T&amp;C</a></span>
-			  <div class="vl"></div>
-			  <span class="url_terms text-orange"><a href="privacy/index.html">Privacy</a></span>
-              <p>
-                Copyright &copy;
-                2017 - <script>document.write(new Date().getFullYear());</script> All rights reserved | Conceal Network</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <?php include '../landing/include/footer.html';?>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="../landing/js/loader.js"></script>
-  <script src="../js/language.js?v=1"></script>
-  <script src="../landing/js/main.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'slide',
-      once: true
-    });
-  </script>
+  <?php include '../landing/include/bottomjs.html';?>
 </body></html>
