@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function(){
       var enLangData = JSON.parse(this.response);
       var all = document.body.getElementsByTagName("*");
       for (var key of Object.keys(enLangData)) {
-        for (var i = 0; i < all.length; i++) {
-          if(!all[i].firstElementChild) {		
+        for (var i = 0; i < all.length; i++) {          
+          if(!all[i].firstElementChild) {		          
             if (all[i].textContent.trim().toUpperCase() == enLangData[key].toUpperCase()) {
               if (!all[i].getAttribute('data-tkey')) {
                 all[i].setAttribute('data-tkey',key);

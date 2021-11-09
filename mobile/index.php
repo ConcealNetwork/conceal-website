@@ -79,8 +79,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              We aim to make the Conceal crypto-currency as easy to use as possible. With Conceal Mobile you 
-              have a wallet that is secure, fast, and easy to use on the go.
+              We aim to make the Conceal crypto-currency as easy to use as possible. With Conceal Mobile you have a wallet that is secure, fast, and easy to use on the go.
             </p>
           </div>
         </div>
@@ -94,8 +93,7 @@
                 Multiple Wallets
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                Conceal Mobile supports multiple wallets, each with it's own address so you can use them for different 
-                purposes.
+                Conceal Mobile supports multiple wallets, each with it's own address so you can use them for different purposes.
               </p>
             </div>
           </div>
@@ -106,9 +104,10 @@
           </div>
           <div class="col-lg-6 ml-auto order-lg-1">
             <div class="bio pr-lg-5">
-              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">Encrypted
-                Messages</h2>
-              <p class="mb-4" data-aos="fade-left" data-aos-delay="400">Try sending encrypted messages over the blockchain. The messages work in the cloud, desktop and mobile wallets. Nobody but you and the recipient can see what is being sent.</p>
+              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">Encrypted Messages</h2>
+              <p class="mb-4" data-aos="fade-left" data-aos-delay="400">
+                Try sending encrypted messages over the blockchain. The messages work in the cloud, desktop and mobile wallets. Nobody but you and the recipient can see what is being sent.
+              </p>
             </div>
           </div>
         </div>
@@ -118,8 +117,7 @@
           </div>
           <div class="col-lg-6 ml-auto">
             <div class="bio pl-lg-5">
-              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-right" data-aos-delay="300">Accept
-              Payments</h2>
+              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-right" data-aos-delay="300">Accept Payments</h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">Easily accept payments from family, friends or anyone, anywhere.</p>
             </div>
           </div>
@@ -130,8 +128,7 @@
           </div>
           <div class="col-lg-6 ml-auto order-lg-1">
             <div class="bio pr-lg-5">
-              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">Address Book
-              </h2>
+              <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">Address Book</h2>
               <p class="mb-4" data-aos="fade-left" data-aos-delay="400">No need to copy / paste addresses every time. Maintain your address book for easy sending and receiving of funds.</p>
             </div>
           </div>

@@ -79,9 +79,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <p>
-                Our primary objective is to provide a privacy framework for social inclusion through decentralization of financial services and communication.
-            </p>
+            <p>Our primary objective is to provide a privacy framework for social inclusion through decentralization of financial services and communication.</p>
           </div>
         </div>
 
@@ -94,23 +92,13 @@
           </div>
           <div class="row">
             <div class="col-full">
-              <p tkey="about_01" data-aos="fade-up">Conceal is a decentralized blockchain bank, with deposits and investments
-                paying interest rates, without involvement of financial institutions, powered by 100% open source
-                code.</p>
-              <p tkey="about_02" data-aos="fade-up">Conceal enables untraceable and anonymous messaging, and a secure way to
-                transfer funds. Using a distributed public ledger, the sender and receiver are kept anonymous, a key
-                concern in a post Snowden world. Hackers cannot trace money or messages when the messages are sent
-                across public networks.</p>
-              <p tkey="about_03" data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the Cryptonote protocol and runs on a
-                secure peer-to-peer network technology to operate with no central authority. You control the private
-                keys to your funds.</p>
-              <p tkey="about_04" data-aos="fade-up">Conceal is accessible by anyone in the world regardless of their geographic location
-                or status. Our blockchain is resistant to any kind of analysis. All your CCX transactions and
-                messages are anonymous.</p>
-              <p tkey="about_05" data-aos="fade-up">Conceal avoids many concerns, e.g. technological, environment impact, reputational
-                and security, of Bitcoin, and provides a glimpse of the future.</p>
-              <p tkey="about_06" data-aos="fade-up">Conceal is open-source, community driven and truly decentralized.</p>
-              <p tkey="about_07" data-aos="fade-up">No one owns Conceal, everyone can take part.</p>
+              <p data-aos="fade-up">Conceal is a decentralized blockchain bank, with deposits and investments paying interest rates, without involvement of financial institutions, powered by 100% open source code.</p>
+              <p data-aos="fade-up">Conceal enables untraceable and anonymous messaging, and a secure way to transfer funds. Using a distributed public ledger, the sender and receiver are kept anonymous, a key concern in a post Snowden world. Hackers cannot trace money or messages when the messages are sent across public networks.</p>
+              <p data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control the private keys to your funds.</p>
+              <p data-aos="fade-up">Conceal is accessible by anyone in the world regardless of their geographic location or status. Our blockchain is resistant to any kind of analysis. All your CCX transactions and messages are anonymous.</p>
+              <p data-aos="fade-up">Conceal avoids many concerns, e.g. technological, environment impact, reputational and security, of Bitcoin, and provides a glimpse of the future.</p>
+              <p data-aos="fade-up">Conceal is open-source, community driven and truly decentralized.</p>
+              <p data-aos="fade-up">No one owns Conceal, everyone can take part.</p>
             </div>
           </div>
       
@@ -121,10 +109,8 @@
           </div>
           <div class="row">
               <div class="col-full">
-                  <p tkey="vision_01" data-aos="fade-up">At Conceal, we believe that access to knowledge is what truly allows great ideas to
-                  flourish and diverse communities to grow.</p>
-                  <p tkey="vision_02" data-aos="fade-up">We believe that Conceal is what the community decides it to be and that decisions on
-                  how to grow the protocol should involve everyone.</p>
+                  <p tkey="vision_01" data-aos="fade-up">At Conceal, we believe that access to knowledge is what truly allows great ideas to flourish and diverse communities to grow.</p>
+                  <p tkey="vision_02" data-aos="fade-up">We believe that Conceal is what the community decides it to be and that decisions on how to grow the protocol should involve everyone.</p>
               </div>
           </div>
 
@@ -143,35 +129,28 @@
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_01_title">Private</h4>
-                  <p tkey="features_01_text">Conceal uses ring signatures and one-time addresses for truly anonymous
-                  payments</p>
+                  <p tkey="features_01_text">Conceal uses ring signatures and one-time addresses for truly anonymous payments</p>
               </div>
             </div>
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_02_title">Untraceable</h4>
-                  <p tkey="features_02_text">Conceal's transactions can't be linked between the sender and the
-                  recipient</p>
+                  <p tkey="features_02_text">Conceal's transactions can't be linked between the sender and the recipient</p>
               </div>
             </div>
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_03_title">Decentralized</h4>
-                  <p tkey="features_03_text">Conceal follows Satoshi Nakamoto's original vision of decentralized,
-                  trustless cryptocurrency, i.e. a secure digital cash operated by a network of users.
-                  Transactions are confirmed by distributed consensus, and then recorded on the blockchain
-                  immutably. Third parties do not need to be trusted to keep your money safe.</p>
+                  <p tkey="features_03_text">Conceal follows Satoshi Nakamoto's original vision of decentralized, trustless cryptocurrency, i.e. a secure digital cash operated by a network of users. Transactions are confirmed by distributed consensus, and then recorded on the blockchain immutably. Third parties do not need to be trusted to keep your money safe.</p>
               </div>
             </div>
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_04_title">Fungible</h4>
-                  <p tkey="features_04_text">Conceal is truly fungible, thanks to built-in privacy features. Just like
-                  cash, all coins are equal, changeable. It is extremely unlikely that a coin will ever be
-                  blacklisted by any party due to its association in previous transactions.</p>
+                  <p tkey="features_04_text">Conceal is truly fungible, thanks to built-in privacy features. Just like cash, all coins are equal, changeable. It is extremely unlikely that a coin will ever be blacklisted by any party due to its association in previous transactions.</p>
               </div>
             </div>
 
@@ -185,8 +164,7 @@
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_06_title">Community Driven</h4>
-                  <p tkey="features_06_text">No one owns Conceal. Everyone can take part. Developed, maintained and
-                  funded by volunteers</p>
+                  <p tkey="features_06_text">No one owns Conceal. Everyone can take part. Developed, maintained and funded by volunteers</p>
               </div>
             </div>
 
@@ -206,24 +184,21 @@
               <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_09_title">Protected Proof Of Work</h4>
-                  <p tkey="features_09_text">PoW hash function is designed for egalitarian CPU & GPU mining and ASIC
-                  Resistance</p>
+                  <p tkey="features_09_text">PoW hash function is designed for egalitarian CPU & GPU mining and ASIC Resistance</p>
               </div>
             </div>
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_10_title">Adaptive Limits</h4>
-                  <p tkey="features_10_text">Conceal intelligently adjusts its parameters based on the historical data
-                  </p>
+                  <p tkey="features_10_text">Conceal intelligently adjusts its parameters based on the historical data</p>
               </div>
             </div>
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
                   <h4 class="h4" tkey="features_11_title">Encrypted Messages</h4>
-                  <p tkey="features_11_text">Secure your confidentiality with an encrypted P2P network, secure
-                  communications and encrypted self-destructive messages</p>
+                  <p tkey="features_11_text">Secure your confidentiality with an encrypted P2P network, secure communications and encrypted self-destructive messages</p>
               </div>
             </div>
 

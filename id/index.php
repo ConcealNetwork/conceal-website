@@ -94,7 +94,7 @@
                 Built with the security of OpenID
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                There is not always a good reason to reinvent the wheel.  We carefully chose the proven and widely utilized OpenID protocol to power Conceal ID.
+                There is not always a good reason to reinvent the wheel. We carefully chose the proven and widely utilized OpenID protocol to power Conceal ID.
               </p>
             </div>
           </div>

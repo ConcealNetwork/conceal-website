@@ -75,7 +75,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Conceal has a huge thriving community of awesome people that are sharing ideas, working together and helping each other regardless of where they are in their Blockchain journey.  What are you waiting for?
+              Conceal has a huge thriving community of awesome people that are sharing ideas, working together and helping each other regardless of where they are in their Blockchain journey. What are you waiting for?
             </p>
           </div>
         </div>

@@ -2,6 +2,7 @@
 <html lang="en"><head>
   <title>Conceal - In The Media</title>
   <?php include '../landing/include/topjs.html';?>
+  <link rel="stylesheet" href="style/style.css">
 </head><body>
   <div id="loader-wrapper">
     <b></b>
@@ -86,7 +87,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Despite our focus on privacy Conceal is not going unnoticed in the media.  We've received attention from an ever-growing number of major publications and notable influencers.
+              Despite our focus on privacy Conceal is not going unnoticed in the media. We've received attention from an ever-growing number of major publications and notable influencers.
             </p>
           </div>
         </div>

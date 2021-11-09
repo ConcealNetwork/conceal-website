@@ -80,8 +80,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              We strive to grow a broad ecosystem by supporting the community. Conceal Labs provides developers, 
-              entrepreneurs &amp; creators with the jump start that they need to make vision a reality.
+              We strive to grow a broad ecosystem by supporting the community. Conceal Labs provides developers, entrepreneurs &amp; creators with the jump start that they need to make vision a reality.
             </p>
           </div>
         </div>
@@ -160,7 +159,7 @@
         <div class="row mb-5" id="labsProjects">
         <div class="col-lg-12 mt-12 pl-lg-12" data-aos="fade-up" data-aos-delay="200">
             <p>
-                Coming soon to a browser near you!
+              Coming soon to a browser near you!
             </p>
         </div>
         </div>
