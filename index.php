@@ -506,7 +506,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Jun</span> 2018</time>
                         <h3>Encrypted Messaging & Deposits</h3>
                         <p>
-                            Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched.  Wow!
+                            Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched. Wow!
                         </p>
                     </div><div>
                         <time><span>Jul</span> 2018</time>
@@ -524,7 +524,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Feb</span> 2019</time>
                         <h3>CN-GPU mining algorithm</h3>
                         <p>
-                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant.  Power to the little people!
+                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
                         </p>
                     </div><div>
                         <time><span>Mar</span> 2019</time>
