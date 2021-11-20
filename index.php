@@ -401,7 +401,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
-                    <span>The easiest way to get CCX is to mine with CPU\'s or GPU\'s using one of the miners that support CCX. Check out our</span>
+                    <span>The easiest way to get CCX is to mine with CPU or GPU using one of the miners that support CCX. Check out our</span>
                     <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
                     <span>for more detailed information about mining CCX.</span>
                 </p>
