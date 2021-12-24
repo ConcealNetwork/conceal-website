@@ -358,12 +358,47 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li><li>
                         <i class="fas fa-paper-plane"></i><br>
                         <a href="https://conceal.network/paperwallet">PAPER</a>
+                    </li><li>
+                        <i class="fab fa-chrome"></i><br>
+                        <a href="https://chrome.google.com/webstore/detail/conceal-browser-extension/ajclelbbigjopijfkgfeblgikbhaofgp">Chrome Extension</a>
+                    </li><li>
+                        <i class="fab fa-firefox"></i><br>
+                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/conceal-browser-extension/">Firefox Extension</a>
                     </li>
                 </ul>
                 <p>
                     Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
+            </div>
+        <!-- #wallets --></section>
+
+        <section id="wallets">
+            <div>
+                <h2><span>Bringing it all together</span> <span>Conceal App</span></h2>
+                <ul>
+                    <li>
+                        <i class="fab fa-windows"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">WINDOWS Desktop</a>
+                    </li><li>
+                        <i class="fab fa-linux"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LINUX Desktop</a>
+                    </li><li>
+                        <i class="fab fa-apple"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">MAC Desktop</a>
+                    </li><li>
+                        <i class="fas fa-cloud"></i><br>
+                        <a href="https://app.conceal.network">Web Version</a>
+                    </li>
+                    </li><li>
+                        <i class="fab fa-android"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Mobile - Android</a>
+                    </li>
+                </ul>
+                <p>
+                    Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
+                </p>
+                <img src="images/ccxapp.png" alt="Conceal APP" class="plate">
             </div>
         <!-- #wallets --></section>
 
