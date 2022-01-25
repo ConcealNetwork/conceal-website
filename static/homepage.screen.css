@@ -917,7 +917,8 @@ main > section p {
 	border-radius:0 0 0.5em 0.5em;
 }
 
-.miniProfiles {
+.miniProfiles, 
+.partnerCards {
 	list-style:none;
 	display:flex;
 	flex-direction:row;
@@ -925,7 +926,8 @@ main > section p {
 	font-size:0.825em;
 }
 
-.miniProfiles > li {
+.miniProfiles > li,
+.partnerCards > li {
 	flex:1 0 auto;
 	margin:0 1em 3em;
 	text-align:center;
@@ -933,12 +935,14 @@ main > section p {
   width: 260px;
 }
 
-.miniProfiles ul {
+.miniProfiles ul,
+.partnerCards ul {
 	list-style:none;
 	margin-top:0.5em;
 }
 
-.miniProfiles ul li {
+.miniProfiles ul li,
+.partnerCards ul li {
 	display:inline-block;
 }
 

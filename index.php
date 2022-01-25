@@ -58,6 +58,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
+                            <li><a href="https://app.conceal.network">CCX App</a></li>
                             <li><a href="banking/">DeFi</a></li>
                             <li><a href="https://conceal.cloud">Cloud</a></li>
                             <li><a href="#wallets">Desktop</a></li>
@@ -91,6 +92,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="community/#Ethereum">wCCX LP pairs</a></li>
                             <li><a href="https://explorer.conceal.network">Explorer</a></li>
                             <li><a href="#mining">Mining</a></li>
+                            <li><a href="#partners">Partners</a></li>
                         </ul>
                     </li>
                     </li><li>
@@ -886,6 +888,27 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </picture>
                         <b>This could be you...</b><br>
                         <span>Become a part of the project</span>
+                    </li>
+                </ul>
+            </div>
+        <!-- #community --></section>
+
+        <section id="partners">
+            <div>
+                <h2>
+                    <span>Working Together</span>
+                    <span>Our Partners</span>
+                </h2>
+                <ul class="partnerCards">
+                    <li>
+                      <picture>
+                        <a href="https://bpsaa.vision/"><img src="images/partners/BPSAA.png" alt="BPSAA"><br></a>
+                      </picture>
+                    </li>
+                    <li>
+                      <picture>
+                        <a href="https://ergoplatform.org"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
+                      </picture>
                     </li>
                 </ul>
             </div>
