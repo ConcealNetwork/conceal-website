@@ -93,6 +93,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="https://explorer.conceal.network">Explorer</a></li>
                             <li><a href="#mining">Mining</a></li>
                             <li><a href="#partners">Partners</a></li>
+                            <li><a href="https://status.conceal.network/">Network Status</a></li>
+                            
                         </ul>
                     </li>
                     </li><li>
