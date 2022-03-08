@@ -1885,3 +1885,11 @@ body {
   display: inline;
   height: 1em;	
 }
+
+.text-center {
+  text-align: center !important;
+}
+
+.wallet-subheader {
+  margin-bottom: 1em !important;
+}

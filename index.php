@@ -316,6 +316,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="wallets">
             <div>
                 <h2><span>Using Conceal</span> <span>Wallets</span></h2>
+                <h3 class="text-center wallet-subheader">Full Node Local Wallets</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -341,25 +342,36 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
                             MAC CLI
                         </a>
-                    </li><li>
+                    </li>
+                </ul>
+                <h3 class="text-center wallet-subheader">Light Wallets (Cloud Based)</h3>
+                <ul>
+                    <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - WINDOWS</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - WINDOWS</a>
                     </li><li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - LINUX</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - LINUX</a>
                     </li>
                     </li><li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-lite-wallet/releases">LITE Wallet - MAC</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - MAC</a>
                     </li><li>
                         <i class="fab fa-android"></i><br>
-                        <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile">
-                            ANDROID
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
+                            ANDROID - APK
                         </a><br>
+                        <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
+                            Google Play
+                        </a>
                     </li><li>
                         <i class="fas fa-cloud"></i><br>
                         <a href="https://conceal.cloud">CLOUD</a>
-                    </li><li>
+                    </li>
+                  </ul>
+                  <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                  <ul>                        
+                    <li>
                         <i class="fas fa-paper-plane"></i><br>
                         <a href="https://conceal.network/paperwallet">PAPER</a>
                     </li><li>
@@ -395,9 +407,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://app.conceal.network">Web Version</a>
                     </li>
                     </li><li>
-                        <i class="fab fa-android"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Mobile - Android</a>
-                    </li>
+                      <i class="fab fa-android"></i><br>
+                      <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
+                          ANDROID - APK
+                      </a><br>
+                      <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
+                         Google Play
+                      </a>
+                  </li>
                 </ul>
                 <p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
@@ -991,7 +1008,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     </footer>
 
     <script src="static/homepage.js?v=1"></script>
-    <script src="static/contact.js?v=1"></script>
     <script src="js/language.js?v=1"></script>
     <script src="js/pools.js?v=1"></script>
     <script src="js/calc.js?v=1"></script>
