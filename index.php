@@ -96,19 +96,26 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="https://status.conceal.network/">Network Status</a></li>
                             
                         </ul>
-                    </li>
                     </li><li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_info">Contact</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-							<li><a href="#helpdesk">Contact Us</a></li>
+							              <li><a href="#helpdesk">Contact Us</a></li>
                             <li><a href="#helpdesk">Helpdesk</a>
                         </ul>
                     </li>
-                    <li class="navStandalone"><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                    <li class="navStandalone"><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
+                    </li><li>
+                      <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                      <label for="toggle_info">Buy</label>
+                      <label for="toggle_submenusOff"></label>
+                      <ul>
+                          <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
+                          <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a>
+                      </ul>
+                    </li>                    
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
+                    <li class="navStandalone"><a href="donate">Donate</a></li>
                 </ul>
                 <ul id="socialMenu">
                     <li>
@@ -722,7 +729,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                                     <span>Github</span>
                                 </a>
                             </li><li>
-                                <a href="https://twitter.com/krypt0Chaos">
+                                <a href="https://twitter.com/Krypt0xChaos">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>

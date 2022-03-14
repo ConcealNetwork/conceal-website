@@ -1382,3 +1382,35 @@ h4 {
 body {
   visibility: hidden;
 }
+
+.donate_currency_icon {
+  width: 50px;
+}
+
+.donate_wrapper {
+  margin-top: 5em;
+}
+
+.donate_table {
+  margin: 0 auto;
+}
+
+.donate_currency_name {
+  font-size: 1.2em;
+  display: block;
+}
+
+.donate_icon_cell {
+  vertical-align: middle !important;
+  width: 50px;
+}
+
+.address_copy {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.currency_address {
+  width: 90%;
+  font-size: 0.8em;
+}

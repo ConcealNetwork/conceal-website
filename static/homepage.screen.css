@@ -1629,18 +1629,18 @@ body > footer .socialLinks a:hover {
     margin: 0;
     padding: 0;
     padding-top: 10px;
-    top: 45px;
-    right: 36px;
+    top: 42px;
+    right: 20px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 503;
 }
 
-@media only screen and (max-width: 700px) {
+@media (max-width:60em), (max-height:28.5em) {
     .header-language {
-        top: 30px;
-        right: 72px;
+        top: 28px;
+        right: 55px;
     }
 }
 

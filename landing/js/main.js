@@ -15,6 +15,22 @@
 
 	// Function library
 
+  var copyButtons = document.getElementsByClassName('address_copy');
+  console.log(copyButtons);
+
+  for (var i=0; i < copyButtons.length; i++) {
+    copyButtons[i].onclick = function(e) {
+      var inputId = this.getAttribute('data-address');
+      console.log(inputId);
+
+      // Create an auxiliary hidden input
+      var aux = document.getElementById(inputId);
+      aux.select();
+      // Execute the copy command
+      document.execCommand("copy"); 
+    }
+  };
+
 	function arrayRemoveIndex(arr, index) {
 		return arr.filter(function(e, i) { return i != index; });
 	} // arrayRemoveIndex
