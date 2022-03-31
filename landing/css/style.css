@@ -985,6 +985,30 @@ img.rounded {
 .landingCLiveS6 {
   background:url('../images/clive_06.jpg');	
 }
+.landingCapp {
+  width: 100%;
+  height: 640px;
+  margin:auto;
+  border-radius:32px;
+}
+.landingCappS1 {
+  background: url("../../images/app/Concealappnews.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;	
+}
+.landingCappS2 {
+  background: url("../../images/app/Concealappwallet.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;	
+}
+.landingCappS3 {
+  background: url("../../images/app/Concealappdeposits.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;	
+}
 #labsHeading {
   padding:4rem 0 0;
 }
