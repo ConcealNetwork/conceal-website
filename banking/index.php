@@ -82,7 +82,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Conceal Banking removes unnecessary intermediaries by giving everyone the power to deposit their funds on the Blockchain and recieve interest in exchange.
+              Conceal Banking removes unnecessary intermediaries by giving everyone the power to deposit their funds on the Blockchain and receive interest in exchange.
             </p>
           </div>
         </div>
