@@ -58,15 +58,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="https://app.conceal.network">CCX App</a></li>
+                            <li><a href="app">Conceal App</a></li>
                             <li><a href="banking/">DeFi</a></li>
                             <li><a href="https://conceal.cloud">Cloud</a></li>
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
                             <li><a href="messaging/">Messaging</a></li>
                             <li><a href="mobile/">Mobile</a></li
-                            <li><a href="clive/">C-Live</a></li
-                            >
+                            <li><a href="clive/">C-Live</a></li>
                             <li><a href="pay/">Pay</a></li>
                         </ul>
                     </li><li>
@@ -1090,5 +1089,4 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <script src="js/calc.js?v=1"></script>
 
     </body></html>';
-
 ?>
