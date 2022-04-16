@@ -373,7 +373,7 @@
 			href = a.getAttribute('href'),
 			target;
 		if (
-			href.charAt(0) == '#' &&
+			href && href.charAt(0) == '#' &&
 			href != '#' &&
 			(target = d.getElementById(a.hash.substr(1))) &&
 			target.id != 'menus' &&
