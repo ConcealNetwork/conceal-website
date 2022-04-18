@@ -75,55 +75,93 @@
 /**********************************************/
 /************** Featured section **************/
 /**********************************************/
-.featured{
-	widh: 100%;
+
+.caption{
 	margin-top: 50px;
-	margin-bottom: 25px;
-}
-.featured h2{
-	text-align: center;
-	color: orange;
+	border:1px groove ;
 }
 .falign {
-	margin-top: 100px;
+	justify-content: center;
 }
-.embededvideo{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	justify-content: space-between;
-	align-content: center;
-	display: flex;
+.falign span{
+	text-align: center !important;
 }
-.embededvideo > vid{
-	flex: 1;
-	width: 100%;
+.falign h2{
+	text-align: center;
 }
-.vid{
-	position: relative;
-	float: left;
-	margin: 0px 10px 10px 10px;
-	width: 100%;
+.falign h1{
+	color: orange;
 }
-.vid iframe {
-	left: 50%;
-    top: 50%;
-	width: 100%;
-    border: 5px solid #112E41;
-}
-.miningembed{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	align-items: center;
-	justify-content: space-between;
-	
-}
-.miningembed iframe{
-	margin: 0 3px 6px 3px;
-    border: 5px solid black;    
+/* If the screen size is 781px wide or more*/
+@media screen and (min-width: 781px) {
+  div.falign h1{
+    font-size: 50px !important;
+	}
+  div.falign h2{
+	font-size: 40px;
+	}
 }
 
+/* If the screen size is 780px wide or less */
+@media screen and (max-width: 780px) {
+  div.falign h1{
+	font-size: 40px !important;
+	} 
+  div.falign h2 {
+    font-size: 30px !important;
+  }
+}
+
+.featured{
+	color: orange;
+	border: 1px dashed grey;
+	text-align: center;
+}
+.carousel{
+	height: 400px;
+	width: auto;
+	
+}
+.carousel iframe{
+	width: 95%;
+	height: 400px;
+	border: 5px solid #112E41;
+}
+.carousel-control-next{
+	height: 20px;
+	margin: auto;
+	width: 7%;
+}
+.carousel-control-prev{
+	height: 20px;
+	margin: auto;
+	width: 7%;
+}
+
+/*Mining section*/
+.cstalign{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 200px;
+}
+.vidWrapper{
+	width: 100%; max-width: 800px; min-width: 400px;
+	margin: 1em 0.5em 1em 0.5em;
+	border: 5px solid black;
+	-webkit-flex: 1;
+    -ms-flex: 1;
+}
+.vidContainer{
+	width: 100%; max-width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+.vidContainer iframe{
+	width: 100%; max-width: 100%;
+	height: 100%;
+	position: absolute; top: 0; left: 0;
+}
 
 /* The navigation bar */
 .nav{
@@ -139,19 +177,21 @@
 	font-size: 1.5em;
 	font-weight: 300;
 	padding: 20px;
-
 }
 .nav-tabs a{
 	cursor: pointer;
+	color: white;
 }
-
+.nav-tabs a:hover{
+	color: orange !important;
+	filter: brightness(50%);
+}
+a.active {
+	color: orange !important;
+}
 .tab-content{
 	margin-top: 100px;
 }
-
-
-
-
 
 /**********************************************/
 /********** Media section navigation **********/
@@ -163,31 +203,7 @@
   }
 }
 
-/* Appearance*/
-.links {
-	background-color: #222;
-	background-image: linear-gradient(to bottom, #222, transparent);
-	border-bottom: 1px solid #222;
-	box-shadow: 0 0 32px #222;
-	font-size: 1.5em;
-	font-weight: 300;
-}
-.links > a {
-	color: #fff;
-	padding: .75em;
-	text-align: center;
-	text-decoration: none;
-	transition: all .5s;
-}
-.links > a:hover {
-	background: #ffffff06;
-	color: orange;
-}
-.links > .line {
-	background: orange;
-	height: 1px;
-	pointer-events: none;
-}
+
 
 /* The Magic */
 #header {
@@ -196,35 +212,6 @@
 	left: 0;
 	right: 0;
 }
-.links {
-	display: grid;
-	grid-template-columns: repeat(var(--items), 1fr);
-	position: relative;
-}
-.links > .line {
-	opacity: 0;
-	transition: all .5s;
-	position: absolute;
-	bottom: 0;
-	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-	width: var(--width, calc(100% / var(--items)));
-	--index: 0;
-}
-.links > a:hover ~ .line {
-	opacity: 1;
-}
-
-.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
-.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
-.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
-.links > a:nth-of-type(4):hover ~ .line { --index: 4; }
-.links > a:nth-of-type(5):hover ~ .line { --index: 5; }
-.links > a:nth-of-type(6):hover ~ .line { --index: 6; }
-.links > a:nth-of-type(7):hover ~ .line { --index: 7; }
-.links > a:nth-of-type(8):hover ~ .line { --index: 8; }
-.links > a:nth-of-type(9):hover ~ .line { --index: 9; }
-.links > a:nth-of-type(10):hover ~ .line { --index: 10; }
-.links > a:last-of-type:hover ~ .line { --index: var(--items); }
 
 .mediaSections {
   margin-bottom: 50px;
@@ -239,5 +226,3 @@
     font-size: 0.9rem;
   }
  }
-
-

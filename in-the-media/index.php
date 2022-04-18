@@ -4,6 +4,7 @@
   <?php include '../landing/include/topjs.html';?>
   <link rel="stylesheet" href="style/style.css">
   <script type="text/javascript" src="style/script.js" ></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head><body>
   <div id="loader-wrapper">
     <b></b>
@@ -42,7 +43,7 @@
 		  <div class="header-language">
 			<a id="langSelector" href="#">
 			  <i class="fas fa-language fa-2x align-middle"></i>
-			     <span id="selectedLanguage">English</span>
+			    <!-- <span id="selectedLanguage">English</span>				//commented for the time being//   -->
   		    </a>
 			<div id="langDropdown" class="dropdown-content"></div>
 		  </div>		  		  		  
@@ -54,27 +55,36 @@
     </header>
     <div class="site-section site-hero">
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-content-center">
           <div class="pageSlogan col-xl-12 falign col-md-12">
-            <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">CONCEAL IN THE MEDIA</span>
-            <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-              <p><span>Going</span> <strong>Noticed</strong>,<p>
-              <p>Not Concealed</p>
-            </h1>
-			<div class="featured" data-aos="fade-up" data-aos-delay="300">
-				<h2><strong>Featured:</strong></h2>
+            <span class="d-block mb-4 caption" data-aos="fade-up" data-aos-delay="100"><h1>CONCEAL IN THE MEDIA</h1></span>
+            <h2 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
+		   	  <p><span>"Going</span> <strong>Noticed</strong>, Not Concealed"</p>
+            </h2>
+			  
+			<div class="d-block" data-aos="fade-up" data-aos-delay="300">
+				<h2 class="col-xl-4 offset-xl-4 mb-4 featured"><strong>Featured:</strong></h2>
 				
-			  <div class="embededvideo"  data-aos-delay="400">
-					<div class="vid">
-						<iframe data-aos="fade-right" width="400" height="300" src="https://www.youtube-nocookie.com/embed/wfUkUJuXn5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div id="carouselControls" class="carousel slide offset-xl-2 col-xl-8" data-ride="carousel" data-interval="false">
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+					  <iframe class="d-block w-100" alt="Third slide" src="https://www.youtube-nocookie.com/embed/2jBL4uzrimk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
-					<div class="vid">
-						<iframe data-aos="fade-up" width="400" height="300" src="https://www.youtube-nocookie.com/embed/2jBL4uzrimk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="carousel-item">
+					  <iframe class="d-block w-100" alt="Second slide" src="https://www.youtube-nocookie.com/embed/wfUkUJuXn5s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
-					<div class="vid">
-						<iframe data-aos="fade-left" width="400" height="300" src="https://www.youtube.com/embed/oY5ZzJFoe4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="carousel-item">
+					  <iframe class="d-block w-100" alt="Second slide" src="https://www.youtube.com/embed/oY5ZzJFoe4E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
-
+				  </div>
+				  <a class="carousel-control-prev" href="#/" data-target="#carouselControls" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#/" data-target="#carouselControls" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
 				</div>
 				
 			</div>
@@ -91,28 +101,28 @@
 		
 	<div class="container">
 		  	  	  
-		<div class="navcontent" role="tabpanel">
-			<!-- Nav pills -->
-			
+			<div class="navcontent" role="tabpanel">
+				<!-- Nav pills -->
 				<ul id="navBarTab" class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active">
-						<a data-target="#media_ama" aria-controls="media_ama" role="tab" data-toggle="tab">AMA Series</a>
-					</li>
+						<a href="#/" data-target="#media_ama" aria-controls="media_ama" role="tab" data-toggle="tab" class="active">AMA Series</a>
+					</li>|
 					<li role="presentation">
-						<a data-target="#media_articles" aria-controls="media_articles" role="tab" data-toggle="tab">Articles</a>
-					</li>
+						<a data-target="#media_articles" href="#/" aria-controls="media_articles" role="tab" data-toggle="tab">Articles</a>
+					</li>|
 					<li role="presentation">
-						<a data-target="#media_videos" aria-controls="media_videos" role="tab" data-toggle="tab">Videos</a>
-					</li>
+						<a data-target="#media_videos" href="#/" aria-controls="media_videos" role="tab" data-toggle="tab">Videos</a>
+					</li>|
 					<li role="presentation">
-						<a data-target="#media_mining" aria-controls="media_mining" role="tab" data-toggle="tab">Mining</a>
-					</li>
+						<a data-target="#media_mining" href="#/" aria-controls="media_mining" role="tab" data-toggle="tab">Mining</a>
+					</li>|
 					<li role="presentation">
-						<a data-target="#media_updates" aria-controls="media_updates" role="tab" data-toggle="tab">Dev updates</a>
+						<a data-target="#media_updates" href="#/" aria-controls="media_updates" role="tab" data-toggle="tab">Monthly Updates</a>
 					</li>
 				</ul>
+				
 			<!-- Tab panes -->
-			<div class="tab-content">		
+    		<div class="tab-content">		
 
 				<div id="media_ama" role="tabpanel" class="tab-pane active"> 
 					<div class="row mb-5 aboutSection">
@@ -127,7 +137,6 @@
 						</p>
 					  </div>
 					</div>
-
 					<div class="row align-items-center speaker mediaSectionWrapper">
 					  <div class="thumbex">
 						<div class="thumbnail">
@@ -139,20 +148,28 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://www.altcointradershandbook.com/coin-report-conceal-network/" target="_blank" rel="noopener noreferrer"> 
-							<img src="../images/media/media_ama_02.jpg">
-							<span>Binance: An Altcoin Trader's Handbook</span>
+						  <a href="https://crypto-lowcap.com/exclusive-interview-conceal/" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_05.jpg">
+							<span>Exclusive interview: Conceal</span>
 						  </a>
 						</div>
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href=" https://crypto-lowcap.com/exclusive-interview-conceal/" target="_blank" rel="noopener noreferrer"> 
-							<img src="../images/media/media_ama_05.jpg">
-							<span>Exclusive interview: Conceal</span>
+						  <a href="https://concealnetwork.medium.com/conceal-network-and-the-wolfonaire-ama-recap-november-11th-2021-b411ab04ece9" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_06.jpeg">
+							<span>Conceal Network and The Wolfonaire AMA Recap</span>
 						  </a>
 						</div>
-					  </div>			
+					  </div>
+				      	  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://www.altcointradershandbook.com/coin-report-conceal-network/" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_02.jpg">
+							<span>Binance: An Altcoin Trader's Handbook</span>
+						  </a>
+						</div>
+					   </div>
 					</div>
 				</div>
 
@@ -169,7 +186,6 @@
 						</p>
 					  </div>
 					</div>
-
 					<div class="row align-items-center speaker mediaSectionWrapper">
 					  <div class="thumbex">
 						<div class="thumbnail">
@@ -192,6 +208,30 @@
 						  <a href="https://medium.com/@ConcealNetwork/what-is-conceal-28c8468b038d" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_articles_03.png">
 							<span>What is Conceal $CCX?</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/the-anatomy-of-wrapped-ccx-97b2a8c008d9" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_08.png">
+							<span>The Anatomy of Wrapped CCX</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-bridge-user-guide-2ad03eee4963" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_09.png">
+							<span>CONCEAL BRIDGE — USER GUIDE</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/welcome-to-the-conceal-ambassador-program-237bc5e52b2f" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_10.jpeg">
+							<span>Welcome to the Conceal Ambassador Program</span>
 						  </a>
 						</div>
 					  </div>
@@ -227,7 +267,7 @@
 						  </a>
 						</div>
 					  </div>
-					</div>			
+					</div>
 				</div>
 
 				<div id="media_videos" role="tabpanel" class="tab-pane">
@@ -342,13 +382,27 @@
 						</p>
 					  </div>
 					</div>
-					<div class="row align-items-center speaker mediaSectionWrapper">
-						<div class="miningembed">	
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/niTcmIz_sf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2jBL4uzrimk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ze2ioyBHPIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/seiPQBFIsE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							
+					<div class="row cstalign">
+						<div class="vidWrapper">
+							<div class="vidContainer">
+								<iframe src="https://www.youtube-nocookie.com/embed/niTcmIz_sf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>					
+						</div>
+
+						<div class="vidWrapper">
+							<div class="vidContainer">
+								<iframe src="https://www.youtube-nocookie.com/embed/2jBL4uzrimk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+							</div>					
+						</div>
+						<div class="vidWrapper">
+							<div class="vidContainer">
+								<iframe src="https://www.youtube-nocookie.com/embed/Ze2ioyBHPIw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+							</div>					
+						</div>
+						<div class="vidWrapper">
+							<div class="vidContainer">
+								<iframe src="https://www.youtube.com/embed/seiPQBFIsE0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+							</div>					
 						</div>
 					</div>
 				</div>
