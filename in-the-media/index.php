@@ -137,7 +137,6 @@
 						</p>
 					  </div>
 					</div>
-
 					<div class="row align-items-center speaker mediaSectionWrapper">
 					  <div class="thumbex">
 						<div class="thumbnail">
@@ -149,20 +148,28 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://www.altcointradershandbook.com/coin-report-conceal-network/" target="_blank" rel="noopener noreferrer"> 
-							<img src="../images/media/media_ama_02.jpg">
-							<span>Binance: An Altcoin Trader's Handbook</span>
+						  <a href="https://crypto-lowcap.com/exclusive-interview-conceal/" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_05.jpg">
+							<span>Exclusive interview: Conceal</span>
 						  </a>
 						</div>
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href=" https://crypto-lowcap.com/exclusive-interview-conceal/" target="_blank" rel="noopener noreferrer"> 
-							<img src="../images/media/media_ama_05.jpg">
-							<span>Exclusive interview: Conceal</span>
+						  <a href="https://concealnetwork.medium.com/conceal-network-and-the-wolfonaire-ama-recap-november-11th-2021-b411ab04ece9" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_06.jpeg">
+							<span>Conceal Network and The Wolfonaire AMA Recap</span>
 						  </a>
 						</div>
-					  </div>			
+					  </div>
+				      	  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://www.altcointradershandbook.com/coin-report-conceal-network/" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_ama_02.jpg">
+							<span>Binance: An Altcoin Trader's Handbook</span>
+						  </a>
+						</div>
+					   </div>
 					</div>
 				</div>
 
@@ -179,7 +186,6 @@
 						</p>
 					  </div>
 					</div>
-
 					<div class="row align-items-center speaker mediaSectionWrapper">
 					  <div class="thumbex">
 						<div class="thumbnail">
@@ -202,6 +208,30 @@
 						  <a href="https://medium.com/@ConcealNetwork/what-is-conceal-28c8468b038d" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_articles_03.png">
 							<span>What is Conceal $CCX?</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/the-anatomy-of-wrapped-ccx-97b2a8c008d9" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_08.png">
+							<span>The Anatomy of Wrapped CCX</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-bridge-user-guide-2ad03eee4963" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_09.png">
+							<span>CONCEAL BRIDGE — USER GUIDE</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/welcome-to-the-conceal-ambassador-program-237bc5e52b2f" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_10.jpeg">
+							<span>Welcome to the Conceal Ambassador Program</span>
 						  </a>
 						</div>
 					  </div>
@@ -237,7 +267,7 @@
 						  </a>
 						</div>
 					  </div>
-					</div>			
+					</div>
 				</div>
 
 				<div id="media_videos" role="tabpanel" class="tab-pane">
