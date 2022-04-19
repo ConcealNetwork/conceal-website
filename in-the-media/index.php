@@ -6,10 +6,10 @@
   <script type="text/javascript" src="script/script.js" ></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </head><body>
-  <!--<div id="loader-wrapper">
+  <div id="loader-wrapper">
     <b></b>
     <div id="loader"></div>
-  </div>-->
+  </div>
   <div class="site-wrap">
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
