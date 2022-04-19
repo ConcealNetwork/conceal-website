@@ -43,7 +43,7 @@
 		  <div class="header-language">
 			<a id="langSelector" href="#">
 			  <i class="fas fa-language fa-2x align-middle"></i>
-			    <!-- <span id="selectedLanguage">English</span>				//commented for the time being//   -->
+			    <span id="selectedLanguage">English</span>
   		    </a>
 			<div id="langDropdown" class="dropdown-content"></div>
 		  </div>		  		  		  
