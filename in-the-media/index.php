@@ -3,7 +3,7 @@
   <title>Conceal - In The Media</title>
   <?php include '../landing/include/topjs.html';?>
   <link rel="stylesheet" href="style/style.css">
-  <script type="text/javascript" src="style/script.js" ></script>
+  <script type="text/javascript" src="script/script.js" ></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </head><body>
   <div id="loader-wrapper">
@@ -55,15 +55,16 @@
     </header>
     <div class="site-section site-hero">
       <div class="container">
-        <div class="row align-content-center">
+        <div class="row align-items-center">
           <div class="pageSlogan col-xl-12 falign col-md-12">
-            <span class="d-block mb-4 caption" data-aos="fade-up" data-aos-delay="100"><h1>CONCEAL IN THE MEDIA</h1></span>
-            <h2 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-		   	  <p><span>"Going</span> <strong>Noticed</strong>, Not Concealed"</p>
-            </h2>
+            <span class="d-block caption" data-aos="fade-up" data-aos-delay="100"><h2>CONCEAL IN THE MEDIA</h2></span>
+            <h1 class="d-block" data-aos="fade-up" data-aos-delay="200">
+              <p><span>Going</span> <strong>Noticed</strong>,</p>
+              <p>Not Concealed</p>
+            </h1>
 			  
 			<div class="d-block" data-aos="fade-up" data-aos-delay="300">
-				<h2 class="col-xl-4 offset-xl-4 mb-4 featured"><strong>Featured:</strong></h2>
+				<h2 class="featured"><strong>Featured:</strong></h2>
 				
 				<div id="carouselControls" class="carousel slide offset-xl-2 col-xl-8" data-ride="carousel" data-interval="false">
 				  <div class="carousel-inner">
@@ -411,7 +412,7 @@
 					<div class="row mb-5 aboutSection">
 					  <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 						<div class="site-section-heading">
-						  <h2>Dev updates</h2>
+						  <h2>Monthly updates</h2>
 						</div>
 					  </div>
 					  <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
