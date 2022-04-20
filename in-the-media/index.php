@@ -3,7 +3,6 @@
   <title>Conceal - In The Media</title>
   <?php include '../landing/include/topjs.html';?>
   <link rel="stylesheet" href="style/style.css">
-  <script type="text/javascript" src="script/script.js" ></script>
   <script src="https://www.youtube.com/iframe_api"></script>
 </head><body>
   <div id="loader-wrapper">
