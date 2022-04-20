@@ -58,15 +58,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="https://app.conceal.network">CCX App</a></li>
+                            <li><a href="app">Conceal App</a></li>
                             <li><a href="banking/">DeFi</a></li>
                             <li><a href="https://conceal.cloud">Cloud</a></li>
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
                             <li><a href="messaging/">Messaging</a></li>
                             <li><a href="mobile/">Mobile</a></li
-                            <li><a href="clive/">C-Live</a></li
-                            >
+                            <li><a href="clive/">C-Live</a></li>
                             <li><a href="pay/">Pay</a></li>
                         </ul>
                     </li><li>
@@ -138,6 +137,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
+                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                	</li><li>
                         <a href="https://medium.com/@ConcealNetwork">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
@@ -566,6 +569,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             The first release candidate, Testnet, Daemon, Miner and Wallet are launched.  Something really great begins.
                         </p>
                     </div><div>
+                        <time><span>May</span> 2018</time>
+                        <h3>Mainnet launched</h3>
+                        <p>
+                          On 18 May 2018 mainnet is launched. First block is officialy mined by the miners
+                        </p>
+                    </div><div>
                         <time><span>Jun</span> 2018</time>
                         <h3>Encrypted Messaging & Deposits</h3>
                         <p>
@@ -578,6 +587,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             The official website is born providing a central point of information for the project.  The Block Explorer is released.  We\'re on fire!
                         </p>
                     </div><div>
+                        <time><span>Oct</span> 2018</time>
+                        <h3>CN Fast</h3>
+                        <p>
+                            CCX changes to CN Fast mining algorithm to avoid ASICs.
+                        </p>
+                    </div><div>
                         <time><span>Nov</span> 2018</time>
                         <h3>Exchange Listing & Investments</h3>
                         <p>
@@ -588,6 +603,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h3>CN-GPU mining algorithm</h3>
                         <p>
                             The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
+                        </p>
+                    </div><div>
+                        <time><span>Oct</span> 2018</time>
+                        <h3>CN Conceal</h3>
+                        <p>
+                            CCX changes to CN Conceal mining algorithm to avoid ASICs and FPGA.
                         </p>
                     </div><div>
                         <time><span>Mar</span> 2019</time>
@@ -644,56 +665,108 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Cold staking came to cloud and mobile. You are able to earn interest from your phone!
                         </p>
                     </div><div>
+                      <time><span>Oct</span> 2018</time>
+                      <h3>CN GPU</h3>
+                      <p>
+                          CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA.
+                      </p>
+                    </div><div>
                         <time><span>Q4</span> 2020</time>
                         <h3>Cloud & Mobile Self-destructing Messages</h3>
                         <p>
-                            Send messages to other users that self destruct after given time.
+                          Send messages to other users that self destruct after given time.
                         </p>
                     </div><div>
                         <time><span>Q1</span> 2021</time>
                         <h3>Conceal Swap</h3>
                         <p>
-                            Swap your CCX to wCCX and back the other way with our swap tool.
+                          Swap your CCX to wCCX and back the other way with our swap tool.
                         </p>
                     </div><div>
                         <time><span>Q2</span> 2021</time>
                         <h3>Conceal Live</h3>
                         <p>
-                            Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
+                          Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
                         </p>
                     </div>
-                    <div class="roadmapDivider dividerFirst"></div>
-                    <div class="roadmapDivider"></div>					
-					<div>
+					          <div>
                         <time><span>Q4</span> 2021</time>
-                        <h3>Conceal HUB - Initial release</h3>
+                        <h3>Conceal App - Initial release</h3>
                         <p>
                             Initial release of cross platform application with Wallet module as first supported module
                         </p>
-					</div><div>
+					          </div>                    
+                    <div class="roadmapDivider dividerFirst"></div>
+                    <div class="roadmapDivider"></div>					
+                    <div>
                         <time><span>Q1</span> 2022</time>
-                        <h3>Conceal HUB - Version 2</h3>
+                        <h3>Conceal App - Version 2</h3>
                         <p>
-                            Second release with Deposit and ID modules
+                          Second release with Deposit and ID modules
                         </p>
-					</div><div>
+					          </div><div>
                         <time><span>Q2</span> 2022</time>
-                        <h3>Conceal HUB - Version 3</h3>
+                        <h3>Conceal App - Version 3</h3>
                         <p>
-                            Third release with Bridges module
+                          Third release with Bridges module
                         </p>
                     </div><div>
-                        <time>TBA</time>
+                        <time><span>Q2</span> 2022</time>
+                        <h3>Client side Web Wallet</h3>
+                        <p>
+                          100% Serverless & Client side Web Wallet
+                        </p>
+                    </div><div>
+                        <time><span>Q3</span> 2022</time>
+                        <h3>New Bridges</h3>
+                        <p>
+                          Bridge to Ergo and AVAX
+                        </p>
+                    </div><div>
+                        <time><span>Q4</span> 2022</time>
+                        <h3>Conceal App - Version 4</h3>
+                        <p>
+                          Fourth release with integrated Conceal Live
+                        </p>
+                    </div><div>
+                        <time>2023<BR>2024</time>
+                        <h3>Multi-signature Wallets</h3>
+                        <p>
+                          Support for Multi-signature Wallets. Together with Colored coins it will allow for "Privacy Protected Assets" on CCX.
+                        </p>
+                    </div><div>
+                        <time>2023<BR>2024</time>
+                        <h3>Colored Coins</h3>
+                        <p>
+                          Support for Colored Coins on CCX, this is a step towards "Privacy Protected Assets" .
+                        </p>
+                    </div><div>
+                        <time>2024<BR>2025</time>
+                        <h3>Privacy-Protected Stable Coin</h3>
+                        <p>
+                          On-chain privacy-protected stable coin pegged to other digital stablecoins using cross-chain bridges.
+                        </p>
+                    </div><div>
+                        <time>2025<BR>2026</time>
+                        <h3>Privacy Protected Assets</h3>
+                        <p>
+                          Allow users to create "Privacy Protected Assets"  on CCX chain
+                        </p>
+                    </div><div>
+                        <time>2026<BR>2027</time>
+                        <h3>Canceling Deposits</h3>
+                        <p>
+                          Option to cancel the currently locked deposit but with penalties.
+                        </p>
+                    </div><div>
+                        <time>2027<BR>2028</time>
                         <h3>Stable Deposits</h3>
                         <p>
-                            Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
+                          Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
                         </p>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Conceal Vault</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Multi-signature Wallets</h3>
                     </div><div class="noContent">
                         <time>TBA</time>
                         <h3>Hardware Wallet Support</h3>
@@ -936,6 +1009,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://ergoplatform.org"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
                       </picture>
                     </li>
+				</ul><ul class="partnerCards">
+					<li>
+                      <picture>
+                        <a href="https://crypto.com/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                      </picture>
+                    </li>
                 </ul>
             </div>
         <!-- #community --></section>
@@ -951,6 +1030,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </ul>
             </div>
         <!-- #helpdesk --></section>
+		
+		<section id="cryptoWidget">	
+			<script src="https://crypto.com/price/static/widget/index.js"></script>
+			<div
+			  id="crypto-widget-CoinTicker"
+			  data-transparent="true"
+			  data-theme="dark"
+			  data-design="modern"
+			  data-coins="conceal">
+			</div>
+        <!-- #cryptoWidget --></section>
     </main>
 
     <footer>
@@ -988,6 +1078,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </li><li>
+                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li><li>
                     <a href="https://www.reddit.com/r/ConcealNetwork/">
                         <i class="fab fa-reddit"></i>
                     </a>
@@ -999,7 +1093,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <a href="https://bitcointalk.org/index.php?topic=5086106">
                         <i class="fab fa-bitcoin"></i>
                     </a>
-                </li>
+                </li>	
             <!-- .socialLinks --></ul>
         </div><div>
             <hr>
