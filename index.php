@@ -137,6 +137,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
+                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                	</li><li>
                         <a href="https://medium.com/@ConcealNetwork">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
@@ -1005,6 +1009,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://ergoplatform.org"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
                       </picture>
                     </li>
+				</ul><ul class="partnerCards">
+					<li>
+                      <picture>
+                        <a href="https://crypto.com/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                      </picture>
+                    </li>
                 </ul>
             </div>
         <!-- #community --></section>
@@ -1020,6 +1030,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </ul>
             </div>
         <!-- #helpdesk --></section>
+		
+		<section id="cryptoWidget">	
+			<script src="https://crypto.com/price/static/widget/index.js"></script>
+			<div
+			  id="crypto-widget-CoinTicker"
+			  data-transparent="true"
+			  data-theme="dark"
+			  data-design="modern"
+			  data-coins="conceal">
+			</div>
+        <!-- #cryptoWidget --></section>
     </main>
 
     <footer>
@@ -1057,6 +1078,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </li><li>
+                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li><li>
                     <a href="https://www.reddit.com/r/ConcealNetwork/">
                         <i class="fab fa-reddit"></i>
                     </a>
@@ -1068,7 +1093,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <a href="https://bitcointalk.org/index.php?topic=5086106">
                         <i class="fab fa-bitcoin"></i>
                     </a>
-                </li>
+                </li>	
             <!-- .socialLinks --></ul>
         </div><div>
             <hr>
@@ -1089,4 +1114,5 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <script src="js/calc.js?v=1"></script>
 
     </body></html>';
+
 ?>
