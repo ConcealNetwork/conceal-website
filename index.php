@@ -137,8 +137,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
-                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
-                        <i class="fab fa-youtube"></i>
+                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+							<i class="fab fa-youtube"></i>
+							<span>Youtube</span>
                     </a>
                 	</li><li>
                         <a href="https://medium.com/@ConcealNetwork">
@@ -163,7 +164,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-bitcoin"></i>
                             <span>BitcoinTalk</span>
                         </a>
-                        </li><li>
+                    </li><li>
                         <a href="https://bridge.conceal.network">
                             <i class="fas fa-archway"></i>
                             <span>Bridge</span>
@@ -447,7 +448,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h4>XMRStak</h4>
                         <pre><code>"pool_list": [
   {
-      "pool_address": "pool.conceal.community:3333",
+      "pool_address": "pool.conceal.network:3333",
       "wallet_address": "YOUR_WALLET_ADDRESS",
       "rig_id": "YOUR_WORKER_NAME",
       "pool_password": "x",
@@ -463,7 +464,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <pre>Pending support...</pre>
                     </div><div>
                         <h4>SRBMiner</h4>
-                        <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.community:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
+                        <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.network:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
@@ -813,33 +814,18 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
-                        <b>katz</b><br>
-                        <span>Head of</span> <span>Research</span>
+                        <b>Taegus</b><br>
+                        <span>Head of</span> <span>Development</span>
                         <ul>
                             <li>
-                                <a href="https://github.com/cryptokatz">
+                                <a href="https://github.com/taeguscromis">
                                     <i class="fab fa-github teamLink"></i>
                                     <span>Github</span>
                                 </a>
                             </li><li>
-                                <a href="https://twitter.com/cryptokatz1">
+                                <a href="https://twitter.com/Taegus1">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>ZeMaNel</b><br>
-                        <span>Head of</span> <span>Technology</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/cryptomanel">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
                                 </a>
                             </li>
                         </ul>
@@ -863,18 +849,43 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
-                        <b>Taegus</b><br>
-                        <span>Head of</span> <span>Development</span>
+                        <b>Mr_Kwibs</b><br>
+                        <span>Head of</span> <span>Marketing</span>
                         <ul>
                             <li>
-                                <a href="https://github.com/taeguscromis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/Taegus1">
+                                <a href="https://twitter.com/Mr_Kwibs">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>LolitaLollipop</b><br>
+                        <span>Head of</span> <span>Community</span>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/CryptoLolli">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
+                        <b>ZeMaNel</b><br>
+                        <span>Cloud Operations</span>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/cryptomanel">
+                                    <i class="fab fa-github teamLink"></i>
+                                    <span>Github</span>
                                 </a>
                             </li>
                         </ul>
@@ -928,6 +939,26 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
+                        <b>CartoonFace</b><br>
+                        <span>Developer</span>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/cartoon-face">
+                                    <i class="fab fa-github teamLink"></i>
+                                    <span>Github</span>
+                                </a>
+                            </li><li>
+                                <a href="https://twitter.com/CartoonFace_Dev">
+                                    <i class="fab fa-twitter teamLink"></i>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li><li>
+                        <picture>
+                            <source srcset="images/team/unknown.webp" type="image/webp">
+                            <img src="images/team/unknown.jpg" alt="unknown"><br>
+                        </picture>
                         <b>Mannan</b><br>
                         <span>Community Manager</span>
                         <ul>
@@ -943,32 +974,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <source srcset="images/team/unknown.webp" type="image/webp">
                             <img src="images/team/unknown.jpg" alt="unknown"><br>
                         </picture>
-                        <b>LolitaLollipop</b><br>
-                        <span>Head of</span> <span>Community</span>
+                        <b>CryptTrader</b><br>
+                        <span>Marketing</span>
                         <ul>
                             <li>
-                                <a href="https://twitter.com/???">
+                                <a href="https://twitter.com/Cryp_Tader">
                                     <i class="fab fa-twitter teamLink"></i>
                                     <span>Twitter</span>
                                 </a>
                             </li>
                         </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Mr_Kwibs</b><br>
-                        <span>Head of</span> <span>Marketing</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/???">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    </li>		
                 </ul>
             </div>
         <!-- #theTeam --></section>
@@ -1043,69 +1059,156 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <!-- #cryptoWidget --></section>
     </main>
 
-    <footer>
-        <div>
-            <h2>WHERE TO FIND US</h2>
-            <p>
-                <span>The best place to find out more is to visit our</span>
-                <a href="http://discord.conceal.network">Discord</a>
-                <span>channel. You will find our source code, and other releases on</span>
-                <a href="https://github.com/ConcealNetwork">Github</a>,
-                <span>and our latest activities on</span>
-                <a href="https://twitter.com/ConcealNetwork">Twitter</a>.
-            </p>
-        </div><div>
-            <hr>
-            <span>Official E-Mail Address:</span>
-            <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>.<br>
-            <br>
-            <span>Here are all the other ways you can find us online.</span>
-            <ul class="socialLinks">
-                <li>
-                    <a href="http://discord.conceal.network">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </li><li>
-                    <a href="https://t.me/concealnetworkusers">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                </li><li>
-                    <a href="https://github.com/ConcealNetwork">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li><li>
-                    <a href="https://twitter.com/ConcealNetwork">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li><li>
-                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li><li>
-                    <a href="https://www.reddit.com/r/ConcealNetwork/">
-                        <i class="fab fa-reddit"></i>
-                    </a>
-                </li><li>
-                    <a href="https://medium.com/@ConcealNetwork">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                </li><li>
-                    <a href="https://bitcointalk.org/index.php?topic=5086106">
-                        <i class="fab fa-bitcoin"></i>
-                    </a>
-                </li>	
-            <!-- .socialLinks --></ul>
-        </div><div>
-            <hr>
-			<div>
-			  <span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
-			  <div class="vl"></div>
-			  <span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
-			<div>
-            &copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
-            <br>
-            <a href="#top">Back to Top</a>
+
+    <footer style="background: unset;background-color: #181A20;">
+	
+		<div style="padding:20px 0 20px 0;">
+			<a href="#top">Back to Top</a>
+		</div>
+		
+    	<div class="fcontain">
+    		<div class="flistwrap">
+				<ul>
+					<h2>General</h2>
+					<li>
+						<a href="about/" >About</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php" >Documentation</a>
+					</li>
+					<li>
+						<a href="https://explorer.conceal.network/" >Explorer</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php?id=FAQ" >FAQ</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/support/" >Support</a>
+					</li>
+					<li>
+						<a href="labs/" >Labs</a>
+					</li>
+					<li>
+						<a href="community/#exchanges" >Exchanges</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" >wCCX</a>
+					</li>
+					<li>
+						<a href="https://status.conceal.network/" >Network Status</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div class="flistwrap">	
+				<ul>
+					<h2>Products</h2>
+					<li>
+						<a href="#wallets" >Wallets</a>
+					</li>
+					<li>
+						<a href="https://bridge.conceal.network/" >Bridge</a>
+					</li>
+					<li>
+						<a href="app/" >Conceal App</a>
+					</li>
+					<li>
+						<a href="banking/" >Banking</a>
+					</li>
+					<li>
+						<a href="https://conceal.cloud/" >Cloud</a>
+					</li>
+					<li>
+						<a href="id/" >ID</a>
+					</li>
+					<li>
+						<a href="messaging/" >Messaging</a>
+					</li>
+					<li>
+						<a href="mobile/" >Mobile</a>
+					</li>
+					<li>
+						<a href="clive/" >C-Live</a>
+					</li>
+					<li>
+						<a href="pay/" >Pay</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="flistwrap">
+				<ul>
+					<h2>Community</h2>
+						<li>
+							<a href="http://discord.conceal.network">
+								Discord
+								<i class="fab fa-discord"></i>
+							</a>
+						</li><li>
+							<a href="https://t.me/concealnetworkusers">
+								Telegram
+								<i class="fab fa-telegram"></i>
+							</a>
+						</li><li>
+							<a href="https://twitter.com/ConcealNetwork">
+								Twitter
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li><li>
+							<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+								Youtube
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li><li>
+							<a href="https://medium.com/@ConcealNetwork">
+								Medium
+								<i class="fab fa-medium"></i>
+							</a>
+						</li><li>
+							<a href="https://www.reddit.com/r/ConcealNetwork/">
+								Reddit
+								<i class="fab fa-reddit"></i>
+							</a>
+						</li><li>
+							<a href="https://www.facebook.com/concealnetwork/">
+								Facebook
+								<i class="fab fa-facebook"></i>
+							</a>
+						</li><li>
+							<a href="https://github.com/ConcealNetwork">
+								Github
+								<i class="fab fa-github"></i>
+							</a>
+						</li><li>
+							<a href="https://bitcointalk.org/index.php?topic=5086106">
+								BitcoinTalk
+								<i class="fab fa-bitcoin"></i>
+							</a>
+						</li>
+					
+		 		</ul>
+		 	</div>
+		</div>
+		
+		<div class="footerelm">
+			<span>Official E-Mail Address:</span>
+            <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>
+		</div>
+		
+		<div class="footerelm">
+			<span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
+			<div class="vl"></div>
+			<span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
+		</div>
+		
+		<div>
+				
+		
+            	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
         </div>
+		
     </footer>
 
     <script src="static/homepage.js?v=1"></script>
