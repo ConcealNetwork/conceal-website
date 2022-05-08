@@ -423,7 +423,7 @@
 					<div class="row align-items-center speaker mediaSectionWrapper">			
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-march-2022-1c1bd56a10c3" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-monthly-update-april-2022-bb258761733d" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (April 2022)</span>
 						  </a>
@@ -431,7 +431,7 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-february-2022-827d88b41327" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-march-2022-1c1bd56a10c3" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (March 2022)</span>
 						  </a>
@@ -439,7 +439,7 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-january-2022-cf35adcf5d39" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-february-2022-827d88b41327" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (February 2022)</span>
 						  </a>
@@ -447,9 +447,17 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-january-2022-cf35adcf5d39" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (January 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
 						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-2021-recap-65e533ada2b9" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
-							<span>2021 Conceal Network Recap (January 2022)</span>
+							<span>2021 Conceal Network Recap</span>
 						  </a>
 						</div>
 					  </div>
