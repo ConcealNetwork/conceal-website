@@ -355,54 +355,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </a>
                     </li>
                 </ul>
-                <h3 class="text-center wallet-subheader">Light Wallets (Cloud Based)</h3>
-                <ul>
-                    <li>
-                        <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - WINDOWS</a>
-                    </li><li>
-                        <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - LINUX</a>
-                    </li>
-                    </li><li>
-                        <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - MAC</a>
-                    </li><li>
-                        <i class="fab fa-android"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
-                            ANDROID - APK
-                        </a><br>
-                        <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
-                            Google Play
-                        </a>
-                    </li><li>
-                        <i class="fas fa-cloud"></i><br>
-                        <a href="https://conceal.cloud">CLOUD</a>
-                    </li>
-                  </ul>
-                  <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
-                  <ul>                        
-                    <li>
-                        <i class="fas fa-paper-plane"></i><br>
-                        <a href="https://conceal.network/paperwallet">PAPER</a>
-                    </li><li>
-                        <i class="fab fa-chrome"></i><br>
-                        <a href="https://chrome.google.com/webstore/detail/conceal-browser-extension/ajclelbbigjopijfkgfeblgikbhaofgp">Chrome Extension</a>
-                    </li><li>
-                        <i class="fab fa-firefox"></i><br>
-                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/conceal-browser-extension/">Firefox Extension</a>
-                    </li>
-                </ul>
-                <p>
+				<p>
                     Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
-                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
-            </div>
-        <!-- #wallets --></section>
-
-        <section id="wallets">
-            <div>
-                <h2><span>Bringing it all together</span> <span>Conceal App</span></h2>
+				
+				
+                <h3 class="text-center wallet-subheader">Conceal App (all in one)</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -427,10 +385,25 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       </a>
                   </li>
                 </ul>
-                <p>
+				<p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
                 </p>
-                <img src="images/ccxapp.png" alt="Conceal APP" class="plate">
+				  
+				  
+              <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                  <ul>                        
+                    <li>
+                        <i class="fas fa-paper-plane"></i><br>
+                        <a href="https://conceal.network/paperwallet">PAPER</a>
+                    </li><li>
+                        <i class="fab fa-chrome"></i><br>
+                        <a href="https://chrome.google.com/webstore/detail/conceal-browser-extension/ajclelbbigjopijfkgfeblgikbhaofgp">Chrome Extension</a>
+                    </li><li>
+                        <i class="fab fa-firefox"></i><br>
+                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/conceal-browser-extension/">Firefox Extension</a>
+                    </li>
+                </ul>
+                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
         <!-- #wallets --></section>
 
@@ -573,7 +546,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>May</span> 2018</time>
                         <h3>Mainnet launched</h3>
                         <p>
-                          On 18 May 2018 mainnet is launched. First block is officialy mined by the miners
+                          On 23rd May 2018 mainnet is launched. First block is officialy mined by the miners
                         </p>
                     </div><div>
                         <time><span>Jun</span> 2018</time>
@@ -666,22 +639,22 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             Cold staking came to cloud and mobile. You are able to earn interest from your phone!
                         </p>
                     </div><div>
-                      <time><span>Oct</span> 2018</time>
+                      <time><span>Oct</span> 2020</time>
                       <h3>CN GPU</h3>
                       <p>
-                          CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA.
+                          CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA. Our fairest mining algorithm yet
                       </p>
                     </div><div>
                         <time><span>Q4</span> 2020</time>
                         <h3>Cloud & Mobile Self-destructing Messages</h3>
                         <p>
-                          Send messages to other users that self destruct after given time.
+                          Send messages to other users that self destruct after given time on Cloud wallets!
                         </p>
                     </div><div>
                         <time><span>Q1</span> 2021</time>
-                        <h3>Conceal Swap</h3>
+                        <h3>Conceal Bridge</h3>
                         <p>
-                          Swap your CCX to wCCX and back the other way with our swap tool.
+                          Swap your CCX to wCCX and back the other way with our Bridge tool.
                         </p>
                     </div><div>
                         <time><span>Q2</span> 2021</time>
@@ -692,32 +665,26 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </div>
 					          <div>
                         <time><span>Q4</span> 2021</time>
-                        <h3>Conceal App - Initial release</h3>
+                        <h3>Conceal App</h3>
                         <p>
-                            Initial release of cross platform application with Wallet module as first supported module
+                            Initial release of cross platform application with Wallet and News Feed as the first supported modules.
                         </p>
-					          </div>                    
-                    <div class="roadmapDivider dividerFirst"></div>
-                    <div class="roadmapDivider"></div>					
-                    <div>
+					</div><div>
                         <time><span>Q1</span> 2022</time>
-                        <h3>Conceal App - Version 2</h3>
+                        <h3>Conceal App Deposits</h3>
                         <p>
-                          Second release with Deposit and ID modules
+                          Conceal Blockchain Deposits Module released for the Conceal App!
                         </p>
 					          </div><div>
                         <time><span>Q2</span> 2022</time>
-                        <h3>Conceal App - Version 3</h3>
+                        <h3>Conceal Web Wallet</h3>
                         <p>
-                          Third release with Bridges module
+                          Release of our 100% Client-Side Web Wallet for Conceal.
                         </p>
-                    </div><div>
-                        <time><span>Q2</span> 2022</time>
-                        <h3>Client side Web Wallet</h3>
-                        <p>
-                          100% Serverless & Client side Web Wallet
-                        </p>
-                    </div><div>
+                    </div>
+					<div class="roadmapDivider dividerFirst"></div>
+                    <div class="roadmapDivider"></div>
+					<div>
                         <time><span>Q3</span> 2022</time>
                         <h3>New Bridges</h3>
                         <p>
@@ -733,7 +700,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time>2023<BR>2024</time>
                         <h3>Multi-signature Wallets</h3>
                         <p>
-                          Support for Multi-signature Wallets. Together with Colored coins it will allow for "Privacy Protected Assets" on CCX.
+                          Support for Multi-signature Wallets. Together with Colored coins it will allow for “Privacy Protected Assets” on CCX.
                         </p>
                     </div><div>
                         <time>2023<BR>2024</time>
@@ -1028,7 +995,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				</ul><ul class="partnerCards">
 					<li>
                       <picture>
-                        <a href="https://crypto.com/price/conceal"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                        <a href="https://crypto.com/price/conceal/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
                       </picture>
                     </li>
                 </ul>
@@ -1062,7 +1029,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
     <footer style="background: unset;background-color: #181A20;">
 	
-		<div style="padding:20px 0 20px 0;">
+		<div style="padding:20px 0 0 0;">
 			<a href="#top">Back to Top</a>
 		</div>
 		
@@ -1201,11 +1168,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 			<span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
 			<div class="vl"></div>
 			<span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
-		</div>
+		</div class="footerelm">
 		
-		<div>
-				
-		
+		<div class="footerelm">		
             	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
         </div>
 		
