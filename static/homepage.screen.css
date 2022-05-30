@@ -1129,10 +1129,15 @@ body > footer .socialLinks a:hover {
 }
 
 
-
+footer{
+	padding: 0;
+	align-items:center;
+  	justify-content:center;
+  	text-align:center;
+}
 footer .fcontain{
 	min-width: 100%;width: 100%;
-	padding: 50px;
+	padding: 50px 51px 50px 51px;
 }
 footer .flistwrap{
 	width: 33%;
