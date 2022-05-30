@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>Conceal Mobile - Fast, Secure, Feature-Rich Conceal Wallet</title>
+  <title>Conceal app</title>
   <?php include '../landing/include/topjs.html';?>
 </head><body>
   <div id="loader-wrapper">
