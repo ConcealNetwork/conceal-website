@@ -91,10 +91,10 @@
           <div class="col-lg-6 ml-auto">
             <div class="bio pl-lg-5">
               <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-right" data-aos-delay="300">
-                Built with the security of OpenID
+                Innovative Solutions focused on Security and Usability
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                There is not always a good reason to reinvent the wheel. We carefully chose the proven and widely utilized OpenID protocol to power Conceal ID.
+                While looking for suitable solutions to the issue of sharing addresses and remembering them easily, we found none. So we created a Simple and Secure solution for Human Readable Addresses with Conceal ID.
               </p>
             </div>
           </div>
