@@ -573,16 +573,16 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             CCX is listed on the STEX exchange and the deposit system is revamped to support investments.  Stock is rising!
                         </p>
                     </div><div>
-                        <time><span>Feb</span> 2019</time>
-                        <h3>CN-GPU mining algorithm</h3>
-                        <p>
-                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
-                        </p>
-                    </div><div>
                         <time><span>Oct</span> 2018</time>
                         <h3>CN Conceal</h3>
                         <p>
                             CCX changes to CN Conceal mining algorithm to avoid ASICs and FPGA.
+                        </p>
+                    </div><div>
+                        <time><span>Feb</span> 2019</time>
+                        <h3>CN-GPU mining algorithm</h3>
+                        <p>
+                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
                         </p>
                     </div><div>
                         <time><span>Mar</span> 2019</time>
