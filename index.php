@@ -77,6 +77,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#features">Features</a></li>
                             <li><a href="in-the-media/">In The Media</a></li>
                             <li><a href="labs/">Labs</a></li>
+							<li><a href="branding/">Branding</a></li>
                             <li><a href="#roadmap">Roadmap</a></li>
                             <li><a href="#theTeam">Team</a></li>
                         </ul>
@@ -573,16 +574,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             CCX is listed on the STEX exchange and the deposit system is revamped to support investments.  Stock is rising!
                         </p>
                     </div><div>
-                        <time><span>Oct</span> 2018</time>
+                        <time><span>Feb</span> 2019</time>
                         <h3>CN Conceal</h3>
                         <p>
                             CCX changes to CN Conceal mining algorithm to avoid ASICs and FPGA.
-                        </p>
-                    </div><div>
-                        <time><span>Feb</span> 2019</time>
-                        <h3>CN-GPU mining algorithm</h3>
-                        <p>
-                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
                         </p>
                     </div><div>
                         <time><span>Mar</span> 2019</time>
@@ -680,6 +675,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h3>Conceal Web Wallet</h3>
                         <p>
                           Release of our 100% Client-Side Web Wallet for Conceal.
+                        </p>
+                    </div><div>
+                        <time><span>Q2</span> 2022</time>
+                        <h3>Conceal App - Version 3</h3>
+                        <p>
+                          Third release with Bridges and ID modules.
                         </p>
                     </div>
 					<div class="roadmapDivider dividerFirst"></div>
