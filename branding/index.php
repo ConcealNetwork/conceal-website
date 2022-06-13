@@ -78,7 +78,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Even concealed we have our own looks. Get a closer look at how we present ourself to the world.
+              Conceal, to keep secret, or hidden from view.<br> Not only is this an apt description of our Project, but is also the leading influence in our design. Backgrounds are often darkened, shrouded, or obscured in some way. Text is often a Grey or White that stands out on the blackened backgrounds. The deep Yellow is used sparingly, sometimes as important keywords or as borders around important information. The careful use of the rich Yellow along with ample shades of greys and blacks implies that though much is hidden, what lies underneath is truly special.
             </p>
           </div>
         </div>

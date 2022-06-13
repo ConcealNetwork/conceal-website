@@ -182,6 +182,7 @@
 							<ul data-aos="fade-up">
 							  <li><a href="https://coinmarketcap.com/currencies/conceal">CoinMarketCap</a></li>
 							  <li><a href="https://www.coingecko.com/en/coins/conceal">CoinGecko</a></li>
+							  <li><a href="https://crypto.com/price/conceal">Crypto.com</a></li>
 							</ul>
 						</div>
 					</div>
