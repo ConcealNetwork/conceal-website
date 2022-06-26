@@ -398,10 +398,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://conceal.network/paperwallet">PAPER</a>
                     </li><li>
                         <i class="fab fa-chrome"></i><br>
-                        <a href="https://chrome.google.com/webstore/detail/conceal-browser-extension/ajclelbbigjopijfkgfeblgikbhaofgp">Chrome Extension</a>
-                    </li><li>
-                        <i class="fab fa-firefox"></i><br>
-                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/conceal-browser-extension/">Firefox Extension</a>
+                        <a href="https://wallet.conceal.network/">Web Wallet</a>
                     </li>
                 </ul>
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
@@ -689,13 +686,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time><span>Q3</span> 2022</time>
                         <h3>New Bridges</h3>
                         <p>
-                          Bridge to Ergo and AVAX
+                          Bridges to Ergo and AVAX
                         </p>
                     </div><div>
                         <time><span>Q4</span> 2022</time>
                         <h3>Conceal App - Version 4</h3>
                         <p>
-                          Fourth release with integrated Conceal Live
+                          Fourth release with Explorer module
+                        </p>
+                    </div><div>
+                        <time><span>Q4</span> 2023</time>
+                        <h3>Conceal App - Version 5</h3>
+                        <p>
+                          Fifth release with Conceal Live module
                         </p>
                     </div><div>
                         <time>2023<BR>2024</time>
@@ -707,7 +710,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time>2023<BR>2024</time>
                         <h3>Colored Coins</h3>
                         <p>
-                          Support for Colored Coins on CCX, this is a step towards "Privacy Protected Assets" .
+                          Support for Coloured Coins on CCX, this is a step towards “Privacy Protected Assets”.
                         </p>
                     </div><div>
                         <time>2024<BR>2025</time>
@@ -719,13 +722,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <time>2025<BR>2026</time>
                         <h3>Privacy Protected Assets</h3>
                         <p>
-                          Allow users to create "Privacy Protected Assets"  on CCX chain
+                          Allow users to create “Privacy Protected Assets” on CCX chain.
                         </p>
                     </div><div>
                         <time>2026<BR>2027</time>
                         <h3>Canceling Deposits</h3>
                         <p>
-                          Option to cancel the currently locked deposit but with penalties.
+                          Option to cancel currently locked deposits but with penalties.
                         </p>
                     </div><div>
                         <time>2027<BR>2028</time>
