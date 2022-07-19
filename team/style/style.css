@@ -72,9 +72,6 @@
 	border-radius: 2em 2em 2em 2em;
 	padding: 10px;
 	background: rgba(81, 70, 68, .6);
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 50px;
 }
 .socials{
 	list-style: none;
@@ -173,13 +170,16 @@
 }
 .desc{
 	margin: 0;
-	font-size: 13px;
-	font-weight: lighter;
+	font-size: 12px;
 	padding-bottom: 10px;
 	color: #ffffff;
 	word-wrap: break-word;
+	-moz-osx-font-smoothing: grayscale;
+  	-webkit-font-smoothing: antialiased !important;
+  	-moz-font-smoothing: antialiased !important;
+  	text-rendering: optimizelegibility !important;
+ 	letter-spacing: .03em;
 }
-
 
 
 
