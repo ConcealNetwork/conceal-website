@@ -79,7 +79,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="labs/">Labs</a></li>
 							<li><a href="branding/">Branding</a></li>
                             <li><a href="#roadmap">Roadmap</a></li>
-                            <li><a href="#theTeam">Team</a></li>
+                            <li><a href="team/">Team</a></li>
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
@@ -753,232 +753,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #roadmap --></section>
 
-        <section id="theTeam">
-            <div>
-                <h2>
-                    <span>Powered By</span>
-                    <span>The Conceal Team</span>
-                </h2>
-                <ul class="miniProfiles">
-                    <li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>krypt0x (aka 0x)</b><br>
-                        <span>Head of</span> <span>Operations</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/krypt0x">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/Krypt0xChaos">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Taegus</b><br>
-                        <span>Head of</span> <span>Development</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/taeguscromis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/Taegus1">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>okanist (aka Okan)</b><br>
-                        <span>Head of</span> <span>Business Development</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/okansariirmak">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Mr_Kwibs</b><br>
-                        <span>Head of</span> <span>Marketing</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/Mr_Kwibs">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>LolitaLollipop</b><br>
-                        <span>Head of</span> <span>Community</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/CryptoLolli">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>ZeMaNel</b><br>
-                        <span>Cloud Operations</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/cryptomanel">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>bomb-on</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/bomb-on">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>ThrownLemon</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/ThrownLemon">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>AxVultis</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/AxVultis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>CartoonFace</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/cartoon-face">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/CartoonFace_Dev">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Mannan</b><br>
-                        <span>Community Manager</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/CryptolordTG">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>CryptTrader</b><br>
-                        <span>Marketing</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/Cryp_Tader">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>		
-                </ul>
-            </div>
-        <!-- #theTeam --></section>
-
-        <section id="community">
-            <div>
-                <h2>
-                    <span>And</span>
-                    <span>The Community</span>
-                </h2>
-                <ul class="miniProfiles">
-                    <li>
-						<picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>This could be you...</b><br>
-                        <span>Become a part of the project</span>
-                    </li>
-                </ul>
-            </div>
-        <!-- #community --></section>
-
         <section id="partners">
             <div>
                 <h2>
@@ -1163,18 +937,18 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		 	</div>
 		</div>
 		
-		<div class="footerelm">
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
 			<span>Official E-Mail Address:</span>
             <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>
 		</div>
 		
-		<div class="footerelm">
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
 			<span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
 			<div class="vl"></div>
 			<span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
 		</div class="footerelm">
 		
-		<div class="footerelm">		
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">		
             	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
         </div>
 		
