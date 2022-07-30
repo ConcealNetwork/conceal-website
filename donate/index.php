@@ -3,10 +3,10 @@
   <title>Conceal - Community</title>
   <?php include '../landing/include/topjs.html';?>
 </head><body>
-  <!-- <div id="loader-wrapper">
+  <div id="loader-wrapper">
     <b></b>
     <div id="loader"></div>
-  </div> -->
+  </div>
 
   <div class="site-wrap">
     <div class="site-mobile-menu">
