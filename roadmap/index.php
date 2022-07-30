@@ -3,7 +3,7 @@
   <title>Conceal - Roadmap</title>
   <meta name="description" content="Conceal roadmap,conceal is a privacy focused cryptocurrency, blockchain and DEFI">
   <?php include '../landing/include/topjs.html';?>
-  <link rel="stylesheet" href="../roadmaps/style/style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head><body>
   <div id="loader-wrapper">
     <b></b>
