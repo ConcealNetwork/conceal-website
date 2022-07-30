@@ -776,6 +776,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://crypto.com/price/conceal/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
                       </picture>
                     </li>
+                </ul><ul class="partnerCards">
+					<li>
+                      <picture>
+                        <a href="https://cryptocurrencycheckout.com/"><img src="images/partners/cyprtocurrencycheckout.png" alt="cryptocurrencycheckout.com"><br></a>
+                      </picture>
+                    </li>
                 </ul>
             </div>
         <!-- #community --></section>
