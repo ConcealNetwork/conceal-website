@@ -1,39 +1,3 @@
-@font-face {
-	font-family:"poppins";
-	font-weight:normal;
-	font-style:normal;
-	src:
-		url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
-		url("../fonts/poppins-regular-webfont.woff") format("woff");
-}
-
-@font-face {
-	font-family:"poppins";
-	font-weight:normal;
-	font-style:italic;
-	src:
-		url("../fonts/poppins-italic-webfont.woff2") format("woff2"),
-		url("../fonts/poppins-italic-webfont.woff") format("woff");
-}
-
-@font-face {
-	font-family:"poppins";
-	src:
-		url("../fonts/poppins-semibold-webfont.woff2") format("woff2"),
-		url("../fonts/poppins-semibold-webfont.woff") format("woff");
-	font-weight:bold;
-	font-style:normal;
-}
-
-@font-face {
-	font-family:"poppins";
-	font-weight:bold;
-	font-style:italic;
-	src:
-		url("../fonts/poppins-semibolditalic-webfont.woff2") format("woff2"),
-		url("../fonts/poppins-semibolditalic-webfont.woff") format("woff");
-}
-
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
@@ -180,4 +144,3 @@
   	text-rendering: optimizelegibility !important;
  	letter-spacing: .03em;
 }
-
