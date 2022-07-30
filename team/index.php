@@ -169,7 +169,11 @@
 					<ul class="socials">
 						<li><a href="https://github.com/bomb-on" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
-					<div class="tdesc"><p class="desc">With great power, comes great responsibility</p></div>
+					<div class="tdesc">
+						<p class="desc">
+							Working in IT industry for more than 20 years, exploring the crypto world since 2016. as a miner and pools operator, joined CCX team in 2018 to help with macOS issues, currently focused on front-end development. Technical analysis enthusiast and very passionate about losing money while trading. Creating crappy art and shitty music.
+						</p>
+					</div>
 				</div>
 			</div> 
 			 
@@ -190,14 +194,18 @@
 			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
 				<div class="team card h-100">
 					<div class="team-img">
-						<img src="../images/media/media_articles_02.png" alt="">
+						<img src="../images/teampage/AxVultis.png" alt="">
 					</div>
 					<h3 class="team-name">AxVultis</h3>
 					<span class="role">Developer</span>
 					<ul class="socials">
 						<li><a href="https://github.com/AxVultis" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://twitter.com/AxVultis" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
-					<div class="tdesc"><p class="desc">With great power, comes great responsibility</p></div>
+					<div class="tdesc">
+						<p class="desc">I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.
+						</p>
+					</div>
 				</div>
 			</div>  
 			 
@@ -238,7 +246,7 @@
 					<div class="team-img">
 						<img src="../images/teampage/CrypTader.jpg" alt="">
 					</div>
-					<h3 class="team-name">CrypTrader</h3>
+					<h3 class="team-name">CrypTader</h3>
 					<span class="role">Marketing</span>
 					<ul class="socials">
 						<li><a href="https://twitter.com/Cryp_Tader" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
