@@ -78,7 +78,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="in-the-media/">In The Media</a></li>
                             <li><a href="labs/">Labs</a></li>
 							<li><a href="branding/">Branding</a></li>
-                            <li><a href="#roadmap">Roadmap</a></li>
+                            <li><a href="roadmap/">Roadmap</a></li>
                             <li><a href="team/">Team</a></li>
                         </ul>
                     </li><li>
@@ -482,7 +482,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="majorLinks">
                     <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
-                    <li><a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX">STEX</a></li>
                     <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
                 </ul>
@@ -526,232 +525,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </a>
             </div>
         <!-- #buyingwCCXBNB --></section>
-
-        <section id="roadmap">
-            <div>
-                <h2>
-                    <span>Milestones</span> &amp;</span>
-                    <span>Roadmap</span>
-                </h2>
-                <div class="timeLine">
-                    <div>
-                        <time><span>Apr</span> 2018</time>
-                        <h3>Initial commit</h3>
-                        <p>
-                            The first release candidate, Testnet, Daemon, Miner and Wallet are launched.  Something really great begins.
-                        </p>
-                    </div><div>
-                        <time><span>May</span> 2018</time>
-                        <h3>Mainnet launched</h3>
-                        <p>
-                          On 23rd May 2018 mainnet is launched. First block is officialy mined by the miners
-                        </p>
-                    </div><div>
-                        <time><span>Jun</span> 2018</time>
-                        <h3>Encrypted Messaging & Deposits</h3>
-                        <p>
-                            Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched. Wow!
-                        </p>
-                    </div><div>
-                        <time><span>Jul</span> 2018</time>
-                        <h3>Website & Block Explorer</h3>
-                        <p>
-                            The official website is born providing a central point of information for the project.  The Block Explorer is released.  We\'re on fire!
-                        </p>
-                    </div><div>
-                        <time><span>Oct</span> 2018</time>
-                        <h3>CN Fast</h3>
-                        <p>
-                            CCX changes to CN Fast mining algorithm to avoid ASICs.
-                        </p>
-                    </div><div>
-                        <time><span>Nov</span> 2018</time>
-                        <h3>Exchange Listing & Investments</h3>
-                        <p>
-                            CCX is listed on the STEX exchange and the deposit system is revamped to support investments.  Stock is rising!
-                        </p>
-                    </div><div>
-                        <time><span>Feb</span> 2019</time>
-                        <h3>CN Conceal</h3>
-                        <p>
-                            CCX changes to CN Conceal mining algorithm to avoid ASICs and FPGA.
-                        </p>
-                    </div><div>
-                        <time><span>Mar</span> 2019</time>
-                        <h3>Conceal Cloud</h3>
-                        <p>
-                            Conceal Cloud is launched offering a secure, powerful and feature-rich web wallet for CCX. Adoption skyrockets!
-                        </p>
-                    </div><div>
-                        <time><span>May</span> 2019</time>
-                        <h3>Conceal Labs</h3>
-                        <p>
-                            Conceal Labs is launched offering anyone the ability to get paid to build cool things with Conceal. The community grows!
-                        </p>
-                    </div><div>
-                        <time><span>Jul</span> 2019</time>
-                        <h3>Conceal Mobile</h3>
-                        <p>
-                            Conceal Mobile is launched offering a robust mobile wallet with encrypted messages. Messaging popularity explodes!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2019</time>
-                        <h3>Conceal Pay</h3>
-                        <p>
-                            Conceal Pay is launched making it simple for anyone to accept payments or donations in CCX. Volume expands!
-                        </p>
-                    </div><div>
-                        <time><span>Dec</span> 2019</time>
-                        <h3>Conceal ID</h3>
-                        <p>
-                            Conceal ID is launched offering memorable branded addresses akin to usernames. Ease of use improves!
-                        </p>
-                    </div><div>
-                        <time><span>Jan</span> 2020</time>
-                        <h3>Daemon & Wallet Improvements</h3>
-                        <p>
-                            Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2020</time>
-                        <h3>Wrapped CCX (wCCX)</h3>
-                        <p>
-                            Wrapped CCX is created on ethereum blockchain allowing CCX owners to access DEFI on ETH!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2020</time>
-                        <h3>wCCX on Uniswap and in Trustwallet</h3>
-                        <p>
-                            wCCX is available on the hottest DEX at the time and added to Trustwallet.
-                        </p>
-                    </div><div>
-                        <time><span>Sep</span> 2020</time>
-                        <h3>Deposits on Cloud & Mobile</h3>
-                        <p>
-                            Cold staking came to cloud and mobile. You are able to earn interest from your phone!
-                        </p>
-                    </div><div>
-                      <time><span>Oct</span> 2020</time>
-                      <h3>CN GPU</h3>
-                      <p>
-                          CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA. Our fairest mining algorithm yet
-                      </p>
-                    </div><div>
-                        <time><span>Q4</span> 2020</time>
-                        <h3>Cloud & Mobile Self-destructing Messages</h3>
-                        <p>
-                          Send messages to other users that self destruct after given time on Cloud wallets!
-                        </p>
-                    </div><div>
-                        <time><span>Q1</span> 2021</time>
-                        <h3>Conceal Bridge</h3>
-                        <p>
-                          Swap your CCX to wCCX and back the other way with our Bridge tool.
-                        </p>
-                    </div><div>
-                        <time><span>Q2</span> 2021</time>
-                        <h3>Conceal Live</h3>
-                        <p>
-                          Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
-                        </p>
-                    </div>
-					          <div>
-                        <time><span>Q4</span> 2021</time>
-                        <h3>Conceal App</h3>
-                        <p>
-                            Initial release of cross platform application with Wallet and News Feed as the first supported modules.
-                        </p>
-					</div><div>
-                        <time><span>Q1</span> 2022</time>
-                        <h3>Conceal App Deposits</h3>
-                        <p>
-                          Conceal Blockchain Deposits Module released for the Conceal App!
-                        </p>
-					          </div><div>
-                        <time><span>Q2</span> 2022</time>
-                        <h3>Conceal Web Wallet</h3>
-                        <p>
-                          Release of our 100% Client-Side Web Wallet for Conceal.
-                        </p>
-                    </div><div>
-                        <time><span>Q2</span> 2022</time>
-                        <h3>Conceal App - Version 3</h3>
-                        <p>
-                          Third release with Bridges and ID modules.
-                        </p>
-                    </div>
-					<div class="roadmapDivider dividerFirst"></div>
-                    <div class="roadmapDivider"></div>
-					<div>
-                        <time><span>Q3</span> 2022</time>
-                        <h3>New Bridges</h3>
-                        <p>
-                          Bridges to Ergo and AVAX
-                        </p>
-                    </div><div>
-                        <time><span>Q4</span> 2022</time>
-                        <h3>Conceal App - Version 4</h3>
-                        <p>
-                          Fourth release with Explorer module
-                        </p>
-                    </div><div>
-                        <time><span>Q4</span> 2023</time>
-                        <h3>Conceal App - Version 5</h3>
-                        <p>
-                          Fifth release with Conceal Live module
-                        </p>
-                    </div><div>
-                        <time>2023<BR>2024</time>
-                        <h3>Multi-signature Wallets</h3>
-                        <p>
-                          Support for Multi-signature Wallets. Together with Colored coins it will allow for “Privacy Protected Assets” on CCX.
-                        </p>
-                    </div><div>
-                        <time>2023<BR>2024</time>
-                        <h3>Colored Coins</h3>
-                        <p>
-                          Support for Coloured Coins on CCX, this is a step towards “Privacy Protected Assets”.
-                        </p>
-                    </div><div>
-                        <time>2024<BR>2025</time>
-                        <h3>Privacy-Protected Stable Coin</h3>
-                        <p>
-                          On-chain privacy-protected stable coin pegged to other digital stablecoins using cross-chain bridges.
-                        </p>
-                    </div><div>
-                        <time>2025<BR>2026</time>
-                        <h3>Privacy Protected Assets</h3>
-                        <p>
-                          Allow users to create “Privacy Protected Assets” on CCX chain.
-                        </p>
-                    </div><div>
-                        <time>2026<BR>2027</time>
-                        <h3>Canceling Deposits</h3>
-                        <p>
-                          Option to cancel currently locked deposits but with penalties.
-                        </p>
-                    </div><div>
-                        <time>2027<BR>2028</time>
-                        <h3>Stable Deposits</h3>
-                        <p>
-                          Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
-                        </p>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Conceal Vault</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Hardware Wallet Support</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Distributed API Layer</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Conceal Card</h3>
-                    </div>
-                <!-- .timeLine --></div>
-            </div>
-        <!-- #roadmap --></section>
 
         <section id="partners">
             <div>
@@ -945,7 +718,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
 			<span>Official E-Mail Address:</span>
-            <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>
+            <a href="mailto:hello@conceal.network">hello@conceal.network</a>
 		</div>
 		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
