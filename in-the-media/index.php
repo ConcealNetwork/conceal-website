@@ -432,6 +432,14 @@
 						
 					  <div class="thumbex">
 						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-july-2022-b7a170e384ce" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (July 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
 						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-june-2022-2612b35878f0" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (June 2022)</span>
@@ -446,7 +454,6 @@
 						  </a>
 						</div>
 					  </div>
-
 					  <div class="thumbex">
 						<div class="thumbnail">
 						  <a href="https://concealnetwork.medium.com/conceal-monthly-update-april-2022-bb258761733d" target="_blank" rel="noopener noreferrer"> 
