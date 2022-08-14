@@ -77,8 +77,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#features">Features</a></li>
                             <li><a href="in-the-media/">In The Media</a></li>
                             <li><a href="labs/">Labs</a></li>
-                            <li><a href="#roadmap">Roadmap</a></li>
-                            <li><a href="#theTeam">Team</a></li>
+							<li><a href="branding/">Branding</a></li>
+                            <li><a href="roadmap/">Roadmap</a></li>
+                            <li><a href="team/">Team</a></li>
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
@@ -137,8 +138,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
-                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
-                        <i class="fab fa-youtube"></i>
+                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+							<i class="fab fa-youtube"></i>
+							<span>Youtube</span>
                     </a>
                 	</li><li>
                         <a href="https://medium.com/@ConcealNetwork">
@@ -163,7 +165,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-bitcoin"></i>
                             <span>BitcoinTalk</span>
                         </a>
-                        </li><li>
+                    </li><li>
                         <a href="https://bridge.conceal.network">
                             <i class="fas fa-archway"></i>
                             <span>Bridge</span>
@@ -193,7 +195,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
                     <li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
-                    <li><a href="#roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
+                    <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>
                     <span>Want to build something cool with Conceal?</span> <em>We just might fund you...</em>
@@ -354,54 +356,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </a>
                     </li>
                 </ul>
-                <h3 class="text-center wallet-subheader">Light Wallets (Cloud Based)</h3>
-                <ul>
-                    <li>
-                        <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - WINDOWS</a>
-                    </li><li>
-                        <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - LINUX</a>
-                    </li>
-                    </li><li>
-                        <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LITE Wallet - MAC</a>
-                    </li><li>
-                        <i class="fab fa-android"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
-                            ANDROID - APK
-                        </a><br>
-                        <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
-                            Google Play
-                        </a>
-                    </li><li>
-                        <i class="fas fa-cloud"></i><br>
-                        <a href="https://conceal.cloud">CLOUD</a>
-                    </li>
-                  </ul>
-                  <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
-                  <ul>                        
-                    <li>
-                        <i class="fas fa-paper-plane"></i><br>
-                        <a href="https://conceal.network/paperwallet">PAPER</a>
-                    </li><li>
-                        <i class="fab fa-chrome"></i><br>
-                        <a href="https://chrome.google.com/webstore/detail/conceal-browser-extension/ajclelbbigjopijfkgfeblgikbhaofgp">Chrome Extension</a>
-                    </li><li>
-                        <i class="fab fa-firefox"></i><br>
-                        <a href="https://addons.mozilla.org/en-GB/firefox/addon/conceal-browser-extension/">Firefox Extension</a>
-                    </li>
-                </ul>
-                <p>
+				<p>
                     Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
-                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
-            </div>
-        <!-- #wallets --></section>
-
-        <section id="wallets">
-            <div>
-                <h2><span>Bringing it all together</span> <span>Conceal App</span></h2>
+				
+				
+                <h3 class="text-center wallet-subheader">Conceal App (all in one)</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -426,10 +386,22 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       </a>
                   </li>
                 </ul>
-                <p>
+				<p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
                 </p>
-                <img src="images/ccxapp.png" alt="Conceal APP" class="plate">
+				  
+				  
+              <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                  <ul>                        
+                    <li>
+                        <i class="fas fa-paper-plane"></i><br>
+                        <a href="https://conceal.network/paperwallet">PAPER</a>
+                    </li><li>
+                        <i class="fab fa-chrome"></i><br>
+                        <a href="https://wallet.conceal.network/">Web Wallet</a>
+                    </li>
+                </ul>
+                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
         <!-- #wallets --></section>
 
@@ -447,7 +419,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <h4>XMRStak</h4>
                         <pre><code>"pool_list": [
   {
-      "pool_address": "pool.conceal.community:3333",
+      "pool_address": "pool.conceal.network:3333",
       "wallet_address": "YOUR_WALLET_ADDRESS",
       "rig_id": "YOUR_WORKER_NAME",
       "pool_password": "x",
@@ -463,7 +435,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <pre>Pending support...</pre>
                     </div><div>
                         <h4>SRBMiner</h4>
-                        <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.community:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
+                        <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.network:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
@@ -510,7 +482,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="majorLinks">
                     <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
-                    <li><a href="https://app.stex.com/en/basic-trade/pair/BTC/CCX">STEX</a></li>
                     <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
                 </ul>
@@ -555,443 +526,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #buyingwCCXBNB --></section>
 
-        <section id="roadmap">
-            <div>
-                <h2>
-                    <span>Milestones</span> &amp;</span>
-                    <span>Roadmap</span>
-                </h2>
-                <div class="timeLine">
-                    <div>
-                        <time><span>Apr</span> 2018</time>
-                        <h3>Initial commit</h3>
-                        <p>
-                            The first release candidate, Testnet, Daemon, Miner and Wallet are launched.  Something really great begins.
-                        </p>
-                    </div><div>
-                        <time><span>May</span> 2018</time>
-                        <h3>Mainnet launched</h3>
-                        <p>
-                          On 18 May 2018 mainnet is launched. First block is officialy mined by the miners
-                        </p>
-                    </div><div>
-                        <time><span>Jun</span> 2018</time>
-                        <h3>Encrypted Messaging & Deposits</h3>
-                        <p>
-                            Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched. Wow!
-                        </p>
-                    </div><div>
-                        <time><span>Jul</span> 2018</time>
-                        <h3>Website & Block Explorer</h3>
-                        <p>
-                            The official website is born providing a central point of information for the project.  The Block Explorer is released.  We\'re on fire!
-                        </p>
-                    </div><div>
-                        <time><span>Oct</span> 2018</time>
-                        <h3>CN Fast</h3>
-                        <p>
-                            CCX changes to CN Fast mining algorithm to avoid ASICs.
-                        </p>
-                    </div><div>
-                        <time><span>Nov</span> 2018</time>
-                        <h3>Exchange Listing & Investments</h3>
-                        <p>
-                            CCX is listed on the STEX exchange and the deposit system is revamped to support investments.  Stock is rising!
-                        </p>
-                    </div><div>
-                        <time><span>Feb</span> 2019</time>
-                        <h3>CN-GPU mining algorithm</h3>
-                        <p>
-                            The CN-GPU Proof-of-Work algorithm isFPGA, ASIC, Botnet & Nicehash resistant. Power to the little people!
-                        </p>
-                    </div><div>
-                        <time><span>Oct</span> 2018</time>
-                        <h3>CN Conceal</h3>
-                        <p>
-                            CCX changes to CN Conceal mining algorithm to avoid ASICs and FPGA.
-                        </p>
-                    </div><div>
-                        <time><span>Mar</span> 2019</time>
-                        <h3>Conceal Cloud</h3>
-                        <p>
-                            Conceal Cloud is launched offering a secure, powerful and feature-rich web wallet for CCX. Adoption skyrockets!
-                        </p>
-                    </div><div>
-                        <time><span>May</span> 2019</time>
-                        <h3>Conceal Labs</h3>
-                        <p>
-                            Conceal Labs is launched offering anyone the ability to get paid to build cool things with Conceal. The community grows!
-                        </p>
-                    </div><div>
-                        <time><span>Jul</span> 2019</time>
-                        <h3>Conceal Mobile</h3>
-                        <p>
-                            Conceal Mobile is launched offering a robust mobile wallet with encrypted messages. Messaging popularity explodes!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2019</time>
-                        <h3>Conceal Pay</h3>
-                        <p>
-                            Conceal Pay is launched making it simple for anyone to accept payments or donations in CCX. Volume expands!
-                        </p>
-                    </div><div>
-                        <time><span>Dec</span> 2019</time>
-                        <h3>Conceal ID</h3>
-                        <p>
-                            Conceal ID is launched offering memorable branded addresses akin to usernames. Ease of use improves!
-                        </p>
-                    </div><div>
-                        <time><span>Jan</span> 2020</time>
-                        <h3>Daemon & Wallet Improvements</h3>
-                        <p>
-                            Conceal Desktop v6 is released with varying interface and daemon improvements.  We\'re getting fancy!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2020</time>
-                        <h3>Wrapped CCX (wCCX)</h3>
-                        <p>
-                            Wrapped CCX is created on ethereum blockchain allowing CCX owners to access DEFI on ETH!
-                        </p>
-                    </div><div>
-                        <time><span>Aug</span> 2020</time>
-                        <h3>wCCX on Uniswap and in Trustwallet</h3>
-                        <p>
-                            wCCX is available on the hottest DEX at the time and added to Trustwallet.
-                        </p>
-                    </div><div>
-                        <time><span>Sep</span> 2020</time>
-                        <h3>Deposits on Cloud & Mobile</h3>
-                        <p>
-                            Cold staking came to cloud and mobile. You are able to earn interest from your phone!
-                        </p>
-                    </div><div>
-                      <time><span>Oct</span> 2018</time>
-                      <h3>CN GPU</h3>
-                      <p>
-                          CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA.
-                      </p>
-                    </div><div>
-                        <time><span>Q4</span> 2020</time>
-                        <h3>Cloud & Mobile Self-destructing Messages</h3>
-                        <p>
-                          Send messages to other users that self destruct after given time.
-                        </p>
-                    </div><div>
-                        <time><span>Q1</span> 2021</time>
-                        <h3>Conceal Swap</h3>
-                        <p>
-                          Swap your CCX to wCCX and back the other way with our swap tool.
-                        </p>
-                    </div><div>
-                        <time><span>Q2</span> 2021</time>
-                        <h3>Conceal Live</h3>
-                        <p>
-                          Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
-                        </p>
-                    </div>
-					          <div>
-                        <time><span>Q4</span> 2021</time>
-                        <h3>Conceal App - Initial release</h3>
-                        <p>
-                            Initial release of cross platform application with Wallet module as first supported module
-                        </p>
-					          </div>                    
-                    <div class="roadmapDivider dividerFirst"></div>
-                    <div class="roadmapDivider"></div>					
-                    <div>
-                        <time><span>Q1</span> 2022</time>
-                        <h3>Conceal App - Version 2</h3>
-                        <p>
-                          Second release with Deposit and ID modules
-                        </p>
-					          </div><div>
-                        <time><span>Q2</span> 2022</time>
-                        <h3>Conceal App - Version 3</h3>
-                        <p>
-                          Third release with Bridges module
-                        </p>
-                    </div><div>
-                        <time><span>Q2</span> 2022</time>
-                        <h3>Client side Web Wallet</h3>
-                        <p>
-                          100% Serverless & Client side Web Wallet
-                        </p>
-                    </div><div>
-                        <time><span>Q3</span> 2022</time>
-                        <h3>New Bridges</h3>
-                        <p>
-                          Bridge to Ergo and AVAX
-                        </p>
-                    </div><div>
-                        <time><span>Q4</span> 2022</time>
-                        <h3>Conceal App - Version 4</h3>
-                        <p>
-                          Fourth release with integrated Conceal Live
-                        </p>
-                    </div><div>
-                        <time>2023<BR>2024</time>
-                        <h3>Multi-signature Wallets</h3>
-                        <p>
-                          Support for Multi-signature Wallets. Together with Colored coins it will allow for "Privacy Protected Assets" on CCX.
-                        </p>
-                    </div><div>
-                        <time>2023<BR>2024</time>
-                        <h3>Colored Coins</h3>
-                        <p>
-                          Support for Colored Coins on CCX, this is a step towards "Privacy Protected Assets" .
-                        </p>
-                    </div><div>
-                        <time>2024<BR>2025</time>
-                        <h3>Privacy-Protected Stable Coin</h3>
-                        <p>
-                          On-chain privacy-protected stable coin pegged to other digital stablecoins using cross-chain bridges.
-                        </p>
-                    </div><div>
-                        <time>2025<BR>2026</time>
-                        <h3>Privacy Protected Assets</h3>
-                        <p>
-                          Allow users to create "Privacy Protected Assets"  on CCX chain
-                        </p>
-                    </div><div>
-                        <time>2026<BR>2027</time>
-                        <h3>Canceling Deposits</h3>
-                        <p>
-                          Option to cancel the currently locked deposit but with penalties.
-                        </p>
-                    </div><div>
-                        <time>2027<BR>2028</time>
-                        <h3>Stable Deposits</h3>
-                        <p>
-                          Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
-                        </p>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Conceal Vault</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Hardware Wallet Support</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Distributed API Layer</h3>
-                    </div><div class="noContent">
-                        <time>TBA</time>
-                        <h3>Conceal Card</h3>
-                    </div>
-                <!-- .timeLine --></div>
-            </div>
-        <!-- #roadmap --></section>
-
-        <section id="theTeam">
-            <div>
-                <h2>
-                    <span>Powered By</span>
-                    <span>The Conceal Team</span>
-                </h2>
-                <ul class="miniProfiles">
-                    <li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>krypt0x (aka 0x)</b><br>
-                        <span>Head of</span> <span>Operations</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/krypt0x">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/Krypt0xChaos">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>katz</b><br>
-                        <span>Head of</span> <span>Research</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/cryptokatz">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/cryptokatz1">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>ZeMaNel</b><br>
-                        <span>Head of</span> <span>Technology</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/cryptomanel">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>okanist (aka Okan)</b><br>
-                        <span>Head of</span> <span>Business Development</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/okansariirmak">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Taegus</b><br>
-                        <span>Head of</span> <span>Development</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/taeguscromis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li><li>
-                                <a href="https://twitter.com/Taegus1">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>bomb-on</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/bomb-on">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>ThrownLemon</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/ThrownLemon">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>AxVultis</b><br>
-                        <span>Developer</span>
-                        <ul>
-                            <li>
-                                <a href="https://github.com/AxVultis">
-                                    <i class="fab fa-github teamLink"></i>
-                                    <span>Github</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Mannan</b><br>
-                        <span>Community Manager</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/CryptolordTG">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>LolitaLollipop</b><br>
-                        <span>Head of</span> <span>Community</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/???">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>Mr_Kwibs</b><br>
-                        <span>Head of</span> <span>Marketing</span>
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/???">
-                                    <i class="fab fa-twitter teamLink"></i>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        <!-- #theTeam --></section>
-
-        <section id="community">
-            <div>
-                <h2>
-                    <span>And</span>
-                    <span>The Community</span>
-                </h2>
-                <ul class="miniProfiles">
-                    <li>
-						<picture>
-                            <source srcset="images/team/unknown.webp" type="image/webp">
-                            <img src="images/team/unknown.jpg" alt="unknown"><br>
-                        </picture>
-                        <b>This could be you...</b><br>
-                        <span>Become a part of the project</span>
-                    </li>
-                </ul>
-            </div>
-        <!-- #community --></section>
-
         <section id="partners">
             <div>
                 <h2>
@@ -1012,7 +546,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				</ul><ul class="partnerCards">
 					<li>
                       <picture>
-                        <a href="https://crypto.com/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                        <a href="https://crypto.com/price/conceal/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                      </picture>
+                    </li>
+                </ul><ul class="partnerCards">
+					<li>
+                      <picture>
+                        <a href="https://cryptocurrencycheckout.com/"><img src="images/partners/cyprtocurrencycheckout.png" alt="cryptocurrencycheckout.com"><br></a>
                       </picture>
                     </li>
                 </ul>
@@ -1043,69 +583,154 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <!-- #cryptoWidget --></section>
     </main>
 
-    <footer>
-        <div>
-            <h2>WHERE TO FIND US</h2>
-            <p>
-                <span>The best place to find out more is to visit our</span>
-                <a href="http://discord.conceal.network">Discord</a>
-                <span>channel. You will find our source code, and other releases on</span>
-                <a href="https://github.com/ConcealNetwork">Github</a>,
-                <span>and our latest activities on</span>
-                <a href="https://twitter.com/ConcealNetwork">Twitter</a>.
-            </p>
-        </div><div>
-            <hr>
-            <span>Official E-Mail Address:</span>
-            <a href="mailto:ccx@conceal.network">ccx@conceal.network</a>.<br>
-            <br>
-            <span>Here are all the other ways you can find us online.</span>
-            <ul class="socialLinks">
-                <li>
-                    <a href="http://discord.conceal.network">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                </li><li>
-                    <a href="https://t.me/concealnetworkusers">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                </li><li>
-                    <a href="https://github.com/ConcealNetwork">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li><li>
-                    <a href="https://twitter.com/ConcealNetwork">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li><li>
-                    <a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li><li>
-                    <a href="https://www.reddit.com/r/ConcealNetwork/">
-                        <i class="fab fa-reddit"></i>
-                    </a>
-                </li><li>
-                    <a href="https://medium.com/@ConcealNetwork">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                </li><li>
-                    <a href="https://bitcointalk.org/index.php?topic=5086106">
-                        <i class="fab fa-bitcoin"></i>
-                    </a>
-                </li>	
-            <!-- .socialLinks --></ul>
-        </div><div>
-            <hr>
-			<div>
-			  <span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
-			  <div class="vl"></div>
-			  <span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
-			<div>
-            &copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.<br>
-            <br>
-            <a href="#top">Back to Top</a>
+
+    <footer style="background: unset;background-color: #181A20;">
+	
+		<div style="padding:20px 0 0 0;">
+			<a href="#top">Back to Top</a>
+		</div>
+		
+    	<div class="fcontain">
+    		<div class="flistwrap">
+				<ul>
+					<h2>General</h2>
+					<li>
+						<a href="about/" >About</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php" >Documentation</a>
+					</li>
+					<li>
+						<a href="https://explorer.conceal.network/" >Explorer</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php?id=FAQ" >FAQ</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/support/" >Support</a>
+					</li>
+					<li>
+						<a href="labs/" >Labs</a>
+					</li>
+					<li>
+						<a href="community/#exchanges" >Exchanges</a>
+					</li>
+					<li>
+						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" >wCCX</a>
+					</li>
+					<li>
+						<a href="https://status.conceal.network/" >Network Status</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div class="flistwrap">	
+				<ul>
+					<h2>Products</h2>
+					<li>
+						<a href="#wallets" >Wallets</a>
+					</li>
+					<li>
+						<a href="https://bridge.conceal.network/" >Bridge</a>
+					</li>
+					<li>
+						<a href="app/" >Conceal App</a>
+					</li>
+					<li>
+						<a href="banking/" >Banking</a>
+					</li>
+					<li>
+						<a href="https://conceal.cloud/" >Cloud</a>
+					</li>
+					<li>
+						<a href="id/" >ID</a>
+					</li>
+					<li>
+						<a href="messaging/" >Messaging</a>
+					</li>
+					<li>
+						<a href="mobile/" >Mobile</a>
+					</li>
+					<li>
+						<a href="clive/" >C-Live</a>
+					</li>
+					<li>
+						<a href="pay/" >Pay</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="flistwrap">
+				<ul>
+					<h2>Community</h2>
+						<li>
+							<a href="http://discord.conceal.network">
+								Discord
+								<i class="fab fa-discord"></i>
+							</a>
+						</li><li>
+							<a href="https://t.me/concealnetworkusers">
+								Telegram
+								<i class="fab fa-telegram"></i>
+							</a>
+						</li><li>
+							<a href="https://twitter.com/ConcealNetwork">
+								Twitter
+								<i class="fab fa-twitter"></i>
+							</a>
+						</li><li>
+							<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+								Youtube
+								<i class="fab fa-youtube"></i>
+							</a>
+						</li><li>
+							<a href="https://medium.com/@ConcealNetwork">
+								Medium
+								<i class="fab fa-medium"></i>
+							</a>
+						</li><li>
+							<a href="https://www.reddit.com/r/ConcealNetwork/">
+								Reddit
+								<i class="fab fa-reddit"></i>
+							</a>
+						</li><li>
+							<a href="https://www.facebook.com/concealnetwork/">
+								Facebook
+								<i class="fab fa-facebook"></i>
+							</a>
+						</li><li>
+							<a href="https://github.com/ConcealNetwork">
+								Github
+								<i class="fab fa-github"></i>
+							</a>
+						</li><li>
+							<a href="https://bitcointalk.org/index.php?topic=5086106">
+								BitcoinTalk
+								<i class="fab fa-bitcoin"></i>
+							</a>
+						</li>
+					
+		 		</ul>
+		 	</div>
+		</div>
+		
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
+			<span>Official E-Mail Address:</span>
+            <a href="mailto:hello@conceal.network">hello@conceal.network</a>
+		</div>
+		
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
+			<span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
+			<div class="vl"></div>
+			<span class="url_terms"><a href="privacy/index.html">Privacy</a></span>
+		</div class="footerelm">
+		
+		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">		
+            	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
         </div>
+		
     </footer>
 
     <script src="static/homepage.js?v=1"></script>

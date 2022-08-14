@@ -1128,6 +1128,43 @@ body > footer .socialLinks a:hover {
 	transform:scale(1.25);
 }
 
+
+footer{
+	padding: 0;
+	align-items:center;
+  	justify-content:center;
+  	text-align:center;
+}
+footer .fcontain{
+	min-width: 100%;width: 100%;
+	padding: 50px 51px 50px 51px;
+}
+footer .flistwrap{
+	width: 33%;
+	display: inline-table;
+	text-align: center;
+	justify-content: center;
+}
+footer ul{
+	list-style: none;
+	min-width: 300px;
+	padding-bottom: 50px;
+}
+.flistwrap a{
+	border: none;
+	color: white;
+}
+.flistwrap a:hover{
+	color: orange;
+	opacity: 0.8;
+ 	transition: 0.3s;
+}
+.footerelm{
+	min-width:100%; 
+	text-align:center;
+	padding-bottom: 10px;
+}
+
 #dispX {
 	position:fixed;
 	bottom:0;

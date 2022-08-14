@@ -93,7 +93,7 @@
       <h4 class="text-uppercase text-primary text-center d-block" data-aos="fade-up">(Donations are not refundable)</h4>
 
       <div class="container donate_wrapper">
-        <table class="table donate_table">
+        <table class="table donate_table mb-5" style="background-color:#194652;">
           <tbody>
             <tr>
               <td class="donate_icon_cell"><img class="donate_currency_icon" src="../landing/icons/ccx.svg" alt="Conceal"/></td>

@@ -267,6 +267,14 @@
 						  </a>
 						</div>
 					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://newsbit.nl/conceal-network-privacy-protected-defi/" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_11.png">
+							<span>Newsbit - Conceal Network: Privacy Protected DeFi</span>
+						  </a>
+						</div>
+					  </div>
 					</div>
 				</div>
 
@@ -420,10 +428,35 @@
 						</p>
 					  </div>
 					</div>
-					<div class="row align-items-center speaker mediaSectionWrapper">			
+					<div class="row align-items-center speaker mediaSectionWrapper">	
+						
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-march-2022-1c1bd56a10c3" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-july-2022-b7a170e384ce" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (July 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-june-2022-2612b35878f0" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (June 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-may-2022-c5300b7aaab9" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (May 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-monthly-update-april-2022-bb258761733d" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (April 2022)</span>
 						  </a>
@@ -431,7 +464,7 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-february-2022-827d88b41327" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-march-2022-1c1bd56a10c3" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (March 2022)</span>
 						  </a>
@@ -439,7 +472,7 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
-						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-january-2022-cf35adcf5d39" target="_blank" rel="noopener noreferrer"> 
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-february-2022-827d88b41327" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
 							<span>This month in Conceal (February 2022)</span>
 						  </a>
@@ -447,9 +480,17 @@
 					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-january-2022-cf35adcf5d39" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_devupdate_01.jpg">
+							<span>This month in Conceal (January 2022)</span>
+						  </a>
+						</div>
+					  </div>
+					  <div class="thumbex">
+						<div class="thumbnail">
 						  <a href="https://concealnetwork.medium.com/conceal-network-monthly-update-2021-recap-65e533ada2b9" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_devupdate_01.jpg">
-							<span>2021 Conceal Network Recap (January 2022)</span>
+							<span>2021 Conceal Network Recap</span>
 						  </a>
 						</div>
 					  </div>
