@@ -77,10 +77,10 @@ p {
 	position: relative;
 }
 .timeline-text h6 {
-	color: #FFA500;
 	font-weight: 600;
 	display: inline-block;
 	font-size: 1.2rem;
+	background-color: #111111;
 }
 .timeline-text span {
 	color: #f0f1f2;
@@ -91,12 +91,12 @@ p {
 	text-align: right;
 }
 .t-square {
+	top:6px;
 	content: "";
 	position: absolute;
-	width: 12px;
-	height: 12px;
-	left: -6px;
-	background: #19383b;
+	width: 24px;
+	height: 24px;
+	left: -12px;
 }
 .single-timeline:nth-child(even) {
 	-webkit-box-orient: horizontal;
@@ -105,7 +105,7 @@ p {
 	flex-direction: row-reverse;
 }
 .single-timeline:nth-child(even) .t-square {
-	right: -6px;
+	right: -12px;
 	left: unset;
 }
 .single-timeline:nth-child(even) .timeline-text {
@@ -113,7 +113,25 @@ p {
 	padding-right: 30px;
 	text-align: right;
 }
-
+.done{
+	border-bottom: dashed 5px green;
+	margin-bottom: 50px;
+}
+.completed .t-square{
+	background: green;
+}
+.completed h6{
+	color: green;
+}
+.activ{
+	border-top: dashed 5px #1185ba;
+}
+.inprog .t-square{
+	background: #1185ba;
+}
+.inprog h6{
+	color: #1185ba;
+}
 @media all and (max-width: 991px) {
 }
 @media all and (max-width: 768px) {
@@ -127,7 +145,7 @@ p {
 		text-align: left;
 	}
 	.single-timeline:nth-child(2n) .t-square {
-		left: -6px;
+		left: -12px;
 		right: unset;
 	}
 	.timeline-blank {
