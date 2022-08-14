@@ -195,7 +195,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
                     <li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
-                    <li><a href="#roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
+                    <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>
                     <span>Want to build something cool with Conceal?</span> <em>We just might fund you...</em>
