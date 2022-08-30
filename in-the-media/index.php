@@ -293,6 +293,15 @@
 					</div>
 
 					<div class="row align-items-center speaker mediaSectionWrapper">
+            
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://www.youtube.com/watch?v=TfykuINNsCI" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_video_10.jpg">
+							<span>Your Friend Andy - Everything you need to know about Conceal Crypto (CCX)!</span>
+						  </a>
+						</div>
+					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
 						  <a href="https://www.youtube.com/watch?v=oY5ZzJFoe4E" target="_blank" rel="noopener noreferrer"> 
