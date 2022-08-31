@@ -83,7 +83,7 @@ p {
 	background-color: #111111;
 }
 .timeline-text span {
-	color: #f0f1f2;
+	color: #a8a8a8;
 	display: block;
 	width: 100%;
 }
@@ -91,12 +91,12 @@ p {
 	text-align: right;
 }
 .t-square {
-	top:6px;
+	top:10px;
 	content: "";
 	position: absolute;
-	width: 24px;
-	height: 24px;
-	left: -12px;
+	width: 12px;
+	height: 12px;
+	left: -6px;
 }
 .single-timeline:nth-child(even) {
 	-webkit-box-orient: horizontal;
@@ -105,7 +105,7 @@ p {
 	flex-direction: row-reverse;
 }
 .single-timeline:nth-child(even) .t-square {
-	right: -12px;
+	right: -6px;
 	left: unset;
 }
 .single-timeline:nth-child(even) .timeline-text {
@@ -114,23 +114,23 @@ p {
 	text-align: right;
 }
 .done{
-	border-bottom: dashed 5px green;
+	border-bottom: dashed 5px #FFFFFF;
 	margin-bottom: 50px;
 }
 .completed .t-square{
-	background: green;
+	background: #FFFFFF;
 }
 .completed h6{
-	color: green;
+	color: #FFFFFF;
 }
 .activ{
-	border-top: dashed 5px #1185ba;
+	border-top: dashed 5px #FFA500;
 }
 .inprog .t-square{
-	background: #1185ba;
+	background: #FFA500;
 }
 .inprog h6{
-	color: #1185ba;
+	color: #FFA500;
 }
 @media all and (max-width: 991px) {
 }
@@ -145,7 +145,7 @@ p {
 		text-align: left;
 	}
 	.single-timeline:nth-child(2n) .t-square {
-		left: -12px;
+		left: -6px;
 		right: unset;
 	}
 	.timeline-blank {
@@ -162,6 +162,6 @@ p {
 }
 @media all and (max-width: 360px) {
 	.all-timelines::before {
-		top: 32px;
+		top: 22px;
 	}
 }

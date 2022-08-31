@@ -306,16 +306,6 @@
 								<div class="t-square"></div>
 							</div>
 						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 completed">
-								<span>
-									<h6>Q2 2022, Conceal App - Version 3</h6> — Third release with Bridges and ID modules.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
 
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
@@ -334,6 +324,16 @@
 							</div>
 						</div>
 
+            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6>Q2 2022, Conceal App - Version 3</h6> — Third release with Bridges and ID modules.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+            
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
