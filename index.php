@@ -36,7 +36,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         href="static/homepage.screen.css?v=1"
         media="screen,projection,tv"
     >
-    <title>Conceal Network - Anonymous DeFi & Private Communication</title>
+    <title>Conceal Network - Privacy Protected DeFi & Encrypted Communications</title>
     </head><body>
     <div id="loader-wrapper">
       <b></b>
@@ -498,22 +498,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #buyingCCX --></section>
 
-        <section id="buyingwCCXETH">
+        <section id="buyingwCCXPOLYGON">
             <div>
                 <h2>
                     <span>Buying</span> <span>wCCX</span>
-                    <span>Ethereum</span>
+                    <span>Polygon</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
-                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                    <li><a href="https://app.sushi.com/">SushiSwap</a></li>
+                    <li><a href="https://app.uniswap.org/">Uniswap</a></li>
                 </ul>
-                <a href="https://conceal.network/community/#exchanges">
-                    <i class="fa fa-plus"></i>
-                    <span>More</span>
-                </a>
             </div>
-        <!-- #buyingwCCXETH --></section>
+        <!-- #buyingwCCXBNB --></section>
+
         <section id="buyingwCCXBNB">
             <div>
                 <h2>
@@ -531,6 +528,23 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </a>
             </div>
         <!-- #buyingwCCXBNB --></section>
+        <section id="buyingwCCXETH">
+            <div>
+                <h2>
+                    <span>Buying</span> <span>wCCX</span>
+                    <span>Ethereum</span>
+                </h2>
+                <ul class="majorLinks">
+                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
+                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                </ul>
+                <a href="https://conceal.network/community/#exchanges">
+                    <i class="fa fa-plus"></i>
+                    <span>More</span>
+                </a>
+            </div>
+        <!-- #buyingwCCXETH --></section>
+        
 
         <section id="partners">
             <div>
