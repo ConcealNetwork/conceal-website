@@ -26,13 +26,13 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../banking/">BANKING</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
+                <li><a href="../defi/">DeFi</a></li>
+                <!--<li><a href="https://conceal.cloud">CLOUD</a></li>-->
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
-                <li><a href="../pay/">PAY</a></li>
+                <!--<li><a href="../pay/">PAY</a></li>-->
                 <li class="cta"><a href="..//#wallets"><span class="icon-connectdevelop"></span> Use Conceal</a></li>
                 <li class="cta"><a href="../#mining"><span class="icon-microchip"></span> Get CCX</a></li>
               </ul>
@@ -204,7 +204,7 @@
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
-                <h4 class="h4" tkey="features_12_title">Decentralized Banking</h4>
+                <h4 class="h4" tkey="features_12_title">Decentralized DeFi</h4>
                 <p tkey="features_12_text">Decentralized Deposits on the chain that give up to 6% interest rate per year</p>
               </div>
             </div>

@@ -58,15 +58,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="app">Conceal App</a></li>
-                            <li><a href="banking/">DeFi</a></li>
-                            <li><a href="https://conceal.cloud">Cloud</a></li>
+                            <!--<li><a href="app">Conceal App</a></li>-->
+                            <li><a href="defi/">DeFi</a></li>
+                            <!--<li><a href="https://conceal.cloud">Cloud</a></li>-->
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
                             <li><a href="messaging/">Messaging</a></li>
-                            <li><a href="mobile/">Mobile</a></li
+                            <li><a href="mobile/">Mobile</a></li>
                             <li><a href="clive/">C-Live</a></li>
-                            <li><a href="pay/">Pay</a></li>
+                            <!--<li><a href="pay/">Pay</a></li>-->
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
@@ -77,7 +77,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="#features">Features</a></li>
                             <li><a href="in-the-media/">In The Media</a></li>
                             <li><a href="labs/">Labs</a></li>
-							<li><a href="branding/">Branding</a></li>
+                            <li><a href="branding/">Branding</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
                             <li><a href="team/">Team</a></li>
                         </ul>
@@ -88,7 +88,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <ul>
                             <li><a href="community/">Community</a>
                             <li><a href="https://conceal.network/wiki/doku.php?id=start">Docs</a>
-                            <li><a href="community/#exchanges">Exchanges</a></li>
+                            <li><a href="#buyingCCX">Exchanges</a></li>
                             <li><a href="community/#Ethereum">wCCX LP pairs</a></li>
                             <li><a href="https://explorer.conceal.network">Explorer</a></li>
                             <li><a href="#mining">Mining</a></li>
@@ -110,7 +110,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       <label for="toggle_info">Buy</label>
                       <label for="toggle_submenusOff"></label>
                       <ul>
-                          <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
+                          <li><a href="#buyingCCX">Buy CCX</a></li>
                           <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a>
                       </ul>
                     </li>                    
@@ -192,8 +192,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Decentralized Finance, Private Transactions &amp; Encrypted Messaging
                 </p>
                 <ul class="majorLinks">
-                    <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
-                    <li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>
+                    <!--<li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>-->
+                    <!--<li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>-->
+                    <li><a href="about"><i class="fa fa-question"></i> <span>About</span></a></li>
+                    <li><a href="defi"><i class="fa fa-piggy-bank"></i> <span>DeFi</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
                     <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
@@ -356,11 +358,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </a>
                     </li>
                 </ul>
-				<p>
+                <p>
                     Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
 				
 				
+                <!--
                 <h3 class="text-center wallet-subheader">Conceal App (all in one)</h3>
                 <ul>
                     <li>
@@ -386,12 +389,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       </a>
                   </li>
                 </ul>
-				<p>
+                <p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
                 </p>
+                -->
 				  
 				  
-              <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
                   <ul>                        
                     <li>
                         <i class="fas fa-paper-plane"></i><br>
@@ -401,6 +405,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://wallet.conceal.network/">Web Wallet</a>
                     </li>
                 </ul>
+                <p>
+                  The Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
+                </p>                
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
         <!-- #wallets --></section>
@@ -481,7 +488,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Exchanges</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
                     <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
                 </ul>
@@ -634,11 +640,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					<li>
 						<a href="https://bridge.conceal.network/" >Bridge</a>
 					</li>
+          <!--
 					<li>
 						<a href="app/" >Conceal App</a>
 					</li>
+          -->
 					<li>
-						<a href="banking/" >Banking</a>
+						<a href="defi/" >DeFi</a>
 					</li>
 					<li>
 						<a href="https://conceal.cloud/" >Cloud</a>
