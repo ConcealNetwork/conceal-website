@@ -384,21 +384,21 @@
 							</div>
 						</div>
 						
+            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6>2025/2026, Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+            
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
 									<h6>2024/2025, Privacy-Protected Stable Coin</h6> — On-chain privacy-protected stable coin pegged to other digital stablecoins using cross-chain bridges.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>2025/2026, Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
 								</span>
 								<div class="t-square"></div>
 							</div>
