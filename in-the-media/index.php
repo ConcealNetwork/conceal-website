@@ -275,6 +275,22 @@
 						  </a>
 						</div>
 					  </div>
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://medium.com/@Mr_Kwibs/conceal-network-ccx-7288b2564622" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_12.jpg">
+							<span>Conceal Network (₡CCX)</span>
+						  </a>
+						</div>
+					  </div>
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-ccx-the-next-big-pow-mining-opportunity-dff8e8b0adf1" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_13.jpeg">
+							<span>Conceal (CCX) — The Next Big PoW Mining Opportunity</span>
+						  </a>
+						</div>
+					  </div>
 					</div>
 				</div>
 
