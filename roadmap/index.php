@@ -388,7 +388,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2024/2025, Privacy-Protected Stable Coin</h6> — On-chain privacy-protected stable coin pegged to other digital stablecoins using cross-chain bridges.
+									<h6>2024/2025, Privacy-Preserving Stable Coin</h6> — On-chain Privacy-Preserving stable coin pegged to other digital stablecoins using cross-chain bridges.
 								</span>
 								<div class="t-square"></div>
 							</div>
