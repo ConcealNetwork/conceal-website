@@ -187,9 +187,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>Privacy</span> <span>Protected DeFi</span></h2>
+                <h2><span>CONCEAL:</span><span> Privacy-Preserving De-Fi &amp; Encrypted Communications</span></h2>
                 <p>
-                    Privacy-Preserving DeFi &amp; Encrypted Communications
+                    Communicate and interact financially in a totally anonymous and decentralized manner
                 </p>
                 <ul class="majorLinks">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
@@ -232,7 +232,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
                 </p>
                 <p>
-                    Conceal Network powers $CCX which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
+                    Conceal Network powers $CCX which is an open source, privacy-preserving digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
                 </p><p>
                     Conceal Network is a community-driven and decentralized ecosystem accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate.
                 </p>
