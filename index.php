@@ -101,7 +101,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Support</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-							              <li><a href="#helpdesk">Help Desk</a></li>
                             <li><a href="#helpdesk">Helpdesk</a>
                         </ul>
                     </li>
