@@ -58,15 +58,14 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="about/">Conceal</a></li>
-                            <li><a href="#features">Features</a></li>
-							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a>
-                            <li><a href="in-the-media/">Articles/Media</a></li>
+                            <li><a href="about/">What's Conceal?</a></li>
+							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a>
                             <li><a href="roadmap/">Roadmap</a></li>
+						    <li><a href="https://status.conceal.network/">Services Status</a></li>
                             <li><a href="team/">Team</a></li>
 							<li><a href="https://conceal.network/wiki/doku.php?id=start">Wiki</a>
-							<li><a href="https://status.conceal.network/">Network Status</a></li>
                         </ul>
                     </li>
                     <li>
