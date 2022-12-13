@@ -623,7 +623,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="#wallets" >Wallets</a>
 					</li>
 					<li>
-						<a href="https://bridge.conceal.network/" >Bridge</a>
+						<a href="https://bridge.conceal.network/" >Conceal-Bridge</a>
 					</li>
 					<li>
 						<a href="app/" >Conceal-App</a>
@@ -632,7 +632,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="defi/" >Conceal-DeFi</a>
 					</li>
 					<li>
-						<a href="https://wallet.conceal.network/" >Web Wallet</a>
+						<a href="https://wallet.conceal.network/" >Conceal-WebWallet</a>
 					</li>
 					<li>
 						<a href="id/" >Conceal-ID</a>
@@ -647,7 +647,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="clive/" >Conceal-Live</a>
 					</li>
 					<li>
-						<a href="pay/" >Pay</a>
+						<a href="pay/" >Conceal-Pay</a>
 					</li>
 
 				</ul>
