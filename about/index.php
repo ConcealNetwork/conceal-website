@@ -92,7 +92,7 @@
           </div>
           <div class="row">
             <div class="col-full">
-			  <p data-aos="fade-up">Conceal provides the ability for individuals to communicate and financially interact with each other in a totally anonymous and decentralized manner.</p>
+			  <p data-aos="fade-up">Conceal provides the ability for individuals to communicate and financially interact with each other in an anonymous and decentralized manner.</p>
               <p data-aos="fade-up">Conceal Network is a privacy-preserving network made for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without any involvement of third parties (institutions/organisations). These unique functionalities make it effortless for everyday users to manage their finances and communicate securely and privately.</p>
               <p data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the well known Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control the private keys to your funds.</p>
               <p data-aos="fade-up">Conceal is censorship resistant and accessible by anyone in the world regardless of their geographic location or status. All interactions, transactions and messages are untraceable.</p>
