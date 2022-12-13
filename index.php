@@ -478,10 +478,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2>
                     <span>Buying</span> <span>CCX</span>
-                    <span>Exchanges</span>
+                    <span>Markets</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
+                    <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
+					<li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
                     <i class="fa fa-plus"></i>
