@@ -198,7 +198,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>
-                    <span>Do you would like to build something cool?</span> <em>We might fund you...</em>
+                    <span>Would you like to build something cool?</span> <em>We might fund you...</em>
                     <a href="labs/">Conceal-Labs</a>
                 </p>
             </div>
