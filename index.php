@@ -98,10 +98,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Contact</label>
+                        <label for="toggle_info">Support</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-							              <li><a href="#helpdesk">Contact Us</a></li>
+							              <li><a href="#helpdesk">Help Desk</a></li>
                             <li><a href="#helpdesk">Helpdesk</a>
                         </ul>
                     </li>
