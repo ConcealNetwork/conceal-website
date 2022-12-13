@@ -717,7 +717,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		</div class="footerelm">
 		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">		
-            	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
+            	&copy; 2017-<span id="crFullYear"></span><span> Conceal.Network, Conceal DAO, Conceal Team & Conceal Developers - All rights reserverd.</span>.
         </div>
 		
     </footer>
