@@ -60,11 +60,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <ul>
                             <li><a href="about/">Conceal</a></li>
                             <li><a href="#features">Features</a></li>
-                            <li><a href="in-the-media/">In The Media</a></li>
-                            <li><a href="labs/">Labs</a></li>
-							<li><a href="branding/">Branding</a></li>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a>
+                            <li><a href="in-the-media/">Articles/Media</a></li>
+                            <li><a href="branding/">Branding</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
                             <li><a href="team/">Team</a></li>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start">Wiki</a>
+							<li><a href="https://status.conceal.network/">Network Status</a></li>
                         </ul>
                     </li>
                     <li>
@@ -76,6 +78,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="defi/">Conceal-DeFi</a></li>
                             <li><a href="#wallets">Conceal-Desktop</a></li>
 							<li><a href="features">Conceal-Earn</a></li>
+							<li><a href="https://explorer.conceal.network">Conceal-Explorer</a></li>
                             <li><a href="id/">Conceal-ID</a></li>
                             <li><a href="clive/">Conceal-Live</a></li>
 							<li><a href="messaging/">Conceal-Messaging</a></li>
@@ -90,13 +93,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="community/">Communities</a>
-                            <li><a href="https://conceal.network/wiki/doku.php?id=start">Docs</a>
-                            <li><a href="community/#exchanges">CCX Markets</a></li>
-                            <li><a href="community/#Ethereum">wCCX DEXs</a></li>
-                            <li><a href="https://explorer.conceal.network">Explorer</a></li>
+							<li><a href="labs/">Conceal-Labs</a></li>
                             <li><a href="#mining">Mining</a></li>
                             <li><a href="#partners">Partners</a></li>
-                            <li><a href="https://status.conceal.network/">Network Status</a></li>
                         </ul>
                     </li>
 					<li>
@@ -198,7 +197,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="#markets"><i class="fa fa-store"></i> <span>Buy</span></a></li>
 				    <li><a href="#features"><i class="fa fa-money-bill-trend-up"></i> <span>Earn</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Hodl</span></a></li>
-                    <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Build</span></a></li>
+                    <li><a href="roadmap"><i class="fa fa-hand-holding-seedling"></i> <span>Build</span></a></li>
                 </ul>
                 <p>
                     <span>Would you like to build something cool?</span> <em>We might fund you...</em>
