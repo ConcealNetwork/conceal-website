@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>Conceal Banking - Blockchain Banking</title>
+  <title>Conceal-Earn - Blockchain Deposits</title>
   <?php include '../landing/include/topjs.html';?>
 </head><body>
   <div id="loader-wrapper">
@@ -26,7 +26,7 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="#">BANKING</a></li>
+                <li class="active"><a href="#">De-Fi</a></li>
                 <li><a href="https://conceal.cloud">CLOUD</a></li>
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
@@ -57,9 +57,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-10">
-            <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">CONCEAL BANKING</span>
+            <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">CONCEAL EARN</span>
             <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-              <strong>Blockchain</strong> Powered Banking
+              <strong>Blockchain</strong> Powered Deposits
             </h1>
             <!--<a href="https://conceal.cloud/" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-cloud"></span><span> CLOUD</span></a>
             <a href="../mobile/" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-mobile"></span><span>&nbsp;Mobile</span></a>-->
@@ -82,7 +82,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Conceal Banking removes unnecessary intermediaries by giving everyone the power to deposit their funds on the Blockchain and receive interest in exchange.
+              Conceal-Earn removes unnecessary intermediaries by giving everyone the power to deposit their funds on the Blockchain and receive interest in exchange.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@
                 Built with the power of the Blockchain
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                Conceal Banking is completely decentralized and built on the Conceal Blockchain.
+                Conceal-Earn is completely decentralized and built on the Conceal Blockchain.
               </p>
             </div>
           </div>
@@ -111,7 +111,7 @@
                 Deposit funds for interest
               </h2>
               <p class="mb-4" data-aos="fade-left" data-aos-delay="400">
-                Conceal Banking empowers anyone in the world to deposit their funds in exchange for interest.
+                Conceal-Earn empowers anyone in the world to deposit their funds in exchange for interest.
               </p>
             </div>
           </div>
@@ -126,7 +126,7 @@
                 Worldwide access
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                There are millions without access to financial services worldwide. Conceal Banking provides much needed access to anyone, anywhere.
+                There are millions without access to financial services worldwide. Conceal-Earn provides much needed access to anyone, anywhere.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@
                 Keep your funds safe
               </h2>
               <p class="mb-4" data-aos="fade-left" data-aos-delay="400">
-                When you deposit your funds with Conceal Banking they are cold staked on the blockchain for safekeeping.
+                When you deposit your funds with Conceal-Earn they are cold staked on the blockchain for safekeeping.
               </p>
             </div>
           </div>
@@ -156,7 +156,7 @@
                 Earn more than a savings account
               </h2>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400">
-                Deposits with Conceal Banking earn significantly more than a savings account, as much as 6% APR plus compounding.
+                Deposits with Conceal-Earn earn significantly more than a savings account, as much as 6% APR plus compounding.
               </p>
             </div>
           </div>
