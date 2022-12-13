@@ -58,15 +58,16 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Apps</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="app">Conceal App</a></li>
-                            <li><a href="defi/">DeFi</a></li>
-                            <li><a href="https://conceal.cloud">Cloud</a></li>
-                            <li><a href="#wallets">Desktop</a></li>
-                            <li><a href="id/">ID</a></li>
-                            <li><a href="messaging/">Messaging</a></li>
-                            <li><a href="mobile/">Mobile</a></li
-                            <li><a href="clive/">C-Live</a></li>
-                            <li><a href="pay/">Pay</a></li>
+                            <li><a href="app">Conceal-App</a></li>
+                            <li><a href="defi/">Conceal-DeFi</a></li>
+                            <li><a href="#wallets">Conceal-Desktop</a></li>
+							<li><a href="features">Conceal-Earn</a></li>
+                            <li><a href="id/">Conceal-ID</a></li>
+                            <li><a href="clive/">Conceal-Live</a></li>
+							<li><a href="messaging/">Conceal-Messaging</a></li>
+							<li><a href="mobile/">Conceal-Mobile</a></li
+                            <li><a href="pay/">Conceal-Pay</a></li>
+							 <li><a href="https://wallet.conceal.network">Conceal-WebWallet</a></li>
                         </ul>
                     </li><li>
                         <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
