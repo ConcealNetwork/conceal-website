@@ -625,25 +625,25 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="https://bridge.conceal.network/" >Bridge</a>
 					</li>
 					<li>
-						<a href="app/" >Conceal App</a>
+						<a href="app/" >Conceal-App</a>
 					</li>
 					<li>
-						<a href="defi/" >De-Fi</a>
+						<a href="defi/" >Conceal-DeFi</a>
 					</li>
 					<li>
-						<a href="https://conceal.cloud/" >Cloud</a>
+						<a href="https://wallet.conceal.network/" >Web Wallet</a>
 					</li>
 					<li>
-						<a href="id/" >ID</a>
+						<a href="id/" >Conceal-ID</a>
 					</li>
 					<li>
-						<a href="messaging/" >Messaging</a>
+						<a href="messaging/" >Conceal-Messaging</a>
 					</li>
 					<li>
-						<a href="mobile/" >Mobile</a>
+						<a href="mobile/" >Conceal-Mobile</a>
 					</li>
 					<li>
-						<a href="clive/" >C-Live</a>
+						<a href="clive/" >Conceal-Live</a>
 					</li>
 					<li>
 						<a href="pay/" >Pay</a>
@@ -656,7 +656,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				<ul>
 					<h2>Community</h2>
 						<li>
-							<a href="http://discord.conceal.network">
+							<a href="https://discord.conceal.network">
 								Discord
 								<i class="fab fa-discord"></i>
 							</a>
