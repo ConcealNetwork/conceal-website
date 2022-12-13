@@ -95,27 +95,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<li><a href="labs/">Conceal-Labs</a></li>
                             <li><a href="#mining">Mining Pools</a></li>
                             <li><a href="#partners">Partners</a></li>
+							<li><a href="donate">Donate</a></li>
                         </ul>
                     </li>
-<!--				<li>
-                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Markets</label>
-                        <ul>
-                           <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                           <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
-                        </ul>
-                    </li>   
--->					
             		<li>
-                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Support</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-                            <li><a href="#helpdesk">Helpdesk</a></li>
-                        </ul>
-                    </li>
+					<li class="navStandalone"><a href="https://conceal.network/helpdesk">Helpdesk</a></li>
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
-                    <li class="navStandalone"><a href="donate">Donate</a></li>
                 </ul>
 				
                 <ul id="socialMenu">
