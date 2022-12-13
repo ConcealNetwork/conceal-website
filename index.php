@@ -232,17 +232,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
                 </p>
                 <p>
-                    Conceal Network powers the $CCX cryptocurrency which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
+                    Conceal Network powers $CCX which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
                 </p><p>
-                    Conceal Network is a community driven, truly decentralized blockchain bank accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate for free.
+                    Conceal Network is a community-driven and decentralized ecosystem accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate.
                 </p>
 
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
-                        <h3><span>DeFi</span>: <span>Deposits</span></h3>
+                        <h3><span>De-Fi</span>: <span>Conceal-Earn</span></h3>
                         <p>
-                            Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
+                            Decentralized Finance forms the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold-staking that earns interess on locked deposits.
                         </p>
                     </section><section>
                         <i class="fas fa-comments"></i>
