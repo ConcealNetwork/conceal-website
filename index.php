@@ -107,7 +107,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li>
                     </li><li>
                       <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                      <label for="toggle_info">Buy</label>
+                      <label for="toggle_info">Markets</label>
                       <label for="toggle_submenusOff"></label>
                       <ul>
                           <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
