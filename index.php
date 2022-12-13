@@ -26,8 +26,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous"
         media="screen"
     >
@@ -192,7 +192,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Privacy-Preserving De-Fi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
-				    <li><a href="#features"><i class="fa-light fa-money-bill-trend-up"></i> <span>Conceal-Earn</span></a></li>
+				    <li><a href="#features"><i class="fa-solid fa-money-bill-trend-up"></i> <span>Conceal-Earn</span></a></li>
                     <li><a href="#markets"><i class="fa fa-store"></i> <span>Markets</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
                     <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
