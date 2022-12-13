@@ -59,7 +59,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="app">Conceal App</a></li>
-                            <li><a href="banking/">DeFi</a></li>
+                            <li><a href="defi/">DeFi</a></li>
                             <li><a href="https://conceal.cloud">Cloud</a></li>
                             <li><a href="#wallets">Desktop</a></li>
                             <li><a href="id/">ID</a></li>
@@ -189,7 +189,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2><span>Privacy</span> <span>Protected DeFi</span></h2>
                 <p>
-                    Decentralized Finance, Private Transactions &amp; Encrypted Messaging
+                    Privacy-Preserving DeFi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
@@ -332,26 +332,26 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
                             WINDOWS GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             WINDOWS CLI
                         </a>
                     </li><li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
                             LINUX GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             LINUX CLI
                         </a>
                     </li><li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases>
                             MAC GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             MAC CLI
                         </a>
                     </li>
@@ -638,7 +638,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="app/" >Conceal App</a>
 					</li>
 					<li>
-						<a href="banking/" >Banking</a>
+						<a href="defi/" >De-Fi</a>
 					</li>
 					<li>
 						<a href="https://conceal.cloud/" >Cloud</a>

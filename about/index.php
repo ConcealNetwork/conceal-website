@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>About Conceal - Anonymous DeFi & Private Communication</title>
+  <title>Conceal - Privacy-Preserving DeFi & Encrypted Communications</title>
   <?php include '../landing/include/topjs.html';?>
 </head><body>
   <div id="loader-wrapper">
@@ -26,7 +26,7 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../banking/">BANKING</a></li>
+                <li><a href="../defi/">De-Fi</a></li>
                 <li><a href="https://conceal.cloud">CLOUD</a></li>
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
@@ -57,7 +57,7 @@
           <div class="col-md-10">
             <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">ABOUT CONCEAL</span>
             <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-                Anonymous <strong>DeFi</strong> &amp; Private <strong>Communication</strong>
+                Privacy-Preserving <strong>De-Fi</strong> &amp; Encrypted <strong>Communications</strong>
             </h1>
             <a href="#downArrowBtn" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-leanpub"></span><span> Learn More</span></a>
             <a href="../#wallets" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-connectdevelop"></span><span> Use Conceal</span></a> 
@@ -79,7 +79,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <p>Our primary objective is to provide a privacy framework for social inclusion through decentralization of financial services and communication.</p>
+            <p>Our main goal is to provide a privacy framework for social inclusion through decentralization of financial services and communication.</p>
           </div>
         </div>
 
@@ -92,12 +92,12 @@
           </div>
           <div class="row">
             <div class="col-full">
-              <p data-aos="fade-up">Conceal is a decentralized blockchain bank, with deposits and investments paying interest rates, without involvement of financial institutions, powered by 100% open source code.</p>
-              <p data-aos="fade-up">Conceal enables untraceable and anonymous messaging, and a secure way to transfer funds. Using a distributed public ledger, the sender and receiver are kept anonymous, a key concern in a post Snowden world. Hackers cannot trace money or messages when the messages are sent across public networks.</p>
-              <p data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control the private keys to your funds.</p>
-              <p data-aos="fade-up">Conceal is accessible by anyone in the world regardless of their geographic location or status. Our blockchain is resistant to any kind of analysis. All your CCX transactions and messages are anonymous.</p>
+			  <p data-aos="fade-up">Conceal provides the ability for individuals to communicate and financially interact with each other in a totally anonymous and decentralized manner, without any involvement of third parties (institutions/organisations).</p>
+              <p data-aos="fade-up">Conceal Network is a privacy-preserving network made for Private DeFi and Encrypted Communications. It offers protocol-level private transactions, blockchain deposits, and on-chain encrypted messages. These unique functionalities make it effortless for everyday users to manage their finances and communicate securely and privately.</p>
+              <p data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the well known Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control the private keys to your funds.</p>
+              <p data-aos="fade-up">Conceal is censorship resistant and accessible by anyone in the world regardless of their geographic location or status. All interactions, transactions and messages are untraceable.</p>
               <p data-aos="fade-up">Conceal avoids many concerns, e.g. technological, environment impact, reputational and security, of Bitcoin, and provides a glimpse of the future.</p>
-              <p data-aos="fade-up">Conceal is open-source, community driven and truly decentralized.</p>
+              <p data-aos="fade-up">Conceal is powered by open-source code, it's a community-driven project and truly decentralized.</p>
               <p data-aos="fade-up">No one owns Conceal, everyone can take part.</p>
             </div>
           </div>
@@ -204,8 +204,8 @@
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
               <div class="service-text">
-                <h4 class="h4" tkey="features_12_title">Decentralized Banking</h4>
-                <p tkey="features_12_text">Decentralized Deposits on the chain that give up to 6% interest rate per year</p>
+                <h4 class="h4" tkey="features_12_title">Conceal Earn</h4>
+                <p tkey="features_12_text">Blockchain Deposits pay up to 6% interest rate per year</p>
               </div>
             </div>
 
@@ -310,14 +310,14 @@
 
             <div class="col-lg-6 service-item" data-aos="fade-up">
             <div class="service-text">
-                <h4 class="h4" tkey="specs_14_title">Premine</h4>
-                <p tkey="specs_14_text">6% of the max supply locked over a 5 years interval</p>
+                <h4 class="h4" tkey="specs_14_title">Treasury</h4>
+                <p tkey="specs_14_text">8% of the max supply</p>
             </div>
             </div>
             <div class="col-lg-6 service-item" data-aos="fade-up">
             <div class="service-text">
-                <h4 class="h4" tkey="specs_15_title">Block reward</h4>
-                <p tkey="specs_15_text">Block reward is a constant 6 CCX per block, making CCX a very low inflation asset.</p>
+                <h4 class="h4" tkey="specs_15_title">Block Reward</h4>
+                <p tkey="specs_15_text">Block started at 5 CCX and went up until it reached 12 CCX. Then, it has been halved to a constant value of 6 CCX per block, making CCX a very low inflation asset an avoiding early accumulation.</p>
             </div>
             </div>
 
