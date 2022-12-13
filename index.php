@@ -194,15 +194,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </p>
                 <ul class="majorLinks">
 
-                    <li><a href="#markets"><i class="fa fa-store"></i> <span>Buy</span></a></li>
+                    <li><a href="#markets"><i class="fa fa-cart-shopping"></i> <span>Buy</span></a></li>
 				    <li><a href="#features"><i class="fa fa-money-bill-trend-up"></i> <span>Earn</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Hodl</span></a></li>
-                    <li><a href="roadmap"><i class="fa fa-hand-holding-seedling"></i> <span>Build</span></a></li>
+                    <li><a href="https://conceal.network/labs/"><i class="fa fa-trowel-bricks"></i> <span>Build</span></a></li>
                 </ul>
-                <p>
-                    <span>Would you like to build something cool?</span> <em>We might fund you...</em>
-                    <a href="labs/">Conceal-Labs</a>
-                </p>
             </div>
             <a href="#features" class="moreLink"></a>
         </section>
