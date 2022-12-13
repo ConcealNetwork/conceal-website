@@ -58,17 +58,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="about/">What's Conceal?</a></li>
+                            <li><a href="about/">What is Conceal?</a></li>
 							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
-							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
 						    <li><a href="https://status.conceal.network/">Services Status</a></li>
                             <li><a href="team/">Team</a></li>
-							<li><a href="https://conceal.network/wiki/doku.php?id=start">Wiki</a>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start">Wiki</a></li>
                         </ul>
-                    </li>
-                    <li>
+					</li>
+			        <li>
                         <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_apps">Products</label>
                         <label for="toggle_submenusOff"></label>
@@ -81,7 +81,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="id/">Conceal-ID</a></li>
                             <li><a href="clive/">Conceal-Live</a></li>
 							<li><a href="messaging/">Conceal-Messaging</a></li>
-							<li><a href="mobile/">Conceal-Mobile</a></li
+							<li><a href="mobile/">Conceal-Mobile</a></li>
                             <li><a href="pay/">Conceal-Pay</a></li>
 							 <li><a href="https://wallet.conceal.network">Conceal-WebWallet</a></li>
                         </ul>
@@ -117,6 +117,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
                     <li class="navStandalone"><a href="donate">Donate</a></li>
                 </ul>
+				
                 <ul id="socialMenu">
                     <li>
                         <a href="https://conceal.network/wiki/doku.php">
@@ -716,7 +717,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		</div class="footerelm">
 		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">		
-            	&copy; 2017-<span id="crFullYear"></span><span> Conceal.Network, Conceal DAO, Conceal Team & Conceal Developers - All rights reserverd.</span>.
+            	&copy; 2017-<span id="crFullYear"></span><span> Conceal.Network, Conceal DAO, Conceal Team & Conceal Developers - All rights reserverd.</span><br>
         </div>
 		
     </footer>
@@ -727,5 +728,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <script src="js/calc.js?v=1"></script>
 
     </body></html>';
-
+	
 ?>
+	
