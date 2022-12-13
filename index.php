@@ -53,9 +53,23 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <input type="radio" id="toggle_submenusOff" name="toggle_submenu" lass="toggle" hidden>
 
                 <ul id="mainMenu">
+					<li>
+                        <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_about">About</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="about/">Conceal</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="in-the-media/">In The Media</a></li>
+                            <li><a href="labs/">Labs</a></li>
+							<li><a href="branding/">Branding</a></li>
+                            <li><a href="roadmap/">Roadmap</a></li>
+                            <li><a href="team/">Team</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_apps">Apps</label>
+                        <label for="toggle_apps">Products</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="app">Conceal-App</a></li>
@@ -69,51 +83,39 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="pay/">Conceal-Pay</a></li>
 							 <li><a href="https://wallet.conceal.network">Conceal-WebWallet</a></li>
                         </ul>
-                    </li><li>
-                        <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_about">About</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-                            <li><a href="about/">Conceal</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="in-the-media/">In The Media</a></li>
-                            <li><a href="labs/">Labs</a></li>
-							<li><a href="branding/">Branding</a></li>
-                            <li><a href="roadmap/">Roadmap</a></li>
-                            <li><a href="team/">Team</a></li>
-                        </ul>
-                    </li><li>
+                    </li>
+					<li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Info</label>
+                        <label for="toggle_info">Community</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="community/">Community</a>
+                            <li><a href="community/">Communities</a>
                             <li><a href="https://conceal.network/wiki/doku.php?id=start">Docs</a>
-                            <li><a href="community/#exchanges">Exchanges</a></li>
-                            <li><a href="community/#Ethereum">wCCX LP pairs</a></li>
+                            <li><a href="community/#exchanges">CCX Markets</a></li>
+                            <li><a href="community/#Ethereum">wCCX DEXs</a></li>
                             <li><a href="https://explorer.conceal.network">Explorer</a></li>
                             <li><a href="#mining">Mining</a></li>
                             <li><a href="#partners">Partners</a></li>
                             <li><a href="https://status.conceal.network/">Network Status</a></li>
-                            
-                        </ul>
-                    </li><li>
-                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Support</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-                            <li><a href="#helpdesk">Helpdesk</a>
                         </ul>
                     </li>
-                    </li><li>
+					<li>
                       <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
                       <label for="toggle_info">Markets</label>
                       <label for="toggle_submenusOff"></label>
                       <ul>
                           <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                          <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a>
+                          <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
                       </ul>
-                    </li>                    
+                    </li>       		
+            		<li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Support</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="#helpdesk">Helpdesk</a></li>
+                        </ul>
+                    </li>
                     <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
                     <li class="navStandalone"><a href="donate">Donate</a></li>
                 </ul>
