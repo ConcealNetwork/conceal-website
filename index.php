@@ -91,21 +91,21 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Community</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="community/">Communities</a>
+                            <li><a href="community/">Channels</a>
 							<li><a href="labs/">Conceal-Labs</a></li>
-                            <li><a href="#mining">Mining</a></li>
+                            <li><a href="#mining">Mining Pools</a></li>
                             <li><a href="#partners">Partners</a></li>
                         </ul>
                     </li>
-					<li>
-                      <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                      <label for="toggle_info">Markets</label>
-                      <label for="toggle_submenusOff"></label>
-                      <ul>
-                          <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
-                          <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
-                      </ul>
-                    </li>       		
+<!--				<li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Markets</label>
+                        <ul>
+                           <li><a href="https://swap.conceal.network?giveCoin=EUR&getCoin=CCX&giveValue=50">Buy CCX</a></li>
+                           <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a></li>
+                        </ul>
+                    </li>   
+-->					
             		<li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_info">Support</label>
