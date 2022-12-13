@@ -187,9 +187,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL:</span><span> Privacy-Preserving De-Fi &amp; Encrypted Communications</span></h2>
+                <h2><span>CONCEAL</span><span>.Network</span></h2>
                 <p>
-                    Communicate and interact financially in a totally anonymous and decentralized manner
+                    Privacy-Preserving De-Fi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
                     <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>

@@ -75,7 +75,7 @@
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
             <p>
-              Conceal Network is a decentralized, privacy-preserving network that seeks to aid it's users in managing their finances and communications with ease. We believe privacy is a fundamental human right, and we are working towards expanding our privacy-protected ecosystem and ensuring everyone can efficiently utilize it. Our overall vision is to give Freedom back to the People and to help them shield themselves from unauthorized monitoring.            </p>
+              Conceal Network is a decentralized, privacy-preserving network that seeks to aid it's users in managing their finances and communications with ease. We believe privacy is a fundamental human right, and we are working towards expanding our Privacy-Preserving ecosystem and ensuring everyone can efficiently utilize it. Our overall vision is to give Freedom back to the People and to help them shield themselves from unauthorized monitoring.            </p>
             <p>
               You can make a donation to Conceal with your cryptocurrency of choice and send your desired amount to one of our receiving addresses below. Your contribution, no matter how big or small, has the power to increase the adoption and development of the Conceal Network. All of the donations we receive will support the project so that we can offer better services to our community, boost liquidity, hire more talented developers, increase our social-media presence and bolster other marketing efforts.            </p>
             <p>

@@ -61,7 +61,7 @@
           <div class="col-md-10">
             <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">CONCEAL LIVE</span>
             <h2 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-              Conceal Live (Clive), is a powerful privacy-protected communications software that offers peer-to-peer and end-to-end encrypted audio, video and messaging services for free.
+              Conceal Live (Clive), is a powerful Privacy-Preserving communications software that offers peer-to-peer and end-to-end encrypted audio, video and messaging services for free.
             </h2>
             <a href="https://conceal.cloud/conceal-live/conceal-live-v1.0.1.apk" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-android"></span><span>&nbsp;Android</span></a>
             <a href="https://conceal.cloud/conceal-live/conceal-live-v1.0.1.msi" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-windows"></span><span>&nbsp;Windows</span></a>

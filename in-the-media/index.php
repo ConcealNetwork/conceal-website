@@ -271,7 +271,7 @@
 						<div class="thumbnail">
 						  <a href="https://newsbit.nl/conceal-network-privacy-protected-defi/" target="_blank" rel="noopener noreferrer"> 
 							<img src="../images/media/media_articles_11.png">
-							<span>Newsbit - Conceal Network: Privacy Protected DeFi</span>
+							<span>Newsbit - Conceal.Network: Privacy-Preserving De-Fi</span>
 						  </a>
 						</div>
 					  </div>
