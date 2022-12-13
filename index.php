@@ -36,7 +36,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         href="static/homepage.screen.css?v=1"
         media="screen,projection,tv"
     >
-    <title>Conceal.Network - Privacy-Preserving De-Fi & Encrypted Communications</title>
+    <title>Conceal.Network - Privacy-Protected De-Fi & Encrypted Communications</title>
     </head><body>
     <div id="loader-wrapper">
       <b></b>
@@ -189,10 +189,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2><span>CONCEAL</span><span>.network</span></h2>
                 <p>
-                    Privacy-Preserving De-Fi &amp; Encrypted Communications
+                    Privacy-Protected De-Fi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
-				    <li><a href="#features"><i class="fa-solid fa-money-bill-trend-up"></i> <span>Conceal-Earn</span></a></li>
+				    <li><a href="#features"><i class="fa fa-money-bill-trend-up"></i> <span>Conceal-Earn</span></a></li>
                     <li><a href="#markets"><i class="fa fa-store"></i> <span>Markets</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
                     <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
@@ -484,11 +484,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
 					<li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
                 </ul>
-                <a href="https://conceal.network/community/#exchanges">
-                    <i class="fa fa-plus"></i>
-                    <span>More</span>
-                </a>
-            </div>
+           </div>
         <!-- #markets --></section>
 
         <section id="buyingwCCXETH">
@@ -501,10 +497,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
                     <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
                 </ul>
-                <a href="https://conceal.network/community/#exchanges">
-                    <i class="fa fa-plus"></i>
-                    <span>More</span>
-                </a>
             </div>
         <!-- #buyingwCCXETH --></section>
         <section id="buyingwCCXBNB">
