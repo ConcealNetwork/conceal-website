@@ -36,7 +36,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         href="static/homepage.screen.css?v=1"
         media="screen,projection,tv"
     >
-    <title>Conceal Network - Anonymous DeFi & Private Communication</title>
+    <title>Conceal.Network - Privacy-Preserving De-Fi & Encrypted Communications</title>
     </head><body>
     <div id="loader-wrapper">
       <b></b>
@@ -187,19 +187,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL</span><span>.Network</span></h2>
+                <h2><span>CONCEAL</span><span>.network</span></h2>
                 <p>
                     Privacy-Preserving De-Fi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
-                    <li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>
-                    <li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>
+				    <li><a href="#features"><i class="fa-light fa-money-bill-trend-up"></i> <span>Conceal-Earn</span></a></li>
+                    <li><a href="#markets"><i class="fa fa-store"></i> <span>Markets</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
                     <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
                 </ul>
                 <p>
-                    <span>Want to build something cool with Conceal?</span> <em>We just might fund you...</em>
-                    <a href="labs/">Conceal Labs</a>
+                    <span>Do you would like to build something cool?</span> <em>We might fund you...</em>
+                    <a href="labs/">Conceal-Labs</a>
                 </p>
             </div>
             <a href="#features" class="moreLink"></a>
@@ -474,7 +474,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #mining --></section>
 
-        <section id="buyingCCX">
+        <section id="markets">
             <div>
                 <h2>
                     <span>Buying</span> <span>CCX</span>
@@ -488,7 +488,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>More</span>
                 </a>
             </div>
-        <!-- #buyingCCX --></section>
+        <!-- #markets --></section>
 
         <section id="buyingwCCXETH">
             <div>
