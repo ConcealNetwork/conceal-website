@@ -481,8 +481,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Exchanges</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
-                    <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
