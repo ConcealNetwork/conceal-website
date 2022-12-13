@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>Conceal - Community</title>
+  <title>Conceal Community</title>
   <?php include '../landing/include/topjs.html';?>
   <link rel="stylesheet" href="style/style.css">
 </head><body>
@@ -27,8 +27,8 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../defi/">BANKING</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
+                <li><a href="../defi/">DeFi</a></li>
+                <li><a href="https://wallet.conceal.network">WebWallet</a></li>
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
@@ -168,9 +168,8 @@
 							  Exchanges
 							</h2>
 							<ul data-aos="fade-up">
-							  <li><a href="https://www.bitmart.com/trade/en?symbol=CCX_USDT&layout=basic">BitMart</a></li>
-							  <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
-							  <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
+							  <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre CCX/BTC</a></li>
+							  <li><a href="https://tradeogre.com/exchange/USDT-CCX">TradeOgre CCX/USDT</a></li>
 							</ul>
 						</div>
 						
