@@ -81,8 +81,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="clive/">Conceal-Live</a></li>
 							<li><a href="messaging/">Conceal-Messaging</a></li>
 							<li><a href="mobile/">Conceal-Mobile</a></li>
-                            <li><a href="pay/">Conceal-Pay</a></li>
-							 <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-WebWallet</a></li>
+  						    <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-WebWallet</a></li>
                         </ul>
                     </li>
 					<li>
@@ -189,7 +188,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <li><a href="#markets"><i class="fa fa-cart-shopping"></i> <span>Buy</span></a></li>
 				    <li><a href="#features"><i class="fa fa-money-bill-trend-up"></i> <span>Earn</span></a></li>
                     <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Hodl</span></a></li>
-                    <li><a href="https://conceal.network/labs/"><i class="fa fa-trowel-bricks"></i> <span>Build</span></a></li>
+                    <li><a href="https://conceal.network/labs/" target="_blank" rel="noopener"><i class="fa fa-trowel-bricks"></i> <span>Build</span></a></li>
                 </ul>
             </div>
             <a href="#features" class="moreLink"></a>
