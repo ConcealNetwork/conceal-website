@@ -62,6 +62,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
 							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Documentation</a></li>
+							<li><a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">News</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
 						    <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Services Status</a></li>
                             <li><a href="team/">Team</a></li>							
@@ -135,7 +136,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<span>Youtube</span>
                     </a>
                 	</li><li>
-                        <a href="https://medium.com/@ConcealNetwork" target="_blank" rel="noopener">
+                        <a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
                     </li><li>
