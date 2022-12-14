@@ -61,11 +61,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="about/">What is Conceal?</a></li>
 							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
-							<li><a href="https://conceal.network/wiki/doku.php?id=start">Documentation</a></li>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Documentation</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
-						    <li><a href="https://status.conceal.network/">Services Status</a></li>
-                            <li><a href="team/">Team</a></li>
-							<li><a href="https://conceal.network/wiki/doku.php?id=start">Wiki</a></li>
+						    <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Services Status</a></li>
+                            <li><a href="team/">Team</a></li>							
                         </ul>
 					</li>
 			        <li>
@@ -74,17 +73,16 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="app">Conceal-App</a></li>
-                            <li><a href="https://bridge.conceal.network">Conceal-Bridge</a></li>
-							<li><a href="defi/">Conceal-DeFi</a></li>
+                            <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Conceal-Bridge</a></li>
                             <li><a href="#wallets">Conceal-Desktop</a></li>
 							<li><a href="features">Conceal-Earn</a></li>
-							<li><a href="https://explorer.conceal.network">Conceal-Explorer</a></li>
+							<li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Conceal-Explorer</a></li>
                             <li><a href="id/">Conceal-ID</a></li>
                             <li><a href="clive/">Conceal-Live</a></li>
 							<li><a href="messaging/">Conceal-Messaging</a></li>
 							<li><a href="mobile/">Conceal-Mobile</a></li>
                             <li><a href="pay/">Conceal-Pay</a></li>
-							 <li><a href="https://wallet.conceal.network">Conceal-WebWallet</a></li>
+							 <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-WebWallet</a></li>
                         </ul>
                     </li>
 					<li>
@@ -92,15 +90,24 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Community</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="community/">Channels</a>
-							<li><a href="labs/">Conceal-Labs</a></li>
+                            <li><a href="community/">Channels</a></li>
+							<li><a href="labs/">CCX-Labs</a></li>
                             <li><a href="#mining">Mining Pools</a></li>
                             <li><a href="#partners">Partners</a></li>
 							<li><a href="donate">Donate</a></li>
                         </ul>
                     </li>
+					<li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Developers</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">GitHub</a></li>
+							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Dev Wiki</a></li>
+                        </ul>
+                    </li>
             		<li>
-					<li class="navStandalone"><a href="https://conceal.network/support">Support</a></li>
+					<li class="navStandalone"><a href="https://conceal.network/support" target="_blank" rel="noopener">Support</a></li>
                 </ul>
 				
                 <ul id="socialMenu">
@@ -173,7 +180,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL</span><span>.network</span></h2>
+                <h2><span>CONCEAL</span><span>.Network</span></h2>
                 <p>
                     Privacy-Protected De-Fi &amp; Encrypted Communications
                 </p>
