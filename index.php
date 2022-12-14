@@ -112,54 +112,54 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				
                 <ul id="socialMenu">
                     <li>
-                        <a href="https://conceal.network/wiki/doku.php">
+                        <a href="https://conceal.network/wiki/doku.php" target="_blank" rel="noopener">
                             <i class="fab fa-wikipedia-w"></i>
                             <span>Documentation</span>
                         </a>
                     </li><li>
-                        <a href="http://discord.conceal.network">
+                        <a href="http://discord.conceal.network" target="_blank" rel="noopener">
                             <i class="fab fa-discord"></i>
                             <span>Discord</span>
                         </a>
                     </li><li>
-                        <a href="https://t.me/concealnetworkusers">
+                        <a href="https://t.me/concealnetworkusers" target="_blank" rel="noopener">
                             <i class="fab fa-telegram"></i>
                             <span>Telegram</span>
                         </a>
                     </li><li>
-                        <a href="https://twitter.com/ConcealNetwork">
+                        <a href="https://twitter.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
-                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw" target="_blank" rel="noopener">
 							<i class="fab fa-youtube"></i>
 							<span>Youtube</span>
                     </a>
                 	</li><li>
-                        <a href="https://medium.com/@ConcealNetwork">
+                        <a href="https://medium.com/@ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
                     </li><li>
-                        <a href="https://www.reddit.com/r/ConcealNetwork/">
+                        <a href="https://www.reddit.com/r/ConcealNetwork/" target="_blank" rel="noopener">
                             <i class="fab fa-reddit"></i>
                             <span>Reddit</span>
                         </a>
                     </li><li>
-                        <a href="https://www.facebook.com/concealnetwork/">
+                        <a href="https://www.facebook.com/concealnetwork/" target="_blank" rel="noopener">
                             <i class="fab fa-facebook"></i>
                             <span>Facebook</span></a>
                     </li><li>
-                        <a href="https://github.com/ConcealNetwork">
+                        <a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
                             <span>Github</span>
                         </a>
                     </li><li>
-                        <a href="https://bitcointalk.org/index.php?topic=5086106">
+                        <a href="https://bitcointalk.org/index.php?topic=5086106" target="_blank" rel="noopener">
                             <i class="fab fa-bitcoin"></i>
                             <span>BitcoinTalk</span>
                         </a>
                     </li><li>
-                        <a href="https://bridge.conceal.network">
+                        <a href="https://bridge.conceal.network" target="_blank" rel="noopener">
                             <i class="fas fa-archway"></i>
                             <span>Bridge</span>
                         </a>
