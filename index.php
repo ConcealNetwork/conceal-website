@@ -74,7 +74,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="app">Conceal-App</a></li>
-                            <li><a href="https://bridge.conceal.network">Bridge</a></li>
+                            <li><a href="https://bridge.conceal.network">Conceal-Bridge</a></li>
 							<li><a href="defi/">Conceal-DeFi</a></li>
                             <li><a href="#wallets">Conceal-Desktop</a></li>
 							<li><a href="features">Conceal-Earn</a></li>
