@@ -233,7 +233,7 @@
   "messagingEncryptedText": "All Conceal Messages are encrypted and cannot be read by anyone other than the sender and receiver.",
   
   "cLiveHeader": "CONCEAL LIVE",
-  "cLiveTitle": "Conceal Live (Clive), is a powerful privacy-protected communications software that offers peer-to-peer and end-to-end encrypted audio, video and messaging services for free.",
+  "cLiveTitle": "Conceal Live (Clive), is a powerful Privacy-Preserving communications software that offers peer-to-peer and end-to-end encrypted audio, video and messaging services for free.",
   "cLiveAbout1": "Clive is free to the public and is also offered advertisement free. This private communication client is currently available for Android and Windows users with a possible future release for iOS.",
   "cLiveAbout2": "Clive brings private communications back to the people.",
   "cLiveSecureTitle": "SECURE COMMUNICATION",
@@ -382,7 +382,7 @@
   "communityMCAPTitle": "MARKET CAP",
   
   "landingFooterAbout": "About",
-  "landingFooterTitle": "Conceal.Network is a decentralized blockchain bank, with deposits and investments paying interest rates, without involvement of financial institutions, powered by 100% open source code.",
+  "landingFooterTitle": "Conceal provides the ability for individuals to communicate and financially interact with each other in an anonymous and decentralized manner.",
   "landingFooterLinks": "Quick Links",
   "landingFooterLinkWebsite": "Website",
   "landingFooterLinkDocs": "Documentation",

@@ -26,8 +26,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous"
         media="screen"
     >
@@ -36,7 +36,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         href="static/homepage.screen.css?v=1"
         media="screen,projection,tv"
     >
-    <title>Conceal Network - Privacy Protected DeFi & Encrypted Communications</title>
+    <title>Conceal.Network - Privacy-Protected De-Fi & Encrypted Communications</title>
     </head><body>
     <div id="loader-wrapper">
       <b></b>
@@ -53,120 +53,113 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <input type="radio" id="toggle_submenusOff" name="toggle_submenu" lass="toggle" hidden>
 
                 <ul id="mainMenu">
-                    <li>
-                        <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_apps">Apps</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-                            <!--<li><a href="app">Conceal App</a></li>-->
-                            <li><a href="defi/">DeFi</a></li>
-                            <!--<li><a href="https://conceal.cloud">Cloud</a></li>-->
-                            <li><a href="#wallets">Desktop</a></li>
-                            <li><a href="id/">ID</a></li>
-                            <li><a href="messaging/">Messaging</a></li>
-                            <li><a href="mobile/">Mobile</a></li>
-                            <li><a href="clive/">C-Live</a></li>
-                            <!--<li><a href="pay/">Pay</a></li>-->
-                        </ul>
-                    </li><li>
+           					<li>
                         <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="about/">Conceal</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="in-the-media/">In The Media</a></li>
-                            <li><a href="labs/">Labs</a></li>
+                            <li><a href="about/">What is Conceal?</a></li>
+							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
+							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Documentation</a></li>
+							<li><a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">News</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
-                            <li><a href="team/">Team</a></li>
+						    <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Services Status</a></li>
+                            <li><a href="team/">Team</a></li>							
                         </ul>
-                    </li><li>
-                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Info</label>
+					</li>
+			        <li>
+                        <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_apps">Products</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="community/">Community</a>
-                            <li><a href="https://conceal.network/wiki/doku.php?id=start">Docs</a>
-                            <li><a href="#buyingCCX">Exchanges</a></li>
-                            <li><a href="community/#Ethereum">wCCX LP pairs</a></li>
-                            <li><a href="https://explorer.conceal.network">Explorer</a></li>
-                            <li><a href="#mining">Mining</a></li>
-                            <li><a href="#partners">Partners</a></li>
-                            <li><a href="https://status.conceal.network/">Network Status</a></li>
-                            
-                        </ul>
-                    </li><li>
-                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_info">Contact</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-							              <li><a href="#helpdesk">Contact Us</a></li>
-                            <li><a href="#helpdesk">Helpdesk</a>
+                            <li><a href="app">Conceal-App</a></li>
+                            <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Conceal-Bridge</a></li>
+                            <li><a href="#wallets">Conceal-Desktop</a></li>
+							<li><a href="features">Conceal-Earn</a></li>
+							<li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Conceal-Explorer</a></li>
+                            <li><a href="id/">Conceal-ID</a></li>
+                            <li><a href="clive/">Conceal-Live</a></li>
+							<li><a href="messaging/">Conceal-Messaging</a></li>
+							<li><a href="mobile/">Conceal-Mobile</a></li>
+  						    <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-WebWallet</a></li>
                         </ul>
                     </li>
-                    </li><li>
-                      <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
-                      <label for="toggle_info">Buy</label>
-                      <label for="toggle_submenusOff"></label>
-                      <ul>
-                          <li><a href="#buyingCCX">Buy CCX</a></li>
-                          <li><a href="https://conceal.network/community/#Ethereum">Buy wCCX</a>
-                      </ul>
-                    </li>                    
-                    <li class="navStandalone"><a href="https://bridge.conceal.network">Bridge</a></li>
-                    <li class="navStandalone"><a href="donate">Donate</a></li>
+					<li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Community</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="community/">Channels</a></li>
+						                <li><a href="labs/">CCX-Labs</a></li>
+                            <li><a href="#mining">Mining Pools</a></li>
+                            <li><a href="#partners">Partners</a></li>
+							               <li><a href="donate">Donate</a></li>
+                        </ul>
+                    </li>
+					<li>
+                        <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_info">Developers</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">GitHub</a></li>
+							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Dev Wiki</a></li>
+                        </ul>
+                    </li>
+            		<li>
+					<li class="navStandalone"><a href="https://conceal.network/support" target="_blank" rel="noopener">Support</a></li>
                 </ul>
+				
                 <ul id="socialMenu">
                     <li>
-                        <a href="https://conceal.network/wiki/doku.php">
+                        <a href="https://conceal.network/wiki/doku.php" target="_blank" rel="noopener">
                             <i class="fab fa-wikipedia-w"></i>
                             <span>Documentation</span>
                         </a>
                     </li><li>
-                        <a href="http://discord.conceal.network">
+                        <a href="http://discord.conceal.network" target="_blank" rel="noopener">
                             <i class="fab fa-discord"></i>
                             <span>Discord</span>
                         </a>
                     </li><li>
-                        <a href="https://t.me/concealnetworkusers">
+                        <a href="https://t.me/concealnetworkusers" target="_blank" rel="noopener">
                             <i class="fab fa-telegram"></i>
                             <span>Telegram</span>
                         </a>
                     </li><li>
-                        <a href="https://twitter.com/ConcealNetwork">
+                        <a href="https://twitter.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
-                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw">
+                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw" target="_blank" rel="noopener">
 							<i class="fab fa-youtube"></i>
 							<span>Youtube</span>
                     </a>
                 	</li><li>
-                        <a href="https://medium.com/@ConcealNetwork">
+                        <a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
                     </li><li>
-                        <a href="https://www.reddit.com/r/ConcealNetwork/">
+                        <a href="https://www.reddit.com/r/ConcealNetwork/" target="_blank" rel="noopener">
                             <i class="fab fa-reddit"></i>
                             <span>Reddit</span>
                         </a>
                     </li><li>
-                        <a href="https://www.facebook.com/concealnetwork/">
+                        <a href="https://www.facebook.com/concealnetwork/" target="_blank" rel="noopener">
                             <i class="fab fa-facebook"></i>
                             <span>Facebook</span></a>
                     </li><li>
-                        <a href="https://github.com/ConcealNetwork">
+                        <a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
                             <span>Github</span>
                         </a>
                     </li><li>
-                        <a href="https://bitcointalk.org/index.php?topic=5086106">
+                        <a href="https://bitcointalk.org/index.php?topic=5086106" target="_blank" rel="noopener">
                             <i class="fab fa-bitcoin"></i>
                             <span>BitcoinTalk</span>
                         </a>
                     </li><li>
-                        <a href="https://bridge.conceal.network">
+                        <a href="https://bridge.conceal.network" target="_blank" rel="noopener">
                             <i class="fas fa-archway"></i>
                             <span>Bridge</span>
                         </a>
@@ -187,22 +180,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>Privacy</span> <span>Protected DeFi</span></h2>
+                <h2><span>CONCEAL</span><span>.Network</span></h2>
                 <p>
-                    Decentralized Finance, Private Transactions &amp; Encrypted Messaging
+                    Privacy-Protected De-Fi &amp; Encrypted Communications
                 </p>
                 <ul class="majorLinks">
-                    <!--<li><a href="https://conceal.cloud"><i class="fa fa-cloud"></i> <span>Cloud</span></a></li>-->
-                    <!--<li><a href="clive/"><i class="fa fa-comments"></i> <span>C-Live</span></a></li>-->
-                    <li><a href="about"><i class="fa fa-question"></i> <span>About</span></a></li>
-                    <li><a href="defi"><i class="fa fa-piggy-bank"></i> <span>DeFi</span></a></li>
-                    <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Wallets</span></a></li>
-                    <li><a href="roadmap"><i class="fa fa-map-signs"></i> <span>Roadmap</span></a></li>
+
+                    <li><a href="#markets"><i class="fa fa-cart-shopping"></i> <span>Buy</span></a></li>
+				    <li><a href="#features"><i class="fa fa-money-bill-trend-up"></i> <span>Earn</span></a></li>
+                    <li><a href="#wallets"><i class="fa fa-wallet"></i> <span>Hodl</span></a></li>
+                    <li><a href="https://conceal.network/labs/" target="_blank" rel="noopener"><i class="fa fa-trowel-bricks"></i> <span>Build</span></a></li>
                 </ul>
-                <p>
-                    <span>Want to build something cool with Conceal?</span> <em>We just might fund you...</em>
-                    <a href="labs/">Conceal Labs</a>
-                </p>
             </div>
             <a href="#features" class="moreLink"></a>
         </section>
@@ -234,17 +222,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
                 </p>
                 <p>
-                    Conceal Network powers the $CCX cryptocurrency which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
+                    Conceal Network powers $CCX which is an open source, privacy-preserving digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
                 </p><p>
-                    Conceal Network is a community driven, truly decentralized blockchain bank accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate for free.
+                    Conceal Network is a community-driven and decentralized ecosystem accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate.
                 </p>
 
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
-                        <h3><span>DeFi</span>: <span>Deposits</span></h3>
+                        <h3><span>De-Fi</span>: <span>Conceal-Earn</span></h3>
                         <p>
-                            Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
+                            Decentralized Finance forms the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold-staking that earns interess on locked deposits.
                         </p>
                     </section><section>
                         <i class="fas fa-comments"></i>
@@ -334,26 +322,26 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
                             WINDOWS GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             WINDOWS CLI
                         </a>
                     </li><li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
                             LINUX GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             LINUX CLI
                         </a>
                     </li><li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-wallet/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases>
                             MAC GUI
                         </a><br>
-                        <a href="https://github.com/TheCircleFoundation/conceal-core/releases">
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
                             MAC CLI
                         </a>
                     </li>
@@ -481,22 +469,18 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             </div>
         <!-- #mining --></section>
 
-        <section id="buyingCCX">
+        <section id="markets">
             <div>
                 <h2>
                     <span>Buying</span> <span>CCX</span>
-                    <span>Exchanges</span>
+                    <span>Markets</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://www.hotbit.io/exchange?symbol=CCX_BTC">HotBit</a></li>
-                    <li><a href="https://tradeogre.com/exchange/BTC-CCX">TradeOgre</a></li>
+                    <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
+					          <li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
                 </ul>
-                <a href="https://conceal.network/community/#exchanges">
-                    <i class="fa fa-plus"></i>
-                    <span>More</span>
-                </a>
-            </div>
-        <!-- #buyingCCX --></section>
+           </div>
+        <!-- #markets --></section>
 
         <section id="buyingwCCXPOLYGON">
             <div>
@@ -652,33 +636,33 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="#wallets" >Wallets</a>
 					</li>
 					<li>
-						<a href="https://bridge.conceal.network/" >Bridge</a>
+						<a href="https://bridge.conceal.network/" >Conceal-Bridge</a>
 					</li>
           <!--
 					<li>
-						<a href="app/" >Conceal App</a>
+						<a href="app/" >Conceal-App</a>
 					</li>
           -->
 					<li>
-						<a href="defi/" >DeFi</a>
+						<a href="defi/" >Conceal-DeFi</a>
 					</li>
 					<li>
-						<a href="https://conceal.cloud/" >Cloud</a>
+						<a href="https://wallet.conceal.network/" >Conceal-WebWallet</a>
 					</li>
 					<li>
-						<a href="id/" >ID</a>
+						<a href="id/" >Conceal-ID</a>
 					</li>
 					<li>
-						<a href="messaging/" >Messaging</a>
+						<a href="messaging/" >Conceal-Messaging</a>
 					</li>
 					<li>
-						<a href="mobile/" >Mobile</a>
+						<a href="mobile/" >Conceal-Mobile</a>
 					</li>
 					<li>
-						<a href="clive/" >C-Live</a>
+						<a href="clive/" >Conceal-Live</a>
 					</li>
 					<li>
-						<a href="pay/" >Pay</a>
+						<a href="pay/" >Conceal-Pay</a>
 					</li>
 
 				</ul>
@@ -688,7 +672,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				<ul>
 					<h2>Community</h2>
 						<li>
-							<a href="http://discord.conceal.network">
+							<a href="https://discord.conceal.network">
 								Discord
 								<i class="fab fa-discord"></i>
 							</a>
@@ -750,7 +734,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		</div class="footerelm">
 		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">		
-            	&copy; 2017-<span id="crFullYear">2021</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
+            	&copy; 2017-<span id="crFullYear"></span><span> Conceal.Network, Conceal DAO, Conceal Team & Conceal Developers - All rights reserverd.</span><br>
         </div>
 		
     </footer>
@@ -761,5 +745,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
     <script src="js/calc.js?v=1"></script>
 
     </body></html>';
-
+	
 ?>
+	
