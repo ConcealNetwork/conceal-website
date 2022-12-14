@@ -26,14 +26,14 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../defi/">BANKING</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
+                <li><a href="../defi/">DeFi</a></li>
+                <!--<li><a href="https://conceal.cloud">CLOUD</a></li>-->
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
                 <li class="active"><a href="#">C-LIVE</a></li>
-                <li><a href="../pay/">PAY</a></li>
+                <!--<li><a href="../pay/">PAY</a></li>-->
                 <li class="cta"><a href="https://conceal.cloud/conceal-live/conceal-live-v1.0.1.apk"><span class="icon-android"></span> Android</a></li>
                 <li class="cta"><a href="https://conceal.cloud/conceal-live/conceal-live-v1.0.1.msi"><span class="icon-windows"></span> Windows</a></li>
               </ul>

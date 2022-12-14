@@ -27,15 +27,15 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../defi/">BANKING</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
+                <li><a href="../defi/">DeFi</a></li>
+                <!--<li><a href="https://conceal.cloud">CLOUD</a></li>-->
                 <li><a href="#">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
-				<li><a href="../clive/">Clive</a></li>
-				<li><a href="../pay/">PAY</a></li>
-                <li><a href="../app/">Conceal App</a></li>
+                <li><a href="../clive/">Clive</a></li>
+                <!--<li><a href="../pay/">PAY</a></li>-->
+                <!--<li><a href="../app/">Conceal App</a></li>-->
               </ul>
             </nav>
           </div>
@@ -275,6 +275,22 @@
 						  </a>
 						</div>
 					  </div>
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://medium.com/@Mr_Kwibs/conceal-network-ccx-7288b2564622" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_12.jpg">
+							<span>Conceal Network (₡CCX)</span>
+						  </a>
+						</div>
+					  </div>
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://concealnetwork.medium.com/conceal-ccx-the-next-big-pow-mining-opportunity-dff8e8b0adf1" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_articles_13.jpeg">
+							<span>Conceal (CCX) — The Next Big PoW Mining Opportunity</span>
+						  </a>
+						</div>
+					  </div>
 					</div>
 				</div>
 
@@ -293,6 +309,15 @@
 					</div>
 
 					<div class="row align-items-center speaker mediaSectionWrapper">
+            
+            <div class="thumbex">
+						<div class="thumbnail">
+						  <a href="https://www.youtube.com/watch?v=TfykuINNsCI" target="_blank" rel="noopener noreferrer"> 
+							<img src="../images/media/media_video_10.jpg">
+							<span>Your Friend Andy - Everything you need to know about Conceal Crypto (CCX)!</span>
+						  </a>
+						</div>
+					  </div>
 					  <div class="thumbex">
 						<div class="thumbnail">
 						  <a href="https://www.youtube.com/watch?v=oY5ZzJFoe4E" target="_blank" rel="noopener noreferrer"> 

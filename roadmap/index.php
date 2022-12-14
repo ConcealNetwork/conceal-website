@@ -27,15 +27,15 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../banking">BANKING</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
+                <li><a href="../defi">DeFi</a></li>
+                <!--<li><a href="https://conceal.cloud">CLOUD</a></li>-->
                 <li><a href="#">ID</a></li>
                 <li><a href="../labs">LABS</a></li>
                 <li><a href="../messaging">MESSAGING</a></li>
                 <li><a href="../mobile">MOBILE</a></li>
-				<li><a href="../clive">Clive</a></li>
-				<li><a href="../pay">PAY</a></li>
-                <li><a href="../app">Conceal App</a></li>
+                <li><a href="../clive">Clive</a></li>
+                <!--<li><a href="../pay">PAY</a></li>-->
+                <!--<li><a href="../app">Conceal App</a></li>-->
               </ul>
             </nav>
           </div>
@@ -306,16 +306,6 @@
 								<div class="t-square"></div>
 							</div>
 						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 completed">
-								<span>
-									<h6>Q2 2022, Conceal App - Version 3</h6> — Third release with Bridges and ID modules.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
 
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
@@ -334,6 +324,16 @@
 							</div>
 						</div>
 
+            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6>Q2 2022, Conceal App - Version 3</h6> — Third release with Bridges and ID modules.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+            
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
@@ -384,21 +384,21 @@
 							</div>
 						</div>
 						
+            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6>2025/2026, Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+            
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
 									<h6>2024/2025, Privacy-Preserving Stable Coin</h6> — On-chain Privacy-Preserving stable coin pegged to other digital stablecoins using cross-chain bridges.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>2025/2026, Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
 								</span>
 								<div class="t-square"></div>
 							</div>

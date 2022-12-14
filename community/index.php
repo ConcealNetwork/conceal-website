@@ -33,7 +33,7 @@
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
-                <li><a href="../pay/">PAY</a></li>
+                <!--<li><a href="../pay/">PAY</a></li>-->
               </ul>
             </nav>
           </div>

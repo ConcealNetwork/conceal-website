@@ -53,7 +53,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <input type="radio" id="toggle_submenusOff" name="toggle_submenu" lass="toggle" hidden>
 
                 <ul id="mainMenu">
-					<li>
+           					<li>
                         <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
@@ -91,10 +91,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="community/">Channels</a></li>
-							<li><a href="labs/">CCX-Labs</a></li>
+						                <li><a href="labs/">CCX-Labs</a></li>
                             <li><a href="#mining">Mining Pools</a></li>
                             <li><a href="#partners">Partners</a></li>
-							<li><a href="donate">Donate</a></li>
+							               <li><a href="donate">Donate</a></li>
                         </ul>
                     </li>
 					<li>
@@ -346,11 +346,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </a>
                     </li>
                 </ul>
-				<p>
+                <p>
                     Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
 				
 				
+                <!--
                 <h3 class="text-center wallet-subheader">Conceal App (all in one)</h3>
                 <ul>
                     <li>
@@ -376,12 +377,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                       </a>
                   </li>
                 </ul>
-				<p>
+                <p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
                 </p>
+                -->
 				  
 				  
-              <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
                   <ul>                        
                     <li>
                         <i class="fas fa-paper-plane"></i><br>
@@ -391,6 +393,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://wallet.conceal.network/">Web Wallet</a>
                     </li>
                 </ul>
+                <p>
+                  The Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
+                </p>                
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
         <!-- #wallets --></section>
@@ -472,23 +477,24 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="majorLinks">
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
-					<li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
+					          <li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
                 </ul>
            </div>
         <!-- #markets --></section>
 
-        <section id="buyingwCCXETH">
+        <section id="buyingwCCXPOLYGON">
             <div>
                 <h2>
                     <span>Buying</span> <span>wCCX</span>
-                    <span>Ethereum</span>
+                    <span>Polygon</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
-                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                    <li><a href="https://app.sushi.com/">SushiSwap</a></li>
+                    <li><a href="https://app.uniswap.org/">Uniswap</a></li>
                 </ul>
             </div>
-        <!-- #buyingwCCXETH --></section>
+        <!-- #buyingwCCXBNB --></section>
+
         <section id="buyingwCCXBNB">
             <div>
                 <h2>
@@ -506,6 +512,23 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </a>
             </div>
         <!-- #buyingwCCXBNB --></section>
+        <section id="buyingwCCXETH">
+            <div>
+                <h2>
+                    <span>Buying</span> <span>wCCX</span>
+                    <span>Ethereum</span>
+                </h2>
+                <ul class="majorLinks">
+                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
+                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                </ul>
+                <a href="https://conceal.network/community/#exchanges">
+                    <i class="fa fa-plus"></i>
+                    <span>More</span>
+                </a>
+            </div>
+        <!-- #buyingwCCXETH --></section>
+        
 
         <section id="partners">
             <div>
@@ -615,9 +638,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					<li>
 						<a href="https://bridge.conceal.network/" >Conceal-Bridge</a>
 					</li>
+          <!--
 					<li>
 						<a href="app/" >Conceal-App</a>
 					</li>
+          -->
 					<li>
 						<a href="defi/" >Conceal-DeFi</a>
 					</li>
