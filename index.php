@@ -362,7 +362,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Conceal-Core is the heart of our peer-to-peer privacy-preserving network. It\'s a full local node of our network. 
                 </p>
 				
-                <h3 class="text-center wallet-subheader">Conceal-Mobile (Lite Wallet)</h3>
+                <h3 class="text-center wallet-subheader">Conceal-Mobile | Lite Wallet</h3>
                 <ul>                        
                   <li>
                       <i class="fab fa-android"></i><br>
@@ -380,7 +380,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <p>
                     Conceal-Mobile is a wrapped version of our web wallet.
                 </p> 
-                <h3 class="text-center wallet-subheader">Conceal App (all-in-one app | multi-platform | beta)</h3>
+                <h3 class="text-center wallet-subheader">Conceal App | All-in-One app (beta)</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
