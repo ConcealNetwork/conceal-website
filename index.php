@@ -53,39 +53,21 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <input type="radio" id="toggle_submenusOff" name="toggle_submenu" lass="toggle" hidden>
 
                 <ul id="mainMenu">
-           					<li>
+           			<li>
                         <input type="radio" id="toggle_about" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="about/">What is Conceal?</a></li>
-							<li><a href="in-the-media/">Articles/Media</a></li>
-                            <li><a href="branding/">Branding</a></li>
+                            <li><a href="about/">What\'s Conceal?</a></li>
+							<li><a href="branding/">Branding</a></li>
 							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Documentation</a></li>
+                            <li><a href="in-the-media/">Media</a></li>
 							<li><a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">News</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
-						    <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Services Status</a></li>
-                            <li><a href="team/">Team</a></li>							
+						    <li><a href="team/">Team</a></li>							
                         </ul>
 					</li>
-			        <li>
-                        <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_apps">Products</label>
-                        <label for="toggle_submenusOff"></label>
-                        <ul>
-                            <li><a href="app">Conceal-App</a></li>
-                            <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Conceal-Bridge</a></li>
-                            <li><a href="#wallets">Conceal-Desktop</a></li>
-							<li><a href="features">Conceal-Earn</a></li>
-							<li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Conceal-Explorer</a></li>
-                            <li><a href="id/">Conceal-ID</a></li>
-                            <li><a href="clive/">Conceal-Live</a></li>
-							<li><a href="messaging/">Conceal-Messaging</a></li>
-							<li><a href="mobile/">Conceal-Mobile</a></li>
-  						    <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-WebWallet</a></li>
-                        </ul>
-                    </li>
-					<li>
+                    <li>
                         <input type="radio" id="toggle_info" name="toggle_submenu" class="toggle" hidden>
                         <label for="toggle_info">Community</label>
                         <label for="toggle_submenusOff"></label>
@@ -106,7 +88,31 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Dev Wiki</a></li>
                         </ul>
                     </li>
-            		<li>
+                    <li>
+                        <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_apps">Features</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="app">Conceal-App</a></li>
+							<li><a href="features">Conceal-Earn</a></li>
+							<li><a href="id/">Conceal-ID</a></li>
+                            <li><a href="clive/">Conceal-Live</a></li>
+							<li><a href="messaging/">Conceal-Messaging</a></li>
+                            <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-Web</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
+                        <label for="toggle_apps">Services</label>
+                        <label for="toggle_submenusOff"></label>
+                        <ul>
+                            <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Bridge</a></li>
+                            <li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Explorer</a></li>
+                            <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Web Wallet</a></li>
+                            <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Service Status</a></li>
+                        </ul>
+                    </li>
+            		<li class="navStandalone"><a href="#wallets">Wallets</a></li>
 					<li class="navStandalone"><a href="https://conceal.network/support" target="_blank" rel="noopener">Support</a></li>
                 </ul>
 				
@@ -180,10 +186,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL.Network</span></h2>
-                <p>
-                    Privacy-Protected De-Fi &amp; Encrypted Communications
-                </p>
+                <h2>
+                    <span>Conceal</span>
+                    <span>.Network</span>
+                </h2>
+                <p>Privacy-Protected De-Fi &amp; Encrypted Communications</p>
                 <ul class="majorLinks">
 
                     <li><a href="#markets"><i class="fa fa-cart-shopping"></i> <span>Buy</span></a></li>
@@ -318,59 +325,80 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="wallets">
             <div>
                 <h2><span>Using Conceal</span> <span>Wallets</span></h2>
-                <h3 class="text-center wallet-subheader">Full Node Local Wallets</h3>
+                <h3 class="text-center wallet-subheader">Conceal-Desktop | Full-Node Graphical Wallet</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
-                            WINDOWS GUI
-                        </a><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
-                            WINDOWS CLI
-                        </a>
-                    </li><li>
-                        <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases">
-                            LINUX GUI
-                        </a><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
-                            LINUX CLI
-                        </a>
-                    </li><li>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">Windows</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-ubuntu"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">Ubuntu/Linux</a>
+                    </li>
+                    <li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases>
-                            MAC GUI
-                        </a><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases">
-                            MAC CLI
-                        </a>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">MacOS</a>
                     </li>
                 </ul>
                 <p>
-                    Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
+                    Conceal-Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
                 </p>
-				
-				
-                <!--
-                <h3 class="text-center wallet-subheader">Conceal App (all in one)</h3>
+                <h3 class="text-center wallet-subheader">Conceal-Core | Full-Node Command Line Wallet</h3>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">WINDOWS Desktop</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">Windows</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-linux"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">Linux</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-apple"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">MacOS</a>
+                    </li>
+                </ul>
+                <p>
+                    Conceal-Core is the heart of our peer-to-peer privacy-preserving network. It\'s a full local node of our network. 
+                </p>
+				
+                <h3 class="text-center wallet-subheader">Conceal-Mobile (Lite Wallet)</h3>
+                <ul>                        
+                  <li>
+                      <i class="fab fa-android"></i><br>
+                      <a href="https://github.com/ConcealNetwork/conceal-wallet-cordova/releases/latest">Android APK</a><br>
+                      <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile">
+                         Google Play
+                      </a>
+
+                  </li>
+                  <li>
+                      <i class="fab fa-apple"></i><br>
+                      <a href="https://wallet.conceal.network/">iOS</a>
+                  </li>
+                </ul>
+                <p>
+                    Conceal-Mobile is a wrapped version of our web wallet.
+                </p> 
+                <h3 class="text-center wallet-subheader">Conceal App (all-in-one app | multi-platform | beta)</h3>
+                <ul>
+                    <li>
+                        <i class="fab fa-windows"></i><br>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Windows</a>
                     </li><li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">LINUX Desktop</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Linux</a>
                     </li><li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">MAC Desktop</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">MacOS</a>
                     </li><li>
                         <i class="fas fa-cloud"></i><br>
-                        <a href="https://app.conceal.network">Web Version</a>
+                        <a href="https://app.conceal.network">Web App</a>
                     </li>
                     </li><li>
                       <i class="fab fa-android"></i><br>
                       <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
-                          ANDROID - APK
+                          Android APK
                       </a><br>
                       <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
                          Google Play
@@ -380,21 +408,21 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <p>
                     Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
                 </p>
-                -->
+                
 				  
 				  
                 <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
                   <ul>                        
                     <li>
                         <i class="fas fa-paper-plane"></i><br>
-                        <a href="https://conceal.network/paperwallet">PAPER</a>
+                        <a href="https://conceal.network/paperwallet">Offline/Paper</a>
                     </li><li>
                         <i class="fab fa-chrome"></i><br>
                         <a href="https://wallet.conceal.network/">Web Wallet</a>
                     </li>
                 </ul>
                 <p>
-                  The Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
+                  Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
                 </p>                
                 <img src="images/newgui.png" alt="Conceal GUI" class="plate">
             </div>
@@ -638,12 +666,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					<li>
 						<a href="https://bridge.conceal.network/" >Conceal-Bridge</a>
 					</li>
-          <!--
-					<li>
+      				<li>
 						<a href="app/" >Conceal-App</a>
 					</li>
-          -->
-					<li>
+          			<li>
 						<a href="defi/" >Conceal-DeFi</a>
 					</li>
 					<li>
