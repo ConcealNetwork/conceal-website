@@ -58,7 +58,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_about">About</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="about/">What is Conceal?</a></li>
+                            <li><a href="about/">What\'s Conceal?</a></li>
 							<li><a href="in-the-media/">Articles/Media</a></li>
                             <li><a href="branding/">Branding</a></li>
 							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Documentation</a></li>
@@ -180,7 +180,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL.Network</span></h2>
+                <h2>
+                    <span>CONCEAL</<span>
+                    <span>.network</span>
+                </h2>
                 <p>
                     Privacy-Protected De-Fi &amp; Encrypted Communications
                 </p>
