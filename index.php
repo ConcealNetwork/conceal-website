@@ -180,7 +180,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 
         <section>
             <div>
-                <h2><span>CONCEAL</span><span>.Network</span></h2>
+                <h2><span>CONCEAL.Network</span></h2>
                 <p>
                     Privacy-Protected De-Fi &amp; Encrypted Communications
                 </p>
