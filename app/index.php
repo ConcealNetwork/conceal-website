@@ -133,7 +133,7 @@
                 Deposits
               </h2>
               <p class="mb-4" data-aos="fade-left" data-aos-delay="400">
-                Directly depost your ccx in the conceal app and earn passive income.
+                Directly deposit your ccx in the conceal app and earn passive income.
               </p>
             </div>
           </div>
