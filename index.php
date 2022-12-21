@@ -95,7 +95,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <ul>
                             <li><a href="app">Conceal-App</a></li>
 							<li><a href="features">Conceal-Earn</a></li>
-							<li><a href="id/">Conceal-ID</a></li>
                             <li><a href="clive/">Conceal-Live</a></li>
 							<li><a href="messaging/">Conceal-Messaging</a></li>
                             <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-Web</a></li>
