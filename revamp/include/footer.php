@@ -59,7 +59,7 @@
 		</div>
 		
 		<div class="footerelm">		
-            	&copy; 2017-2023</span> <span>Conceal Network</span>. <span>All rights reserved</span>.
+            	&copy; 2017-2023 <span>Conceal Network</span>. <span>All rights reserved</span>.
         </div>
 	</div>	
   </footer>
