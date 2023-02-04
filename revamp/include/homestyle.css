@@ -1,0 +1,231 @@
+/* CSS Document */
+.main_body{
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+.main_body h1{
+	font-size: 45px;
+	margin-bottom: 30px;
+}
+.main_body h2{
+	color: var(--dark-mode); 
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.grid{
+	margin-top: 30px;
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+	height: 250px;
+}
+.majorLinks {
+	list-style:none;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	width:100%;
+	height: 100%;
+	margin: 35px 0 0 0;
+}
+#top .majorLinks {
+	margin-bottom:1em;
+}
+
+.majorLinks li {
+	display:inline;
+	flex:1 0 auto;
+	margin:0 0.5em 1em;
+	min-width: 45%;
+	width: 45%;
+	max-width: 90%;
+}
+.majorLinks a {
+	display:block;
+	padding:1.1em 0.5em 1em;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:var(--dark-mode);
+	background:var(--light-mode);
+	border:2px solid #FA0;
+	border-radius:0.75em;
+	transition:background 0.5s, border 0.5s;
+}
+.majorLinks a:focus,
+.majorLinks a:hover {
+	background:var(--nav);
+	color:#FA0;
+}
+.majorLinks i {
+	margin-right:0.2em;
+}
+.fadingimg{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.fadingimg img{
+	padding: 10px;
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	-webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+.bot{
+	-webkit-animation-delay: -4s;
+}
+
+.subbody{
+	margin-top: 100px;
+	text-align: left;
+}
+.subbody h2{
+	padding: 20px 0 0 0;
+	text-decoration: underline;
+	text-decoration-color: var(--dark-mode);
+	text-underline-offset: 8px;
+	color: var(--head); 
+}
+.subbody p{
+	padding: 0 0 10px 0;
+}
+
+.features{
+	margin-top: 50px;
+	width: 100%;
+}
+.features h2{
+	padding: 20px 0 0 0;
+	text-decoration: underline;
+	text-decoration-color: var(--dark-mode);
+	text-underline-offset: 8px;
+	color: var(--head); 
+}
+.fbox{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 5rem;
+}
+.fbox > .subbox{
+	height: 300px;
+	width: 300px;
+	background-color: var(--light-mode);
+	border:2px solid #FA0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	gap: 1rem;
+	border-radius: 10px;
+}
+.subbox h3{
+	margin-top: 10px;
+	padding: 10px;
+	background: linear-gradient(240deg, #1a1f25 32%, #20262e 92%);
+	color: #edf2fc;
+	border-radius: 10px;
+}
+.subbox a{
+	background: linear-gradient(240deg, #1a1f25 32%, #20262e 92%);
+	width: 50%;
+	margin: 0 auto 0 auto;
+	border: 2px solid var(--dark-mode);
+	color: #edf2fc;
+	border-radius: 10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.subbox p{
+	text-align: justify-all;
+	width: 90%;
+	margin: 0 auto 0 auto;
+	font-size: 15px;
+}
+.subbox:hover{
+	background-color: var(--thov);
+	border:2px solid var(--dark-mode);
+	cursor: default;
+}
+
+@media screen and (max-width: 400px){
+	.subbox p{
+		font-size: 12px;
+	}
+	.subbox h3{
+		font-size: 12px;
+	}
+}
+.partners{
+	padding-top: 50px;
+}
+.partners h2{
+	padding: 20px 0 0 0;
+	text-decoration: underline;
+	text-decoration-color: var(--dark-mode);
+	text-underline-offset: 8px;
+	color: var(--head); 
+}
+.partnerlogo{
+	margin-top: 30px;
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	 
+}
+.partnerlogo a{
+	background: rgba(18, 18, 18);
+	border: solid 1px var(--dark-mode);
+	border-radius: 0 20px 0 20px;
+	position: relative;
+	top: 0; left: 0; right: 0; bottom: 0;
+	display: flex;
+	height: 105px;
+	justify-content: center;
+}
+.partnerlogo a:hover{
+	background-color: rgba(255, 165, 0, 1.9);
+}
+.partnerlogo img{
+	width: 203px;
+    height: 100px;
+	margin: auto;	
+}
+@media screen and (max-width: 1140px){
+	.main_body{
+		width: 95%;
+	}
+}
