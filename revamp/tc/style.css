@@ -1,0 +1,40 @@
+.mainbody{
+	width: 70%;
+	margin: auto;
+	display: table;
+}
+.heading{
+	display: table-caption;
+	margin-top: 30px;
+	text-underline-offset: 8px
+}
+h1{
+	font-size: 50px;
+	padding-bottom: 50px;
+}
+.heading h2{
+	font-weight: 100;
+}
+.desc{
+	display: table-caption;
+	margin-top: 20px;
+	letter-spacing: normal;
+	word-wrap: normal;
+	word-spacing: 0.3rem;
+}
+@media screen and (max-width: 1140px){
+	.mainbody{
+		width: 95%;
+	}
+}
+@media screen and (max-width: 300px){
+	h1{
+	font-size: 30px;
+}
+.heading h2{
+	font-size: 10px;
+}
+.desc{
+	font-size: 12px;
+}
+}
