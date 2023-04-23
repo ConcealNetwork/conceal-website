@@ -144,21 +144,7 @@
 					</div>
 				</div>
 			</div> 
-			 		 
-			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
-				<div class="team card h-100">
-					<div class="team-img">
-						<img src="../images/teampage/ZeMaNel.png" alt="">
-					</div>
-					<h3 class="team-name">ZeMaNel</h3>
-					<span class="role">Cloud Operations</span>
-					<ul class="socials">
-						<li><a href="https://github.com/cryptomanel" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-					</ul>
-					<div class="tdesc"><p class="desc">I'm one of the early developers overviewing Conceal's infrastructure around all cloud operations. I've been in the IT industry since early 00's working closely with security and performance workloads of mission critical software.</p></div>
-				</div>
-			</div> 
-			 
+			 		 			 
 			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
 				<div class="team card h-100">
 					<div class="team-img">
@@ -197,7 +183,7 @@
 						<img src="../images/teampage/AxVultis.png" alt="">
 					</div>
 					<h3 class="team-name">AxVultis</h3>
-					<span class="role">Developer</span>
+					<span class="role">Lead Developer</span>
 					<ul class="socials">
 						<li><a href="https://github.com/AxVultis" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
 						<li><a href="https://twitter.com/AxVultis" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
@@ -240,41 +226,7 @@
 					<div class="tdesc"><p class="desc">I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.</p></div>
 				</div>
 			</div>  
-			 
-			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
-				<div class="team card h-100">
-					<div class="team-img">
-						<img src="../images/teampage/CrypTader.jpg" alt="">
-					</div>
-					<h3 class="team-name">CrypTader</h3>
-					<span class="role">Marketing</span>
-					<ul class="socials">
-						<li><a href="https://twitter.com/Cryp_Tader" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
-					</ul>
-					<div class="tdesc">
-						<p class="desc">My constant hunger for the truth and my curiosity to understand how the global financial system works due to my decade long experience in corporate finance led me to discover crypto in 2017. After years of reading and learning in the crypto-space I discovered Conceal Network in early 2021 and I instantly fell in love due to its strict adherence to fundamentally sound principles of cryptocurrencies.</p>
-					</div>
-				</div>
-			</div>  
-
-			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
-				<div class="team card h-100">
-					<div class="team-img">
-						<img src="../images/teampage/Overdrive.jpg" alt="">
-					</div>
-					<h3 class="team-name">Overdrive</h3>
-					<span class="role">Developer</span>
-					<ul class="socials">
-					<li><a href="https://github.com/Overdrive-on" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-					</ul>
-					<div class="tdesc">
-						<p class="desc">
-						I was interested in the conceal project ever since I first knew about it and one day I got an opportunity to work with the team. Conceal represents the very definition of privacy.I am a strong believer in privacy rights and I sincerely hope one day we can create a world where privacy is an undenied right.
-						</p>
-					</div>
-				</div>
-			</div>  
-			 	 
+			 			 	 
 		</div> 
 		<div class="row mb-5 aboutSection">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">

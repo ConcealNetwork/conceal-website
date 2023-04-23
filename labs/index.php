@@ -158,9 +158,58 @@
         </div>
         <div class="row mb-5" id="labsProjects">
         <div class="col-lg-12 mt-12 pl-lg-12" data-aos="fade-up" data-aos-delay="200">
-            <p>
-              Coming soon to a browser near you!
-            </p>
+          <h2 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">
+            Conceal-Assistant
+          </h2>  
+          <p>
+            Conceal-Assistant is an application made to help you oversee and manage your CCX-Box Node and Miner operations. It simply checks the status of the associated services and also allows you to easily deactivate or activate those services from any device.
+          </p>
+          <p>
+            The CCX-Box is a small form-factor PC that will run a Conceal Network Full-Node and Miner out of the box. Utilizing the Conceal-Assistant, this small dedicated Node can be managed remotely and will earn $CCX over time.  
+          </p>
+          <p>
+            <a href="https://github.com/Acktarius/conceal-assistant">
+              You can go the the github page for more info and for downloads by clicking on this url.  
+							<i class="fab fa-github"></i>
+						</a>            
+          </p>
+          <p>
+            <a href="data/conceal-assistant_info.pdf">
+              You can find more information about the product in this PDF.
+							<i class="fa-solid fa-file-pdf"></i>
+						</a>            
+          </p>
+          <h3 class="text-uppercase text-primary d-block mb-3" data-aos="fade-left" data-aos-delay="300">
+            How it looks...
+          </h3>  
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/ccxassistant/assistant_01.png" class="d-block w-80" alt="Assistant_01" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/ccxassistant/assistant_02.png" class="d-block w-80" alt="Assistant_02" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/ccxassistant/assistant_03.png" class="d-block w-80" alt="Assistant_03" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/ccxassistant/assistant_04.png" class="d-block w-80" alt="Assistant_04" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/ccxassistant/assistant_05.png" class="d-block w-80" alt="Assistant_05" />
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          
         </div>
         </div>
       </div><!-- .cointainer -->

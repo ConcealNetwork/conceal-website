@@ -328,7 +328,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Q2 2022, Conceal App - Version 3</h6> — Third release with Bridges and ID modules.
+									<h6>Web wallet improvements</h6> — Improving speed and making optimizations
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -338,7 +338,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Q3 2022, New Bridges</h6> — Bridges to Ergo and AVAX.
+									<h6>Web wallet encrypted messages</h6> — Bringing encrypted messages to client side web wallet
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -348,7 +348,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Q4 2022, Conceal App - Version 4</h6> — Fourth release with Explorer module.
+									<h6>Web wallet deposits</h6> — Bringing deposits to client side web wallet
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -358,7 +358,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Q4 2023, Conceal App - Version 5</h6> — Fifth release with Conceal Live module.
+									<h6>Multi-signature</h6> — Support for Multi-signature Wallets. Together with Colored coins it will allow for “Privacy Protected Assets” on CCX.
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -368,27 +368,17 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2023/2024, Colored Coins</h6> — Support for Coloured Coins on CCX, this is a step towards “Privacy Protected Assets”.
+									<h6>Colored Coins</h6> — Support for Coloured Coins on CCX, this is a step towards “Privacy Protected Assets”.
 								</span>
 								<div class="t-square"></div>
 							</div>
 						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>2023/2024, Multi-signature Wallets</h6> — Support for Multi-signature Wallets. Together with Colored coins it will allow for “Privacy Protected Assets” on CCX.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
+												
             <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2025/2026, Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
+									<h6>Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -398,7 +388,17 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2024/2025, Privacy-Preserving Stable Coin</h6> — On-chain Privacy-Preserving stable coin pegged to other digital stablecoins using cross-chain bridges.
+									<h6>Conceal App</h6> — Further development of Conceal App, to unite all features inside a single application
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6>Avax Bridge</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -408,7 +408,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2026/2027, Canceling Deposits</h6> — Option to cancel currently locked deposits but with penalties.
+									<h6>Ergo Bridge</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -418,7 +418,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>2027/2028, Stable Deposits</h6> — Deposits pegged to a stable asset, giving you peace of mind, while gaining interest.
+									<h6>SSL support for daemon</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -428,7 +428,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>TBA, Conceal Vault</h6>
+									<h6>Conceal Vault</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -438,7 +438,17 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>TBA, Hardware Wallet Support</h6>
+									<h6>C-Live update</h6>
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 inprog">
+								<span>
+									<h6> Hardware Wallet Support</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -453,17 +463,7 @@
 								<div class="t-square"></div>
 							</div>
 						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>TBA, Conceal Card</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
+												
 					</div>
 				</div>
 			</div>
