@@ -505,6 +505,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="majorLinks">
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
 					          <li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
+                    <li><a href="https://nonkyc.io/market/CCX_BTC">Buy on nonKYC with BTC</a></li>
+                    <li><a href="https://nonkyc.io/market/CCX_USDT">Buy on nonKYC with USDT</a></li>
+                    <li><a href="https://www.sevenseas.exchange/market/CCX-USDT">Buy on Seven Seas with USDT</a></li>
                 </ul>
            </div>
         <!-- #markets --></section>

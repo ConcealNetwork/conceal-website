@@ -127,23 +127,6 @@
 					</div>
 				</div>
 			</div> 
-
-			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
-				<div class="team card h-100">
-					<div class="team-img">
-						<img src="../images/teampage/Mr_Kwibs.png" alt="">
-					</div>
-					<h3 class="team-name">Mr_Kwibs</h3>
-					<span class="role">HEAD OF Marketing</span>
-					<ul class="socials">
-						<li><a href="https://twitter.com/Mr_Kwibs" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
-					</ul>
-					<div class="tdesc">
-						<p class="desc">Started my crypto adventure in 2017 and was sold to the idea of privacycoins immediately. I discovered Conceal in 2019 and got involved more & more over the years. In 2021 the team asked me to join their marketing team and ever since Im a part of this great adventure. 
-						</p>
-					</div>
-				</div>
-			</div> 
 			 		 			 
 			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
 				<div class="team card h-100">
