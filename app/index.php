@@ -26,15 +26,13 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../defi/">DeFi</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
-                <li><a href="../id/">ID</a></li>
+                <li><a href="../defi/">Earn</a></li>
+                <!--<li><a href="../id/">ID</a></li>-->
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
-                <li><a href="../clive/">C-LIVE</a></li>
                 <li class="active"><a href="#">Conceal APP</a></li>
-                <li><a href="../pay/">PAY</a></li>
+                <!-- <li><a href="../pay/">PAY</a></li>-->
                 <li class="cta"><a href="https://play.google.com/store/apps/details?id=app.conceal.hub"><span class="icon-android"></span> Android</a></li>
                 <li class="cta"><a href="https://github.com/ConcealNetwork/conceal-app/releases/latest"><span class="icon-windows"></span> Windows</a></li>
               </ul>
@@ -66,9 +64,9 @@
             </h2>
             <a href="https://play.google.com/store/apps/details?id=app.conceal.hub" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-android"></span><span>&nbsp;Android</span></a>
             <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-windows"></span><span>&nbsp;Windows</span></a>			  		
-			<a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-apple"></span><span>&nbsp;Mac</span></a>
-			<a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-linux"></span><span>&nbsp;Linux</span></a>
-			<a href="https://app.conceal.network/" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-cloud"></span><span>&nbsp;Web</span></a> 
+            <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-apple"></span><span>&nbsp;Mac</span></a>
+            <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-linux"></span><span>&nbsp;Linux</span></a>
+            <a href="https://app.conceal.network/" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-cloud"></span><span>&nbsp;Web</span></a> 
           </div>
         </div>
         <div class="downArrowWrapper">

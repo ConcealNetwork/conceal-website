@@ -671,7 +671,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="app/" >Conceal-App</a>
 					</li>
           			<li>
-						<a href="defi/" >Conceal-DeFi</a>
+						<a href="defi/" >Conceal-Earn</a>
 					</li>
 					<li>
 						<a href="https://wallet.conceal.network/" >Conceal-WebWallet</a>

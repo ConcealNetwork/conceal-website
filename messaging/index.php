@@ -26,7 +26,7 @@
           <div class="col-12 col-md-11 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="../defi/">DeFi</a></li>
+                <li><a href="../defi/">Earn</a></li>
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li class="active"><a href="#">MESSAGING</a></li>
