@@ -94,9 +94,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="app">Conceal-App</a></li>
-							<li><a href="features">Conceal-Earn</a></li>
-                            <li><a href="clive/">Conceal-Live</a></li>
-							<li><a href="messaging/">Conceal-Messaging</a></li>
+                            <li><a href="defi">Conceal-Earn</a></li>
+                            <li><a href="messaging/">Conceal-Messaging</a></li>
                             <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Conceal-Web</a></li>
                         </ul>
                     </li>
@@ -678,21 +677,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="https://wallet.conceal.network/" >Conceal-WebWallet</a>
 					</li>
 					<li>
-						<a href="id/" >Conceal-ID</a>
-					</li>
-					<li>
 						<a href="messaging/" >Conceal-Messaging</a>
 					</li>
 					<li>
 						<a href="mobile/" >Conceal-Mobile</a>
 					</li>
-					<li>
-						<a href="clive/" >Conceal-Live</a>
-					</li>
-					<li>
-						<a href="pay/" >Conceal-Pay</a>
-					</li>
-
 				</ul>
 			</div>
 
