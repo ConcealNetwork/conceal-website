@@ -27,12 +27,11 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="../defi/">Earn</a></li>
-                <li><a href="../id/">ID</a></li>
+                <!--<li><a href="../id/">ID</a></li>-->
                 <li><a href="../labs/">LABS</a></li>
                 <li class="active"><a href="#">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
                 <!--<li><a href="../pay/">PAY</a></li>-->
-                <li class="cta"><a href="../mobile/"><span class="icon-pencil"></span> MOBILE</a></li>
               </ul>
             </nav>
           </div>
