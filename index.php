@@ -437,7 +437,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <h3>Quick Start</h3>
                 <div class="codeBlocks">
                     <div>
-                        <h4>XMRStak</h4>
+                        <h4><a href="https://github.com/fireice-uk/xmr-stak/releases">XMRStak</a></h4>
                         <pre><code>"pool_list": [
   {
       "pool_address": "pool.conceal.network:3333",
@@ -451,11 +451,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
   },
 ],
 "currency": "cryptonight_gpu",</code></pre>
-                    </div><div>
-                        <h4>TeamRedMiner</h4>
-                        <pre>Pending support...</pre>
-                    </div><div>
-                        <h4>SRBMiner</h4>
+                    </div>
+                    <div>
+                        <h4><a href="https://github.com/CryptoDredge/miner/releases">CryptoDredge</a></h4>
+                        <pre>c:/cryptodredge/CryptoDredge.exe -a cngpu -o stratum+tcp://pool.conceal.network:3333 -u wallet_address -p WorkerName --api-type ccminer-tcp -b</pre>
+                    </div>
+                    <div>
+                        <h4><a href="https://github.com/Bendr0id/xmrigCC">XMRigCC</a></h4>
+                        <pre>xmrigDaemon --no-cpu -a cn/gpu -o pool:port -u wallet_address -p x -k --cc-url=127.0.0.1:3344 --cc-access-token=your_token --cc-worker-id=worker_name pause</pre>
+                    </div>
+                    <div>
+                        <h4><a href="https://www.srbminer.com/">SRBMiner</a></h4>
                         <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.network:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
                     </div>
                 <!-- .codeBlocks --></div>
