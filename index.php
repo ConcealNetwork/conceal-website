@@ -185,8 +185,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section>
             <div>
                 <h2>
-                    <span>Conceal</span>
-                    <span>.Network</span>
+                    <span>Conceal.Network</span>
                 </h2>
                 <p>Privacy-Protected De-Fi &amp; Encrypted Communications</p>
                 <ul class="majorLinks">
@@ -224,14 +223,19 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     >
                 </picture>
                 <p>
-                    Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
+                    Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.
                 </p>
                 <p>
-                    Conceal Network powers $CCX which is an open source, privacy-preserving digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
-                </p><p>
-                    Conceal Network is a community-driven and decentralized ecosystem accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate.
+                    Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.
                 </p>
-
+				<p>
+                    Conceal is censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
+                </p>
+				<p>
+                    Conceal is powered by open-source code, community-driven and truly decentralized. No one owns Conceal, everyone can take part.
+                </p>
+				
+				
                 <div class="iconSubsections">
                     <section>
                         <i class="fas fa-money-check-alt"></i>
