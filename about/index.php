@@ -27,7 +27,6 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="../defi/">De-Fi</a></li>
-                <li><a href="https://conceal.cloud">CLOUD</a></li>
                 <li><a href="../id/">ID</a></li>
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
@@ -104,15 +103,65 @@
       
           <div class="row">
               <div class="col-full">
-                  <h4 class="subhead subhead--dark" tkey="vision_title"  data-aos="fade-up">OUR VISION</h4>
+                  <h4 class="subhead subhead--dark" tkey="vision_title"  data-aos="fade-up">VISION</h4>
               </div>
           </div>
           <div class="row">
               <div class="col-full">
-                  <p tkey="vision_01" data-aos="fade-up">At Conceal, we believe that access to knowledge is what truly allows great ideas to flourish and diverse communities to grow.</p>
-                  <p tkey="vision_02" data-aos="fade-up">We believe that Conceal is what the community decides it to be and that decisions on how to grow the protocol should involve everyone.</p>
+                  <p tkey="vision_desc" data-aos="fade-up">Conceal ($CCX) envisions a future where privacy is not just a luxury but a fundamental human right, especially in the digital realm. Inspired by the Cypherpunk Manifesto, Conceal is dedicated to building anonymous systems and defending privacy with cryptography. We believe in empowering individuals with tools and technologies that enable them to protect their privacy, resist surveillance, and maintain control over their personal data.</p>
               </div>
           </div>
+          <div class="row">
+              <div class="col-full">
+                  <h4 class="subhead subhead--dark" tkey="mission_title"  data-aos="fade-up">MISSION</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <p tkey="mission_desc" data-aos="fade-up">Our mission is to provide individuals with a privacy-focused cryptocurrency that embodies the principles of the Cypherpunk movement. By leveraging advanced cryptographic techniques, Conceal ensures that every transaction is private, secure, and censorship-resistant. We aim to create a decentralized financial ecosystem where users have full control over their funds and can transact freely without fear of surveillance or interference.</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <h4 class="subhead subhead--dark" tkey="privacy_title"  data-aos="fade-up">PRIVACY BY DESIGN</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <p tkey="privacy_desc" data-aos="fade-up">Conceal's privacy design is rooted in the Cypherpunk ethos, focusing on anonymity, decentralization, and cryptographic privacy. With unique one-time addresses for each payment, Conceal ensures that transactions are unlinkable and untraceable, preserving user privacy in the digital age. Our use of ring signatures and cryptographic signatures further enhances privacy, making it virtually impossible for third parties to monitor or track transactions.</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <h4 class="subhead subhead--dark" tkey="community_title"  data-aos="fade-up">COMMUNITY & DEVELOPMENT</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <p tkey="community_desc" data-aos="fade-up">At the heart of Conceal is a vibrant and passionate community of individuals dedicated to preserving privacy and advancing the Cypherpunk agenda. Our developers are committed to writing code that defends privacy and empowers users, following the Cypherpunk tradition of publishing open-source software for the benefit of all. We believe in decentralization not just as a technical concept but as a social movement, where individuals come together to reclaim their privacy and freedom.</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <h4 class="subhead subhead--dark" tkey="decentralization_title"  data-aos="fade-up">DECENTRALIZATION & RESISTANCE</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <p tkey="decentralization_desc" data-aos="fade-up">Conceal is more than just a cryptocurrency; it's a symbol of resistance against centralized control and surveillance. With a decentralized network powered by blockchain technology, Conceal ensures that no single entity or authority can dictate the rules or monitor transactions. We stand firm in our commitment to decentralization and resistance, empowering individuals to take back control of their financial sovereignty.</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <h4 class="subhead subhead--dark" tkey="revolution_title"  data-aos="fade-up">JOIN THE PRIVACY REVOLUTION</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-full">
+                  <p tkey="revolution_desc" data-aos="fade-up">In a world where privacy is increasingly under threat, Conceal offers a beacon of hope for those who value freedom, anonymity, and privacy. Join us in our mission to build a more private and secure future, where individuals have the power to transact freely and privately, without fear of censorship or surveillance. Together, we can make privacy a reality in the digital age.</p>
+              </div>
+          </div>
+		  
 
         </section>
 
