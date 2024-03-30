@@ -73,10 +73,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="community/">Channels</a></li>
-						                <li><a href="labs/">Conceal-Labs</a></li>
                             <li><a href="#mining">Mining</a></li>
                             <li><a href="#partners">Partners</a></li>
-							               <li><a href="donate">Donate</a></li>
+							<li><a href="donate">Donate</a></li>
                         </ul>
                     </li>
 					<li>
@@ -84,8 +83,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Developers</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
+						    <li><a href="labs/">Conceal-Labs</a></li>
+							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Documentation</a></li>						
                             <li><a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">GitHub</a></li>
-							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Documentation</a></li>
                         </ul>
                     </li>
                     <li>
@@ -210,7 +210,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
         <section id="features">
             <div>
                 <h2>
-                    <span>What We\'re About</span>
+                    <span>What We\'re About?</span>
                     <span>Privacy</span>
                 </h2>
                 <picture>
@@ -222,21 +222,17 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     >
                 </picture>
                 <p>
-                    Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.
+                    Conceal provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.
                 </p>
                 <p>
                     Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.
                 </p>
 				<p>
-                    Conceal is censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
+                    Conceal is powered by open-source code, community-driven and truly decentralized. It\'s censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
                 </p>
 				<p>
-                    Conceal is powered by open-source code, community-driven and truly decentralized.
+                    No one owns Conceal, everyone can take part. <a href="about/"> Would you like to know more?</a>
                 </p>
-				<p>
-                    No one owns Conceal, everyone can take part. <a href="about/">Would you like to know more about it?</a>
-                </p>				
-				
 				
                 <div class="iconSubsections">
                     <section>
@@ -333,15 +329,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">Windows</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest" target="_blank" rel="noopener">Windows</a>
                     </li>
                     <li>
                         <i class="fab fa-ubuntu"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">Ubuntu/Linux</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest" target="_blank" rel="noopener">Ubuntu/Linux</a>
                     </li>
                     <li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest">MacOS</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest" target="_blank" rel="noopener">MacOS</a>
                     </li>
                 </ul>
                 <p>
@@ -351,15 +347,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">Windows</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest" target="_blank" rel="noopener">Windows</a>
                     </li>
                     <li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">Linux</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest" target="_blank" rel="noopener">Linux</a>
                     </li>
                     <li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest">MacOS</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest" target="_blank" rel="noopener">MacOS</a>
                     </li>
                 </ul>
                 <p>
@@ -370,15 +366,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>                        
                   <li>
                       <i class="fab fa-android"></i><br>
-                      <a href="https://github.com/ConcealNetwork/conceal-wallet-cordova/releases/latest">Android APK</a><br>
-                      <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile">
+                      <a href="https://github.com/ConcealNetwork/conceal-wallet-cordova/releases/latest" target="_blank" rel="noopener">Android APK</a><br>
+                      <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile" target="_blank" rel="noopener">
                          Google Play
                       </a>
 
                   </li>
                   <li>
                       <i class="fab fa-apple"></i><br>
-                      <a href="https://wallet.conceal.network/">iOS</a>
+                      <a href="https://wallet.conceal.network/" target="_blank" rel="noopener">iOS</a>
                   </li>
                 </ul>
                 <p>
@@ -388,23 +384,23 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Windows</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">Windows</a>
                     </li><li>
                         <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">Linux</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">Linux</a>
                     </li><li>
                         <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">MacOS</a>
+                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">MacOS</a>
                     </li><li>
                         <i class="fas fa-cloud"></i><br>
                         <a href="https://app.conceal.network">Web App</a>
                     </li>
                     </li><li>
                       <i class="fab fa-android"></i><br>
-                      <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest">
+                      <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">
                           Android APK
                       </a><br>
-                      <a href="https://play.google.com/store/apps/details?id=app.conceal.hub">
+                      <a href="https://play.google.com/store/apps/details?id=app.conceal.hub" target="_blank" rel="noopener">
                          Google Play
                       </a>
                   </li>
@@ -419,10 +415,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                   <ul>                        
                     <li>
                         <i class="fas fa-paper-plane"></i><br>
-                        <a href="https://conceal.network/paperwallet">Offline/Paper</a>
+                        <a href="https://conceal.network/paperwallet" target="_blank" rel="noopener">Offline/Paper</a>
                     </li><li>
                         <i class="fab fa-chrome"></i><br>
-                        <a href="https://wallet.conceal.network/">Web Wallet</a>
+                        <a href="https://wallet.conceal.network/" target="_blank" rel="noopener">Web Wallet</a>
                     </li>
                 </ul>
                 <p>
@@ -443,7 +439,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <h3>Quick Start</h3>
                 <div class="codeBlocks">
                     <div>
-                        <h4><a href="https://github.com/fireice-uk/xmr-stak/releases">XMRStak</a></h4>
+                        <h4><a href="https://github.com/fireice-uk/xmr-stak/releases" target="_blank" rel="noopener">XMRStak</a></h4>
                         <pre><code>"pool_list": [
   {
       "pool_address": "pool.conceal.network:3333",
@@ -459,21 +455,21 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 "currency": "cryptonight_gpu",</code></pre>
                     </div>
                     <div>
-                        <h4><a href="https://github.com/CryptoDredge/miner/releases">CryptoDredge</a></h4>
+                        <h4><a href="https://github.com/CryptoDredge/miner/releases" target="_blank" rel="noopener">CryptoDredge</a></h4>
                         <pre>c:/cryptodredge/CryptoDredge.exe -a cngpu -o stratum+tcp://pool.conceal.network:3333 -u wallet_address -p WorkerName --api-type ccminer-tcp -b</pre>
                     </div>
                     <div>
-                        <h4><a href="https://github.com/Bendr0id/xmrigCC">XMRigCC</a></h4>
+                        <h4><a href="https://github.com/Bendr0id/xmrigCC" target="_blank" rel="noopener">XMRigCC</a></h4>
                         <pre>xmrigDaemon --no-cpu -a cn/gpu -o pool:port -u wallet_address -p x -k --cc-url=127.0.0.1:3344 --cc-access-token=your_token --cc-worker-id=worker_name pause</pre>
                     </div>
                     <div>
-                        <h4><a href="https://www.srbminer.com/">SRBMiner</a></h4>
+                        <h4><a href="https://www.srbminer.com/" target="_blank" rel="noopener">SRBMiner</a></h4>
                         <pre><samp>SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.network:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5</samp></pre>
                     </div>
                 <!-- .codeBlocks --></div>
                 <p>
                     <span>The easiest way to get CCX is to mine with CPU or GPU using one of the miners that support CCX. Check out our</span>
-                    <a href="https://conceal.network/wiki/doku.php?id=mining">documentation</a>
+                    <a href="https://conceal.network/wiki/doku.php?id=mining" target="_blank" rel="noopener">documentation</a>
                     <span>for more detailed information about mining CCX.</span>
                 </p>
                 <div class="tableContain" id="poolsTable"><table>
@@ -514,11 +510,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Markets</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
-					<li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
-                    <li><a href="https://nonkyc.io/market/CCX_BTC">Buy on nonKYC with BTC</a></li>
-                    <li><a href="https://nonkyc.io/market/CCX_USDT">Buy on nonKYC with USDT</a></li>
-                    <li><a href="https://www.sevenseas.exchange/market/CCX-USDT">Buy on Seven Seas with USDT</a></li>
+                    <li><a href="https://tradeogre.com/exchange/BTC-CCX" target="_blank" rel="noopener">Buy on TradeOgre with BTC</a></li>
+					<li><a href="https://tradeogre.com/exchange/USDT-CCX" target="_blank" rel="noopener">Buy on TradeOgre with USDT</a></li>
+                    <li><a href="https://nonkyc.io/market/CCX_BTC" target="_blank" rel="noopener">Buy on nonKYC with BTC</a></li>
+                    <li><a href="https://nonkyc.io/market/CCX_USDT" target="_blank" rel="noopener">Buy on nonKYC with USDT</a></li>
+                    <li><a href="https://www.sevenseas.exchange/market/CCX-USDT" target="_blank" rel="noopener">Buy on Seven Seas with USDT</a></li>
                 </ul>
            </div>
         <!-- #markets --></section>
@@ -530,8 +526,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Polygon</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://app.sushi.com/">SushiSwap</a></li>
-                    <li><a href="https://app.uniswap.org/">Uniswap</a></li>
+                    <li><a href="https://app.sushi.com/" target="_blank" rel="noopener">SushiSwap</a></li>
+                    <li><a href="https://app.uniswap.org/" target="_blank" rel="noopener">Uniswap</a></li>
                 </ul>
             </div>
         <!-- #buyingwCCXBNB --></section>
@@ -543,9 +539,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Binance Smart Chain</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://1inch.exchange/#/wCCX/BNB">1Inch</a></li>
-                    <li><a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841">Pancakeswap</a></li>
-                    <li><a href="https://www.bakeryswap.org/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841">Bakeryswap</a></li>
+                    <li><a href="https://1inch.exchange/#/wCCX/BNB" target="_blank" rel="noopener">1Inch</a></li>
+                    <li><a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841" target="_blank" rel="noopener">Pancakeswap</a></li>
+                    <li><a href="https://www.bakeryswap.org/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841" target="_blank" rel="noopener">Bakeryswap</a></li>
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
                     <i class="fa fa-plus"></i>
@@ -560,8 +556,8 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Ethereum</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX">1Inch</a></li>
-                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4">Uniswap</a></li>
+                    <li><a href="https://1inch.exchange/#/r/0x9be82c0E5B75C53F32E63b40442E9dA8cCA06f21/ETH/wCCX" target="_blank" rel="noopener">1Inch</a></li>
+                    <li><a href="https://app.uniswap.org/#/swap?outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4" target="_blank" rel="noopener">Uniswap</a></li>
                 </ul>
                 <a href="https://conceal.network/community/#exchanges">
                     <i class="fa fa-plus"></i>
@@ -580,24 +576,24 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="partnerCards">
                     <li>
                       <picture>
-                        <a href="https://bpsaa.vision/"><img src="images/partners/BPSAA.png" alt="BPSAA"><br></a>
+                        <a href="https://bpsaa.vision/" target="_blank" rel="noopener"><img src="images/partners/BPSAA.png" alt="BPSAA"><br></a>
                       </picture>
                     </li>
                     <li>
                       <picture>
-                        <a href="https://ergoplatform.org"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
+                        <a href="https://ergoplatform.org" target="_blank" rel="noopener"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
                       </picture>
                     </li>
 				</ul><ul class="partnerCards">
 					<li>
                       <picture>
-                        <a href="https://crypto.com/price/conceal/"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
+                        <a href="https://crypto.com/price/conceal/" target="_blank" rel="noopener"><img src="images/partners/CRYPTO.png" alt="Crypto.com"><br></a>
                       </picture>
                     </li>
                 </ul><ul class="partnerCards">
 					<li>
                       <picture>
-                        <a href="https://cryptocurrencycheckout.com/"><img src="images/partners/cyprtocurrencycheckout.png" alt="cryptocurrencycheckout.com"><br></a>
+                        <a href="https://cryptocurrencycheckout.com/" target="_blank" rel="noopener"><img src="images/partners/cyprtocurrencycheckout.png" alt="cryptocurrencycheckout.com"><br></a>
                       </picture>
                     </li>
                 </ul>
@@ -611,7 +607,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					<span>Use our helpdesk</span>
 				</h2>
                 <ul class="majorLinks">
-                    <li><a href="https://conceal.network/support/" id="helpdeskButton"><span>Send Ticket</span></a></li>
+                    <li><a href="https://conceal.network/support/" id="helpdeskButton" target="_blank" rel="noopener"><span>Send Ticket</span></a></li>
                 </ul>
             </div>
         <!-- #helpdesk --></section>
@@ -643,29 +639,29 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="about/" >About</a>
 					</li>
 					<li>
-						<a href="https://bridge.conceal.network/" >Bridge</a>
+						<a href="https://bridge.conceal.network/" target="_blank" rel="noopener">Bridge</a>
 					</li>
 					<li>
-						<a href="https://conceal.network/wiki/doku.php" >Documentation</a>
+						<a href="https://conceal.network/wiki/doku.php" target="_blank" rel="noopener">Documentation</a>
 					</li>
 					<li>
-						<a href="https://explorer.conceal.network/" >Explorer</a>
+						<a href="https://explorer.conceal.network/" target="_blank" rel="noopener">Explorer</a>
 					</li>
 					<li>
 						<a href="community/#exchanges" >Exchanges</a>
 					</li>					
 					<li>
-						<a href="https://conceal.network/wiki/doku.php?id=FAQ" >FAQ</a>
+						<a href="https://conceal.network/wiki/doku.php?id=FAQ" target="_blank" rel="noopener">FAQ</a>
 					</li>
 					<li>
 						<a href="labs/" >Labs</a>
 					</li>
 
 					<li>
-						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" >wCCX</a>
+						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" target="_blank" rel="noopener">wCCX</a>
 					</li>
 					<li>
-						<a href="https://conceal.network/support/" >Support</a>
+						<a href="https://conceal.network/support/" target="_blank" rel="noopener">Support</a>
 					</li>
 					
 				</ul>
