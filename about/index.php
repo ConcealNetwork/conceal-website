@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>Conceal - Privacy-Preserving DeFi & Encrypted Communications</title>
+  <title>Conceal - Privacy-Protected DeFi & Encrypted Communications</title>
   <?php include '../landing/include/topjs.html';?>
 </head><body>
   <div id="loader-wrapper">
@@ -56,7 +56,7 @@
           <div class="col-md-10">
             <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">ABOUT CONCEAL</span>
             <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200">
-                Privacy-Preserving <strong>De-Fi</strong> &amp; Encrypted <strong>Communications</strong>
+                Privacy-Protected <strong>De-Fi</strong> &amp; Encrypted <strong>Communications</strong>
             </h1>
             <a href="#downArrowBtn" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-leanpub"></span><span> Learn More</span></a>
             <a href="../#wallets" class="btn-custom btnSignMain" data-aos="fade-up" data-aos-delay="400"><span class="icon-connectdevelop"></span><span> Use Conceal</span></a> 
@@ -78,7 +78,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <p>Our main goal is to provide a privacy framework for social inclusion through decentralization of financial services and communication.</p>
+            <p>Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.</p>
           </div>
         </div>
 
@@ -91,7 +91,6 @@
           </div>
           <div class="row">
             <div class="col-full">
-			  <p data-aos="fade-up">Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.</p>
               <p data-aos="fade-up">Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.</p>
               <p data-aos="fade-up">Conceal is censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.</p>
               <p data-aos="fade-up">Conceal is powered by open-source code, community-driven and truly decentralized.</p>
