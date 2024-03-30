@@ -59,9 +59,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="about/">What\'s Conceal?</a></li>
-							<li><a href="branding/">Branding</a></li>
-                            <li><a href="in-the-media/">Media</a></li>
-							<li><a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">News</a></li>
                             <li><a href="roadmap/">Roadmap</a></li>
 						    <li><a href="team/">Team</a></li>
 							<li><a href="https://conceal.network/wiki/doku.php?id=start" target="_blank" rel="noopener">Wiki</a></li>
@@ -83,6 +80,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Developers</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
+							<li><a href="branding/">Branding</a></li>
 						    <li><a href="labs/">Conceal-Labs</a></li>
 							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Documentation</a></li>						
                             <li><a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">GitHub</a></li>
@@ -90,12 +88,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li>
                     <li>
                         <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_apps">Features</label>
+                        <label for="toggle_apps">News</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-                            <li><a href="app">Conceal-App</a></li>
-                            <li><a href="defi">Conceal-Earn</a></li>
-                            <li><a href="messaging/">Conceal-Messaging</a></li>
+                            <li><a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">Official Medium</a></li>
+							<li><a href="in-the-media/">Other Media</a></li>
                         </ul>
                     </li>
                     <li>
@@ -103,10 +100,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Services</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
+							<li><a href="app">App</a></li>
                             <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Bridge</a></li>
                             <li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Explorer</a></li>
                             <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Web Wallet</a></li>
-                            <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Service Status</a></li>
                         </ul>
                     </li>
             		<li class="navStandalone"><a href="#wallets">Wallets</a></li>
@@ -221,18 +218,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         class="leadingPlate circularPlate"
                     >
                 </picture>
-                <p>
-                    Conceal provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.
-                </p>
-                <p>
-                    Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.
+                <p>                  
+					Conceal is a decentralized blockchain prioritizing privacy for De-Fi and encrypted communications. It provides protocol-level private transactions, blockchain deposits, and on-chain encrypted messages, all without relying on a central authority.
+				</p>
+				<p>
+					Powered by open-source code and driven by the community, Conceal\'s network is truly decentralized and resistant to censorship. It ensures accessibility for users worldwide, regardless of their location or status, while guaranteeing that all interactions, transactions, and messages remain private and untraceable.
                 </p>
 				<p>
-                    Conceal is powered by open-source code, community-driven and truly decentralized. It\'s censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
-                </p>
-				<p>
-                    No one owns Conceal, everyone can take part. <a href="about/"> Would you like to know more?</a>
-                </p>
+					No one owns Conceal, everyone can take part.
+				</p>
 				
                 <div class="iconSubsections">
                     <section>
