@@ -126,7 +126,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <span>Discord</span>
                         </a>
                     </li><li>
-                        <a href="https://t.me/concealnetworkusers" target="_blank" rel="noopener">
+                        <a href="https://t.me/concealcommunity" target="_blank" rel="noopener">
                             <i class="fab fa-telegram"></i>
                             <span>Telegram</span>
                         </a>
