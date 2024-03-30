@@ -91,12 +91,10 @@
           </div>
           <div class="row">
             <div class="col-full">
-			  <p data-aos="fade-up">Conceal provides the ability for individuals to communicate and financially interact with each other in an anonymous and decentralized manner.</p>
-              <p data-aos="fade-up">Conceal Network is a privacy-preserving network made for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without any involvement of third parties (institutions/organisations). These unique functionalities make it effortless for everyday users to manage their finances and communicate securely and privately.</p>
-              <p data-aos="fade-up">Conceal Cryptocurrency (₡CCX) is based on the well known Cryptonote protocol and runs on a secure peer-to-peer network technology to operate with no central authority. You control the private keys to your funds.</p>
-              <p data-aos="fade-up">Conceal is censorship resistant and accessible by anyone in the world regardless of their geographic location or status. All interactions, transactions and messages are untraceable.</p>
-              <p data-aos="fade-up">Conceal avoids many concerns, e.g. technological, environment impact, reputational and security, of Bitcoin, and provides a glimpse of the future.</p>
-              <p data-aos="fade-up">Conceal is powered by open-source code, it's a community-driven project and truly decentralized.</p>
+			  <p data-aos="fade-up">Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.</p>
+              <p data-aos="fade-up">Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.</p>
+              <p data-aos="fade-up">Conceal is censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.</p>
+              <p data-aos="fade-up">Conceal is powered by open-source code, community-driven and truly decentralized.</p>
               <p data-aos="fade-up">No one owns Conceal, everyone can take part.</p>
             </div>
           </div>
