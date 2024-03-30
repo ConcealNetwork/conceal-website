@@ -212,7 +212,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2>
                     <span>What We\'re About</span>
-                    <span>Innovation</span>
+                    <span>Privacy</span>
                 </h2>
                 <picture>
                     <source srcset="images/ecosystem.webp" type="image/webp">
@@ -232,8 +232,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     Conceal is censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
                 </p>
 				<p>
-                    Conceal is powered by open-source code, community-driven and truly decentralized. No one owns Conceal, everyone can take part.
+                    Conceal is powered by open-source code, community-driven and truly decentralized.
                 </p>
+				<p>
+                    No one owns Conceal, everyone can take part. <a href="about/">Would you like to know more about it?</a>
+                </p>				
 				
 				
                 <div class="iconSubsections">
