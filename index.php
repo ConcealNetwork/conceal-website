@@ -515,7 +515,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 </h2>
                 <ul class="majorLinks">
                     <li><a href="https://tradeogre.com/exchange/BTC-CCX">Buy on TradeOgre with BTC</a></li>
-					          <li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
+					<li><a href="https://tradeogre.com/exchange/USDT-CCX">Buy on TradeOgre with USDT</a></li>
                     <li><a href="https://nonkyc.io/market/CCX_BTC">Buy on nonKYC with BTC</a></li>
                     <li><a href="https://nonkyc.io/market/CCX_USDT">Buy on nonKYC with USDT</a></li>
                     <li><a href="https://www.sevenseas.exchange/market/CCX-USDT">Buy on Seven Seas with USDT</a></li>
@@ -664,7 +664,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" >wCCX</a>
 					</li>
 					<li>
-						<a href="https://status.conceal.network/" >Network Status</a>
+						<a href="https://conceal.network/support/" >Contact</a>
 					</li>
 					
 				</ul>
@@ -750,12 +750,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 		 		</ul>
 		 	</div>
 		</div>
-		
-		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
-			<span>Official E-Mail Address:</span>
-            <a href="mailto:hello@conceal.network">hello@conceal.network</a>
-		</div>
-		
 		<div class="footerelm" data-aos="fade-up" data-aos-delay="100">
 			<span class="url_terms"><a href="tc/index.html">T&amp;C</a></span>
 			<div class="vl"></div>
