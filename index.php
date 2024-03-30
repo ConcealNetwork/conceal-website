@@ -221,17 +221,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         class="leadingPlate circularPlate"
                     >
                 </picture>
-                <p>
-                    Conceal provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.
+                <p>                  
+					Conceal is a decentralized network prioritizing privacy for De-Fi and encrypted communications. It provides protocol-level private transactions, blockchain deposits, and on-chain encrypted messages, all without relying on a central authority. Powered by open-source code and driven by the community, Conceal is truly decentralized and resistant to censorship. It ensures accessibility for users worldwide, regardless of their location or status, while guaranteeing that all interactions, transactions, and messages remain private and untraceable.
                 </p>
-                <p>
-                    Conceal is a decentralized privacy-protected network designed for De-Fi and encrypted communications. It offers protocol-level private transactions, blockchain deposits and on-chain encrypted messages without a central authority.
-                </p>
-				<p>
-                    Conceal is powered by open-source code, community-driven and truly decentralized. It\'s censorship-resistant and accessible by anyone regardless of their geographic location or status. All interactions, transactions and messages are private and untraceable.
-                </p>
-				<p>
-                    No one owns Conceal, everyone can take part. <a href="about/"> Would you like to know more?</a>
+					No one owns Conceal, everyone can take part. <a href="about/">  Click here for full specifications.</a>
                 </p>
 				
                 <div class="iconSubsections">
