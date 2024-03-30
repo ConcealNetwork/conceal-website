@@ -110,7 +110,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         </ul>
                     </li>
             		<li class="navStandalone"><a href="#wallets">Wallets</a></li>
-					<li class="navStandalone"><a href="https://conceal.network/support" target="_blank" rel="noopener">Support</a></li>
+					<li class="navStandalone"><a href="https://conceal.network/support" target="_blank" rel="noopener">Contact</a></li>
                 </ul>
 				
                 <ul id="socialMenu">
@@ -643,28 +643,29 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 						<a href="about/" >About</a>
 					</li>
 					<li>
+						<a href="https://bridge.conceal.network/" >Bridge</a>
+					</li>
+					<li>
 						<a href="https://conceal.network/wiki/doku.php" >Documentation</a>
 					</li>
 					<li>
 						<a href="https://explorer.conceal.network/" >Explorer</a>
 					</li>
 					<li>
-						<a href="https://conceal.network/wiki/doku.php?id=FAQ" >FAQ</a>
-					</li>
+						<a href="community/#exchanges" >Exchanges</a>
+					</li>					
 					<li>
-						<a href="https://conceal.network/support/" >Support</a>
+						<a href="https://conceal.network/wiki/doku.php?id=FAQ" >FAQ</a>
 					</li>
 					<li>
 						<a href="labs/" >Labs</a>
 					</li>
-					<li>
-						<a href="community/#exchanges" >Exchanges</a>
-					</li>
+
 					<li>
 						<a href="https://conceal.network/wiki/doku.php?id=wrapped-conceal" >wCCX</a>
 					</li>
 					<li>
-						<a href="https://conceal.network/support/" >Contact</a>
+						<a href="https://conceal.network/support/" >Support</a>
 					</li>
 					
 				</ul>
