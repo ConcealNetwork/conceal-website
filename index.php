@@ -73,7 +73,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_submenusOff"></label>
                         <ul>
                             <li><a href="community/">Channels</a></li>
-						                <li><a href="labs/">Conceal-Labs</a></li>
                             <li><a href="#mining">Mining</a></li>
                             <li><a href="#partners">Partners</a></li>
 							               <li><a href="donate">Donate</a></li>
@@ -84,8 +83,9 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_info">Developers</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
+						    <li><a href="labs/">Conceal-Labs</a></li>
+							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Documentation</a></li>						
                             <li><a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">GitHub</a></li>
-							<li><a href="https://github.com/ConcealNetwork/conceal-core/wiki" target="_blank" rel="noopener">Documentation</a></li>
                         </ul>
                     </li>
                     <li>
