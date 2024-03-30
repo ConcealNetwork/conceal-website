@@ -700,7 +700,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 								<i class="fab fa-discord"></i>
 							</a>
 						</li><li>
-							<a href="https://t.me/concealnetworkusers">
+							<a href="https://t.me/concealcommunity">
 								Telegram
 								<i class="fab fa-telegram"></i>
 							</a>
