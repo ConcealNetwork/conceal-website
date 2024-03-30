@@ -104,7 +104,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Bridge</a></li>
                             <li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Explorer</a></li>
                             <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Web Wallet</a></li>
-                            <li><a href="https://status.conceal.network/" target="_blank" rel="noopener">Service Status</a></li>
                         </ul>
                     </li>
             		<li class="navStandalone"><a href="#wallets">Wallets</a></li>
