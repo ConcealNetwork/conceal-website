@@ -97,7 +97,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     </li>
                     <li>
                         <input type="radio" id="toggle_apps" name="toggle_submenu" class="toggle" hidden>
-                        <label for="toggle_apps">Services</label>
+                        <label for="toggle_apps">Tools</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
 							<li><a href="app">App</a></li>
