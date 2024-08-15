@@ -570,11 +570,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <ul class="partnerCards">
                     <li>
                       <picture>
-                        <a href="https://bpsaa.vision/" target="_blank" rel="noopener"><img src="images/partners/BPSAA.png" alt="BPSAA"><br></a>
-                      </picture>
-                    </li>
-                    <li>
-                      <picture>
                         <a href="https://ergoplatform.org" target="_blank" rel="noopener"><img src="images/partners/ERGO.png" alt="ERGO"><br></a>
                       </picture>
                     </li>
