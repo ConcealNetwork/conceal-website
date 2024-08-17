@@ -85,7 +85,7 @@
 					<span class="role">HEAD OF OPERATIONS</span>
 					<ul class="socials">
 						<li><a href="https://github.com/krypt0x" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-						<li><a href="https://twitter.com/Krypt0xChaos" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/Krypt0xChaos" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc">
 						<p class="desc">I'm co-founder of Conceal Community. I'm curious about cryptography and privacy-enhancing techniques. I have been working on IT for more than two decades and became involved with blockchain technology early in its inception. My mission is to empower organizations with a culture of privacy-protection.
@@ -103,7 +103,7 @@
 					<span class="role">Head of Development</span>
 					<ul class="socials">
 						<li><a href="https://github.com/taeguscromis" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-						<li><a href="https://twitter.com/Taegus1" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/Taegus1" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc">
 						<p class="desc">I got involved with crypto in 2018. Came for the money, and stayed for the vision of Satoshi. You could say I am a true believer now. Found out about Conceal in 2019 and instantly fell in love with it. I have been helping ever since.Other than that I have finished university for computer science and have over 20 years of development experience. My passion now is advocating decentralization and privacy.
@@ -121,7 +121,7 @@
 					<span class="role">HEAD OF BUSINESS DEVELOPMENT</span>
 					<span class="role">HEAD OF Community</span>
 					<ul class="socials">
-						<li><a href="https://twitter.com/CryptoLolli" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/CryptoLolli" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc"><p class="desc">A lover of Freedom and Privacy, interested in Cryptography, and perfectly Anonymous. Discovering Conceal in early 2019 I was blown away by the Vision and 	the Adherence to the Core Principles found in the Satoshi Nakamoto whitepaper, and I've been here ever since. I'm on a personal mission to see Privacy become a normal part of everyone's 	    daily life!</p>
 					</div>
@@ -169,7 +169,7 @@
 					<span class="role">Lead Developer</span>
 					<ul class="socials">
 						<li><a href="https://github.com/AxVultis" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-						<li><a href="https://twitter.com/AxVultis" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/AxVultis" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc">
 						<p class="desc">I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.
@@ -181,13 +181,13 @@
 			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
 				<div class="team card h-100">
 					<div class="team-img">
-						<img src="../images/teampage/cartoonface.jpg" alt="">
+						<img src="../images/teampage/Acktarius.png" alt="">
 					</div>
-					<h3 class="team-name">CartoonFace</h3>
+					<h3 class="team-name">Acktarius</h3>
 					<span class="role">Developer</span>
 					<ul class="socials">
-						<li><a href="https://github.com/cartoon-face" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
-						<li><a href="https://twitter.com/CartoonFace_Dev" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://github.com/Acktarius" class="fab fa-github" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/xchaps" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc">
 						<p class="desc">An anonymous figure who isn't afraid to voice his opinion.</p>
@@ -204,12 +204,26 @@
 					<h3 class="team-name">Mannan</h3>
 					<span class="role">Community Manager</span>
 					<ul class="socials">
-						<li><a href="https://twitter.com/CryptolordTG" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+						<li><a href="https://x.com/CryptolordTG" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc"><p class="desc">I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.</p></div>
 				</div>
 			</div>  
 			 			 	 
+			<div class="column pb-5" data-aos="fade-up" data-aos-delay="400">
+				<div class="team card h-100">
+					<div class="team-img">
+						<img src="../images/teampage/Giomarx7.jpg" alt="">
+					</div>
+					<h3 class="team-name">Giomarx7</h3>
+					<span class="role">Community department</span>
+					<ul class="socials">
+						<li><a href="https://x.com/Giomarx7" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
+					</ul>
+					<div class="tdesc"><p class="desc">I started mining crypto in late 2016, did it mainly for the money but as I became more curious about the technology, I was eager to learn more, in 2018 I've found out about Conceal, this was a purpose worth fighting for, joined the team in 2024. Technology can enslave you, but it can also give you freedom and privacy #Conceal..</p></div>
+				</div>
+			</div>  
+
 		</div> 
 		<div class="row mb-5 aboutSection">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -222,10 +236,10 @@
               The Conceal Team is a group of dedicated Volunteers from the Community who have committed time and energy into managing the Development, Marketing, and Community Building efforts of the Conceal Network.
             </p>			  
             <p>
-			  Conceal Team members operate as a DAO, or Decentralized Autonomous Organization, and each member will take on tasks that He or She can specialize in, voluntarily and without the presence of any third party or legal body. In order to further organize the day to day operations of our DAO, the Team has created Divisions with separate responsibilities so that members can further specialize in the overall development and growth of the network.
+              Conceal Team members operate as a DAO, or Decentralized Autonomous Organization, and each member will take on tasks that He or She can specialize in, voluntarily and without the presence of any third party or legal body. In order to further organize the day to day operations of our DAO, the Team has created Divisions with separate responsibilities so that members can further specialize in the overall development and growth of the network.
             </p>
-			<p>
-			  Conceal Team members are from all four corners of the world and are spread out around many varied geographical locations! This means that organizing events and other types of online gatherings can be tricky, but not impossible. Anyone can join as long as they are willing to commit more time into the Conceal ecosystem and have the necessary skill to help make it succeed!
+            <p>
+              Conceal Team members are from all four corners of the world and are spread out around many varied geographical locations! This means that organizing events and other types of online gatherings can be tricky, but not impossible. Anyone can join as long as they are willing to commit more time into the Conceal ecosystem and have the necessary skill to help make it succeed!
             </p>    
           </div>
         </div>    	  
