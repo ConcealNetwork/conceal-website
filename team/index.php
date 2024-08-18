@@ -118,10 +118,8 @@
 						<img src="../images/teampage/LolitaLollipop.png" alt="">
 					</div>
 					<h3 class="team-name">LolitaLollipop</h3>
-					<span class="role">HEAD OF BUSINESS DEVELOPMENT</span>
 					<span class="role">HEAD OF Community</span>
 					<ul class="socials">
-						<li><a href="https://x.com/CryptoLolli" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc"><p class="desc">A lover of Freedom and Privacy, interested in Cryptography, and perfectly Anonymous. Discovering Conceal in early 2019 I was blown away by the Vision and 	the Adherence to the Core Principles found in the Satoshi Nakamoto whitepaper, and I've been here ever since. I'm on a personal mission to see Privacy become a normal part of everyone's 	    daily life!</p>
 					</div>
@@ -190,8 +188,7 @@
 						<li><a href="https://x.com/xchaps" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
 					<div class="tdesc">
-						<p class="desc">An anonymous figure who isn't afraid to voice his opinion.</p>
-						<p class="desc">Since discovering Conceal, I knew I had to be apart of it. Its my mission to get people to convert from traditional banking to blockchain banking. Its your money, be in control.</p>
+						<p class="desc">I came late to the cryptocurrency world and joined Conceal mid 2021, having a very keen interest for its unique privacy features. I ‘m very excited to bring my experience as R&D engineer and time spent programming as a hobby, to this community of talented, discreet, passionate and dedicated people.</p>
 					</div>
 				</div>
 			</div> 
@@ -216,7 +213,7 @@
 						<img src="../images/teampage/Giomarx7.jpg" alt="">
 					</div>
 					<h3 class="team-name">Giomarx7</h3>
-					<span class="role">Community department</span>
+					<span class="role">Community Manager</span>
 					<ul class="socials">
 						<li><a href="https://x.com/Giomarx7" class="fab fa-twitter" target="_blank" rel="noopener noreferrer"></a></li>
 					</ul>
