@@ -27,10 +27,10 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="active"><a href="#">De-Fi</a></li>
-                <li><a href="../id/">ID</a></li>
+                <!--<li><a href="../id/">ID</a></li>-->
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
-                <li><a href="../mobile/">MOBILE</a></li>
+                <!--<li><a href="../mobile/">MOBILE</a></li>-->
                 <!--<li><a href="../pay/">PAY</a></li>-->
                 <li class="cta"><a href="../#wallets"><span class="icon-desktop"></span> DOWNLOAD</a></li>
                 <!--<li class="cta"><a href="../mobile/"><span class="icon-pencil"></span> MOBILE</a></li>

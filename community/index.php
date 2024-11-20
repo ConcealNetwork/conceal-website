@@ -29,7 +29,7 @@
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="../defi/">DeFi</a></li>
                 <li><a href="https://wallet.conceal.network">WebWallet</a></li>
-                <li><a href="../id/">ID</a></li>
+                <!--<li><a href="../id/">ID</a></li>-->
                 <li><a href="../labs/">LABS</a></li>
                 <li><a href="../messaging/">MESSAGING</a></li>
                 <li><a href="../mobile/">MOBILE</a></li>
