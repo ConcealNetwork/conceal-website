@@ -279,7 +279,13 @@ h1 {
 	line-height:1.1em;
 	font-weight:normal;
 }
-
+@media (max-width:480px) {
+	#top h2 {
+		font-size:2.3rem;
+		line-height:1.1rem;
+		font-weight:normal;
+	}
+}
 #top h2 span {
 	font-weight:bold;
 }

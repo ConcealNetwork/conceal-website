@@ -100,7 +100,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <label for="toggle_apps">Tools</label>
                         <label for="toggle_submenusOff"></label>
                         <ul>
-							<li><a href="app">App</a></li>
                             <li><a href="https://bridge.conceal.network" target="_blank" rel="noopener">Bridge</a></li>
                             <li><a href="https://explorer.conceal.network" target="_blank" rel="noopener">Explorer</a></li>
                             <li><a href="https://wallet.conceal.network" target="_blank" rel="noopener">Web Wallet</a></li>
@@ -139,11 +138,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
-                    </li><li>
-                        <a href="https://www.reddit.com/r/ConcealNetwork/" target="_blank" rel="noopener">
-                            <i class="fab fa-reddit"></i>
-                            <span>Reddit</span>
-                        </a>
                     </li><li>
                         <a href="https://www.facebook.com/concealnetwork/" target="_blank" rel="noopener">
                             <i class="fab fa-facebook"></i>
@@ -374,35 +368,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                 <p>
                     Conceal-Mobile is a wrapped version of our web wallet.
                 </p> 
-                <h3 class="text-center wallet-subheader">Conceal App | All-in-One app (beta)</h3>
-                <ul>
-                    <li>
-                        <i class="fab fa-windows"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">Windows</a>
-                    </li><li>
-                        <i class="fab fa-linux"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">Linux</a>
-                    </li><li>
-                        <i class="fab fa-apple"></i><br>
-                        <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">MacOS</a>
-                    </li><li>
-                        <i class="fas fa-cloud"></i><br>
-                        <a href="https://app.conceal.network">Web App</a>
-                    </li>
-                    </li><li>
-                      <i class="fab fa-android"></i><br>
-                      <a href="https://github.com/ConcealNetwork/conceal-app/releases/latest" target="_blank" rel="noopener">
-                          Android APK
-                      </a><br>
-                      <a href="https://play.google.com/store/apps/details?id=app.conceal.hub" target="_blank" rel="noopener">
-                         Google Play
-                      </a>
-                  </li>
-                </ul>
-                <p>
-                    Conceal App is the convergence of all Conceal functionalities and modules brought together in one simple and visually stuning app for the end user.
-                </p>
-                
 				  
 				  
                 <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
@@ -665,9 +630,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					<li>
 						<a href="https://bridge.conceal.network/" >Conceal-Bridge</a>
 					</li>
-      				<li>
-						<a href="app/" >Conceal-App</a>
-					</li>
           			<li>
 						<a href="defi/" >Conceal-Earn</a>
 					</li>
@@ -676,9 +638,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 					</li>
 					<li>
 						<a href="messaging/" >Conceal-Messaging</a>
-					</li>
-					<li>
-						<a href="mobile/" >Conceal-Mobile</a>
 					</li>
 				</ul>
 			</div>
@@ -710,11 +669,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<a href="https://medium.com/@ConcealNetwork">
 								Medium
 								<i class="fab fa-medium"></i>
-							</a>
-						</li><li>
-							<a href="https://www.reddit.com/r/ConcealNetwork/">
-								Reddit
-								<i class="fab fa-reddit"></i>
 							</a>
 						</li><li>
 							<a href="https://www.facebook.com/concealnetwork/">
