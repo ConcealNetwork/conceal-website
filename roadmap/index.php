@@ -251,7 +251,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 completed">
 								<span>
-									<h6>Q4 2020, Cloud &#38; Mobile Self-destructing Messages</h6> — Send messages to other users that self destruct after given time on Cloud wallets!
+									<h6>Q4 2020, Cloud &#38; Mobile Self-destructing Messages</h6> — Send messages to other users that self destruct after given time on Cloud wallets! (service retired)
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -271,7 +271,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 completed">
 								<span>
-									<h6>Q2 2021, CONCEAL LIVE</h6> — Decentralized p2p and end to end encrypted platform for video / audio calls and messages.
+									<h6>Q2 2021, CONCEAL LIVE</h6> — Decentralized p2p and end to end encrypted platform for video / audio calls and messages. (service retired)
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -306,6 +306,47 @@
 								<div class="t-square"></div>
 							</div>
 						</div>
+						
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 completed">
+								<span>
+									<h6>Q3 2023, Web wallet improvements</h6> — Improving speed and making optimizations. Now send encrypted Messages from your smartphone
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+
+
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 completed">
+								<span>
+									<h6>Q3 2024, Web wallet improvements</h6> — Improving anonymity by randomly picking nodes from a bigger list, now accessing SSL SmartNodes.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 completed">
+								<span>
+									<h6>Q3 2024, Conceal Marketplace</h6> —  A great place to interact with other Concealers, Buy, Sell in a peer 2 peer way trading with your CCX !
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
+
+						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
+							<div class="timeline-blank"></div>
+							<div class="timeline-text d-flex-2 completed">
+								<span>
+									<h6>Q4 2024, Web wallet improvements</h6> — Now available in 14 languages. Access Deposits (view-only). Use qr code scanning feature to send messages. Get notified of new messages.
+								</span>
+								<div class="t-square"></div>
+							</div>
+						</div>
 
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
@@ -324,26 +365,7 @@
 							</div>
 						</div>
 
-            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Web wallet improvements</h6> — Improving speed and making optimizations
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-            
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Web wallet encrypted messages</h6> — Bringing encrypted messages to client side web wallet
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
+            			
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
@@ -358,7 +380,7 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Multi-signature</h6> — Support for Multi-signature Wallets. Together with Colored coins it will allow for “Privacy Protected Assets” on CCX.
+									<h6>Web wallet 3.0</h6> — Enhancing user experience with new rendering technologies
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -368,47 +390,19 @@
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
-									<h6>Colored Coins</h6> — Support for Coloured Coins on CCX, this is a step towards “Privacy Protected Assets”.
+									<h6>Atomic Swaps</h6> — Allowing you to exchange CCX with other blockchain tokens
 								</span>
 								<div class="t-square"></div>
 							</div>
 						</div>
-												
-            <div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Privacy Protected Assets</h6> — Allow users to create “Privacy Protected Assets” on CCX chain.
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-            
+						
+						
+            			<!--
 						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
 							<div class="timeline-blank"></div>
 							<div class="timeline-text d-flex-2 inprog">
 								<span>
 									<h6>Conceal App</h6> — Further development of Conceal App, to unite all features inside a single application
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Avax Bridge</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Ergo Bridge</h6>
 								</span>
 								<div class="t-square"></div>
 							</div>
@@ -423,46 +417,7 @@
 								<div class="t-square"></div>
 							</div>
 						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>Conceal Vault</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>C-Live update</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6> Hardware Wallet Support</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
-						
-						<div class="single-timeline d-flex-2" data-aos="fade-down" data-aos-delay="200">
-							<div class="timeline-blank"></div>
-							<div class="timeline-text d-flex-2 inprog">
-								<span>
-									<h6>TBA, Distributed API Layer</h6>
-								</span>
-								<div class="t-square"></div>
-							</div>
-						</div>
+						-->						
 												
 					</div>
 				</div>
