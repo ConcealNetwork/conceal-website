@@ -130,32 +130,13 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-twitter"></i>
                             <span>Twitter</span></a>
                     </li><li>
-                    	<a href="https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw" target="_blank" rel="noopener">
-							<i class="fab fa-youtube"></i>
-							<span>Youtube</span>
-                    </a>
-                	</li><li>
                         <a href="https://concealnetwork.medium.com/" target="_blank" rel="noopener">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
                     </li><li>
-                        <a href="https://www.facebook.com/concealnetwork/" target="_blank" rel="noopener">
-                            <i class="fab fa-facebook"></i>
-                            <span>Facebook</span></a>
-                    </li><li>
                         <a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
                             <span>Github</span>
-                        </a>
-                    </li><li>
-                        <a href="https://bitcointalk.org/index.php?topic=5086106" target="_blank" rel="noopener">
-                            <i class="fab fa-bitcoin"></i>
-                            <span>BitcoinTalk</span>
-                        </a>
-                    </li><li>
-                        <a href="https://bridge.conceal.network" target="_blank" rel="noopener">
-                            <i class="fas fa-archway"></i>
-                            <span>Bridge</span>
                         </a>
                     </li>
                 <!-- #mainMenu --></ul>
