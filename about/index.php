@@ -78,7 +78,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-8 pl-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <p>Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privetaly, anonymous and decentralized manner.</p>
+            <p>Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privately, anonymous and decentralized manner.</p>
           </div>
         </div>
 
