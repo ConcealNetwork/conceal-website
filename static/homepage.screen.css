@@ -676,7 +676,7 @@ main > section p {
 }
 
 #wallets ul i {
-	font-size:5em;
+	font-size:4em;
 	color:#FFF;
 	margin-bottom:0.4em;
 }
@@ -701,6 +701,10 @@ main > section p {
 	border-color:#FFF;
 	background:#FA0;
 	color:#000;
+}
+
+#wallets h3:not(:first-child) {
+	margin-top: 2em;
 }
 
 #mining > div {

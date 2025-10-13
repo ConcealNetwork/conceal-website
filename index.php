@@ -134,6 +134,11 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <i class="fab fa-medium"></i>
                             <span>Medium</span></a>
                     </li><li>
+                    </li><li>
+                        <a href="https://concealnetwork.substack.com/" target="_blank" rel="noopener">
+                            <svg role="img" style="height: 16px; width: 16px;" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" stroke-width="1.8" stroke="none" xmlns="http://www.w3.org/2000/svg"><g><title></title><path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none"></path><path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none"></path><path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z" stroke="none"></path></g></svg>
+                            <span>Substack</span></a>
+                    </li><li>
                         <a href="https://github.com/ConcealNetwork" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
                             <span>Github</span>
@@ -295,6 +300,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
             <div>
                 <h2><span>Using Conceal</span> <span>Wallets</span></h2>
                 <h3 class="text-center wallet-subheader">Conceal-Desktop | Full-Node Graphical Wallet</h3>
+                <p>
+                    Conceal-Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
+                </p>
+                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -309,10 +318,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://github.com/ConcealNetwork/conceal-desktop/releases/latest" target="_blank" rel="noopener">MacOS</a>
                     </li>
                 </ul>
-                <p>
-                    Conceal-Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
-                </p>
                 <h3 class="text-center wallet-subheader">Conceal-Core | Full-Node Command Line Wallet</h3>
+                <p>
+                    Conceal-Core is the heart of our peer-to-peer privacy-preserving network. It\'s a full local node of our network. 
+                </p>
                 <ul>
                     <li>
                         <i class="fab fa-windows"></i><br>
@@ -327,17 +336,15 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <a href="https://github.com/ConcealNetwork/conceal-core/releases/latest" target="_blank" rel="noopener">MacOS</a>
                     </li>
                 </ul>
-                <p>
-                    Conceal-Core is the heart of our peer-to-peer privacy-preserving network. It\'s a full local node of our network. 
-                </p>
+                
 				
                 <h3 class="text-center wallet-subheader">Conceal-Mobile | Lite Wallet</h3>
                 <ul>                        
                   <li>
                       <i class="fab fa-android"></i><br>
                       <a href="https://github.com/ConcealNetwork/conceal-wallet-cordova/releases/latest" target="_blank" rel="noopener">Android APK</a><br>
-                      <a href="https://play.google.com/store/apps/details?id=com.ConcealNetwork.ConcealMobile" target="_blank" rel="noopener">
-                         Google Play
+                      <a href="https://f-droid.org/packages/com.concealnetwork.concealmobile/" target="_blank" rel="noopener">
+                         F-Droid
                       </a>
 
                   </li>
@@ -352,6 +359,10 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 				  
 				  
                 <h3 class="text-center wallet-subheader">Other Wallet Types</h3>
+                <p>
+                  Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
+                </p>                
+                <img src="images/webwallet.png" alt="Conceal Web Wallet" class="plate">
                   <ul>                        
                     <li>
                         <i class="fas fa-paper-plane"></i><br>
@@ -360,11 +371,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                         <i class="fab fa-chrome"></i><br>
                         <a href="https://wallet.conceal.network/" target="_blank" rel="noopener">Web Wallet</a>
                     </li>
-                </ul>
-                <p>
-                  Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely Client-Side, stores your encrypted wallet keys on your device, and is the perfect lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key generation tools.
-                </p>                
-                <img src="images/newgui.png" alt="Conceal GUI" class="plate">
+                  </ul>
             </div>
         <!-- #wallets --></section>
 
@@ -450,8 +457,6 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                     <span>Markets</span>
                 </h2>
                 <ul class="majorLinks">
-                    <li><a href="https://tradeogre.com/exchange/BTC-CCX" target="_blank" rel="noopener">Buy on TradeOgre with BTC</a></li>
-					<li><a href="https://tradeogre.com/exchange/USDT-CCX" target="_blank" rel="noopener">Buy on TradeOgre with USDT</a></li>
                     <li><a href="https://nonkyc.io/market/CCX_BTC" target="_blank" rel="noopener">Buy on nonKYC with BTC</a></li>
                     <li><a href="https://nonkyc.io/market/CCX_USDT" target="_blank" rel="noopener">Buy on nonKYC with USDT</a></li>
                     <li><a href="https://www.sevenseas.exchange/market/CCX-USDT" target="_blank" rel="noopener">Buy on Seven Seas with USDT</a></li>
@@ -650,6 +655,12 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							<a href="https://medium.com/@ConcealNetwork">
 								Medium
 								<i class="fab fa-medium"></i>
+							</a>
+						</li><li>
+                        </li><li>
+							<a href="https://concealnetwork.substack.com/">
+								Substack
+								<svg role="img" style="height: 16px; width: 16px;" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" stroke-width="1.8" stroke="none" xmlns="http://www.w3.org/2000/svg"><g><title></title><path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none"></path><path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none"></path><path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z" stroke="none"></path></g></svg>
 							</a>
 						</li><li>
 							<a href="https://www.facebook.com/concealnetwork/">
