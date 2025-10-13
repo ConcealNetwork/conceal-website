@@ -135,7 +135,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
                             <span>Medium</span></a>
                     </li><li>
                     </li><li>
-                        <a href="https://concealnetwork.substack.com/" target="_blank" rel="noopener">
+                        <a href="https://substack.com/@concealnetwork" target="_blank" rel="noopener">
                             <svg role="img" style="height: 16px; width: 16px;" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" stroke-width="1.8" stroke="none" xmlns="http://www.w3.org/2000/svg"><g><title></title><path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none"></path><path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none"></path><path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z" stroke="none"></path></g></svg>
                             <span>Substack</span></a>
                     </li><li>
@@ -658,7 +658,7 @@ echo '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 							</a>
 						</li><li>
                         </li><li>
-							<a href="https://concealnetwork.substack.com/">
+							<a href="https://substack.com/@concealnetwork">
 								Substack
 								<svg role="img" style="height: 16px; width: 16px;" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" stroke-width="1.8" stroke="none" xmlns="http://www.w3.org/2000/svg"><g><title></title><path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none"></path><path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none"></path><path d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z" stroke="none"></path></g></svg>
 							</a>
