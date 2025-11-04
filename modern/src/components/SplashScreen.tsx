@@ -7,7 +7,11 @@ interface SplashScreenProps {
   waitForAppReady?: boolean;
 }
 
-export function SplashScreen({ onComplete, showOnlyOnce = false, waitForAppReady = false }: SplashScreenProps) {
+export function SplashScreen({
+  onComplete,
+  showOnlyOnce = false,
+  waitForAppReady = false,
+}: SplashScreenProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -31,11 +35,11 @@ export function SplashScreen({ onComplete, showOnlyOnce = false, waitForAppReady
 
       if (windowLoaded && elapsed >= minTime && waitForAppReady) {
         setIsLoaded(true);
-        
+
         // Trigger fade out animation
         setTimeout(() => {
           setIsVisible(false);
-          
+
           // Remove from DOM after animation
           setTimeout(() => {
             if (showOnlyOnce) {
@@ -87,9 +91,9 @@ export function SplashScreen({ onComplete, showOnlyOnce = false, waitForAppReady
           backgroundSize: 'auto 100%',
         }}
       />
-      
+
       {/* Black transparent overlay layer */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/50"
         style={{
           backfaceVisibility: 'hidden',
@@ -97,40 +101,37 @@ export function SplashScreen({ onComplete, showOnlyOnce = false, waitForAppReady
       />
 
       {/* Spinner loader */}
-      <div 
-        id="loader"
-        className="relative w-[150px] h-[150px]"
-      >
+      <div id="loader" className="relative w-[150px] h-[150px]">
         {/* Outer circle */}
-        <div 
+        <div
           className="absolute inset-0 rounded-full border-[3px] border-transparent border-t-[orange]"
-          style={{ 
+          style={{
             animation: 'spin 2s linear infinite',
-          }} 
+          }}
         />
-        
+
         {/* Middle circle */}
-        <div 
+        <div
           className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
-          style={{ 
+          style={{
             top: '5px',
             left: '5px',
             right: '5px',
             bottom: '5px',
             animation: 'spin 3s linear infinite',
-          }} 
+          }}
         />
-        
+
         {/* Inner circle */}
-        <div 
+        <div
           className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
-          style={{ 
+          style={{
             top: '15px',
             left: '15px',
             right: '15px',
             bottom: '15px',
             animation: 'spin 1.5s linear infinite',
-          }} 
+          }}
         />
       </div>
 

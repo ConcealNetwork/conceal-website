@@ -46,14 +46,8 @@ const socialLinks: SocialLink[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <g>
-          <path
-            d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z"
-            stroke="none"
-          />
-          <path
-            d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z"
-            stroke="none"
-          />
+          <path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none" />
+          <path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none" />
           <path
             d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z"
             stroke="none"
@@ -85,9 +79,7 @@ export function SocialMenu() {
             ) : (
               <i className={`${link.icon} text-[1em]`} />
             )}
-            <span 
-              className="absolute top-[0.25em] right-[2.5em] whitespace-nowrap text-[orange] [text-shadow:0_-0.1em_0.2em_#000,0_0.1em_0.2em_#000,-0.1em_0_0.3em_#000,-0.1em_0_0.3em_#000,-0.2em_0_0.75em_#000,-0.2em_0_0.75em_#000] opacity-0 invisible transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-hover:visible"
-            >
+            <span className="absolute top-[0.25em] right-[2.5em] whitespace-nowrap text-[orange] [text-shadow:0_-0.1em_0.2em_#000,0_0.1em_0.2em_#000,-0.1em_0_0.3em_#000,-0.1em_0_0.3em_#000,-0.2em_0_0.75em_#000,-0.2em_0_0.75em_#000] opacity-0 invisible transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-hover:visible">
               {link.name}
             </span>
           </a>
@@ -96,4 +88,3 @@ export function SocialMenu() {
     </ul>
   );
 }
-

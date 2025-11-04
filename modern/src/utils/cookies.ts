@@ -2,7 +2,7 @@
  * Simple cookie utility functions
  */
 
-export function setCookie(name: string, value: string, minutes : number = 1): void {
+export function setCookie(name: string, value: string, minutes: number = 1): void {
   const expires = new Date();
   expires.setTime(expires.getTime() + minutes * 60 * 1000);
   document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Strict;Secure`;
@@ -22,4 +22,3 @@ export function getCookie(name: string): string | null {
 export function hasCookie(name: string): boolean {
   return getCookie(name) !== null;
 }
-

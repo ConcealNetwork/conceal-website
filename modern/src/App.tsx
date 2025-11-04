@@ -73,13 +73,13 @@ function App({ onReady }: AppProps) {
 
       {/* Footer Component */}
       <Footer />
-      
+
       {/* Major Links - Fixed on left side */}
       <MajorLinks />
-      
+
       {/* Social Menu - Fixed on right side */}
       <SocialMenu />
-      
+
       {/* Back to Top Button - Shows when scrolled */}
       <BackToTop />
     </div>

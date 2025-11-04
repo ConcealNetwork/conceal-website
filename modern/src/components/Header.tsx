@@ -32,7 +32,11 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Branding', href: '/branding' },
       { label: 'Conceal-Labs', href: '/labs' },
-      { label: 'Documentation', href: 'https://github.com/ConcealNetwork/conceal-core/wiki', external: true },
+      {
+        label: 'Documentation',
+        href: 'https://github.com/ConcealNetwork/conceal-core/wiki',
+        external: true,
+      },
       { label: 'GitHub', href: 'https://github.com/ConcealNetwork', external: true },
     ],
   },
@@ -55,9 +59,10 @@ const navItems: NavItem[] = [
 
 interface HeaderProps {
   isScrolledPastHero?: boolean;
+  forceBackground?: 'black' | 'transparent' | null;
 }
 
-export function Header({ isScrolledPastHero = false }: HeaderProps) {
+export function Header({ isScrolledPastHero = false, forceBackground = null }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [dropdownWider, setDropdownWider] = useState<{ [key: string]: boolean }>({});
@@ -105,7 +110,13 @@ export function Header({ isScrolledPastHero = false }: HeaderProps) {
       ref={navRef}
       className={cn(
         'fixed top-0 left-0 right-0 z-50 px-12 py-4 transition-all duration-300',
-        isScrolledPastHero ? 'bg-[rgba(0,0,0,0.6)]' : 'bg-transparent'
+        forceBackground === 'black'
+          ? 'bg-black'
+          : forceBackground === 'transparent'
+            ? 'bg-transparent'
+            : isScrolledPastHero
+              ? 'bg-[rgba(0,0,0,0.6)]'
+              : 'bg-transparent'
       )}
     >
       {/* Logo */}
@@ -129,9 +140,7 @@ export function Header({ isScrolledPastHero = false }: HeaderProps) {
                     onClick={() => handleNavItemClick(item.label)}
                     className={cn(
                       'px-4 py-2 uppercase tracking-[0.1em] text-[orange] transition-all duration-500 rounded-t-[0.75em]',
-                      openDropdown === item.label
-                        ? 'text-white bg-[#333]'
-                        : 'hover:text-white'
+                      openDropdown === item.label ? 'text-white bg-[#333]' : 'hover:text-white'
                     )}
                   >
                     {item.label}
@@ -211,7 +220,10 @@ export function Header({ isScrolledPastHero = false }: HeaderProps) {
           className="md:hidden fixed inset-0 z-[999] bg-[rgba(32,32,32,0.9)] flex items-center justify-center overflow-auto pb-4"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <div className="min-h-0 py-16 px-4 mx-auto max-w-[31em] w-full" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="min-h-0 py-16 px-4 mx-auto max-w-[31em] w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-4 left-1/2 -translate-x-1/2 w-0 h-0 border-t-0 border-r-[1em] border-l-[1em] border-b-[1.5em] border-t-transparent border-r-transparent border-l-transparent border-b-[orange]"
@@ -274,4 +286,3 @@ export function Header({ isScrolledPastHero = false }: HeaderProps) {
     </header>
   );
 }
-

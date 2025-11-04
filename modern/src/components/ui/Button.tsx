@@ -2,7 +2,7 @@ import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from
 import { cn } from '@/lib/utils';
 
 interface BaseButtonProps {
-  variant?: 'primary' | 'stroke' | 'default' | 'download';
+  variant?: 'primary' | 'stroke' | 'default' | 'download' | 'slide';
   size?: 'default' | 'medium' | 'large';
   fullWidth?: boolean;
 }
@@ -26,7 +26,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       'transition-all duration-300 ease-in-out',
       'border-2 border-[#c5c5c5]',
       'items-center',
-      
+
       // Variants
       variant === 'primary' && [
         'bg-black text-white border border-[orange] rounded-[0.5rem] text-2xl',
@@ -44,14 +44,17 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
         'bg-black text-white border border-[orange] rounded-[0.5rem] text-2xl',
         'hover:bg-[orange] hover:text-black hover:border-2 hover:border-white',
       ],
-      
+      variant === 'slide' && [
+        'button-slide bg-transparent text-white border border-[orange] rounded-[0.5rem] text-2xl',
+      ],
+
       // Sizes
       size === 'medium' && 'h-[5.7rem] leading-[5.3rem]',
       size === 'large' && 'h-[6rem] leading-[5.6rem]',
-      
+
       // Full width
       fullWidth && 'w-full',
-      
+
       className
     );
 
@@ -84,4 +87,3 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button };
-

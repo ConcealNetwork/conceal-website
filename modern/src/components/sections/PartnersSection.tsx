@@ -2,7 +2,14 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export function PartnersSection() {
   return (
-    <section id="partners" className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
+    <section
+      id="partners"
+      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      style={{
+        background:
+          'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         <SectionHeading subtitle="Working Together" title="Our Partners" />
         <div className="flex flex-wrap justify-center gap-8">
@@ -36,4 +43,3 @@ export function PartnersSection() {
     </section>
   );
 }
-

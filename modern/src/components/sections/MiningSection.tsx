@@ -74,7 +74,7 @@ export function MiningSection() {
             observer.disconnect(); // Stop observing once loaded
           }
         },
-        { threshold: 0.1 }, // Trigger when 10% of the section is visible
+        { threshold: 0.1 } // Trigger when 10% of the section is visible
       );
 
       if (sectionRef.current) {
@@ -90,14 +90,24 @@ export function MiningSection() {
   }, [isLoading, pools.length]);
 
   return (
-    <section id="mining" ref={sectionRef} className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
+    <section
+      id="mining"
+      ref={sectionRef}
+      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      style={{
+        background:
+          'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
+      }}
+    >
       <div className="max-w-[66%] mx-auto">
-        <SectionHeading 
+        <SectionHeading
           subtitle={<span data-tkey="gettingCCX">Getting CCX</span>}
           title={<span data-tkey="rMining">Mining</span>}
         />
 
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-6" data-tkey="quickStart">Quick Start</h3>
+        <h3 className="text-[2.4rem] text-[orange] uppercase mb-6" data-tkey="quickStart">
+          Quick Start
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
             <h4 className="text-[2.1rem] text-[orange] mb-2">
@@ -183,7 +193,10 @@ export function MiningSection() {
         </div>
 
         <p className="text-[1.7rem] text-[white] mb-8 text-center">
-          <span data-tkey="aboutGettingCCX">The easiest way to get CCX is to mine with CPU or GPU using one of the miners that support CCX. Check out our</span>{' '}
+          <span data-tkey="aboutGettingCCX">
+            The easiest way to get CCX is to mine with CPU or GPU using one of the miners that
+            support CCX. Check out our
+          </span>{' '}
           <a
             href="https://conceal.network/wiki/doku.php?id=mining"
             target="_blank"
@@ -276,4 +289,3 @@ export function MiningSection() {
     </section>
   );
 }
-

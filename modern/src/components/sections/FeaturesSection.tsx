@@ -13,7 +13,7 @@ function getEIR(nPrincipal: number, nMonths: number): number {
   } else {
     nBase = 0.029;
   }
-  return (nBase + (nMonths - 1) * 0.001) / 12 * nMonths;
+  return ((nBase + (nMonths - 1) * 0.001) / 12) * nMonths;
 }
 
 function getTEA(nPrincipal: number, nMonths: number): number {
@@ -81,9 +81,16 @@ export function FeaturesSection() {
   };
 
   return (
-    <section id="features" className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
+    <section
+      id="features"
+      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      style={{
+        background:
+          'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
+      }}
+    >
       <div className="w-full max-w-[1200px] mx-auto px-4">
-       <SectionHeading subtitle={<span>We are about</span>} title={<span>PRIVACY!</span>} />
+        <SectionHeading subtitle={<span>We are about</span>} title={<span>PRIVACY!</span>} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-center">
           <div className="flex justify-center items-center min-w-0 pr-8">
             <AnimatedElement types={['rotateInY']} speed="slow">
@@ -100,13 +107,21 @@ export function FeaturesSection() {
 
           <div className="min-w-0 pl-8">
             <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about1">
-              Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
+              Conceal Network is a secure peer-to-peer privacy framework empowering individuals and
+              organizations to anonymously communicate and interact financially in a decentralized
+              and censorship resistant environment.
             </p>
             <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about2">
-              Conceal Network powers the $CCX cryptocurrency which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
+              Conceal Network powers the $CCX cryptocurrency which is an open source, privacy
+              protected digital cash system that mimics physical cash; nobody knows where you store
+              or spend your $CCX. All transactions, deposits and messages on Conceal Network are
+              untraceable, tamperproof and operate with no central authority through the use of
+              cryptographic protocols.
             </p>
             <p className="text-[1.7rem] text-[#757575] mb-8 text-justify" data-tkey="about3">
-              Conceal Network is a community driven, truly decentralized blockchain bank accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate for free.
+              Conceal Network is a community driven, truly decentralized blockchain bank accessible
+              to everyone regardless of social or financial status and geographic location. No one
+              owns Conceal Network and everyone can participate for free.
             </p>
           </div>
         </div>
@@ -120,22 +135,31 @@ export function FeaturesSection() {
               </h3>
             </div>
             <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutBankingDeposits">
-              Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
+              Deposits form the backbone of the Conceal ecosystem, providing users with a
+              decentralized and egalitarian form of cold staking that earns interests on locked
+              deposits.
             </p>
           </div>
           <div className="text-justify max-w-[66%] mx-auto md:mx-0 md:mr-auto">
             <div className="flex items-center gap-3 mb-4">
               <i className="fas fa-comments text-[3rem] text-[orange]"></i>
-              <h3 className="text-[2.4rem] text-[orange] uppercase" data-tkey="encryptedMessages">Encrypted Messages</h3>
+              <h3 className="text-[2.4rem] text-[orange] uppercase" data-tkey="encryptedMessages">
+                Encrypted Messages
+              </h3>
             </div>
             <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutEncryptedMessages">
-              A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted messaging service that operates on the blockchain while allowing messages that self-destruct.
+              A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted
+              messaging service that operates on the blockchain while allowing messages that
+              self-destruct.
             </p>
           </div>
         </div>
 
         <form id="compoundInterestCalc" className="max-w-[66%] mx-auto">
-          <h3 className="text-[2.4rem] text-[orange] uppercase mb-6 text-center" data-tkey="compoundInterestCalculator">
+          <h3
+            className="text-[2.4rem] text-[orange] uppercase mb-6 text-center"
+            data-tkey="compoundInterestCalculator"
+          >
             Compound Interest Calculator
           </h3>
 
@@ -169,15 +193,30 @@ export function FeaturesSection() {
           </fieldset>
 
           <div className="text-center mb-6 text-[1.7rem] text-[#757575]">
-            <span>Total</span>: <span id="nTEA">{nTEA.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span> CCX{' '}
-            <span>Profit</span>: <span id="nProfit">{nProfit.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}</span> CCX
+            <span>Total</span>:{' '}
+            <span id="nTEA">
+              {nTEA.toLocaleString(undefined, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 2,
+              })}
+            </span>{' '}
+            CCX <span>Profit</span>:{' '}
+            <span id="nProfit">
+              {nProfit.toLocaleString(undefined, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 2,
+              })}
+            </span>{' '}
+            CCX
           </div>
 
           <div className="tableContain overflow-x-auto" id="compoundInterestCalcTable">
             <table className="w-full border-collapse border border-[#444]">
               <thead>
                 <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">Compound Level</th>
+                  <th scope="row" className="border border-[#444] p-3 text-left">
+                    Compound Level
+                  </th>
                   <th scope="col" colSpan={2} className="border border-[#444] p-3">
                     Tier 1
                   </th>
@@ -189,7 +228,9 @@ export function FeaturesSection() {
                   </th>
                 </tr>
                 <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">Principal</th>
+                  <th scope="row" className="border border-[#444] p-3 text-left">
+                    Principal
+                  </th>
                   <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
                     Under 10,000 CCX
                   </td>
@@ -201,22 +242,46 @@ export function FeaturesSection() {
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">Base/APR</th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">2.90%</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">3.90%</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">4.90%</td>
+                  <th scope="row" className="border border-[#444] p-3 text-left">
+                    Base/APR
+                  </th>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    2.90%
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    3.90%
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    4.90%
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">Example</th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">5,000 CCX</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">10,000 CCX</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">20,000 CCX</td>
+                  <th scope="row" className="border border-[#444] p-3 text-left">
+                    Example
+                  </th>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    5,000 CCX
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    10,000 CCX
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center">
+                    20,000 CCX
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">Maximum Interest</th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">4.00%</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">5.00%</td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">6.00%</td>
+                  <th scope="row" className="border border-[#444] p-3 text-left">
+                    Maximum Interest
+                  </th>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                    4.00%
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                    5.00%
+                  </td>
+                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                    6.00%
+                  </td>
                 </tr>
                 <tr>
                   <th scope="col" className="border border-[#444] p-3 text-left">
@@ -249,7 +314,7 @@ export function FeaturesSection() {
                     <td
                       className="border border-[#444] p-3 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 2.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
                       }}
                     >
                       {row.tier1Interest.toFixed(2)}%
@@ -257,15 +322,18 @@ export function FeaturesSection() {
                     <td
                       className="border border-[#444] p-2 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 2.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
                       }}
                     >
-                      {row.tier1Total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {row.tier1Total.toLocaleString(undefined, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
                     </td>
                     <td
                       className="border border-[#444] p-2 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 3.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
                       }}
                     >
                       {row.tier2Interest.toFixed(2)}%
@@ -273,15 +341,18 @@ export function FeaturesSection() {
                     <td
                       className="border border-[#444] p-2 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 3.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
                       }}
                     >
-                      {row.tier2Total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {row.tier2Total.toLocaleString(undefined, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
                     </td>
                     <td
                       className="border border-[#444] p-2 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 4.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
                       }}
                     >
                       {row.tier3Interest.toFixed(2)}%
@@ -289,10 +360,13 @@ export function FeaturesSection() {
                     <td
                       className="border border-[#444] p-2 text-center text-[white]"
                       style={{
-                        background: `rgba(0, 255, 0, ${row.month * 4.9 / 87})`,
+                        background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
                       }}
                     >
-                      {row.tier3Total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {row.tier3Total.toLocaleString(undefined, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
                     </td>
                   </tr>
                 ))}
@@ -304,4 +378,3 @@ export function FeaturesSection() {
     </section>
   );
 }
-

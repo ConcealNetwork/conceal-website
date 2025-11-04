@@ -8,7 +8,10 @@ interface Language {
 
 export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>({ code: 'en', name: 'English' });
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>({
+    code: 'en',
+    name: 'English',
+  });
   const [languages, setLanguages] = useState<Language[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -20,7 +23,7 @@ export function LanguageSelector() {
         const response = await fetch('/lang/en.json');
         const enLangData = await response.json();
         const all = document.body.getElementsByTagName('*');
-        
+
         for (const key of Object.keys(enLangData)) {
           for (let i = 0; i < all.length; i++) {
             if (!all[i].firstElementChild) {
@@ -48,9 +51,9 @@ export function LanguageSelector() {
           .split('; ')
           .find((row) => row.startsWith('CCX_Language='))
           ?.split('=')[1];
-        
+
         let currentLang = cookieLang || navigator.language.substring(0, 2) || 'en';
-        
+
         // Validate language is in accepted list
         const acceptLang = ['ru', 'en', 'ar', 'es', 'zh', 'de', 'sl', 'cs', 'nl', 'tr', 'fr', 'it'];
         if (!acceptLang.includes(currentLang)) {
@@ -60,11 +63,13 @@ export function LanguageSelector() {
         // Load language selection
         const selectionRes = await fetch('/lang/selection.json');
         const selectionData = await selectionRes.json();
-        
-        const langList: Language[] = Object.entries(selectionData).map(([code, value]: [string, any]) => ({
-          code,
-          name: value.name,
-        }));
+
+        const langList: Language[] = Object.entries(selectionData).map(
+          ([code, value]: [string, any]) => ({
+            code,
+            name: value.name,
+          })
+        );
         setLanguages(langList);
 
         // Set selected language
@@ -74,7 +79,7 @@ export function LanguageSelector() {
         // Load and apply translations for initial language
         const langRes = await fetch(`/lang/${currentLang}.json`);
         const langData = await langRes.json();
-        
+
         const elements = document.querySelectorAll('[data-tkey]');
         elements.forEach((element) => {
           const key = element.getAttribute('data-tkey');
@@ -158,7 +163,7 @@ export function LanguageSelector() {
 
     setSelectedLanguage(lang);
     setIsOpen(false);
-    
+
     // Apply translations immediately
     await applyTranslations(lang.code);
   };
@@ -201,4 +206,3 @@ export function LanguageSelector() {
     </div>
   );
 }
-

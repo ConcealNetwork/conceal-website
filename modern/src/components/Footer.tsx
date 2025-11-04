@@ -221,14 +221,8 @@ export function Footer() {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g>
-                      <path
-                        d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z"
-                        stroke="none"
-                      />
-                      <path
-                        d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z"
-                        stroke="none"
-                      />
+                      <path d="M1.96484 0.624512H18.0354V2.70052H1.96484V0.624512Z" stroke="none" />
+                      <path d="M1.96484 4.77655H18.0354V6.85254H1.96484V4.77655Z" stroke="none" />
                       <path
                         d="M1.96484 8.92857V19.9505L10.0001 14.6347L18.0354 19.9505V8.92857H1.96484V8.92857Z"
                         stroke="none"
@@ -272,10 +266,7 @@ export function Footer() {
       {/* Terms & Privacy */}
       <div className="min-w-full text-center pb-2.5">
         <span className="url_terms">
-          <a
-            href="/tc"
-            className="text-[orange] hover:text-[#fafafa] transition-all duration-300"
-          >
+          <a href="/tc" className="text-[orange] hover:text-[#fafafa] transition-all duration-300">
             T&amp;C
           </a>
         </span>
@@ -294,11 +285,9 @@ export function Footer() {
       <div className="min-w-full text-center pb-2.5">
         &copy; 2017-{currentYear}{' '}
         <span>
-          Conceal.Network, Conceal DAO, Conceal Team &amp; Conceal Developers - All rights
-          reserved.
+          Conceal.Network, Conceal DAO, Conceal Team &amp; Conceal Developers - All rights reserved.
         </span>
       </div>
     </footer>
   );
 }
-
