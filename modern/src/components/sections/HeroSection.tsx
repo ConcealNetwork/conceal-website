@@ -28,11 +28,11 @@ export function HeroSection({ onMount }: HeroSectionProps) {
 
       {/* Content */}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 z-10 text-center px-4 w-full">
-        <h2 className="text-[3rem] md:text-[5.3rem] text-white mb-4 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
+        <h2 className="text-[4rem] md:text-[5.3rem] text-white mb-4 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
           <span>Conceal.Network</span>
         </h2>
-        <p className="text-[1.6rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.3rem] mb-8 [text-shadow:0_0_16px_rgba(0,0,0,0.9)]">
-          Privacy-Protected De-Fi & Encrypted Communications
+        <p className="text-[1.6rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.3rem] mb-8 [text-shadow:0_0_16px_rgba(0,0,0,0.9)]" data-tkey="headerDescription">
+          Decentralized Finance, Private Transactions & Encrypted Messaging
         </p>
       </div>
 

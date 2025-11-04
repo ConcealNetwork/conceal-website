@@ -112,13 +112,9 @@ export function LanguageSelector() {
     }
   }, [isOpen]);
 
-  const handleLanguageSelect = async (lang: Language) => {
-    // Set cookie
-    document.cookie = `CCX_Language=${lang.code}; max-age=2629800; samesite=strict; secure`;
-
-    // Load and apply translations
+  const applyTranslations = async (langCode: string) => {
     try {
-      const response = await fetch(`/lang/${lang.code}.json`);
+      const response = await fetch(`/lang/${langCode}.json`);
       const langData = await response.json();
 
       // Update all elements with data-tkey attributes
@@ -126,15 +122,45 @@ export function LanguageSelector() {
       elements.forEach((element) => {
         const key = element.getAttribute('data-tkey');
         if (key && langData[key]) {
-          element.textContent = langData[key];
+          // Preserve HTML structure if it exists
+          if (element.children.length === 0) {
+            element.textContent = langData[key];
+          } else {
+            // If element has children, only update if it's a simple text node replacement
+            const firstChild = element.firstChild;
+            if (firstChild && firstChild.nodeType === Node.TEXT_NODE) {
+              firstChild.textContent = langData[key];
+            } else {
+              element.textContent = langData[key];
+            }
+          }
         }
       });
-
-      setSelectedLanguage(lang);
-      setIsOpen(false);
     } catch (err) {
       console.error('Failed to load language:', err);
     }
+  };
+
+  // Re-apply translations when language changes, with a small delay to ensure DOM is ready
+  useEffect(() => {
+    if (selectedLanguage.code) {
+      // Use setTimeout to ensure React has finished rendering
+      const timer = setTimeout(() => {
+        applyTranslations(selectedLanguage.code);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedLanguage.code]);
+
+  const handleLanguageSelect = async (lang: Language) => {
+    // Set cookie
+    document.cookie = `CCX_Language=${lang.code}; max-age=2629800; samesite=strict; secure`;
+
+    setSelectedLanguage(lang);
+    setIsOpen(false);
+    
+    // Apply translations immediately
+    await applyTranslations(lang.code);
   };
 
   return (

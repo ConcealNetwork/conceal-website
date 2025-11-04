@@ -8,6 +8,13 @@
 /* HTML base font size for rem calculations */
 html {
   font-size: 10px;
+  background-color: #000;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 400px) {
@@ -24,4 +31,235 @@ html {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+/* 
+ * Scroll Animation System - Ported from original website
+ * Usage: Add classes like "anim anim_slideInRight anim_fadeIn" to elements
+ * The "anim_show" class is added automatically when element enters viewport
+ */
+
+.anim {
+  position: relative;
+  transition: all 0s;
+  opacity: 0; /* Start all animations hidden */
+}
+
+.anim.anim_show {
+  opacity: 1; /* Show when animation triggers */
+  transition-property: opacity, transform, left, top; /* Include all animatable properties */
+}
+
+.anim_fadeIn {
+  opacity: 0;
+}
+
+.anim_fadeIn.anim_show {
+  opacity: 1;
+}
+
+.anim_slideInLeft {
+  left: -50vw;
+}
+
+.anim_slideInLeft.anim_fadeIn {
+  left: -80px;
+}
+
+.anim_slideInRight {
+  left: 50vw;
+}
+
+.anim_slideInRight.anim_fadeIn {
+  left: 80px;
+}
+
+.anim_slideInLeft.anim_show,
+.anim_slideInRight.anim_show {
+  left: 0;
+}
+
+.anim_slideInTop {
+  top: -50vh;
+}
+
+.anim_slideInTop.anim_fadeIn {
+  top: -80px;
+}
+
+.anim_slideInBottom {
+  top: 50vh;
+}
+
+.anim_slideInBottom.anim_fadeIn {
+  top: 80px;
+}
+
+.anim_slideInTop.anim_show,
+.anim_slideInBottom.anim_show {
+  top: 0;
+}
+
+.anim_zoom {
+  transform: scale(0);
+}
+
+.anim_zoom.anim_show {
+  transform: scale(1);
+}
+
+/* Perspective parent for 3D transforms */
+.anim_perspectiveParent {
+  perspective: 40em;
+}
+
+/* Rotation animations */
+.anim_rotateInX,
+.anim_rotateInY {
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.anim_rotateInX {
+  transform: rotateX(90deg);
+}
+
+.anim_rotateInX.anim_show {
+  transform: rotateY(0deg);
+}
+
+.anim_rotateInY {
+  transform: rotateY(90deg);
+}
+
+.anim_rotateInY.anim_show {
+  transform: rotateY(0deg);
+}
+
+.anim_rotateInClockwise,
+.anim_rotateInCounterClockwise {
+  transform: rotate(180deg);
+}
+
+.anim_rotateInClockwise.anim_show {
+  transform: rotate(360deg);
+}
+
+.anim_rotateInCounterClockwise.anim_show {
+  transform: rotate(0deg);
+}
+
+.anim_rotateInClockwise.anim_zoom.anim_show {
+  transform: rotate(360deg) scale(1);
+}
+
+.anim_rotateInCounterClockwise.anim_zoom.anim_show {
+  transform: rotate(0deg) scale(1);
+}
+
+/* Animation speed modifiers */
+.anim.anim_show {
+  transition-duration: 1s;
+}
+
+.anim_fastest.anim_show {
+  transition-duration: 0.25s;
+}
+
+.anim_faster.anim_show {
+  transition-duration: 0.5s;
+}
+
+.anim_fast.anim_show {
+  transition-duration: 0.75s;
+}
+
+.anim_slow.anim_show {
+  transition-duration: 1.25s;
+}
+
+.anim_slower.anim_show {
+  transition-duration: 1.5s;
+}
+
+.anim_slowest.anim_show {
+  transition-duration: 2s;
+}
+
+.anim_overEasy {
+  transition-timing-function: cubic-bezier(0.66, 0.66, 0.5, 1.4);
+}
+
+/* CRT Monitor Power-On Effect */
+.anim_crtPowerOn {
+  opacity: 0;
+  filter: brightness(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.anim_crtPowerOn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  animation: crtScanlines 0.1s linear infinite;
+}
+
+.anim_crtPowerOn.anim_show {
+  opacity: 1;
+  filter: brightness(1);
+  animation: crtPowerOn 1.5s ease-out forwards;
+}
+
+.anim_crtPowerOn.anim_show::before {
+  opacity: 1;
+}
+
+@keyframes crtPowerOn {
+  0% {
+    opacity: 0;
+    filter: brightness(0) contrast(0.5);
+  }
+  20% {
+    opacity: 0.3;
+    filter: brightness(0.3) contrast(0.7);
+  }
+  40% {
+    opacity: 0.6;
+    filter: brightness(0.6) contrast(0.9);
+  }
+  60% {
+    opacity: 0.85;
+    filter: brightness(0.85) contrast(0.95);
+  }
+  80% {
+    opacity: 0.95;
+    filter: brightness(0.95) contrast(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) contrast(1);
+  }
+}
+
+@keyframes crtScanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(4px);
+  }
 }

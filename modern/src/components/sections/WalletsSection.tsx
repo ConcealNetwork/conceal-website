@@ -1,21 +1,25 @@
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { AnimatedElement } from '../ui/AnimatedElement';
 
 export function WalletsSection() {
   return (
     <section id="wallets" className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
       <div className="max-w-[66%] mx-auto">
-        <SectionHeading subtitle="Using Conceal" title="Wallets" />
+        <SectionHeading 
+          subtitle={<span data-tkey="usingConceal">Using Conceal</span>}
+          title={<span data-tkey="rWallets">Wallets</span>}
+        />
 
         {/* Conceal-Desktop */}
         <h3 className="text-[2.4rem] text-[orange] uppercase mb-4 text-center">Conceal-Desktop | Full-Node Graphical Wallet</h3>
 
-          <p className="text-[1.7rem] text-[white] mb-6 text-center">
-            Conceal-Desktop is the central point of interaction for the primary features of Conceal and
-            is available for all major platforms. With Conceal Desktop you can send and receive CCX and
-            encrypted secure messages, and manage your deposits.
+          <p className="text-[1.7rem] text-[white] mb-6 text-center" data-tkey="aboutUsingConceal">
+            Conceal Desktop is the central point of interaction for the primary features of Conceal and is available for all major platforms. With Conceal Desktop you can send and receive CCX and encrypted secure messages, and manage your deposits.
           </p>
-          <img src="/images/newgui.png" alt="Conceal GUI" className="block mx-auto mb-6 w-full h-auto" />
+          <AnimatedElement types={['crtPowerOn']} speed="fast">
+            <img src="/images/newgui.png" alt="Conceal GUI" className="block mx-auto mb-6 w-full h-auto" />
+          </AnimatedElement>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button
@@ -69,7 +73,9 @@ export function WalletsSection() {
           Conceal-Core is the heart of our peer-to-peer privacy-preserving network. It's a full local
           node of our network.
         </p>
-        <img src="/images/wallets-cli.jpg" alt="Conceal CLI" className="block mx-auto mb-6 w-full h-auto" />
+        <AnimatedElement types={['crtPowerOn']} speed="slow">
+          <img src="/images/wallets-cli.jpg" alt="Conceal CLI" className="block mx-auto mb-6 w-full h-auto" />
+        </AnimatedElement>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button
             variant="download"
@@ -125,7 +131,9 @@ export function WalletsSection() {
           lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way
           to create an offline wallet with simple Key generation tools.
         </p>
-        <img src="/images/webwallet.png" alt="Conceal Web Wallet" className="block mx-auto mb-6 max-w-full" />
+        <AnimatedElement types={['crtPowerOn']} speed="normal">
+          <img src="/images/webwallet.png" alt="Conceal Web Wallet" className="block mx-auto mb-6 max-w-full" />
+        </AnimatedElement>
         <div className="flex flex-wrap justify-center gap-4">
           <Button
             variant="download"

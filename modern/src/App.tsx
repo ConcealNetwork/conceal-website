@@ -13,7 +13,11 @@ import { PartnersSection } from './components/sections/PartnersSection';
 import { HelpdeskSection } from './components/sections/HelpdeskSection';
 import { CryptoWidgetSection } from './components/sections/CryptoWidgetSection';
 
-function App() {
+interface AppProps {
+  onReady?: () => void;
+}
+
+function App({ onReady }: AppProps) {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const heroSectionRef = useRef<HTMLElement | null>(null);
 
@@ -33,6 +37,18 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Signal that App is ready (after initial render)
+  useEffect(() => {
+    if (onReady) {
+      // Use requestAnimationFrame to ensure DOM is painted
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          onReady();
+        });
+      });
+    }
+  }, [onReady]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0A0A0A] text-[#757575] font-['Poppins',Arial,Helvetica,sans-serif] text-[1.7rem] leading-[1.765]">

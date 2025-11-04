@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnimatedElement } from '../ui/AnimatedElement';
 import { SectionHeading } from '../ui/SectionHeading';
 
 function getEIR(nPrincipal: number, nMonths: number): number {
@@ -82,33 +83,30 @@ export function FeaturesSection() {
   return (
     <section id="features" className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
       <div className="w-full max-w-[1200px] mx-auto px-4">
-        <SectionHeading subtitle="We are about" title="Privacy!" />
+       <SectionHeading subtitle={<span>We are about</span>} title={<span>PRIVACY!</span>} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-center">
           <div className="flex justify-center items-center min-w-0 pr-8">
-            <picture className="flex justify-center">
-              <source srcSet="/images/ecosystem.webp" type="image/webp" />
-              <img
-                src="/images/ecosystem.png"
-                alt="some random cloud nonsense"
-                className="rounded-full max-w-full h-auto"
-              />
-            </picture>
+            <AnimatedElement types={['rotateInY']} speed="slow">
+              <picture className="flex justify-center">
+                <source srcSet="/images/ecosystem.webp" type="image/webp" />
+                <img
+                  src="/images/ecosystem.png"
+                  alt="some random cloud nonsense"
+                  className="rounded-full max-w-full h-auto"
+                />
+              </picture>
+            </AnimatedElement>
           </div>
 
           <div className="min-w-0 pl-8">
-            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify">
-              Conceal is a decentralized blockchain prioritizing privacy for De-Fi and encrypted
-              communications. It provides protocol-level private transactions, blockchain deposits, and
-              on-chain encrypted messages, all without relying on a central authority.
+            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about1">
+              Conceal Network is a secure peer-to-peer privacy framework empowering individuals and organizations to anonymously communicate and interact financially in a decentralized and censorship resistant environment.
             </p>
-            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify">
-              Powered by open-source code and driven by the community, Conceal's network is truly
-              decentralized and resistant to censorship. It ensures accessibility for users worldwide,
-              regardless of their location or status, while guaranteeing that all interactions,
-              transactions, and messages remain private and untraceable.
+            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about2">
+              Conceal Network powers the $CCX cryptocurrency which is an open source, privacy protected digital cash system that mimics physical cash; nobody knows where you store or spend your $CCX.  All transactions, deposits and messages on Conceal Network are untraceable, tamperproof and operate with no central authority through the use of cryptographic protocols.
             </p>
-            <p className="text-[1.7rem] text-[#757575] mb-8 text-justify">
-              No one owns Conceal, everyone can take part.
+            <p className="text-[1.7rem] text-[#757575] mb-8 text-justify" data-tkey="about3">
+              Conceal Network is a community driven, truly decentralized blockchain bank accessible to everyone regardless of social or financial status and geographic location. No one owns Conceal Network and everyone can participate for free.
             </p>
           </div>
         </div>
@@ -118,30 +116,26 @@ export function FeaturesSection() {
             <div className="flex items-center gap-3 mb-4">
               <i className="fas fa-money-check-alt text-[3rem] text-[orange]"></i>
               <h3 className="text-[2.4rem] text-[orange] uppercase">
-                <span>De-Fi</span>: <span>Conceal-Earn</span>
+                <span data-tkey="rBanking">Banking</span>: <span>Conceal-Earn</span>
               </h3>
             </div>
-            <p className="text-[1.7rem] text-[#757575] ml-4">
-              Decentralized Finance forms the backbone of the Conceal ecosystem, providing users
-              with a decentralized and egalitarian form of cold-staking that earns interess on
-              locked deposits.
+            <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutBankingDeposits">
+              Deposits form the backbone of the Conceal ecosystem, providing users with a decentralized and egalitarian form of cold staking that earns interests on locked deposits.
             </p>
           </div>
           <div className="text-justify max-w-[66%] mx-auto md:mx-0 md:mr-auto">
             <div className="flex items-center gap-3 mb-4">
               <i className="fas fa-comments text-[3rem] text-[orange]"></i>
-              <h3 className="text-[2.4rem] text-[orange] uppercase">Encrypted Messages</h3>
+              <h3 className="text-[2.4rem] text-[orange] uppercase" data-tkey="encryptedMessages">Encrypted Messages</h3>
             </div>
-            <p className="text-[1.7rem] text-[#757575] ml-4">
-              A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted
-              messaging service that operates on the blockchain while allowing messages that
-              self-destruct.
+            <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutEncryptedMessages">
+              A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted messaging service that operates on the blockchain while allowing messages that self-destruct.
             </p>
           </div>
         </div>
 
         <form id="compoundInterestCalc" className="max-w-[66%] mx-auto">
-          <h3 className="text-[2.4rem] text-[orange] uppercase mb-6 text-center">
+          <h3 className="text-[2.4rem] text-[orange] uppercase mb-6 text-center" data-tkey="compoundInterestCalculator">
             Compound Interest Calculator
           </h3>
 

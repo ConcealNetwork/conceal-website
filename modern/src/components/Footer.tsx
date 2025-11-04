@@ -276,7 +276,7 @@ export function Footer() {
             href="/tc"
             className="text-[orange] hover:text-[#fafafa] transition-all duration-300"
           >
-            T&amp;C |
+            T&amp;C
           </a>
         </span>
         <div className="inline-block w-px h-4 bg-white/20 mx-4 align-middle" />
@@ -285,7 +285,7 @@ export function Footer() {
             href="/privacy"
             className="text-[orange] hover:text-[#fafafa] transition-all duration-300"
           >
-            | Privacy
+            Privacy
           </a>
         </span>
       </div>

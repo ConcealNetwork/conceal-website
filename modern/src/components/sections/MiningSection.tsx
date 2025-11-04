@@ -91,10 +91,13 @@ export function MiningSection() {
 
   return (
     <section id="mining" ref={sectionRef} className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]" style={{ background: 'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)' }}>
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading subtitle="Getting CCX" title="Mining" />
+      <div className="max-w-[66%] mx-auto">
+        <SectionHeading 
+          subtitle={<span data-tkey="gettingCCX">Getting CCX</span>}
+          title={<span data-tkey="rMining">Mining</span>}
+        />
 
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-6">Quick Start</h3>
+        <h3 className="text-[2.4rem] text-[orange] uppercase mb-6" data-tkey="quickStart">Quick Start</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
             <h4 className="text-[2.1rem] text-[orange] mb-2">
@@ -135,7 +138,9 @@ export function MiningSection() {
               </a>
             </h4>
             <pre className="font-[Consolas,Serif] text-[1.3rem] leading-[1.3rem] bg-[#111] border border-[#444] rounded p-4 overflow-x-auto">
-              {`c:/cryptodredge/CryptoDredge.exe -a cngpu -o stratum+tcp://pool.conceal.network:3333 -u wallet_address -p WorkerName --api-type ccminer-tcp -b`}
+              <code>{`c:/cryptodredge/CryptoDredge.exe -a cngpu 
+-o stratum+tcp://pool.conceal.network:3333 
+-u wallet_address -p WorkerName \n --api-type ccminer-tcp -b`}</code>
             </pre>
           </div>
           <div>
@@ -150,7 +155,11 @@ export function MiningSection() {
               </a>
             </h4>
             <pre className="font-[Consolas,Serif] text-[1.3rem] leading-[1.3rem] bg-[#111] border border-[#444] rounded p-4 overflow-x-auto">
-              {`xmrigDaemon --no-cpu -a cn/gpu -o pool:port -u wallet_address -p x -k --cc-url=127.0.0.1:3344 --cc-access-token=your_token --cc-worker-id=worker_name pause`}
+              <code>{`xmrigDaemon --no-cpu -a cn/gpu \n 
+-o pool:port -u wallet_address -p x -k \n
+--cc-url=127.0.0.1:3344 \n
+--cc-access-token=your_token \n
+--cc-worker-id=worker_name pause`}</code>
             </pre>
           </div>
           <div>
@@ -165,22 +174,26 @@ export function MiningSection() {
               </a>
             </h4>
             <pre className="font-[Consolas,Serif] text-[1.3rem] leading-[1.3rem] bg-[#111] border border-[#444] rounded p-4 overflow-x-auto">
-              <samp>{`SRBMiner-MULTI.exe --algorithm gpu --pool pool.conceal.network:3333 --wallet "YOUR_WALLET_ADDRESS" --gpu-tweak-profile 5`}</samp>
+              <code>{`SRBMiner-MULTI.exe --algorithm gpu \n
+--pool pool.conceal.network:3333 \n
+--wallet "YOUR_WALLET_ADDRESS" \n
+--gpu-tweak-profile 5`}</code>
             </pre>
           </div>
         </div>
 
         <p className="text-[1.7rem] text-[white] mb-8 text-center">
-          <span>The easiest way to get CCX is to mine with CPU or GPU using one of the miners that support CCX. Check out our</span>{' '}
+          <span data-tkey="aboutGettingCCX">The easiest way to get CCX is to mine with CPU or GPU using one of the miners that support CCX. Check out our</span>{' '}
           <a
             href="https://conceal.network/wiki/doku.php?id=mining"
             target="_blank"
             rel="noopener"
             className="text-[orange] hover:text-[#fafafa] transition-colors"
+            data-tkey="rDocumentation"
           >
             documentation
           </a>{' '}
-          <span>for more detailed information about mining CCX.</span>
+          <span data-tkey="aboutGettingCCX2">for more detailed information about mining CCX.</span>
         </p>
 
         <div className="tableContain overflow-x-auto" id="poolsTable">

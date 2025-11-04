@@ -29,8 +29,8 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       
       // Variants
       variant === 'primary' && [
-        'bg-[orange] border-[orange] text-white',
-        'hover:bg-[#33a242] hover:border-[#33a242]',
+        'bg-black text-white border border-[orange] rounded-[0.5rem] text-2xl',
+        'hover:bg-[orange] hover:text-black hover:border-2 hover:border-white',
       ],
       variant === 'stroke' && [
         'bg-transparent border-2 border-[orange] text-white rounded-[10px]',
