@@ -5,6 +5,8 @@ import './index.css';
 import App from './App.tsx';
 import { AboutPage } from './pages/AboutPage';
 import { RoadmapPage } from './pages/RoadmapPage';
+import { TeamPage } from './pages/TeamPage';
+import { CommunityPage } from './pages/CommunityPage';
 import { SplashScreen } from './components/SplashScreen';
 
 function Root() {
@@ -46,6 +48,8 @@ function Root() {
         />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/roadmap" element={<RoadmapPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/community" element={<CommunityPage />} />
       </Routes>
     </>
   );

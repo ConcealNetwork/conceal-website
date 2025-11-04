@@ -20,12 +20,11 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   if (variant === 'withDescription') {
     return (
-      <div className="grid grid-cols-4 gap-2 mb-1 items-center">
-        <div className="col-span-1 flex flex-col">
+      <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
+        <div className="flex flex-col">
           <h2 className={titleClassName + ' border-b-2 border-[orange] w-[70%] mt-2 mx-auto'}>{title}</h2>
-
         </div>
-        <div className="col-span-3">
+        <div className="overflow-hidden">
           {description && (
             <AnimatedElement types={['slideInRight']} triggerImmediately={true} offset={0}>
               <p className="text-[1.7rem] text-[#757575] leading-relaxed">{description}</p>

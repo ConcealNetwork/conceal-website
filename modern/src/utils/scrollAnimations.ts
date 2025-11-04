@@ -50,6 +50,12 @@ export interface ScrollAnimationOptions {
    * Ref to parent element (for perspective parent when using 3D rotations)
    */
   parentRef?: RefObject<HTMLElement>;
+
+  /**
+   * Starting opacity for fadeIn animations (0-1)
+   * Default: 0 (fully transparent)
+   */
+  startOpacity?: number;
 }
 
 /**
@@ -63,6 +69,7 @@ export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
     offset,
     triggerImmediately = true,
     parentRef,
+    startOpacity = 0,
   } = options;
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
@@ -134,6 +141,22 @@ export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
   const showClass = isVisible ? 'anim_show' : '';
 
   const className = [baseClasses, typeClasses, speedClasses, showClass].filter(Boolean).join(' ');
+
+  // Apply custom starting opacity if fadeIn is used and startOpacity is not 0
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    if (types.includes('fadeIn') && startOpacity > 0 && startOpacity < 1) {
+      // Set initial opacity
+      if (!isVisible) {
+        element.style.opacity = String(startOpacity);
+      } else {
+        // When visible, ensure opacity is 1 (CSS will handle it, but we can remove inline style)
+        element.style.opacity = '';
+      }
+    }
+  }, [types, startOpacity, isVisible]);
 
   return { ref: elementRef, className, isVisible };
 }

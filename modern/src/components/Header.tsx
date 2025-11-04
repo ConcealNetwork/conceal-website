@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { LanguageSelector } from './ui/LanguageSelector';
 import { cn } from '@/lib/utils';
 
@@ -22,8 +23,8 @@ const navItems: NavItem[] = [
     label: 'Community',
     children: [
       { label: 'Channels', href: '/community' },
-      { label: 'Mining', href: '#mining' },
-      { label: 'Partners', href: '#partners' },
+      { label: 'Mining', href: '/#mining' },
+      { label: 'Partners', href: '/#partners' },
       { label: 'Donate', href: '/donate' },
     ],
   },
@@ -63,12 +64,41 @@ interface HeaderProps {
 }
 
 export function Header({ isScrolledPastHero = false, forceBackground = null }: HeaderProps) {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [dropdownWider, setDropdownWider] = useState<{ [key: string]: boolean }>({});
   const navRef = useRef<HTMLElement>(null);
   const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
   const dropdownRefs = useRef<{ [key: string]: HTMLUListElement | null }>({});
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Handle hash links (like /#mining, /#wallets)
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const hash = href.substring(1); // Get #mining, #wallets, etc.
+      
+      // If we're not on the main page, navigate to root with hash
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Wait for navigation and DOM update, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 200);
+      } else {
+        // Already on main page, just scroll
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+    // For regular links, let default behavior handle it
+  };
 
   const handleNavItemClick = (label: string) => {
     const newState = openDropdown === label ? null : label;
@@ -159,6 +189,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                       <li key={child.label}>
                         <a
                           href={child.href}
+                          onClick={(e) => !child.external && handleLinkClick(e, child.href)}
                           target={child.external ? '_blank' : undefined}
                           rel={child.external ? 'noopener noreferrer' : undefined}
                           className="block px-3 py-1 whitespace-nowrap rounded-[0.25em] text-[orange] hover:text-white hover:bg-black transition-colors duration-200"
@@ -182,7 +213,8 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
           {/* Standalone Links */}
           <li>
             <a
-              href="#wallets"
+              href="/#wallets"
+              onClick={(e) => handleLinkClick(e, '/#wallets')}
               className="px-4 py-2 uppercase tracking-[0.1em] text-[orange] rounded-[0.75em] transition-all duration-500 hover:text-white"
             >
               Wallets
@@ -244,6 +276,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                         <li key={child.label}>
                           <a
                             href={child.href}
+                            onClick={(e) => !child.external && handleLinkClick(e, child.href)}
                             target={child.external ? '_blank' : undefined}
                             rel={child.external ? 'noopener noreferrer' : undefined}
                             className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
@@ -258,7 +291,8 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
               ))}
               <li className="flex-1-0-auto pb-2 text-center w-full">
                 <a
-                  href="#wallets"
+                  href="/#wallets"
+                  onClick={(e) => handleLinkClick(e, '/#wallets')}
                   className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
                 >
                   Wallets
