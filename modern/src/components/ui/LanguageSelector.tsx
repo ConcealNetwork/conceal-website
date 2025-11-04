@@ -1,0 +1,178 @@
+import { useState, useEffect, useRef } from 'react';
+import { cn } from '@/lib/utils';
+
+interface Language {
+  code: string;
+  name: string;
+}
+
+export function LanguageSelector() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>({ code: 'en', name: 'English' });
+  const [languages, setLanguages] = useState<Language[]>([]);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    // Auto-tag elements with data-tkey based on English text (matching original language.js behavior)
+    const autoTagElements = async () => {
+      try {
+        const response = await fetch('/lang/en.json');
+        const enLangData = await response.json();
+        const all = document.body.getElementsByTagName('*');
+        
+        for (const key of Object.keys(enLangData)) {
+          for (let i = 0; i < all.length; i++) {
+            if (!all[i].firstElementChild) {
+              if (all[i].textContent?.trim().toUpperCase() === enLangData[key].toUpperCase()) {
+                if (!all[i].getAttribute('data-tkey')) {
+                  all[i].setAttribute('data-tkey', key);
+                  if (key.charAt(0) !== 'r') {
+                    break;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.error('Failed to auto-tag elements:', err);
+      }
+    };
+
+    // Load available languages
+    const loadLanguages = async () => {
+      try {
+        // Get initial language from cookie or browser language
+        const cookieLang = document.cookie
+          .split('; ')
+          .find((row) => row.startsWith('CCX_Language='))
+          ?.split('=')[1];
+        
+        let currentLang = cookieLang || navigator.language.substring(0, 2) || 'en';
+        
+        // Validate language is in accepted list
+        const acceptLang = ['ru', 'en', 'ar', 'es', 'zh', 'de', 'sl', 'cs', 'nl', 'tr', 'fr', 'it'];
+        if (!acceptLang.includes(currentLang)) {
+          currentLang = 'en';
+        }
+
+        // Load language selection
+        const selectionRes = await fetch('/lang/selection.json');
+        const selectionData = await selectionRes.json();
+        
+        const langList: Language[] = Object.entries(selectionData).map(([code, value]: [string, any]) => ({
+          code,
+          name: value.name,
+        }));
+        setLanguages(langList);
+
+        // Set selected language
+        const current = langList.find((l) => l.code === currentLang) || langList[0];
+        setSelectedLanguage(current);
+
+        // Load and apply translations for initial language
+        const langRes = await fetch(`/lang/${currentLang}.json`);
+        const langData = await langRes.json();
+        
+        const elements = document.querySelectorAll('[data-tkey]');
+        elements.forEach((element) => {
+          const key = element.getAttribute('data-tkey');
+          if (key && langData[key]) {
+            element.textContent = langData[key];
+          }
+        });
+      } catch (err) {
+        console.error('Failed to load languages:', err);
+        // Fallback
+        setLanguages([{ code: 'en', name: 'English' }]);
+      }
+    };
+
+    autoTagElements();
+    loadLanguages();
+  }, []);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        buttonRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isOpen]);
+
+  const handleLanguageSelect = async (lang: Language) => {
+    // Set cookie
+    document.cookie = `CCX_Language=${lang.code}; max-age=2629800; samesite=strict; secure`;
+
+    // Load and apply translations
+    try {
+      const response = await fetch(`/lang/${lang.code}.json`);
+      const langData = await response.json();
+
+      // Update all elements with data-tkey attributes
+      const elements = document.querySelectorAll('[data-tkey]');
+      elements.forEach((element) => {
+        const key = element.getAttribute('data-tkey');
+        if (key && langData[key]) {
+          element.textContent = langData[key];
+        }
+      });
+
+      setSelectedLanguage(lang);
+      setIsOpen(false);
+    } catch (err) {
+      console.error('Failed to load language:', err);
+    }
+  };
+
+  return (
+    <div className="relative inline-block">
+      <button
+        ref={buttonRef}
+        onClick={() => setIsOpen(!isOpen)}
+        className="language-selector flex items-center justify-center gap-2 text-white hover:text-[orange] transition-all duration-300"
+        aria-label="Select language"
+        aria-expanded={isOpen}
+      >
+        <i className="fas fa-language text-6xl align-middle" />
+        <span id="selectedLanguage" className="text-3xl">
+          {selectedLanguage.name}
+        </span>
+      </button>
+
+      <div
+        ref={dropdownRef}
+        className={cn(
+          'absolute right-0 mt-2 min-w-[110px] bg-[#0C0C0C] border border-[#333333] rounded-lg shadow-[0px_8px_16px_0px_rgba(0,0,0,0.2)] z-50 overflow-auto',
+          isOpen ? 'block' : 'hidden'
+        )}
+      >
+        {languages.map((lang) => (
+          <button
+            key={lang.code}
+            onClick={() => handleLanguageSelect(lang)}
+            className={cn(
+              'w-full text-left text-white px-4 py-3 block hover:bg-[#ddd] hover:text-[#111] transition-colors duration-200',
+              selectedLanguage.code === lang.code && 'bg-[rgba(255,165,0,0.2)]'
+            )}
+          >
+            {lang.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
