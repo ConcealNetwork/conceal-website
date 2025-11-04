@@ -10,6 +10,7 @@ import { CommunityPage } from './pages/CommunityPage';
 import { DonatePage } from './pages/DonatePage';
 import { BrandingPage } from './pages/BrandingPage';
 import { LabsPage } from './pages/LabsPage';
+import { InTheMediaPage } from './pages/InTheMediaPage';
 import { Error502Page } from './pages/Error502Page';
 import { Error504Page } from './pages/Error504Page';
 import { Error508Page } from './pages/Error508Page';
@@ -63,6 +64,7 @@ function Root() {
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/branding" element={<BrandingPage />} />
         <Route path="/labs" element={<LabsPage />} />
+        <Route path="/in-the-media" element={<InTheMediaPage />} />
         <Route path="/502" element={<Error502Page />} />
         <Route path="/504" element={<Error504Page />} />
         <Route path="/508" element={<Error508Page />} />
