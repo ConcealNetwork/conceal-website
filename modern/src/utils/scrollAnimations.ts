@@ -114,24 +114,29 @@ export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
       }
     };
 
-    // Check immediately if requested
+    // If triggerImmediately is true, set visible immediately without viewport check
     if (triggerImmediately) {
-      // Use requestAnimationFrame to ensure DOM is painted
+      // Use requestAnimationFrame to ensure DOM is painted, then set visible
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          checkVisibility();
+          setIsVisible(true);
         });
       });
+    } else {
+      // Otherwise, check visibility on mount and scroll
+      checkVisibility();
+      
+      // Set up scroll listener only if not triggering immediately
+      window.addEventListener('scroll', checkVisibility, { passive: true });
+      window.addEventListener('resize', checkVisibility, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', checkVisibility);
+        window.removeEventListener('resize', checkVisibility);
+      };
     }
-
-    // Set up scroll listener
-    window.addEventListener('scroll', checkVisibility, { passive: true });
-    window.addEventListener('resize', checkVisibility, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', checkVisibility);
-      window.removeEventListener('resize', checkVisibility);
-    };
+    
+    // No cleanup needed for triggerImmediately=true case
   }, [isVisible, types, offset, triggerImmediately, parentRef]);
 
   // Build className

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/ui/BackToTop';
 import { SocialMenu } from './components/ui/SocialMenu';
@@ -20,6 +21,7 @@ interface AppProps {
 function App({ onReady }: AppProps) {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const heroSectionRef = useRef<HTMLElement | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,48 @@ function App({ onReady }: AppProps) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Handle hash scrolling from navigation state and URL hash
+  useEffect(() => {
+    // Check both navigation state and URL hash
+    const state = location.state as { scrollToHash?: string } | null;
+    const hashFromState = state?.scrollToHash;
+    const hashFromUrl = location.hash;
+    
+    const hash = hashFromState || hashFromUrl;
+    
+    if (hash) {
+      // Remove # if present
+      const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
+      
+      // Robust scrolling: retry until element exists or timeout
+      const maxAttempts = 30;
+      let attempts = 0;
+      
+      const tryScroll = () => {
+        attempts++;
+        const element = document.querySelector(cleanHash);
+        
+        if (element) {
+          // Element found, scroll to it with slight offset for header
+          requestAnimationFrame(() => {
+            const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 100; // Offset for header
+            window.scrollTo({
+              top: elementTop - offset,
+              behavior: 'smooth'
+            });
+          });
+        } else if (attempts < maxAttempts) {
+          // Element not found yet, retry after a short delay
+          setTimeout(tryScroll, 100);
+        }
+      };
+      
+      // Start trying after a delay to allow DOM to render
+      setTimeout(tryScroll, 200);
+    }
+  }, [location.state, location.hash]);
 
   // Signal that App is ready (after initial render)
   useEffect(() => {

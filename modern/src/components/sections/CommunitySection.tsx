@@ -55,6 +55,7 @@ const socialLinksData: ColumnData = {
       ),
     },
     { label: 'BitcoinTalk', url: 'https://bitcointalk.org/index.php?topic=4515873', icon: 'fab fa-bitcoin' },
+    { label: 'Conceal MarketPlace', url: 'https://conceal.network/marketplace', icon: 'fas fa-shopping-cart' },
   ],
 };
 
@@ -91,8 +92,8 @@ const otherGroupsData: ColumnData = {
 const exchangesData: ColumnData = {
   title: 'Exchanges',
   items: [
-    { label: 'TradeOgre CCX/BTC', url: 'https://tradeogre.com/exchange/BTC-CCX' },
-    { label: 'TradeOgre CCX/USDT', url: 'https://tradeogre.com/exchange/USDT-CCX' },
+    { label: 'nonKYC CCX/BTC', url: 'https://nonkyc.io/market/CCX_BTC' },
+    { label: 'nonKYC CCX/USDT', url: 'https://nonkyc.io/market/CCX_USDT' },
   ],
 };
 

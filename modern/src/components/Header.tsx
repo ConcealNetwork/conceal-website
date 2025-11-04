@@ -81,19 +81,20 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       
       // If we're not on the main page, navigate to root with hash
       if (location.pathname !== '/') {
-        navigate('/');
-        // Wait for navigation and DOM update, then scroll
-        setTimeout(() => {
-          const element = document.querySelector(hash);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 200);
+        // Navigate with both state and hash in URL
+        navigate(`${href}`, { state: { scrollToHash: hash }, replace: false });
       } else {
         // Already on main page, just scroll
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          requestAnimationFrame(() => {
+            const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+            const offset = 100; // Offset for header
+            window.scrollTo({
+              top: elementTop - offset,
+              behavior: 'smooth'
+            });
+          });
         }
       }
     }

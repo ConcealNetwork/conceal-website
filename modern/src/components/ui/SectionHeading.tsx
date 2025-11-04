@@ -22,7 +22,7 @@ export function SectionHeading({
     return (
       <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
         <div className="flex flex-col">
-          <h2 className={titleClassName + ' border-b-2 border-[orange] w-[70%] mt-2 mx-auto'}>{title}</h2>
+          <h2 className={titleClassName + ' border-b-2 border-[orange] w-[90%] mt-2 mx-auto'}>{title}</h2>
         </div>
         <div className="overflow-hidden">
           {description && (

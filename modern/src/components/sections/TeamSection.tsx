@@ -102,13 +102,21 @@ export function TeamSection() {
   return (
     <section
       id="team"
-      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
-      style={{
-        background:
-          'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
-      }}
+      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
     >
-      <div className="w-full max-w-[1200px] mx-auto px-4">
+      {/* Background image */}
+      <div
+        id="herobg"
+        className="absolute top-0 left-0 w-full h-full bg-[url('/images/background_bw.jpg')] bg-center bg-cover bg-no-repeat"
+        style={{
+          backgroundAttachment: 'fixed',
+        }}
+      ></div>
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>

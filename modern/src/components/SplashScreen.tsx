@@ -43,7 +43,7 @@ export function SplashScreen({
           // Remove from DOM after animation
           setTimeout(() => {
             if (showOnlyOnce) {
-              setCookie('splash-shown', 'true', 1);
+              setCookie('splash-shown', 'true', 10);
             }
             onComplete();
           }, 600); // Match CSS transition duration

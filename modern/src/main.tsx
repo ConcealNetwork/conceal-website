@@ -7,7 +7,14 @@ import { AboutPage } from './pages/AboutPage';
 import { RoadmapPage } from './pages/RoadmapPage';
 import { TeamPage } from './pages/TeamPage';
 import { CommunityPage } from './pages/CommunityPage';
+import { DonatePage } from './pages/DonatePage';
+import { BrandingPage } from './pages/BrandingPage';
+import { LabsPage } from './pages/LabsPage';
+import { Error502Page } from './pages/Error502Page';
+import { Error504Page } from './pages/Error504Page';
+import { Error508Page } from './pages/Error508Page';
 import { SplashScreen } from './components/SplashScreen';
+import { hasCookie } from './utils/cookies';
 
 function Root() {
   const [showApp, setShowApp] = useState(false);
@@ -16,11 +23,14 @@ function Root() {
   
   // Only show splash screen on main landing page (/)
   const isMainPage = location.pathname === '/';
+  
+  // Check if splash screen should be shown (only if cookie doesn't exist)
+  const shouldShowSplash = isMainPage && !showApp && !hasCookie('splash-shown');
 
   return (
     <>
       {/* Show splash screen only on main page until app is ready */}
-      {isMainPage && !showApp && (
+      {shouldShowSplash && (
         <SplashScreen
           onComplete={() => setShowApp(true)}
           showOnlyOnce={true}
@@ -36,7 +46,7 @@ function Root() {
             isMainPage ? (
               <div
                 className={
-                  showApp
+                  showApp || hasCookie('splash-shown')
                     ? 'opacity-100 transition-opacity duration-1000'
                     : 'opacity-0 pointer-events-none fixed inset-0 z-0'
                 }
@@ -50,6 +60,12 @@ function Root() {
         <Route path="/roadmap" element={<RoadmapPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/donate" element={<DonatePage />} />
+        <Route path="/branding" element={<BrandingPage />} />
+        <Route path="/labs" element={<LabsPage />} />
+        <Route path="/502" element={<Error502Page />} />
+        <Route path="/504" element={<Error504Page />} />
+        <Route path="/508" element={<Error508Page />} />
       </Routes>
     </>
   );

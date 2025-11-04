@@ -31,10 +31,18 @@ export function CryptoWidgetSection() {
                   usd_24h_change: data[coinId].usd_24h_change || 0,
                 });
                 setLoading(false);
+                setError(false);
                 return;
               }
+            } else if (response.status === 429) {
+              // Rate limited - wait longer before retry
+              console.warn('CoinGecko API rate limited');
+              setError(true);
+              setLoading(false);
+              return;
             }
           } catch (err) {
+            console.error(`Error fetching price for ${coinId}:`, err);
             // Try next coin ID
             continue;
           }
@@ -44,6 +52,7 @@ export function CryptoWidgetSection() {
         setError(true);
         setLoading(false);
       } catch (err) {
+        console.error('Error in fetchPrice:', err);
         setError(true);
         setLoading(false);
       }
