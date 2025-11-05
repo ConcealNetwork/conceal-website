@@ -1,4 +1,5 @@
 import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, forwardRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 interface BaseButtonProps {
@@ -33,6 +34,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     },
     ref
   ) => {
+    const navigate = useNavigate();
     const baseClasses = cn(
       // Base styles from main.css
       'inline-flex font-sans text-sm uppercase tracking-wider',
@@ -80,28 +82,49 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       if (variant === 'slideToId' && targetId) {
         e.preventDefault();
 
-        // Retry mechanism to find element (in case it's not rendered yet)
-        const maxAttempts = 10;
-        let attempts = 0;
+        // Check if element exists on current page
+        const element = document.getElementById(targetId);
 
-        const tryScroll = () => {
-          attempts++;
-          const element = document.getElementById(targetId);
-          if (element) {
-            requestAnimationFrame(() => {
-              const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-              window.scrollTo({
-                top: elementTop - scrollOffset,
-                behavior: 'smooth',
+        if (element) {
+          // Element exists on current page, scroll to it
+          const maxAttempts = 10;
+          let attempts = 0;
+
+          const tryScroll = () => {
+            attempts++;
+            const el = document.getElementById(targetId);
+            if (el) {
+              requestAnimationFrame(() => {
+                const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                  top: elementTop - scrollOffset,
+                  behavior: 'smooth',
+                });
               });
-            });
-          } else if (attempts < maxAttempts) {
-            setTimeout(tryScroll, 50);
-          }
-        };
+            } else if (attempts < maxAttempts) {
+              setTimeout(tryScroll, 50);
+            }
+          };
 
-        // Start with a small delay to ensure DOM is ready
-        setTimeout(tryScroll, 100);
+          setTimeout(tryScroll, 100);
+        } else {
+          // Element not on current page - navigate to appropriate page
+          // Map of targetIds to their page routes
+          const targetIdToRoute: { [key: string]: string } = {
+            about: '/about',
+            labsHeading: '/labs',
+            labs: '/labs',
+            // Add more mappings as needed
+          };
+
+          const targetRoute = targetIdToRoute[targetId] || '/about'; // Default to /about for unknown IDs
+
+          // Navigate to the page with hash in state
+          navigate(targetRoute, {
+            state: { scrollToHash: `#${targetId}`, scrollOffset },
+            replace: false,
+          });
+        }
       }
 
       // Call original onClick if provided

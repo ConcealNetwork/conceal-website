@@ -26,7 +26,7 @@ export function AboutSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slideToId" targetId="about" scrollOffset={120}>
+            <Button variant="slideToId" targetId="about-about" scrollOffset={120}>
               <i className="fab fa-leanpub text-xl mr-2"></i>
               <span>Learn More</span>
             </Button>
@@ -42,7 +42,7 @@ export function AboutSection() {
         </div>
 
         {/* About Section Header */}
-        <div id="about" className="scroll-mt-48">
+        <div id="about-about" className="scroll-mt-64">
           <SectionHeading
             variant="withDescription"
             title="About"

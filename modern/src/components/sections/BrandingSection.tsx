@@ -73,7 +73,7 @@ export function BrandingSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slideToId" targetId="branding">
+            <Button variant="slideToId" targetId="branding-about">
               <i className="fas fa-book text-xl mr-2"></i>
               <span>Click to learn more</span>
             </Button>
@@ -81,11 +81,13 @@ export function BrandingSection() {
         </div>
 
         {/* About Section */}
-        <SectionHeading
-          variant="withDescription"
-          title="About"
-          description="Conceal, to keep secret, or hidden from view. Not only is this an apt description of our Project, but is also the leading influence in our design. Backgrounds are often darkened, shrouded, or obscured in some way. Text is often a Grey or White that stands out on the blackened backgrounds. The deep Yellow is used sparingly, sometimes as important keywords or as borders around important information. The careful use of the rich Yellow along with ample shades of greys and blacks implies that though much is hidden, what lies underneath is truly special."
-        />
+        <div id="branding-about" className="scroll-mt-64">
+          <SectionHeading
+            variant="withDescription"
+            title="About"
+            description="Conceal, to keep secret, or hidden from view. Not only is this an apt description of our Project, but is also the leading influence in our design. Backgrounds are often darkened, shrouded, or obscured in some way. Text is often a Grey or White that stands out on the blackened backgrounds. The deep Yellow is used sparingly, sometimes as important keywords or as borders around important information. The careful use of the rich Yellow along with ample shades of greys and blacks implies that though much is hidden, what lies underneath is truly special."
+          />
+        </div>
 
         <div className="h-[5rem]"></div>
 

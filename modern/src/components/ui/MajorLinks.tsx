@@ -25,7 +25,7 @@ const majorLinks: MajorLink[] = [
   },
   {
     name: 'Build',
-    url: 'https://conceal.network/labs/',
+    url: '/labs',
     icon: 'fa fa-trowel-bricks',
     external: true,
   },

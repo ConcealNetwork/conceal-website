@@ -151,7 +151,7 @@ export function LabsSection() {
               <i className="fas fa-flask text-xl mr-2"></i>
               <span>Projects</span>
             </Button>
-            <Button variant="slideToId" targetId="about">
+            <Button variant="slideToId" targetId="labs-about" scrollOffset={200}>
               <i className="fab fa-leanpub text-xl mr-2"></i>
               <span>Learn More</span>
             </Button>
@@ -159,7 +159,7 @@ export function LabsSection() {
         </div>
 
         {/* About Section */}
-        <div className="mb-24">
+        <div id="labs-about" className="mb-24 scroll-mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             <div className="lg:col-span-1">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>

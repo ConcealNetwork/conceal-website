@@ -7,3 +7,6 @@
 cache
 /phpinfo.php
 .cursorrules
+
+# Local Netlify folder
+.netlify

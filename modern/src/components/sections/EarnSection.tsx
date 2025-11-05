@@ -129,7 +129,7 @@ export function EarnSection() {
               <i className="fas fa-download text-xl mr-2"></i>
               <span>Download</span>
             </Button>
-            <Button variant="slideToId" targetId="about">
+            <Button variant="slideToId" targetId="earn-about">
               <i className="fas fa-book text-xl mr-2"></i>
               <span>Learn More</span>
             </Button>
@@ -137,7 +137,7 @@ export function EarnSection() {
         </div>
 
         {/* About Section */}
-        <div id="about" className="mb-24 scroll-mt-24">
+        <div id="earn-about" className="mb-24 scroll-mt-24">
           <SectionHeading
             variant="withDescription"
             title="About"
