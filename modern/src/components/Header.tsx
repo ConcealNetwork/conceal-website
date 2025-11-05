@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { LanguageSelector } from './ui/LanguageSelector';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { LanguageSelector } from './ui/LanguageSelector';
 
 interface NavItem {
   label: string;
@@ -80,13 +80,13 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
     if (href.startsWith('/#')) {
       e.preventDefault();
       const hash = href.substring(1); // Get #mining, #wallets, etc.
-      
+
       // If we're not on the main page, navigate to root first, then scroll
       if (location.pathname !== '/') {
         // Navigate to root with hash in state
-        navigate('/', { 
+        navigate('/', {
           state: { scrollToHash: hash },
-          replace: false
+          replace: false,
         });
       } else {
         // Already on main page, just scroll
@@ -97,7 +97,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
             const offset = 100; // Offset for header
             window.scrollTo({
               top: elementTop - offset,
-              behavior: 'smooth'
+              behavior: 'smooth',
             });
           });
         }

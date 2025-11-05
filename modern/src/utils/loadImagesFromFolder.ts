@@ -9,20 +9,20 @@ export function generateImagePaths(
   maxAttempts: number = 20
 ): string[] {
   const images: string[] = [];
-  
+
   // Try to load images with 2-digit zero-padded numbers (01, 02, 03, etc.)
   for (let i = 1; i <= maxAttempts; i++) {
     const num = i.toString().padStart(2, '0');
     // Try common image extensions
     const extensions = ['png', 'jpg', 'jpeg', 'webp'];
-    
+
     for (const ext of extensions) {
       const path = `${folderPath}/${pattern}_${num}.${ext}`;
       images.push(path);
       break; // Only add one per number
     }
   }
-  
+
   return images;
 }
 
@@ -37,12 +37,11 @@ export function loadImagesWithPattern(
   extension: string = 'png'
 ): string[] {
   const images: string[] = [];
-  
+
   for (let i = 1; i <= count; i++) {
     const num = i.toString().padStart(2, '0');
     images.push(`${folderPath}/${pattern}_${num}.${extension}`);
   }
-  
+
   return images;
 }
-

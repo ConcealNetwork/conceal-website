@@ -1,6 +1,6 @@
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface Feature {
   title: string;
@@ -22,7 +22,8 @@ const features: Feature[] = [
   },
   {
     title: 'Deposit funds for interest',
-    description: 'Conceal-Earn empowers anyone in the world to deposit their funds in exchange for interest.',
+    description:
+      'Conceal-Earn empowers anyone in the world to deposit their funds in exchange for interest.',
     imageSprite: '/images/landingBankingImgs.png',
     imagePositionY: '0',
     imageHeight: '340px',
@@ -30,7 +31,8 @@ const features: Feature[] = [
   },
   {
     title: 'Worldwide access',
-    description: 'There are millions without access to financial services worldwide. Conceal-Earn provides much needed access to anyone, anywhere.',
+    description:
+      'There are millions without access to financial services worldwide. Conceal-Earn provides much needed access to anyone, anywhere.',
     imageSprite: '/images/landingBankingImgs.png',
     imagePositionY: '-340px',
     imageHeight: '340px',
@@ -38,7 +40,8 @@ const features: Feature[] = [
   },
   {
     title: 'Keep your funds safe',
-    description: 'When you deposit your funds with Conceal-Earn they are cold staked on the blockchain for safekeeping.',
+    description:
+      'When you deposit your funds with Conceal-Earn they are cold staked on the blockchain for safekeeping.',
     imageSprite: '/images/landingBankingImgs.png',
     imagePositionY: '-680px',
     imageHeight: '340px',
@@ -46,7 +49,8 @@ const features: Feature[] = [
   },
   {
     title: 'Earn more than a savings account',
-    description: 'Deposits with Conceal-Earn earn significantly more than a savings account, as much as 6% APR plus compounding.',
+    description:
+      'Deposits with Conceal-Earn earn significantly more than a savings account, as much as 6% APR plus compounding.',
     imageSprite: '/images/landingBankingImgs.png',
     imagePositionY: '-1020px',
     imageHeight: '340px',
@@ -78,7 +82,9 @@ function FeatureCard({ feature }: { feature: Feature }) {
       </div>
 
       {/* Text Element */}
-      <div className={`order-1 ${isNormal ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pl-6 lg:pl-6 pr-0 lg:pr-12'}`}>
+      <div
+        className={`order-1 ${isNormal ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pl-6 lg:pl-6 pr-0 lg:pr-12'}`}
+      >
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <h2 className="text-[2.8rem] uppercase text-[orange] mb-6">{feature.title}</h2>
         </AnimatedElement>
@@ -92,10 +98,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
 
 export function EarnSection() {
   return (
-    <section
-      id="earn"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="earn" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -152,4 +155,3 @@ export function EarnSection() {
     </section>
   );
 }
-

@@ -43,8 +43,6 @@ export function CryptoWidgetSection() {
             }
           } catch (err) {
             console.error(`Error fetching price for ${coinId}:`, err);
-            // Try next coin ID
-            continue;
           }
         }
 

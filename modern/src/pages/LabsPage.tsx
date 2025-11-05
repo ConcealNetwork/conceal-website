@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { LabsSection } from '../components/sections/LabsSection';
+import { BackToTop } from '../components/ui/BackToTop';
 import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
-import { BackToTop } from '../components/ui/BackToTop';
-import { LabsSection } from '../components/sections/LabsSection';
 
 export function LabsPage() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -41,4 +41,3 @@ export function LabsPage() {
     </div>
   );
 }
-

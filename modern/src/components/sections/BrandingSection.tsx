@@ -1,6 +1,6 @@
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface DownloadLink {
   label: string;
@@ -10,10 +10,26 @@ interface DownloadLink {
 
 const logoDownloads: DownloadLink[] = [
   { label: 'Logo svg file', url: '/images/branding/logo.svg', download: 'logo.svg' },
-  { label: 'Logo dark 1600x1600', url: '/images/branding/community-bbg-center-s-1600x1600.png', download: 'logo_1600x1600.png' },
-  { label: 'Logo white 1600x1600', url: '/images/branding/community-1600x1600.png', download: 'logo_1600x1600.png' },
-  { label: 'Logo dark 256x256', url: '/images/branding/community-bbg-center-256x256.png', download: 'logo_256x256.png' },
-  { label: 'Logo white 256x256', url: '/images/branding/community-256x256.png', download: 'logo_256x256.png' },
+  {
+    label: 'Logo dark 1600x1600',
+    url: '/images/branding/community-bbg-center-s-1600x1600.png',
+    download: 'logo_1600x1600.png',
+  },
+  {
+    label: 'Logo white 1600x1600',
+    url: '/images/branding/community-1600x1600.png',
+    download: 'logo_1600x1600.png',
+  },
+  {
+    label: 'Logo dark 256x256',
+    url: '/images/branding/community-bbg-center-256x256.png',
+    download: 'logo_256x256.png',
+  },
+  {
+    label: 'Logo white 256x256',
+    url: '/images/branding/community-256x256.png',
+    download: 'logo_256x256.png',
+  },
 ];
 
 const fontLinks = [
@@ -30,10 +46,7 @@ const colors = [
 
 export function BrandingSection() {
   return (
-    <section
-      id="branding"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="branding" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -45,7 +58,7 @@ export function BrandingSection() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
@@ -80,7 +93,7 @@ export function BrandingSection() {
         <div className="mb-24 ml-[5rem] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-center lg:items-start gap-4">
             <AnimatedElement types={['slideInLeft']} triggerImmediately={true} speed="normal">
-              <div 
+              <div
                 className="w-[250px] h-[250px] mb-2.5 rounded-full bg-black"
                 style={{
                   backgroundImage: "url('/images/branding/logo.svg')",
@@ -91,7 +104,7 @@ export function BrandingSection() {
               ></div>
             </AnimatedElement>
             <AnimatedElement types={['slideInLeft']} triggerImmediately={true} speed="slow">
-              <div 
+              <div
                 className="w-[250px] h-[250px] rounded-full bg-white"
                 style={{
                   backgroundImage: "url('/images/branding/logo.svg')",
@@ -140,7 +153,9 @@ export function BrandingSection() {
           <div className="order-1 lg:order-2 flex flex-wrap justify-center lg:justify-start gap-4">
             {colors.map((color, index) => (
               <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
-                <div className={`relative w-[150px] h-[150px] ${color.className} text-white flex items-center justify-center`}>
+                <div
+                  className={`relative w-[150px] h-[150px] ${color.className} text-white flex items-center justify-center`}
+                >
                   <p className="text-center text-lg font-semibold">{color.hex}</p>
                 </div>
               </AnimatedElement>
@@ -154,7 +169,9 @@ export function BrandingSection() {
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <div className="p-10 border-l-4 border-[orange]">
                 <p className="text-[1.7rem] text-[#757575] italic leading-relaxed">
-                  "Arguing that you don't care about privacy because you have nothing to hide is no different from saying, you don't care about freedom of speech because you have nothing to say."
+                  "Arguing that you don't care about privacy because you have nothing to hide is no
+                  different from saying, you don't care about freedom of speech because you have
+                  nothing to say."
                 </p>
               </div>
             </AnimatedElement>
@@ -186,4 +203,3 @@ export function BrandingSection() {
     </section>
   );
 }
-

@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
 import type { RefObject } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
  * Scroll-based animation system ported from the original website
@@ -125,17 +125,17 @@ export function useScrollAnimation(options: ScrollAnimationOptions = {}) {
     } else {
       // Otherwise, check visibility on mount and scroll
       checkVisibility();
-      
+
       // Set up scroll listener only if not triggering immediately
       window.addEventListener('scroll', checkVisibility, { passive: true });
       window.addEventListener('resize', checkVisibility, { passive: true });
-      
+
       return () => {
         window.removeEventListener('scroll', checkVisibility);
         window.removeEventListener('resize', checkVisibility);
       };
     }
-    
+
     // No cleanup needed for triggerImmediately=true case
   }, [isVisible, types, offset, triggerImmediately, parentRef]);
 

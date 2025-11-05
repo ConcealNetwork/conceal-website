@@ -11,25 +11,29 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'April 2018',
     title: 'Initial commit',
-    description: 'The first release candidate, Testnet, Daemon, Miner and Wallet are launched. Something really great begins.',
+    description:
+      'The first release candidate, Testnet, Daemon, Miner and Wallet are launched. Something really great begins.',
     status: 'completed',
   },
   {
     date: 'May 2018',
     title: 'Mainnet launched',
-    description: 'On 23rd May 2018 mainnet is launched. First block is officialy mined by the miners.',
+    description:
+      'On 23rd May 2018 mainnet is launched. First block is officialy mined by the miners.',
     status: 'completed',
   },
   {
     date: 'June 2018',
     title: 'Encrypted Messaging & Deposits',
-    description: 'Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched. Wow!',
+    description:
+      'Innovative DeFi features utilizing cold-staked deposits that pay interest and self-destructing encrypted messages are launched. Wow!',
     status: 'completed',
   },
   {
     date: 'July 2018',
     title: 'Website & Block Explorer',
-    description: "The official website is born providing a central point of information for the project. The Block Explorer is released. We're on fire!",
+    description:
+      "The official website is born providing a central point of information for the project. The Block Explorer is released. We're on fire!",
     status: 'completed',
   },
   {
@@ -41,7 +45,8 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'November 2018',
     title: 'Exchange Listing & Investments',
-    description: 'CCX is listed on the STEX exchange and the deposit system is revamped to support investments. Stock is rising!',
+    description:
+      'CCX is listed on the STEX exchange and the deposit system is revamped to support investments. Stock is rising!',
     status: 'completed',
   },
   {
@@ -53,43 +58,50 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'March 2019',
     title: 'Conceal Cloud',
-    description: 'Conceal Cloud is launched offering a secure, powerful and feature-rich web wallet for CCX. Adoption skyrockets!',
+    description:
+      'Conceal Cloud is launched offering a secure, powerful and feature-rich web wallet for CCX. Adoption skyrockets!',
     status: 'completed',
   },
   {
     date: 'May 2019',
     title: 'Conceal Labs',
-    description: 'Conceal Labs is launched offering anyone the ability to get paid to build cool things with Conceal. The community grows!',
+    description:
+      'Conceal Labs is launched offering anyone the ability to get paid to build cool things with Conceal. The community grows!',
     status: 'completed',
   },
   {
     date: 'July 2019',
     title: 'CONCEAL MOBILE',
-    description: 'Conceal Mobile is launched offering a robust mobile wallet with encrypted messages. Messaging popularity explodes!',
+    description:
+      'Conceal Mobile is launched offering a robust mobile wallet with encrypted messages. Messaging popularity explodes!',
     status: 'completed',
   },
   {
     date: 'August 2019',
     title: 'CONCEAL PAY',
-    description: 'Conceal Pay is launched making it simple for anyone to accept payments or donations in CCX. Volume expands!',
+    description:
+      'Conceal Pay is launched making it simple for anyone to accept payments or donations in CCX. Volume expands!',
     status: 'completed',
   },
   {
     date: 'December 2019',
     title: 'CONCEAL ID',
-    description: 'Conceal ID is launched offering memorable branded addresses akin to usernames. Ease of use improves!',
+    description:
+      'Conceal ID is launched offering memorable branded addresses akin to usernames. Ease of use improves!',
     status: 'completed',
   },
   {
     date: 'January 2020',
     title: 'Daemon & Wallet Improvements',
-    description: "Conceal Desktop v6 is released with varying interface and daemon improvements. We're getting fancy!",
+    description:
+      "Conceal Desktop v6 is released with varying interface and daemon improvements. We're getting fancy!",
     status: 'completed',
   },
   {
     date: 'August 2020',
     title: 'Wrapped CCX (wCCX)',
-    description: 'Wrapped CCX is created on ethereum blockchain allowing CCX owners to access DEFI on ETH!',
+    description:
+      'Wrapped CCX is created on ethereum blockchain allowing CCX owners to access DEFI on ETH!',
     status: 'completed',
   },
   {
@@ -101,19 +113,22 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'September 2020',
     title: 'Deposits on Cloud & Mobile',
-    description: 'Cold staking came to cloud and mobile. You are able to earn interest from your phone!',
+    description:
+      'Cold staking came to cloud and mobile. You are able to earn interest from your phone!',
     status: 'completed',
   },
   {
     date: 'October 2020',
     title: 'CN GPU',
-    description: 'CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA. Our fairest mining algorithm yet.',
+    description:
+      'CCX changes to CN GPU mining algorithm to avoid ASICs and FPGA. Our fairest mining algorithm yet.',
     status: 'completed',
   },
   {
     date: 'Q4 2020',
     title: 'Cloud & Mobile Self-destructing Messages',
-    description: 'Send messages to other users that self destruct after given time on Cloud wallets! (service retired)',
+    description:
+      'Send messages to other users that self destruct after given time on Cloud wallets! (service retired)',
     status: 'completed',
   },
   {
@@ -125,13 +140,15 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'Q2 2021',
     title: 'CONCEAL LIVE',
-    description: 'Decentralized p2p and end to end encrypted platform for video / audio calls and messages. (service retired)',
+    description:
+      'Decentralized p2p and end to end encrypted platform for video / audio calls and messages. (service retired)',
     status: 'completed',
   },
   {
     date: 'Q4 2021',
     title: 'Conceal App',
-    description: 'Initial release of cross platform application with Wallet and News Feed as the first supported modules.',
+    description:
+      'Initial release of cross platform application with Wallet and News Feed as the first supported modules.',
     status: 'completed',
   },
   {
@@ -149,25 +166,29 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'Q3 2023',
     title: 'Web wallet improvements',
-    description: 'Improving speed and making optimizations. Now send encrypted Messages from your smartphone',
+    description:
+      'Improving speed and making optimizations. Now send encrypted Messages from your smartphone',
     status: 'completed',
   },
   {
     date: 'Q3 2024',
     title: 'Web wallet improvements',
-    description: 'Improving anonymity by randomly picking nodes from a bigger list, now accessing SSL SmartNodes.',
+    description:
+      'Improving anonymity by randomly picking nodes from a bigger list, now accessing SSL SmartNodes.',
     status: 'completed',
   },
   {
     date: 'Q3 2024',
     title: 'Conceal Marketplace',
-    description: 'A great place to interact with other Concealers, Buy, Sell in a peer 2 peer way trading with your CCX!',
+    description:
+      'A great place to interact with other Concealers, Buy, Sell in a peer 2 peer way trading with your CCX!',
     status: 'completed',
   },
   {
     date: 'Q4 2024',
     title: 'Web wallet improvements',
-    description: 'Now available in 14 languages. Access Deposits (view-only). Use qr code scanning feature to send messages. Get notified of new messages.',
+    description:
+      'Now available in 14 languages. Access Deposits (view-only). Use qr code scanning feature to send messages. Get notified of new messages.',
     status: 'completed',
   },
   {
@@ -210,10 +231,7 @@ const timelineItems: TimelineItem[] = [
 
 export function RoadmapSection() {
   return (
-    <section
-      id="roadmap"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="roadmap" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -225,7 +243,7 @@ export function RoadmapSection() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
@@ -236,7 +254,8 @@ export function RoadmapSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-            <span className="text-[orange] font-semibold">The Birth</span> of something <span className="text-[orange] font-semibold">Amazing.</span>
+              <span className="text-[orange] font-semibold">The Birth</span> of something{' '}
+              <span className="text-[orange] font-semibold">Amazing.</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -246,7 +265,9 @@ export function RoadmapSection() {
           <div className="container max-w-[1140px] mx-auto px-4">
             <div className="timelines mb-10">
               <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-                <h2 className="text-[3.2rem] text-[orange] font-semibold text-center mb-10">CONCEAL ROADMAP</h2>
+                <h2 className="text-[3.2rem] text-[orange] font-semibold text-center mb-10">
+                  CONCEAL ROADMAP
+                </h2>
               </AnimatedElement>
             </div>
             <div className="all-timelines relative">
@@ -263,34 +284,52 @@ export function RoadmapSection() {
 
                 return (
                   <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
-                    <div className={`single-timeline flex items-center mb-[22px] ${isEven ? 'flex-row-reverse' : ''}`}>
+                    <div
+                      className={`single-timeline flex items-center mb-[22px] ${isEven ? 'flex-row-reverse' : ''}`}
+                    >
                       <div className="timeline-blank w-1/2"></div>
-                      <div className={`timeline-text w-1/2 ${isEven ? 'pr-[30px] text-right' : 'pl-[30px]'} relative`}>
-                        <div className={`t-square absolute top-[10px] ${isEven ? 'right-[-6px]' : 'left-[-6px]'} w-3 h-3 ${
-                          isCompleted ? 'bg-white' : isInProg || isActiv ? 'bg-[orange]' : ''
-                        }`}></div>
-                        <span className={`block text-[#a8a8a8] ${isEven ? 'text-right' : ''} ${
-                          isDone ? 'border-b-[5px] border-dashed border-white mb-[50px] pb-4' : ''
-                        } ${
-                          isActiv ? 'border-t-[5px] border-dashed border-[orange] pt-4 mt-4' : ''
-                        }`}>
+                      <div
+                        className={`timeline-text w-1/2 ${isEven ? 'pr-[30px] text-right' : 'pl-[30px]'} relative`}
+                      >
+                        <div
+                          className={`t-square absolute top-[10px] ${isEven ? 'right-[-6px]' : 'left-[-6px]'} w-3 h-3 ${
+                            isCompleted ? 'bg-white' : isInProg || isActiv ? 'bg-[orange]' : ''
+                          }`}
+                        ></div>
+                        <span
+                          className={`block text-[#a8a8a8] ${isEven ? 'text-right' : ''} ${
+                            isDone ? 'border-b-[5px] border-dashed border-white mb-[50px] pb-4' : ''
+                          } ${
+                            isActiv ? 'border-t-[5px] border-dashed border-[orange] pt-4 mt-4' : ''
+                          }`}
+                        >
                           {item.date && (
-                            <h6 className={`font-semibold text-[1.5rem] inline-block mb-2 ${
-                              isCompleted ? 'text-white' : isInProg || isActiv ? 'text-[orange]' : ''
-                            } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}>
+                            <h6
+                              className={`font-semibold text-[1.5rem] inline-block mb-2 ${
+                                isCompleted
+                                  ? 'text-white'
+                                  : isInProg || isActiv
+                                    ? 'text-[orange]'
+                                    : ''
+                              } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
+                            >
                               {item.date}, {item.title}
                             </h6>
                           )}
                           {!item.date && (
-                            <h6 className={`font-semibold text-[1.2rem] inline-block mb-2 ${
-                              isCompleted ? 'text-white' : isInProg || isActiv ? 'text-[orange]' : ''
-                            } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}>
+                            <h6
+                              className={`font-semibold text-[1.2rem] inline-block mb-2 ${
+                                isCompleted
+                                  ? 'text-white'
+                                  : isInProg || isActiv
+                                    ? 'text-[orange]'
+                                    : ''
+                              } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
+                            >
                               {item.title}
                             </h6>
                           )}
-                          {item.description && (
-                            <span> — {item.description}</span>
-                          )}
+                          {item.description && <span> — {item.description}</span>}
                         </span>
                       </div>
                     </div>

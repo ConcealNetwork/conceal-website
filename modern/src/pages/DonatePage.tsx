@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { DonateSection } from '../components/sections/DonateSection';
+import { BackToTop } from '../components/ui/BackToTop';
 import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
-import { BackToTop } from '../components/ui/BackToTop';
-import { DonateSection } from '../components/sections/DonateSection';
 
 export function DonatePage() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -41,4 +41,3 @@ export function DonatePage() {
     </div>
   );
 }
-

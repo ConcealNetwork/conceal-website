@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedElement } from '../ui/AnimatedElement';
+import { SectionHeading } from '../ui/SectionHeading';
 import { YouTubeCarousel } from '../ui/YouTubeCarousel';
 
 interface MediaItem {
@@ -48,7 +48,7 @@ const mediaTabs: MediaTab[] = [
         image: '/images/media/media_ama_06.jpeg',
       },
       {
-        title: 'Binance: An Altcoin Trader\'s Handbook',
+        title: "Binance: An Altcoin Trader's Handbook",
         url: 'https://www.altcointradershandbook.com/coin-report-conceal-network/',
         image: '/images/media/media_ama_02.jpg',
       },
@@ -372,7 +372,10 @@ function MediaTabContent({ tab }: { tab: MediaTab }) {
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           {tab.miningVideos.map((videoUrl, index) => (
             <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
-              <div className="w-full max-w-[800px] min-w-[300px] flex-1" style={{ margin: '1em 0.5em' }}>
+              <div
+                className="w-full max-w-[800px] min-w-[300px] flex-1"
+                style={{ margin: '1em 0.5em' }}
+              >
                 <div className="w-full relative" style={{ paddingBottom: '56.25%' }}>
                   <iframe
                     src={videoUrl}
@@ -459,9 +462,7 @@ export function InTheMediaSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-[1.8rem] font-light px-4 py-2 transition-colors duration-200 ${
-                  activeTab === tab.id
-                    ? 'text-[orange]'
-                    : 'text-white hover:text-[orange]'
+                  activeTab === tab.id ? 'text-[orange]' : 'text-white hover:text-[orange]'
                 }`}
               >
                 {tab.label}
@@ -482,4 +483,3 @@ export function InTheMediaSection() {
     </section>
   );
 }
-

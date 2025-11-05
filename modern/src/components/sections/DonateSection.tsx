@@ -1,7 +1,7 @@
-import { SectionHeading } from '../ui/SectionHeading';
+import { useState } from 'react';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
-import { useState } from 'react';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface DonationAddress {
   id: string;
@@ -16,7 +16,8 @@ const donationAddresses: DonationAddress[] = [
     id: 'fd31cb323dce46a6a313bc31adc4beb5',
     name: 'Conceal (CCX)',
     icon: '/icons/ccx.svg',
-    address: 'ccx7Mi9osGEiPkJ8Eq9ajfFFipavENjJ92Gf4xCmu4KXiExSjcWoSefCQYtcA2BUrTPjrMY5pssgMNPRxaR1DXtj3TvTJG6LRo',
+    address:
+      'ccx7Mi9osGEiPkJ8Eq9ajfFFipavENjJ92Gf4xCmu4KXiExSjcWoSefCQYtcA2BUrTPjrMY5pssgMNPRxaR1DXtj3TvTJG6LRo',
   },
   {
     id: '4c1d510bda3b4ceaa8d67ffad8404a63',
@@ -28,7 +29,8 @@ const donationAddresses: DonationAddress[] = [
     id: '85b860038c734fe29a5c778e20b5a1c9',
     name: 'Monero (XMR)',
     icon: '/icons/xmr.svg',
-    address: '89Uw4SfFTTm1kcyP5ZhYwCgvMvvmLvM1nfWVxqVTpDqYMjHpwfK3ryaLNeTFk4kjScFoSip5T2TgdGAithV4GUo5Ga9FcRL',
+    address:
+      '89Uw4SfFTTm1kcyP5ZhYwCgvMvvmLvM1nfWVxqVTpDqYMjHpwfK3ryaLNeTFk4kjScFoSip5T2TgdGAithV4GUo5Ga9FcRL',
   },
   {
     id: '93435cc42a4d4b93b4905b7033d628e8',
@@ -79,19 +81,23 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
       <div className="flex items-center justify-center w-12">
         <img src={donation.icon} alt={donation.name} className="w-12 h-12" />
       </div>
-      
+
       {/* Name */}
       <div className="flex items-center">
-        <span className="text-[orange] font-semibold text-[2.475rem] whitespace-nowrap">{donation.name}</span>
+        <span className="text-[orange] font-semibold text-[2.475rem] whitespace-nowrap">
+          {donation.name}
+        </span>
       </div>
-      
+
       {/* Network */}
       <div className="flex items-center">
         {donation.network ? (
-          <span className="text-[#757575] text-[2.475rem] whitespace-nowrap">{donation.network}</span>
+          <span className="text-[#757575] text-[2.475rem] whitespace-nowrap">
+            {donation.network}
+          </span>
         ) : null}
       </div>
-      
+
       {/* Address */}
       <div className="flex items-center min-w-0">
         <input
@@ -101,7 +107,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
           className="w-full bg-[rgba(0,0,0,0.3)] border border-[rgba(255,255,255,0.2)] rounded px-3 py-2 text-white text-[1.925rem]"
         />
       </div>
-      
+
       {/* Copy Button */}
       <div className="flex items-center justify-center">
         <button
@@ -118,10 +124,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
 
 export function DonateSection() {
   return (
-    <section
-      id="donate"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="donate" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -133,7 +136,7 @@ export function DonateSection() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
@@ -168,12 +171,18 @@ export function DonateSection() {
         <div className="mb-12 space-y-4">
           <AnimatedElement types={['dragText']}>
             <p className="text-[1.7rem] text-[#757575]">
-              You can make a donation to Conceal with your cryptocurrency of choice and send your desired amount to one of our receiving addresses below. Your contribution, no matter how big or small, has the power to increase the adoption and development of the Conceal Network. All of the donations we receive will support the project so that we can offer better services to our community, boost liquidity, hire more talented developers, increase our social-media presence and bolster other marketing efforts.
+              You can make a donation to Conceal with your cryptocurrency of choice and send your
+              desired amount to one of our receiving addresses below. Your contribution, no matter
+              how big or small, has the power to increase the adoption and development of the
+              Conceal Network. All of the donations we receive will support the project so that we
+              can offer better services to our community, boost liquidity, hire more talented
+              developers, increase our social-media presence and bolster other marketing efforts.
             </p>
           </AnimatedElement>
           <AnimatedElement types={['dragText']}>
             <p className="text-[1.7rem] text-[#757575]">
-              Make a contribution today and help us on the road to a better and brighter future for all Concealers.
+              Make a contribution today and help us on the road to a better and brighter future for
+              all Concealers.
             </p>
           </AnimatedElement>
           <AnimatedElement types={['dragText']}>
@@ -208,4 +217,3 @@ export function DonateSection() {
     </section>
   );
 }
-

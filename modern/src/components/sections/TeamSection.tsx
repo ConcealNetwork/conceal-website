@@ -1,5 +1,5 @@
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedElement } from '../ui/AnimatedElement';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface TeamMember {
   name: string;
@@ -17,7 +17,8 @@ const teamMembers: TeamMember[] = [
     name: 'krypt0x (aka 0x)',
     role: 'HEAD OF OPERATIONS',
     image: '/images/teampage/krypt0x.png',
-    description: "I'm co-founder of Conceal Community. I'm curious about cryptography and privacy-enhancing techniques. I have been working on IT for more than two decades and became involved with blockchain technology early in its inception. My mission is to empower organizations with a culture of privacy-protection.",
+    description:
+      "I'm co-founder of Conceal Community. I'm curious about cryptography and privacy-enhancing techniques. I have been working on IT for more than two decades and became involved with blockchain technology early in its inception. My mission is to empower organizations with a culture of privacy-protection.",
     socials: {
       github: 'https://github.com/krypt0x',
       twitter: 'https://x.com/Krypt0xChaos',
@@ -27,7 +28,8 @@ const teamMembers: TeamMember[] = [
     name: 'Taegus',
     role: 'Head of Development',
     image: '/images/teampage/Taegus.png',
-    description: "I got involved with crypto in 2018. Came for the money, and stayed for the vision of Satoshi. You could say I am a true believer now. Found out about Conceal in 2019 and instantly fell in love with it. I have been helping ever since.Other than that I have finished university for computer science and have over 20 years of development experience. My passion now is advocating decentralization and privacy.",
+    description:
+      'I got involved with crypto in 2018. Came for the money, and stayed for the vision of Satoshi. You could say I am a true believer now. Found out about Conceal in 2019 and instantly fell in love with it. I have been helping ever since.Other than that I have finished university for computer science and have over 20 years of development experience. My passion now is advocating decentralization and privacy.',
     socials: {
       github: 'https://github.com/taeguscromis',
       twitter: 'https://x.com/Taegus1',
@@ -37,14 +39,16 @@ const teamMembers: TeamMember[] = [
     name: 'LolitaLollipop',
     role: 'HEAD OF Community',
     image: '/images/teampage/LolitaLollipop.png',
-    description: "A lover of Freedom and Privacy, interested in Cryptography, and perfectly Anonymous. Discovering Conceal in early 2019 I was blown away by the Vision and the Adherence to the Core Principles found in the Satoshi Nakamoto whitepaper, and I've been here ever since. I'm on a personal mission to see Privacy become a normal part of everyone's daily life!",
+    description:
+      "A lover of Freedom and Privacy, interested in Cryptography, and perfectly Anonymous. Discovering Conceal in early 2019 I was blown away by the Vision and the Adherence to the Core Principles found in the Satoshi Nakamoto whitepaper, and I've been here ever since. I'm on a personal mission to see Privacy become a normal part of everyone's daily life!",
     socials: {},
   },
   {
     name: 'bomb-on',
     role: 'Developer',
     image: '/images/teampage/bombon.jpg',
-    description: 'Working in IT industry for more than 20 years, exploring the crypto world since 2016. as a miner and pools operator, joined CCX team in 2018 to help with macOS issues, currently focused on front-end development. Technical analysis enthusiast and very passionate about losing money while trading. Creating crappy art and shitty music.',
+    description:
+      'Working in IT industry for more than 20 years, exploring the crypto world since 2016. as a miner and pools operator, joined CCX team in 2018 to help with macOS issues, currently focused on front-end development. Technical analysis enthusiast and very passionate about losing money while trading. Creating crappy art and shitty music.',
     socials: {
       github: 'https://github.com/bomb-on',
     },
@@ -62,7 +66,8 @@ const teamMembers: TeamMember[] = [
     name: 'AxVultis',
     role: 'Lead Developer',
     image: '/images/teampage/AxVultis.png',
-    description: 'I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.',
+    description:
+      'I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.',
     socials: {
       github: 'https://github.com/AxVultis',
       twitter: 'https://x.com/AxVultis',
@@ -72,7 +77,8 @@ const teamMembers: TeamMember[] = [
     name: 'Acktarius',
     role: 'Developer',
     image: '/images/teampage/Acktarius.png',
-    description: "I came late to the cryptocurrency world and joined Conceal mid 2021, having a very keen interest for its unique privacy features. I 'm very excited to bring my experience as R&D engineer and time spent programming as a hobby, to this community of talented, discreet, passionate and dedicated people.",
+    description:
+      "I came late to the cryptocurrency world and joined Conceal mid 2021, having a very keen interest for its unique privacy features. I 'm very excited to bring my experience as R&D engineer and time spent programming as a hobby, to this community of talented, discreet, passionate and dedicated people.",
     socials: {
       github: 'https://github.com/Acktarius',
       twitter: 'https://x.com/xchaps',
@@ -82,7 +88,8 @@ const teamMembers: TeamMember[] = [
     name: 'Mannan',
     role: 'Community Manager',
     image: '/images/teampage/Mannan.png',
-    description: "I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.",
+    description:
+      "I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.",
     socials: {
       twitter: 'https://x.com/CryptolordTG',
     },
@@ -91,7 +98,8 @@ const teamMembers: TeamMember[] = [
     name: 'Giomarx7',
     role: 'Community Manager',
     image: '/images/teampage/Giomarx7.jpg',
-    description: "I started mining crypto in late 2016, did it mainly for the money but as I became more curious about the technology, I was eager to learn more, in 2018 I've found out about Conceal, this was a purpose worth fighting for, joined the team in 2024. Technology can enslave you, but it can also give you freedom and privacy #Conceal..",
+    description:
+      "I started mining crypto in late 2016, did it mainly for the money but as I became more curious about the technology, I was eager to learn more, in 2018 I've found out about Conceal, this was a purpose worth fighting for, joined the team in 2024. Technology can enslave you, but it can also give you freedom and privacy #Conceal..",
     socials: {
       twitter: 'https://x.com/Giomarx7',
     },
@@ -100,10 +108,7 @@ const teamMembers: TeamMember[] = [
 
 export function TeamSection() {
   return (
-    <section
-      id="team"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="team" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -115,7 +120,7 @@ export function TeamSection() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
@@ -126,7 +131,8 @@ export function TeamSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-            <span className="text-[orange] font-semibold">Alone</span> we can do so little; <span className="text-[orange] font-semibold">together</span> we can do so much.
+              <span className="text-[orange] font-semibold">Alone</span> we can do so little;{' '}
+              <span className="text-[orange] font-semibold">together</span> we can do so much.
             </h1>
           </AnimatedElement>
         </div>
@@ -141,7 +147,12 @@ export function TeamSection() {
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member, index) => (
-            <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false} startOpacity={0.15}>
+            <AnimatedElement
+              key={index}
+              types={['fadeIn']}
+              triggerImmediately={false}
+              startOpacity={0.15}
+            >
               <div className="team-card group text-center rounded-[2em] p-4 bg-[rgba(81,70,68,0.6)] hover:bg-[#2F4F4F] transition-all duration-500 h-full flex flex-col">
                 <div className="team-img-wrapper relative mb-4 flex justify-center">
                   <div className="team-img rounded-full overflow-hidden relative opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:delay-200 w-[300px] h-[300px]">
@@ -208,12 +219,21 @@ export function TeamSection() {
           <div className="mt-8 space-y-4">
             <AnimatedElement types={['dragText']}>
               <p className="text-[1.7rem] text-[#757575]">
-                Conceal Team members operate as a DAO, or Decentralized Autonomous Organization, and each member will take on tasks that He or She can specialize in, voluntarily and without the presence of any third party or legal body. In order to further organize the day to day operations of our DAO, the Team has created Divisions with separate responsibilities so that members can further specialize in the overall development and growth of the network.
+                Conceal Team members operate as a DAO, or Decentralized Autonomous Organization, and
+                each member will take on tasks that He or She can specialize in, voluntarily and
+                without the presence of any third party or legal body. In order to further organize
+                the day to day operations of our DAO, the Team has created Divisions with separate
+                responsibilities so that members can further specialize in the overall development
+                and growth of the network.
               </p>
             </AnimatedElement>
             <AnimatedElement types={['dragText']}>
               <p className="text-[1.7rem] text-[#757575]">
-                Conceal Team members are from all four corners of the world and are spread out around many varied geographical locations! This means that organizing events and other types of online gatherings can be tricky, but not impossible. Anyone can join as long as they are willing to commit more time into the Conceal ecosystem and have the necessary skill to help make it succeed!
+                Conceal Team members are from all four corners of the world and are spread out
+                around many varied geographical locations! This means that organizing events and
+                other types of online gatherings can be tricky, but not impossible. Anyone can join
+                as long as they are willing to commit more time into the Conceal ecosystem and have
+                the necessary skill to help make it succeed!
               </p>
             </AnimatedElement>
           </div>
@@ -222,4 +242,3 @@ export function TeamSection() {
     </section>
   );
 }
-

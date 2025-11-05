@@ -1,7 +1,7 @@
-import { SectionHeading } from '../ui/SectionHeading';
-import { AnimatedElement } from '../ui/AnimatedElement';
-import { useState } from 'react';
 import type { ReactNode } from 'react';
+import { useState } from 'react';
+import { AnimatedElement } from '../ui/AnimatedElement';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface LinkItem {
   label: string;
@@ -26,7 +26,11 @@ const socialLinksData: ColumnData = {
     { label: 'Discord', url: 'https://discord.gg/YbpHVSd', icon: 'fab fa-discord' },
     { label: 'Telegram', url: 'https://t.me/concealnetwork', icon: 'fab fa-telegram' },
     { label: 'Twitter', url: 'https://twitter.com/ConcealNetwork', icon: 'fab fa-twitter' },
-    { label: 'Youtube', url: 'https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw', icon: 'fab fa-youtube' },
+    {
+      label: 'Youtube',
+      url: 'https://www.youtube.com/channel/UC_YtRUcy0FR0yIc3H6DDxuw',
+      icon: 'fab fa-youtube',
+    },
     { label: 'Facebook', url: 'https://www.facebook.com/concealnetwork', icon: 'fab fa-facebook' },
     { label: 'Medium', url: 'https://medium.com/@ConcealNetwork', icon: 'fab fa-medium' },
     {
@@ -54,8 +58,16 @@ const socialLinksData: ColumnData = {
         </svg>
       ),
     },
-    { label: 'BitcoinTalk', url: 'https://bitcointalk.org/index.php?topic=4515873', icon: 'fab fa-bitcoin' },
-    { label: 'Conceal MarketPlace', url: 'https://conceal.network/marketplace', icon: 'fas fa-shopping-cart' },
+    {
+      label: 'BitcoinTalk',
+      url: 'https://bitcointalk.org/index.php?topic=4515873',
+      icon: 'fab fa-bitcoin',
+    },
+    {
+      label: 'Conceal MarketPlace',
+      url: 'https://conceal.network/marketplace',
+      icon: 'fas fa-shopping-cart',
+    },
   ],
 };
 
@@ -109,26 +121,50 @@ const marketCapData: ColumnData = {
 const polygonData: ColumnData = {
   title: 'Polygon',
   items: [
-    { label: 'SushiSwap - wCCX/USDC', url: 'https://app.sushi.com/swap?tokens=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&tokens=0x137Ee749f0F8c2eD34cA00dE33BB59E3dafA494A&chainId=137' },
-    { label: 'SushiSwap - wCCX/USDT', url: 'https://app.sushi.com/swap?tokens=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&tokens=0x137Ee749f0F8c2eD34cA00dE33BB59E3dafA494A&chainId=137' },
-    { label: 'Uniswap - wCCX/DAI', url: 'https://app.uniswap.org/#/swap?inputCurrency=0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon' },
-    { label: 'Uniswap - wCCX/USDC', url: 'https://app.uniswap.org/#/swap?inputCurrency=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon' },
-    { label: 'Uniswap - wCCX/USDT', url: 'https://app.uniswap.org/#/swap?inputCurrency=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon' },
+    {
+      label: 'SushiSwap - wCCX/USDC',
+      url: 'https://app.sushi.com/swap?tokens=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&tokens=0x137Ee749f0F8c2eD34cA00dE33BB59E3dafA494A&chainId=137',
+    },
+    {
+      label: 'SushiSwap - wCCX/USDT',
+      url: 'https://app.sushi.com/swap?tokens=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&tokens=0x137Ee749f0F8c2eD34cA00dE33BB59E3dafA494A&chainId=137',
+    },
+    {
+      label: 'Uniswap - wCCX/DAI',
+      url: 'https://app.uniswap.org/#/swap?inputCurrency=0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon',
+    },
+    {
+      label: 'Uniswap - wCCX/USDC',
+      url: 'https://app.uniswap.org/#/swap?inputCurrency=0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon',
+    },
+    {
+      label: 'Uniswap - wCCX/USDT',
+      url: 'https://app.uniswap.org/#/swap?inputCurrency=0xc2132D05D31c914a87C6611C10748AEb04B58e8F&outputCurrency=0x137ee749f0f8c2ed34ca00de33bb59e3dafa494a&chain=polygon',
+    },
   ],
 };
 
 const bscData: ColumnData = {
   title: 'Binance Smart Chain',
   items: [
-    { label: 'PancakeSwap - wCCX/BUSD', url: 'https://pancakeswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841' },
-    { label: 'PancakeSwap - wCCX/USDT', url: 'https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841' },
+    {
+      label: 'PancakeSwap - wCCX/BUSD',
+      url: 'https://pancakeswap.finance/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841',
+    },
+    {
+      label: 'PancakeSwap - wCCX/USDT',
+      url: 'https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841',
+    },
   ],
 };
 
 const ethereumData: ColumnData = {
   title: 'Ethereum',
   items: [
-    { label: 'Uniswap - wCCX/DAI', url: 'https://app.uniswap.org/#/swap?inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4&chain=mainnet' },
+    {
+      label: 'Uniswap - wCCX/DAI',
+      url: 'https://app.uniswap.org/#/swap?inputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&outputCurrency=0x21686f8ce003a95c99acd297e302faacf742f7d4&chain=mainnet',
+    },
   ],
 };
 
@@ -201,10 +237,7 @@ export function CommunitySection() {
   const [activeTab, setActiveTab] = useState<'socials' | 'exchanges' | 'dex'>('socials');
 
   return (
-    <section
-      id="community"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="community" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -216,7 +249,7 @@ export function CommunitySection() {
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
         {/* Hero Title Section */}
         <div className="mb-16">
@@ -227,7 +260,8 @@ export function CommunitySection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span>Improving the World</span> <span className="text-[orange] font-semibold">Together</span>
+              <span>Improving the World</span>{' '}
+              <span className="text-[orange] font-semibold">Together</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -291,7 +325,7 @@ export function CommunitySection() {
               <div></div>
               {/* Column 1: Official */}
               <Column data={socialLinksData} />
-              
+
               {/* Column 2: Other Groups - Telegram */}
               <div className="flex flex-col">
                 <h2 className="text-4xl uppercase text-white mb-6">Other Groups</h2>
@@ -316,7 +350,7 @@ export function CommunitySection() {
                   ))}
                 </ul>
               </div>
-              
+
               {/* Column 3: Other Groups - Twitter */}
               <div className="flex flex-col">
                 <h2 className="text-4xl uppercase text-white mb-6 opacity-0">Other Groups</h2>
@@ -368,4 +402,3 @@ export function CommunitySection() {
     </section>
   );
 }
-

@@ -1,17 +1,18 @@
 import { useEffect, useRef } from 'react';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
-import { AboutSection } from '../components/sections/AboutSection';
+import { PrivacySection } from '../components/sections/PrivacySection';
 import { BackToTop } from '../components/ui/BackToTop';
 import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
 
-export function AboutPage() {
+export function PrivacyPage() {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Scroll to top when page loads
     window.scrollTo(0, 0);
+    document.title = 'Privacy Policy | Conceal Network';
   }, []);
 
   return (
@@ -24,7 +25,7 @@ export function AboutPage() {
 
       {/* Main Content */}
       <main className="flex-1 pt-24">
-        <AboutSection />
+        <PrivacySection />
       </main>
 
       {/* Footer Component */}

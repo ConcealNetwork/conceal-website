@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 interface PoolData {

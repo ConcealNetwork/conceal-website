@@ -1,8 +1,8 @@
-import { SectionHeading } from '../ui/SectionHeading';
+import { loadImagesWithPattern } from '../../utils/loadImagesFromFolder';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
 import { Carousel } from '../ui/Carousel';
-import { loadImagesWithPattern } from '../../utils/loadImagesFromFolder';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface LabProject {
   title: string;
@@ -22,7 +22,8 @@ const labsProjects: LabProject[] = [
     title: 'Conceal-Authenticator',
     description:
       'Conceal-Authenticator is a secure 2FA (Two-Factor Authentication) app that leverages the Conceal Network blockchain to securely backup your 2FA shared keys using a built-in lite wallet.',
-    labeltolink: 'You can go the the github page for more info and for downloads by clicking on this url.',
+    labeltolink:
+      'You can go the the github page for more info and for downloads by clicking on this url.',
     projecturl: 'https://github.com/Acktarius/Conceal-2fa-app/',
     labeltodocument: 'You can find more information about the product in wiki page.',
     documentlink: 'https://github.com/Acktarius/Conceal-2fa-app/wiki',
@@ -35,7 +36,8 @@ const labsProjects: LabProject[] = [
     title: 'Conceal-Assistant',
     description:
       'Conceal-Assistant is an application made to help you oversee and manage your CCX-Box Node and Miner operations. It simply checks the status of the associated services and also allows you to easily deactivate or activate those services from any device.\n\nThe CCX-Box is a small form-factor PC that will run a Conceal Network Full-Node and Miner out of the box. Utilizing the Conceal-Assistant, this small dedicated Node can be managed remotely and will earn $CCX over time.',
-    labeltolink: 'You can go the the github page for more info and for downloads by clicking on this url.',
+    labeltolink:
+      'You can go the the github page for more info and for downloads by clicking on this url.',
     projecturl: 'https://github.com/Acktarius/conceal-assistant',
     labeltodocument: 'You can find more information about the product in this PDF.',
     documentlink: '/labs/data/conceal-assistant_info.pdf',
@@ -59,14 +61,14 @@ function ProjectCard({ project }: { project: LabProject }) {
   );
 
   // Split description by newlines
-  const descriptionParagraphs = project.description.split('\n').filter(p => p.trim());
+  const descriptionParagraphs = project.description.split('\n').filter((p) => p.trim());
 
   return (
     <div id={`project-${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="mb-16">
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <h1 className="text-[4rem] uppercase text-[orange] mb-6">{project.title}</h1>
       </AnimatedElement>
-      
+
       {descriptionParagraphs.map((paragraph, index) => (
         <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575] mb-4">{paragraph}</p>
@@ -75,7 +77,12 @@ function ProjectCard({ project }: { project: LabProject }) {
 
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <p className="text-[1.7rem] text-[#757575] mb-4">
-          <a href={project.projecturl} className="text-[orange] hover:underline" target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.projecturl}
+            className="text-[orange] hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {project.labeltolink}
             <i className="fab fa-github ml-2"></i>
           </a>
@@ -84,7 +91,12 @@ function ProjectCard({ project }: { project: LabProject }) {
 
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <p className="text-[1.7rem] text-[#757575] mb-6">
-          <a href={project.documentlink} className="text-[orange] hover:underline" target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.documentlink}
+            className="text-[orange] hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {project.labeltodocument}
             <i className="fas fa-file-pdf ml-2"></i>
           </a>
@@ -104,10 +116,7 @@ function ProjectCard({ project }: { project: LabProject }) {
 
 export function LabsSection() {
   return (
-    <section
-      id="labs"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="labs" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -160,7 +169,9 @@ export function LabsSection() {
             <div className="lg:col-span-2">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575]">
-                  We strive to grow a broad ecosystem by supporting the community. Conceal Labs provides developers, entrepreneurs & creators with the jump start that they need to make vision a reality.
+                  We strive to grow a broad ecosystem by supporting the community. Conceal Labs
+                  provides developers, entrepreneurs & creators with the jump start that they need
+                  to make vision a reality.
                 </p>
               </AnimatedElement>
             </div>
@@ -173,7 +184,7 @@ export function LabsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <div 
+                <div
                   className="w-auto max-w-[340px] h-[322px] mx-auto"
                   style={{
                     backgroundImage: "url('/images/labs/landingLabsScreenshots.png')",
@@ -189,7 +200,10 @@ export function LabsSection() {
               </AnimatedElement>
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575] mb-4">
-                  Do you have a project that involves Conceal in some way? <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">We want to hear about it!</a>
+                  Do you have a project that involves Conceal in some way?{' '}
+                  <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">
+                    We want to hear about it!
+                  </a>
                 </p>
               </AnimatedElement>
             </div>
@@ -199,7 +213,7 @@ export function LabsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-1 lg:order-2">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <div 
+                <div
                   className="w-auto max-w-[340px] h-[340px] mx-auto"
                   style={{
                     backgroundImage: "url('/images/labs/landingLabsScreenshots.png')",
@@ -225,7 +239,7 @@ export function LabsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <div 
+                <div
                   className="w-auto max-w-[340px] h-[340px] mx-auto"
                   style={{
                     backgroundImage: "url('/images/labs/landingLabsScreenshots.png')",
@@ -251,7 +265,7 @@ export function LabsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-1 lg:order-2">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <div 
+                <div
                   className="w-auto max-w-[340px] h-[265px] mx-auto"
                   style={{
                     backgroundImage: "url('/images/labs/landingLabsScreenshots.png')",
@@ -285,7 +299,10 @@ export function LabsSection() {
             <div className="lg:col-span-2">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575]">
-                  Check out some of the cool projects we have funded. <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">Apply to be next!</a>
+                  Check out some of the cool projects we have funded.{' '}
+                  <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">
+                    Apply to be next!
+                  </a>
                 </p>
               </AnimatedElement>
             </div>
@@ -302,4 +319,3 @@ export function LabsSection() {
     </section>
   );
 }
-

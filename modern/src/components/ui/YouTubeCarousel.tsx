@@ -19,10 +19,13 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
   return (
     <div className={`relative ${className}`}>
       {/* Carousel Inner */}
-      <div className="relative overflow-hidden rounded-lg w-full" style={{ minHeight: '400px', maxWidth: '800px' }}>
+      <div
+        className="relative overflow-hidden rounded-lg w-full"
+        style={{ minHeight: '400px', maxWidth: '800px' }}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ 
+          style={{
             transform: `translateX(calc(-${activeIndex} * 100%))`,
           }}
         >
@@ -69,9 +72,7 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === activeIndex
-                ? 'bg-[orange] w-8'
-                : 'bg-white/50 hover:bg-white/70'
+              index === activeIndex ? 'bg-[orange] w-8' : 'bg-white/50 hover:bg-white/70'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -80,4 +81,3 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
     </div>
   );
 }
-

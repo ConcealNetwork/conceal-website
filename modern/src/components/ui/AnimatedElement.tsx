@@ -1,6 +1,6 @@
-import type { ReactNode, ElementType } from 'react';
-import { useScrollAnimation } from '../../utils/scrollAnimations';
+import type { ElementType, ReactNode } from 'react';
 import type { ScrollAnimationOptions } from '../../utils/scrollAnimations';
+import { useScrollAnimation } from '../../utils/scrollAnimations';
 
 interface AnimatedElementProps extends ScrollAnimationOptions {
   children: ReactNode;

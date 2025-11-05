@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { MessagingSection } from '../components/sections/MessagingSection';
+import { BackToTop } from '../components/ui/BackToTop';
 import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
-import { BackToTop } from '../components/ui/BackToTop';
-import { MessagingSection } from '../components/sections/MessagingSection';
 
 export function MessagingPage() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -41,4 +41,3 @@ export function MessagingPage() {
     </div>
   );
 }
-

@@ -8,7 +8,8 @@ export function Error502Page() {
         <div>
           <h2 className="text-[3.6rem] text-[orange] mb-8 font-semibold">Error 502. Bad Gateway</h2>
           <p className="text-[1.7rem] text-[#757575] mb-6 leading-[1.8]">
-            The web server is temporary overloaded and can't process your request. Please accept our apologies for the inconveniences this might cause to you.
+            The web server is temporary overloaded and can't process your request. Please accept our
+            apologies for the inconveniences this might cause to you.
           </p>
           <p className="text-[1.7rem] text-[#757575] leading-[1.8]">
             Please try to access the site later.
@@ -18,4 +19,3 @@ export function Error502Page() {
     </div>
   );
 }
-

@@ -1,4 +1,4 @@
-import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from 'react';
+import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 interface BaseButtonProps {
@@ -20,7 +20,19 @@ interface ButtonAsAnchorProps extends BaseButtonProps, AnchorHTMLAttributes<HTML
 type ButtonProps = ButtonAsButtonProps | ButtonAsAnchorProps;
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'default', fullWidth, targetId, scrollOffset = 100, children, ...props }, ref) => {
+  (
+    {
+      className,
+      variant = 'default',
+      size = 'default',
+      fullWidth,
+      targetId,
+      scrollOffset = 100,
+      children,
+      ...props
+    },
+    ref
+  ) => {
     const baseClasses = cn(
       // Base styles from main.css
       'inline-flex font-sans text-sm uppercase tracking-wider',
@@ -67,11 +79,11 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
       if (variant === 'slideToId' && targetId) {
         e.preventDefault();
-        
+
         // Retry mechanism to find element (in case it's not rendered yet)
         const maxAttempts = 10;
         let attempts = 0;
-        
+
         const tryScroll = () => {
           attempts++;
           const element = document.getElementById(targetId);
@@ -80,18 +92,18 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
               const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
               window.scrollTo({
                 top: elementTop - scrollOffset,
-                behavior: 'smooth'
+                behavior: 'smooth',
               });
             });
           } else if (attempts < maxAttempts) {
             setTimeout(tryScroll, 50);
           }
         };
-        
+
         // Start with a small delay to ensure DOM is ready
         setTimeout(tryScroll, 100);
       }
-      
+
       // Call original onClick if provided
       if (props.onClick) {
         props.onClick(e as any);

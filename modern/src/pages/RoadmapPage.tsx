@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { RoadmapSection } from '../components/sections/RoadmapSection';
+import { BackToTop } from '../components/ui/BackToTop';
 import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
-import { BackToTop } from '../components/ui/BackToTop';
-import { RoadmapSection } from '../components/sections/RoadmapSection';
 
 export function RoadmapPage() {
   const pageRef = useRef<HTMLDivElement>(null);

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { SectionHeading } from '../ui/SectionHeading';
 

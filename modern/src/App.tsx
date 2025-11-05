@@ -1,18 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Footer } from './components/Footer';
-import { BackToTop } from './components/ui/BackToTop';
-import { SocialMenu } from './components/ui/SocialMenu';
-import { MajorLinks } from './components/ui/MajorLinks';
 import { Header } from './components/Header';
-import { HeroSection } from './components/sections/HeroSection';
-import { FeaturesSection } from './components/sections/FeaturesSection';
-import { WalletsSection } from './components/sections/WalletsSection';
-import { MiningSection } from './components/sections/MiningSection';
-import { MarketsSection } from './components/sections/MarketsSection';
-import { PartnersSection } from './components/sections/PartnersSection';
-import { HelpdeskSection } from './components/sections/HelpdeskSection';
 import { CryptoWidgetSection } from './components/sections/CryptoWidgetSection';
+import { FeaturesSection } from './components/sections/FeaturesSection';
+import { HelpdeskSection } from './components/sections/HelpdeskSection';
+import { HeroSection } from './components/sections/HeroSection';
+import { MarketsSection } from './components/sections/MarketsSection';
+import { MiningSection } from './components/sections/MiningSection';
+import { PartnersSection } from './components/sections/PartnersSection';
+import { WalletsSection } from './components/sections/WalletsSection';
+import { BackToTop } from './components/ui/BackToTop';
+import { MajorLinks } from './components/ui/MajorLinks';
+import { SocialMenu } from './components/ui/SocialMenu';
 
 interface AppProps {
   onReady?: () => void;
@@ -44,29 +44,29 @@ function App({ onReady }: AppProps) {
   useEffect(() => {
     // Only handle on main page
     if (location.pathname !== '/') return;
-    
+
     // Check both navigation state and URL hash
     const state = location.state as { scrollToHash?: string } | null;
     const hashFromState = state?.scrollToHash;
     const hashFromUrl = location.hash;
-    
+
     // Also check window.location.hash as fallback (for direct navigation)
     const hashFromWindow = window.location.hash;
-    
+
     const hash = hashFromState || hashFromUrl || hashFromWindow;
-    
+
     if (hash) {
       // Remove # if present and ensure it starts with #
       const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
-      
+
       // Robust scrolling: retry until element exists or timeout
       const maxAttempts = 50; // Increased attempts for slower renders
       let attempts = 0;
-      
+
       const tryScroll = () => {
         attempts++;
         const element = document.querySelector(cleanHash);
-        
+
         if (element) {
           // Element found, scroll to it with slight offset for header
           requestAnimationFrame(() => {
@@ -75,7 +75,7 @@ function App({ onReady }: AppProps) {
               const offset = 100; // Offset for header
               window.scrollTo({
                 top: elementTop - offset,
-                behavior: 'smooth'
+                behavior: 'smooth',
               });
             });
           });
@@ -84,7 +84,7 @@ function App({ onReady }: AppProps) {
           setTimeout(tryScroll, 150);
         }
       };
-      
+
       // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
       setTimeout(tryScroll, 300);
     }

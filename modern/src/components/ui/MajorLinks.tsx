@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface MajorLink {
   name: string;
@@ -41,17 +41,17 @@ export function MajorLinks() {
     }
 
     e.preventDefault();
-    
+
     // If hash link (starts with /#)
     if (link.url.startsWith('/#')) {
       const hash = link.url.substring(1); // Get #markets, #features, etc.
-      
+
       // If we're not on the main page, navigate to root first, then scroll
       if (location.pathname !== '/') {
         // Navigate to root with hash in state
-        navigate('/', { 
+        navigate('/', {
           state: { scrollToHash: hash },
-          replace: false
+          replace: false,
         });
       } else {
         // Already on main page, just scroll
@@ -62,7 +62,7 @@ export function MajorLinks() {
             const offset = 100; // Offset for header
             window.scrollTo({
               top: elementTop - offset,
-              behavior: 'smooth'
+              behavior: 'smooth',
             });
           });
         }

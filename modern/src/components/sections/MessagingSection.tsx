@@ -1,6 +1,6 @@
-import { SectionHeading } from '../ui/SectionHeading';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
+import { SectionHeading } from '../ui/SectionHeading';
 
 interface Feature {
   title: string;
@@ -16,7 +16,8 @@ interface Feature {
 const features: Feature[] = [
   {
     title: 'Self-Destructing Messages',
-    description: 'Conceal Messaging supports self-destructing messages that delete themselves after being read.',
+    description:
+      'Conceal Messaging supports self-destructing messages that delete themselves after being read.',
     imageSprite: '/images/landingMessagingImgs.png',
     imagePositionY: '0',
     imageHeight: '284px',
@@ -46,7 +47,8 @@ const features: Feature[] = [
   },
   {
     title: 'Address Book',
-    description: 'There is no need to copy / paste an address every time. Maintain your address book for easily sending messages to your contacts.',
+    description:
+      'There is no need to copy / paste an address every time. Maintain your address book for easily sending messages to your contacts.',
     imageSprite: '/images/mobile_screenshots.png',
     imagePositionY: '-1200px',
     imageHeight: '400px',
@@ -56,7 +58,8 @@ const features: Feature[] = [
   },
   {
     title: 'Encrypted',
-    description: 'All Conceal Messages are encrypted and cannot be read by anyone other than the sender and receiver.',
+    description:
+      'All Conceal Messages are encrypted and cannot be read by anyone other than the sender and receiver.',
     imageSprite: '/images/landingMessagingImgs.png',
     imagePositionY: '-634px',
     imageHeight: '294px',
@@ -96,7 +99,9 @@ function FeatureCard({ feature }: { feature: Feature }) {
       </div>
 
       {/* Text Element */}
-      <div className={`order-1 ${isNormal ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pl-6 lg:pl-6 pr-0 lg:pr-12'}`}>
+      <div
+        className={`order-1 ${isNormal ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pl-6 lg:pl-6 pr-0 lg:pr-12'}`}
+      >
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <h2 className="text-[2.8rem] uppercase text-[orange] mb-6">{feature.title}</h2>
         </AnimatedElement>
@@ -110,10 +115,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
 
 export function MessagingSection() {
   return (
-    <section
-      id="messaging"
-      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
-    >
+    <section id="messaging" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -140,7 +142,13 @@ export function MessagingSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slide" asChild href="https://wallet.conceal.network/" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="slide"
+              asChild
+              href="https://wallet.conceal.network/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fas fa-mobile-alt text-xl mr-2"></i>
               <span>Web Wallet</span>
             </Button>
@@ -170,4 +178,3 @@ export function MessagingSection() {
     </section>
   );
 }
-
