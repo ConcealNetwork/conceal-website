@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
 import { SectionHeading } from '../ui/SectionHeading';
+import { appConfig } from '@/config/app.config';
 
 interface DonationAddress {
   id: string;
@@ -69,56 +70,87 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
     try {
       await navigator.clipboard.writeText(donation.address);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), appConfig.animations.copyFeedbackTimeout);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
   };
 
   return (
-    <div className="grid grid-cols-[3%_16%_10%_65%_3%] gap-3 items-center py-4 px-4 border-b border-[rgba(255,255,255,0.1)]">
-      {/* Icon */}
-      <div className="flex items-center justify-center w-12">
-        <img src={donation.icon} alt={donation.name} className="w-12 h-12" />
-      </div>
+    <>
+      {/* Desktop Grid View */}
+      <div className="hidden md:grid grid-cols-[3%_16%_10%_65%_3%] gap-3 items-center py-4 px-4 border-b border-[rgba(255,255,255,0.1)]">
+        {/* Icon */}
+        <div className="flex items-center justify-center w-12">
+          <img src={donation.icon} alt={donation.name} className="w-12 h-12" />
+        </div>
 
-      {/* Name */}
-      <div className="flex items-center">
-        <span className="text-[orange] font-semibold text-[2.475rem] whitespace-nowrap">
-          {donation.name}
-        </span>
-      </div>
-
-      {/* Network */}
-      <div className="flex items-center">
-        {donation.network ? (
-          <span className="text-[#757575] text-[2.475rem] whitespace-nowrap">
-            {donation.network}
+        {/* Name */}
+        <div className="flex items-center">
+          <span className="text-[orange] font-semibold text-[2.475rem] whitespace-nowrap">
+            {donation.name}
           </span>
-        ) : null}
+        </div>
+
+        {/* Network */}
+        <div className="flex items-center">
+          {donation.network ? (
+            <span className="text-[#757575] text-[2.475rem] whitespace-nowrap">
+              {donation.network}
+            </span>
+          ) : null}
+        </div>
+
+        {/* Address */}
+        <div className="flex items-center min-w-0">
+          <input
+            type="text"
+            value={donation.address}
+            readOnly
+            className="w-full bg-[rgba(0,0,0,0.3)] border border-[rgba(255,255,255,0.2)] rounded px-3 py-2 text-white text-[1.925rem]"
+          />
+        </div>
+
+        {/* Copy Button */}
+        <div className="flex items-center justify-center">
+          <button
+            onClick={handleCopy}
+            className="px-3 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
+            title={copied ? 'Copied!' : 'Copy address'}
+          >
+            <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`}></i>
+          </button>
+        </div>
       </div>
 
-      {/* Address */}
-      <div className="flex items-center min-w-0">
-        <input
-          type="text"
-          value={donation.address}
-          readOnly
-          className="w-full bg-[rgba(0,0,0,0.3)] border border-[rgba(255,255,255,0.2)] rounded px-3 py-2 text-white text-[1.925rem]"
-        />
+      {/* Mobile Card View */}
+      <div className="md:hidden border border-[rgba(255,255,255,0.1)] rounded-lg p-4 mb-4 bg-[rgba(255,255,255,0.02)]">
+        <div className="flex items-center gap-3 mb-3">
+          <img src={donation.icon} alt={donation.name} className="w-10 h-10" />
+          <div className="flex-1">
+            <div className="text-[orange] font-semibold text-lg">{donation.name}</div>
+            {donation.network && (
+              <div className="text-[#757575] text-sm">{donation.network}</div>
+            )}
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <input
+            type="text"
+            value={donation.address}
+            readOnly
+            className="flex-1 bg-[rgba(0,0,0,0.3)] border border-[rgba(255,255,255,0.2)] rounded px-3 py-2 text-white text-sm"
+          />
+          <button
+            onClick={handleCopy}
+            className="px-4 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
+            title={copied ? 'Copied!' : 'Copy address'}
+          >
+            <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`}></i>
+          </button>
+        </div>
       </div>
-
-      {/* Copy Button */}
-      <div className="flex items-center justify-center">
-        <button
-          onClick={handleCopy}
-          className="px-3 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
-          title={copied ? 'Copied!' : 'Copy address'}
-        >
-          <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`}></i>
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 

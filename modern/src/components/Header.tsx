@@ -156,9 +156,9 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       )}
     >
       {/* Logo */}
-      <div className="absolute left-10 top-1/2 -translate-y-1/2 z-[501]">
-        <a href="/" className="block mt-[9px] w-[50px] transition-all duration-300">
-          <img src="/images/logo.svg" alt="Conceal Network" className="h-[84px] w-[84px]" />
+      <div className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-[501]">
+        <a href="/" className="block mt-[9px] w-[50px] md:w-[50px] transition-all duration-300">
+          <img src="/images/logo.svg" alt="Conceal Network" className="h-24 w-24 md:h-[84px] md:w-[84px]" />
         </a>
       </div>
 
@@ -239,88 +239,122 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
         </ul>
       </nav>
 
-      {/* Mobile Menu Toggle */}
-      <a
-        href="#mainMenuModal"
-        onClick={(e) => {
-          e.preventDefault();
-          setIsMobileMenuOpen(!isMobileMenuOpen);
-        }}
-        className="md:hidden fixed top-4 right-3 w-8 h-8 z-50 p-2 border-2 border-white rounded-full transition-all duration-300 hover:text-[orange] hover:bg-[#750] hover:border-[orange] hover:scale-125 flex items-center justify-center"
+      {/* Mobile Menu Toggle - Hamburger Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="md:hidden fixed top-4 right-4 w-10 h-10 z-[999] flex flex-col justify-center items-center gap-1.5 p-2 bg-[rgba(0,0,0,0.7)] border border-[orange] rounded-lg transition-all duration-300 hover:bg-[rgba(255,165,0,0.2)]"
         aria-label="Toggle menu"
       >
-        <span className="block w-5 h-0.5 border-t-2 border-b-2 border-white"></span>
-      </a>
+        <span
+          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+            isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+          }`}
+        ></span>
+        <span
+          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+            isMobileMenuOpen ? 'opacity-0' : ''
+          }`}
+        ></span>
+        <span
+          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+            isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+          }`}
+        ></span>
+      </button>
 
-      {/* Mobile Menu Modal */}
-      {isMobileMenuOpen && (
-        <div
-          className="md:hidden fixed inset-0 z-[999] bg-[rgba(32,32,32,0.9)] flex items-center justify-center overflow-auto pb-4"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          <div
-            className="min-h-0 py-16 px-4 mx-auto max-w-[31em] w-full"
-            onClick={(e) => e.stopPropagation()}
+      {/* Mobile Menu - Slide-in Navigation */}
+      <div
+        className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[998] bg-[#0A0A0A] border-l border-[rgba(255,165,0,0.3)] transition-transform duration-300 ease-in-out overflow-y-auto ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="p-4 pt-16">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-[orange] hover:text-white transition-colors"
+            aria-label="Close menu"
           >
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 left-1/2 -translate-x-1/2 w-0 h-0 border-t-0 border-r-[1em] border-l-[1em] border-b-[1.5em] border-t-transparent border-r-transparent border-l-transparent border-b-[orange]"
-              aria-label="Close menu"
-            />
-            <ul className="flex flex-col flex-wrap items-start justify-center relative w-full">
-              {navItems.map((item) => (
-                <li key={item.label} className="flex-1-0-auto pb-2 text-center w-full">
-                  <a
-                    href={item.href || '#'}
-                    className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
-                  >
-                    {item.label}
-                  </a>
-                  {item.children && (
-                    <ul className="mt-2 space-y-1">
-                      {item.children.map((child) => (
-                        <li key={child.label}>
-                          <a
-                            href={child.href}
-                            onClick={(e) => !child.external && handleLinkClick(e, child.href)}
-                            target={child.external ? '_blank' : undefined}
-                            rel={child.external ? 'noopener noreferrer' : undefined}
-                            className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
-                          >
-                            {child.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-              <li className="flex-1-0-auto pb-2 text-center w-full">
-                <a
-                  href="/#wallets"
-                  onClick={(e) => handleLinkClick(e, '/#wallets')}
-                  className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
-                >
-                  Wallets
-                </a>
-              </li>
-              <li className="flex-1-0-auto pb-2 text-center w-full">
-                <a
-                  href="https://conceal.network/support"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-3 py-3 bg-[rgba(0,0,0,0.5)] rounded-lg text-white hover:bg-black transition-colors duration-200"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
+            <i className="fas fa-times text-xl"></i>
+          </button>
+
+          {/* Logo in Mobile Menu */}
+          <div className="mb-6 pb-4 border-b border-[rgba(255,255,255,0.1)]">
+            <img src="/images/logo.svg" alt="Conceal Network" className="h-12 w-12 mx-auto" />
+          </div>
+          {/* Navigation Items */}
+          <nav className="space-y-2">
+            {navItems.map((item) => (
+              <div key={item.label} className="border-b border-[rgba(255,255,255,0.1)] pb-2">
+                <div className="text-[orange] uppercase tracking-wider text-sm font-semibold mb-2 px-2">
+                  {item.label}
+                </div>
+                {item.children && (
+                  <ul className="space-y-1">
+                    {item.children.map((child) => (
+                      <li key={child.label}>
+                        <a
+                          href={child.href}
+                          onClick={(e) => {
+                            if (!child.external) {
+                              handleLinkClick(e, child.href);
+                            }
+                            setIsMobileMenuOpen(false);
+                          }}
+                          target={child.external ? '_blank' : undefined}
+                          rel={child.external ? 'noopener noreferrer' : undefined}
+                          className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+            <div className="border-b border-[rgba(255,255,255,0.1)] pb-2">
+              <a
+                href="/#wallets"
+                onClick={(e) => {
+                  handleLinkClick(e, '/#wallets');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+              >
+                Wallets
+              </a>
+            </div>
+            <div className="border-b border-[rgba(255,255,255,0.1)] pb-2">
+              <a
+                href="https://conceal.network/support"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+              >
+                Contact
+              </a>
+            </div>
+          </nav>
+
+          {/* Language Selector in Mobile Menu */}
+          <div className="mt-6 pt-4 border-t border-[rgba(255,255,255,0.1)]">
+            <LanguageSelector />
           </div>
         </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/70 z-[997]"
+          onClick={() => setIsMobileMenuOpen(false)}
+        ></div>
       )}
 
-      {/* Language Selector - Far Right */}
-      <div className="absolute top-[45px] right-9 -translate-y-1/2">
+      {/* Language Selector - Far Right (Desktop Only) */}
+      <div className="hidden md:block absolute top-[45px] right-9 -translate-y-1/2">
         <LanguageSelector />
       </div>
     </header>

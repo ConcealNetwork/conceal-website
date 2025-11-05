@@ -210,8 +210,10 @@ export function FeaturesSection() {
             CCX
           </div>
 
-          <div className="tableContain overflow-x-auto" id="compoundInterestCalcTable">
-            <table className="w-full border-collapse border border-[#444]">
+          <div className="tableContain" id="compoundInterestCalcTable">
+            {/* Desktop Table View */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="w-full border-collapse border border-[#444]">
               <thead>
                 <tr>
                   <th scope="row" className="border border-[#444] p-3 text-left">
@@ -372,6 +374,59 @@ export function FeaturesSection() {
                 ))}
               </tbody>
             </table>
+            </div>
+
+            {/* Mobile Card View - Simplified Tier Cards */}
+            <div className="md:hidden space-y-6">
+              {[
+                { tier: 'Tier 1', principal: 'Under 10,000 CCX', apr: '2.90%', maxInterest: '4.00%', example: '5,000 CCX' },
+                { tier: 'Tier 2', principal: '10,000 - 19,999 CCX', apr: '3.90%', maxInterest: '5.00%', example: '10,000 CCX' },
+                { tier: 'Tier 3', principal: 'Over 20,000 CCX', apr: '4.90%', maxInterest: '6.00%', example: '20,000 CCX' },
+              ].map((tierInfo, tierIndex) => (
+                <div key={tierInfo.tier} className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]">
+                  <h3 className="text-[orange] text-xl font-semibold mb-4">{tierInfo.tier}</h3>
+                  <div className="space-y-3 mb-4">
+                    <div className="flex justify-between">
+                      <span className="text-[#757575]">Principal:</span>
+                      <span className="text-white">{tierInfo.principal}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#757575]">Base/APR:</span>
+                      <span className="text-white">{tierInfo.apr}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#757575]">Max Interest:</span>
+                      <span className="text-white">{tierInfo.maxInterest}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#757575]">Example:</span>
+                      <span className="text-white">{tierInfo.example}</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-[#444]">
+                    <div className="text-[#757575] text-sm mb-2">Sample Returns (First 6 months):</div>
+                    <div className="space-y-2 text-sm">
+                      {tableRows.slice(0, 6).map((row) => {
+                        const interest = tierIndex === 0 ? row.tier1Interest : tierIndex === 1 ? row.tier2Interest : row.tier3Interest;
+                        const total = tierIndex === 0 ? row.tier1Total : tierIndex === 1 ? row.tier2Total : row.tier3Total;
+                        return (
+                          <div key={row.month} className="flex justify-between items-center">
+                            <span className="text-[#757575]">Month {row.month}:</span>
+                            <div className="flex gap-4">
+                              <span className="text-white">{interest.toFixed(2)}%</span>
+                              <span className="text-white">{total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="text-center text-[#757575] text-sm mt-4">
+                <p>Scroll horizontally on desktop to see full table with all months</p>
+              </div>
+            </div>
           </div>
         </form>
       </div>

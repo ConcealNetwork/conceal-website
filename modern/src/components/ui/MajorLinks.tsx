@@ -1,4 +1,6 @@
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { appConfig, secondsToMs } from '@/config/app.config';
 
 interface MajorLink {
   name: string;
@@ -34,6 +36,47 @@ const majorLinks: MajorLink[] = [
 export function MajorLinks() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => {
+    // Check if mobile on mount and resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < appConfig.breakpoints.mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    const fadeOutDelay = secondsToMs(appConfig.mobile.menuFadeOutTime);
+
+    // Auto-hide after configured time on mobile
+    if (isMobile) {
+      timeoutRef.current = setTimeout(() => {
+        setIsVisible(false);
+      }, fadeOutDelay);
+    }
+
+    // Show on scroll
+    const handleScroll = () => {
+      if (isMobile) {
+        setIsVisible(true);
+        // Clear existing timeout and set new one
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setIsVisible(false);
+        }, fadeOutDelay);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [isMobile]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: MajorLink) => {
     if (link.external) {
@@ -74,7 +117,11 @@ export function MajorLinks() {
   };
 
   return (
-    <ul className="fixed top-1/2 left-[1.5rem] z-10 -translate-y-1/2 list-none pt-2">
+    <ul
+      className={`fixed top-1/2 left-[1.5rem] z-10 -translate-y-1/2 list-none pt-2 transition-opacity duration-500 ease-in-out ${
+        isMobile && !isVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      }`}
+    >
       {majorLinks.map((link) => (
         <li key={link.name} className="pb-3">
           <a

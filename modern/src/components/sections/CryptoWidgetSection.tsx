@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { appConfig } from '@/config/app.config';
 
 interface CoinGeckoPrice {
   usd: number;
@@ -58,8 +59,8 @@ export function CryptoWidgetSection() {
 
     fetchPrice();
 
-    // Update price every 60 seconds
-    const interval = setInterval(fetchPrice, 60000);
+    // Update price at configured interval
+    const interval = setInterval(fetchPrice, appConfig.refresh.cryptoPriceInterval);
 
     return () => clearInterval(interval);
   }, []);

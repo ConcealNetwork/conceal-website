@@ -163,7 +163,7 @@ export function MessagingSection() {
         <div className="mb-24">
           <SectionHeading
             variant="withDescription"
-            title="About"
+            title="Messaging"
             description="Conceal Messaging expands our ecosystem by providing fully integrated encrypted messaging on the Blockchain."
           />
         </div>

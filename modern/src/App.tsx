@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { appConfig } from '@/config/app.config';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { CryptoWidgetSection } from './components/sections/CryptoWidgetSection';
@@ -81,12 +82,12 @@ function App({ onReady }: AppProps) {
           });
         } else if (attempts < maxAttempts) {
           // Element not found yet, retry after a short delay
-          setTimeout(tryScroll, 150);
+          setTimeout(tryScroll, appConfig.animations.scrollRetryDelayCrossPage);
         }
       };
 
       // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
-      setTimeout(tryScroll, 300);
+      setTimeout(tryScroll, appConfig.animations.scrollInitialDelayCrossPage);
     }
   }, [location.state, location.hash, location.pathname]);
 

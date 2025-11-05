@@ -1,6 +1,7 @@
 import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { appConfig } from '@/config/app.config';
 
 interface BaseButtonProps {
   variant?: 'primary' | 'stroke' | 'default' | 'download' | 'slide' | 'slideToId';
@@ -102,11 +103,11 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
                 });
               });
             } else if (attempts < maxAttempts) {
-              setTimeout(tryScroll, 50);
+              setTimeout(tryScroll, appConfig.animations.scrollRetryDelay);
             }
           };
 
-          setTimeout(tryScroll, 100);
+          setTimeout(tryScroll, appConfig.animations.scrollRetryDelayButton);
         } else {
           // Element not on current page - navigate to appropriate page
           // Map of targetIds to their page routes

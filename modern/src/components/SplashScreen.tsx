@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { hasCookie, setCookie } from '../utils/cookies';
+import { appConfig, hoursToMinutes } from '@/config/app.config';
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -24,8 +25,8 @@ export function SplashScreen({
       }
     }
 
-    // Minimum display time (2000ms)
-    const minTime = 2000;
+    // Minimum display time from config
+    const minTime = appConfig.splash.minDisplayTime;
     const startTime = Date.now();
 
     // Wait for window load AND minimum time AND app ready
@@ -43,19 +44,19 @@ export function SplashScreen({
           // Remove from DOM after animation
           setTimeout(() => {
             if (showOnlyOnce) {
-              setCookie('splash-shown', 'true', 24 * 60); // 24 hours
+              setCookie('splash-shown', 'true', hoursToMinutes(appConfig.cookies.splashScreenExpiration));
             }
             onComplete();
-          }, 600); // Match CSS transition duration
-        }, 50);
+          }, appConfig.splash.fadeOutDuration); // Match CSS transition duration
+        }, appConfig.splash.checkInterval);
       } else {
-        // Check again in 50ms
-        setTimeout(checkComplete, 50);
+        // Check again at configured interval
+        setTimeout(checkComplete, appConfig.splash.checkInterval);
       }
     };
 
     // Start checking
-    setTimeout(checkComplete, 50);
+    setTimeout(checkComplete, appConfig.splash.checkInterval);
 
     // Also listen for window load event
     const handleLoad = () => {

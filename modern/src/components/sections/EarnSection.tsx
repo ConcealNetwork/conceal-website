@@ -140,7 +140,7 @@ export function EarnSection() {
         <div id="earn-about" className="mb-24 scroll-mt-24">
           <SectionHeading
             variant="withDescription"
-            title="About"
+            title="Earn"
             description="Conceal-Earn removes unnecessary intermediaries by giving everyone the power to deposit their funds on the Blockchain and receive interest in exchange."
           />
         </div>

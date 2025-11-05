@@ -20,7 +20,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   if (variant === 'withDescription') {
     return (
-      <div className="grid grid-cols-[1fr_2fr] gap-4 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 items-center">
         <div className="flex flex-col">
           <h2 className={titleClassName + ' border-b-2 border-[orange] w-[90%] mt-2 mx-auto'}>
             {title}

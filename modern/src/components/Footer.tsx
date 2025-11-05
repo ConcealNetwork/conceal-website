@@ -1,8 +1,105 @@
+import { useEffect, useRef, useState } from 'react';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isPulling, setIsPulling] = useState(false);
+  const [pullDistance, setPullDistance] = useState(0);
+  const footerRef = useRef<HTMLElement>(null);
+  const startYRef = useRef<number>(0);
+  const lastScrollTopRef = useRef<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10;
+
+      // Auto-expand when scrolled to bottom
+      if (isAtBottom && !isExpanded) {
+        setIsExpanded(true);
+      }
+      // Auto-collapse when scrolling up (if not at bottom)
+      else if (!isAtBottom && scrollTop < lastScrollTopRef.current && isExpanded) {
+        setIsExpanded(false);
+      }
+
+      lastScrollTopRef.current = scrollTop;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isExpanded]);
+
+  useEffect(() => {
+    const footer = footerRef.current;
+    if (!footer) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 50;
+
+      if (isAtBottom) {
+        startYRef.current = e.touches[0].clientY;
+        setIsPulling(true);
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isPulling) return;
+
+      const currentY = e.touches[0].clientY;
+      const distance = Math.max(0, currentY - startYRef.current);
+      setPullDistance(Math.min(distance, 150)); // Max pull distance
+
+      if (distance > 50 && !isExpanded) {
+        setIsExpanded(true);
+        setIsPulling(false);
+        setPullDistance(0);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      if (isPulling) {
+        setIsPulling(false);
+        setPullDistance(0);
+      }
+    };
+
+    footer.addEventListener('touchstart', handleTouchStart);
+    footer.addEventListener('touchmove', handleTouchMove);
+    footer.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      footer.removeEventListener('touchstart', handleTouchStart);
+      footer.removeEventListener('touchmove', handleTouchMove);
+      footer.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isPulling, isExpanded]);
 
   return (
-    <footer className="bg-[#181A20] text-white">
+    <footer
+      ref={footerRef}
+      className={`bg-[#181A20] text-white transition-all duration-300 md:block ${
+        isExpanded ? 'block' : 'hidden md:block'
+      }`}
+      style={{
+        transform: isPulling ? `translateY(${-pullDistance}px)` : undefined,
+      }}
+    >
+      {/* Pull Indicator - Mobile Only */}
+      {!isExpanded && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#181A20] border-t border-[orange] py-2 text-center">
+          <div className="text-[orange] text-sm animate-bounce">
+            <i className="fas fa-chevron-up"></i> Pull up to see footer
+            <i className="fas fa-chevron-up"></i>
+          </div>
+        </div>
+      )}
+
       {/* Back to Top */}
       <div className="pt-5 text-center mb-6">
         <a

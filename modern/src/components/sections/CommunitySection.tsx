@@ -321,8 +321,8 @@ export function CommunitySection() {
         {/* Tab Content */}
         <div className="mt-16">
           {activeTab === 'socials' && (
-            <div className="grid grid-cols-[10%_26.6%_26.6%_26.6%_10%] gap-8">
-              <div></div>
+            <div className="grid grid-cols-1 md:grid-cols-[10%_26.6%_26.6%_26.6%_10%] gap-8">
+              <div className="hidden md:block"></div>
               {/* Column 1: Official */}
               <Column data={socialLinksData} />
 
@@ -353,7 +353,7 @@ export function CommunitySection() {
 
               {/* Column 3: Other Groups - Twitter */}
               <div className="flex flex-col">
-                <h2 className="text-4xl uppercase text-white mb-6 opacity-0">Other Groups</h2>
+                <h2 className="text-4xl uppercase text-white mb-6 md:opacity-0">Other Groups</h2>
                 <h4 className="text-xl text-white mb-4">Twitter</h4>
                 <ul className="flex flex-col list-none p-0 space-y-2">
                   {otherGroupsData.subSections?.[1].items.map((item, index) => (
@@ -375,26 +375,26 @@ export function CommunitySection() {
                   ))}
                 </ul>
               </div>
-              <div></div>
+              <div className="hidden md:block"></div>
             </div>
           )}
 
           {activeTab === 'exchanges' && (
-            <div className="grid grid-cols-[10%_40%_40%_10%] gap-8">
-              <div></div>
+            <div className="grid grid-cols-1 md:grid-cols-[10%_40%_40%_10%] gap-8">
+              <div className="hidden md:block"></div>
               <Column data={exchangesData} />
               <Column data={marketCapData} />
-              <div></div>
+              <div className="hidden md:block"></div>
             </div>
           )}
 
           {activeTab === 'dex' && (
-            <div className="grid grid-cols-[10%_26.6%_26.6%_26.6%_10%] gap-8">
-              <div></div>
+            <div className="grid grid-cols-1 md:grid-cols-[10%_26.6%_26.6%_26.6%_10%] gap-8">
+              <div className="hidden md:block"></div>
               <Column data={polygonData} />
               <Column data={bscData} />
               <Column data={ethereumData} />
-              <div></div>
+              <div className="hidden md:block"></div>
             </div>
           )}
         </div>

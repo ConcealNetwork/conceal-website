@@ -222,81 +222,150 @@ export function MiningSection() {
           <span data-tkey="aboutGettingCCX2">for more detailed information about mining CCX.</span>
         </p>
 
-        <div className="tableContain overflow-x-auto" id="poolsTable">
-          <table className="w-full border-collapse border border-[#444]">
-            <caption className="text-[2.1rem] text-[orange] mb-4">
-              <span>Mining</span> <span>Pools</span>
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col" className="border border-[#444] p-2 text-center">
-                  <i className="fa fa-server mr-2"></i>
-                  <span>Pools</span>
-                </th>
-                <th scope="col" className="border border-[#444] p-2 text-center">
-                  <i className="fa fa-th-large mr-2"></i>
-                  <span>Height</span>
-                </th>
-                <th scope="col" className="border border-[#444] p-2 text-center">
-                  <i className="fas fa-coins mr-2"></i>
-                  <span>Fee</span>
-                </th>
-                <th scope="col" className="border border-[#444] p-2 text-center">
-                  <i className="fas fa-tachometer-alt mr-2"></i>
-                  <span>Hashrate</span>
-                </th>
-                <th scope="col" className="border border-[#444] p-2 text-center">
-                  <i className="fas fa-users-cog mr-2"></i>
-                  <span>Miners</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {isLoading && (
+        <div className="tableContain" id="poolsTable">
+          <h2 className="text-[2.1rem] text-[orange] mb-4 text-center md:text-left">
+            <span>Mining</span> <span>Pools</span>
+          </h2>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full border-collapse border border-[#444]">
+              <thead>
                 <tr>
-                  <td colSpan={5} className="border border-[#444] p-4 text-center text-[#757575]">
-                    Loading pools...
-                  </td>
+                  <th scope="col" className="border border-[#444] p-2 text-center">
+                    <i className="fa fa-server mr-2"></i>
+                    <span>Pools</span>
+                  </th>
+                  <th scope="col" className="border border-[#444] p-2 text-center">
+                    <i className="fa fa-th-large mr-2"></i>
+                    <span>Height</span>
+                  </th>
+                  <th scope="col" className="border border-[#444] p-2 text-center">
+                    <i className="fas fa-coins mr-2"></i>
+                    <span>Fee</span>
+                  </th>
+                  <th scope="col" className="border border-[#444] p-2 text-center">
+                    <i className="fas fa-tachometer-alt mr-2"></i>
+                    <span>Hashrate</span>
+                  </th>
+                  <th scope="col" className="border border-[#444] p-2 text-center">
+                    <i className="fas fa-users-cog mr-2"></i>
+                    <span>Miners</span>
+                  </th>
                 </tr>
-              )}
-              {!isLoading && pools.length === 0 && (
-                <tr>
-                  <td colSpan={5} className="border border-[#444] p-4 text-center text-[#757575]">
-                    No pools available
-                  </td>
-                </tr>
-              )}
-              {pools.map((pool) => {
-                const poolName = getPoolName(pool);
-                return (
-                  <tr key={poolName}>
-                    <td className="border border-[#444] p-2 text-center">
-                      <a
-                        href={`http://${pool.info.host}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[orange] hover:text-[#fafafa] transition-colors"
-                      >
-                        {pool.info.name}
-                      </a>
-                    </td>
-                    <td className="border border-[#444] p-2 text-center text-[#757575]">
-                      {pool.network.height.toLocaleString()}
-                    </td>
-                    <td className="border border-[#444] p-2 text-center text-[#757575]">
-                      {pool.config.poolFee}%
-                    </td>
-                    <td className="border border-[#444] p-2 text-center text-[#757575]">
-                      {getReadableHashRateString(pool.pool.hashrate)}
-                    </td>
-                    <td className="border border-[#444] p-2 text-center text-[#757575]">
-                      {pool.pool.miners.toLocaleString()}
+              </thead>
+              <tbody>
+                {isLoading && (
+                  <tr>
+                    <td colSpan={5} className="border border-[#444] p-4 text-center text-[#757575]">
+                      Loading pools...
                     </td>
                   </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                )}
+                {!isLoading && pools.length === 0 && (
+                  <tr>
+                    <td colSpan={5} className="border border-[#444] p-4 text-center text-[#757575]">
+                      No pools available
+                    </td>
+                  </tr>
+                )}
+                {pools.map((pool) => {
+                  const poolName = getPoolName(pool);
+                  return (
+                    <tr key={poolName}>
+                      <td className="border border-[#444] p-2 text-center">
+                        <a
+                          href={`http://${pool.info.host}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[orange] hover:text-[#fafafa] transition-colors"
+                        >
+                          {pool.info.name}
+                        </a>
+                      </td>
+                      <td className="border border-[#444] p-2 text-center text-[#757575]">
+                        {pool.network.height.toLocaleString()}
+                      </td>
+                      <td className="border border-[#444] p-2 text-center text-[#757575]">
+                        {pool.config.poolFee}%
+                      </td>
+                      <td className="border border-[#444] p-2 text-center text-[#757575]">
+                        {getReadableHashRateString(pool.pool.hashrate)}
+                      </td>
+                      <td className="border border-[#444] p-2 text-center text-[#757575]">
+                        {pool.pool.miners.toLocaleString()}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-4">
+            {isLoading && (
+              <div className="border border-[#444] p-4 text-center text-[#757575] rounded-lg">
+                Loading pools...
+              </div>
+            )}
+            {!isLoading && pools.length === 0 && (
+              <div className="border border-[#444] p-4 text-center text-[#757575] rounded-lg">
+                No pools available
+              </div>
+            )}
+            {pools.map((pool) => {
+              const poolName = getPoolName(pool);
+              return (
+                <div
+                  key={poolName}
+                  className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]"
+                >
+                  <div className="mb-3 pb-3 border-b border-[#444]">
+                    <a
+                      href={`http://${pool.info.host}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[orange] hover:text-[#fafafa] transition-colors text-lg font-semibold"
+                    >
+                      <i className="fa fa-server mr-2"></i>
+                      {pool.info.name}
+                    </a>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#757575]">
+                        <i className="fa fa-th-large mr-2"></i>
+                        Height:
+                      </span>
+                      <span className="text-white">{pool.network.height.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#757575]">
+                        <i className="fas fa-coins mr-2"></i>
+                        Fee:
+                      </span>
+                      <span className="text-white">{pool.config.poolFee}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#757575]">
+                        <i className="fas fa-tachometer-alt mr-2"></i>
+                        Hashrate:
+                      </span>
+                      <span className="text-white">{getReadableHashRateString(pool.pool.hashrate)}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[#757575]">
+                        <i className="fas fa-users-cog mr-2"></i>
+                        Miners:
+                      </span>
+                      <span className="text-white">{pool.pool.miners.toLocaleString()}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -213,7 +213,7 @@ export function TeamSection() {
         <div className="mt-16">
           <SectionHeading
             variant="withDescription"
-            title="About"
+            title="Team"
             description="The Conceal Team is a group of dedicated Volunteers from the Community who have committed time and energy into managing the Development, Marketing, and Community Building efforts of the Conceal Network."
           />
           <div className="mt-8 space-y-4">

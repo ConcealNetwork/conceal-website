@@ -1,3 +1,6 @@
+import { useEffect, useRef, useState } from 'react';
+import { appConfig, secondsToMs } from '@/config/app.config';
+
 interface SocialLink {
   name: string;
   url: string;
@@ -64,8 +67,54 @@ const socialLinks: SocialLink[] = [
 ];
 
 export function SocialMenu() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => {
+    // Check if mobile on mount and resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < appConfig.breakpoints.mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    const fadeOutDelay = secondsToMs(appConfig.mobile.menuFadeOutTime);
+
+    // Auto-hide after configured time on mobile
+    if (isMobile) {
+      timeoutRef.current = setTimeout(() => {
+        setIsVisible(false);
+      }, fadeOutDelay);
+    }
+
+    // Show on scroll
+    const handleScroll = () => {
+      if (isMobile) {
+        setIsVisible(true);
+        // Clear existing timeout and set new one
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
+          setIsVisible(false);
+        }, fadeOutDelay);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [isMobile]);
+
   return (
-    <ul className="fixed top-1/2 right-[1.5rem] z-10 -translate-y-1/2 list-none pt-2">
+    <ul
+      className={`fixed top-1/2 right-[1.5rem] z-10 -translate-y-1/2 list-none pt-2 transition-opacity duration-500 ease-in-out ${
+        isMobile && !isVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      }`}
+    >
       {socialLinks.map((link) => (
         <li key={link.name} className="pb-3">
           <a
