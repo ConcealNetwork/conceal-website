@@ -79,7 +79,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
   return (
     <>
       {/* Desktop Grid View */}
-      <div className="hidden md:grid grid-cols-[3%_16%_10%_65%_3%] gap-3 items-center py-4 px-4 border-b border-[rgba(255,255,255,0.1)]">
+      <div className="hidden md:grid grid-cols-[3%_17%_9%_65%_3%] gap-3 items-center py-4 px-4 border-b border-[rgba(255,255,255,0.1)]">
         {/* Icon */}
         <div className="flex items-center justify-center w-12">
           <img src={donation.icon} alt={donation.name} className="w-12 h-12" />
@@ -96,7 +96,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
         <div className="flex items-center">
           {donation.network ? (
             <span className="text-[#757575] text-[2.475rem] whitespace-nowrap">
-              {donation.network}
+              {donation.network.toLowerCase()}
             </span>
           ) : null}
         </div>
