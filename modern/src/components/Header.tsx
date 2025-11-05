@@ -156,7 +156,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       )}
     >
       {/* Logo */}
-      <div className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-[501]">
+      <div className="absolute left-4 md:left-10 top-[0.2rem] md:top-1/2 md:-translate-y-1/2 z-[501]">
         <a href="/" className="block mt-[9px] w-[50px] md:w-[50px] transition-all duration-300">
           <img src="/images/logo.svg" alt="Conceal Network" className="h-24 w-24 md:h-[84px] md:w-[84px]" />
         </a>
