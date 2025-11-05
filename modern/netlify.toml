@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+[[edge_functions]]
+  path = "/api/pools"
+  function = "pools-proxy"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

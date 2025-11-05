@@ -40,6 +40,19 @@ function getPoolName(data: PoolData): string {
   return index < 0 ? host : host.slice(0, index);
 }
 
+// Get the API URL based on environment
+// On production (conceal.network), use direct API (CORS allowed)
+// On Netlify staging, use proxy
+function getPoolsApiUrl(): string {
+  const hostname = window.location.hostname;
+  // If on production domain, use direct API
+  if (hostname === 'conceal.network' || hostname === 'www.conceal.network') {
+    return 'https://explorer.conceal.network/services/pools/data';
+  }
+  // Otherwise use proxy (Netlify staging)
+  return '/api/pools';
+}
+
 export function MiningSection() {
   const [pools, setPools] = useState<PoolData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +70,7 @@ export function MiningSection() {
           if (entry.isIntersecting && !isLoading && !hasLoadedPools.current) {
             setIsLoading(true);
             try {
-              const response = await fetch('/api/pools');
+              const response = await fetch(getPoolsApiUrl());
               if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
               }
