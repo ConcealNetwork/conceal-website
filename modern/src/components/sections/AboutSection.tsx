@@ -5,7 +5,6 @@ import { Button } from '../ui/Button';
 export function AboutSection() {
   return (
     <section
-      id="about"
       className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
       style={{
         background:
@@ -22,42 +21,38 @@ export function AboutSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              Privacy-Protected <strong className="text-[orange]">De-Fi</strong> & Encrypted <strong className="text-[orange]">Communications</strong>
+              Privacy-Protected <span className="text-[orange] font-semibold"> De-Fi</span> & Encrypted <span className="text-[orange] font-semibold">Communications</span>
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slide" asChild>
-              <a href="#about">
-                <i className="fab fa-leanpub text-xl mr-2"></i>
-                <span>Learn More</span>
-              </a>
+            <Button variant="slideToId" targetId="about" scrollOffset={120}>
+              <i className="fab fa-leanpub text-xl mr-2"></i>
+              <span>Learn More</span>
             </Button>
-            <Button variant="slide" asChild>
-              <a href="/#wallets">
-                <i className="fab fa-connectdevelop text-xl mr-2"></i>
-                <span>Use Conceal</span>
-              </a>
+            <Button variant="slide" asChild href="/#wallets">
+              <i className="fab fa-connectdevelop text-xl mr-2"></i>
+              <span>Use Conceal</span>
             </Button>
-            <Button variant="slide" asChild>
-              <a href="/#mining">
-                <i className="fas fa-microchip text-xl mr-2"></i>
-                <span>Get CCX</span>
-              </a>
+            <Button variant="slide" asChild href="/#mining">
+              <i className="fas fa-microchip text-xl mr-2"></i>
+              <span>Get CCX</span>
             </Button>
           </div>
         </div>
 
         {/* About Section Header */}
-        <SectionHeading
-          variant="withDescription"
-          title="About"
-          description="Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privately, anonymous and decentralized manner."
-        />
+        <div id="about" className="scroll-mt-48">
+          <SectionHeading
+            variant="withDescription"
+            title="About"
+            description="Conceal Network provides the ability for individuals to communicate and financially interact with each other in a privately, anonymous and decentralized manner."
+          />
+        </div>
 
         <div className="h-[5rem]"></div>
 
         {/* What is Conceal */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
             <h3 className="text-[2.4rem] text-[orange] mb-6" data-tkey="about_title">
               What is Conceal?
             </h3>
@@ -84,7 +79,7 @@ export function AboutSection() {
         </div>
 
         {/* Vision */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="vision_title">
               VISION
             </h4>
@@ -100,7 +95,7 @@ export function AboutSection() {
         </div>
 
         {/* Mission */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="mission_title">
               MISSION
             </h4>
@@ -116,7 +111,7 @@ export function AboutSection() {
         </div>
 
         {/* Privacy by Design */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="privacy_title">
               PRIVACY BY DESIGN
             </h4>
@@ -133,7 +128,7 @@ export function AboutSection() {
         </div>
 
         {/* Community & Development */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="community_title">
               COMMUNITY & DEVELOPMENT
             </h4>
@@ -151,7 +146,7 @@ export function AboutSection() {
         </div>
 
         {/* Decentralization & Resistance */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
 
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="decentralization_title">
               DECENTRALIZATION & RESISTANCE
@@ -170,7 +165,7 @@ export function AboutSection() {
         </div>
 
         {/* Join the Privacy Revolution */}
-        <div className="mb-12">
+        <div className="mb-12 pl-6 lg:pl-6">
 
             <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="revolution_title">
               JOIN THE PRIVACY REVOLUTION

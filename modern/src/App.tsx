@@ -42,19 +42,25 @@ function App({ onReady }: AppProps) {
 
   // Handle hash scrolling from navigation state and URL hash
   useEffect(() => {
+    // Only handle on main page
+    if (location.pathname !== '/') return;
+    
     // Check both navigation state and URL hash
     const state = location.state as { scrollToHash?: string } | null;
     const hashFromState = state?.scrollToHash;
     const hashFromUrl = location.hash;
     
-    const hash = hashFromState || hashFromUrl;
+    // Also check window.location.hash as fallback (for direct navigation)
+    const hashFromWindow = window.location.hash;
+    
+    const hash = hashFromState || hashFromUrl || hashFromWindow;
     
     if (hash) {
-      // Remove # if present
+      // Remove # if present and ensure it starts with #
       const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
       
       // Robust scrolling: retry until element exists or timeout
-      const maxAttempts = 30;
+      const maxAttempts = 50; // Increased attempts for slower renders
       let attempts = 0;
       
       const tryScroll = () => {
@@ -64,23 +70,25 @@ function App({ onReady }: AppProps) {
         if (element) {
           // Element found, scroll to it with slight offset for header
           requestAnimationFrame(() => {
-            const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-            const offset = 100; // Offset for header
-            window.scrollTo({
-              top: elementTop - offset,
-              behavior: 'smooth'
+            requestAnimationFrame(() => {
+              const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+              const offset = 100; // Offset for header
+              window.scrollTo({
+                top: elementTop - offset,
+                behavior: 'smooth'
+              });
             });
           });
         } else if (attempts < maxAttempts) {
           // Element not found yet, retry after a short delay
-          setTimeout(tryScroll, 100);
+          setTimeout(tryScroll, 150);
         }
       };
       
-      // Start trying after a delay to allow DOM to render
-      setTimeout(tryScroll, 200);
+      // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
+      setTimeout(tryScroll, 300);
     }
-  }, [location.state, location.hash]);
+  }, [location.state, location.hash, location.pathname]);
 
   // Signal that App is ready (after initial render)
   useEffect(() => {

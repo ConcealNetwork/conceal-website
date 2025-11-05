@@ -432,7 +432,7 @@ export function InTheMediaSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span>Going</span> <strong className="text-[orange]">Noticed</strong>,
+              <span>Going</span> <span className="text-[orange] font-semibold">Noticed</span>,
               <br />
               Not Concealed
             </h1>
@@ -442,7 +442,7 @@ export function InTheMediaSection() {
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="mt-8">
               <h2 className="text-2xl text-[orange] text-center mb-6">
-                <strong>Featured:</strong>
+                <span className="font-semibold">Featured:</span>
               </h2>
               <div className="flex justify-center">
                 <YouTubeCarousel videos={featuredVideos} className="mx-auto" />

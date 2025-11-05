@@ -15,24 +15,14 @@ export function MarketsSection() {
         <div className="max-w-6xl mx-auto text-center">
           <SectionHeading subtitle={<span data-tkey="rBuyCCX">Buy CCX</span>} title="Markets" />
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="download" asChild>
-              <a href="https://nonkyc.io/market/CCX_BTC" target="_blank" rel="noopener noreferrer">
-                nonKYC BTC/CCX
-              </a>
+            <Button variant="download" asChild href="https://nonkyc.io/market/CCX_BTC" target="_blank" rel="noopener noreferrer">
+              nonKYC BTC/CCX
             </Button>
-            <Button variant="download" asChild>
-              <a href="https://nonkyc.io/market/CCX_USDT" target="_blank" rel="noopener noreferrer">
-                nonKYC USDT/CCX
-              </a>
+            <Button variant="download" asChild href="https://nonkyc.io/market/CCX_USDT" target="_blank" rel="noopener noreferrer">
+              nonKYC USDT/CCX
             </Button>
-            <Button variant="download" asChild>
-              <a
-                href="https://www.sevenseas.exchange/market/CCX-USDT"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Seven Seas USDT/CCX
-              </a>
+            <Button variant="download" asChild href="https://www.sevenseas.exchange/market/CCX-USDT" target="_blank" rel="noopener noreferrer">
+              Seven Seas USDT/CCX
             </Button>
           </div>
         </div>

@@ -11,6 +11,8 @@ import { DonatePage } from './pages/DonatePage';
 import { BrandingPage } from './pages/BrandingPage';
 import { LabsPage } from './pages/LabsPage';
 import { InTheMediaPage } from './pages/InTheMediaPage';
+import { EarnPage } from './pages/EarnPage';
+import { MessagingPage } from './pages/MessagingPage';
 import { Error502Page } from './pages/Error502Page';
 import { Error504Page } from './pages/Error504Page';
 import { Error508Page } from './pages/Error508Page';
@@ -65,6 +67,8 @@ function Root() {
         <Route path="/branding" element={<BrandingPage />} />
         <Route path="/labs" element={<LabsPage />} />
         <Route path="/in-the-media" element={<InTheMediaPage />} />
+        <Route path="/earn" element={<EarnPage />} />
+        <Route path="/messaging" element={<MessagingPage />} />
         <Route path="/502" element={<Error502Page />} />
         <Route path="/504" element={<Error504Page />} />
         <Route path="/508" element={<Error508Page />} />

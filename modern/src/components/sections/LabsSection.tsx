@@ -134,23 +134,17 @@ export function LabsSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slide" asChild>
-              <a href="https://discord.gg/YbpHVSd">
-                <i className="fas fa-pencil-alt text-xl mr-2"></i>
-                <span>Apply</span>
-              </a>
+            <Button variant="slide" asChild href="https://discord.gg/YbpHVSd">
+              <i className="fas fa-pencil-alt text-xl mr-2"></i>
+              <span>Apply</span>
             </Button>
-            <Button variant="slide" asChild>
-              <a href="#labsHeading">
-                <i className="fas fa-flask text-xl mr-2"></i>
-                <span>Projects</span>
-              </a>
+            <Button variant="slideToId" targetId="labsHeading">
+              <i className="fas fa-flask text-xl mr-2"></i>
+              <span>Projects</span>
             </Button>
-            <Button variant="slide" asChild>
-              <a href="#about">
-                <i className="fab fa-leanpub text-xl mr-2"></i>
-                <span>Learn More</span>
-              </a>
+            <Button variant="slideToId" targetId="about">
+              <i className="fab fa-leanpub text-xl mr-2"></i>
+              <span>Learn More</span>
             </Button>
           </div>
         </div>

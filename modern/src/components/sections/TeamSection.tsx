@@ -126,7 +126,7 @@ export function TeamSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <strong className="text-[orange]">Alone</strong> we can do so little; <strong className="text-[orange]">together</strong> we can do so much.
+            <span className="text-[orange] font-semibold">Alone</span> we can do so little; <span className="text-[orange] font-semibold">together</span> we can do so much.
             </h1>
           </AnimatedElement>
         </div>

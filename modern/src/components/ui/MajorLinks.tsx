@@ -46,10 +46,13 @@ export function MajorLinks() {
     if (link.url.startsWith('/#')) {
       const hash = link.url.substring(1); // Get #markets, #features, etc.
       
-      // If we're not on the main page, navigate to root with hash
+      // If we're not on the main page, navigate to root first, then scroll
       if (location.pathname !== '/') {
-        // Navigate with both state and hash in URL
-        navigate(`${link.url}`, { state: { scrollToHash: hash }, replace: false });
+        // Navigate to root with hash in state
+        navigate('/', { 
+          state: { scrollToHash: hash },
+          replace: false
+        });
       } else {
         // Already on main page, just scroll
         const element = document.querySelector(hash);

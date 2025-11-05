@@ -227,7 +227,7 @@ export function CommunitySection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span>Improving the World</span> <strong className="text-[orange]">Together</strong>
+              <span>Improving the World</span> <span className="text-[orange] font-semibold">Together</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -257,25 +257,25 @@ export function CommunitySection() {
           <div className="flex justify-center gap-4 border-b border-[#222] pb-4">
             <button
               onClick={() => setActiveTab('socials')}
-              className={`text-8xl font-light transition-colors duration-300 ${
+              className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'socials' ? 'text-[orange]' : 'text-white hover:text-[orange]'
               }`}
             >
               Social links
             </button>
-            <span className="text-white text-8xl">|</span>
+            <span className="text-white text-7xl">|</span>
             <button
               onClick={() => setActiveTab('exchanges')}
-              className={`text-8xl font-light transition-colors duration-300 ${
+              className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'exchanges' ? 'text-[orange]' : 'text-white hover:text-[orange]'
               }`}
             >
               Exchanges
             </button>
-            <span className="text-white text-8xl">|</span>
+            <span className="text-white text-7xl">|</span>
             <button
               onClick={() => setActiveTab('dex')}
-              className={`text-8xl font-light transition-colors duration-300 ${
+              className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'dex' ? 'text-[orange]' : 'text-white hover:text-[orange]'
               }`}
             >

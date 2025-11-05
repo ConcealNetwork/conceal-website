@@ -16,6 +16,8 @@ const navItems: NavItem[] = [
       { label: "What's Conceal?", href: '/about' },
       { label: 'Roadmap', href: '/roadmap' },
       { label: 'Team', href: '/team' },
+      { label: 'Earn', href: '/earn' },
+      { label: 'Messaging', href: '/messaging' },
       { label: 'Wiki', href: 'https://conceal.network/wiki/doku.php?id=start', external: true },
     ],
   },
@@ -79,10 +81,13 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       e.preventDefault();
       const hash = href.substring(1); // Get #mining, #wallets, etc.
       
-      // If we're not on the main page, navigate to root with hash
+      // If we're not on the main page, navigate to root first, then scroll
       if (location.pathname !== '/') {
-        // Navigate with both state and hash in URL
-        navigate(`${href}`, { state: { scrollToHash: hash }, replace: false });
+        // Navigate to root with hash in state
+        navigate('/', { 
+          state: { scrollToHash: hash },
+          replace: false
+        });
       } else {
         // Already on main page, just scroll
         const element = document.querySelector(hash);

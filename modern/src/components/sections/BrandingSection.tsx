@@ -60,11 +60,9 @@ export function BrandingSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slide" asChild>
-              <a href="#branding">
-                <i className="fas fa-book text-xl mr-2"></i>
-                <span>Click to learn more</span>
-              </a>
+            <Button variant="slideToId" targetId="branding">
+              <i className="fas fa-book text-xl mr-2"></i>
+              <span>Click to learn more</span>
             </Button>
           </div>
         </div>

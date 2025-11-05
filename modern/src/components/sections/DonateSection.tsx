@@ -148,11 +148,9 @@ export function DonateSection() {
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
-            <Button variant="slide" asChild>
-              <a href="#donate">
-                <i className="fas fa-heart text-xl mr-2"></i>
-                <span>Support us</span>
-              </a>
+            <Button variant="slideToId" targetId="donate">
+              <i className="fas fa-heart text-xl mr-2"></i>
+              <span>Support us</span>
             </Button>
           </div>
         </div>

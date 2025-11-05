@@ -236,7 +236,7 @@ export function RoadmapSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <strong className="text-[orange]">The Birth</strong> of something <strong className="text-[orange]">Amazing.</strong>
+            <span className="text-[orange] font-semibold">The Birth</span> of something <span className="text-[orange] font-semibold">Amazing.</span>
             </h1>
           </AnimatedElement>
         </div>
