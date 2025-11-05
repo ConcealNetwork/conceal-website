@@ -36,6 +36,17 @@ const teamMembers: TeamMember[] = [
     },
   },
   {
+    name: 'Giomarx7',
+    role: 'Head of Community',
+    image: '/images/teampage/Giomarx7.jpg',
+    description:
+      "I started mining crypto in late 2016, did it mainly for the money but as I became more curious about the technology, I was eager to learn more, in 2018 I've found out about Conceal, this was a purpose worth fighting for, joined the team in 2024. Technology can enslave you, but it can also give you freedom and privacy #Conceal..",
+    socials: {
+      twitter: 'https://x.com/Giomarx7',
+    },
+  },
+  /*
+  {
     name: 'LolitaLollipop',
     role: 'HEAD OF Community',
     image: '/images/teampage/LolitaLollipop.png',
@@ -43,6 +54,7 @@ const teamMembers: TeamMember[] = [
       "A lover of Freedom and Privacy, interested in Cryptography, and perfectly Anonymous. Discovering Conceal in early 2019 I was blown away by the Vision and the Adherence to the Core Principles found in the Satoshi Nakamoto whitepaper, and I've been here ever since. I'm on a personal mission to see Privacy become a normal part of everyone's daily life!",
     socials: {},
   },
+  */
   {
     name: 'bomb-on',
     role: 'Developer',
@@ -92,16 +104,6 @@ const teamMembers: TeamMember[] = [
       "I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.",
     socials: {
       twitter: 'https://x.com/CryptolordTG',
-    },
-  },
-  {
-    name: 'Giomarx7',
-    role: 'Community Manager',
-    image: '/images/teampage/Giomarx7.jpg',
-    description:
-      "I started mining crypto in late 2016, did it mainly for the money but as I became more curious about the technology, I was eager to learn more, in 2018 I've found out about Conceal, this was a purpose worth fighting for, joined the team in 2024. Technology can enslave you, but it can also give you freedom and privacy #Conceal..",
-    socials: {
-      twitter: 'https://x.com/Giomarx7',
     },
   },
 ];
@@ -170,7 +172,7 @@ export function TeamSection() {
                   {member.name}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30px] h-[2px] bg-[orange]"></span>
                 </h3>
-                <span className="role block text-sm uppercase italic text-white group-hover:text-[orange] group-hover:not-italic transition-all duration-300">
+                <span className="role block text-m uppercase italic text-white group-hover:text-[orange] group-hover:not-italic transition-all duration-300">
                   {member.role}
                 </span>
                 <ul className="socials flex justify-center gap-1.5 list-none p-0 mt-4">
