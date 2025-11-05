@@ -1,0 +1,36 @@
+name: Deploy Modern Site
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: modern/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./modern
+        run: npm ci
+
+      - name: Build
+        working-directory: ./modern
+        run: npm run build
+
+      - name: Deploy
+        if: success()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./modern/dist
+          enable_jekyll: false
+
