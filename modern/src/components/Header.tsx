@@ -14,8 +14,9 @@ const navItems: NavItem[] = [
     label: 'About',
     children: [
       { label: "What's Conceal?", href: '/about' },
-      { label: 'Roadmap', href: '/roadmap' },
       { label: 'Team', href: '/team' },
+      { label: 'Manifesto', href: '/manifesto' },
+      { label: 'Roadmap', href: '/roadmap' },
       { label: 'Earn', href: '/earn' },
       { label: 'Messaging', href: '/messaging' },
       { label: 'Wiki', href: 'https://conceal.network/wiki/doku.php?id=start', external: true },
@@ -56,6 +57,9 @@ const navItems: NavItem[] = [
       { label: 'Bridge', href: 'https://bridge.conceal.network', external: true },
       { label: 'Explorer', href: 'https://explorer.conceal.network', external: true },
       { label: 'Web Wallet', href: 'https://wallet.conceal.network', external: true },
+      { label: 'Paper Wallet', href: 'https://conceal.network/paperwallet', external: true },
+      { label: 'Marketplace', href: 'https://conceal.network/marketplace', external: true },
+      { label: 'Authenticator', href: '/labs#authenticator', external: false },
     ],
   },
 ];

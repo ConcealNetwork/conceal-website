@@ -5,12 +5,14 @@ import { Carousel } from '../ui/Carousel';
 import { SectionHeading } from '../ui/SectionHeading';
 
 interface LabProject {
+  id: string;
   title: string;
   description: string;
   labeltolink: string;
   projecturl: string;
   labeltodocument: string;
   documentlink: string;
+  documenttype: 'pdf' | 'wiki';
   linktoscreenshotfolder: string;
   imagePattern?: string;
   imageCount?: number;
@@ -19,6 +21,7 @@ interface LabProject {
 
 const labsProjects: LabProject[] = [
   {
+    id: 'authenticator',
     title: 'Conceal-Authenticator',
     description:
       'Conceal-Authenticator is a secure 2FA (Two-Factor Authentication) app that leverages the Conceal Network blockchain to securely backup your 2FA shared keys using a built-in lite wallet.',
@@ -27,12 +30,14 @@ const labsProjects: LabProject[] = [
     projecturl: 'https://github.com/Acktarius/Conceal-2fa-app/',
     labeltodocument: 'You can find more information about the product in wiki page.',
     documentlink: 'https://github.com/Acktarius/Conceal-2fa-app/wiki',
+    documenttype: 'wiki',
     linktoscreenshotfolder: '/images/labs/ccxauthenticator',
     imagePattern: 'authenticator',
     imageCount: 5,
     imageExtension: 'png',
   },
   {
+    id: 'assistant',
     title: 'Conceal-Assistant',
     description:
       'Conceal-Assistant is an application made to help you oversee and manage your CCX-Box Node and Miner operations. It simply checks the status of the associated services and also allows you to easily deactivate or activate those services from any device.\n\nThe CCX-Box is a small form-factor PC that will run a Conceal Network Full-Node and Miner out of the box. Utilizing the Conceal-Assistant, this small dedicated Node can be managed remotely and will earn $CCX over time.',
@@ -41,6 +46,7 @@ const labsProjects: LabProject[] = [
     projecturl: 'https://github.com/Acktarius/conceal-assistant',
     labeltodocument: 'You can find more information about the product in this PDF.',
     documentlink: '/labs/data/conceal-assistant_info.pdf',
+    documenttype: 'pdf',
     linktoscreenshotfolder: '/images/labs/ccxassistant',
     imagePattern: 'assistant',
     imageCount: 5,
@@ -64,7 +70,7 @@ function ProjectCard({ project }: { project: LabProject }) {
   const descriptionParagraphs = project.description.split('\n').filter((p) => p.trim());
 
   return (
-    <div id={`project-${project.title.toLowerCase().replace(/\s+/g, '-')}`} className="mb-16">
+    <div id={project.id} className="mb-16 scroll-mt-24">
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <h1 className="text-[4rem] uppercase text-[orange] mb-6">{project.title}</h1>
       </AnimatedElement>
@@ -98,7 +104,7 @@ function ProjectCard({ project }: { project: LabProject }) {
             rel="noopener noreferrer"
           >
             {project.labeltodocument}
-            <i className="fas fa-file-pdf ml-2"></i>
+            <i className={`ml-2 ${project.documenttype === 'pdf' ? 'fas fa-file-pdf' : 'fab fa-wikipedia-w'}`}></i>
           </a>
         </p>
       </AnimatedElement>

@@ -75,19 +75,8 @@ const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: 'AxVultis',
-    role: 'Lead Developer',
-    image: '/images/teampage/AxVultis.png',
-    description:
-      'I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.',
-    socials: {
-      github: 'https://github.com/AxVultis',
-      twitter: 'https://x.com/AxVultis',
-    },
-  },
-  {
     name: 'Acktarius',
-    role: 'Developer',
+    role: 'Lead Developer',
     image: '/images/teampage/Acktarius.png',
     description:
       "I came late to the cryptocurrency world and joined Conceal mid 2021, having a very keen interest for its unique privacy features. I 'm very excited to bring my experience as R&D engineer and time spent programming as a hobby, to this community of talented, discreet, passionate and dedicated people.",
@@ -97,13 +86,14 @@ const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: 'Mannan',
-    role: 'Community Manager',
-    image: '/images/teampage/Mannan.png',
+    name: 'AxVultis',
+    role: 'Developer',
+    image: '/images/teampage/AxVultis.png',
     description:
-      "I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.",
+      'I discovered Conceal in 2019 and joined the team in 2020 as a developer. I am contributing to this decentralized privacy focused project since then. I am a true defender of open source software.',
     socials: {
-      twitter: 'https://x.com/CryptolordTG',
+      github: 'https://github.com/AxVultis',
+      twitter: 'https://x.com/AxVultis',
     },
   },
 ];

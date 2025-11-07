@@ -14,6 +14,7 @@ import { Error504Page } from './pages/Error504Page';
 import { Error508Page } from './pages/Error508Page';
 import { InTheMediaPage } from './pages/InTheMediaPage';
 import { LabsPage } from './pages/LabsPage';
+import { ManifestoPage } from './pages/ManifestoPage';
 import { MessagingPage } from './pages/MessagingPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { RoadmapPage } from './pages/RoadmapPage';
@@ -71,6 +72,7 @@ function Root() {
         <Route path="/in-the-media" element={<InTheMediaPage />} />
         <Route path="/earn" element={<EarnPage />} />
         <Route path="/messaging" element={<MessagingPage />} />
+        <Route path="/manifesto" element={<ManifestoPage />} />
         <Route path="/tc" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/502" element={<Error502Page />} />

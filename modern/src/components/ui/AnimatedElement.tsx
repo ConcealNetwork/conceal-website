@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from 'react';
+import React, { type ElementType, type ReactNode } from 'react';
 import type { ScrollAnimationOptions } from '../../utils/scrollAnimations';
 import { useScrollAnimation } from '../../utils/scrollAnimations';
 
