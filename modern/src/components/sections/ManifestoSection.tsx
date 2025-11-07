@@ -155,7 +155,7 @@ export function ManifestoSection() {
 
         {/* Citation Image with Zoom Effect */}
         <div className="mb-16 flex justify-center">
-          <AnimatedElement types={['slideInLeft']} triggerImmediately={false}>
+          <AnimatedElement types={['slideInLeft']} triggerImmediately={true}>
             <div className="relative group overflow-hidden rounded-lg shadow-lg max-w-4xl w-full cursor-zoom-in">
               <img
                 src="/images/manifesto/citation.png"
