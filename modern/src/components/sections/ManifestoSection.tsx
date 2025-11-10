@@ -1,5 +1,4 @@
 import { AnimatedElement } from '../ui/AnimatedElement';
-import { SectionHeading } from '../ui/SectionHeading';
 
 // Manifesto content from the markdown file
 const manifestoContent = [
@@ -53,41 +52,49 @@ function ManifestoText({ content }: { content: string }) {
   // Simple markdown-like parsing for bold text and headers
   const parseText = (text: string) => {
     const lines = text.split('\n');
-    return lines.map((line, index) => {
-      if (line.trim() === '') return null;
-      
-      // Check for ### headers
-      if (line.startsWith('### ')) {
+    return lines
+      .map((line) => {
+        if (line.trim() === '') return null;
+
+        // Check for ### headers
+        if (line.startsWith('### ')) {
+          return (
+            <h3 key={line} className="text-[2.8rem] uppercase text-[orange] mb-6">
+              {line.replace(/^### \*\*|\*\*$/g, '')}
+            </h3>
+          );
+        }
+
+        // Check for **bold** text
+        const parts = line.split(/(\*\*[^*]+\*\*)/g);
         return (
-          <h3 key={index} className="text-[2.8rem] uppercase text-[orange] mb-6">
-            {line.replace(/^### \*\*|\*\*$/g, '')}
-          </h3>
+          <p key={line} className="text-[1.7rem] text-[#757575] mb-4">
+            {parts.map((part) => {
+              if (part.startsWith('**') && part.endsWith('**')) {
+                return (
+                  <strong key={part} className="text-white font-semibold">
+                    {part.slice(2, -2)}
+                  </strong>
+                );
+              }
+              return <span key={part}>{part}</span>;
+            })}
+          </p>
         );
-      }
-      
-      // Check for **bold** text
-      const parts = line.split(/(\*\*[^*]+\*\*)/g);
-      return (
-        <p key={index} className="text-[1.7rem] text-[#757575] mb-4">
-          {parts.map((part, partIndex) => {
-            if (part.startsWith('**') && part.endsWith('**')) {
-              return (
-                <strong key={partIndex} className="text-white font-semibold">
-                  {part.slice(2, -2)}
-                </strong>
-              );
-            }
-            return <span key={partIndex}>{part}</span>;
-          })}
-        </p>
-      );
-    }).filter(Boolean);
+      })
+      .filter(Boolean);
   };
 
   return <div>{parseText(content)}</div>;
 }
 
-function ManifestoContentBlock({ content, index }: { content: typeof manifestoContent[0]; index: number }) {
+function ManifestoContentBlock({
+  content,
+  index,
+}: {
+  content: (typeof manifestoContent)[0];
+  index: number;
+}) {
   const hasImage = content.image !== null;
   const isEven = index % 2 === 0;
 
@@ -103,23 +110,22 @@ function ManifestoContentBlock({ content, index }: { content: typeof manifestoCo
   }
 
   // Text and image block with alternating layout
+  const imageUrl = content.image as string; // Safe: hasImage check ensures image is not null
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
       {/* Image Element */}
       <div className={`order-2 mb-8 lg:mb-0 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
         <AnimatedElement types={['rotateInY']} triggerImmediately={false}>
           <div className="w-full max-w-md mx-auto">
-            <img
-              src={content.image!}
-              alt="Manifesto"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+            <img src={imageUrl} alt="Manifesto" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
         </AnimatedElement>
       </div>
 
       {/* Text Element */}
-      <div className={`order-1 ${isEven ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pr-0 lg:pr-12'}`}>
+      <div
+        className={`order-1 ${isEven ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pr-0 lg:pr-12'}`}
+      >
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <ManifestoText content={content.text} />
         </AnimatedElement>
@@ -169,11 +175,14 @@ export function ManifestoSection() {
         {/* Manifesto Content */}
         <div className="space-y-8">
           {manifestoContent.map((content, index) => (
-            <ManifestoContentBlock key={index} content={content} index={index} />
+            <ManifestoContentBlock
+              key={content.text.substring(0, 50)}
+              content={content}
+              index={index}
+            />
           ))}
         </div>
       </div>
     </section>
   );
 }
-

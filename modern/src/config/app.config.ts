@@ -1,6 +1,6 @@
 /**
  * Application Configuration
- * 
+ *
  * Centralized configuration file for easy maintenance and updates.
  * All timing values are in milliseconds unless otherwise specified.
  */
@@ -16,7 +16,7 @@ export const appConfig = {
   cookies: {
     /** Splash screen cookie expiration in hours */
     splashScreenExpiration: 24, // hours
-    
+
     /** Language preference cookie expiration in seconds (default: ~1 month) */
     languageExpiration: 2629800, // seconds (~30 days)
   },
@@ -25,10 +25,10 @@ export const appConfig = {
   splash: {
     /** Minimum display time in milliseconds */
     minDisplayTime: 2000, // ms
-    
+
     /** Animation fade out duration in milliseconds */
     fadeOutDuration: 600, // ms
-    
+
     /** Check interval for completion in milliseconds */
     checkInterval: 50, // ms
   },
@@ -37,16 +37,16 @@ export const appConfig = {
   animations: {
     /** Copy button feedback timeout in milliseconds */
     copyFeedbackTimeout: 2000, // ms
-    
+
     /** Scroll retry delay in milliseconds */
     scrollRetryDelay: 50, // ms
-    
+
     /** Scroll retry delay for button navigation in milliseconds */
     scrollRetryDelayButton: 100, // ms
-    
+
     /** Scroll retry delay for cross-page navigation in milliseconds */
     scrollRetryDelayCrossPage: 150, // ms
-    
+
     /** Initial scroll delay for cross-page navigation in milliseconds */
     scrollInitialDelayCrossPage: 300, // ms
   },
@@ -78,4 +78,3 @@ export const hoursToMinutes = (hours: number): number => hours * 60;
  * Helper function to check if device is mobile
  */
 export const isMobile = (): boolean => window.innerWidth < appConfig.breakpoints.mobile;
-

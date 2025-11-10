@@ -40,6 +40,7 @@ const socialLinksData: ColumnData = {
       svgIcon: (
         <svg
           role="img"
+          aria-label="Substack"
           className="h-4 w-4"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -181,8 +182,8 @@ function Column({ data }: { data: ColumnData }) {
         {data.title}
       </h2>
       <ul className="flex flex-col list-none p-0 space-y-2">
-        {data.items.map((item, index) => (
-          <li key={index}>
+        {data.items.map((item) => (
+          <li key={item.url}>
             <a
               href={item.url}
               target="_blank"
@@ -201,14 +202,14 @@ function Column({ data }: { data: ColumnData }) {
           </li>
         ))}
       </ul>
-      {data.subSections?.map((subSection, subIndex) => (
-        <div key={subIndex} className="mt-6">
+      {data.subSections?.map((subSection) => (
+        <div key={subSection.title} className="mt-6">
           <h4 className="text-xl text-white mb-4 transition-colors duration-300">
             {subSection.title}
           </h4>
           <ul className="flex flex-col list-none p-0 space-y-2">
-            {subSection.items.map((item, index) => (
-              <li key={index}>
+            {subSection.items.map((item) => (
+              <li key={item.url}>
                 <a
                   href={item.url}
                   target="_blank"
@@ -290,6 +291,7 @@ export function CommunitySection() {
         <div className="mb-8">
           <div className="flex justify-center gap-4 border-b border-[#222] pb-4">
             <button
+              type="button"
               onClick={() => setActiveTab('socials')}
               className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'socials' ? 'text-[orange]' : 'text-white hover:text-[orange]'
@@ -299,6 +301,7 @@ export function CommunitySection() {
             </button>
             <span className="text-white text-7xl">|</span>
             <button
+              type="button"
               onClick={() => setActiveTab('exchanges')}
               className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'exchanges' ? 'text-[orange]' : 'text-white hover:text-[orange]'
@@ -308,6 +311,7 @@ export function CommunitySection() {
             </button>
             <span className="text-white text-7xl">|</span>
             <button
+              type="button"
               onClick={() => setActiveTab('dex')}
               className={`text-7xl font-light transition-colors duration-300 ${
                 activeTab === 'dex' ? 'text-[orange]' : 'text-white hover:text-[orange]'
@@ -331,8 +335,8 @@ export function CommunitySection() {
                 <h2 className="text-4xl uppercase text-white mb-6">Other Groups</h2>
                 <h4 className="text-xl text-white mb-4">Telegram</h4>
                 <ul className="flex flex-col list-none p-0 space-y-2">
-                  {otherGroupsData.subSections?.[0].items.map((item, index) => (
-                    <li key={index}>
+                  {otherGroupsData.subSections?.[0].items.map((item) => (
+                    <li key={item.url}>
                       <a
                         href={item.url}
                         target="_blank"
@@ -356,8 +360,8 @@ export function CommunitySection() {
                 <h2 className="text-4xl uppercase text-white mb-6 md:opacity-0">Other Groups</h2>
                 <h4 className="text-xl text-white mb-4">Twitter</h4>
                 <ul className="flex flex-col list-none p-0 space-y-2">
-                  {otherGroupsData.subSections?.[1].items.map((item, index) => (
-                    <li key={index}>
+                  {otherGroupsData.subSections?.[1].items.map((item) => (
+                    <li key={item.url}>
                       <a
                         href={item.url}
                         target="_blank"

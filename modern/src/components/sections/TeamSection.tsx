@@ -138,9 +138,9 @@ export function TeamSection() {
 
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <AnimatedElement
-              key={index}
+              key={member.name}
               types={['fadeIn']}
               triggerImmediately={false}
               startOpacity={0.15}

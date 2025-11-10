@@ -31,7 +31,7 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
         >
           {videos.map((videoUrl, index) => (
             <div
-              key={index}
+              key={videoUrl}
               className="flex-shrink-0 flex items-center justify-center"
               style={{ width: '100%', minWidth: '100%' }}
             >
@@ -49,6 +49,7 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
 
       {/* Previous Button */}
       <button
+        type="button"
         onClick={goToPrevious}
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 z-10"
         aria-label="Previous"
@@ -58,6 +59,7 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
 
       {/* Next Button */}
       <button
+        type="button"
         onClick={goToNext}
         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 z-10"
         aria-label="Next"
@@ -67,9 +69,10 @@ export function YouTubeCarousel({ videos, className = '' }: YouTubeCarouselProps
 
       {/* Indicators */}
       <div className="flex justify-center gap-2 mt-4">
-        {videos.map((_, index) => (
+        {videos.map((videoUrl, index) => (
           <button
-            key={index}
+            type="button"
+            key={videoUrl}
             onClick={() => setActiveIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
               index === activeIndex ? 'bg-[orange] w-8' : 'bg-white/50 hover:bg-white/70'

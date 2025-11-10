@@ -41,6 +41,7 @@ const socialLinks: SocialLink[] = [
     svgIcon: (
       <svg
         role="img"
+        aria-label="Substack"
         className="h-4 w-4"
         viewBox="0 0 20 20"
         fill="currentColor"

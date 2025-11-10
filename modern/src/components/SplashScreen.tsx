@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { hasCookie, setCookie } from '../utils/cookies';
 import { appConfig, hoursToMinutes } from '@/config/app.config';
+import { hasCookie, setCookie } from '../utils/cookies';
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -44,7 +44,11 @@ export function SplashScreen({
           // Remove from DOM after animation
           setTimeout(() => {
             if (showOnlyOnce) {
-              setCookie('splash-shown', 'true', hoursToMinutes(appConfig.cookies.splashScreenExpiration));
+              setCookie(
+                'splash-shown',
+                'true',
+                hoursToMinutes(appConfig.cookies.splashScreenExpiration)
+              );
             }
             onComplete();
           }, appConfig.splash.fadeOutDuration); // Match CSS transition duration

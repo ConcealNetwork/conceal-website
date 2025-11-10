@@ -147,8 +147,8 @@ export function EarnSection() {
 
         {/* Features */}
         <div className="space-y-8">
-          {features.map((feature, index) => (
-            <FeatureCard key={index} feature={feature} />
+          {features.map((feature) => (
+            <FeatureCard key={feature.title} feature={feature} />
           ))}
         </div>
       </div>

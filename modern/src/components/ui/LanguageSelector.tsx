@@ -1,8 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface Language {
   code: string;
+  name: string;
+}
+
+interface LanguageSelection {
   name: string;
 }
 
@@ -62,14 +66,12 @@ export function LanguageSelector() {
 
         // Load language selection
         const selectionRes = await fetch('/lang/selection.json');
-        const selectionData = await selectionRes.json();
+        const selectionData = (await selectionRes.json()) as Record<string, LanguageSelection>;
 
-        const langList: Language[] = Object.entries(selectionData).map(
-          ([code, value]: [string, any]) => ({
-            code,
-            name: value.name,
-          })
-        );
+        const langList: Language[] = Object.entries(selectionData).map(([code, value]) => ({
+          code,
+          name: value.name,
+        }));
         setLanguages(langList);
 
         // Set selected language
@@ -117,7 +119,7 @@ export function LanguageSelector() {
     }
   }, [isOpen]);
 
-  const applyTranslations = async (langCode: string) => {
+  const applyTranslations = useCallback(async (langCode: string) => {
     try {
       const response = await fetch(`/lang/${langCode}.json`);
       const langData = await response.json();
@@ -144,7 +146,7 @@ export function LanguageSelector() {
     } catch (err) {
       console.error('Failed to load language:', err);
     }
-  };
+  }, []);
 
   // Re-apply translations when language changes, with a small delay to ensure DOM is ready
   useEffect(() => {
@@ -155,10 +157,11 @@ export function LanguageSelector() {
       }, 100);
       return () => clearTimeout(timer);
     }
-  }, [selectedLanguage.code]);
+  }, [selectedLanguage.code, applyTranslations]);
 
   const handleLanguageSelect = async (lang: Language) => {
     // Set cookie
+    // biome-ignore lint/suspicious/noDocumentCookie: need to use document.cookie for legacy browsers
     document.cookie = `CCX_Language=${lang.code}; max-age=2629800; samesite=strict; secure`;
 
     setSelectedLanguage(lang);
@@ -171,6 +174,7 @@ export function LanguageSelector() {
   return (
     <div className="relative inline-block">
       <button
+        type="button"
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="language-selector flex items-center justify-center gap-2 text-white hover:text-[orange] transition-all duration-300"
@@ -192,6 +196,7 @@ export function LanguageSelector() {
       >
         {languages.map((lang) => (
           <button
+            type="button"
             key={lang.code}
             onClick={() => handleLanguageSelect(lang)}
             className={cn(

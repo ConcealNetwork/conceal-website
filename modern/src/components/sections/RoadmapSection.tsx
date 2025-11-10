@@ -283,7 +283,11 @@ export function RoadmapSection() {
                 const isDone = item.status === 'done';
 
                 return (
-                  <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
+                  <AnimatedElement
+                    key={`${item.date}-${item.title}`}
+                    types={['fadeIn']}
+                    triggerImmediately={false}
+                  >
                     <div
                       className={`single-timeline flex items-center mb-[22px] ${isEven ? 'flex-row-reverse' : ''}`}
                     >

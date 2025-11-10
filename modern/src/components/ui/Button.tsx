@@ -1,7 +1,7 @@
 import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { cn } from '@/lib/utils';
 import { appConfig } from '@/config/app.config';
+import { cn } from '@/lib/utils';
 
 interface BaseButtonProps {
   variant?: 'primary' | 'stroke' | 'default' | 'download' | 'slide' | 'slideToId';
@@ -130,12 +130,21 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
 
       // Call original onClick if provided
       if (props.onClick) {
-        props.onClick(e as any);
+        // Type assertion is safe: handleClick receives union event type compatible with both button and anchor handlers
+        if (props.asChild) {
+          (props.onClick as React.MouseEventHandler<HTMLAnchorElement>)(
+            e as React.MouseEvent<HTMLAnchorElement>
+          );
+        } else {
+          (props.onClick as React.MouseEventHandler<HTMLButtonElement>)(
+            e as React.MouseEvent<HTMLButtonElement>
+          );
+        }
       }
     };
 
     if (props.asChild) {
-      const { asChild, ...anchorProps } = props as ButtonAsAnchorProps;
+      const { asChild: _asChild, ...anchorProps } = props as ButtonAsAnchorProps;
       return (
         <a
           ref={ref as React.ForwardedRef<HTMLAnchorElement>}
@@ -149,7 +158,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
       );
     }
 
-    const { asChild, ...buttonProps } = props as ButtonAsButtonProps;
+    const { asChild: _asChild, ...buttonProps } = props as ButtonAsButtonProps;
     return (
       <button
         ref={ref as React.ForwardedRef<HTMLButtonElement>}

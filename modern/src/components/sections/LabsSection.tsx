@@ -75,8 +75,8 @@ function ProjectCard({ project }: { project: LabProject }) {
         <h1 className="text-[4rem] uppercase text-[orange] mb-6">{project.title}</h1>
       </AnimatedElement>
 
-      {descriptionParagraphs.map((paragraph, index) => (
-        <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
+      {descriptionParagraphs.map((paragraph) => (
+        <AnimatedElement key={paragraph} types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575] mb-4">{paragraph}</p>
         </AnimatedElement>
       ))}
@@ -104,7 +104,9 @@ function ProjectCard({ project }: { project: LabProject }) {
             rel="noopener noreferrer"
           >
             {project.labeltodocument}
-            <i className={`ml-2 ${project.documenttype === 'pdf' ? 'fas fa-file-pdf' : 'fab fa-wikipedia-w'}`}></i>
+            <i
+              className={`ml-2 ${project.documenttype === 'pdf' ? 'fas fa-file-pdf' : 'fab fa-wikipedia-w'}`}
+            ></i>
           </a>
         </p>
       </AnimatedElement>
@@ -317,8 +319,8 @@ export function LabsSection() {
 
         {/* Projects List */}
         <div id="labsProjects">
-          {labsProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+          {labsProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

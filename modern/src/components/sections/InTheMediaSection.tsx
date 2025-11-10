@@ -370,8 +370,8 @@ function MediaTabContent({ tab }: { tab: MediaTab }) {
       {/* Mining videos grid */}
       {tab.miningVideos && (
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {tab.miningVideos.map((videoUrl, index) => (
-            <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
+          {tab.miningVideos.map((videoUrl) => (
+            <AnimatedElement key={videoUrl} types={['fadeIn']} triggerImmediately={false}>
               <div
                 className="w-full max-w-[800px] min-w-[300px] flex-1"
                 style={{ margin: '1em 0.5em' }}
@@ -382,7 +382,7 @@ function MediaTabContent({ tab }: { tab: MediaTab }) {
                     className="absolute top-0 left-0 w-full h-full border-4 border-black"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    title={`Mining video ${index + 1}`}
+                    title="Mining video"
                   ></iframe>
                 </div>
               </div>
@@ -394,8 +394,8 @@ function MediaTabContent({ tab }: { tab: MediaTab }) {
       {/* Media items grid */}
       {tab.items && (
         <div className="flex flex-wrap justify-center gap-4">
-          {tab.items.map((item, index) => (
-            <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
+          {tab.items.map((item) => (
+            <AnimatedElement key={item.url} types={['fadeIn']} triggerImmediately={false}>
               <MediaThumbnail item={item} />
             </AnimatedElement>
           ))}
@@ -459,6 +459,7 @@ export function InTheMediaSection() {
           <nav className="flex flex-wrap justify-center gap-4 bg-[#222] bg-gradient-to-b from-[#222] to-transparent border-b border-[#222] shadow-[0_0_32px_#222] py-5 px-5">
             {mediaTabs.map((tab) => (
               <button
+                type="button"
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-[1.8rem] font-light px-4 py-2 transition-colors duration-200 ${

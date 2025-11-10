@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { appConfig } from '@/config/app.config';
 import { AnimatedElement } from '../ui/AnimatedElement';
 import { Button } from '../ui/Button';
 import { SectionHeading } from '../ui/SectionHeading';
-import { appConfig } from '@/config/app.config';
 
 interface DonationAddress {
   id: string;
@@ -114,6 +114,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
         {/* Copy Button */}
         <div className="flex items-center justify-center">
           <button
+            type="button"
             onClick={handleCopy}
             className="px-3 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
             title={copied ? 'Copied!' : 'Copy address'}
@@ -129,9 +130,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
           <img src={donation.icon} alt={donation.name} className="w-10 h-10" />
           <div className="flex-1">
             <div className="text-[orange] font-semibold text-lg">{donation.name}</div>
-            {donation.network && (
-              <div className="text-[#757575] text-sm">{donation.network}</div>
-            )}
+            {donation.network && <div className="text-[#757575] text-sm">{donation.network}</div>}
           </div>
         </div>
         <div className="flex gap-2">
@@ -142,6 +141,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
             className="flex-1 bg-[rgba(0,0,0,0.3)] border border-[rgba(255,255,255,0.2)] rounded px-3 py-2 text-white text-sm"
           />
           <button
+            type="button"
             onClick={handleCopy}
             className="px-4 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
             title={copied ? 'Copied!' : 'Copy address'}

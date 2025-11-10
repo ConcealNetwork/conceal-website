@@ -93,4 +93,9 @@ function AppWrapper() {
   );
 }
 
-createRoot(document.getElementById('root')!).render(<AppWrapper />);
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  createRoot(rootElement).render(<AppWrapper />);
+} else {
+  console.error('Root element not found');
+}

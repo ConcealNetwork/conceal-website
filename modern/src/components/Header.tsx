@@ -162,7 +162,11 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       {/* Logo */}
       <div className="absolute left-4 md:left-10 top-[0.2rem] md:top-1/2 md:-translate-y-1/2 z-[501]">
         <a href="/" className="block mt-[9px] w-[50px] md:w-[50px] transition-all duration-300">
-          <img src="/images/logo.svg" alt="Conceal Network" className="h-24 w-24 md:h-[84px] md:w-[84px]" />
+          <img
+            src="/images/logo.svg"
+            alt="Conceal Network"
+            className="h-24 w-24 md:h-[84px] md:w-[84px]"
+          />
         </a>
       </div>
 
@@ -174,6 +178,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
               {item.children ? (
                 <>
                   <button
+                    type="button"
                     ref={(el) => {
                       buttonRefs.current[item.label] = el;
                     }}
@@ -222,13 +227,16 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
           ))}
           {/* Standalone Links */}
           <li>
-            <a
-              href="/#wallets"
-              onClick={(e) => handleLinkClick(e, '/#wallets')}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick(e as unknown as React.MouseEvent<HTMLAnchorElement>, '/#wallets');
+              }}
               className="px-4 py-2 uppercase tracking-[0.1em] text-[orange] rounded-[0.75em] transition-all duration-500 hover:text-white"
             >
               Wallets
-            </a>
+            </button>
           </li>
           <li>
             <a
@@ -245,6 +253,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
 
       {/* Mobile Menu Toggle - Hamburger Button */}
       <button
+        type="button"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         className="md:hidden fixed top-4 right-4 w-10 h-10 z-[999] flex flex-col justify-center items-center gap-1.5 p-2 bg-[rgba(0,0,0,0.7)] border border-[orange] rounded-lg transition-all duration-300 hover:bg-[rgba(255,165,0,0.2)]"
         aria-label="Toggle menu"
@@ -275,6 +284,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
         <div className="p-4 pt-16">
           {/* Close Button */}
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(false)}
             className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-[orange] hover:text-white transition-colors"
             aria-label="Close menu"
@@ -318,16 +328,17 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
               </div>
             ))}
             <div className="border-b border-[rgba(255,255,255,0.1)] pb-2">
-              <a
-                href="/#wallets"
+              <button
+                type="button"
                 onClick={(e) => {
-                  handleLinkClick(e, '/#wallets');
+                  e.preventDefault();
+                  handleLinkClick(e as unknown as React.MouseEvent<HTMLAnchorElement>, '/#wallets');
                   setIsMobileMenuOpen(false);
                 }}
-                className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+                className="block w-full text-left px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
               >
                 Wallets
-              </a>
+              </button>
             </div>
             <div className="border-b border-[rgba(255,255,255,0.1)] pb-2">
               <a
@@ -351,10 +362,12 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div
-          className="md:hidden fixed inset-0 bg-black/70 z-[997]"
+        <button
+          type="button"
+          className="md:hidden fixed inset-0 bg-black/70 z-[997] border-0 p-0 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(false)}
-        ></div>
+          aria-label="Close menu"
+        ></button>
       )}
 
       {/* Language Selector - Far Right (Desktop Only) */}

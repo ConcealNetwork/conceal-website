@@ -123,8 +123,8 @@ export function BrandingSection() {
             </AnimatedElement>
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <ul className="list-none p-0 space-y-2">
-                {logoDownloads.map((link, index) => (
-                  <li key={index}>
+                {logoDownloads.map((link) => (
+                  <li key={link.url}>
                     <a
                       href={link.url}
                       download={link.download}
@@ -153,8 +153,8 @@ export function BrandingSection() {
             </AnimatedElement>
           </div>
           <div className="order-1 lg:order-2 flex flex-wrap justify-center lg:justify-start gap-4">
-            {colors.map((color, index) => (
-              <AnimatedElement key={index} types={['fadeIn']} triggerImmediately={false}>
+            {colors.map((color) => (
+              <AnimatedElement key={color.hex} types={['fadeIn']} triggerImmediately={false}>
                 <div
                   className={`relative w-[150px] h-[150px] ${color.className} text-white flex items-center justify-center`}
                 >
@@ -184,8 +184,8 @@ export function BrandingSection() {
             </AnimatedElement>
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <ul className="list-none p-0 space-y-2">
-                {fontLinks.map((font, index) => (
-                  <li key={index}>
+                {fontLinks.map((font) => (
+                  <li key={font.url}>
                     <a
                       href={font.url}
                       target="_blank"

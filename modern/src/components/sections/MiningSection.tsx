@@ -100,7 +100,7 @@ export function MiningSection() {
     };
 
     loadPools();
-  }, [isLoading, pools.length]);
+  }, [isLoading]);
 
   return (
     <section
@@ -352,7 +352,9 @@ export function MiningSection() {
                         <i className="fas fa-tachometer-alt mr-2"></i>
                         Hashrate:
                       </span>
-                      <span className="text-white">{getReadableHashRateString(pool.pool.hashrate)}</span>
+                      <span className="text-white">
+                        {getReadableHashRateString(pool.pool.hashrate)}
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-[#757575]">

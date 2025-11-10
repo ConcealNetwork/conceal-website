@@ -64,7 +64,7 @@ export function FeaturesSection() {
     let value = parseInt(e.target.value, 10);
     if (value > 9999999) {
       value = 9999999;
-    } else if (value < 1 || isNaN(value)) {
+    } else if (value < 1 || Number.isNaN(value)) {
       value = 1;
     }
     setPrincipal(value);
@@ -74,7 +74,7 @@ export function FeaturesSection() {
     let value = parseInt(e.target.value, 10);
     if (value > 12) {
       value = 12;
-    } else if (value < 1 || isNaN(value)) {
+    } else if (value < 1 || Number.isNaN(value)) {
       value = 1;
     }
     setMonths(value);
@@ -214,176 +214,197 @@ export function FeaturesSection() {
             {/* Desktop Table View */}
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full border-collapse border border-[#444]">
-              <thead>
-                <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">
-                    Compound Level
-                  </th>
-                  <th scope="col" colSpan={2} className="border border-[#444] p-3">
-                    Tier 1
-                  </th>
-                  <th scope="col" colSpan={2} className="border border-[#444] p-3">
-                    Tier 2
-                  </th>
-                  <th scope="col" colSpan={2} className="border border-[#444] p-3">
-                    Tier 3
-                  </th>
-                </tr>
-                <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">
-                    Principal
-                  </th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    Under 10,000 CCX
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    10,000 - 19,999 CCX
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    Over 20,000 CCX
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">
-                    Base/APR
-                  </th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    2.90%
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    3.90%
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    4.90%
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">
-                    Example
-                  </th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    5,000 CCX
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    10,000 CCX
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center">
-                    20,000 CCX
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="border border-[#444] p-3 text-left">
-                    Maximum Interest
-                  </th>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    4.00%
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    5.00%
-                  </td>
-                  <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
-                    6.00%
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="col" className="border border-[#444] p-3 text-left">
-                    <span>Duration</span>: <span>Months</span>
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Interest
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Total
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Interest
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Total
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Interest
-                  </th>
-                  <th scope="col" className="border border-[#444] p-3">
-                    Total
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {tableRows.map((row) => (
-                  <tr key={row.month}>
-                    <td className="border border-[#444] p-3">{row.month}</td>
-                    <td
-                      className="border border-[#444] p-3 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
-                      }}
-                    >
-                      {row.tier1Interest.toFixed(2)}%
+                <thead>
+                  <tr>
+                    <th scope="row" className="border border-[#444] p-3 text-left">
+                      Compound Level
+                    </th>
+                    <th scope="col" colSpan={2} className="border border-[#444] p-3">
+                      Tier 1
+                    </th>
+                    <th scope="col" colSpan={2} className="border border-[#444] p-3">
+                      Tier 2
+                    </th>
+                    <th scope="col" colSpan={2} className="border border-[#444] p-3">
+                      Tier 3
+                    </th>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="border border-[#444] p-3 text-left">
+                      Principal
+                    </th>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      Under 10,000 CCX
                     </td>
-                    <td
-                      className="border border-[#444] p-2 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
-                      }}
-                    >
-                      {row.tier1Total.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      10,000 - 19,999 CCX
                     </td>
-                    <td
-                      className="border border-[#444] p-2 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
-                      }}
-                    >
-                      {row.tier2Interest.toFixed(2)}%
-                    </td>
-                    <td
-                      className="border border-[#444] p-2 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
-                      }}
-                    >
-                      {row.tier2Total.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}
-                    </td>
-                    <td
-                      className="border border-[#444] p-2 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
-                      }}
-                    >
-                      {row.tier3Interest.toFixed(2)}%
-                    </td>
-                    <td
-                      className="border border-[#444] p-2 text-center text-[white]"
-                      style={{
-                        background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
-                      }}
-                    >
-                      {row.tier3Total.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      Over 20,000 CCX
                     </td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                  <tr>
+                    <th scope="row" className="border border-[#444] p-3 text-left">
+                      Base/APR
+                    </th>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      2.90%
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      3.90%
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      4.90%
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="border border-[#444] p-3 text-left">
+                      Example
+                    </th>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      5,000 CCX
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      10,000 CCX
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center">
+                      20,000 CCX
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="border border-[#444] p-3 text-left">
+                      Maximum Interest
+                    </th>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      4.00%
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      5.00%
+                    </td>
+                    <td colSpan={2} className="border border-[#444] p-3 text-center text-[white]">
+                      6.00%
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col" className="border border-[#444] p-3 text-left">
+                      <span>Duration</span>: <span>Months</span>
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Interest
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Total
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Interest
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Total
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Interest
+                    </th>
+                    <th scope="col" className="border border-[#444] p-3">
+                      Total
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableRows.map((row) => (
+                    <tr key={row.month}>
+                      <td className="border border-[#444] p-3">{row.month}</td>
+                      <td
+                        className="border border-[#444] p-3 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
+                        }}
+                      >
+                        {row.tier1Interest.toFixed(2)}%
+                      </td>
+                      <td
+                        className="border border-[#444] p-2 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 2.9) / 87})`,
+                        }}
+                      >
+                        {row.tier1Total.toLocaleString(undefined, {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        })}
+                      </td>
+                      <td
+                        className="border border-[#444] p-2 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
+                        }}
+                      >
+                        {row.tier2Interest.toFixed(2)}%
+                      </td>
+                      <td
+                        className="border border-[#444] p-2 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 3.9) / 87})`,
+                        }}
+                      >
+                        {row.tier2Total.toLocaleString(undefined, {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        })}
+                      </td>
+                      <td
+                        className="border border-[#444] p-2 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
+                        }}
+                      >
+                        {row.tier3Interest.toFixed(2)}%
+                      </td>
+                      <td
+                        className="border border-[#444] p-2 text-center text-[white]"
+                        style={{
+                          background: `rgba(0, 255, 0, ${(row.month * 4.9) / 87})`,
+                        }}
+                      >
+                        {row.tier3Total.toLocaleString(undefined, {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        })}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
 
             {/* Mobile Card View - Simplified Tier Cards */}
             <div className="md:hidden space-y-6">
               {[
-                { tier: 'Tier 1', principal: 'Under 10,000 CCX', apr: '2.90%', maxInterest: '4.00%', example: '5,000 CCX' },
-                { tier: 'Tier 2', principal: '10,000 - 19,999 CCX', apr: '3.90%', maxInterest: '5.00%', example: '10,000 CCX' },
-                { tier: 'Tier 3', principal: 'Over 20,000 CCX', apr: '4.90%', maxInterest: '6.00%', example: '20,000 CCX' },
+                {
+                  tier: 'Tier 1',
+                  principal: 'Under 10,000 CCX',
+                  apr: '2.90%',
+                  maxInterest: '4.00%',
+                  example: '5,000 CCX',
+                },
+                {
+                  tier: 'Tier 2',
+                  principal: '10,000 - 19,999 CCX',
+                  apr: '3.90%',
+                  maxInterest: '5.00%',
+                  example: '10,000 CCX',
+                },
+                {
+                  tier: 'Tier 3',
+                  principal: 'Over 20,000 CCX',
+                  apr: '4.90%',
+                  maxInterest: '6.00%',
+                  example: '20,000 CCX',
+                },
               ].map((tierInfo, tierIndex) => (
-                <div key={tierInfo.tier} className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]">
+                <div
+                  key={tierInfo.tier}
+                  className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]"
+                >
                   <h3 className="text-[orange] text-xl font-semibold mb-4">{tierInfo.tier}</h3>
                   <div className="space-y-3 mb-4">
                     <div className="flex justify-between">
@@ -404,17 +425,34 @@ export function FeaturesSection() {
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-[#444]">
-                    <div className="text-[#757575] text-sm mb-2">Sample Returns (First 6 months):</div>
+                    <div className="text-[#757575] text-sm mb-2">
+                      Sample Returns (First 6 months):
+                    </div>
                     <div className="space-y-2 text-sm">
                       {tableRows.slice(0, 6).map((row) => {
-                        const interest = tierIndex === 0 ? row.tier1Interest : tierIndex === 1 ? row.tier2Interest : row.tier3Interest;
-                        const total = tierIndex === 0 ? row.tier1Total : tierIndex === 1 ? row.tier2Total : row.tier3Total;
+                        const interest =
+                          tierIndex === 0
+                            ? row.tier1Interest
+                            : tierIndex === 1
+                              ? row.tier2Interest
+                              : row.tier3Interest;
+                        const total =
+                          tierIndex === 0
+                            ? row.tier1Total
+                            : tierIndex === 1
+                              ? row.tier2Total
+                              : row.tier3Total;
                         return (
                           <div key={row.month} className="flex justify-between items-center">
                             <span className="text-[#757575]">Month {row.month}:</span>
                             <div className="flex gap-4">
                               <span className="text-white">{interest.toFixed(2)}%</span>
-                              <span className="text-white">{total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                              <span className="text-white">
+                                {total.toLocaleString(undefined, {
+                                  minimumFractionDigits: 2,
+                                  maximumFractionDigits: 2,
+                                })}
+                              </span>
                             </div>
                           </div>
                         );

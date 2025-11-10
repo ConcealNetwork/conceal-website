@@ -31,7 +31,9 @@ export function HeroSection({ onMount }: HeroSectionProps) {
         <h2 className="text-[5rem] md:text-[8rem] text-white mb-4 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
           <span className="md:inline">
             <span className="block md:inline">Conceal</span>
-            <span className="block md:inline md:ml-0 md:mt-0 mt-[-3rem] text-right md:text-center">.Network</span>
+            <span className="block md:inline md:ml-0 md:mt-0 mt-[-3rem] text-right md:text-center">
+              .Network
+            </span>
           </span>
         </h2>
         <p

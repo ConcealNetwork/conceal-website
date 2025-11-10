@@ -29,7 +29,7 @@ export function Carousel({ images, altPrefix = 'Image', className = '' }: Carous
         >
           {images.map((image, index) => (
             <div
-              key={index}
+              key={image}
               className="flex-shrink-0 flex items-center justify-center"
               style={{ width: '100%', minWidth: '100%' }}
             >
@@ -42,7 +42,9 @@ export function Carousel({ images, altPrefix = 'Image', className = '' }: Carous
                   console.error('Failed to load image:', image);
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                  target.parentElement!.innerHTML = `<div class="text-white text-center p-8">Image failed to load: ${image}</div>`;
+                  if (target.parentElement) {
+                    target.parentElement.innerHTML = `<div class="text-white text-center p-8">Image failed to load: ${image}</div>`;
+                  }
                 }}
                 onLoad={() => {
                   console.log('Image loaded successfully:', image);
@@ -55,6 +57,7 @@ export function Carousel({ images, altPrefix = 'Image', className = '' }: Carous
 
       {/* Previous Button */}
       <button
+        type="button"
         onClick={goToPrevious}
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 z-10"
         aria-label="Previous"
@@ -64,6 +67,7 @@ export function Carousel({ images, altPrefix = 'Image', className = '' }: Carous
 
       {/* Next Button */}
       <button
+        type="button"
         onClick={goToNext}
         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 z-10"
         aria-label="Next"
@@ -73,9 +77,10 @@ export function Carousel({ images, altPrefix = 'Image', className = '' }: Carous
 
       {/* Indicators */}
       <div className="flex justify-center gap-2 mt-4">
-        {images.map((_, index) => (
+        {images.map((image, index) => (
           <button
-            key={index}
+            type="button"
+            key={image}
             onClick={() => setActiveIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
               index === activeIndex ? 'bg-[orange] w-8' : 'bg-white/50 hover:bg-white/70'
