@@ -76,7 +76,33 @@ export function MiningSection() {
           if (entry.isIntersecting && !isLoading && !hasLoadedPools.current) {
             setIsLoading(true);
             try {
-              const response = await fetch(getPoolsApiUrl());
+              const apiUrl = getPoolsApiUrl();
+              let response: Response;
+
+              try {
+                // Try direct API first
+                response = await fetch(apiUrl);
+              } catch (corsError) {
+                // If CORS fails, try using a CORS proxy for GitHub Pages
+                if (apiUrl.startsWith('https://')) {
+                  // Use a CORS proxy as fallback
+                  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
+                  const proxyResponse = await fetch(proxyUrl);
+                  if (!proxyResponse.ok) {
+                    throw new Error(`Proxy error! status: ${proxyResponse.status}`);
+                  }
+                  const proxyData = await proxyResponse.json();
+                  const data: PoolData[] = JSON.parse(proxyData.contents);
+                  data.sort((a, b) => a.config.poolFee - b.config.poolFee);
+                  setPools(data);
+                  hasLoadedPools.current = true;
+                  setIsLoading(false);
+                  observer.disconnect();
+                  return;
+                }
+                throw corsError;
+              }
+
               if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
               }
