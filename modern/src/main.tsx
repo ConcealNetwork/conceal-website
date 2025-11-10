@@ -1,6 +1,6 @@
-import { StrictMode, useState } from 'react';
+import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './index.css';
 import App from './App.tsx';
 import { SplashScreen } from './components/SplashScreen';
@@ -26,6 +26,17 @@ function Root() {
   const [showApp, setShowApp] = useState(false);
   const [appReady, setAppReady] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Handle GitHub Pages 404.html redirect
+  useEffect(() => {
+    const redirectPath = sessionStorage.getItem('redirectPath');
+    if (redirectPath && location.pathname === '/') {
+      // Clear the stored path and navigate to it
+      sessionStorage.removeItem('redirectPath');
+      navigate(redirectPath, { replace: true });
+    }
+  }, [location.pathname, navigate]);
 
   // Only show splash screen on main landing page (/)
   const isMainPage = location.pathname === '/';

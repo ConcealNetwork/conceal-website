@@ -7,15 +7,19 @@
     <script>
       // GitHub Pages 404.html redirect for SPA routing
       // This handles client-side routing for React Router with BrowserRouter
-      // When GitHub Pages serves a 404, it will serve this file
-      // We redirect to index.html with the current path so React Router can handle it
       var path = window.location.pathname;
       var search = window.location.search;
       var hash = window.location.hash;
       
-      // Build the redirect URL with the current path
-      var redirectPath = '/index.html' + path + search + hash;
-      window.location.replace(redirectPath);
+      // Store the original path in sessionStorage before redirecting
+      // This allows React Router to navigate to it after the page loads
+      if (path && path !== '/' && path !== '/index.html' && !path.includes('/index.html')) {
+        sessionStorage.setItem('redirectPath', path + search + hash);
+      }
+      
+      // Always redirect to root - React Router will handle the routing
+      // The app should check sessionStorage for redirectPath on mount
+      window.location.replace('/' + (hash || ''));
     </script>
   </head>
   <body>
