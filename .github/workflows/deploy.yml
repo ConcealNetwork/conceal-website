@@ -1,4 +1,4 @@
-name: Deploy Modern Site
+name: Deploy Modern on github pages
 
 on:
   workflow_dispatch: # Manual trigger
