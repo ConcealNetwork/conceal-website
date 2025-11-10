@@ -94,14 +94,11 @@ export function FeaturesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-center">
           <div className="flex justify-center items-center min-w-0 pr-8">
             <AnimatedElement types={['rotateInY']} speed="slow">
-              <picture className="flex justify-center">
-                <source srcSet="/images/ecosystem.webp" type="image/webp" />
-                <img
-                  src="/images/ecosystem.png"
-                  alt="some random cloud nonsense"
-                  className="rounded-full max-w-full h-auto"
-                />
-              </picture>
+              <img
+                src="/images/Cham-512.png"
+                alt="Conceal Network chameleon mascot"
+                className="max-w-[400px] h-auto"
+              />
             </AnimatedElement>
           </div>
 
@@ -116,7 +113,7 @@ export function FeaturesSection() {
               protected digital cash system that mimics physical cash; nobody knows where you store
               or spend your $CCX. All transactions, deposits and messages on Conceal Network are
               untraceable, tamperproof and operate with no central authority through the use of
-              cryptographic protocols.
+              cryptographic protocols, which makes the chameleon a mascot of choice.
             </p>
             <p className="text-[1.7rem] text-[#757575] mb-8 text-justify" data-tkey="about3">
               Conceal Network is a community driven, truly decentralized blockchain bank accessible
