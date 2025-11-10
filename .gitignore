@@ -1,7 +1,7 @@
 /.htaccess
+!modern/public/.htaccess
 /.ftpquota
 /robots.txt
-*.json
 *.sqlite
 .vs/conceal-website/v15/.suo
 cache

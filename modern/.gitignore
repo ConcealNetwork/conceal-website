@@ -22,3 +22,6 @@ deno.lock
 *.njsproj
 *.sln
 *.sw?
+
+!postcss.config.js
+!vite.config.ts

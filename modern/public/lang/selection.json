@@ -1,0 +1,38 @@
+﻿{
+  "en": {
+    "name": "English"
+  },
+  "tr": {
+    "name": "Türkçe"
+  },
+  "es": {
+    "name": "Español"
+  },
+  "sl": {
+    "name": "Slovene"
+  },
+  "ru": {
+    "name": "русский"
+  },
+  "ar": {
+    "name": "عربى"
+  },
+  "zh": {
+    "name": "中文"
+  },
+  "de": {
+    "name": "Deutsch"
+  },
+  "nl": {
+    "name": "Nederlands"
+  },
+  "cs": {
+    "name": "Czech"
+  },
+  "fr": {
+    "name": "Français"
+  },
+  "it": {
+    "name": "Italiano"
+  }
+}
