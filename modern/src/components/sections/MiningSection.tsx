@@ -41,12 +41,18 @@ function getPoolName(data: PoolData): string {
 }
 
 // Get the API URL based on environment
-// On production (conceal.network), use direct API (CORS allowed)
+// On production (conceal.network), GitHub Pages, and Handshake domains, use direct API (CORS allowed)
 // On Netlify staging, use proxy
 function getPoolsApiUrl(): string {
   const hostname = window.location.hostname;
-  // If on production domain, use direct API
-  if (hostname === 'conceal.network' || hostname === 'www.conceal.network') {
+  // If on production domain, GitHub Pages, or Handshake domain, use direct API (CORS enabled)
+  if (
+    hostname === 'conceal.network' ||
+    hostname === 'www.conceal.network' ||
+    hostname === 'dweb.conceal' ||
+    hostname === 'dweb.conceal.hns.to' ||
+    hostname.endsWith('.github.io')
+  ) {
     return 'https://explorer.conceal.network/services/pools/data';
   }
   // Otherwise use proxy (Netlify staging)
