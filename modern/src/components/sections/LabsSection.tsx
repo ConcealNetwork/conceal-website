@@ -191,7 +191,7 @@ export function LabsSection() {
           {/* Have an idea? */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
-              <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+              <AnimatedElement types={['rotateInY']} triggerImmediately={true}>
                 <div
                   className="w-auto max-w-[340px] h-[322px] mx-auto"
                   style={{
@@ -220,7 +220,7 @@ export function LabsSection() {
           {/* Would money help? */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-1 lg:order-2">
-              <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+              <AnimatedElement types={['rotateInY']} triggerImmediately={false}>
                 <div
                   className="w-auto max-w-[340px] h-[340px] mx-auto"
                   style={{
@@ -246,7 +246,7 @@ export function LabsSection() {
           {/* Get funded by us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-2 lg:order-1">
-              <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+              <AnimatedElement types={['rotateInY']} triggerImmediately={false}>
                 <div
                   className="w-auto max-w-[340px] h-[340px] mx-auto"
                   style={{
@@ -272,7 +272,7 @@ export function LabsSection() {
           {/* Get listed by us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="order-1 lg:order-2">
-              <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+              <AnimatedElement types={['rotateInY']} triggerImmediately={false}>
                 <div
                   className="w-auto max-w-[340px] h-[265px] mx-auto"
                   style={{
