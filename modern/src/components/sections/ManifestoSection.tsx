@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { AnimatedElement } from '../ui/AnimatedElement';
 
 // Manifesto content from the markdown file
@@ -7,44 +8,52 @@ const manifestoContent = [
 It is the foundation of freedom, the space where thought and identity are born. Yet in our digitized age, this right is under siege. Corporations harvest our data, governments monitor our every move, and malicious actors lurk in the shadows of the web.
 We refuse to surrender.
 We are the **Concealers**—inheritors of the **Cypherpunk** legacy—carrying its fire into the present and the future.`,
-    image: null,
+    image: '/images/manifesto/EH.png',
+    maxZoom: 1.2,
   },
   {
     text: `**Cryptography is our weapon.**
 Like the Cypherpunks before us, we wield code as our shield and sword. In a world where surveillance grows smarter, we grow stronger. Quantum computing and artificial intelligence bring both threat and promise—but we will turn them to our advantage. We will build systems so secure that even the most powerful cannot break them.`,
     image: '/images/manifesto/privacy_cypherpunk.png',
+    maxZoom: 1.1,
   },
   {
     text: `**Decentralization is our shield.**
 Power must never be concentrated in the hands of the few. Decentralized systems—blockchains, distributed networks, peer-to-peer infrastructures—give strength back to the people. They ensure that no single authority can dictate, censor, or control the digital world we inhabit.
 We stand for freedom through decentralization.`,
     image: null,
+    maxZoom: 1.25,
   },
   {
     text: `**Open source is our creed.**
 We reject secrecy and corporate monopolies. We believe in transparency, collaboration, and collective empowerment. Open-source code is digital democracy—it belongs to everyone. By building and sharing openly, we ensure that our technology serves humanity, not hierarchy.`,
     image: null,
+    maxZoom: 1.25,
   },
   {
     text: `**Education is our duty.**
 Knowledge is the first line of defense. A digitally literate society cannot be easily deceived or controlled. We will teach, share, and empower—until every individual can defend their own privacy. Awareness is resistance.`,
     image: '/images/manifesto/inthenews.png',
+    maxZoom: 1.1,
   },
   {
     text: `**Sustainability is our responsibility.**
 The digital world is not separate from the physical one. Our innovations must respect the planet that sustains us. We seek balance—between progress and preservation, between code and climate.`,
     image: null,
+    maxZoom: 1.25,
   },
   {
     text: `**Innovation is our path forward.**
 We are dreamers and builders, thinkers and tinkerers. Every breakthrough, every new idea, brings us closer to a world where privacy is not a battle—but a birthright. We will not fear the future. We will shape it.`,
     image: null,
+    maxZoom: 1.25,
   },
   {
     text: `**We are the Concealers.**
 We fight for a world where privacy lives, breathes, and belongs to all. Guided by our principles, united by our vision, we will not yield.
 **The struggle continues—until every person is free.**`,
     image: null,
+    maxZoom: 1.25,
   },
 ];
 
@@ -95,6 +104,30 @@ function ManifestoContentBlock({
   content: (typeof manifestoContent)[0];
   index: number;
 }) {
+  // Hooks must be called at the top level, before any conditional returns
+  const imageRef = useRef<HTMLImageElement>(null);
+  const maxZoom = content.maxZoom ?? 1.25; // Default zoom if not specified
+
+  useEffect(() => {
+    const img = imageRef.current;
+    if (!img) return;
+
+    const handleMouseEnter = () => {
+      img.style.transform = `scale(${maxZoom})`;
+    };
+    const handleMouseLeave = () => {
+      img.style.transform = 'scale(1)';
+    };
+
+    img.addEventListener('mouseenter', handleMouseEnter);
+    img.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      img.removeEventListener('mouseenter', handleMouseEnter);
+      img.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [maxZoom]);
+
   const hasImage = content.image !== null;
   const isEven = index % 2 === 0;
 
@@ -111,21 +144,25 @@ function ManifestoContentBlock({
 
   // Text and image block with alternating layout
   const imageUrl = content.image as string; // Safe: hasImage check ensures image is not null
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
       {/* Image Element */}
       <div className={`order-2 mb-8 lg:mb-0 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
         <AnimatedElement types={['rotateInY']} triggerImmediately={false}>
-          <div className="w-full max-w-md mx-auto">
-            <img src={imageUrl} alt="Manifesto" className="w-full h-auto rounded-lg shadow-lg" />
+          <div className="w-full relative group rounded-lg shadow-lg cursor-zoom-in flex justify-center items-center p-8">
+            <img
+              ref={imageRef}
+              src={imageUrl}
+              alt="Manifesto"
+              className="max-w-full h-auto transition-transform duration-500 ease-in-out origin-center rounded-lg"
+            />
           </div>
         </AnimatedElement>
       </div>
 
       {/* Text Element */}
-      <div
-        className={`order-1 ${isEven ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pr-0 lg:pr-12'}`}
-      >
+      <div className={`order-1 ${isEven ? 'lg:order-2 pl-0 lg:pl-8' : 'lg:order-1 pr-0 lg:pr-8'}`}>
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <ManifestoText content={content.text} />
         </AnimatedElement>
