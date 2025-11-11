@@ -13,20 +13,22 @@ const navItems: NavItem[] = [
   {
     label: 'About',
     children: [
-      { label: "What's Conceal?", href: '/about' },
-      { label: 'Team', href: '/team' },
       { label: 'Manifesto', href: '/manifesto' },
-      { label: 'Roadmap', href: '/roadmap' },
-      { label: 'Earn', href: '/earn' },
+      { label: "What's Conceal?", href: '/about' },
       { label: 'Messaging', href: '/messaging' },
+      { label: 'Earn', href: '/earn' },
       { label: 'Wiki', href: 'https://conceal.network/wiki/doku.php?id=start', external: true },
+      { label: 'Roadmap', href: '/roadmap' },
+      { label: 'Team', href: '/team' },
     ],
   },
   {
     label: 'Community',
     children: [
       { label: 'Channels', href: '/community' },
+      { label: 'Medium', href: 'https://concealnetwork.medium.com/', external: true },
       { label: 'Mining', href: '/#mining' },
+      { label: 'Videos', href: '/in-the-media' },
       { label: 'Partners', href: '/#partners' },
       { label: 'Donate', href: '/donate' },
     ],
@@ -42,13 +44,6 @@ const navItems: NavItem[] = [
         external: true,
       },
       { label: 'GitHub', href: 'https://github.com/ConcealNetwork', external: true },
-    ],
-  },
-  {
-    label: 'News',
-    children: [
-      { label: 'Official Medium', href: 'https://concealnetwork.medium.com/', external: true },
-      { label: 'Other Media', href: '/in-the-media' },
     ],
   },
   {

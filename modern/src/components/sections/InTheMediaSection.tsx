@@ -25,7 +25,7 @@ const featuredVideos = [
 ];
 
 const mediaTabs: MediaTab[] = [
-  {
+  /*  {
     id: 'ama',
     label: 'AMA Series',
     heading: 'AMA Series',
@@ -133,6 +133,7 @@ const mediaTabs: MediaTab[] = [
       },
     ],
   },
+  */
   {
     id: 'videos',
     label: 'Videos',
@@ -207,9 +208,9 @@ const mediaTabs: MediaTab[] = [
       'https://www.youtube-nocookie.com/embed/niTcmIz_sf0',
       'https://www.youtube-nocookie.com/embed/2jBL4uzrimk',
       'https://www.youtube-nocookie.com/embed/Ze2ioyBHPIw',
-      'https://www.youtube.com/embed/seiPQBFIsE0',
     ],
   },
+  /*
   {
     id: 'updates',
     label: 'Monthly Updates',
@@ -334,6 +335,7 @@ const mediaTabs: MediaTab[] = [
       },
     ],
   },
+  */
 ];
 
 function MediaThumbnail({ item }: { item: MediaItem }) {

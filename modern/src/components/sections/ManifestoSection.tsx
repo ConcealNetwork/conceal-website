@@ -8,13 +8,13 @@ const manifestoContent = [
 It is the foundation of freedom, the space where thought and identity are born. Yet in our digitized age, this right is under siege. Corporations harvest our data, governments monitor our every move, and malicious actors lurk in the shadows of the web.
 We refuse to surrender.
 We are the **Concealers**—inheritors of the **Cypherpunk** legacy—carrying its fire into the present and the future.`,
-    image: '/images/manifesto/EH.png',
+    image: '/images/manifesto/citation.png',
     maxZoom: 1.2,
   },
   {
     text: `**Cryptography is our weapon.**
 Like the Cypherpunks before us, we wield code as our shield and sword. In a world where surveillance grows smarter, we grow stronger. Quantum computing and artificial intelligence bring both threat and promise—but we will turn them to our advantage. We will build systems so secure that even the most powerful cannot break them.`,
-    image: '/images/manifesto/privacy_cypherpunk.png',
+    image: null,
     maxZoom: 1.1,
   },
   {
@@ -27,13 +27,13 @@ We stand for freedom through decentralization.`,
   {
     text: `**Open source is our creed.**
 We reject secrecy and corporate monopolies. We believe in transparency, collaboration, and collective empowerment. Open-source code is digital democracy—it belongs to everyone. By building and sharing openly, we ensure that our technology serves humanity, not hierarchy.`,
-    image: null,
-    maxZoom: 1.25,
+    image: '/images/manifesto/EH.png',
+    maxZoom: 1.2,
   },
   {
     text: `**Education is our duty.**
 Knowledge is the first line of defense. A digitally literate society cannot be easily deceived or controlled. We will teach, share, and empower—until every individual can defend their own privacy. Awareness is resistance.`,
-    image: '/images/manifesto/inthenews.png',
+    image: null,
     maxZoom: 1.1,
   },
   {
@@ -201,9 +201,9 @@ export function ManifestoSection() {
           <AnimatedElement types={['slideInLeft']} triggerImmediately={true}>
             <div className="relative group overflow-hidden rounded-lg shadow-lg max-w-4xl w-full cursor-zoom-in">
               <img
-                src="/images/manifesto/citation.png"
-                alt="Citation"
-                className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-125 origin-center"
+                src="/images/manifesto/privacy_cypherpunk.png"
+                alt="Privacy"
+                className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-110 origin-center"
               />
             </div>
           </AnimatedElement>
