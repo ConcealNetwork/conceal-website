@@ -1,10 +1,12 @@
-name: Deploy Modern on github pages
+name: Deploy Modern Site
 
 on:
   workflow_dispatch: # Manual trigger
 
 jobs:
   deploy:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     
     steps:
