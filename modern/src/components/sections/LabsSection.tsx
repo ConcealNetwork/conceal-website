@@ -45,7 +45,7 @@ const labsProjects: LabProject[] = [
       'You can go the the github page for more info and for downloads by clicking on this url.',
     projecturl: 'https://github.com/Acktarius/conceal-assistant',
     labeltodocument: 'You can find more information about the product in this PDF.',
-    documentlink: '/labs/data/conceal-assistant_info.pdf',
+    documentlink: '/labs-data/conceal-assistant_info.pdf',
     documenttype: 'pdf',
     linktoscreenshotfolder: '/images/labs/ccxassistant',
     imagePattern: 'assistant',

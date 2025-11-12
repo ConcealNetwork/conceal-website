@@ -36,8 +36,8 @@ const navItems: NavItem[] = [
   {
     label: 'Developers',
     children: [
-      { label: 'Branding', href: '/branding' },
-      { label: 'Conceal-Labs', href: '/labs' },
+      { label: 'Branding', href: '/branding', external: false },
+      { label: 'Conceal-Labs', href: '/labs', external: false },
       {
         label: 'Documentation',
         href: 'https://github.com/ConcealNetwork/conceal-core/wiki',
