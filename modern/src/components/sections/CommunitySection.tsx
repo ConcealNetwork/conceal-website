@@ -24,7 +24,8 @@ const socialLinksData: ColumnData = {
   items: [
     { label: 'Github', url: 'https://github.com/ConcealNetwork', icon: 'fab fa-github' },
     { label: 'Discord', url: 'https://discord.gg/YbpHVSd', icon: 'fab fa-discord' },
-    { label: 'Telegram', url: 'https://t.me/concealnetwork', icon: 'fab fa-telegram' },
+    { label: 'Telegram News Channel', url: 'https://t.me/concealnetwork', icon: 'fab fa-telegram' },
+    { label: 'Telegram Community', url: 'https://t.me/concealcommunity', icon: 'fab fa-telegram' },
     { label: 'Twitter', url: 'https://twitter.com/ConcealNetwork', icon: 'fab fa-twitter' },
     {
       label: 'Youtube',
@@ -68,36 +69,6 @@ const socialLinksData: ColumnData = {
       label: 'Conceal MarketPlace',
       url: 'https://conceal.network/marketplace',
       icon: 'fas fa-shopping-cart',
-    },
-  ],
-};
-
-const otherGroupsData: ColumnData = {
-  title: 'Other Groups',
-  items: [],
-  subSections: [
-    {
-      title: 'Telegram',
-      items: [
-        { label: 'English', url: 'https://t.me/concealnetworkusers', icon: 'fab fa-telegram' },
-        { label: 'Türkiye', url: 'https://t.me/concealnetworkturkiye', icon: 'fab fa-telegram' },
-        { label: 'Россия', url: 'https://t.me/concealnetworkrussia', icon: 'fab fa-telegram' },
-        { label: 'Dutch', url: 'https://t.me/concealnetworkdutch', icon: 'fab fa-telegram' },
-        { label: 'Français', url: 'https://t.me/concealnetworkfrench', icon: 'fab fa-telegram' },
-        { label: 'Việtnam', url: 'https://t.me/concealnetworkvietnam', icon: 'fab fa-telegram' },
-        { label: 'Iran', url: 'https://t.me/Conceal_Persian', icon: 'fab fa-telegram' },
-        { label: 'Bangladesh', url: 'https://t.me/Conceal_Bangladesh', icon: 'fab fa-telegram' },
-        { label: 'India', url: 'https://t.me/Conceal_India', icon: 'fab fa-telegram' },
-      ],
-    },
-    {
-      title: 'Twitter',
-      items: [
-        { label: 'Africa', url: 'https://twitter.com/ConcealAfrica', icon: 'fab fa-twitter' },
-        { label: 'Español', url: 'https://twitter.com/ConcealSpanish', icon: 'fab fa-twitter' },
-        { label: 'Arabia', url: 'https://twitter.com/ConcealArabia', icon: 'fab fa-twitter' },
-        { label: 'Türkiye', url: 'https://twitter.com/concealturkiye', icon: 'fab fa-twitter' },
-      ],
     },
   ],
 };
@@ -325,61 +296,11 @@ export function CommunitySection() {
         {/* Tab Content */}
         <div className="mt-16">
           {activeTab === 'socials' && (
-            <div className="grid grid-cols-1 md:grid-cols-[10%_26.6%_26.6%_26.6%_10%] gap-8">
-              <div className="hidden md:block"></div>
-              {/* Column 1: Official */}
-              <Column data={socialLinksData} />
-
-              {/* Column 2: Other Groups - Telegram */}
-              <div className="flex flex-col">
-                <h2 className="text-4xl uppercase text-white mb-6">Other Groups</h2>
-                <h4 className="text-xl text-white mb-4">Telegram</h4>
-                <ul className="flex flex-col list-none p-0 space-y-2">
-                  {otherGroupsData.subSections?.[0].items.map((item) => (
-                    <li key={item.url}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 transition-colors duration-300 text-white hover:text-[orange] hover:underline"
-                      >
-                        {item.svgIcon ? (
-                          <span className="flex items-center justify-center">{item.svgIcon}</span>
-                        ) : (
-                          item.icon && <i className={`${item.icon} text-lg`}></i>
-                        )}
-                        <span>{item.label}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            <div className="flex justify-center">
+              <div className="w-full max-w-md">
+                {/* Column 1: Official */}
+                <Column data={socialLinksData} />
               </div>
-
-              {/* Column 3: Other Groups - Twitter */}
-              <div className="flex flex-col">
-                <h2 className="text-4xl uppercase text-white mb-6 md:opacity-0">Other Groups</h2>
-                <h4 className="text-xl text-white mb-4">Twitter</h4>
-                <ul className="flex flex-col list-none p-0 space-y-2">
-                  {otherGroupsData.subSections?.[1].items.map((item) => (
-                    <li key={item.url}>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 transition-colors duration-300 text-white hover:text-[orange] hover:underline"
-                      >
-                        {item.svgIcon ? (
-                          <span className="flex items-center justify-center">{item.svgIcon}</span>
-                        ) : (
-                          item.icon && <i className={`${item.icon} text-lg`}></i>
-                        )}
-                        <span>{item.label}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="hidden md:block"></div>
             </div>
           )}
 
