@@ -40,7 +40,7 @@ export function HeroSection({ onMount }: HeroSectionProps) {
           className="text-[1.6rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.3rem] mb-8 [text-shadow:0_0_16px_rgba(0,0,0,0.9)]"
           data-tkey="headerDescription"
         >
-          Decentralized Finance, Private Transactions & Encrypted Messaging
+          Privacy-Protected De-Fi & Encrypted Communications
         </p>
       </div>
 

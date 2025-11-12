@@ -42,16 +42,14 @@ const generalData: ColumnData = {
 const productsData: ColumnData = {
   title: 'Tools',
   items: [
-    { label: 'Wallets', url: '#wallets' },
+    { label: 'Wallets Apps', url: '#wallets' },
     { label: 'Bridge', url: 'https://bridge.conceal.network/', external: true },
     { label: 'Explorer', url: 'https://explorer.conceal.network/', external: true },
-    { label: 'Web Wallet', url: 'https://wallet.conceal.network/', external: true },
+    { label: 'Web Apps', url: 'https://wallet.conceal.network/', external: true },
     { label: 'Paper Wallet', url: 'https://conceal.network/paperwallet', external: true },
     { label: 'Marketplace', url: 'https://conceal.network/marketplace', external: true },
     { label: 'Authenticator', url: '/labs#authenticator', external: false },
-    { label: 'Conceal-Earn', url: '/defi', external: false },
-    { label: 'Conceal-Messaging', url: '/messaging', external: false },
-  ],
+  ].sort((a, b) => a.label.localeCompare(b.label)),
 };
 
 const communityData: ColumnData = {
@@ -132,7 +130,7 @@ const communityData: ColumnData = {
       icon: 'fab fa-bitcoin',
       external: true,
     },
-  ],
+  ].sort((a, b) => a.label.localeCompare(b.label)),
 };
 
 // Helper component to render a footer column
