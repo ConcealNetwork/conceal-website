@@ -18,45 +18,49 @@ export function SplashScreen({
 
   useEffect(() => {
     // Check if we should skip the splash screen
-    if (showOnlyOnce) {
-      if (hasCookie('splash-shown')) {
-        onComplete();
-        return;
-      }
+    if (showOnlyOnce && hasCookie('splash-shown')) {
+      onComplete();
+      return;
     }
 
     // Minimum display time from config
     const minTime = appConfig.splash.minDisplayTime;
     const startTime = Date.now();
 
+    // Helper function to set cookie if needed
+    const handleCookieSetting = () => {
+      if (showOnlyOnce) {
+        setCookie('splash-shown', 'true', hoursToMinutes(appConfig.cookies.splashScreenExpiration));
+      }
+    };
+
+    // Helper function to complete splash screen (remove from DOM)
+    const completeSplash = () => {
+      handleCookieSetting();
+      onComplete();
+    };
+
+    // Helper function to trigger fade out animation
+    const triggerFadeOut = () => {
+      setIsVisible(false);
+      setTimeout(completeSplash, appConfig.splash.fadeOutDuration);
+    };
+
     // Wait for window load AND minimum time AND app ready
     const checkComplete = () => {
       const elapsed = Date.now() - startTime;
       const windowLoaded = document.readyState === 'complete';
+      const isReady = windowLoaded && elapsed >= minTime && waitForAppReady;
 
-      if (windowLoaded && elapsed >= minTime && waitForAppReady) {
-        setIsLoaded(true);
-
-        // Trigger fade out animation
-        setTimeout(() => {
-          setIsVisible(false);
-
-          // Remove from DOM after animation
-          setTimeout(() => {
-            if (showOnlyOnce) {
-              setCookie(
-                'splash-shown',
-                'true',
-                hoursToMinutes(appConfig.cookies.splashScreenExpiration)
-              );
-            }
-            onComplete();
-          }, appConfig.splash.fadeOutDuration); // Match CSS transition duration
-        }, appConfig.splash.checkInterval);
-      } else {
+      if (!isReady) {
         // Check again at configured interval
         setTimeout(checkComplete, appConfig.splash.checkInterval);
+        return;
       }
+
+      // All conditions met, start fade out
+      setIsLoaded(true);
+      setTimeout(triggerFadeOut, appConfig.splash.checkInterval);
     };
 
     // Start checking

@@ -31,7 +31,7 @@ DEPLOY_PATH="/var/www/conceal.network"
 echo "📤 Deploying to $DEPLOY_PATH..."
 
 # Backup current deployment (optional)
-if [ -d "$DEPLOY_PATH" ]; then
+if [[ -d "$DEPLOY_PATH" ]]; then
     echo "💾 Creating backup..."
     sudo cp -r "$DEPLOY_PATH" "${DEPLOY_PATH}.backup.$(date +%Y%m%d_%H%M%S)" || true
 fi

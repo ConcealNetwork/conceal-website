@@ -69,58 +69,68 @@ export function MiningSection() {
     const loadPools = async () => {
       if (hasLoadedPools.current) return; // Already loaded, do nothing
 
-      // Check if the section is visible
-      const observer = new IntersectionObserver(
-        async (entries) => {
-          const [entry] = entries;
-          if (entry.isIntersecting && !isLoading && !hasLoadedPools.current) {
-            setIsLoading(true);
-            try {
-              const apiUrl = getPoolsApiUrl();
-              let response: Response;
+      // Helper function to process and set pool data
+      const processPoolData = (data: PoolData[]) => {
+        data.sort((a, b) => a.config.poolFee - b.config.poolFee);
+        setPools(data);
+        hasLoadedPools.current = true;
+      };
 
-              try {
-                // Try direct API first
-                response = await fetch(apiUrl);
-              } catch (corsError) {
-                // If CORS fails, try using a CORS proxy for GitHub Pages
-                if (apiUrl.startsWith('https://')) {
-                  // Use a CORS proxy as fallback
-                  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
-                  const proxyResponse = await fetch(proxyUrl);
-                  if (!proxyResponse.ok) {
-                    throw new Error(`Proxy error! status: ${proxyResponse.status}`);
-                  }
-                  const proxyData = await proxyResponse.json();
-                  const data: PoolData[] = JSON.parse(proxyData.contents);
-                  data.sort((a, b) => a.config.poolFee - b.config.poolFee);
-                  setPools(data);
-                  hasLoadedPools.current = true;
-                  setIsLoading(false);
-                  observer.disconnect();
-                  return;
-                }
-                throw corsError;
-              }
+      // Helper function to fetch via CORS proxy
+      const fetchViaProxy = async (apiUrl: string): Promise<PoolData[]> => {
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
+        const proxyResponse = await fetch(proxyUrl);
 
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              const data: PoolData[] = await response.json();
+        if (!proxyResponse.ok) {
+          throw new Error(`Proxy error! status: ${proxyResponse.status}`);
+        }
 
-              data.sort((a, b) => a.config.poolFee - b.config.poolFee); // Sort by fee
-              setPools(data);
-              hasLoadedPools.current = true; // Mark as loaded
-            } catch (error) {
-              console.error('Failed to fetch pool data:', error);
-            } finally {
-              setIsLoading(false);
-            }
-            observer.disconnect(); // Stop observing once loaded
+        const proxyData = await proxyResponse.json();
+        return JSON.parse(proxyData.contents);
+      };
+
+      // Helper function to fetch pool data (direct or via proxy)
+      const fetchPoolData = async (apiUrl: string): Promise<PoolData[]> => {
+        try {
+          // Try direct API first
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
           }
-        },
-        { threshold: 0.1 } // Trigger when 10% of the section is visible
-      );
+          return await response.json();
+        } catch (corsError) {
+          // If CORS fails and URL is HTTPS, try proxy
+          if (apiUrl.startsWith('https://')) {
+            return await fetchViaProxy(apiUrl);
+          }
+          throw corsError;
+        }
+      };
+
+      // Helper function to load pools when section is visible
+      const handleIntersection = async (entries: IntersectionObserverEntry[]) => {
+        const [entry] = entries;
+        const shouldLoad = entry.isIntersecting && !isLoading && !hasLoadedPools.current;
+
+        if (!shouldLoad) return;
+
+        setIsLoading(true);
+        try {
+          const apiUrl = getPoolsApiUrl();
+          const data = await fetchPoolData(apiUrl);
+          processPoolData(data);
+        } catch (error) {
+          console.error('Failed to fetch pool data:', error);
+        } finally {
+          setIsLoading(false);
+          observer.disconnect();
+        }
+      };
+
+      // Check if the section is visible
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      });
 
       if (sectionRef.current) {
         observer.observe(sectionRef.current);

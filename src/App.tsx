@@ -55,52 +55,65 @@ function App({ onReady }: AppProps) {
     const hashFromWindow = window.location.hash;
 
     const hash = hashFromState || hashFromUrl || hashFromWindow;
+    if (!hash) return;
 
-    if (hash) {
-      // Remove # if present and ensure it starts with #
-      const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
+    // Remove # if present and ensure it starts with #
+    const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
 
-      // Robust scrolling: retry until element exists or timeout
-      const maxAttempts = 50; // Increased attempts for slower renders
-      let attempts = 0;
+    // Helper function to scroll to element with offset
+    const scrollToElement = (element: Element) => {
+      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const offset = 100; // Offset for header
+      window.scrollTo({
+        top: elementTop - offset,
+        behavior: 'smooth',
+      });
+    };
 
-      const tryScroll = () => {
-        attempts++;
-        const element = document.querySelector(cleanHash);
+    // Helper function to execute after double RAF (ensures DOM is painted)
+    const executeAfterDoubleRAF = (callback: () => void) => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(callback);
+      });
+    };
 
-        if (element) {
-          // Element found, scroll to it with slight offset for header
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-              const offset = 100; // Offset for header
-              window.scrollTo({
-                top: elementTop - offset,
-                behavior: 'smooth',
-              });
-            });
-          });
-        } else if (attempts < maxAttempts) {
-          // Element not found yet, retry after a short delay
-          setTimeout(tryScroll, appConfig.animations.scrollRetryDelayCrossPage);
-        }
-      };
+    // Robust scrolling: retry until element exists or timeout
+    const maxAttempts = 50; // Increased attempts for slower renders
+    let attempts = 0;
 
-      // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
-      setTimeout(tryScroll, appConfig.animations.scrollInitialDelayCrossPage);
-    }
+    const tryScroll = () => {
+      attempts++;
+      const element = document.querySelector(cleanHash);
+
+      if (element) {
+        // Element found, scroll to it with slight offset for header
+        executeAfterDoubleRAF(() => scrollToElement(element));
+        return;
+      }
+
+      // Element not found yet, retry after a short delay
+      if (attempts < maxAttempts) {
+        setTimeout(tryScroll, appConfig.animations.scrollRetryDelayCrossPage);
+      }
+    };
+
+    // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
+    setTimeout(tryScroll, appConfig.animations.scrollInitialDelayCrossPage);
   }, [location.state, location.hash, location.pathname]);
 
   // Signal that App is ready (after initial render)
   useEffect(() => {
-    if (onReady) {
-      // Use requestAnimationFrame to ensure DOM is painted
+    if (!onReady) return;
+
+    // Helper function to execute after double RAF (ensures DOM is painted)
+    const executeAfterDoubleRAF = (callback: () => void) => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          onReady();
-        });
+        requestAnimationFrame(callback);
       });
-    }
+    };
+
+    // Use requestAnimationFrame to ensure DOM is painted
+    executeAfterDoubleRAF(onReady);
   }, [onReady]);
 
   return (

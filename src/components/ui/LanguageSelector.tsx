@@ -21,26 +21,45 @@ export function LanguageSelector() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    // Helper function to check if element matches the translation text
+    const elementMatchesText = (element: Element, expectedText: string): boolean => {
+      if (element.firstElementChild) return false;
+      if ((element as HTMLElement).dataset.tkey) return false;
+
+      const elementText = element.textContent?.trim().toUpperCase();
+      return elementText === expectedText.toUpperCase();
+    };
+
+    // Helper function to tag a single element
+    const tagElement = (element: Element, key: string): boolean => {
+      (element as HTMLElement).dataset.tkey = key;
+      return key.charAt(0) !== 'r';
+    };
+
+    // Helper function to find and tag elements for a specific key
+    const tagElementsForKey = (
+      key: string,
+      expectedText: string,
+      allElements: HTMLCollectionOf<Element>
+    ): void => {
+      for (let i = 0; i < allElements.length; i++) {
+        const element = allElements[i];
+        if (elementMatchesText(element, expectedText)) {
+          const shouldContinue = tagElement(element, key);
+          if (!shouldContinue) break;
+        }
+      }
+    };
+
     // Auto-tag elements with data-tkey based on English text (matching original language.js behavior)
     const autoTagElements = async () => {
       try {
         const response = await fetch('/lang/en.json');
         const enLangData = await response.json();
-        const all = document.body.getElementsByTagName('*');
+        const allElements = document.body.getElementsByTagName('*');
 
         for (const key of Object.keys(enLangData)) {
-          for (let i = 0; i < all.length; i++) {
-            if (!all[i].firstElementChild) {
-              if (all[i].textContent?.trim().toUpperCase() === enLangData[key].toUpperCase()) {
-                if (!all[i].getAttribute('data-tkey')) {
-                  all[i].setAttribute('data-tkey', key);
-                  if (key.charAt(0) !== 'r') {
-                    break;
-                  }
-                }
-              }
-            }
-          }
+          tagElementsForKey(key, enLangData[key], allElements);
         }
       } catch (err) {
         console.error('Failed to auto-tag elements:', err);
@@ -84,7 +103,7 @@ export function LanguageSelector() {
 
         const elements = document.querySelectorAll('[data-tkey]');
         elements.forEach((element) => {
-          const key = element.getAttribute('data-tkey');
+          const key = (element as HTMLElement).dataset.tkey;
           if (key && langData[key]) {
             element.textContent = langData[key];
           }
@@ -127,7 +146,7 @@ export function LanguageSelector() {
       // Update all elements with data-tkey attributes
       const elements = document.querySelectorAll('[data-tkey]');
       elements.forEach((element) => {
-        const key = element.getAttribute('data-tkey');
+        const key = (element as HTMLElement).dataset.tkey;
         if (key && langData[key]) {
           // Preserve HTML structure if it exists
           if (element.children.length === 0) {
