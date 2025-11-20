@@ -18,14 +18,14 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: modern/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: ./modern
+        working-directory: .
         run: npm ci
 
       - name: Build
-        working-directory: ./modern
+        working-directory: .
         run: npm run build
 
       - name: Deploy
@@ -33,6 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./modern/dist
+          publish_dir: ./dist
           enable_jekyll: false
 
