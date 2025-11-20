@@ -40,16 +40,16 @@ export function HeroSection({ onMount }: HeroSectionProps) {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--color2)]/10 rounded-full blur-3xl"></div>
 
       {/* Content with improved spacing */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 py-20">
-        <div className="text-center max-w-4xl mx-auto space-y-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto space-y-8 w-full">
           {/* Title - solid color for readability */}
-          <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-tight mb-6 text-white">
-            <span className="block md:inline">Conceal</span>
-            <span className="block md:inline md:ml-4 text-[var(--color1)]">.Network</span>
+          <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-tight mb-6 text-white flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4">
+            <span>Conceal</span>
+            <span className="text-[var(--color1)]">.Network</span>
           </h2>
 
           {/* Subtitle with better contrast */}
-          <p className="text-[1.8rem] md:text-[2rem] text-[#E0E0E0] uppercase tracking-[0.3rem] mb-12 leading-relaxed [text-shadow:0_0_20px_rgba(0,0,0,0.8)] whitespace-normal md:whitespace-nowrap">
+          <p className="text-[1.8rem] md:text-[2rem] text-[#E0E0E0] uppercase tracking-[0.3rem] mb-12 leading-relaxed [text-shadow:0_0_20px_rgba(0,0,0,0.8)] whitespace-normal md:whitespace-nowrap flex justify-center items-center">
             Privacy-Protected De-Fi & Encrypted Communications
           </p>
 
