@@ -113,32 +113,35 @@ export function SplashScreen({
       <div id="loader" className="relative w-[150px] h-[150px]">
         {/* Outer circle */}
         <div
-          className="absolute inset-0 rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute inset-0 rounded-full border-[3px] border-transparent"
           style={{
+            borderTopColor: 'var(--color1)',
             animation: 'spin 2s linear infinite',
           }}
         />
 
         {/* Middle circle */}
         <div
-          className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute rounded-full border-[3px] border-transparent"
           style={{
             top: '5px',
             left: '5px',
             right: '5px',
             bottom: '5px',
+            borderTopColor: 'var(--color2)',
             animation: 'spin 3s linear infinite',
           }}
         />
 
         {/* Inner circle */}
         <div
-          className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute rounded-full border-[3px] border-transparent"
           style={{
             top: '15px',
             left: '15px',
             right: '15px',
             bottom: '15px',
+            borderTopColor: 'var(--color1)',
             animation: 'spin 1.5s linear infinite',
           }}
         />

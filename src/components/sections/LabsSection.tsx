@@ -72,7 +72,7 @@ function ProjectCard({ project }: { project: LabProject }) {
   return (
     <div id={project.id} className="mb-16 scroll-mt-24">
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <h1 className="text-[4rem] uppercase text-[orange] mb-6">{project.title}</h1>
+        <h1 className="text-[4rem] uppercase text-[var(--color1)] mb-6">{project.title}</h1>
       </AnimatedElement>
 
       {descriptionParagraphs.map((paragraph) => (
@@ -85,7 +85,7 @@ function ProjectCard({ project }: { project: LabProject }) {
         <p className="text-[1.7rem] text-[#757575] mb-4">
           <a
             href={project.projecturl}
-            className="text-[orange] hover:underline"
+            className="text-[var(--color1)] hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -99,7 +99,7 @@ function ProjectCard({ project }: { project: LabProject }) {
         <p className="text-[1.7rem] text-[#757575] mb-6">
           <a
             href={project.documentlink}
-            className="text-[orange] hover:underline"
+            className="text-[var(--color1)] hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -112,7 +112,7 @@ function ProjectCard({ project }: { project: LabProject }) {
       </AnimatedElement>
 
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <h3 className="text-2xl uppercase text-[orange] mb-6">How it looks...</h3>
+        <h3 className="text-2xl uppercase text-[var(--color1)] mb-6">How it looks...</h3>
       </AnimatedElement>
 
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
@@ -147,7 +147,7 @@ export function LabsSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              Bring your dreams <em className="text-[orange]">forward</em>
+              Bring your dreams <em className="text-[var(--color1)]">forward</em>
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
@@ -204,12 +204,15 @@ export function LabsSection() {
             </div>
             <div className="order-1 lg:order-2 pl-0 lg:pl-12">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <h2 className="text-3xl uppercase text-[orange] mb-6">Have an idea?</h2>
+                <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">Have an idea?</h2>
               </AnimatedElement>
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575] mb-4">
                   Do you have a project that involves Conceal in some way?{' '}
-                  <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">
+                  <a
+                    href="https://discord.gg/YbpHVSd"
+                    className="text-[var(--color1)] hover:underline"
+                  >
                     We want to hear about it!
                   </a>
                 </p>
@@ -233,7 +236,7 @@ export function LabsSection() {
             </div>
             <div className="order-2 lg:order-1 pr-0 lg:pr-12">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <h2 className="text-3xl uppercase text-[orange] mb-6">Would money help?</h2>
+                <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">Would money help?</h2>
               </AnimatedElement>
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -259,7 +262,7 @@ export function LabsSection() {
             </div>
             <div className="order-1 lg:order-2 pl-0 lg:pl-12">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <h2 className="text-3xl uppercase text-[orange] mb-6">Get funded by us</h2>
+                <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">Get funded by us</h2>
               </AnimatedElement>
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -285,7 +288,7 @@ export function LabsSection() {
             </div>
             <div className="order-2 lg:order-1 pr-0 lg:pr-12">
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-                <h2 className="text-3xl uppercase text-[orange] mb-6">Get listed by us</h2>
+                <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">Get listed by us</h2>
               </AnimatedElement>
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -308,7 +311,10 @@ export function LabsSection() {
               <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
                 <p className="text-[1.7rem] text-[#757575]">
                   Check out some of the cool projects we have funded.{' '}
-                  <a href="https://discord.gg/YbpHVSd" className="text-[orange] hover:underline">
+                  <a
+                    href="https://discord.gg/YbpHVSd"
+                    className="text-[var(--color1)] hover:underline"
+                  >
                     Apply to be next!
                   </a>
                 </p>

@@ -148,7 +148,7 @@ export function MiningSection() {
     <section
       id="mining"
       ref={sectionRef}
-      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
       style={{
         background:
           'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -160,17 +160,17 @@ export function MiningSection() {
           title={<span data-tkey="rMining">Mining</span>}
         />
 
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-6" data-tkey="quickStart">
+        <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-6" data-tkey="quickStart">
           Quick Start
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <h4 className="text-[2.1rem] text-[orange] mb-2">
+            <h4 className="text-[2.1rem] text-[var(--color1)] mb-2">
               <a
                 href="https://github.com/fireice-uk/xmr-stak/releases"
                 target="_blank"
                 rel="noopener"
-                className="text-[orange] hover:text-[#fafafa] transition-colors"
+                className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
               >
                 XMRStak
               </a>
@@ -192,12 +192,12 @@ export function MiningSection() {
             </pre>
           </div>
           <div>
-            <h4 className="text-[2.1rem] text-[orange] mb-2">
+            <h4 className="text-[2.1rem] text-[var(--color1)] mb-2">
               <a
                 href="https://github.com/CryptoDredge/miner/releases"
                 target="_blank"
                 rel="noopener"
-                className="text-[orange] hover:text-[#fafafa] transition-colors"
+                className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
               >
                 CryptoDredge
               </a>
@@ -209,12 +209,12 @@ export function MiningSection() {
             </pre>
           </div>
           <div>
-            <h4 className="text-[2.1rem] text-[orange] mb-2">
+            <h4 className="text-[2.1rem] text-[var(--color1)] mb-2">
               <a
                 href="https://github.com/Bendr0id/xmrigCC"
                 target="_blank"
                 rel="noopener"
-                className="text-[orange] hover:text-[#fafafa] transition-colors"
+                className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
               >
                 XMRigCC
               </a>
@@ -228,12 +228,12 @@ export function MiningSection() {
             </pre>
           </div>
           <div>
-            <h4 className="text-[2.1rem] text-[orange] mb-2">
+            <h4 className="text-[2.1rem] text-[var(--color1)] mb-2">
               <a
                 href="https://www.srbminer.com/"
                 target="_blank"
                 rel="noopener"
-                className="text-[orange] hover:text-[#fafafa] transition-colors"
+                className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
               >
                 SRBMiner
               </a>
@@ -256,7 +256,7 @@ export function MiningSection() {
             href="https://conceal.network/wiki/doku.php?id=mining"
             target="_blank"
             rel="noopener"
-            className="text-[orange] hover:text-[#fafafa] transition-colors"
+            className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
             data-tkey="rDocumentation"
           >
             documentation
@@ -265,7 +265,7 @@ export function MiningSection() {
         </p>
 
         <div className="tableContain" id="poolsTable">
-          <h2 className="text-[2.1rem] text-[orange] mb-4 text-center md:text-left">
+          <h2 className="text-[2.1rem] text-[var(--color1)] mb-4 text-center md:text-left">
             <span>Mining</span> <span>Pools</span>
           </h2>
 
@@ -320,7 +320,7 @@ export function MiningSection() {
                           href={`http://${pool.info.host}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[orange] hover:text-[#fafafa] transition-colors"
+                          className="text-[var(--color1)] hover:text-[#fafafa] transition-colors"
                         >
                           {pool.info.name}
                         </a>

@@ -86,7 +86,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
         className={`order-1 ${isNormal ? 'lg:order-2 pl-0 lg:pl-12' : 'lg:order-1 pl-6 lg:pl-6 pr-0 lg:pr-12'}`}
       >
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-          <h2 className="text-[2.8rem] uppercase text-[orange] mb-6">{feature.title}</h2>
+          <h2 className="text-[2.8rem] uppercase text-[var(--color1)] mb-6">{feature.title}</h2>
         </AnimatedElement>
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575]">{feature.description}</p>
@@ -121,7 +121,8 @@ export function EarnSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[orange] font-semibold">Blockchain</span> Powered Deposits
+              <span className="text-[var(--color1)] font-semibold">Blockchain</span> Powered
+              Deposits
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">

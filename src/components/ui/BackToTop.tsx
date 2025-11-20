@@ -35,7 +35,7 @@ export function BackToTop() {
         'fixed right-3 bottom-3 z-50',
         'flex items-center justify-center',
         'w-[2em] h-[2em] rounded-full',
-        'bg-[orange] text-white border-2 border-[orange]',
+        'bg-[var(--color1)] text-white border-2 border-[var(--color1)]',
         'transition-all duration-300 ease-in-out',
         'hover:text-black hover:border-white hover:scale-[1.3] hover:shadow-xl',
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'

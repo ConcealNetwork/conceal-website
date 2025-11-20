@@ -3,7 +3,37 @@
  *
  * Centralized configuration file for easy maintenance and updates.
  * All timing values are in milliseconds unless otherwise specified.
+ *
+ * ============================================================================
+ * 🎨 THEME CONFIGURATION - CHANGE THESE VALUES TO CUSTOMIZE OUR THEME
+ * ============================================================================
+ *
+ * All theme settings are controlled here. Change these values to switch
+ * between different color schemes and fonts across the entire application.
  */
+
+export type ThemeColor = 'cyan' | 'orange' | 'magenta';
+export type ThemeFont = 'Inter' | 'Poppins';
+
+/**
+ * Theme Configuration
+ *
+ * ⚡ QUICK START: Change these three values to customize your theme
+ */
+export const themeConfig = {
+  /** Primary accent color - used for main highlights, buttons, links */
+  primaryColor: 'orange' as ThemeColor, // Options: 'cyan' | 'orange'
+
+  /** Secondary accent color - used for variety and alternating elements */
+  secondaryColor: 'orange' as ThemeColor, // Options: 'cyan' | 'orange' | 'magenta'
+
+  /** Font family - used throughout the entire application */
+  fontFamily: 'Poppins' as ThemeFont, // Options: 'Inter' | 'Poppins'
+} as const;
+
+// ============================================================================
+// Application Configuration
+// ============================================================================
 
 export const appConfig = {
   // Mobile Menu Settings

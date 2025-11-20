@@ -33,8 +33,8 @@ export function AboutSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              Privacy-Protected <span className="text-[orange] font-semibold"> De-Fi</span> &
-              Encrypted <span className="text-[orange] font-semibold">Communications</span>
+              Privacy-Protected <span className="text-[var(--color1)] font-semibold"> De-Fi</span> &
+              Encrypted <span className="text-[var(--color1)] font-semibold">Communications</span>
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
@@ -66,7 +66,7 @@ export function AboutSection() {
 
         {/* What is Conceal */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h3 className="text-[2.4rem] text-[orange] mb-6" data-tkey="about_title">
+          <h3 className="text-[2.4rem] text-[var(--color1)] mb-6" data-tkey="about_title">
             What is Conceal?
           </h3>
           <div className="space-y-4">
@@ -93,7 +93,7 @@ export function AboutSection() {
 
         {/* Vision */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="vision_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="vision_title">
             VISION
           </h4>
           <p className="text-[1.7rem] text-[#757575]" data-tkey="vision_desc">
@@ -108,7 +108,7 @@ export function AboutSection() {
 
         {/* Mission */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="mission_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="mission_title">
             MISSION
           </h4>
 
@@ -124,7 +124,7 @@ export function AboutSection() {
 
         {/* Privacy by Design */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="privacy_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="privacy_title">
             PRIVACY BY DESIGN
           </h4>
           <AnimatedElement types={['dragText']} speed="fast">
@@ -141,7 +141,7 @@ export function AboutSection() {
 
         {/* Community & Development */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="community_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="community_title">
             COMMUNITY & DEVELOPMENT
           </h4>
 
@@ -159,7 +159,7 @@ export function AboutSection() {
 
         {/* Decentralization & Resistance */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="decentralization_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="decentralization_title">
             DECENTRALIZATION & RESISTANCE
           </h4>
 
@@ -177,7 +177,7 @@ export function AboutSection() {
 
         {/* Join the Privacy Revolution */}
         <div className="mb-12 pl-6 lg:pl-6">
-          <h4 className="text-[2rem] text-[orange] mb-6" data-tkey="revolution_title">
+          <h4 className="text-[2rem] text-[var(--color1)] mb-6" data-tkey="revolution_title">
             JOIN THE PRIVACY REVOLUTION
           </h4>
 

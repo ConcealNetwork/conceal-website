@@ -6,7 +6,7 @@ export function WalletsSection() {
   return (
     <section
       id="wallets"
-      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
       style={{
         background:
           'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -19,7 +19,7 @@ export function WalletsSection() {
         />
 
         {/* Conceal-Desktop */}
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-4 text-center">
+        <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
           Conceal-Desktop | Full-Node Graphical Wallet
         </h3>
 
@@ -73,7 +73,7 @@ export function WalletsSection() {
         </div>
         <div className="h-[1.5rem]"></div>
         {/* Conceal-Core */}
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-4 text-center">
+        <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
           Conceal-Core | Full-Node Command Line Wallet
         </h3>
         <p className="text-[1.7rem] text-[white] mb-6 text-center">
@@ -125,7 +125,7 @@ export function WalletsSection() {
 
         <div className="h-[1.5rem]"></div>
         {/* Web Wallet Types */}
-        <h3 className="text-[2.4rem] text-[orange] uppercase mb-4 text-center">
+        <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
           Web Wallet & Paper Wallet
         </h3>
         <p className="text-[1.7rem] text-[white] mb-6 text-center">
@@ -168,7 +168,7 @@ export function WalletsSection() {
       </div>
       <div className="h-[3rem]"></div>
       {/* Conceal-Mobile */}
-      <h3 className="text-[2.4rem] text-[orange] uppercase mb-4 text-center">
+      <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
         Conceal-Mobile | Lite Wallet
       </h3>
       <p className="text-[1.7rem] text-[white] mb-12 text-center">

@@ -6,7 +6,7 @@ export function MarketsSection() {
     <>
       <section
         id="markets"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -48,7 +48,7 @@ export function MarketsSection() {
 
       <section
         id="buyingwCCXPOLYGON"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -73,7 +73,7 @@ export function MarketsSection() {
 
       <section
         id="buyingwCCXBNB"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -111,7 +111,7 @@ export function MarketsSection() {
           </div>
           <a
             href="https://conceal.network/community/#exchanges"
-            className="text-[orange] hover:text-[#fafafa] transition-colors inline-flex items-center gap-2"
+            className="text-[var(--color1)] hover:text-[#fafafa] transition-colors inline-flex items-center gap-2"
           >
             <i className="fa fa-plus"></i>
             <span data-tkey="rMore">More</span>
@@ -121,7 +121,7 @@ export function MarketsSection() {
 
       <section
         id="buyingwCCXETH"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -151,7 +151,7 @@ export function MarketsSection() {
           </div>
           <a
             href="https://conceal.network/community/#exchanges"
-            className="text-[orange] hover:text-[#fafafa] transition-colors inline-flex items-center gap-2"
+            className="text-[var(--color1)] hover:text-[#fafafa] transition-colors inline-flex items-center gap-2"
           >
             <i className="fa fa-plus"></i>
             <span data-tkey="rMore">More</span>

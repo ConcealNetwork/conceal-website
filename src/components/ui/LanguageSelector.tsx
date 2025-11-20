@@ -196,7 +196,7 @@ export function LanguageSelector() {
         type="button"
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="language-selector flex items-center justify-center gap-2 text-white hover:text-[orange] transition-all duration-300"
+        className="language-selector flex items-center justify-center gap-2 text-white hover:text-[var(--color1)] transition-all duration-300"
         aria-label="Select language"
         aria-expanded={isOpen}
       >

@@ -40,7 +40,7 @@ const fontLinks = [
 
 const colors = [
   { name: 'Grey', hex: '#808080', className: 'bg-[#808080]' },
-  { name: 'Orange', hex: '#FFA500', className: 'bg-[orange]' },
+  { name: 'Neon Cyan', hex: '#00F0FF', className: 'bg-[var(--color1)]' },
   { name: 'Black', hex: '#000000', className: 'bg-black' },
 ];
 
@@ -69,7 +69,7 @@ export function BrandingSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              The look of <em className="text-[orange]">privacy</em>
+              The look of <em className="text-[var(--color1)]">privacy</em>
             </h1>
           </AnimatedElement>
           <div className="flex flex-wrap gap-4">
@@ -119,7 +119,7 @@ export function BrandingSection() {
           </div>
           <div className="pl-0 lg:pl-12">
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-              <h2 className="text-3xl uppercase text-[orange] mb-6">The Conceal Logo</h2>
+              <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">The Conceal Logo</h2>
             </AnimatedElement>
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <ul className="list-none p-0 space-y-2">
@@ -128,7 +128,7 @@ export function BrandingSection() {
                     <a
                       href={link.url}
                       download={link.download}
-                      className="text-[orange] hover:text-white transition-colors duration-200 inline-flex items-center gap-2"
+                      className="text-[var(--color1)] hover:text-white transition-colors duration-200 inline-flex items-center gap-2"
                     >
                       {link.label}
                       <i className="fas fa-download"></i>
@@ -144,7 +144,9 @@ export function BrandingSection() {
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="order-2 lg:order-1 pr-0 lg:pr-12">
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-              <h2 className="text-3xl uppercase text-[orange] mb-6">The Colours of Conceal</h2>
+              <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">
+                The Colours of Conceal
+              </h2>
             </AnimatedElement>
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <p className="text-[1.7rem] text-[#757575]">
@@ -169,7 +171,7 @@ export function BrandingSection() {
         <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex items-center justify-center lg:justify-start">
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-              <div className="p-10 border-l-4 border-[orange]">
+              <div className="p-10 border-l-4 border-[var(--color1)]">
                 <p className="text-[1.7rem] text-[#757575] italic leading-relaxed">
                   "Arguing that you don't care about privacy because you have nothing to hide is no
                   different from saying, you don't care about freedom of speech because you have
@@ -180,7 +182,7 @@ export function BrandingSection() {
           </div>
           <div className="pl-0 lg:pl-12">
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-              <h2 className="text-3xl uppercase text-[orange] mb-6">The Fonts of Conceal</h2>
+              <h2 className="text-3xl uppercase text-[var(--color1)] mb-6">The Fonts of Conceal</h2>
             </AnimatedElement>
             <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
               <ul className="list-none p-0 space-y-2">
@@ -190,7 +192,7 @@ export function BrandingSection() {
                       href={font.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[orange] hover:text-white transition-colors duration-200 inline-flex items-center gap-2"
+                      className="text-[var(--color1)] hover:text-white transition-colors duration-200 inline-flex items-center gap-2"
                     >
                       {font.label}
                       <i className="fas fa-download"></i>

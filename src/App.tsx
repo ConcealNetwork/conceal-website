@@ -117,7 +117,10 @@ function App({ onReady }: AppProps) {
   }, [onReady]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A0A0A] text-[#757575] font-['Poppins',Arial,Helvetica,sans-serif] text-[1.7rem] leading-[1.765]">
+    <div
+      className="min-h-screen flex flex-col text-[#B0B0B0] text-[1.7rem] leading-[1.8]"
+      style={{ fontFamily: 'var(--font-family)', backgroundColor: 'var(--color-bg-primary)' }}
+    >
       {/* Header Component */}
       <Header isScrolledPastHero={isScrolledPastHero} />
 

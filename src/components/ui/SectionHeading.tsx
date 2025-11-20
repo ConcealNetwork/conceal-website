@@ -13,7 +13,7 @@ interface SectionHeadingProps {
 export function SectionHeading({
   subtitle,
   title,
-  subtitleClassName = 'text-[3rem] text-[orange] text-center mb-[-2rem] [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]',
+  subtitleClassName = 'text-[3rem] text-[var(--color1)] text-center mb-[-2rem] [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]',
   titleClassName = 'text-[6rem] text-[white] mb-8 text-center [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]',
   variant = 'default',
   description,
@@ -22,7 +22,10 @@ export function SectionHeading({
     return (
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 items-center">
         <div className="flex flex-col">
-          <h2 className={`${titleClassName} border-b-2 border-[orange] w-[90%] mt-2 mx-auto`}>
+          <h2
+            className={`${titleClassName} border-b-2 w-[90%] mt-2 mx-auto`}
+            style={{ borderBottomColor: 'var(--color1)' }}
+          >
             {title}
           </h2>
         </div>

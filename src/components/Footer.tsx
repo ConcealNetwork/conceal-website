@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from 'react';
 
 // Reusable CSS classes for easier maintenance
 const linkClass =
-  'text-[#fafafa] hover:text-[orange] hover:opacity-80 transition-all duration-300 border-none';
+  'text-[#fafafa] hover:text-[var(--color1)] hover:opacity-80 transition-all duration-300 border-none';
 const linkClassWithIcon = `${linkClass} inline-flex items-center gap-2`;
-const columnHeadingClass = 'text-[orange] text-4xl font-normal mb-4';
+const columnHeadingClass = 'text-[var(--color1)] text-4xl font-normal mb-4';
 const listItemClass = 'mb-2';
 
 // Data structures for footer links
@@ -256,8 +256,8 @@ export function Footer() {
     >
       {/* Pull Indicator - Mobile Only */}
       {!isExpanded && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#181A20] border-t border-[orange] py-2 text-center">
-          <div className="text-[orange] text-sm animate-bounce">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#181A20] border-t border-[var(--color1)] py-2 text-center">
+          <div className="text-[var(--color1)] text-sm animate-bounce">
             <i className="fas fa-chevron-up"></i> Pull up to see footer
             <i className="fas fa-chevron-up"></i>
           </div>
@@ -268,7 +268,7 @@ export function Footer() {
       <div className="pt-5 text-center mb-6">
         <a
           href="#top"
-          className="text-[orange] hover:text-[#fafafa] transition-all duration-300 inline-flex items-center gap-2"
+          className="text-[var(--color1)] hover:text-[#fafafa] transition-all duration-300 inline-flex items-center gap-2"
         >
           <i className="fas fa-chevron-up"></i>
           Back to Top
@@ -288,7 +288,10 @@ export function Footer() {
       {/* Terms & Privacy */}
       <div className="min-w-full text-center pb-2.5">
         <span className="url_terms">
-          <a href="/tc" className="text-[orange] hover:text-[#fafafa] transition-all duration-300">
+          <a
+            href="/tc"
+            className="text-[var(--color1)] hover:text-[#fafafa] transition-all duration-300"
+          >
             T&amp;C
           </a>
         </span>
@@ -296,7 +299,7 @@ export function Footer() {
         <span className="url_terms">
           <a
             href="/privacy"
-            className="text-[orange] hover:text-[#fafafa] transition-all duration-300"
+            className="text-[var(--color1)] hover:text-[#fafafa] transition-all duration-300"
           >
             Privacy
           </a>

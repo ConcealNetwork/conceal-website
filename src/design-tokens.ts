@@ -4,24 +4,29 @@
  */
 
 export const colors = {
-  // Backgrounds
+  // Backgrounds - Modern dark theme with deep purples/blues
   bg: {
-    primary: '#0A0A0A',
-    secondary: '#222222',
+    primary: '#0F0F1A', // Deep dark purple-blue
+    secondary: '#1A1A2E', // Darker purple-blue
     tertiary: '#151515',
     card: '#111111',
   },
-  // Text colors
+  // Text colors - Better contrast
   text: {
     primary: '#FFFFFF',
-    secondary: '#DDDDDD',
-    muted: '#999999',
+    secondary: '#E0E0E0', // Lighter for better contrast
+    muted: '#B0B0B0', // Lighter muted text
     disabled: '#757575',
     placeholder: '#4f4f4f',
   },
-  // Brand colors
+  // Brand colors - Neon accents
   brand: {
-    primary: 'orange', // Main brand color
+    primary: '#00F0FF', // Neon cyan as primary
+    neon: {
+      cyan: '#00F0FF', // Bright cyan
+      magenta: '#FF00FF', // Bright magenta
+      orange: '#FFA500', // Neon orange - easy to switch with cyan
+    },
     hover: '#33a242',
   },
   // Borders and dividers
@@ -29,13 +34,25 @@ export const colors = {
     light: 'rgba(255, 255, 255, 0.05)',
     medium: 'rgba(255, 255, 255, 0.1)',
     strong: 'rgba(255, 255, 255, 0.25)',
+    neon: {
+      cyan: 'rgba(0, 240, 255, 0.3)',
+      magenta: 'rgba(255, 0, 255, 0.3)',
+      orange: 'rgba(255, 165, 0, 0.3)',
+    },
+  },
+  // Glow effects
+  glow: {
+    cyan: 'rgba(0, 240, 255, 0.4)',
+    magenta: 'rgba(255, 0, 255, 0.4)',
+    orange: 'rgba(255, 165, 0, 0.4)',
+    orangeStrong: 'rgba(255, 165, 0, 0.6)',
   },
 };
 
 export const typography = {
   // Font families
   fontFamily: {
-    sans: ['Poppins', 'Arial', 'Helvetica', 'sans-serif'],
+    sans: ['Inter', 'Arial', 'Helvetica', 'sans-serif'],
     mono: ['Consolas', 'Andale Mono', 'Courier', 'Courier New', 'monospace'],
   },
   // Font sizes (in rem)
@@ -50,11 +67,11 @@ export const typography = {
     '4xl': '4.4rem',
     '5xl': '5.3rem',
   },
-  // Line heights
+  // Line heights - Improved spacing
   lineHeight: {
-    tight: '1.25',
-    normal: '1.765',
-    relaxed: '1.8',
+    tight: '1.3',
+    normal: '1.8', // More generous spacing
+    relaxed: '2.0',
   },
   // Letter spacing
   letterSpacing: {
