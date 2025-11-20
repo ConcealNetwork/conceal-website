@@ -21,11 +21,19 @@ export function HeroSection({ onMount }: HeroSectionProps) {
       {/* Background image with improved overlay */}
       <div
         id="herobg"
-        className="absolute top-0 left-0 w-full h-full bg-[url('/images/hero-bg-new.jpg')] bg-center bg-cover bg-no-repeat opacity-30"
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-no-repeat opacity-30"
+        style={{
+          backgroundImage: "url('/images/hero-bg-new.jpg')",
+        }}
       ></div>
 
-      {/* Gradient overlay for better contrast */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[var(--color-bg-primary)]/80 via-[#1A1A2E]/60 to-[var(--color-bg-primary)]/90"></div>
+      {/* Gradient overlay for better contrast - vertical gradient centered */}
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          background: `linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.4) 100%)`,
+        }}
+      ></div>
 
       {/* Subtle background glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color1)]/10 rounded-full blur-3xl"></div>
@@ -35,7 +43,7 @@ export function HeroSection({ onMount }: HeroSectionProps) {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-4 py-20">
         <div className="text-center max-w-4xl mx-auto space-y-8">
           {/* Title - solid color for readability */}
-          <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-bold leading-tight mb-6 text-white">
+          <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-tight mb-6 text-white">
             <span className="block md:inline">Conceal</span>
             <span className="block md:inline md:ml-4 text-[var(--color1)]">.Network</span>
           </h2>
