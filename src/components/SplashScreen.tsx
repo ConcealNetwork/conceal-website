@@ -116,7 +116,7 @@ export function SplashScreen({
           className="absolute inset-0 rounded-full border-[3px] border-transparent"
           style={{
             borderTopColor: 'var(--color1)',
-            animation: 'spin 2s linear infinite',
+            animation: 'spin 2s linear infinite, glowPulse1 2s ease-in-out infinite',
           }}
         />
 
@@ -129,7 +129,7 @@ export function SplashScreen({
             right: '5px',
             bottom: '5px',
             borderTopColor: 'var(--color2)',
-            animation: 'spin 3s linear infinite',
+            animation: 'spin 3s linear infinite, glowPulse2 2.5s ease-in-out infinite',
           }}
         />
 
@@ -142,16 +142,49 @@ export function SplashScreen({
             right: '15px',
             bottom: '15px',
             borderTopColor: 'var(--color1)',
-            animation: 'spin 1.5s linear infinite',
+            animation: 'spin 1.5s linear infinite, glowPulse3 1.8s ease-in-out infinite',
           }}
         />
       </div>
 
-      {/* Spin animation keyframes */}
+      {/* Spin and glow animation keyframes */}
       <style>{`
         @keyframes spin {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes glowPulse1 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color1)) drop-shadow(0 0 12px var(--color1));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color1)) drop-shadow(0 0 24px var(--color1)) drop-shadow(0 0 32px var(--color1));
+            opacity: 0.9;
+          }
+        }
+        
+        @keyframes glowPulse2 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color2)) drop-shadow(0 0 12px var(--color2));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color2)) drop-shadow(0 0 24px var(--color2)) drop-shadow(0 0 32px var(--color2));
+            opacity: 0.9;
+          }
+        }
+        
+        @keyframes glowPulse3 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color1)) drop-shadow(0 0 12px var(--color1));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color1)) drop-shadow(0 0 24px var(--color1)) drop-shadow(0 0 32px var(--color1));
+            opacity: 0.9;
+          }
         }
       `}</style>
     </div>
