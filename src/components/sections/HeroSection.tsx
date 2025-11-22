@@ -43,28 +43,28 @@ export function HeroSection({ onMount }: HeroSectionProps) {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-8 py-20">
         <div className="text-center max-w-4xl mx-auto space-y-8 w-full">
           {/* Title - solid color for readability */}
-          <h2 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-semibold leading-tight mb-6 text-white flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4">
+          <h2 className="text-[5.8rem] md:text-[7rem] lg:text-[8rem] font-semibold leading-tight mb-6 text-white flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4">
             <span>Conceal</span>
             <span className="text-[var(--color1)]">.Network</span>
           </h2>
 
           {/* Subtitle with better contrast */}
-          <p className="text-[1.8rem] md:text-[2rem] text-[#E0E0E0] uppercase tracking-[0.3rem] mb-12 leading-relaxed [text-shadow:0_0_20px_rgba(0,0,0,0.8)] whitespace-normal md:whitespace-nowrap flex justify-center items-center">
+          <p className="text-[1.6rem] md:text-[1.8rem] text-[#E0E0E0] uppercase tracking-[0.3rem] mb-12 leading-relaxed [text-shadow:0_0_20px_rgba(0,0,0,0.8)] whitespace-normal md:whitespace-nowrap flex justify-center items-center">
             Privacy-Protected De-Fi & Encrypted Communications
           </p>
 
           {/* Call-to-action buttons */}
-          <div className="flex flex-wrap justify-center gap-12 mb-12">
-            <Button variant="primary" asChild href="/#wallets" size="large">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-18 mb-12">
+            <Button variant="primary" asChild href="/#wallets" size="default">
               <a href="/#wallets">
                 <i className="fas fa-wallet text-3xl mr-2"></i>
-                <span className="text-2xl md:text-3xl">Get Started</span>
+                <span className="text-1.1xl md:text-1.2xl">Get Started</span>
               </a>
             </Button>
-            <Button variant="primary" targetId="features" asChild href="/#features" size="large">
+            <Button variant="primary" targetId="features" asChild href="/#features" size="default">
               <a href="/#features">
                 <i className="fas fa-info-circle text-3xl mr-2"></i>
-                <span className="text-2xl md:text-3xl">Learn More</span>
+                <span className="text-1.1xl md:text-1.2xl">Learn More</span>
               </a>
             </Button>
           </div>

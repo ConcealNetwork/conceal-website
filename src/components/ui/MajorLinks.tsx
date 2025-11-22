@@ -134,7 +134,7 @@ export function MajorLinks() {
               onClick={(e) => handleLinkClick(e, link)}
               target={link.external ? '_blank' : undefined}
               rel={link.external ? 'noopener noreferrer' : undefined}
-              className="group relative flex items-center justify-center w-[2.5em] h-[2.5em] text-center rounded-full transition-all duration-300 ease-in-out"
+              className="group relative flex items-center justify-center w-[2.3em] h-[2.3em] text-center rounded-full transition-all duration-300 ease-in-out"
               style={{
                 color: colorVar,
                 backgroundColor: 'rgba(15, 15, 26, 0.8)',

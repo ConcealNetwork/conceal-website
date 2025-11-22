@@ -3,7 +3,6 @@ import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { AboutSection } from '../components/sections/AboutSection';
 import { BackToTop } from '../components/ui/BackToTop';
-import { MajorLinks } from '../components/ui/MajorLinks';
 import { SocialMenu } from '../components/ui/SocialMenu';
 
 export function AboutPage() {
@@ -30,9 +29,6 @@ export function AboutPage() {
 
       {/* Footer Component */}
       <Footer />
-
-      {/* Major Links - Fixed on left side */}
-      <MajorLinks />
 
       {/* Social Menu - Fixed on right side */}
       <SocialMenu />
