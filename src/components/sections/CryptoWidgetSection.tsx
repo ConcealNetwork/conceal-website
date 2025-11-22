@@ -69,7 +69,7 @@ export function CryptoWidgetSection() {
     return (
       <section
         id="cryptoWidget"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -86,7 +86,7 @@ export function CryptoWidgetSection() {
     return (
       <section
         id="cryptoWidget"
-        className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+        className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
         style={{
           background:
             'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -105,7 +105,7 @@ export function CryptoWidgetSection() {
   return (
     <section
       id="cryptoWidget"
-      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]"
       style={{
         background:
           'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -114,7 +114,9 @@ export function CryptoWidgetSection() {
       <div className="max-w-6xl mx-auto">
         <div className="bg-[#111] border border-[#444] rounded-lg p-8 text-center">
           <div className="mb-4">
-            <h3 className="text-[2.4rem] text-[orange] uppercase mb-2">Conceal Network (CCX)</h3>
+            <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-2">
+              Conceal Network (CCX)
+            </h3>
             <div className="text-[4rem] text-white font-bold">
               $
               {price.usd.toLocaleString(undefined, {

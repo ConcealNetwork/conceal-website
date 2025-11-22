@@ -437,7 +437,8 @@ export function InTheMediaSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span>Going</span> <span className="text-[orange] font-semibold">Noticed</span>,
+              <span>Going</span> <span className="text-[var(--color1)] font-semibold">Noticed</span>
+              ,
               <br />
               Not Concealed
             </h1>
@@ -446,7 +447,7 @@ export function InTheMediaSection() {
           {/* Featured Videos Carousel */}
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="mt-8">
-              <h2 className="text-2xl text-[orange] text-center mb-6">
+              <h2 className="text-2xl text-[var(--color1)] text-center mb-6">
                 <span className="font-semibold">Featured:</span>
               </h2>
               <div className="flex justify-center">
@@ -465,7 +466,9 @@ export function InTheMediaSection() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-[1.8rem] font-light px-4 py-2 transition-colors duration-200 ${
-                  activeTab === tab.id ? 'text-[orange]' : 'text-white hover:text-[orange]'
+                  activeTab === tab.id
+                    ? 'text-[var(--color1)]'
+                    : 'text-white hover:text-[var(--color1)]'
                 }`}
               >
                 {tab.label}

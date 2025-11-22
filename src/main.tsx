@@ -20,6 +20,7 @@ import { PrivacyPage } from './pages/PrivacyPage';
 import { RoadmapPage } from './pages/RoadmapPage';
 import { TeamPage } from './pages/TeamPage';
 import { TermsPage } from './pages/TermsPage';
+import { applyTheme } from './theme';
 import { hasCookie } from './utils/cookies';
 
 function Root() {
@@ -93,6 +94,10 @@ function Root() {
     </>
   );
 }
+
+// Apply theme CSS variables BEFORE React renders to avoid flash
+// This ensures all CSS variables are set synchronously
+applyTheme();
 
 function AppWrapper() {
   return (

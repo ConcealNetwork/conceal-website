@@ -68,7 +68,7 @@ function ManifestoText({ content }: { content: string }) {
         // Check for ### headers
         if (line.startsWith('### ')) {
           return (
-            <h3 key={line} className="text-[2.8rem] uppercase text-[orange] mb-6">
+            <h3 key={line} className="text-[2.8rem] uppercase text-[var(--color1)] mb-6">
               {line.replace(/^### \*\*|\*\*$/g, '')}
             </h3>
           );
@@ -191,7 +191,7 @@ export function ManifestoSection() {
         <div className="mb-16">
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              Concealer's <span className="text-[orange] font-semibold">Manifesto</span>
+              Concealer's <span className="text-[var(--color1)] font-semibold">Manifesto</span>
             </h1>
           </AnimatedElement>
         </div>

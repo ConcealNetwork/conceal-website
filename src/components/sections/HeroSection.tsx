@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Button } from '../ui/Button';
 
 interface HeroSectionProps {
   onMount?: (element: HTMLElement) => void;
@@ -15,39 +16,69 @@ export function HeroSection({ onMount }: HeroSectionProps) {
           onMount(el);
         }
       }}
-      className="relative h-[55vh] bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      className="relative min-h-[70vh] bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.1)] overflow-hidden"
     >
-      {/* Background image */}
+      {/* Background image with improved overlay */}
       <div
         id="herobg"
-        className="absolute top-0 left-0 w-full h-full bg-[url('/images/hero-bg-new.jpg')] bg-center bg-cover bg-no-repeat"
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-no-repeat opacity-30"
+        style={{
+          backgroundImage: "url('/images/hero-bg-new.jpg')",
+        }}
       ></div>
 
-      {/* Dark transparent overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      {/* Gradient overlay for better contrast - vertical gradient centered */}
+      <div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          background: `linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.2) 50%, rgba(10, 10, 10, 0.4) 100%)`,
+        }}
+      ></div>
 
-      {/* Content */}
-      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 z-10 text-center px-4 w-full">
-        <h2 className="text-[5rem] md:text-[8rem] text-white mb-4 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-          <span className="md:inline">
-            <span className="block md:inline">Conceal</span>
-            <span className="block md:inline md:ml-0 md:mt-0 mt-[-3rem] text-right md:text-center">
-              .Network
-            </span>
-          </span>
-        </h2>
-        <p className="text-[1.6rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.3rem] mb-8 [text-shadow:0_0_16px_rgba(0,0,0,0.9)]">
-          Privacy-Protected De-Fi & Encrypted Communications
-        </p>
+      {/* Subtle background glows */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color1)]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--color2)]/10 rounded-full blur-3xl"></div>
+
+      {/* Content with improved spacing */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[70vh] px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto space-y-8 w-full">
+          {/* Title - solid color for readability */}
+          <h2 className="text-[5.8rem] md:text-[7rem] lg:text-[8rem] font-semibold leading-tight mb-6 text-white flex flex-col md:flex-row items-center justify-center gap-0 md:gap-4">
+            <span>Conceal</span>
+            <span className="text-[var(--color1)]">.Network</span>
+          </h2>
+
+          {/* Subtitle with better contrast */}
+          <p className="text-[1.6rem] md:text-[1.8rem] text-[#E0E0E0] uppercase tracking-[0.3rem] mb-12 leading-relaxed [text-shadow:0_0_20px_rgba(0,0,0,0.8)] whitespace-normal md:whitespace-nowrap flex justify-center items-center">
+            Privacy-Protected De-Fi & Encrypted Communications
+          </p>
+
+          {/* Call-to-action buttons */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-18 mb-12">
+            <Button variant="primary" asChild href="/#wallets" size="default">
+              <a href="/#wallets">
+                <i className="fas fa-wallet text-3xl mr-2"></i>
+                <span className="text-1.1xl md:text-1.2xl">Get Started</span>
+              </a>
+            </Button>
+            <Button variant="primary" targetId="features" asChild href="/#features" size="default">
+              <a href="/#features">
+                <i className="fas fa-info-circle text-3xl mr-2"></i>
+                <span className="text-1.1xl md:text-1.2xl">Learn More</span>
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
 
-      {/* Scroll down link */}
+      {/* Scroll down link with neon accent */}
       <a
         href="#features"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white opacity-70 hover:opacity-100 transition-opacity z-10"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[var(--color1)] opacity-80 hover:opacity-100 transition-all duration-300 z-10 hover:scale-110"
+        style={{ textShadow: 'var(--color1-glow)' }}
         aria-label="Scroll to features"
       >
-        <i className="fas fa-chevron-down text-2xl"></i>
+        <i className="fas fa-chevron-down text-3xl animate-bounce"></i>
       </a>
     </section>
   );

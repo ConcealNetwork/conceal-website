@@ -160,7 +160,7 @@ function Column({ data }: { data: ColumnData }) {
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 transition-colors duration-300 ${
-                isHovered ? 'text-[orange]' : 'text-white'
+                isHovered ? 'text-[var(--color1)]' : 'text-white'
               } hover:underline`}
             >
               {item.svgIcon ? (
@@ -186,7 +186,7 @@ function Column({ data }: { data: ColumnData }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center gap-2 transition-colors duration-300 ${
-                    isHovered ? 'text-[orange]' : 'text-white'
+                    isHovered ? 'text-[var(--color1)]' : 'text-white'
                   } hover:underline`}
                 >
                   {item.svgIcon ? (
@@ -233,7 +233,7 @@ export function CommunitySection() {
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
               <span>Improving the World</span>{' '}
-              <span className="text-[orange] font-semibold">Together</span>
+              <span className="text-[var(--color1)] font-semibold">Together</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -265,7 +265,9 @@ export function CommunitySection() {
               type="button"
               onClick={() => setActiveTab('socials')}
               className={`text-7xl font-light transition-colors duration-300 ${
-                activeTab === 'socials' ? 'text-[orange]' : 'text-white hover:text-[orange]'
+                activeTab === 'socials'
+                  ? 'text-[var(--color1)]'
+                  : 'text-white hover:text-[var(--color1)]'
               }`}
             >
               Social links
@@ -275,7 +277,9 @@ export function CommunitySection() {
               type="button"
               onClick={() => setActiveTab('exchanges')}
               className={`text-7xl font-light transition-colors duration-300 ${
-                activeTab === 'exchanges' ? 'text-[orange]' : 'text-white hover:text-[orange]'
+                activeTab === 'exchanges'
+                  ? 'text-[var(--color1)]'
+                  : 'text-white hover:text-[var(--color1)]'
               }`}
             >
               Exchanges
@@ -285,7 +289,9 @@ export function CommunitySection() {
               type="button"
               onClick={() => setActiveTab('dex')}
               className={`text-7xl font-light transition-colors duration-300 ${
-                activeTab === 'dex' ? 'text-[orange]' : 'text-white hover:text-[orange]'
+                activeTab === 'dex'
+                  ? 'text-[var(--color1)]'
+                  : 'text-white hover:text-[var(--color1)]'
               }`}
             >
               DEX

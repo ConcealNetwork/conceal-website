@@ -123,8 +123,9 @@ export function TeamSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[orange] font-semibold">Alone</span> we can do so little;{' '}
-              <span className="text-[orange] font-semibold">together</span> we can do so much.
+              <span className="text-[var(--color1)] font-semibold">Alone</span> we can do so little;{' '}
+              <span className="text-[var(--color1)] font-semibold">together</span> we can do so
+              much.
             </h1>
           </AnimatedElement>
         </div>
@@ -155,14 +156,14 @@ export function TeamSection() {
                     />
                     {/* Decorative border circles - positioned to cover the full image */}
                     <div className="absolute top-0 left-0 w-full h-full rounded-full border-[13px] border-[#181A18] pointer-events-none"></div>
-                    <div className="absolute top-0 left-0 w-full h-full rounded-full border-[13px] border-t-[orange] border-r-[orange] border-b-[#181A18] border-l-[#181A18] -rotate-[10deg] group-hover:rotate-[350deg] transition-all duration-500 z-10 pointer-events-none"></div>
+                    <div className="absolute top-0 left-0 w-full h-full rounded-full border-[13px] border-t-[var(--color1)] border-r-[var(--color1)] border-b-[#181A18] border-l-[#181A18] -rotate-[10deg] group-hover:rotate-[350deg] transition-all duration-500 z-10 pointer-events-none"></div>
                   </div>
                 </div>
                 <h3 className="team-name text-[1.625rem] font-normal mb-2.5 mt-4 relative pb-2.5">
                   {member.name}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30px] h-[2px] bg-[orange]"></span>
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[30px] h-[2px] bg-[var(--color1)]"></span>
                 </h3>
-                <span className="role block text-m uppercase italic text-white group-hover:text-[orange] group-hover:not-italic transition-all duration-300">
+                <span className="role block text-m uppercase italic text-white group-hover:text-[var(--color1)] group-hover:not-italic transition-all duration-300">
                   {member.role}
                 </span>
                 <ul className="socials flex justify-center gap-1.5 list-none p-0 mt-4">
@@ -172,7 +173,7 @@ export function TeamSection() {
                         href={member.socials.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block w-10 h-10 leading-10 rounded-full text-black hover:text-[orange] hover:bg-black transition-all duration-300"
+                        className="inline-block w-10 h-10 leading-10 rounded-full text-black hover:text-[var(--color1)] hover:bg-black transition-all duration-300"
                       >
                         <i className="fab fa-github text-3xl"></i>
                       </a>
@@ -184,7 +185,7 @@ export function TeamSection() {
                         href={member.socials.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block w-10 h-10 leading-10 rounded-full text-black hover:text-[orange] hover:bg-black transition-all duration-300"
+                        className="inline-block w-10 h-10 leading-10 rounded-full text-black hover:text-[var(--color1)] hover:bg-black transition-all duration-300"
                       >
                         <i className="fab fa-twitter text-3xl"></i>
                       </a>

@@ -113,42 +113,78 @@ export function SplashScreen({
       <div id="loader" className="relative w-[150px] h-[150px]">
         {/* Outer circle */}
         <div
-          className="absolute inset-0 rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute inset-0 rounded-full border-[3px] border-transparent"
           style={{
-            animation: 'spin 2s linear infinite',
+            borderTopColor: 'var(--color1)',
+            animation: 'spin 2s linear infinite, glowPulse1 2s ease-in-out infinite',
           }}
         />
 
         {/* Middle circle */}
         <div
-          className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute rounded-full border-[3px] border-transparent"
           style={{
             top: '5px',
             left: '5px',
             right: '5px',
             bottom: '5px',
-            animation: 'spin 3s linear infinite',
+            borderTopColor: 'var(--color2)',
+            animation: 'spin 3s linear infinite, glowPulse2 2.5s ease-in-out infinite',
           }}
         />
 
         {/* Inner circle */}
         <div
-          className="absolute rounded-full border-[3px] border-transparent border-t-[orange]"
+          className="absolute rounded-full border-[3px] border-transparent"
           style={{
             top: '15px',
             left: '15px',
             right: '15px',
             bottom: '15px',
-            animation: 'spin 1.5s linear infinite',
+            borderTopColor: 'var(--color1)',
+            animation: 'spin 1.5s linear infinite, glowPulse3 1.8s ease-in-out infinite',
           }}
         />
       </div>
 
-      {/* Spin animation keyframes */}
+      {/* Spin and glow animation keyframes */}
       <style>{`
         @keyframes spin {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes glowPulse1 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color1)) drop-shadow(0 0 12px var(--color1));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color1)) drop-shadow(0 0 24px var(--color1)) drop-shadow(0 0 32px var(--color1));
+            opacity: 0.9;
+          }
+        }
+        
+        @keyframes glowPulse2 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color2)) drop-shadow(0 0 12px var(--color2));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color2)) drop-shadow(0 0 24px var(--color2)) drop-shadow(0 0 32px var(--color2));
+            opacity: 0.9;
+          }
+        }
+        
+        @keyframes glowPulse3 {
+          0%, 100% { 
+            filter: drop-shadow(0 0 8px var(--color1)) drop-shadow(0 0 12px var(--color1));
+            opacity: 1;
+          }
+          50% { 
+            filter: drop-shadow(0 0 16px var(--color1)) drop-shadow(0 0 24px var(--color1)) drop-shadow(0 0 32px var(--color1));
+            opacity: 0.9;
+          }
         }
       `}</style>
     </div>

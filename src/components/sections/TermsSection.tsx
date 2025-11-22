@@ -20,7 +20,7 @@ export function TermsSection() {
         <div className="mb-16">
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 text-center [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[orange]">Terms & Conditions</span>
+              <span className="text-[var(--color1)]">Terms & Conditions</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -29,7 +29,7 @@ export function TermsSection() {
         <div className="mb-12">
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Definitions</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">Definitions</h4>
               <div className="space-y-4">
                 <p className="text-[1.7rem] text-[#757575]">
                   <strong className="text-white">Conceal Team:</strong> Refers to the collective
@@ -60,7 +60,9 @@ export function TermsSection() {
         <div className="space-y-8">
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">About Conceal Network</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                About Conceal Network
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Conceal is an open source community project, which means that there is no company
                 behind it. This project is supported by the community, meaning there is no stable,
@@ -75,7 +77,7 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">No Warranty</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">No Warranty</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Conceal is distributed in the hope that it will be useful to mankind, but WITHOUT
                 ANY WARRANTY; without even the implied warranty of MERCHANT ABILITY or FITNESS FOR A
@@ -87,7 +89,9 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">No Financial Advice</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                No Financial Advice
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 The views provided in this community are from own authors. Our posts do not offer
                 investment advice and nothing in them should be construed as investment advice. You
@@ -107,7 +111,7 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Copyright</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">Copyright</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Permission is hereby granted, free of charge, to any person obtaining a copy of this
                 software and associated documentation files (the "Software"), to deal in the
@@ -129,7 +133,7 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
                 Reliance on Information Posted
               </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -157,7 +161,9 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Limitation on Liability.</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                Limitation on Liability.
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL THE CONCEAL TEAM, ITS
                 AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR
@@ -176,7 +182,7 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
                 User Responsibility & Security
               </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -192,7 +198,9 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Private Keys Backup</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                Private Keys Backup
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Conceal.Desktop, Conceal-Web-Wallet and Conceal.Mobile are an open-source,
                 client-side, free wallets which allow you to send and receive CCX instantly on the
@@ -208,7 +216,7 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Lab Projects</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">Lab Projects</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Conceal Network uses the Lab Project initiative to encourage creativity and
                 innovation in the blockchain sphere. However, Conceal Network, Conceal DAO, Conceal
@@ -226,13 +234,15 @@ export function TermsSection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Data Handling Policy</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                Data Handling Policy
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Conceal Network is committed to privacy by design. We do not collect or retain
                 personal data through our software or websites. All transactions and communications
                 are processed locally on your device. For more information about our privacy
                 practices, please{' '}
-                <a href="/privacy" className="text-[orange] hover:underline font-semibold">
+                <a href="/privacy" className="text-[var(--color1)] hover:underline font-semibold">
                   READ OUR PRIVACY PAGE
                 </a>
                 .

@@ -23,6 +23,9 @@ deno.lock
 *.sln
 *.sw?
 
+.cursorrules
+.htaccess
+
 # Local Netlify folder
 .netlify
 

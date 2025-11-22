@@ -20,7 +20,7 @@ export function PrivacySection() {
         <div className="mb-16">
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 text-center [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[orange]">Privacy Policy</span>
+              <span className="text-[var(--color1)]">Privacy Policy</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -29,7 +29,7 @@ export function PrivacySection() {
         <div className="space-y-8">
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">What We Collect</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">What We Collect</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 We collect standard server logs from our webserver. All data processed is
                 anonymized. Like many site operators, we collect information that your browser sends
@@ -43,7 +43,9 @@ export function PrivacySection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">What We Use the Data For</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
+                What We Use the Data For
+              </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 Server log data is used to provide statistics on the website and help us to improve
                 the content and the information flow. This data is also used to analyze errors and
@@ -54,7 +56,7 @@ export function PrivacySection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">
                 Changes of Privacy Policy
               </h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
@@ -67,7 +69,7 @@ export function PrivacySection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Contact</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">Contact</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 If you have any questions about our privacy policy, or how your data is being
                 collected and processed, please{' '}
@@ -75,7 +77,7 @@ export function PrivacySection() {
                   href="https://conceal.network/support/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[orange] hover:underline"
+                  className="text-[var(--color1)] hover:underline"
                 >
                   contact us through the helpdesk
                 </a>
@@ -86,7 +88,7 @@ export function PrivacySection() {
 
           <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
             <div className="pl-6 lg:pl-6">
-              <h4 className="text-[2rem] text-[orange] mb-6 underline">Latest Updated</h4>
+              <h4 className="text-[2rem] text-[var(--color1)] mb-6 underline">Latest Updated</h4>
               <p className="text-[1.7rem] text-[#757575] mb-4">
                 This Privacy Policy was last updated: 18th October, 2021.
               </p>

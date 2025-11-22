@@ -254,8 +254,8 @@ export function RoadmapSection() {
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
             <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[orange] font-semibold">The Birth</span> of something{' '}
-              <span className="text-[orange] font-semibold">Amazing.</span>
+              <span className="text-[var(--color1)] font-semibold">The Birth</span> of something{' '}
+              <span className="text-[var(--color1)] font-semibold">Amazing.</span>
             </h1>
           </AnimatedElement>
         </div>
@@ -265,7 +265,7 @@ export function RoadmapSection() {
           <div className="container max-w-[1140px] mx-auto px-4">
             <div className="timelines mb-10">
               <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-                <h2 className="text-[3.2rem] text-[orange] font-semibold text-center mb-10">
+                <h2 className="text-[3.2rem] text-[var(--color1)] font-semibold text-center mb-10">
                   CONCEAL ROADMAP
                 </h2>
               </AnimatedElement>
@@ -297,14 +297,20 @@ export function RoadmapSection() {
                       >
                         <div
                           className={`t-square absolute top-[10px] ${isEven ? 'right-[-6px]' : 'left-[-6px]'} w-3 h-3 ${
-                            isCompleted ? 'bg-white' : isInProg || isActiv ? 'bg-[orange]' : ''
+                            isCompleted
+                              ? 'bg-white'
+                              : isInProg || isActiv
+                                ? 'bg-[var(--color1)]'
+                                : ''
                           }`}
                         ></div>
                         <span
                           className={`block text-[#a8a8a8] ${isEven ? 'text-right' : ''} ${
                             isDone ? 'border-b-[5px] border-dashed border-white mb-[50px] pb-4' : ''
                           } ${
-                            isActiv ? 'border-t-[5px] border-dashed border-[orange] pt-4 mt-4' : ''
+                            isActiv
+                              ? 'border-t-[5px] border-dashed border-[var(--color1)] pt-4 mt-4'
+                              : ''
                           }`}
                         >
                           {item.date && (
@@ -313,7 +319,7 @@ export function RoadmapSection() {
                                 isCompleted
                                   ? 'text-white'
                                   : isInProg || isActiv
-                                    ? 'text-[orange]'
+                                    ? 'text-[var(--color1)]'
                                     : ''
                               } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
                             >
@@ -326,7 +332,7 @@ export function RoadmapSection() {
                                 isCompleted
                                   ? 'text-white'
                                   : isInProg || isActiv
-                                    ? 'text-[orange]'
+                                    ? 'text-[var(--color1)]'
                                     : ''
                               } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
                             >

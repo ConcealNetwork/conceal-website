@@ -5,17 +5,31 @@
  * main.css is REFERENCE ONLY - use Tailwind classes in components
  */
 
+/* 
+ * CSS Variables for Theme Colors
+ * These are set dynamically via theme.ts applyTheme() which runs before React renders
+ * All theme variables (--color1, --color2, --font-family) are set from app.config.ts
+ * Use var(--color1) for primary accent (cyan/orange)
+ * Use var(--color2) for secondary accent (magenta/orange/cyan)
+ */
+:root {
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #1a1a2e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+}
+
 /* HTML base font size for rem calculations */
 html {
   font-size: 10px;
-  background-color: #000;
+  background-color: var(--color-bg-primary);
 }
 
 body {
-  background-color: #000;
+  background-color: var(--color-bg-primary);
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
 }
 
 @media only screen and (max-width: 400px) {
@@ -24,7 +38,33 @@ body {
   }
 }
 
-/* Poppins Font Family */
+/* Inter Font Family - Local files */
+/* Inter Font Family - Only weights we actually use */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins Font Family - Local files (for easy switching) */
 @font-face {
   font-family: "Poppins";
   src:
@@ -351,14 +391,14 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: orange;
+  background: var(--color1);
   transition: left 0.3s ease;
   z-index: 0;
 }
 
 .button-slide:hover {
   color: white;
-  border-color: orange;
+  border-color: var(--color1);
 }
 
 .button-slide:hover::before {

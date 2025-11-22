@@ -87,7 +87,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
 
         {/* Name */}
         <div className="flex items-center">
-          <span className="text-[orange] font-semibold text-[2.475rem] whitespace-nowrap">
+          <span className="text-[var(--color1)] font-semibold text-[2.475rem] whitespace-nowrap">
             {donation.name}
           </span>
         </div>
@@ -116,7 +116,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
           <button
             type="button"
             onClick={handleCopy}
-            className="px-3 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
+            className="px-3 py-2 bg-[var(--color1)] text-black rounded hover:bg-[var(--color1)] transition-colors duration-200"
             title={copied ? 'Copied!' : 'Copy address'}
           >
             <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`}></i>
@@ -129,7 +129,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
         <div className="flex items-center gap-3 mb-3">
           <img src={donation.icon} alt={donation.name} className="w-10 h-10" />
           <div className="flex-1">
-            <div className="text-[orange] font-semibold text-lg">{donation.name}</div>
+            <div className="text-[var(--color1)] font-semibold text-lg">{donation.name}</div>
             {donation.network && <div className="text-[#757575] text-sm">{donation.network}</div>}
           </div>
         </div>
@@ -143,7 +143,7 @@ function DonationRow({ donation }: { donation: DonationAddress }) {
           <button
             type="button"
             onClick={handleCopy}
-            className="px-4 py-2 bg-[orange] text-black rounded hover:bg-[#ff8c00] transition-colors duration-200"
+            className="px-4 py-2 bg-[var(--color1)] text-black rounded hover:bg-[var(--color1)] transition-colors duration-200"
             title={copied ? 'Copied!' : 'Copy address'}
           >
             <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`}></i>
@@ -227,12 +227,12 @@ export function DonateSection() {
         {/* Donation Addresses Section */}
         <div className="mt-16">
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-            <h2 className="text-3xl uppercase text-[orange] text-center mb-4">
+            <h2 className="text-3xl uppercase text-[var(--color1)] text-center mb-4">
               Please use one of the following addresses
             </h2>
           </AnimatedElement>
           <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-            <h4 className="text-xl uppercase text-[orange] text-center mb-8">
+            <h4 className="text-xl uppercase text-[var(--color1)] text-center mb-8">
               (Donations are not refundable)
             </h4>
           </AnimatedElement>

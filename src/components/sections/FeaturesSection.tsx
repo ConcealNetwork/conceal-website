@@ -83,7 +83,7 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
-      className="py-16 px-4 bg-[#0A0A0A] border-b border-[rgba(255,255,255,0.2)]"
+      className="py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.1)]"
       style={{
         background:
           'linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,0) 30%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,1) 100%)',
@@ -103,19 +103,28 @@ export function FeaturesSection() {
           </div>
 
           <div className="min-w-0 pl-8">
-            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about1">
+            <p
+              className="text-[1.7rem] text-[#B0B0B0] mb-6 text-justify leading-relaxed"
+              data-tkey="about1"
+            >
               Conceal Network is a secure peer-to-peer privacy framework empowering individuals and
               organizations to anonymously communicate and interact financially in a decentralized
               and censorship resistant environment.
             </p>
-            <p className="text-[1.7rem] text-[#757575] mb-4 text-justify" data-tkey="about2">
+            <p
+              className="text-[1.7rem] text-[#B0B0B0] mb-6 text-justify leading-relaxed"
+              data-tkey="about2"
+            >
               Conceal Network powers the $CCX cryptocurrency which is an open source, privacy
               protected digital cash system that mimics physical cash; nobody knows where you store
               or spend your $CCX. All transactions, deposits and messages on Conceal Network are
               untraceable, tamperproof and operate with no central authority through the use of
               cryptographic protocols, which makes the chameleon a mascot of choice.
             </p>
-            <p className="text-[1.7rem] text-[#757575] mb-8 text-justify" data-tkey="about3">
+            <p
+              className="text-[1.7rem] text-[#B0B0B0] mb-8 text-justify leading-relaxed"
+              data-tkey="about3"
+            >
               Conceal Network is a community driven, truly decentralized blockchain bank accessible
               to everyone regardless of social or financial status and geographic location. No one
               owns Conceal Network and everyone can participate for free.
@@ -126,12 +135,15 @@ export function FeaturesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div className="text-justify max-w-[66%] mx-auto md:mx-0 md:ml-auto">
             <div className="flex items-center gap-3 mb-4">
-              <i className="fas fa-money-check-alt text-[3rem] text-[orange]"></i>
-              <h3 className="text-[2.4rem] text-[orange] uppercase">
+              <i className="fas fa-money-check-alt text-[3rem] text-[var(--color1)]"></i>
+              <h3 className="text-[2.4rem] text-[var(--color1)] uppercase">
                 <span data-tkey="rBanking">Banking</span>: <span>Conceal-Earn</span>
               </h3>
             </div>
-            <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutBankingDeposits">
+            <p
+              className="text-[1.7rem] text-[#B0B0B0] ml-4 leading-relaxed"
+              data-tkey="aboutBankingDeposits"
+            >
               Deposits form the backbone of the Conceal ecosystem, providing users with a
               decentralized and egalitarian form of cold staking that earns interests on locked
               deposits.
@@ -139,12 +151,18 @@ export function FeaturesSection() {
           </div>
           <div className="text-justify max-w-[66%] mx-auto md:mx-0 md:mr-auto">
             <div className="flex items-center gap-3 mb-4">
-              <i className="fas fa-comments text-[3rem] text-[orange]"></i>
-              <h3 className="text-[2.4rem] text-[orange] uppercase" data-tkey="encryptedMessages">
+              <i className="fas fa-comments text-[3rem] text-[var(--color1)]"></i>
+              <h3
+                className="text-[2.4rem] text-[var(--color1)] uppercase"
+                data-tkey="encryptedMessages"
+              >
                 Encrypted Messages
               </h3>
             </div>
-            <p className="text-[1.7rem] text-[#757575] ml-4" data-tkey="aboutEncryptedMessages">
+            <p
+              className="text-[1.7rem] text-[#B0B0B0] ml-4 leading-relaxed"
+              data-tkey="aboutEncryptedMessages"
+            >
               A truly private, decentralized, anonymous, untraceable, and end-to-end encrypted
               messaging service that operates on the blockchain while allowing messages that
               self-destruct.
@@ -154,7 +172,7 @@ export function FeaturesSection() {
 
         <form id="compoundInterestCalc" className="max-w-[66%] mx-auto">
           <h3
-            className="text-[2.4rem] text-[orange] uppercase mb-6 text-center"
+            className="text-[2.4rem] text-[var(--color1)] uppercase mb-6 text-center"
             data-tkey="compoundInterestCalculator"
           >
             Compound Interest Calculator
@@ -402,7 +420,9 @@ export function FeaturesSection() {
                   key={tierInfo.tier}
                   className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]"
                 >
-                  <h3 className="text-[orange] text-xl font-semibold mb-4">{tierInfo.tier}</h3>
+                  <h3 className="text-[var(--color1)] text-xl font-semibold mb-4">
+                    {tierInfo.tier}
+                  </h3>
                   <div className="space-y-3 mb-4">
                     <div className="flex justify-between">
                       <span className="text-[#757575]">Principal:</span>

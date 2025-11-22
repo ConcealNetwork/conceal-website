@@ -179,7 +179,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                     }}
                     onClick={() => handleNavItemClick(item.label)}
                     className={cn(
-                      'px-4 py-2 uppercase tracking-[0.1em] text-[orange] transition-all duration-500 rounded-t-[0.75em]',
+                      'px-4 py-2 uppercase tracking-[0.1em] text-[var(--color1)] transition-all duration-500 rounded-t-[0.75em]',
                       openDropdown === item.label ? 'text-white bg-[#333]' : 'hover:text-white'
                     )}
                   >
@@ -202,7 +202,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                           onClick={(e) => !child.external && handleLinkClick(e, child.href)}
                           target={child.external ? '_blank' : undefined}
                           rel={child.external ? 'noopener noreferrer' : undefined}
-                          className="block px-3 py-1 whitespace-nowrap rounded-[0.25em] text-[orange] hover:text-white hover:bg-black transition-colors duration-200"
+                          className="block px-3 py-1 whitespace-nowrap rounded-[0.25em] text-[var(--color1)] hover:text-white hover:bg-black transition-colors duration-200"
                         >
                           {child.label}
                         </a>
@@ -213,7 +213,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
               ) : (
                 <a
                   href={item.href}
-                  className="px-4 py-2 uppercase tracking-[0.1em] text-[orange] rounded-[0.75em] transition-all duration-500 hover:text-white"
+                  className="px-4 py-2 uppercase tracking-[0.1em] text-[var(--color1)] rounded-[0.75em] transition-all duration-500 hover:text-white"
                 >
                   {item.label}
                 </a>
@@ -228,7 +228,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                 e.preventDefault();
                 handleLinkClick(e as unknown as React.MouseEvent<HTMLAnchorElement>, '/#wallets');
               }}
-              className="px-4 py-2 uppercase tracking-[0.1em] text-[orange] rounded-[0.75em] transition-all duration-500 hover:text-white"
+              className="px-4 py-2 uppercase tracking-[0.1em] text-[var(--color1)] rounded-[0.75em] transition-all duration-500 hover:text-white"
             >
               Wallets
             </button>
@@ -238,7 +238,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
               href="https://conceal.network/support"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 uppercase tracking-[0.1em] text-[orange] rounded-[0.75em] transition-all duration-500 hover:text-white"
+              className="px-4 py-2 uppercase tracking-[0.1em] text-[var(--color1)] rounded-[0.75em] transition-all duration-500 hover:text-white"
             >
               Contact
             </a>
@@ -250,21 +250,32 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
       <button
         type="button"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="md:hidden fixed top-4 right-4 w-10 h-10 z-[999] flex flex-col justify-center items-center gap-1.5 p-2 bg-[rgba(0,0,0,0.7)] border border-[orange] rounded-lg transition-all duration-300 hover:bg-[rgba(255,165,0,0.2)]"
+        className="md:hidden fixed top-4 right-4 w-10 h-10 z-[999] flex flex-col justify-center items-center gap-1.5 p-2 bg-[rgba(0,0,0,0.7)] border border-[var(--color1)] rounded-lg transition-all duration-300"
+        style={
+          {
+            '--hover-bg': 'var(--color1-bg-glow)',
+          } as React.CSSProperties
+        }
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color1-bg-glow)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.7)';
+        }}
         aria-label="Toggle menu"
       >
         <span
-          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+          className={`block w-6 h-0.5 bg-[var(--color1)] transition-all duration-300 ${
             isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
           }`}
         ></span>
         <span
-          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+          className={`block w-6 h-0.5 bg-[var(--color1)] transition-all duration-300 ${
             isMobileMenuOpen ? 'opacity-0' : ''
           }`}
         ></span>
         <span
-          className={`block w-6 h-0.5 bg-[orange] transition-all duration-300 ${
+          className={`block w-6 h-0.5 bg-[var(--color1)] transition-all duration-300 ${
             isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
           }`}
         ></span>
@@ -272,16 +283,17 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
 
       {/* Mobile Menu - Slide-in Navigation */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[998] bg-[#0A0A0A] border-l border-[rgba(255,165,0,0.3)] transition-transform duration-300 ease-in-out overflow-y-auto ${
+        className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[998] bg-[var(--color-bg-primary)] border-l transition-transform duration-300 ease-in-out overflow-y-auto ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ borderLeftColor: 'var(--color1-border)' }}
       >
         <div className="p-4 pt-16">
           {/* Close Button */}
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-[orange] hover:text-white transition-colors"
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-[var(--color1)] hover:text-white transition-colors"
             aria-label="Close menu"
           >
             <i className="fas fa-times text-xl"></i>
@@ -295,7 +307,7 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
           <nav className="space-y-2">
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-[rgba(255,255,255,0.1)] pb-2">
-                <div className="text-[orange] uppercase tracking-wider text-sm font-semibold mb-2 px-2">
+                <div className="text-[var(--color1)] uppercase tracking-wider text-sm font-semibold mb-2 px-2">
                   {item.label}
                 </div>
                 {item.children && (
@@ -312,7 +324,14 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                           }}
                           target={child.external ? '_blank' : undefined}
                           rel={child.external ? 'noopener noreferrer' : undefined}
-                          className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+                          className="block px-4 py-2 text-white hover:text-[var(--color1)] rounded transition-colors duration-200"
+                          style={{ '--hover-bg': 'var(--color1-bg-glow)' } as React.CSSProperties}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = 'var(--color1-bg-glow)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = 'transparent';
+                          }}
                         >
                           {child.label}
                         </a>
@@ -330,7 +349,14 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                   handleLinkClick(e as unknown as React.MouseEvent<HTMLAnchorElement>, '/#wallets');
                   setIsMobileMenuOpen(false);
                 }}
-                className="block w-full text-left px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+                className="block w-full text-left px-4 py-2 text-white hover:text-[var(--color1)] rounded transition-colors duration-200"
+                style={{ '--hover-bg': 'var(--color1-bg-glow)' } as React.CSSProperties}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'var(--color1-bg-glow)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
               >
                 Wallets
               </button>
@@ -341,7 +367,14 @@ export function Header({ isScrolledPastHero = false, forceBackground = null }: H
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-2 text-white hover:text-[orange] hover:bg-[rgba(255,165,0,0.1)] rounded transition-colors duration-200"
+                className="block px-4 py-2 text-white hover:text-[var(--color1)] rounded transition-colors duration-200"
+                style={{ '--hover-bg': 'var(--color1-bg-glow)' } as React.CSSProperties}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'var(--color1-bg-glow)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
               >
                 Contact
               </a>

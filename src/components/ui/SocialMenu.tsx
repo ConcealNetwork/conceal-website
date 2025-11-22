@@ -116,25 +116,56 @@ export function SocialMenu() {
         isMobile && !isVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
-      {socialLinks.map((link) => (
-        <li key={link.name} className="pb-3">
-          <a
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center w-[2em] h-[2em] text-center text-[orange] bg-black border-2 border-[orange] rounded-full transition-all duration-300 ease-in-out hover:text-[#111] hover:bg-[orange] hover:border-white hover:scale-[1.3]"
-          >
-            {link.svgIcon ? (
-              <span className="flex items-center justify-center">{link.svgIcon}</span>
-            ) : (
-              <i className={`${link.icon} text-[1em]`} />
-            )}
-            <span className="absolute top-[0.25em] right-[2.5em] whitespace-nowrap text-[orange] [text-shadow:0_-0.1em_0.2em_#000,0_0.1em_0.2em_#000,-0.1em_0_0.3em_#000,-0.1em_0_0.3em_#000,-0.2em_0_0.75em_#000,-0.2em_0_0.75em_#000] opacity-0 invisible transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-hover:visible">
-              {link.name}
-            </span>
-          </a>
-        </li>
-      ))}
+      {socialLinks.map((link, index) => {
+        // Alternate between primary (color1) and secondary (color2) for visual variety
+        const usePrimary = index % 2 === 0;
+        const colorVar = usePrimary ? 'var(--color1)' : 'var(--color2)';
+        const glowVar = usePrimary ? 'var(--color1-glow-rgba)' : 'var(--color2-glow-rgba)';
+
+        return (
+          <li key={link.name} className="pb-3">
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center w-[2.5em] h-[2.5em] text-center rounded-full transition-all duration-300 ease-in-out"
+              style={{
+                color: colorVar,
+                backgroundColor: 'rgba(15, 15, 26, 0.8)',
+                border: `2px solid ${colorVar}`,
+                boxShadow: `0 0 10px ${glowVar}`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.2)';
+                e.currentTarget.style.boxShadow = `0 0 20px ${glowVar}, 0 0 30px ${glowVar}`;
+                e.currentTarget.style.backgroundColor = colorVar;
+                e.currentTarget.style.color = 'var(--color-bg-primary)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = `0 0 10px ${glowVar}`;
+                e.currentTarget.style.backgroundColor = 'rgba(15, 15, 26, 0.8)';
+                e.currentTarget.style.color = colorVar;
+              }}
+            >
+              {link.svgIcon ? (
+                <span className="flex items-center justify-center z-10">{link.svgIcon}</span>
+              ) : (
+                <i className={`${link.icon} text-[1.1em] z-10`} />
+              )}
+              <span
+                className="absolute top-[0.25em] right-[3em] whitespace-nowrap opacity-0 invisible transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:visible z-20"
+                style={{
+                  color: colorVar,
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.6)',
+                }}
+              >
+                {link.name}
+              </span>
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 }

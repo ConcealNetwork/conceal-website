@@ -46,26 +46,26 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
 
       // Variants
       variant === 'primary' && [
-        'bg-black text-white border border-[orange] rounded-[0.5rem] text-2xl',
-        'hover:bg-[orange] hover:text-black hover:border-2 hover:border-white',
+        'bg-black text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
+        'hover:bg-[var(--color1)] hover:text-black hover:border-2 hover:border-white',
       ],
       variant === 'stroke' && [
-        'bg-transparent border-2 border-[orange] text-white rounded-[10px]',
-        'hover:border-white hover:bg-[orange]',
+        'bg-transparent border-2 border-[var(--color1)] text-white rounded-[10px]',
+        'hover:border-white hover:bg-[var(--color1)]',
       ],
       variant === 'default' && [
         'bg-transparent text-white',
         'hover:bg-[#b8b8b8] hover:border-[#b8b8b8]',
       ],
       variant === 'download' && [
-        'bg-black text-white border border-[orange] rounded-[0.5rem] text-2xl',
-        'hover:bg-[orange] hover:text-black hover:border-2 hover:border-white',
+        'bg-black text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
+        'hover:bg-[var(--color1)] hover:text-black hover:border-2 hover:border-white',
       ],
       variant === 'slide' && [
-        'button-slide bg-transparent text-white border border-[orange] rounded-[0.5rem] text-2xl',
+        'button-slide bg-transparent text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
       ],
       variant === 'slideToId' && [
-        'button-slide bg-transparent text-white border border-[orange] rounded-[0.5rem] text-2xl',
+        'button-slide bg-transparent text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
       ],
 
       // Sizes
