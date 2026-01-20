@@ -36,11 +36,11 @@ export function MarketsSection() {
             <Button
               variant="download"
               asChild
-              href="https://www.sevenseas.exchange/market/CCX-USDT"
+              href="https://nonlogs.io/trade/CCX-BTC"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Seven Seas USDT/CCX
+              Nonlogs BTC/CCX
             </Button>
           </div>
         </div>

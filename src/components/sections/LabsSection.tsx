@@ -10,9 +10,12 @@ interface LabProject {
   description: string;
   labeltolink: string;
   projecturl: string;
-  labeltodocument: string;
-  documentlink: string;
-  documenttype: 'pdf' | 'wiki';
+  labelToDownload: string | null;
+  downloadurl: string | null;
+  downloadtype: 'zip' | 'deb' | 'exe' | 'dmg' | 'app' | 'apk' | 'f-droid' | null;
+  labeltodocument: string | null;
+  documentlink: string | null;
+  documenttype: 'pdf' | 'wiki' | null;
   linktoscreenshotfolder: string;
   imagePattern?: string;
   imageCount?: number;
@@ -25,15 +28,35 @@ const labsProjects: LabProject[] = [
     title: 'Conceal-Authenticator',
     description:
       'Conceal-Authenticator is a secure 2FA (Two-Factor Authentication) app that leverages the Conceal Network blockchain to securely backup your 2FA shared keys using a built-in lite wallet.',
-    labeltolink:
-      'You can go the the github page for more info and for downloads by clicking on this url.',
+    labeltolink: 'Visit the github repository for more info and direct apk download.',
     projecturl: 'https://github.com/Acktarius/Conceal-2fa-app/',
-    labeltodocument: 'You can find more information about the product in wiki page.',
+    labelToDownload: 'Download Conceal-Authenticator from F-Droid store',
+    downloadurl: 'https://f-droid.org/en/packages/com.acktarius.concealauthenticator/',
+    downloadtype: 'f-droid',
+    labeltodocument: 'More information about the app in the wiki page.',
     documentlink: 'https://github.com/Acktarius/Conceal-2fa-app/wiki',
     documenttype: 'wiki',
     linktoscreenshotfolder: '/images/labs/ccxauthenticator',
     imagePattern: 'authenticator',
     imageCount: 5,
+    imageExtension: 'png',
+  },
+  {
+    id: 'privacydefensor',
+    title: 'Privacy Defensor',
+    description:
+      'Privacy Defensor is an online arcade game inspired by the 80s to demonstrate a use case of Conceal-faucet-api. Users can get rewarded with 1 CCX, ideal for fueling transactions in the Conceal Authenticator app!',
+    labeltolink: 'Play the game, at this url:',
+    projecturl: 'https://privacydefensor.nodesandbits.tech/',
+    labelToDownload: null,
+    downloadurl: null,
+    downloadtype: null,
+    labeltodocument: null,
+    documentlink: null,
+    documenttype: null,
+    linktoscreenshotfolder: '/images/labs/privacydefensor',
+    imagePattern: 'privacydefensor',
+    imageCount: 3,
     imageExtension: 'png',
   },
   {
@@ -44,6 +67,9 @@ const labsProjects: LabProject[] = [
     labeltolink:
       'You can go the the github page for more info and for downloads by clicking on this url.',
     projecturl: 'https://github.com/Acktarius/conceal-assistant',
+    labelToDownload: 'Download Conceal-Assistant',
+    downloadurl: 'https://github.com/Acktarius/conceal-assistant/releases/latest/',
+    downloadtype: 'zip',
     labeltodocument: 'You can find more information about the product in this PDF.',
     documentlink: '/labs-data/conceal-assistant_info.pdf',
     documenttype: 'pdf',
@@ -68,6 +94,41 @@ function ProjectCard({ project }: { project: LabProject }) {
 
   // Split description by newlines
   const descriptionParagraphs = project.description.split('\n').filter((p) => p.trim());
+
+  // Get appropriate icon for download type
+  const getDownloadIcon = (downloadType: LabProject['downloadtype']): string => {
+    switch (downloadType) {
+      case 'zip':
+        return 'fas fa-file-zipper';
+      case 'apk':
+        return 'fab fa-android';
+      case 'f-droid':
+        return 'fab fa-android';
+      case 'deb':
+        return 'fab fa-ubuntu';
+      case 'exe':
+        return 'fab fa-windows';
+      case 'dmg':
+      case 'app':
+        return 'fab fa-apple';
+      case null:
+      default:
+        return 'fas fa-download';
+    }
+  };
+
+  // Get appropriate icon for document type
+  const getDocumentIcon = (documentType: LabProject['documenttype']): string => {
+    switch (documentType) {
+      case 'pdf':
+        return 'fas fa-file-pdf';
+      case 'wiki':
+        return 'fab fa-wikipedia-w';
+      case null:
+      default:
+        return 'fas fa-file';
+    }
+  };
 
   return (
     <div id={project.id} className="mb-16 scroll-mt-24">
@@ -95,21 +156,37 @@ function ProjectCard({ project }: { project: LabProject }) {
         </p>
       </AnimatedElement>
 
-      <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <p className="text-[1.7rem] text-[#757575] mb-6">
-          <a
-            href={project.documentlink}
-            className="text-[var(--color1)] hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {project.labeltodocument}
-            <i
-              className={`ml-2 ${project.documenttype === 'pdf' ? 'fas fa-file-pdf' : 'fab fa-wikipedia-w'}`}
-            ></i>
-          </a>
-        </p>
-      </AnimatedElement>
+      {project.documentlink && project.labeltodocument && (
+        <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+          <p className="text-[1.7rem] text-[#757575] mb-6">
+            <a
+              href={project.documentlink}
+              className="text-[var(--color1)] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.labeltodocument}
+              <i className={`ml-2 ${getDocumentIcon(project.documenttype)}`}></i>
+            </a>
+          </p>
+        </AnimatedElement>
+      )}
+
+      {project.downloadurl && project.labelToDownload && (
+        <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+          <p className="text-[1.7rem] text-[#757575] mb-6">
+            <a
+              href={project.downloadurl}
+              className="text-[var(--color1)] hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.labelToDownload}
+              <i className={`ml-2 ${getDownloadIcon(project.downloadtype)}`}></i>
+            </a>
+          </p>
+        </AnimatedElement>
+      )}
 
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <h3 className="text-2xl uppercase text-[var(--color1)] mb-6">How it looks...</h3>

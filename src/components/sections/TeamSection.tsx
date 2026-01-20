@@ -55,6 +55,18 @@ const teamMembers: TeamMember[] = [
     socials: {},
   },
   */
+
+  {
+    name: 'Mannan',
+    role: 'Community',
+    image: '/images/teampage/Mannan.png',
+    description:
+      "I began my crypto journey in mid-2017 and discovered Conceal in late 2020. In September 2021, I was promoted to join the core team to help our project grow. I've learned a lot over the years, and I'm still on a journey of learning and being the best I can be.",
+    socials: {
+      twitter: 'https://twitter.com/CryptolordTG',
+    },
+  },
+
   {
     name: 'bomb-on',
     role: 'Developer',
