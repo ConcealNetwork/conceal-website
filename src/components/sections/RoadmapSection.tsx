@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { AnimatedElement } from '../ui/AnimatedElement';
 
 interface TimelineItem {
@@ -5,6 +6,7 @@ interface TimelineItem {
   title: string;
   description: string;
   status: 'completed' | 'inprog' | 'activ' | 'done';
+  url?: string;
 }
 
 const timelineItems: TimelineItem[] = [
@@ -136,6 +138,7 @@ const timelineItems: TimelineItem[] = [
     title: 'Conceal Bridge',
     description: 'Swap your CCX to wCCX and back the other way with our Bridge tool.',
     status: 'completed',
+    url: 'https://bridge.conceal.network',
   },
   {
     date: 'Q2 2021',
@@ -162,6 +165,7 @@ const timelineItems: TimelineItem[] = [
     title: 'Conceal Web Wallet',
     description: 'Release of our 100% Client-Side Web Wallet for Conceal.',
     status: 'completed',
+    url: 'https://wallet.conceal.network',
   },
   {
     date: 'Q3 2023',
@@ -169,6 +173,7 @@ const timelineItems: TimelineItem[] = [
     description:
       'Improving speed and making optimizations. Now send encrypted Messages from your smartphone',
     status: 'completed',
+    url: 'https://wallet.conceal.network',
   },
   {
     date: 'Q3 2024',
@@ -176,6 +181,7 @@ const timelineItems: TimelineItem[] = [
     description:
       'Improving anonymity by randomly picking nodes from a bigger list, now accessing SSL SmartNodes.',
     status: 'completed',
+    url: 'https://wallet.conceal.network',
   },
   {
     date: 'Q3 2024',
@@ -183,6 +189,7 @@ const timelineItems: TimelineItem[] = [
     description:
       'A great place to interact with other Concealers, Buy, Sell in a peer 2 peer way trading with your CCX!',
     status: 'completed',
+    url: 'https://conceal.network/marketplace',
   },
   {
     date: 'Q4 2024',
@@ -190,12 +197,28 @@ const timelineItems: TimelineItem[] = [
     description:
       'Now available in 14 languages. Access Deposits (view-only). Use qr code scanning feature to send messages. Get notified of new messages.',
     status: 'completed',
+    url: 'https://wallet.conceal.network',
   },
   {
-    date: '',
-    title: 'Q2 2025, Web wallet deposits',
+    date: 'Q2 2025',
+    title: 'Web wallet deposits',
     description: 'Bringing deposits to client side web wallet',
     status: 'completed',
+    url: 'https://wallet.conceal.network',
+  },
+  {
+    date: 'Q4 2025',
+    title: 'Conceal Labs',
+    description: 'Conceal Authenticator app is launched, your 2FA keys are now stored on the blockchain',
+    status: 'completed',
+    url: 'https://f-droid.org/en/packages/com.acktarius.concealauthenticator/',
+  },
+  {
+    date: 'Q1 2026',
+    title: 'Conceal Labs',
+    description: 'Conceal-Faucet-API is launched, "one stop shop" for developpers to create faucet or game rewards',
+    status: 'completed',
+    url: 'https://github.com/ConcealNetwork/conceal-faucet-api',
   },
   {
     date: '',
@@ -230,8 +253,65 @@ const timelineItems: TimelineItem[] = [
 ];
 
 export function RoadmapSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const itemRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+  const [itemScales, setItemScales] = useState<Map<number, number>>(new Map());
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const sectionRect = sectionRef.current.getBoundingClientRect();
+      
+      // Only apply effect if roadmap section is in viewport
+      const isSectionVisible = sectionRect.bottom > 0 && sectionRect.top < window.innerHeight;
+      
+      if (!isSectionVisible) {
+        // Reset all scales if section is not visible
+        const resetScales = new Map<number, number>();
+        itemRefs.current.forEach((_, index) => {
+          resetScales.set(index, 1.0);
+        });
+        setItemScales(resetScales);
+        return;
+      }
+
+      const newScales = new Map<number, number>();
+      const centerY = window.innerHeight / 2;
+      const maxDistance = 400; // Maximum distance for scaling effect
+
+      itemRefs.current.forEach((element, index) => {
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        const itemY = rect.top + rect.height / 2;
+        const distanceFromCenter = Math.abs(centerY - itemY);
+
+        // Map distance to scale: 1.22 at center, 1.0 at maxDistance
+        const normalizedDistance = Math.min(1, distanceFromCenter / maxDistance);
+        const scale = 1.0 + (0.22 * (1 - normalizedDistance)); // 1.6 at center, 1.0 at maxDistance
+        
+        newScales.set(index, scale);
+      });
+
+      setItemScales(newScales);
+    };
+
+    // Initial check
+    handleScroll();
+
+    // Listen to scroll events
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
-    <section id="roadmap" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
+    <section ref={sectionRef} id="roadmap" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
       {/* Background image */}
       <div
         id="herobg"
@@ -282,6 +362,8 @@ export function RoadmapSection() {
                 const isActiv = item.status === 'activ';
                 const isDone = item.status === 'done';
 
+                const scale = itemScales.get(index) ?? 1.0;
+
                 return (
                   <AnimatedElement
                     key={`${item.date}-${item.title}`}
@@ -289,7 +371,18 @@ export function RoadmapSection() {
                     triggerImmediately={false}
                   >
                     <div
-                      className={`single-timeline flex items-center mb-[22px] ${isEven ? 'flex-row-reverse' : ''}`}
+                      ref={(el) => {
+                        if (el) {
+                          itemRefs.current.set(index, el);
+                        } else {
+                          itemRefs.current.delete(index);
+                        }
+                      }}
+                      className={`single-timeline flex items-center mb-[22px] transition-transform duration-300 ease-out ${isEven ? 'flex-row-reverse' : ''}`}
+                      style={{
+                        transform: `scale(${scale})`,
+                        transformOrigin: 'center center',
+                      }}
                     >
                       <div className="timeline-blank w-1/2"></div>
                       <div
@@ -339,7 +432,7 @@ export function RoadmapSection() {
                               {item.title}
                             </h6>
                           )}
-                          {item.description && <span> — {item.description}</span>}
+                          {item.description && <span> — {item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-[var(--color1)]" title={`Visit ${item.url}`}>{item.description}</a> : item.description}</span>}
                         </span>
                       </div>
                     </div>
