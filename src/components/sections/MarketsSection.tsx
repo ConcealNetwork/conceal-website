@@ -36,11 +36,11 @@ export function MarketsSection() {
             <Button
               variant="download"
               asChild
-              href="https://nonlogs.io/trade/CCX-BTC"
+              href="https://nonlogs.io/trade/CCX-USDT"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Nonlogs BTC/CCX
+              Nonlogs USDT/CCX
             </Button>
           </div>
         </div>
