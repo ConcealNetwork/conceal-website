@@ -108,6 +108,24 @@ export function MarketsSection() {
                 Bakeryswap
               </a>
             </Button>
+            <Button variant="download" asChild>
+              <a
+                href="https://www.mexc.com/dex/trade?pair_ca=0x523d5d8ae2f38dd2d8900eb195c132ff19bf6d18&chain_id=56&token_ca=0x988c11625472340b7b36ff1534893780e0d8d841"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MEXC DEX
+              </a>
+            </Button>
+            <Button variant="download" asChild>
+              <a
+                href="https://kyberswap.com/swap/bnb/-to-0x988c11625472340b7b36ff1534893780e0d8d841"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                KyberSwap
+              </a>
+            </Button>
           </div>
           <a
             href="https://conceal.network/community/#exchanges"
