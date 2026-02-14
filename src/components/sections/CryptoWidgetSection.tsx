@@ -1,27 +1,35 @@
 import { useEffect, useState } from 'react';
 import { appConfig } from '@/config/app.config';
 
-interface CoinGeckoPrice {
+interface PriceData {
   usd: number;
   usd_24h_change: number;
+  source: 'coingecko' | 'coinpaprika';
 }
 
 export function CryptoWidgetSection() {
-  const [price, setPrice] = useState<CoinGeckoPrice | null>(null);
+  const [price, setPrice] = useState<PriceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    // Fetch price from CoinGecko API
+    // Fetch price from CoinGecko API (primary) or CoinPaprika (fallback)
     const fetchPrice = async () => {
       try {
-        // Try common Conceal Network coin IDs
-        const coinIds = ['conceal-network', 'conceal', 'ccx'];
+        // Try CoinGecko first
+        const coinIds = ['conceal', 'conceal-network'];
+        let coingeckoSuccess = false;
 
         for (const coinId of coinIds) {
           try {
             const response = await fetch(
-              `https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd&include_24hr_change=true`
+              `https://api.coingecko.com/api/v3/simple/price?ids=${coinId}&vs_currencies=usd&include_24hr_change=true`,
+              {
+                mode: 'cors',
+                headers: {
+                  Accept: 'application/json',
+                },
+              }
             );
 
             if (response.ok) {
@@ -30,26 +38,58 @@ export function CryptoWidgetSection() {
                 setPrice({
                   usd: data[coinId].usd,
                   usd_24h_change: data[coinId].usd_24h_change || 0,
+                  source: 'coingecko',
+                });
+                setLoading(false);
+                setError(false);
+                coingeckoSuccess = true;
+                return;
+              }
+            } else if (response.status === 429) {
+              // Rate limited - will try fallback
+              console.warn('CoinGecko API rate limited, trying fallback...');
+              break;
+            }
+          } catch (err) {
+            // CORS or network error - will try fallback
+            console.warn(`CoinGecko failed for ${coinId}, trying fallback...`);
+          }
+        }
+
+        // If CoinGecko failed, try CoinPaprika as fallback
+        if (!coingeckoSuccess) {
+          try {
+            // CoinPaprika API - ticker ID is ccx-conceal
+            const response = await fetch('https://api.coinpaprika.com/v1/tickers/ccx-conceal', {
+              mode: 'cors',
+              headers: {
+                Accept: 'application/json',
+              },
+            });
+
+            if (response.ok) {
+              const data = await response.json();
+              if (data.quotes?.USD) {
+                setPrice({
+                  usd: data.quotes.USD.price,
+                  usd_24h_change: data.quotes.USD.percent_change_24h || 0,
+                  source: 'coinpaprika',
                 });
                 setLoading(false);
                 setError(false);
                 return;
               }
-            } else if (response.status === 429) {
-              // Rate limited - wait longer before retry
-              console.warn('CoinGecko API rate limited');
-              setError(true);
-              setLoading(false);
-              return;
             }
           } catch (err) {
-            console.error(`Error fetching price for ${coinId}:`, err);
+            console.error('CoinPaprika API failed:', err);
           }
         }
 
-        // If none worked, set error
-        setError(true);
-        setLoading(false);
+        // If both APIs failed, set error
+        if (!coingeckoSuccess) {
+          setError(true);
+          setLoading(false);
+        }
       } catch (err) {
         console.error('Error in fetchPrice:', err);
         setError(true);
@@ -132,14 +172,26 @@ export function CryptoWidgetSection() {
           </div>
           <div className="mt-4 text-[1.2rem] text-[#999] flex items-center justify-center gap-2">
             <span data-tkey="dataProvidedBy">Data provided by</span>
-            <a
-              href="https://www.coingecko.com/en/coins/conceal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:opacity-80 transition-opacity bg-[#444] rounded px-2 py-1"
-            >
-              <img src="/external/logo/coingecko-logo.svg" alt="CoinGecko" className="h-6" />
-            </a>
+            {price.source === 'coingecko' ? (
+              <a
+                href="https://www.coingecko.com/en/coins/conceal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:opacity-80 transition-opacity bg-[#444] rounded px-2 py-1"
+              >
+                <img src="/external/logo/coingecko-logo.svg" alt="CoinGecko" className="h-6" />
+              </a>
+            ) : (
+              <a
+                href="https://coinpaprika.com/coin/ccx-conceal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:opacity-80 transition-opacity bg-[#444] rounded px-2 py-1"
+              >
+                <img src="/external/logo/coinpaprika.ico" alt="CoinPaprika" className="h-6" />{' '}
+                <span className="text-white font-semibold">CoinPaprika</span>
+              </a>
+            )}
           </div>
         </div>
       </div>
