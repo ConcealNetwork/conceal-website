@@ -133,7 +133,7 @@ export function CryptoWidgetSection() {
           <div className="mt-4 text-[1.2rem] text-[#999] flex items-center justify-center gap-2">
             <span data-tkey="dataProvidedBy">Data provided by</span>
             <a
-              href="https://www.coingecko.com/en/coins/conceal-network"
+              href="https://www.coingecko.com/en/coins/conceal"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center hover:opacity-80 transition-opacity bg-[#444] rounded px-2 py-1"

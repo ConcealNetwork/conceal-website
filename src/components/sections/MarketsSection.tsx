@@ -5,7 +5,7 @@ const exchanges = [
   { label: 'nonKYC BTC/CCX', href: 'https://nonkyc.io/market/CCX_BTC' },
   { label: 'nonKYC USDT/CCX', href: 'https://nonkyc.io/market/CCX_USDT' },
   { label: 'Nonlogs USDT/CCX', href: 'https://nonlogs.io/trade/CCX-USDT' },
-  { label: 'AnonEx USDT/CCX', href: 'https://anonex.io/market/CCX_USDT' },
+//  { label: 'AnonEx USDT/CCX', href: 'https://anonex.io/market/CCX_USDT' },
 ];
 
 export function MarketsSection() {
