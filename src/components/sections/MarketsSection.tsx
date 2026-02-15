@@ -1,6 +1,13 @@
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
+const exchanges = [
+  { label: 'nonKYC BTC/CCX', href: 'https://nonkyc.io/market/CCX_BTC' },
+  { label: 'nonKYC USDT/CCX', href: 'https://nonkyc.io/market/CCX_USDT' },
+  { label: 'Nonlogs USDT/CCX', href: 'https://nonlogs.io/trade/CCX-USDT' },
+  //  { label: 'AnonEx USDT/CCX', href: 'https://anonex.io/market/CCX_USDT' },
+];
+
 export function MarketsSection() {
   return (
     <>
@@ -15,33 +22,18 @@ export function MarketsSection() {
         <div className="max-w-6xl mx-auto text-center">
           <SectionHeading subtitle={<span data-tkey="rBuyCCX">Buy CCX</span>} title="Markets" />
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="download"
-              asChild
-              href="https://nonkyc.io/market/CCX_BTC"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              nonKYC BTC/CCX
-            </Button>
-            <Button
-              variant="download"
-              asChild
-              href="https://nonkyc.io/market/CCX_USDT"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              nonKYC USDT/CCX
-            </Button>
-            <Button
-              variant="download"
-              asChild
-              href="https://nonlogs.io/trade/CCX-BTC"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Nonlogs BTC/CCX
-            </Button>
+            {exchanges.map((exchange) => (
+              <Button
+                key={exchange.href}
+                variant="download"
+                asChild
+                href={exchange.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {exchange.label}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
@@ -106,6 +98,24 @@ export function MarketsSection() {
                 rel="noopener noreferrer"
               >
                 Bakeryswap
+              </a>
+            </Button>
+            <Button variant="download" asChild>
+              <a
+                href="https://www.mexc.com/dex/trade?pair_ca=0x523d5d8ae2f38dd2d8900eb195c132ff19bf6d18&chain_id=56&token_ca=0x988c11625472340b7b36ff1534893780e0d8d841"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MEXC DEX
+              </a>
+            </Button>
+            <Button variant="download" asChild>
+              <a
+                href="https://kyberswap.com/swap/bnb/-to-0x988c11625472340b7b36ff1534893780e0d8d841"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                KyberSwap
               </a>
             </Button>
           </div>

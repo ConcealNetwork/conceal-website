@@ -209,14 +209,16 @@ const timelineItems: TimelineItem[] = [
   {
     date: 'Q4 2025',
     title: 'Conceal Labs',
-    description: 'Conceal Authenticator app is launched, your 2FA keys are now stored on the blockchain',
+    description:
+      'Conceal Authenticator app is launched, your 2FA keys are now stored on the blockchain',
     status: 'completed',
     url: 'https://f-droid.org/en/packages/com.acktarius.concealauthenticator/',
   },
   {
     date: 'Q1 2026',
     title: 'Conceal Labs',
-    description: 'Conceal-Faucet-API is launched, "one stop shop" for developpers to create faucet or game rewards',
+    description:
+      'Conceal-Faucet-API is launched, "one stop shop" for developpers to create faucet or game rewards',
     status: 'completed',
     url: 'https://github.com/ConcealNetwork/conceal-faucet-api',
   },
@@ -262,10 +264,10 @@ export function RoadmapSection() {
       if (!sectionRef.current) return;
 
       const sectionRect = sectionRef.current.getBoundingClientRect();
-      
+
       // Only apply effect if roadmap section is in viewport
       const isSectionVisible = sectionRect.bottom > 0 && sectionRect.top < window.innerHeight;
-      
+
       if (!isSectionVisible) {
         // Reset all scales if section is not visible
         const resetScales = new Map<number, number>();
@@ -289,8 +291,8 @@ export function RoadmapSection() {
 
         // Map distance to scale: 1.22 at center, 1.0 at maxDistance
         const normalizedDistance = Math.min(1, distanceFromCenter / maxDistance);
-        const scale = 1.0 + (0.22 * (1 - normalizedDistance)); // 1.6 at center, 1.0 at maxDistance
-        
+        const scale = 1.0 + 0.22 * (1 - normalizedDistance); // 1.6 at center, 1.0 at maxDistance
+
         newScales.set(index, scale);
       });
 
@@ -311,7 +313,11 @@ export function RoadmapSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="roadmap" className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative">
+    <section
+      ref={sectionRef}
+      id="roadmap"
+      className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
+    >
       {/* Background image */}
       <div
         id="herobg"
@@ -432,7 +438,25 @@ export function RoadmapSection() {
                               {item.title}
                             </h6>
                           )}
-                          {item.description && <span> — {item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-[var(--color1)]" title={`Visit ${item.url}`}>{item.description}</a> : item.description}</span>}
+                          {item.description && (
+                            <span>
+                              {' '}
+                              —{' '}
+                              {item.url ? (
+                                <a
+                                  href={item.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-inherit hover:text-[var(--color1)]"
+                                  title={`Visit ${item.url}`}
+                                >
+                                  {item.description}
+                                </a>
+                              ) : (
+                                item.description
+                              )}
+                            </span>
+                          )}
                         </span>
                       </div>
                     </div>

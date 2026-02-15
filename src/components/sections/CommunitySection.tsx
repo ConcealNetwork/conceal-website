@@ -78,6 +78,7 @@ const exchangesData: ColumnData = {
   items: [
     { label: 'nonKYC CCX/BTC', url: 'https://nonkyc.io/market/CCX_BTC' },
     { label: 'nonKYC CCX/USDT', url: 'https://nonkyc.io/market/CCX_USDT' },
+    { label: 'nonlogs CCX/USDT', url: 'https://nonlogs.io/trade/CCX-USDT' },
   ],
 };
 
@@ -126,6 +127,14 @@ const bscData: ColumnData = {
     {
       label: 'PancakeSwap - wCCX/USDT',
       url: 'https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x988c11625472340b7b36ff1534893780e0d8d841',
+    },
+    {
+      label: 'MEXC DEX - wCCX/BNB',
+      url: 'https://www.mexc.com/dex/trade?pair_ca=0x523d5d8ae2f38dd2d8900eb195c132ff19bf6d18&chain_id=56&token_ca=0x988c11625472340b7b36ff1534893780e0d8d841',
+    },
+    {
+      label: 'KyberSwap - wCCX/BNB',
+      url: 'https://kyberswap.com/swap/bnb/-to-0x988c11625472340b7b36ff1534893780e0d8d841',
     },
   ],
 };

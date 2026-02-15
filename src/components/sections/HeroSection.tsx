@@ -56,16 +56,16 @@ export function HeroSection({ onMount }: HeroSectionProps) {
           {/* Call-to-action buttons */}
           <div className="flex flex-wrap justify-center gap-8 md:gap-18 mb-12">
             <Button variant="primary" asChild href="/#wallets" size="default">
-              <a href="/#wallets">
+              <>
                 <i className="fas fa-wallet text-3xl mr-2"></i>
                 <span className="text-1.1xl md:text-1.2xl">Get Started</span>
-              </a>
+              </>
             </Button>
             <Button variant="primary" targetId="features" asChild href="/#features" size="default">
-              <a href="/#features">
+              <>
                 <i className="fas fa-info-circle text-3xl mr-2"></i>
                 <span className="text-1.1xl md:text-1.2xl">Learn More</span>
-              </a>
+              </>
             </Button>
           </div>
         </div>
