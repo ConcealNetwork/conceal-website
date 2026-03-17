@@ -1,4 +1,11 @@
-import { type AnchorHTMLAttributes, type ButtonHTMLAttributes, forwardRef } from 'react';
+import {
+  type AnchorHTMLAttributes,
+  type ButtonHTMLAttributes,
+  cloneElement,
+  forwardRef,
+  isValidElement,
+  type ReactElement,
+} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
@@ -145,17 +152,52 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
 
     if (props.asChild) {
       const { asChild: _asChild, ...anchorProps } = props as ButtonAsAnchorProps;
-      return (
-        <a
-          ref={ref as React.ForwardedRef<HTMLAnchorElement>}
-          className={baseClasses}
-          href={variant === 'slideToId' && targetId ? `#${targetId}` : anchorProps.href}
-          onClick={handleClick}
-          {...anchorProps}
-        >
-          {children}
-        </a>
-      );
+      const child = isValidElement(children)
+        ? (children as ReactElement<Record<string, unknown>>)
+        : null;
+      // Only merge into the child if it's a real DOM element (e.g. <a>). Fragments and components cannot receive href.
+      const isMergeable = child && typeof child.type === 'string' && child.type === 'a';
+      if (!child || !isMergeable) {
+        return (
+          <a
+            ref={ref as React.ForwardedRef<HTMLAnchorElement>}
+            className={baseClasses}
+            href={
+              variant === 'slideToId' && targetId
+                ? `#${targetId}`
+                : (anchorProps as AnchorHTMLAttributes<HTMLAnchorElement>).href
+            }
+            onClick={handleClick}
+            {...anchorProps}
+          >
+            {children}
+          </a>
+        );
+      }
+      const mergedProps = {
+        ...anchorProps,
+        ...child.props,
+        className: cn(baseClasses, (child.props as { className?: string }).className),
+        onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+          handleClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>);
+          typeof child.props.onClick === 'function' &&
+            (child.props.onClick as (e: React.MouseEvent<HTMLAnchorElement>) => void)(e);
+        },
+        ref: (node: HTMLAnchorElement | null) => {
+          if (typeof ref === 'function') ref(node);
+          else if (ref && 'current' in ref)
+            (ref as React.MutableRefObject<HTMLAnchorElement | null>).current = node;
+          const childRef = (
+            child as ReactElement<{ ref?: React.Ref<HTMLAnchorElement> }> & {
+              ref?: React.Ref<HTMLAnchorElement>;
+            }
+          ).ref;
+          if (typeof childRef === 'function') childRef(node);
+          else if (childRef && typeof childRef === 'object' && 'current' in childRef)
+            (childRef as React.MutableRefObject<HTMLAnchorElement | null>).current = node;
+        },
+      };
+      return cloneElement(child, mergedProps);
     }
 
     const { asChild: _asChild, ...buttonProps } = props as ButtonAsButtonProps;

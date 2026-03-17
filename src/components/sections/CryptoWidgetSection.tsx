@@ -52,7 +52,7 @@ export function CryptoWidgetSection() {
             }
           } catch (err) {
             // CORS or network error - will try fallback
-            console.warn(`CoinGecko failed for ${coinId}, trying fallback...`);
+            console.warn(`CoinGecko failed for ${coinId}, trying fallback...`, err);
           }
         }
 

@@ -127,7 +127,6 @@ function ProjectCard({ project }: { project: LabProject }) {
         return 'fas fa-file-pdf';
       case 'wiki':
         return 'fab fa-wikipedia-w';
-      case null:
       default:
         return 'fas fa-file';
     }
