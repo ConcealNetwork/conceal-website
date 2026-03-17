@@ -83,72 +83,31 @@ const labsProjects: LabProject[] = [
   },
 ];
 
-function ProjectCard({ project }: { project: LabProject }) {
-  // Generate image paths from folder
-  const imagePattern = project.imagePattern || 'assistant';
-  const imageCount = project.imageCount || 5;
-  const imageExtension = project.imageExtension || 'png';
-  const carouselImages = loadImagesWithPattern(
-    project.linktoscreenshotfolder,
-    imagePattern,
-    imageCount,
-    imageExtension
-  );
+const LINK_CLASS = 'text-[var(--color1)] hover:underline';
 
-  // Split description by newlines
-  const descriptionParagraphs = project.description.split('\n').filter((p) => p.trim());
+function getDownloadIcon(type: DownloadType): string {
+  if (type === 'deb') return 'fab fa-ubuntu';
+  if (type === 'exe') return 'fab fa-windows';
+  if (type === 'dmg' || type === 'app' || type === 'apple-store') return 'fab fa-apple';
+  if (type === 'apk' || type === 'f-droid') return 'fab fa-android';
+  if (type === 'zip') return 'fas fa-file-zipper';
+  return 'fas fa-download';
+}
 
-  // Get appropriate icon for download type
-  const getDownloadIcon = (downloadType: DownloadType): string => {
-    switch (downloadType) {
-      case 'zip':
-        return 'fas fa-file-zipper';
-      case 'apk':
-        return 'fab fa-android';
-      case 'f-droid':
-        return 'fab fa-android';
-      case 'deb':
-        return 'fab fa-ubuntu';
-      case 'exe':
-        return 'fab fa-windows';
-      case 'dmg':
-      case 'app':
-      case 'apple-store':
-        return 'fab fa-apple';
-      default:
-        return 'fas fa-download';
-    }
-  };
+function getDocumentIcon(type: LabProject['documenttype']): string {
+  if (type === 'pdf') return 'fas fa-file-pdf';
+  if (type === 'wiki') return 'fab fa-wikipedia-w';
+  return 'fas fa-file';
+}
 
-  // Get appropriate icon for document type
-  const getDocumentIcon = (documentType: LabProject['documenttype']): string => {
-    switch (documentType) {
-      case 'pdf':
-        return 'fas fa-file-pdf';
-      case 'wiki':
-        return 'fab fa-wikipedia-w';
-      default:
-        return 'fas fa-file';
-    }
-  };
-
+function ProjectLinks({ project }: { project: LabProject }) {
   return (
-    <div id={project.id} className="mb-16 scroll-mt-24">
-      <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <h1 className="text-[4rem] uppercase text-[var(--color1)] mb-6">{project.title}</h1>
-      </AnimatedElement>
-
-      {descriptionParagraphs.map((paragraph) => (
-        <AnimatedElement key={paragraph} types={['fadeIn']} triggerImmediately={false}>
-          <p className="text-[1.7rem] text-[#757575] mb-4">{paragraph}</p>
-        </AnimatedElement>
-      ))}
-
+    <>
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <p className="text-[1.7rem] text-[#757575] mb-4">
           <a
             href={project.projecturl}
-            className="text-[var(--color1)] hover:underline"
+            className={LINK_CLASS}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -157,13 +116,12 @@ function ProjectCard({ project }: { project: LabProject }) {
           </a>
         </p>
       </AnimatedElement>
-
       {project.documentlink && project.labeltodocument && (
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575] mb-6">
             <a
               href={project.documentlink}
-              className="text-[var(--color1)] hover:underline"
+              className={LINK_CLASS}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -177,15 +135,10 @@ function ProjectCard({ project }: { project: LabProject }) {
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575] mb-6">
             {project.labelToDownload}{' '}
-            {project.downloads.map(([url, type], index) => (
+            {project.downloads.map(([url, type], i) => (
               <span key={`${url}-${type}`}>
-                {index > 0 && ' - '}
-                <a
-                  href={url}
-                  className="text-[var(--color1)] hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                {i > 0 && ' - '}
+                <a href={url} className={LINK_CLASS} target="_blank" rel="noopener noreferrer">
                   <i className={`${getDownloadIcon(type)} mr-1`}></i>
                   {type}
                 </a>
@@ -194,11 +147,34 @@ function ProjectCard({ project }: { project: LabProject }) {
           </p>
         </AnimatedElement>
       )}
+    </>
+  );
+}
 
+function ProjectCard({ project }: { project: LabProject }) {
+  const carouselImages = loadImagesWithPattern(
+    project.linktoscreenshotfolder,
+    project.imagePattern || 'assistant',
+    project.imageCount || 5,
+    project.imageExtension || 'png'
+  );
+  return (
+    <div id={project.id} className="mb-16 scroll-mt-24">
+      <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+        <h1 className="text-[4rem] uppercase text-[var(--color1)] mb-6">{project.title}</h1>
+      </AnimatedElement>
+      {project.description
+        .split('\n')
+        .filter((p) => p.trim())
+        .map((paragraph) => (
+          <AnimatedElement key={paragraph} types={['fadeIn']} triggerImmediately={false}>
+            <p className="text-[1.7rem] text-[#757575] mb-4">{paragraph}</p>
+          </AnimatedElement>
+        ))}
+      <ProjectLinks project={project} />
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <h3 className="text-2xl uppercase text-[var(--color1)] mb-6">How it looks...</h3>
       </AnimatedElement>
-
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
         <Carousel images={carouselImages} altPrefix={project.title} className="max-w-4xl mx-auto" />
       </AnimatedElement>

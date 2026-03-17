@@ -78,16 +78,15 @@ function ManifestoText({ content }: { content: string }) {
         const parts = line.split(/(\*\*[^*]+\*\*)/g);
         return (
           <p key={line} className="text-[1.7rem] text-[#757575] mb-4">
-            {parts.map((part) => {
-              if (part.startsWith('**') && part.endsWith('**')) {
-                return (
-                  <strong key={part} className="text-white font-semibold">
-                    {part.slice(2, -2)}
-                  </strong>
-                );
-              }
-              return <span key={part}>{part}</span>;
-            })}
+            {parts.map((part) =>
+              part.startsWith('**') && part.endsWith('**') ? (
+                <strong key={part} className="text-white font-semibold">
+                  {part.slice(2, -2)}
+                </strong>
+              ) : (
+                part
+              )
+            )}
           </p>
         );
       })

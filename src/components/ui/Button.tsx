@@ -10,12 +10,45 @@ import { useNavigate } from 'react-router-dom';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
 
+function scrollToElement(targetId: string, scrollOffset: number) {
+  const maxAttempts = 10;
+  let attempts = 0;
+  const tryScroll = () => {
+    attempts++;
+    const el = document.getElementById(targetId);
+    if (el) {
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: el.getBoundingClientRect().top + window.pageYOffset - scrollOffset,
+          behavior: 'smooth',
+        });
+      });
+    } else if (attempts < maxAttempts) {
+      setTimeout(tryScroll, appConfig.animations.scrollRetryDelay);
+    }
+  };
+  setTimeout(tryScroll, appConfig.animations.scrollRetryDelayButton);
+}
+
+function mergeRefs<T>(
+  outer: React.ForwardedRef<T>,
+  inner: React.Ref<T> | undefined
+): (node: T | null) => void {
+  return (node) => {
+    if (typeof outer === 'function') outer(node);
+    else if (outer) (outer as React.RefObject<T | null>).current = node;
+    if (typeof inner === 'function') inner(node);
+    else if (inner && typeof inner === 'object' && 'current' in inner)
+      (inner as React.RefObject<T | null>).current = node;
+  };
+}
+
 interface BaseButtonProps {
   variant?: 'primary' | 'stroke' | 'default' | 'download' | 'slide' | 'slideToId';
   size?: 'default' | 'medium' | 'large';
   fullWidth?: boolean;
-  targetId?: string; // For slideToId variant - the ID to scroll to
-  scrollOffset?: number; // Offset for scroll (default: 100 for header)
+  targetId?: string;
+  scrollOffset?: number;
 }
 
 interface ButtonAsButtonProps extends BaseButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
@@ -27,6 +60,95 @@ interface ButtonAsAnchorProps extends BaseButtonProps, AnchorHTMLAttributes<HTML
 }
 
 type ButtonProps = ButtonAsButtonProps | ButtonAsAnchorProps;
+
+const SLIDE_CLASSES =
+  'button-slide bg-transparent text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl';
+const FILLED_CLASSES =
+  'bg-black text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl hover:bg-[var(--color1)] hover:text-black hover:border-2 hover:border-white';
+
+function buildBaseClasses(
+  variant: string,
+  size: string,
+  fullWidth: boolean | undefined,
+  className: string | undefined
+): string {
+  return cn(
+    'inline-flex font-sans text-sm uppercase tracking-wider h-[5.4rem] leading-[5rem] px-[3rem] cursor-pointer transition-all duration-300 ease-in-out border-2 border-[#c5c5c5] items-center',
+    variant === 'primary' && FILLED_CLASSES,
+    variant === 'download' && FILLED_CLASSES,
+    variant === 'stroke' &&
+      'bg-transparent border-2 border-[var(--color1)] text-white rounded-[10px] hover:border-white hover:bg-[var(--color1)]',
+    variant === 'default' && 'bg-transparent text-white hover:bg-[#b8b8b8] hover:border-[#b8b8b8]',
+    variant === 'slide' && SLIDE_CLASSES,
+    variant === 'slideToId' && SLIDE_CLASSES,
+    size === 'medium' && 'h-[5.7rem] leading-[5.3rem]',
+    size === 'large' && 'h-[6rem] leading-[5.6rem]',
+    fullWidth && 'w-full',
+    className
+  );
+}
+
+const SLIDE_TO_ID_ROUTES: Record<string, string> = {
+  about: '/about',
+  labsHeading: '/labs',
+  labs: '/labs',
+};
+
+type ClickHandler = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
+
+interface RenderAsChildOptions {
+  anchorProps: Omit<ButtonAsAnchorProps, 'asChild'>;
+  ref: React.ForwardedRef<HTMLButtonElement | HTMLAnchorElement>;
+  baseClasses: string;
+  handleClick: ClickHandler;
+  children: React.ReactNode;
+  variant: string;
+  targetId: string | undefined;
+}
+
+function renderAsChild({
+  anchorProps,
+  ref,
+  baseClasses,
+  handleClick,
+  children,
+  variant,
+  targetId,
+}: RenderAsChildOptions) {
+  const child = isValidElement(children)
+    ? (children as ReactElement<Record<string, unknown>>)
+    : null;
+  const isMergeable = child && typeof child.type === 'string' && child.type === 'a';
+  if (!(child && isMergeable)) {
+    return (
+      <a
+        ref={ref as React.ForwardedRef<HTMLAnchorElement>}
+        className={baseClasses}
+        href={
+          variant === 'slideToId' && targetId
+            ? `#${targetId}`
+            : (anchorProps as AnchorHTMLAttributes<HTMLAnchorElement>).href
+        }
+        onClick={handleClick}
+        {...anchorProps}
+      >
+        {children}
+      </a>
+    );
+  }
+  const childRef = (child as unknown as { ref?: React.Ref<HTMLAnchorElement> }).ref;
+  return cloneElement(child, {
+    ...anchorProps,
+    ...child.props,
+    className: cn(baseClasses, (child.props as { className?: string }).className),
+    onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+      handleClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>);
+      if (typeof child.props.onClick === 'function')
+        (child.props.onClick as (e: React.MouseEvent<HTMLAnchorElement>) => void)(e);
+    },
+    ref: mergeRefs<HTMLAnchorElement>(ref as React.ForwardedRef<HTMLAnchorElement>, childRef),
+  });
+}
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   (
@@ -43,161 +165,33 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
     ref
   ) => {
     const navigate = useNavigate();
-    const baseClasses = cn(
-      // Base styles from main.css
-      'inline-flex font-sans text-sm uppercase tracking-wider',
-      'h-[5.4rem] leading-[5rem] px-[3rem] cursor-pointer',
-      'transition-all duration-300 ease-in-out',
-      'border-2 border-[#c5c5c5]',
-      'items-center',
+    const baseClasses = buildBaseClasses(variant, size, fullWidth, className);
 
-      // Variants
-      variant === 'primary' && [
-        'bg-black text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
-        'hover:bg-[var(--color1)] hover:text-black hover:border-2 hover:border-white',
-      ],
-      variant === 'stroke' && [
-        'bg-transparent border-2 border-[var(--color1)] text-white rounded-[10px]',
-        'hover:border-white hover:bg-[var(--color1)]',
-      ],
-      variant === 'default' && [
-        'bg-transparent text-white',
-        'hover:bg-[#b8b8b8] hover:border-[#b8b8b8]',
-      ],
-      variant === 'download' && [
-        'bg-black text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
-        'hover:bg-[var(--color1)] hover:text-black hover:border-2 hover:border-white',
-      ],
-      variant === 'slide' && [
-        'button-slide bg-transparent text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
-      ],
-      variant === 'slideToId' && [
-        'button-slide bg-transparent text-white border border-[var(--color1)] rounded-[0.5rem] text-2xl',
-      ],
-
-      // Sizes
-      size === 'medium' && 'h-[5.7rem] leading-[5.3rem]',
-      size === 'large' && 'h-[6rem] leading-[5.6rem]',
-
-      // Full width
-      fullWidth && 'w-full',
-
-      className
-    );
-
-    // Handle scroll-to-id functionality
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    const handleClick: ClickHandler = (e) => {
       if (variant === 'slideToId' && targetId) {
         e.preventDefault();
-
-        // Check if element exists on current page
-        const element = document.getElementById(targetId);
-
-        if (element) {
-          // Element exists on current page, scroll to it
-          const maxAttempts = 10;
-          let attempts = 0;
-
-          const tryScroll = () => {
-            attempts++;
-            const el = document.getElementById(targetId);
-            if (el) {
-              requestAnimationFrame(() => {
-                const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({
-                  top: elementTop - scrollOffset,
-                  behavior: 'smooth',
-                });
-              });
-            } else if (attempts < maxAttempts) {
-              setTimeout(tryScroll, appConfig.animations.scrollRetryDelay);
-            }
-          };
-
-          setTimeout(tryScroll, appConfig.animations.scrollRetryDelayButton);
-        } else {
-          // Element not on current page - navigate to appropriate page
-          // Map of targetIds to their page routes
-          const targetIdToRoute: { [key: string]: string } = {
-            about: '/about',
-            labsHeading: '/labs',
-            labs: '/labs',
-            // Add more mappings as needed
-          };
-
-          const targetRoute = targetIdToRoute[targetId] || '/about'; // Default to /about for unknown IDs
-
-          // Navigate to the page with hash in state
-          navigate(targetRoute, {
+        if (document.getElementById(targetId)) scrollToElement(targetId, scrollOffset);
+        else
+          navigate(SLIDE_TO_ID_ROUTES[targetId] ?? '/about', {
             state: { scrollToHash: `#${targetId}`, scrollOffset },
             replace: false,
           });
-        }
       }
-
-      // Call original onClick if provided
-      if (props.onClick) {
-        // Type assertion is safe: handleClick receives union event type compatible with both button and anchor handlers
-        if (props.asChild) {
-          (props.onClick as React.MouseEventHandler<HTMLAnchorElement>)(
-            e as React.MouseEvent<HTMLAnchorElement>
-          );
-        } else {
-          (props.onClick as React.MouseEventHandler<HTMLButtonElement>)(
-            e as React.MouseEvent<HTMLButtonElement>
-          );
-        }
-      }
+      if (props.onClick)
+        (props.onClick as React.MouseEventHandler<HTMLElement>)(e as React.MouseEvent<HTMLElement>);
     };
 
     if (props.asChild) {
       const { asChild: _asChild, ...anchorProps } = props as ButtonAsAnchorProps;
-      const child = isValidElement(children)
-        ? (children as ReactElement<Record<string, unknown>>)
-        : null;
-      // Only merge into the child if it's a real DOM element (e.g. <a>). Fragments and components cannot receive href.
-      const isMergeable = child && typeof child.type === 'string' && child.type === 'a';
-      if (!child || !isMergeable) {
-        return (
-          <a
-            ref={ref as React.ForwardedRef<HTMLAnchorElement>}
-            className={baseClasses}
-            href={
-              variant === 'slideToId' && targetId
-                ? `#${targetId}`
-                : (anchorProps as AnchorHTMLAttributes<HTMLAnchorElement>).href
-            }
-            onClick={handleClick}
-            {...anchorProps}
-          >
-            {children}
-          </a>
-        );
-      }
-      const mergedProps = {
-        ...anchorProps,
-        ...child.props,
-        className: cn(baseClasses, (child.props as { className?: string }).className),
-        onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
-          handleClick(e as React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>);
-          typeof child.props.onClick === 'function' &&
-            (child.props.onClick as (e: React.MouseEvent<HTMLAnchorElement>) => void)(e);
-        },
-        ref: (node: HTMLAnchorElement | null) => {
-          if (typeof ref === 'function') ref(node);
-          else if (ref && 'current' in ref)
-            (ref as React.MutableRefObject<HTMLAnchorElement | null>).current = node;
-          const childRef = (
-            child as ReactElement<{ ref?: React.Ref<HTMLAnchorElement> }> & {
-              ref?: React.Ref<HTMLAnchorElement>;
-            }
-          ).ref;
-          if (typeof childRef === 'function') childRef(node);
-          else if (childRef && typeof childRef === 'object' && 'current' in childRef)
-            (childRef as React.MutableRefObject<HTMLAnchorElement | null>).current = node;
-        },
-      };
-      return cloneElement(child, mergedProps);
+      return renderAsChild({
+        anchorProps,
+        ref,
+        baseClasses,
+        handleClick,
+        children,
+        variant,
+        targetId,
+      });
     }
 
     const { asChild: _asChild, ...buttonProps } = props as ButtonAsButtonProps;

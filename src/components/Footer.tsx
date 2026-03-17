@@ -164,34 +164,27 @@ function FooterColumn({ data }: { data: ColumnData }) {
   );
 }
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
+function isPageAtBottom(margin = 10) {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  return (window.pageYOffset || scrollTop) + clientHeight >= scrollHeight - margin;
+}
+
+function useFooterState() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPulling, setIsPulling] = useState(false);
   const [pullDistance, setPullDistance] = useState(0);
   const footerRef = useRef<HTMLElement>(null);
-  const startYRef = useRef<number>(0);
-  const lastScrollTopRef = useRef<number>(0);
+  const startYRef = useRef(0);
+  const lastScrollTopRef = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10;
-
-      // Auto-expand when scrolled to bottom
-      if (isAtBottom && !isExpanded) {
-        setIsExpanded(true);
-      }
-      // Auto-collapse when scrolling up (if not at bottom)
-      else if (!isAtBottom && scrollTop < lastScrollTopRef.current && isExpanded) {
+      if (isPageAtBottom() && !isExpanded) setIsExpanded(true);
+      else if (!isPageAtBottom() && scrollTop < lastScrollTopRef.current && isExpanded)
         setIsExpanded(false);
-      }
-
       lastScrollTopRef.current = scrollTop;
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isExpanded]);
@@ -199,50 +192,44 @@ export function Footer() {
   useEffect(() => {
     const footer = footerRef.current;
     if (!footer) return;
-
-    const handleTouchStart = (e: TouchEvent) => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
-      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 50;
-
-      if (isAtBottom) {
+    const onTouchStart = (e: TouchEvent) => {
+      if (isPageAtBottom(50)) {
         startYRef.current = e.touches[0].clientY;
         setIsPulling(true);
       }
     };
-
-    const handleTouchMove = (e: TouchEvent) => {
+    const onTouchMove = (e: TouchEvent) => {
       if (!isPulling) return;
-
-      const currentY = e.touches[0].clientY;
-      const distance = Math.max(0, currentY - startYRef.current);
-      setPullDistance(Math.min(distance, 150)); // Max pull distance
-
+      const distance = Math.max(0, e.touches[0].clientY - startYRef.current);
+      setPullDistance(Math.min(distance, 150));
       if (distance > 50 && !isExpanded) {
         setIsExpanded(true);
         setIsPulling(false);
         setPullDistance(0);
       }
     };
-
-    const handleTouchEnd = () => {
+    const onTouchEnd = () => {
       if (isPulling) {
         setIsPulling(false);
         setPullDistance(0);
       }
     };
-
-    footer.addEventListener('touchstart', handleTouchStart);
-    footer.addEventListener('touchmove', handleTouchMove);
-    footer.addEventListener('touchend', handleTouchEnd);
-
+    footer.addEventListener('touchstart', onTouchStart);
+    footer.addEventListener('touchmove', onTouchMove);
+    footer.addEventListener('touchend', onTouchEnd);
     return () => {
-      footer.removeEventListener('touchstart', handleTouchStart);
-      footer.removeEventListener('touchmove', handleTouchMove);
-      footer.removeEventListener('touchend', handleTouchEnd);
+      footer.removeEventListener('touchstart', onTouchStart);
+      footer.removeEventListener('touchmove', onTouchMove);
+      footer.removeEventListener('touchend', onTouchEnd);
     };
   }, [isPulling, isExpanded]);
+
+  return { isExpanded, isPulling, pullDistance, footerRef };
+}
+
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+  const { isExpanded, isPulling, pullDistance, footerRef } = useFooterState();
 
   return (
     <footer

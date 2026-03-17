@@ -6,51 +6,45 @@ interface CarouselProps {
   className?: string;
 }
 
+function CarouselSlide({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div
+      className="flex-shrink-0 flex items-center justify-center"
+      style={{ width: '100%', minWidth: '100%' }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="max-w-full max-h-[600px] w-auto h-auto object-contain block"
+        loading="lazy"
+        onError={(e) => {
+          console.error('Failed to load image:', src);
+          const target = e.target as HTMLImageElement;
+          target.style.display = 'none';
+          if (target.parentElement) {
+            target.parentElement.innerHTML = `<div class="text-white text-center p-8">Image failed to load: ${src}</div>`;
+          }
+        }}
+        onLoad={() => console.log('Image loaded successfully:', src)}
+      />
+    </div>
+  );
+}
+
 export function Carousel({ images, altPrefix = 'Image', className = '' }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const goToPrevious = () => {
-    setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  const goToPrevious = () => setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const goToNext = () => setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
     <div className={`relative w-full ${className}`}>
-      {/* Carousel Inner */}
       <div className="relative overflow-hidden rounded-lg w-full" style={{ minHeight: '400px' }}>
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(calc(-${activeIndex} * 100%))`,
-          }}
+          style={{ transform: `translateX(calc(-${activeIndex} * 100%))` }}
         >
           {images.map((image, index) => (
-            <div
-              key={image}
-              className="flex-shrink-0 flex items-center justify-center"
-              style={{ width: '100%', minWidth: '100%' }}
-            >
-              <img
-                src={image}
-                alt={`${altPrefix} ${index + 1}`}
-                className="max-w-full max-h-[600px] w-auto h-auto object-contain block"
-                loading="lazy"
-                onError={(e) => {
-                  console.error('Failed to load image:', image);
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  if (target.parentElement) {
-                    target.parentElement.innerHTML = `<div class="text-white text-center p-8">Image failed to load: ${image}</div>`;
-                  }
-                }}
-                onLoad={() => {
-                  console.log('Image loaded successfully:', image);
-                }}
-              />
-            </div>
+            <CarouselSlide key={image} src={image} alt={`${altPrefix} ${index + 1}`} />
           ))}
         </div>
       </div>

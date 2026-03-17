@@ -19,102 +19,61 @@ interface AppProps {
   onReady?: () => void;
 }
 
-function App({ onReady }: AppProps) {
-  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
-  const heroSectionRef = useRef<HTMLElement | null>(null);
-  const location = useLocation();
+const doubleRAF = (cb: () => void) => requestAnimationFrame(() => requestAnimationFrame(cb));
 
+function scrollToWithOffset(element: Element) {
+  const top = element.getBoundingClientRect().top + window.pageYOffset - 100;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
+function useHeroScroll(heroRef: React.RefObject<HTMLElement | null>) {
+  const [isPast, setIsPast] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
-      if (heroSectionRef.current) {
-        const heroBottom = heroSectionRef.current.offsetTop + heroSectionRef.current.offsetHeight;
-        const scrollY = window.scrollY;
-        setIsScrolledPastHero(scrollY > heroBottom);
-      }
+    const check = () => {
+      if (!heroRef.current) return;
+      setIsPast(window.scrollY > heroRef.current.offsetTop + heroRef.current.offsetHeight);
     };
+    window.addEventListener('scroll', check);
+    check();
+    return () => window.removeEventListener('scroll', check);
+  }, [heroRef]);
+  return isPast;
+}
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial state
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Handle hash scrolling from navigation state and URL hash
+function useHashScroll(location: ReturnType<typeof useLocation>) {
   useEffect(() => {
-    // Only handle on main page
     if (location.pathname !== '/') return;
-
-    // Check both navigation state and URL hash
     const state = location.state as { scrollToHash?: string } | null;
-    const hashFromState = state?.scrollToHash;
-    const hashFromUrl = location.hash;
-
-    // Also check window.location.hash as fallback (for direct navigation)
-    const hashFromWindow = window.location.hash;
-
-    const hash = hashFromState || hashFromUrl || hashFromWindow;
+    const hash = state?.scrollToHash || location.hash || window.location.hash;
     if (!hash) return;
-
-    // Remove # if present and ensure it starts with #
     const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
-
-    // Helper function to scroll to element with offset
-    const scrollToElement = (element: Element) => {
-      const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-      const offset = 100; // Offset for header
-      window.scrollTo({
-        top: elementTop - offset,
-        behavior: 'smooth',
-      });
-    };
-
-    // Helper function to execute after double RAF (ensures DOM is painted)
-    const executeAfterDoubleRAF = (callback: () => void) => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(callback);
-      });
-    };
-
-    // Robust scrolling: retry until element exists or timeout
-    const maxAttempts = 50; // Increased attempts for slower renders
     let attempts = 0;
-
     const tryScroll = () => {
       attempts++;
-      const element = document.querySelector(cleanHash);
-
-      if (element) {
-        // Element found, scroll to it with slight offset for header
-        executeAfterDoubleRAF(() => scrollToElement(element));
+      const el = document.querySelector(cleanHash);
+      if (el) {
+        doubleRAF(() => scrollToWithOffset(el));
         return;
       }
-
-      // Element not found yet, retry after a short delay
-      if (attempts < maxAttempts) {
-        setTimeout(tryScroll, appConfig.animations.scrollRetryDelayCrossPage);
-      }
+      if (attempts < 50) setTimeout(tryScroll, appConfig.animations.scrollRetryDelayCrossPage);
     };
-
-    // Start trying after a delay to allow DOM to render (longer delay for cross-page navigation)
     setTimeout(tryScroll, appConfig.animations.scrollInitialDelayCrossPage);
   }, [location.state, location.hash, location.pathname]);
+}
 
-  // Signal that App is ready (after initial render)
+function useAppReady(onReady?: () => void) {
   useEffect(() => {
     if (!onReady) return;
-
-    // Helper function to execute after double RAF (ensures DOM is painted)
-    const executeAfterDoubleRAF = (callback: () => void) => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(callback);
-      });
-    };
-
-    // Use requestAnimationFrame to ensure DOM is painted
-    executeAfterDoubleRAF(onReady);
+    doubleRAF(onReady);
   }, [onReady]);
+}
+
+function App({ onReady }: AppProps) {
+  const heroSectionRef = useRef<HTMLElement | null>(null);
+  const location = useLocation();
+  const isScrolledPastHero = useHeroScroll(heroSectionRef);
+  useHashScroll(location);
+  useAppReady(onReady);
 
   return (
     <div
