@@ -4,6 +4,8 @@ import { Button } from '../ui/Button';
 import { Carousel } from '../ui/Carousel';
 import { SectionHeading } from '../ui/SectionHeading';
 
+type DownloadType = 'zip' | 'deb' | 'exe' | 'dmg' | 'app' | 'apk' | 'f-droid' | 'apple-store';
+
 interface LabProject {
   id: string;
   title: string;
@@ -11,8 +13,8 @@ interface LabProject {
   labeltolink: string;
   projecturl: string;
   labelToDownload: string | null;
-  downloadurl: string | null;
-  downloadtype: 'zip' | 'deb' | 'exe' | 'dmg' | 'app' | 'apk' | 'f-droid' | null;
+  /** List of [url, type] e.g. [['https://...', 'apk'], ['https://...', 'f-droid']] */
+  downloads: [string, DownloadType][] | null;
   labeltodocument: string | null;
   documentlink: string | null;
   documenttype: 'pdf' | 'wiki' | null;
@@ -30,9 +32,12 @@ const labsProjects: LabProject[] = [
       'Conceal-Authenticator is a secure 2FA (Two-Factor Authentication) app that leverages the Conceal Network blockchain to securely backup your 2FA shared keys using a built-in lite wallet.',
     labeltolink: 'Visit the github repository for more info and direct apk download.',
     projecturl: 'https://github.com/Acktarius/Conceal-2fa-app/',
-    labelToDownload: 'Download Conceal-Authenticator from F-Droid store',
-    downloadurl: 'https://f-droid.org/en/packages/com.acktarius.concealauthenticator/',
-    downloadtype: 'f-droid',
+    labelToDownload: 'Download Conceal-Authenticator',
+    downloads: [
+      ['https://f-droid.org/en/packages/com.acktarius.concealauthenticator/', 'f-droid'],
+      ['https://github.com/Acktarius/Conceal-2fa-app/releases/tag/v1.1.3', 'apk'],
+      ['https://apps.apple.com/us/app/conceal-authenticator/id6754612226', 'apple-store'],
+    ],
     labeltodocument: 'More information about the app in the wiki page.',
     documentlink: 'https://github.com/Acktarius/Conceal-2fa-app/wiki',
     documenttype: 'wiki',
@@ -49,8 +54,7 @@ const labsProjects: LabProject[] = [
     labeltolink: 'Play the game, at this url:',
     projecturl: 'https://privacydefensor.nodesandbits.tech/',
     labelToDownload: null,
-    downloadurl: null,
-    downloadtype: null,
+    downloads: null,
     labeltodocument: null,
     documentlink: null,
     documenttype: null,
@@ -68,8 +72,7 @@ const labsProjects: LabProject[] = [
       'You can go the the github page for more info and for downloads by clicking on this url.',
     projecturl: 'https://github.com/Acktarius/conceal-assistant',
     labelToDownload: 'Download Conceal-Assistant',
-    downloadurl: 'https://github.com/Acktarius/conceal-assistant/releases/latest/',
-    downloadtype: 'zip',
+    downloads: [['https://github.com/Acktarius/conceal-assistant/releases/latest/', 'zip']],
     labeltodocument: 'You can find more information about the product in this PDF.',
     documentlink: '/labs-data/conceal-assistant_info.pdf',
     documenttype: 'pdf',
@@ -96,7 +99,7 @@ function ProjectCard({ project }: { project: LabProject }) {
   const descriptionParagraphs = project.description.split('\n').filter((p) => p.trim());
 
   // Get appropriate icon for download type
-  const getDownloadIcon = (downloadType: LabProject['downloadtype']): string => {
+  const getDownloadIcon = (downloadType: DownloadType): string => {
     switch (downloadType) {
       case 'zip':
         return 'fas fa-file-zipper';
@@ -110,8 +113,8 @@ function ProjectCard({ project }: { project: LabProject }) {
         return 'fab fa-windows';
       case 'dmg':
       case 'app':
+      case 'apple-store':
         return 'fab fa-apple';
-      case null:
       default:
         return 'fas fa-download';
     }
@@ -124,7 +127,6 @@ function ProjectCard({ project }: { project: LabProject }) {
         return 'fas fa-file-pdf';
       case 'wiki':
         return 'fab fa-wikipedia-w';
-      case null:
       default:
         return 'fas fa-file';
     }
@@ -171,19 +173,24 @@ function ProjectCard({ project }: { project: LabProject }) {
           </p>
         </AnimatedElement>
       )}
-
-      {project.downloadurl && project.labelToDownload && (
+      {project.labelToDownload && project.downloads && project.downloads.length > 0 && (
         <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
           <p className="text-[1.7rem] text-[#757575] mb-6">
-            <a
-              href={project.downloadurl}
-              className="text-[var(--color1)] hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {project.labelToDownload}
-              <i className={`ml-2 ${getDownloadIcon(project.downloadtype)}`}></i>
-            </a>
+            {project.labelToDownload}{' '}
+            {project.downloads.map(([url, type], index) => (
+              <span key={`${url}-${type}`}>
+                {index > 0 && ' - '}
+                <a
+                  href={url}
+                  className="text-[var(--color1)] hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className={`${getDownloadIcon(type)} mr-1`}></i>
+                  {type}
+                </a>
+              </span>
+            ))}
           </p>
         </AnimatedElement>
       )}
