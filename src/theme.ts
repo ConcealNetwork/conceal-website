@@ -83,122 +83,86 @@ export const theme = {
  * Import themeConfig from app.config.ts instead of defining it here.
  */
 
-import { themeConfig } from '@/config/app.config';
+import { type ThemeColor, themeConfig } from '@/config/app.config';
 
-// Helper function to get CSS custom properties based on theme selection
-export const getThemeCSSVars = (): Record<string, string> => {
-  const primary = themeConfig.primaryColor;
-  const secondary = themeConfig.secondaryColor;
-
-  // Determine primary color values based on theme selection
-  const primaryColor = theme.colors.neon[primary];
-  const primaryGlow =
-    primary === 'orange' ? theme.effects.textGlowOrange : theme.effects.textGlowCyan;
-  const primaryGlowStrong =
-    primary === 'orange' ? theme.effects.textGlowOrangeStrong : theme.effects.textGlowCyanStrong;
-  const primaryBoxGlow =
-    primary === 'orange' ? theme.effects.boxGlowOrange : theme.effects.boxGlowCyan;
-  const primaryBoxGlowStrong =
-    primary === 'orange' ? theme.effects.boxGlowOrangeStrong : theme.effects.boxGlowCyanStrong;
-  const primaryBgGlow =
-    primary === 'orange' ? theme.effects.bgGlowOrange : theme.effects.bgGlowCyan;
-  const primaryBorder =
-    primary === 'orange' ? theme.colors.border.neonOrange : theme.colors.border.neonCyan;
-  const primaryGlowRgba = primary === 'orange' ? theme.colors.glow.orange : theme.colors.glow.cyan;
-  const primaryGlowStrongRgba =
-    primary === 'orange' ? theme.colors.glow.orangeStrong : theme.colors.glow.cyanStrong;
-
-  // Determine secondary color values based on theme selection
-  const secondaryColor = theme.colors.neon[secondary];
-  const secondaryGlow =
-    secondary === 'orange'
-      ? theme.effects.textGlowOrange
-      : secondary === 'cyan'
-        ? theme.effects.textGlowCyan
-        : theme.effects.textGlowMagenta;
-  const secondaryGlowStrong =
-    secondary === 'orange'
-      ? theme.effects.textGlowOrangeStrong
-      : secondary === 'cyan'
-        ? theme.effects.textGlowCyanStrong
-        : theme.effects.textGlowMagentaStrong;
-  const secondaryBoxGlow =
-    secondary === 'orange'
-      ? theme.effects.boxGlowOrange
-      : secondary === 'cyan'
-        ? theme.effects.boxGlowCyan
-        : theme.effects.boxGlowMagenta;
-  const secondaryBoxGlowStrong =
-    secondary === 'orange'
-      ? theme.effects.boxGlowOrangeStrong
-      : secondary === 'cyan'
-        ? theme.effects.boxGlowCyanStrong
-        : theme.effects.boxGlowMagentaStrong;
-  const secondaryBgGlow =
-    secondary === 'orange'
-      ? theme.effects.bgGlowOrange
-      : secondary === 'cyan'
-        ? theme.effects.bgGlowCyan
-        : theme.effects.bgGlowMagenta;
-  const secondaryBorder =
-    secondary === 'orange'
-      ? theme.colors.border.neonOrange
-      : secondary === 'cyan'
-        ? theme.colors.border.neonCyan
-        : theme.colors.border.neonMagenta;
-  const secondaryGlowRgba =
-    secondary === 'orange'
-      ? theme.colors.glow.orange
-      : secondary === 'cyan'
-        ? theme.colors.glow.cyan
-        : theme.colors.glow.magenta;
-  const secondaryGlowStrongRgba =
-    secondary === 'orange'
-      ? theme.colors.glow.orangeStrong
-      : secondary === 'cyan'
-        ? theme.colors.glow.cyanStrong
-        : theme.colors.glow.magentaStrong;
-
-  return {
-    // Primary color (cyan or orange based on themeConfig)
-    '--color1': primaryColor,
-    '--color1-glow': primaryGlow,
-    '--color1-glow-strong': primaryGlowStrong,
-    '--color1-box-glow': primaryBoxGlow,
-    '--color1-box-glow-strong': primaryBoxGlowStrong,
-    '--color1-bg-glow': primaryBgGlow,
-    '--color1-border': primaryBorder,
-    '--color1-glow-rgba': primaryGlowRgba,
-    '--color1-glow-strong-rgba': primaryGlowStrongRgba,
-
-    // Secondary color (based on themeConfig.secondaryColor)
-    '--color2': secondaryColor,
-    '--color2-glow': secondaryGlow,
-    '--color2-glow-strong': secondaryGlowStrong,
-    '--color2-box-glow': secondaryBoxGlow,
-    '--color2-box-glow-strong': secondaryBoxGlowStrong,
-    '--color2-bg-glow': secondaryBgGlow,
-    '--color2-border': secondaryBorder,
-    '--color2-glow-rgba': secondaryGlowRgba,
-    '--color2-glow-strong-rgba': secondaryGlowStrongRgba,
-
-    // Base colors
-    '--color-bg-primary': theme.colors.bg.primary,
-    '--color-bg-secondary': theme.colors.bg.secondary,
-    '--color-text-primary': theme.colors.text.primary,
-    '--color-text-secondary': theme.colors.text.secondary,
-
-    // Font family
-    '--font-family': `${themeConfig.fontFamily}, Arial, Helvetica, sans-serif`,
-  };
+// Per-color lookup — add a new entry here to support a new color across all CSS vars
+const COLOR_VARS: Record<
+  ThemeColor,
+  {
+    color: string;
+    glow: string;
+    glowStrong: string;
+    boxGlow: string;
+    boxGlowStrong: string;
+    bgGlow: string;
+    border: string;
+    glowRgba: string;
+    glowStrongRgba: string;
+  }
+> = {
+  cyan: {
+    color: theme.colors.neon.cyan,
+    glow: theme.effects.textGlowCyan,
+    glowStrong: theme.effects.textGlowCyanStrong,
+    boxGlow: theme.effects.boxGlowCyan,
+    boxGlowStrong: theme.effects.boxGlowCyanStrong,
+    bgGlow: theme.effects.bgGlowCyan,
+    border: theme.colors.border.neonCyan,
+    glowRgba: theme.colors.glow.cyan,
+    glowStrongRgba: theme.colors.glow.cyanStrong,
+  },
+  magenta: {
+    color: theme.colors.neon.magenta,
+    glow: theme.effects.textGlowMagenta,
+    glowStrong: theme.effects.textGlowMagentaStrong,
+    boxGlow: theme.effects.boxGlowMagenta,
+    boxGlowStrong: theme.effects.boxGlowMagentaStrong,
+    bgGlow: theme.effects.bgGlowMagenta,
+    border: theme.colors.border.neonMagenta,
+    glowRgba: theme.colors.glow.magenta,
+    glowStrongRgba: theme.colors.glow.magentaStrong,
+  },
+  orange: {
+    color: theme.colors.neon.orange,
+    glow: theme.effects.textGlowOrange,
+    glowStrong: theme.effects.textGlowOrangeStrong,
+    boxGlow: theme.effects.boxGlowOrange,
+    boxGlowStrong: theme.effects.boxGlowOrangeStrong,
+    bgGlow: theme.effects.bgGlowOrange,
+    border: theme.colors.border.neonOrange,
+    glowRgba: theme.colors.glow.orange,
+    glowStrongRgba: theme.colors.glow.orangeStrong,
+  },
 };
 
-// Apply theme CSS variables to document root
-export const applyTheme = () => {
-  const vars = getThemeCSSVars();
-  const root = document.documentElement;
+function colorCSSVars(prefix: string, color: ThemeColor): Record<string, string> {
+  const v = COLOR_VARS[color];
+  return {
+    [`--${prefix}`]: v.color,
+    [`--${prefix}-glow`]: v.glow,
+    [`--${prefix}-glow-strong`]: v.glowStrong,
+    [`--${prefix}-box-glow`]: v.boxGlow,
+    [`--${prefix}-box-glow-strong`]: v.boxGlowStrong,
+    [`--${prefix}-bg-glow`]: v.bgGlow,
+    [`--${prefix}-border`]: v.border,
+    [`--${prefix}-glow-rgba`]: v.glowRgba,
+    [`--${prefix}-glow-strong-rgba`]: v.glowStrongRgba,
+  };
+}
 
-  Object.entries(vars).forEach(([key, value]) => {
+export const getThemeCSSVars = (): Record<string, string> => ({
+  ...colorCSSVars('color1', themeConfig.primaryColor),
+  ...colorCSSVars('color2', themeConfig.secondaryColor),
+  '--color-bg-primary': theme.colors.bg.primary,
+  '--color-bg-secondary': theme.colors.bg.secondary,
+  '--color-text-primary': theme.colors.text.primary,
+  '--color-text-secondary': theme.colors.text.secondary,
+  '--font-family': `${themeConfig.fontFamily}, Arial, Helvetica, sans-serif`,
+});
+
+export const applyTheme = () => {
+  const root = document.documentElement;
+  for (const [key, value] of Object.entries(getThemeCSSVars())) {
     root.style.setProperty(key, value);
-  });
+  }
 };

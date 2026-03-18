@@ -254,63 +254,188 @@ const timelineItems: TimelineItem[] = [
   },
 ];
 
-export function RoadmapSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+const TEXT_SHADOW =
+  '[text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]';
+
+function useTimelineScale(sectionRef: React.RefObject<HTMLElement | null>) {
   const itemRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [itemScales, setItemScales] = useState<Map<number, number>>(new Map());
 
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-
       const sectionRect = sectionRef.current.getBoundingClientRect();
-
-      // Only apply effect if roadmap section is in viewport
       const isSectionVisible = sectionRect.bottom > 0 && sectionRect.top < window.innerHeight;
 
       if (!isSectionVisible) {
-        // Reset all scales if section is not visible
         const resetScales = new Map<number, number>();
-        itemRefs.current.forEach((_, index) => {
-          resetScales.set(index, 1.0);
-        });
+        for (const [index] of itemRefs.current) resetScales.set(index, 1);
         setItemScales(resetScales);
         return;
       }
 
       const newScales = new Map<number, number>();
       const centerY = window.innerHeight / 2;
-      const maxDistance = 400; // Maximum distance for scaling effect
-
-      itemRefs.current.forEach((element, index) => {
-        if (!element) return;
-
+      const maxDistance = 400;
+      for (const [index, element] of itemRefs.current) {
         const rect = element.getBoundingClientRect();
-        const itemY = rect.top + rect.height / 2;
-        const distanceFromCenter = Math.abs(centerY - itemY);
-
-        // Map distance to scale: 1.22 at center, 1.0 at maxDistance
-        const normalizedDistance = Math.min(1, distanceFromCenter / maxDistance);
-        const scale = 1.0 + 0.22 * (1 - normalizedDistance); // 1.6 at center, 1.0 at maxDistance
-
-        newScales.set(index, scale);
-      });
-
+        const distanceFromCenter = Math.abs(centerY - (rect.top + rect.height / 2));
+        newScales.set(index, 1 + 0.22 * (1 - Math.min(1, distanceFromCenter / maxDistance)));
+      }
       setItemScales(newScales);
     };
 
-    // Initial check
     handleScroll();
-
-    // Listen to scroll events
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleScroll);
     };
-  }, []);
+  }, [sectionRef]);
+
+  const setItemRef = (index: number) => (el: HTMLDivElement | null) => {
+    if (el) itemRefs.current.set(index, el);
+    else itemRefs.current.delete(index);
+  };
+
+  return { itemScales, setItemRef };
+}
+
+interface TimelineItemCardProps {
+  readonly item: TimelineItem;
+  readonly index: number;
+  readonly scale: number;
+  readonly itemRef: (el: HTMLDivElement | null) => void;
+}
+
+type ItemStatus = TimelineItem['status'];
+
+function getStatusClasses(status: ItemStatus): { accentColor: string; squareColor: string } {
+  const isCompleted = status === 'completed';
+  const isActive = status === 'inprog' || status === 'activ';
+  let accentColor = '';
+  if (isCompleted) accentColor = 'text-white';
+  else if (isActive) accentColor = 'text-[var(--color1)]';
+  let squareColor = '';
+  if (isCompleted) squareColor = 'bg-white';
+  else if (isActive) squareColor = 'bg-[var(--color1)]';
+  return { accentColor, squareColor };
+}
+
+function ItemDescription({ description, url }: Readonly<{ description?: string; url?: string }>) {
+  if (!description) return null;
+  return (
+    <span>
+      {' '}
+      —{' '}
+      {url ? (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-inherit hover:text-[var(--color1)]"
+          title={`Visit ${url}`}
+        >
+          {description}
+        </a>
+      ) : (
+        description
+      )}
+    </span>
+  );
+}
+
+function TimelineItemCard({ item, index, scale, itemRef }: TimelineItemCardProps) {
+  const isEven = index % 2 === 1;
+  const isDone = item.status === 'done';
+  const isActiv = item.status === 'activ';
+  const { accentColor, squareColor } = getStatusClasses(item.status);
+
+  return (
+    <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+      <div
+        ref={itemRef}
+        className={`single-timeline flex items-center mb-[22px] transition-transform duration-300 ease-out ${isEven ? 'flex-row-reverse' : ''}`}
+        style={{ transform: `scale(${scale})`, transformOrigin: 'center center' }}
+      >
+        <div className="timeline-blank w-1/2"></div>
+        <div
+          className={`timeline-text w-1/2 ${isEven ? 'pr-[30px] text-right' : 'pl-[30px]'} relative`}
+        >
+          <div
+            className={`t-square absolute top-[10px] ${isEven ? 'right-[-6px]' : 'left-[-6px]'} w-3 h-3 ${squareColor}`}
+          ></div>
+          <span
+            className={`block text-[#a8a8a8] ${isEven ? 'text-right' : ''} ${isDone ? 'border-b-[5px] border-dashed border-white mb-[50px] pb-4' : ''} ${isActiv ? 'border-t-[5px] border-dashed border-[var(--color1)] pt-4 mt-4' : ''}`}
+          >
+            <h6
+              className={`font-semibold ${item.date ? 'text-[1.5rem]' : 'text-[1.2rem]'} inline-block mb-2 ${accentColor} ${TEXT_SHADOW}`}
+            >
+              {item.date ? `${item.date}, ${item.title}` : item.title}
+            </h6>
+            <ItemDescription description={item.description} url={item.url} />
+          </span>
+        </div>
+      </div>
+    </AnimatedElement>
+  );
+}
+
+function RoadmapHeader() {
+  return (
+    <div className="mb-16">
+      <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
+        <span className="block mb-3 text-[1.4rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.2rem]">
+          CONCEAL ROADMAP
+        </span>
+      </AnimatedElement>
+      <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
+        <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
+          <span className="text-[var(--color1)] font-semibold">The Birth</span> of something{' '}
+          <span className="text-[var(--color1)] font-semibold">Amazing.</span>
+        </h1>
+      </AnimatedElement>
+    </div>
+  );
+}
+
+interface RoadmapTimelineProps {
+  readonly itemScales: Map<number, number>;
+  readonly setItemRef: (index: number) => (el: HTMLDivElement | null) => void;
+}
+
+function RoadmapTimeline({ itemScales, setItemRef }: RoadmapTimelineProps) {
+  return (
+    <div className="timeline-area pt-10 pb-10">
+      <div className="container max-w-[1140px] mx-auto px-4">
+        <div className="timelines mb-10">
+          <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
+            <h2 className="text-[3.2rem] text-[var(--color1)] font-semibold text-center mb-10">
+              CONCEAL ROADMAP
+            </h2>
+          </AnimatedElement>
+        </div>
+        <div className="all-timelines relative">
+          <div className="absolute left-1/2 top-5 bottom-0 w-[2px] bg-[#19383b] -translate-x-1/2"></div>
+          {timelineItems.map((item, index) => (
+            <TimelineItemCard
+              key={`${item.date}-${item.title}`}
+              item={item}
+              index={index}
+              scale={itemScales.get(index) ?? 1}
+              itemRef={setItemRef(index)}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function RoadmapSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { itemScales, setItemRef } = useTimelineScale(sectionRef);
 
   return (
     <section
@@ -318,154 +443,15 @@ export function RoadmapSection() {
       id="roadmap"
       className="py-16 px-4 border-b border-[rgba(255,255,255,0.2)] relative"
     >
-      {/* Background image */}
       <div
         id="herobg"
         className="absolute top-0 left-0 w-full h-full bg-[url('/images/background_bw.jpg')] bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundAttachment: 'fixed',
-        }}
+        style={{ backgroundAttachment: 'fixed' }}
       ></div>
-
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
-
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4">
-        {/* Hero Title Section */}
-        <div className="mb-16">
-          <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-            <span className="block mb-3 text-[1.4rem] text-[rgba(255,255,255,0.7)] uppercase tracking-[0.2rem]">
-              CONCEAL ROADMAP
-            </span>
-          </AnimatedElement>
-          <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-            <h1 className="text-[4rem] md:text-[5rem] text-white mb-6 [text-shadow:0_0_24px_rgba(0,0,0,0.9)]">
-              <span className="text-[var(--color1)] font-semibold">The Birth</span> of something{' '}
-              <span className="text-[var(--color1)] font-semibold">Amazing.</span>
-            </h1>
-          </AnimatedElement>
-        </div>
-
-        {/* Timeline Section */}
-        <div className="timeline-area pt-10 pb-10">
-          <div className="container max-w-[1140px] mx-auto px-4">
-            <div className="timelines mb-10">
-              <AnimatedElement types={['fadeIn']} triggerImmediately={true} offset={0}>
-                <h2 className="text-[3.2rem] text-[var(--color1)] font-semibold text-center mb-10">
-                  CONCEAL ROADMAP
-                </h2>
-              </AnimatedElement>
-            </div>
-            <div className="all-timelines relative">
-              {/* Center Line */}
-              <div className="absolute left-1/2 top-5 bottom-0 w-[2px] bg-[#19383b] -translate-x-1/2"></div>
-
-              {/* Timeline Items */}
-              {timelineItems.map((item, index) => {
-                const isEven = index % 2 === 1;
-                const isCompleted = item.status === 'completed';
-                const isInProg = item.status === 'inprog';
-                const isActiv = item.status === 'activ';
-                const isDone = item.status === 'done';
-
-                const scale = itemScales.get(index) ?? 1.0;
-
-                return (
-                  <AnimatedElement
-                    key={`${item.date}-${item.title}`}
-                    types={['fadeIn']}
-                    triggerImmediately={false}
-                  >
-                    <div
-                      ref={(el) => {
-                        if (el) {
-                          itemRefs.current.set(index, el);
-                        } else {
-                          itemRefs.current.delete(index);
-                        }
-                      }}
-                      className={`single-timeline flex items-center mb-[22px] transition-transform duration-300 ease-out ${isEven ? 'flex-row-reverse' : ''}`}
-                      style={{
-                        transform: `scale(${scale})`,
-                        transformOrigin: 'center center',
-                      }}
-                    >
-                      <div className="timeline-blank w-1/2"></div>
-                      <div
-                        className={`timeline-text w-1/2 ${isEven ? 'pr-[30px] text-right' : 'pl-[30px]'} relative`}
-                      >
-                        <div
-                          className={`t-square absolute top-[10px] ${isEven ? 'right-[-6px]' : 'left-[-6px]'} w-3 h-3 ${
-                            isCompleted
-                              ? 'bg-white'
-                              : isInProg || isActiv
-                                ? 'bg-[var(--color1)]'
-                                : ''
-                          }`}
-                        ></div>
-                        <span
-                          className={`block text-[#a8a8a8] ${isEven ? 'text-right' : ''} ${
-                            isDone ? 'border-b-[5px] border-dashed border-white mb-[50px] pb-4' : ''
-                          } ${
-                            isActiv
-                              ? 'border-t-[5px] border-dashed border-[var(--color1)] pt-4 mt-4'
-                              : ''
-                          }`}
-                        >
-                          {item.date && (
-                            <h6
-                              className={`font-semibold text-[1.5rem] inline-block mb-2 ${
-                                isCompleted
-                                  ? 'text-white'
-                                  : isInProg || isActiv
-                                    ? 'text-[var(--color1)]'
-                                    : ''
-                              } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
-                            >
-                              {item.date}, {item.title}
-                            </h6>
-                          )}
-                          {!item.date && (
-                            <h6
-                              className={`font-semibold text-[1.2rem] inline-block mb-2 ${
-                                isCompleted
-                                  ? 'text-white'
-                                  : isInProg || isActiv
-                                    ? 'text-[var(--color1)]'
-                                    : ''
-                              } [text-shadow:0_-0.1em_0.1em_#000,0_0.1em_0.1em_#000,-0.25em_0_0.25em_#000,0.25em_0_0.25em_#000]`}
-                            >
-                              {item.title}
-                            </h6>
-                          )}
-                          {item.description && (
-                            <span>
-                              {' '}
-                              —{' '}
-                              {item.url ? (
-                                <a
-                                  href={item.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-inherit hover:text-[var(--color1)]"
-                                  title={`Visit ${item.url}`}
-                                >
-                                  {item.description}
-                                </a>
-                              ) : (
-                                item.description
-                              )}
-                            </span>
-                          )}
-                        </span>
-                      </div>
-                    </div>
-                  </AnimatedElement>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <RoadmapHeader />
+        <RoadmapTimeline itemScales={itemScales} setItemRef={setItemRef} />
       </div>
     </section>
   );
