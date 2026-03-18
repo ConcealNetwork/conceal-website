@@ -98,7 +98,7 @@ function useSocialMenuVisibility() {
   return { isVisible, isMobile };
 }
 
-function SocialMenuItem({ link, index }: { link: SocialLink; index: number }) {
+function SocialMenuItem({ link, index }: Readonly<{ link: SocialLink; index: number }>) {
   const colorVar = index % 2 === 0 ? 'var(--color1)' : 'var(--color2)';
   const glowVar = index % 2 === 0 ? 'var(--color1-glow-rgba)' : 'var(--color2-glow-rgba)';
   return (

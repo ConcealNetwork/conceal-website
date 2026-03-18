@@ -70,7 +70,7 @@ const SECTION_STYLE = {
 const SECTION_CLASS =
   'py-16 px-4 bg-[var(--color-bg-primary)] border-b border-[rgba(255,255,255,0.2)]';
 
-function WidgetSection({ children }: { children: React.ReactNode }) {
+function WidgetSection({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <section id="cryptoWidget" className={SECTION_CLASS} style={SECTION_STYLE}>
       <div className="max-w-6xl mx-auto">{children}</div>
@@ -78,7 +78,7 @@ function WidgetSection({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PriceDisplay({ price }: { price: PriceData }) {
+function PriceDisplay({ price }: Readonly<{ price: PriceData }>) {
   const isPositive = price.usd_24h_change >= 0;
   return (
     <div className="bg-[#111] border border-[#444] rounded-lg p-8 text-center">

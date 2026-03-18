@@ -77,7 +77,7 @@ function useInterestTable() {
 
 function clampInt(value: number, min: number, max: number) {
   if (Number.isNaN(value) || value < min) return min;
-  return value > max ? max : value;
+  return Math.min(value, max);
 }
 
 const FMT = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
@@ -104,7 +104,7 @@ const TIER_DATA = [
   },
 ];
 
-function InterestTableDesktop({ rows }: { rows: TableRow[] }) {
+function InterestTableDesktop({ rows }: Readonly<{ rows: TableRow[] }>) {
   return (
     <div className="hidden md:block overflow-x-auto">
       <table className="w-full border-collapse border border-[#444]">
@@ -200,7 +200,7 @@ function InterestTableDesktop({ rows }: { rows: TableRow[] }) {
   );
 }
 
-function InterestTableMobile({ rows }: { rows: TableRow[] }) {
+function InterestTableMobile({ rows }: Readonly<{ rows: TableRow[] }>) {
   return (
     <div className="md:hidden space-y-6">
       {TIERS.map((tier, i) => (
@@ -352,7 +352,9 @@ function InterestCalculator() {
             type="number"
             id="nPrincipal"
             value={principal}
-            onChange={(e) => setPrincipal(clampInt(parseInt(e.target.value, 10), 1, 9999999))}
+            onChange={(e) =>
+              setPrincipal(clampInt(Number.parseInt(e.target.value, 10), 1, 9999999))
+            }
             min="1"
             max="9999999"
             className="px-3 py-2 bg-[#111] border border-[#444] text-white rounded"
@@ -367,7 +369,7 @@ function InterestCalculator() {
             min="1"
             max="12"
             value={months}
-            onChange={(e) => setMonths(clampInt(parseInt(e.target.value, 10), 1, 12))}
+            onChange={(e) => setMonths(clampInt(Number.parseInt(e.target.value, 10), 1, 12))}
             className="px-3 py-2 bg-[#111] border border-[#444] text-white rounded"
           />
           <span>Months</span>

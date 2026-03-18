@@ -3,9 +3,9 @@ import { appConfig, hoursToMinutes } from '@/config/app.config';
 import { hasCookie, setCookie } from '../utils/cookies';
 
 interface SplashScreenProps {
-  onComplete: () => void;
-  showOnlyOnce?: boolean;
-  waitForAppReady?: boolean;
+  readonly onComplete: () => void;
+  readonly showOnlyOnce?: boolean;
+  readonly waitForAppReady?: boolean;
 }
 
 function useSplashVisibility({ onComplete, showOnlyOnce, waitForAppReady }: SplashScreenProps) {
@@ -104,7 +104,7 @@ const SPLASH_STYLES = `
   }
 `;
 
-export function SplashScreen(props: SplashScreenProps) {
+export function SplashScreen(props: Readonly<SplashScreenProps>) {
   const { isLoaded, isVisible } = useSplashVisibility(props);
   if (!isVisible) return null;
   return (

@@ -100,7 +100,7 @@ function getDocumentIcon(type: LabProject['documenttype']): string {
   return 'fas fa-file';
 }
 
-function ProjectLinks({ project }: { project: LabProject }) {
+function ProjectLinks({ project }: Readonly<{ project: LabProject }>) {
   return (
     <>
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>

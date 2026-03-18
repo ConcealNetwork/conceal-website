@@ -76,7 +76,10 @@ const onHoverLeave = (e: React.MouseEvent<HTMLElement>) => {
   e.currentTarget.style.backgroundColor = 'transparent';
 };
 
-function HamburgerButton({ isOpen, onToggle }: { isOpen: boolean; onToggle: () => void }) {
+function HamburgerButton({
+  isOpen,
+  onToggle,
+}: Readonly<{ isOpen: boolean; onToggle: () => void }>) {
   return (
     <button
       type="button"
@@ -108,10 +111,10 @@ const BORDER_B = 'border-b border-[rgba(255,255,255,0.1)] pb-2';
 function MobileNavList({
   handleLinkClick,
   onClose,
-}: {
+}: Readonly<{
   handleLinkClick: LinkClickHandler;
   onClose: () => void;
-}) {
+}>) {
   return (
     <nav className="space-y-2">
       {navItems.map((item) => (
@@ -182,11 +185,11 @@ function MobileMenu({
   isOpen,
   onClose,
   handleLinkClick,
-}: {
+}: Readonly<{
   isOpen: boolean;
   onClose: () => void;
   handleLinkClick: LinkClickHandler;
-}) {
+}>) {
   return (
     <>
       <div
@@ -227,12 +230,12 @@ const NAV_LINK_CLASS =
   'px-4 py-2 uppercase tracking-[0.1em] text-[var(--color1)] rounded-[0.75em] transition-all duration-500 hover:text-white';
 
 interface DesktopNavProps {
-  openDropdown: string | null;
-  dropdownWider: Record<string, boolean>;
-  buttonRefs: React.MutableRefObject<Record<string, HTMLButtonElement | null>>;
-  dropdownRefs: React.MutableRefObject<Record<string, HTMLUListElement | null>>;
-  handleNavItemClick: (label: string) => void;
-  handleLinkClick: LinkClickHandler;
+  readonly openDropdown: string | null;
+  readonly dropdownWider: Record<string, boolean>;
+  readonly buttonRefs: React.RefObject<Record<string, HTMLButtonElement | null>>;
+  readonly dropdownRefs: React.RefObject<Record<string, HTMLUListElement | null>>;
+  readonly handleNavItemClick: (label: string) => void;
+  readonly handleLinkClick: LinkClickHandler;
 }
 
 function DesktopNav({

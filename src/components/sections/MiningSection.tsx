@@ -107,7 +107,7 @@ function usePools(sectionRef: React.RefObject<HTMLElement | null>) {
 const CELL = 'border border-[#444] p-2 text-center text-[#757575]';
 const LINK = 'text-[var(--color1)] hover:text-[#fafafa] transition-colors';
 
-function PoolRow({ pool }: { pool: PoolData }) {
+function PoolRow({ pool }: Readonly<{ pool: PoolData }>) {
   const poolName = getPoolName(pool);
   return (
     <tr key={poolName}>
@@ -129,7 +129,7 @@ function PoolRow({ pool }: { pool: PoolData }) {
   );
 }
 
-function PoolCard({ pool }: { pool: PoolData }) {
+function PoolCard({ pool }: Readonly<{ pool: PoolData }>) {
   const poolName = getPoolName(pool);
   return (
     <div key={poolName} className="border border-[#444] rounded-lg p-4 bg-[rgba(255,255,255,0.02)]">
@@ -174,7 +174,7 @@ function PoolCard({ pool }: { pool: PoolData }) {
   );
 }
 
-function PoolsTable({ pools, isLoading }: { pools: PoolData[]; isLoading: boolean }) {
+function PoolsTable({ pools, isLoading }: Readonly<{ pools: PoolData[]; isLoading: boolean }>) {
   const placeholder = (colSpan: number, tag: 'td' | 'div') =>
     isLoading ? (
       tag === 'td' ? (

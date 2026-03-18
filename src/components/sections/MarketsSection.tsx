@@ -23,13 +23,13 @@ function MarketSection({
   title,
   children,
   showMore = false,
-}: {
+}: Readonly<{
   id: string;
   subtitle: React.ReactNode;
   title: string;
   children: React.ReactNode;
   showMore?: boolean;
-}) {
+}>) {
   return (
     <section id={id} className={SECTION_CLASS} style={SECTION_STYLE}>
       <div className="max-w-6xl mx-auto text-center">
@@ -46,7 +46,7 @@ function MarketSection({
   );
 }
 
-function ExchangeButton({ href, label }: { href: string; label: string }) {
+function ExchangeButton({ href, label }: Readonly<{ href: string; label: string }>) {
   return (
     <Button variant="download" asChild href={href} target="_blank" rel="noopener noreferrer">
       {label}

@@ -62,11 +62,11 @@ function MajorLinkItem({
   link,
   index,
   onClick,
-}: {
+}: Readonly<{
   link: MajorLink;
   index: number;
   onClick: (e: React.MouseEvent<HTMLAnchorElement>, link: MajorLink) => void;
-}) {
+}>) {
   const colorVar = index % 2 === 0 ? 'var(--color1)' : 'var(--color2)';
   const glowVar = index % 2 === 0 ? 'var(--color1-glow-rgba)' : 'var(--color2-glow-rgba)';
   return (

@@ -6,7 +6,7 @@ interface CarouselProps {
   className?: string;
 }
 
-function CarouselSlide({ src, alt }: { src: string; alt: string }) {
+function CarouselSlide({ src, alt }: Readonly<{ src: string; alt: string }>) {
   return (
     <div
       className="flex-shrink-0 flex items-center justify-center"

@@ -22,8 +22,8 @@ interface AppProps {
 const doubleRAF = (cb: () => void) => requestAnimationFrame(() => requestAnimationFrame(cb));
 
 function scrollToWithOffset(element: Element) {
-  const top = element.getBoundingClientRect().top + window.pageYOffset - 100;
-  window.scrollTo({ top, behavior: 'smooth' });
+  const top = element.getBoundingClientRect().top + globalThis.pageYOffset - 100;
+  globalThis.scrollTo({ top, behavior: 'smooth' });
 }
 
 function useHeroScroll(heroRef: React.RefObject<HTMLElement | null>) {
@@ -31,11 +31,11 @@ function useHeroScroll(heroRef: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
     const check = () => {
       if (!heroRef.current) return;
-      setIsPast(window.scrollY > heroRef.current.offsetTop + heroRef.current.offsetHeight);
+      setIsPast(globalThis.scrollY > heroRef.current.offsetTop + heroRef.current.offsetHeight);
     };
-    window.addEventListener('scroll', check);
+    globalThis.addEventListener('scroll', check);
     check();
-    return () => window.removeEventListener('scroll', check);
+    return () => globalThis.removeEventListener('scroll', check);
   }, [heroRef]);
   return isPast;
 }
@@ -44,7 +44,7 @@ function useHashScroll(location: ReturnType<typeof useLocation>) {
   useEffect(() => {
     if (location.pathname !== '/') return;
     const state = location.state as { scrollToHash?: string } | null;
-    const hash = state?.scrollToHash || location.hash || window.location.hash;
+    const hash = state?.scrollToHash || location.hash || globalThis.location.hash;
     if (!hash) return;
     const cleanHash = hash.startsWith('#') ? hash : `#${hash}`;
     let attempts = 0;

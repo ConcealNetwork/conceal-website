@@ -10,12 +10,12 @@ function DownloadLink({
   icon,
   label,
   gap = 4,
-}: {
+}: Readonly<{
   href: string;
   icon: string;
   label: string;
   gap?: number;
-}) {
+}>) {
   return (
     <Button variant="download" asChild>
       <a

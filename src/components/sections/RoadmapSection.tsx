@@ -303,10 +303,10 @@ function useTimelineScale(sectionRef: React.RefObject<HTMLElement | null>) {
 }
 
 interface TimelineItemCardProps {
-  item: TimelineItem;
-  index: number;
-  scale: number;
-  itemRef: (el: HTMLDivElement | null) => void;
+  readonly item: TimelineItem;
+  readonly index: number;
+  readonly scale: number;
+  readonly itemRef: (el: HTMLDivElement | null) => void;
 }
 
 type ItemStatus = TimelineItem['status'];
@@ -320,7 +320,7 @@ function getStatusClasses(status: ItemStatus): { accentColor: string; squareColo
   };
 }
 
-function ItemDescription({ description, url }: { description?: string; url?: string }) {
+function ItemDescription({ description, url }: Readonly<{ description?: string; url?: string }>) {
   if (!description) return null;
   return (
     <span>
@@ -398,8 +398,8 @@ function RoadmapHeader() {
 }
 
 interface RoadmapTimelineProps {
-  itemScales: Map<number, number>;
-  setItemRef: (index: number) => (el: HTMLDivElement | null) => void;
+  readonly itemScales: Map<number, number>;
+  readonly setItemRef: (index: number) => (el: HTMLDivElement | null) => void;
 }
 
 function RoadmapTimeline({ itemScales, setItemRef }: RoadmapTimelineProps) {
