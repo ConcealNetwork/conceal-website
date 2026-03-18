@@ -269,7 +269,7 @@ function useTimelineScale(sectionRef: React.RefObject<HTMLElement | null>) {
 
       if (!isSectionVisible) {
         const resetScales = new Map<number, number>();
-        for (const [index] of itemRefs.current) resetScales.set(index, 1.0);
+        for (const [index] of itemRefs.current) resetScales.set(index, 1);
         setItemScales(resetScales);
         return;
       }
@@ -280,7 +280,7 @@ function useTimelineScale(sectionRef: React.RefObject<HTMLElement | null>) {
       for (const [index, element] of itemRefs.current) {
         const rect = element.getBoundingClientRect();
         const distanceFromCenter = Math.abs(centerY - (rect.top + rect.height / 2));
-        newScales.set(index, 1.0 + 0.22 * (1 - Math.min(1, distanceFromCenter / maxDistance)));
+        newScales.set(index, 1 + 0.22 * (1 - Math.min(1, distanceFromCenter / maxDistance)));
       }
       setItemScales(newScales);
     };
@@ -314,10 +314,13 @@ type ItemStatus = TimelineItem['status'];
 function getStatusClasses(status: ItemStatus): { accentColor: string; squareColor: string } {
   const isCompleted = status === 'completed';
   const isActive = status === 'inprog' || status === 'activ';
-  return {
-    accentColor: isCompleted ? 'text-white' : isActive ? 'text-[var(--color1)]' : '',
-    squareColor: isCompleted ? 'bg-white' : isActive ? 'bg-[var(--color1)]' : '',
-  };
+  let accentColor = '';
+  if (isCompleted) accentColor = 'text-white';
+  else if (isActive) accentColor = 'text-[var(--color1)]';
+  let squareColor = '';
+  if (isCompleted) squareColor = 'bg-white';
+  else if (isActive) squareColor = 'bg-[var(--color1)]';
+  return { accentColor, squareColor };
 }
 
 function ItemDescription({ description, url }: Readonly<{ description?: string; url?: string }>) {
@@ -420,7 +423,7 @@ function RoadmapTimeline({ itemScales, setItemRef }: RoadmapTimelineProps) {
               key={`${item.date}-${item.title}`}
               item={item}
               index={index}
-              scale={itemScales.get(index) ?? 1.0}
+              scale={itemScales.get(index) ?? 1}
               itemRef={setItemRef(index)}
             />
           ))}

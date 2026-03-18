@@ -34,12 +34,12 @@ async function autoTagElements() {
     const all = document.body.getElementsByTagName('*');
     for (const key of Object.keys(enData)) {
       const expected = enData[key].toUpperCase();
-      for (let i = 0; i < all.length; i++) {
-        const el = all[i] as HTMLElement;
+      for (const item of Array.from(all)) {
+        const el = item as HTMLElement;
         if (el.firstElementChild || el.dataset.tkey) continue;
         if (el.textContent?.trim().toUpperCase() !== expected) continue;
         el.dataset.tkey = key;
-        if (key.charAt(0) !== 'r') break;
+        if (!key.startsWith('r')) break;
       }
     }
   } catch (err) {
@@ -47,7 +47,20 @@ async function autoTagElements() {
   }
 }
 
-const ACCEPT_LANGS = ['en', 'fr', 'es', 'ar', 'zh', 'de', 'sl', 'cs', 'nl', 'tr', 'it', 'ru'];
+const ACCEPT_LANGS = new Set([
+  'en',
+  'fr',
+  'es',
+  'ar',
+  'zh',
+  'de',
+  'sl',
+  'cs',
+  'nl',
+  'tr',
+  'it',
+  'ru',
+]);
 
 function useLanguageInit() {
   const [selectedLanguage, setSelectedLanguage] = useState<Language>({
@@ -65,7 +78,7 @@ function useLanguageInit() {
           .find((r) => r.startsWith('CCX_Language='))
           ?.split('=')[1];
         let code = cookieLang || navigator.language.substring(0, 2) || 'en';
-        if (!ACCEPT_LANGS.includes(code)) code = 'en';
+        if (!ACCEPT_LANGS.has(code)) code = 'en';
 
         const selectionData =
           await fetchJSON<Record<string, LanguageSelection>>('/lang/selection.json');

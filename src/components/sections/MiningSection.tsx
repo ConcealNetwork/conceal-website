@@ -175,32 +175,25 @@ function PoolCard({ pool }: Readonly<{ pool: PoolData }>) {
 }
 
 function PoolsTable({ pools, isLoading }: Readonly<{ pools: PoolData[]; isLoading: boolean }>) {
-  const placeholder = (colSpan: number, tag: 'td' | 'div') =>
-    isLoading ? (
-      tag === 'td' ? (
+  const placeholder = (colSpan: number, tag: 'td' | 'div') => {
+    let message: string | null = null;
+    if (isLoading) message = 'Loading pools...';
+    else if (pools.length === 0) message = 'No pools available';
+    if (!message) return null;
+    if (tag === 'td')
+      return (
         <tr>
           <td colSpan={colSpan} className={`${CELL} p-4`}>
-            Loading pools...
+            {message}
           </td>
         </tr>
-      ) : (
-        <div className="border border-[#444] p-4 text-center text-[#757575] rounded-lg">
-          Loading pools...
-        </div>
-      )
-    ) : pools.length === 0 ? (
-      tag === 'td' ? (
-        <tr>
-          <td colSpan={colSpan} className={`${CELL} p-4`}>
-            No pools available
-          </td>
-        </tr>
-      ) : (
-        <div className="border border-[#444] p-4 text-center text-[#757575] rounded-lg">
-          No pools available
-        </div>
-      )
-    ) : null;
+      );
+    return (
+      <div className="border border-[#444] p-4 text-center text-[#757575] rounded-lg">
+        {message}
+      </div>
+    );
+  };
 
   return (
     <div className="tableContain" id="poolsTable">

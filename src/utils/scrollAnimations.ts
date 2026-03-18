@@ -58,14 +58,19 @@ export interface ScrollAnimationOptions {
   startOpacity?: number;
 }
 
-const ROTATION_TYPES = ['rotateInX', 'rotateInY', 'rotateInClockwise', 'rotateInCounterClockwise'];
+const ROTATION_TYPES = new Set([
+  'rotateInX',
+  'rotateInY',
+  'rotateInClockwise',
+  'rotateInCounterClockwise',
+]);
 
 function setupPerspectiveParent(
   element: HTMLElement,
   types: string[],
   parentRef?: RefObject<HTMLElement>
 ) {
-  if (!types.some((t) => ROTATION_TYPES.includes(t))) return;
+  if (!types.some((t) => ROTATION_TYPES.has(t))) return;
   const parent = parentRef?.current ?? element.parentElement;
   if (parent && !parent.classList.contains('anim_perspectiveParent')) {
     parent.classList.add('anim_perspectiveParent');
@@ -87,7 +92,7 @@ function computeTriggerOffset(types: string[], offset?: number): number {
 
 function buildClassName(types: string[], speed: string, isVisible: boolean): string {
   const typeClasses = types.map((t) => `anim_${t}`).join(' ');
-  const speedClass = speed !== 'normal' ? `anim_${speed}` : '';
+  const speedClass = speed === 'normal' ? '' : `anim_${speed}`;
   const showClass = isVisible ? 'anim_show' : '';
   return ['anim', typeClasses, speedClass, showClass].filter(Boolean).join(' ');
 }

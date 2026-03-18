@@ -121,9 +121,8 @@ export function MajorLinks() {
     e.preventDefault();
     if (link.url.startsWith('/#')) {
       const hash = link.url.substring(1);
-      if (location.pathname !== '/')
-        navigate('/', { state: { scrollToHash: hash }, replace: false });
-      else scrollToHash(hash);
+      if (location.pathname === '/') scrollToHash(hash);
+      else navigate('/', { state: { scrollToHash: hash }, replace: false });
     } else {
       navigate(link.url);
     }
