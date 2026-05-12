@@ -87,8 +87,18 @@ const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: 'Acktarius',
+    name: 'nullcrypto',
     role: 'Lead Developer',
+    image: '/images/teampage/nullcrypto.png',
+    description: 'I just build things - Full Stack',
+    socials: {
+      github: 'https://github.com/nullcryptodev',
+      twitter: 'https://x.com/_nullcrypto',
+    },
+  },
+  {
+    name: 'Acktarius',
+    role: 'Developer',
     image: '/images/teampage/Acktarius.png',
     description:
       "I came late to the cryptocurrency world and joined Conceal mid 2021, having a very keen interest for its unique privacy features. I 'm very excited to bring my experience as R&D engineer and time spent programming as a hobby, to this community of talented, discreet, passionate and dedicated people.",
