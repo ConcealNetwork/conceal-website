@@ -223,6 +223,19 @@ const timelineItems: TimelineItem[] = [
     url: 'https://github.com/ConcealNetwork/conceal-faucet-api',
   },
   {
+    date: 'Summer 2026',
+    title: 'Web wallet 3.0 (Next Wallet)',
+    description: 'Enhancing user experience with new rendering technologies',
+    status: 'completed',
+  },
+  {
+    date: 'Summer 2026',
+    title: 'Conceal Desktop 6.7.8',
+    description:
+      'Ships with re-inforced Conceal Core 6.7.5: coinbase validation, checkpoint-zone input checks, and wallet/RPC/system improvements.',
+    status: 'completed',
+  },
+  {
     date: '',
     title: 'Achieved Milestones',
     description: '',
@@ -235,6 +248,13 @@ const timelineItems: TimelineItem[] = [
     status: 'activ',
   },
   {
+    date: '2027',
+    title: 'Conceal Core — MDBX, GPU & P2P',
+    description:
+      'MDBX + migration tool, GPU sync offload + GPU mining onboard, then P2P code evolution',
+    status: 'inprog',
+  },
+  {
     date: '',
     title: 'Conceal Lab project',
     description: 'a one of a kind permissionless and decentralized app',
@@ -242,14 +262,22 @@ const timelineItems: TimelineItem[] = [
   },
   {
     date: '',
-    title: 'Web wallet 3.0',
-    description: 'Enhancing user experience with new rendering technologies',
+    title: 'Atomic Swaps',
+    description: 'Allowing you to exchange CCX with other blockchain tokens',
     status: 'inprog',
   },
   {
-    date: '',
-    title: 'Atomic Swaps',
-    description: 'Allowing you to exchange CCX with other blockchain tokens',
+    date: '2028',
+    title: 'Conceal Core — Checkpoint strategy',
+    description:
+      'Refresh tooling, bootstrap verification, then distribute signed checkpoints over P2P (no hardfork).',
+    status: 'inprog',
+  },
+  {
+    date: '2029–2030',
+    title: 'Conceal Core — Hardfork',
+    description:
+      'New serialization tags, sidechain anchors, and post-quantum work',
     status: 'inprog',
   },
 ];

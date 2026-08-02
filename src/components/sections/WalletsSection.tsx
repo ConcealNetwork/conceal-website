@@ -44,7 +44,7 @@ function ConcealDesktop() {
       </p>
       <AnimatedElement types={['crtPowerOn']} speed="fast">
         <img
-          src="/images/newgui.png"
+          src="/images/newgui678.png"
           alt="Conceal GUI"
           className="block mx-auto mb-6 w-full h-auto"
         />

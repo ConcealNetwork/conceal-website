@@ -65,7 +65,7 @@ function Root() {
               <div
                 className={
                   showApp || hasCookie('splash-shown')
-                    ? 'opacity-100 transition-opacity duration-1000'
+                    ? 'opacity-100 transition-opacity duration-800'
                     : 'opacity-0 pointer-events-none fixed inset-0 z-0'
                 }
               >
