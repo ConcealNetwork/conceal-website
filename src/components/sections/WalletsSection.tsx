@@ -88,7 +88,7 @@ function NextWallet() {
   return (
     <>
       <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
-        Next Wallet | Web Wallet
+        Web Wallet | Next Wallet
       </h3>
       <p className="text-[1.7rem] text-[white] mb-6 text-center">
         Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely
