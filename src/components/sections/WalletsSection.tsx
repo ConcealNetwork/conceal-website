@@ -84,36 +84,52 @@ function ConcealCore() {
   );
 }
 
-function WebAndPaper() {
+function NextWallet() {
   return (
     <>
       <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
-        Web Wallet & Paper Wallet
+        Next Wallet | Web Wallet
       </h3>
       <p className="text-[1.7rem] text-[white] mb-6 text-center">
         Conceal Web Wallet runs in your Browser on any device, Mobile, PC or Mac! It is completely
         Client-Side, stores your encrypted wallet keys on your device, and is the perfect
-        lightweight alternative to the Full Node Wallet. The Conceal Paper wallet is the easiest way
-        to create an offline wallet with simple Key generation tools.
+        lightweight alternative to the Full Node Wallet. Recently refreshed with a new interface and
+        new features, the web wallet is renamed Next Wallet.
       </p>
       <AnimatedElement types={['crtPowerOn']} speed="normal">
         <img
-          src="/images/webwallet.png"
-          alt="Conceal Web Wallet"
+          src="/images/next-wallet-landing.png"
+          alt="Conceal Next Wallet"
           className="block mx-auto mb-6 max-w-full"
         />
       </AnimatedElement>
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <DownloadLink
+          href="https://wallet.conceal.network/"
+          icon="fab fa-chrome"
+          label="Next Wallet"
+          gap={8}
+        />
+      </div>
+    </>
+  );
+}
+
+function PaperWallet() {
+  return (
+    <>
+      <h3 className="text-[2.4rem] text-[var(--color1)] uppercase mb-4 text-center">
+        Paper Wallet | Offline Wallet
+      </h3>
+      <p className="text-[1.7rem] text-[white] mb-6 text-center">
+        The Conceal Paper wallet is the easiest way to create an offline wallet with simple Key
+        generation tools.
+      </p>
       <div className="flex flex-wrap justify-center gap-4">
         <DownloadLink
           href="https://conceal.network/paperwallet"
           icon="fas fa-paper-plane"
           label="Offline/Paper"
-          gap={8}
-        />
-        <DownloadLink
-          href="https://wallet.conceal.network/"
-          icon="fab fa-chrome"
-          label="Web Wallet"
           gap={8}
         />
       </div>
@@ -173,7 +189,9 @@ export function WalletsSection() {
         <div className="h-[1.5rem]"></div>
         <ConcealCore />
         <div className="h-[1.5rem]"></div>
-        <WebAndPaper />
+        <NextWallet />
+        <div className="h-[1.5rem]"></div>
+        <PaperWallet />
       </div>
       <div className="h-[3rem]"></div>
       <ConcealMobile />
