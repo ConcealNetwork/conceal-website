@@ -341,7 +341,7 @@ export function MiningSection() {
             support CCX. Check out our
           </span>{' '}
           <a
-            href="https://conceal.network/wiki/doku.php?id=mining"
+            href="https://https://conceal.network/wiki/docs/mining/"
             target="_blank"
             rel="noopener"
             className={LINK}

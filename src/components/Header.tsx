@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
       { label: "What's Conceal?", href: '/about' },
       { label: 'Messaging', href: '/messaging' },
       { label: 'Earn', href: '/earn' },
-      { label: 'Wiki', href: 'https://conceal.network/wiki/doku.php?id=start', external: true },
+      { label: 'Wiki', href: 'https://conceal.network/wiki/', external: true },
       { label: 'Roadmap', href: '/roadmap' },
       { label: 'Team', href: '/team' },
     ],

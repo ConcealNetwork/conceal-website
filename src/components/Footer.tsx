@@ -26,13 +26,13 @@ const generalData: ColumnData = {
   title: 'General',
   items: [
     { label: 'About', url: '/about' },
-    { label: 'Documentation', url: 'https://conceal.network/wiki/doku.php', external: true },
+    { label: 'Documentation', url: 'https://conceal.network/wiki/', external: true },
     { label: 'Exchanges', url: '/community#exchanges', external: false },
-    { label: 'FAQ', url: 'https://conceal.network/wiki/doku.php?id=FAQ', external: true },
+    { label: 'FAQ', url: 'https://conceal.network/wiki/', external: true },
     { label: 'Labs', url: '/labs', external: false },
     {
       label: 'wCCX',
-      url: 'https://conceal.network/wiki/doku.php?id=wrapped-conceal',
+      url: 'https://https://conceal.network/wiki/docs/wccx-bridge/',
       external: true,
     },
     { label: 'Support', url: 'https://conceal.network/support/', external: true },
