@@ -276,8 +276,7 @@ const timelineItems: TimelineItem[] = [
   {
     date: '2029–2030',
     title: 'Conceal Core — Hardfork',
-    description:
-      'New serialization tags, sidechain anchors, and post-quantum work',
+    description: 'New serialization tags, sidechain anchors, and post-quantum work',
     status: 'inprog',
   },
 ];
