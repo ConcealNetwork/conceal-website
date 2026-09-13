@@ -32,7 +32,7 @@ const generalData: ColumnData = {
     { label: 'Labs', url: '/labs', external: false },
     {
       label: 'wCCX',
-      url: 'https://https://conceal.network/wiki/docs/wccx-bridge/',
+      url: 'https://conceal.network/wiki/docs/wccx-bridge/',
       external: true,
     },
     { label: 'Support', url: 'https://conceal.network/support/', external: true },
