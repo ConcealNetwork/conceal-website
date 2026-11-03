@@ -17,14 +17,57 @@ interface LabProject {
   downloads: [string, DownloadType][] | null;
   labeltodocument: string | null;
   documentlink: string | null;
-  documenttype: 'pdf' | 'wiki' | null;
-  linktoscreenshotfolder: string;
+  documenttype: 'pdf' | 'wiki' | 'article' | null;
+  /** Icon shown next to the labeltolink anchor; defaults to the GitHub icon. */
+  linkIcon?: string;
+  linktoscreenshotfolder?: string;
   imagePattern?: string;
   imageCount?: number;
   imageExtension?: string;
 }
 
 const labsProjects: LabProject[] = [
+  {
+    // TODO: replace the placeholder project url and add screenshots once the NFT gallery link is provided.
+    id: 'nftgallery',
+    title: 'NFT Gallery',
+    description:
+      'NFT Gallery is a 3D online art gallery where wCCX, the wrapped version of CCX on Polygon, is used as a staking token: holding wCCX earns points that users spend to build their own gallery spaces and list NFTs for sale.',
+    labeltolink: 'Project url coming soon.',
+    projecturl: '#',
+    labelToDownload: null,
+    downloads: null,
+    labeltodocument: null,
+    documentlink: null,
+    documenttype: null,
+  },
+  {
+    id: 'clarity',
+    title: 'CLARITY',
+    description:
+      'CLARITY is the Conceal sidechain: a Byzantine fault-tolerant proof-of-stake chain with immediate finality where tokens, an automated market maker, a limit-order book and NFTs are first-class state objects instead of smart contracts.',
+    labeltolink: 'Read the whitepaper.',
+    projecturl: 'https://github.com/nullcryptodev/Clarity/blob/main/docs/WHITEPAPER.md',
+    linkIcon: 'fas fa-file-lines',
+    labelToDownload: null,
+    downloads: null,
+    labeltodocument: null,
+    documentlink: null,
+    documenttype: null,
+  },
+  {
+    id: 'getnowhere',
+    title: 'GetNowHere',
+    description:
+      'GetNowHere is a one-of-a-kind peer-to-peer chat app: no phone number or email needed, only a Conceal wallet as the anchor to create relationships.\nEncrypted invitations are sent through Conceal Messaging, and conversations run over a direct peer-to-peer connection with ChaCha20-Poly1305 encryption, falling back to Conceal Messaging when a direct connection cannot be established.',
+    labeltolink: 'Visit the github repository for more info.',
+    projecturl: 'https://github.com/Acktarius/getnowhere',
+    labelToDownload: null,
+    downloads: null,
+    labeltodocument: 'Read the announcement article.',
+    documentlink: 'https://concealnetwork.substack.com/p/coming-soon-to-conceal-lab-get-nowhere',
+    documenttype: 'article',
+  },
   {
     id: 'authenticator',
     title: 'Conceal-Authenticator',
@@ -97,6 +140,7 @@ function getDownloadIcon(type: DownloadType): string {
 function getDocumentIcon(type: LabProject['documenttype']): string {
   if (type === 'pdf') return 'fas fa-file-pdf';
   if (type === 'wiki') return 'fab fa-wikipedia-w';
+  if (type === 'article') return 'fas fa-newspaper';
   return 'fas fa-file';
 }
 
@@ -112,7 +156,7 @@ function ProjectLinks({ project }: Readonly<{ project: LabProject }>) {
             rel="noopener noreferrer"
           >
             {project.labeltolink}
-            <i className="fab fa-github ml-2"></i>
+            <i className={`${project.linkIcon || 'fab fa-github'} ml-2`}></i>
           </a>
         </p>
       </AnimatedElement>
@@ -152,12 +196,15 @@ function ProjectLinks({ project }: Readonly<{ project: LabProject }>) {
 }
 
 function ProjectCard({ project }: { project: LabProject }) {
-  const carouselImages = loadImagesWithPattern(
-    project.linktoscreenshotfolder,
-    project.imagePattern || 'assistant',
-    project.imageCount || 5,
-    project.imageExtension || 'png'
-  );
+  const carouselImages =
+    project.linktoscreenshotfolder && project.imageCount
+      ? loadImagesWithPattern(
+          project.linktoscreenshotfolder,
+          project.imagePattern || 'assistant',
+          project.imageCount,
+          project.imageExtension || 'png'
+        )
+      : [];
   return (
     <div id={project.id} className="mb-16 scroll-mt-24">
       <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
@@ -172,12 +219,20 @@ function ProjectCard({ project }: { project: LabProject }) {
           </AnimatedElement>
         ))}
       <ProjectLinks project={project} />
-      <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <h3 className="text-2xl uppercase text-[var(--color1)] mb-6">How it looks...</h3>
-      </AnimatedElement>
-      <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
-        <Carousel images={carouselImages} altPrefix={project.title} className="max-w-4xl mx-auto" />
-      </AnimatedElement>
+      {carouselImages.length > 0 && (
+        <>
+          <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+            <h3 className="text-2xl uppercase text-[var(--color1)] mb-6">How it looks...</h3>
+          </AnimatedElement>
+          <AnimatedElement types={['fadeIn']} triggerImmediately={false}>
+            <Carousel
+              images={carouselImages}
+              altPrefix={project.title}
+              className="max-w-4xl mx-auto"
+            />
+          </AnimatedElement>
+        </>
+      )}
     </div>
   );
 }
