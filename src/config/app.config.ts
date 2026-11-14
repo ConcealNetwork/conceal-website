@@ -103,8 +103,3 @@ export const secondsToMs = (seconds: number): number => seconds * 1000;
  * Helper function to convert hours to minutes (for cookie expiration)
  */
 export const hoursToMinutes = (hours: number): number => hours * 60;
-
-/**
- * Helper function to check if device is mobile
- */
-export const isMobile = (): boolean => window.innerWidth < appConfig.breakpoints.mobile;

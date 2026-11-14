@@ -31,3 +31,6 @@ deno.lock
 
 !postcss.config.js
 !vite.config.ts
+
+# Knip
+knip.json
