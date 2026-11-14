@@ -1,4 +1,4 @@
-export const theme = {
+const theme = {
   colors: {
     // Backgrounds - Modern dark theme
     bg: {
@@ -150,7 +150,7 @@ function colorCSSVars(prefix: string, color: ThemeColor): Record<string, string>
   };
 }
 
-export const getThemeCSSVars = (): Record<string, string> => ({
+const getThemeCSSVars = (): Record<string, string> => ({
   ...colorCSSVars('color1', themeConfig.primaryColor),
   ...colorCSSVars('color2', themeConfig.secondaryColor),
   '--color-bg-primary': theme.colors.bg.primary,

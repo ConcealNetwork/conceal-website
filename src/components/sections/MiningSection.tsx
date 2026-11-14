@@ -278,6 +278,14 @@ const MINERS = [
 --wallet "YOUR_WALLET_ADDRESS" \n
 --gpu-tweak-profile 5`,
   },
+  {
+    name: 'BzMiner',
+    url: 'https://github.com/bzminer/bzminer/releases',
+    code: `./bzminer -a cn/gpu \n
+-p stratum+tcp://pool.conceal.network:3333 \n
+-w ccx7YOUR_CONCEAL_WALLET_HERE \n
+--pass x --worker rig1`,
+  },
 ];
 
 const PRE_CLASS =
@@ -333,7 +341,7 @@ export function MiningSection() {
             support CCX. Check out our
           </span>{' '}
           <a
-            href="https://conceal.network/wiki/doku.php?id=mining"
+            href="https://conceal.network/wiki/docs/mining"
             target="_blank"
             rel="noopener"
             className={LINK}

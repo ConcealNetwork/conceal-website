@@ -11,7 +11,7 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     name: 'Documentation',
-    url: 'https://conceal.network/wiki/doku.php',
+    url: 'https://conceal.network/wiki/',
     icon: 'fab fa-wikipedia-w',
   },
   {

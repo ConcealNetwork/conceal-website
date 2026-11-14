@@ -9,7 +9,7 @@ export function setCookie(name: string, value: string, minutes: number = 1): voi
   document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;SameSite=Strict;Secure`;
 }
 
-export function getCookie(name: string): string | null {
+function getCookie(name: string): string | null {
   const nameEQ = `${name}=`;
   const ca = document.cookie.split(';');
   for (let i = 0; i < ca.length; i++) {
