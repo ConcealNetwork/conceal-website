@@ -1,4 +1,4 @@
-﻿{
+{
   "rAbout": "Over",
   "rAnd": "En",
   "rApps": "Apps",
@@ -271,15 +271,17 @@
   "labsTitle2": "vooruit",
   "labsAbout": "We streven ernaar om een breed ecosysteem te laten groeien door de gemeenschap te ondersteunen. Conceal Labs biedt ontwikkelaars, ondernemers & makers de vliegende start die ze nodig hebben om hun visie te verwezenlijken.",
   "labsIdeaTitle": "HEB JIJ EEN IDEE?",
-  "labsIdeaText": "Heb je een project waar Conceal op een of andere manier bij betrokken is? <a href='https://discord.gg/YbpHVSd'>We horen je graag!",  
+  "labsIdeaText": "Heb je een project waar Conceal op een of andere manier bij betrokken is?",
+  "labsIdeaLink": "We horen je graag!",  
   "labsMoneyTitle": "ZOU GELD HELPEN?",
   "labsMoneyText": "Soms is geld net wat je nodig hebt om je idee van de grond te krijgen.",
-  "labsFundsTitle": "GEFINANCIERD WORDEN DOOR ONS",
-  "labsFundsText": "Onze oprichters zetten fondsen opzij die de gemeenschap kan gebruiken voor projecten.",
+  "labsFundsTitle": "KRIJG ONZE ONDERSTEUNING",
+  "labsFundsText": "We kunnen veelbelovende projecten financieren wanneer dat helpt, en we promoten en tonen ook communitywerk dat bij het Conceal-ecosysteem past.",
   "labsListedTitle": "DOOR ONS VERMELD WORDEN",
-  "labsListedText": "Laat je financieren door ons en we zullen je project hier op onze website plaatsen.",
+  "labsListedText": "Geselecteerde projecten — of ze nu gefinancierd, gepromoot of getoond worden — kunnen hier op onze website worden vermeld.",
   "labsProjectsTitle": "Projecten",
-  "labsProjectsText": "Bekijk enkele van de coole projecten die we hebben gefinancierd. <a href='https://discord.gg/YbpHVSd'>Meld je aan als volgende! </a>",
+  "labsProjectsText": "Bekijk enkele van de coole projecten die we financieren, promoten of tonen.",
+  "labsProjectsLink": "Meld je aan als volgende!",
   "labsFooterText": "Binnenkort in een browser bij u in de buurt!",
   
   "aboutTitle": "Anonieme DeFi & Privé Communicatie",

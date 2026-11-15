@@ -1,4 +1,4 @@
-﻿{
+{
   "rAbout": "Über uns",
   "rAnd": "Und",
   "rApps": "Apps",
@@ -271,15 +271,17 @@
   "labsTitle2": "voran",
   "labsAbout": "Unser Ziel ist es ein weitreichendes Ökosystem zu schaffen, indem wir die Community unterstützen. Conceal Labs bietet Entwicklern, Entrepreneurs & Creators einen Startpunkt um aus einer Vision Realität werden zu lassen.",
   "labsIdeaTitle": "DU HAST EINE IDEE?",
-  "labsIdeaText": "Hast du ein Projekt dass sich um Conceal dreht? <a href='https://discord.gg/YbpHVSd'>Wir würden gerne davon erfahren!",  
+  "labsIdeaText": "Hast du ein Projekt, das sich um Conceal dreht?",
+  "labsIdeaLink": "Wir würden gerne davon erfahren!",  
   "labsMoneyTitle": "GELD WÜRDE DIR HELFEN?",
   "labsMoneyText": "Manchmal ist Geld alles was es braucht, damit aus einer Idee etwas Großes entstehen kann.",
-  "labsFundsTitle": "WERDE VON UNS GEFÖRDERT",
-  "labsFundsText": "Wir haben für die Community Funds reserviert, um Projekte zu unterstützen.",
+  "labsFundsTitle": "ERHALTE UNSERE UNTERSTÜTZUNG",
+  "labsFundsText": "Wir können vielversprechende Projekte finanzieren, wenn es hilft, und wir fördern und präsentieren auch Community-Projekte, die zum Conceal-Ökosystem passen.",
   "labsListedTitle": "WERDE VON UNS GELISTET",
-  "labsListedText": "Werde von uns gefördert und wir listen dein Projekt auf unserer Webseite.",
+  "labsListedText": "Ausgewählte Projekte — ob finanziert, beworben oder präsentiert — können hier auf unserer Website gelistet werden.",
   "labsProjectsTitle": "Projekte",
-  "labsProjectsText": "Schau dir einige der coolen Projekte an, die wir gefördert haben. <a href='https://discord.gg/YbpHVSd'>Bewirb dich jetzt!</a>",
+  "labsProjectsText": "Schau dir einige der coolen Projekte an, die wir finanzieren, fördern oder präsentieren.",
+  "labsProjectsLink": "Bewirb dich jetzt!",
   "labsFooterText": "Bald in einem Browser in deiner Nähe!",
   
   "aboutTitle": "Anonyme DeFi & Private Kommunikation",

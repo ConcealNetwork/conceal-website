@@ -1,4 +1,4 @@
-﻿{
+{
   "rAbout": "About",
   "rAnd": "And",
   "rApps": "Apps",
@@ -271,15 +271,17 @@
   "labsTitle2": "forward",
   "labsAbout": "We strive to grow a broad ecosystem by supporting the community. Conceal Labs provides developers, entrepreneurs & creators with the jump start that they need to make vision a reality.",
   "labsIdeaTitle": "HAVE AN IDEA?",
-  "labsIdeaText": "Do you have a project that involves Conceal in some way? <a href='https://discord.gg/YbpHVSd'>We want to hear about it!",  
+  "labsIdeaText": "Do you have a project that involves Conceal in some way?",
+  "labsIdeaLink": "We want to hear about it!",  
   "labsMoneyTitle": "WOULD MONEY HELP?",
   "labsMoneyText": "Sometimes money is just what it takes to get your idea off the ground.",
-  "labsFundsTitle": "GET FUNDED BY US",
-  "labsFundsText": "Our creators set aside funds for the community to use for projects.",
+  "labsFundsTitle": "GET SUPPORT FROM US",
+  "labsFundsText": "We may fund promising projects when it helps, and we also promote and showcase community work that fits the Conceal ecosystem.",
   "labsListedTitle": "GET LISTED BY US",
-  "labsListedText": "Get funded by us and we will list your project here on our website.",
+  "labsListedText": "Selected projects — whether funded, promoted, or showcased — can be listed here on our website.",
   "labsProjectsTitle": "Projects",
-  "labsProjectsText": "Check out some of the cool projects we have funded. <a href='https://discord.gg/YbpHVSd'>Apply to be next!</a>",
+  "labsProjectsText": "Check out some of the cool projects we fund, promote, or showcase.",
+  "labsProjectsLink": "Apply to be next!",
   "labsFooterText": "Coming soon to a browser near you!",
   
   "aboutTitle": "Anonymous DeFi & Private Communication",
