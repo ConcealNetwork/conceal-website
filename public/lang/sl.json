@@ -1,4 +1,4 @@
-﻿{
+{
   "rAbout": "O nas",
   "rAnd": "In",
   "rApps": "Aplikacije",
@@ -264,15 +264,17 @@
   "labsTitle2": "sanje",
   "labsAbout": "S podporo naši skupnosti si prizadevamo za razvoj širokega ekosistema. Conceal Labs razvijalcem, podjetnikom in ustvarjalcem omogoča začetni zagon, ki ga potrebujejo za uresničitev svoje vizije.",
   "labsIdeaTitle": "IMATE IDEJO?",
-  "labsIdeaText": "Ali imate projekt, ki na kakšen način vključuje Conceal? <a href='https://discord.gg/YbpHVSd'>Predstavite nam jo!",  
+  "labsIdeaText": "Ali imate projekt, ki na kakšen način vključuje Conceal?",
+  "labsIdeaLink": "Predstavite nam ga!",  
   "labsMoneyTitle": "BI VAM DENAR POMAGAL?",
   "labsMoneyText": "Včasih je denar ravno tisto, kar potrebujete, da svojo idejo začnete uresničevati.",
-  "labsFundsTitle": "PRIDOBITE NAŠE FINANCIRANJE",
-  "labsFundsText": "Naši ustvarjalci so skupnosti namenili sredstva za projekte.",
+  "labsFundsTitle": "PRIDOBITE NAŠO PODPORO",
+  "labsFundsText": "Obetavne projekte lahko financiramo, kadar to pomaga, poleg tega pa tudi promoviramo in predstavljamo delo skupnosti, ki sodi v ekosistem Conceal.",
   "labsListedTitle": "PRIDRUŽITE SE NAŠIM PROJEKTOM",
-  "labsListedText": "Pridobite naša finančna sredstva in vaš projekt bomo navedli na naši spletni strani.",
+  "labsListedText": "Izbrani projekti — bodisi financirani, promovirani ali predstavljeni — so lahko navedeni tukaj na naši spletni strani.",
   "labsProjectsTitle": "Projekti",
-  "labsProjectsText": "Oglejte si nekaj odličnih projektov, ki smo jih financirali. <a href='https://discord.gg/YbpHVSd'>Prijavite se tudi vi!</a>",
+  "labsProjectsText": "Oglejte si nekaj odličnih projektov, ki jih financiramo, promoviramo ali predstavljamo.",
+  "labsProjectsLink": "Prijavite se tudi vi!",
   "labsFooterText": "Kmalu v vašem brskalniku!",
   
   "aboutTitle": "Anonimni DeFi & Zasebna komunikacija",

@@ -28,7 +28,7 @@ const generalData: ColumnData = {
     { label: 'About', url: '/about' },
     { label: 'Documentation', url: 'https://conceal.network/wiki/', external: true },
     { label: 'Exchanges', url: '/community#exchanges', external: false },
-    { label: 'FAQ', url: 'https://conceal.network/wiki/', external: true },
+    { label: 'FAQ', url: 'https://conceal.network/wiki/docs/faq/', external: true },
     { label: 'Labs', url: '/labs', external: false },
     {
       label: 'wCCX',
